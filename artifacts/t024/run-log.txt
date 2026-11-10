@@ -1,0 +1,17 @@
+unchanged {'identity_equal_to_t023': True, 'new_or_changed_package_files': ['standings.py'], 'source_sha256': 'b6eb7dac2186830bb20b7696dfc53d2d95e7cc7a2014675b69ae55c90606e6f9'} {'worlds': 14, 'equal_to_pre_implementation_digest': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+hand {'seasons': 4, 'matches': 13} follows_events True invalid {'length_zero': True, 'unknown_club': True, 'same_club': True, 'goals_negative': True, 'goals_bool': True, 'goals_float': True, 'match_after_world_day': True}
+cells done closed_no_solidarity
+cells done closed_no_solidarity_sampled_population
+cells done closed_solidarity
+cells done closed_solidarity_sampled_population
+cells done open_no_solidarity
+cells done open_no_solidarity_sampled_population
+cells done open_solidarity
+cells done open_solidarity_sampled_population
+cells done fixed_budget_no_inflow
+cells done fixed_budget_no_inflow_sampled_population
+cells done hoarder_buyer_policy
+cells done hoarder_buyer_policy_sampled_population
+cells done exploit_churn_guard
+cells done exploit_churn_guard_sampled_population
+{"cells": 42, "tied_rows_total": 19, "elapsed_seconds": 123.55869170799997}

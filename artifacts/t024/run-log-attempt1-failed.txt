@@ -1,0 +1,13 @@
+unchanged {'identity_equal_to_t023': True, 'new_or_changed_package_files': ['standings.py'], 'source_sha256': 'b6eb7dac2186830bb20b7696dfc53d2d95e7cc7a2014675b69ae55c90606e6f9'} {'worlds': 14, 'equal_to_pre_implementation_digest': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+hand {'seasons': 4, 'matches': 13} follows_events True invalid {'length_zero': True, 'unknown_club': True, 'same_club': True, 'goals_negative': True, 'goals_bool': True, 'goals_float': True, 'match_after_world_day': True}
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t024.py", line 204, in <module>
+    run(parser.parse_args().out.resolve(), CODE_ROOT)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t024.py", line 190, in run
+    cells[f'{name}@{length}'] = check_cell(name, length, Path(tmp) / 'p')
+                                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t024.py", line 116, in check_cell
+    assert sorted(table['seasons']) == list(range(1, n_seasons + 1)) and all(s['complete'] for s in table['seasons'].values())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
