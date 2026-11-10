@@ -26,7 +26,8 @@ WORDS = ('personality', 'emotional_stability', 'discipline')
 # Functions of league_economy.py allowed to touch the latent traits (everything else, notably decide_*/step functions, must not).
 ALLOWED_READERS = {'__post_init__', 'to_dict', 'has_save_fields', '_build_initial_world', '_validate_league_invariants',
                    '_snapshot_payload_unchecked', 'load_league_snapshot_trusted', '_personality_traits',
-                   '_player_advice_response'}  # last: T028's single decision reader (before T028 it was not present)
+                   '_player_advice_response',  # T028's single decision reader (before T028 it was not present)
+                   '_generational_turnover'}  # T030: gives a newcomer its keyed traits; reads no trait for any decision
 PLAYER_IDS = sorted(p for pids in le.INITIAL_CLUB_ROSTERS.values() for p in pids)
 
 

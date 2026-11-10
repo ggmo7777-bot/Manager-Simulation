@@ -23,7 +23,8 @@ SEED, DAYS, LENGTHS, STARTS, CURVE = t023.SEED, t023.DAYS, t023.LENGTHS, (18, 29
 EXPECTED_DELTA = {**{a: 0.02 for a in range(18, 25)}, **{a: 0.0 for a in range(25, 30)}, **{a: -0.01 * (a - 29) for a in range(30, 41)}}
 # Functions allowed to read the true age state (everything else, notably decision/observation code, must not).
 ALLOWED_READERS = {'__post_init__', 'to_dict', 'has_save_fields', '_build_initial_world', '_age_players', '_validate_league_invariants',
-                   '_snapshot_payload_unchecked', 'load_league_snapshot_trusted', '_aging_delta', '_aged_traits'}
+                   '_snapshot_payload_unchecked', 'load_league_snapshot_trusted', '_aging_delta', '_aged_traits',
+                   '_generational_turnover', '_generation_fold'}  # last two: T030 (the only retirement/intake code; reads ages, never a decision)
 POLICY_MODULES = ('policy.py', 'observation.py', 'league_observation.py', 'advice.py', 'standings.py')
 TRAITS = ('pace', 'passing', 'shooting')
 
