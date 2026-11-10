@@ -1,0 +1,15 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True, 'explicit_none_equals_default_advice_on': 14, 'receptiveness_default_identical': True, 'explicit_none_equals_default_aging_config': 14, 't026_default_check': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'without_aging': True, 'save_fields': True} pure {'grid_points': 3030} static {'generation_readers': ['_age_players', '_generation_fold', '_generational_turnover', '_validate_league_invariants', 'advance_league_days', 'has_save_fields']}
+isolation {'founders_unchanged': True, 'new_players': 12} leak {'newcomers': 12, 'true_skill_gap_high_minus_low': 0.09999999999999999, 'impressions_equal_constant': True}
+main closed_no_solidarity
+main closed_no_solidarity_sampled_population
+main closed_solidarity
+main closed_solidarity_sampled_population
+main open_no_solidarity
+main open_no_solidarity_sampled_population
+main open_solidarity
+main open_solidarity_sampled_population
+main fixed_budget_no_inflow
+main fixed_budget_no_inflow_sampled_population
+main hoarder_buyer_policy
+main hoarder_buyer_policy_sampled_population

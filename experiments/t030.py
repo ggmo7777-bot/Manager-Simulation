@@ -250,6 +250,11 @@ def run_cell(name, seed, start, mode, days, validate_every=1):
     finally:
         le.decide_retirement = original
     le._validate_league_invariants(world)
+    matchdays = days // world.config.match_interval_days  # (6) every matchday: four lineups of two distinct starters, two completed matches
+    lineups = [e for e in world.events if e['kind'] == 'lineup_decision']
+    matches = [e for e in world.events if e['kind'] == 'league_match_completed']
+    assert len(lineups) == 4 * matchdays and len(matches) == 2 * matchdays and all(len(set(e['data']['starters'])) == 2 for e in lineups)
+    assert all(len(set(e['data']['home_starters'])) == 2 and len(set(e['data']['away_starters'])) == 2 for e in matches)
     return world, {'seasons': seasons, 'min_roster_any_day': min_roster, 'newcomers': newcomers, 'events': len(world.events), 'final': final_metrics(world)}
 
 
@@ -440,6 +445,22 @@ def analyse(main, long_cells, start_rows):
                                              'age_max': max(r[k]['age_max'] for r in rows), 'share_33_plus': mean(r[k]['share_33_plus'] for r in rows),
                                              'skill': mean(r[k]['skill'] for r in rows), 'retired': mean(r[k]['retired'] for r in rows), 'joined': mean(r[k]['joined'] for r in rows),
                                              'founders_active': mean(r[k]['founders_active'] for r in rows)} for k in range(30)]
+    for start in STARTS:
+        rows = [c['on'] for (n, s, st), c in main.items() if st == start]
+        out['descriptive'][f'S{start}_on'] = {
+            'n_active_at_season_8_mean': mean(r['seasons'][-1]['n_active'] for r in rows), 'n_active_at_season_8_min_max': [min(r['seasons'][-1]['n_active'] for r in rows), max(r['seasons'][-1]['n_active'] for r in rows)],
+            'max_roster_at_any_season_end': max(max(s['roster'].values()) for r in rows for s in r['seasons']),
+            'min_roster_at_any_season_end': min(min(s['roster'].values()) for r in rows for s in r['seasons']),
+            'cells_with_a_club_of_2_on_some_day': sum(1 for r in rows if r['min_roster_any_day'] == 2), 'cells': len(rows),
+            'retired_total': sum(s['retired'] for r in rows for s in r['seasons']), 'joined_total': sum(s['joined'] for r in rows for s in r['seasons']),
+            'retired_reasons': {k: sum(s['retired_reasons'][k] for r in rows for s in r['seasons']) for k in ('age_limit', 'veteran_low_playing_time')}}
+    out['descriptive']['long_on'] = {
+        'n_active_at_season_30_min_max': [min(c['seasons'][-1]['n_active'] for c in long_cells.values()), max(c['seasons'][-1]['n_active'] for c in long_cells.values())],
+        'min_roster_at_any_season_end': min(min(s['roster'].values()) for c in long_cells.values() for s in c['seasons']),
+        'cells_with_a_club_of_2_on_some_day': sum(1 for c in long_cells.values() if c['min_roster_any_day'] == 2),
+        'retired_total': sum(s['retired'] for c in long_cells.values() for s in c['seasons']), 'joined_total': sum(s['joined'] for c in long_cells.values() for s in c['seasons']),
+        'sd_of_mean_age_seasons_21_30_min_median_max': [min(sds), statistics.median(sds), max(sds)],
+        'mean_age_by_season_21_30': [mean(c['seasons'][k]['age_mean'] for c in long_cells.values()) for k in range(20, 30)]}
     reasons = {'age_limit': 0, 'veteran_low_playing_time': 0}
     for c in long_cells.values():
         for s in c['seasons']:

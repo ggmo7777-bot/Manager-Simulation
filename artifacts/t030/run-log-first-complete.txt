@@ -1,0 +1,34 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True, 'explicit_none_equals_default_advice_on': 14, 'receptiveness_default_identical': True, 'explicit_none_equals_default_aging_config': 14, 't026_default_check': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'without_aging': True, 'save_fields': True} pure {'grid_points': 3030} static {'generation_readers': ['_age_players', '_generation_fold', '_generational_turnover', '_validate_league_invariants', 'advance_league_days', 'has_save_fields']}
+isolation {'founders_unchanged': True, 'new_players': 12} leak {'newcomers': 12, 'true_skill_gap_high_minus_low': 0.09999999999999999, 'impressions_equal_constant': True}
+main closed_no_solidarity
+main closed_no_solidarity_sampled_population
+main closed_solidarity
+main closed_solidarity_sampled_population
+main open_no_solidarity
+main open_no_solidarity_sampled_population
+main open_solidarity
+main open_solidarity_sampled_population
+main fixed_budget_no_inflow
+main fixed_budget_no_inflow_sampled_population
+main hoarder_buyer_policy
+main hoarder_buyer_policy_sampled_population
+main exploit_churn_guard
+main exploit_churn_guard_sampled_population
+long closed_no_solidarity
+long closed_no_solidarity_sampled_population
+long closed_solidarity
+long closed_solidarity_sampled_population
+long open_no_solidarity
+long open_no_solidarity_sampled_population
+long open_solidarity
+long open_solidarity_sampled_population
+long fixed_budget_no_inflow
+long fixed_budget_no_inflow_sampled_population
+long hoarder_buyer_policy
+long hoarder_buyer_policy_sampled_population
+long exploit_churn_guard
+long exploit_churn_guard_sampled_population
+analysis {"P2_skill_S29": {"cells": 42, "positive": 42, "mean_diff": 0.23744440079365084, "sign_test": {"positive": 42, "negative": 0, "ties": 0, "p_two_sided": 4.547473508864641e-13}, "supported": true}, "P2_skill_S33": {"cells": 42, "positive": 42, "mean_diff": 0.5937282400793651, "sign_test": {"positive": 42, "negative": 0, "ties": 0, "p_two_sided": 4.547473508864641e-13}, "supported": true}, "P2_min_skill_over_all_on_cells": 0.5085009166666666, "P2_min_skill_over_long_cells": 0.5380289166666666, "P2_collapse_any": false, "P1_age_instability_long": {"cells": 42, "cells_sd_gt_2_5": 42, "median_sd": 3.130894440890654, "supported": true}, "P3_newcomers_observed": {"newcomers_with_a_full_season": 2075, "share_observed": 0.6091566265060241, "supported": false}}
+persistence {'S29': 168, 'S33': 168, 'S35_all_retire': 168} {'interventions': 1, 'retired_in_branch': 12, 'stepped_equals_oneshot': True} {'age_value_changed/load_league_snapshot': 'rejected', 'age_value_changed/load_league_snapshot_trusted': 'rejected', 'retired_event_removed/load_league_snapshot': 'rejected', 'retired_event_removed/load_league_snapshot_trusted': 'rejected', 'retired_reason_changed/load_league_snapshot': 'rejected', 'retired_reason_changed/load_league_snapshot_trusted': 'rejected', 'newcomer_initial_trait_changed/load_league_snapshot': 'rejected', 'newcomer_initial_trait_changed/load_league_snapshot_trusted': 'rejected', 'joined_age_changed/load_league_snapshot': 'rejected', 'joined_age_changed/load_league_snapshot_trusted': 'rejected', 'joined_roster_size_changed/load_league_snapshot': 'rejected', 'joined_roster_size_changed/load_league_snapshot_trusted': 'rejected'}
+{"cells": 126, "long": 42, "elapsed_seconds": 746.9322970409994}
