@@ -1,0 +1,3621 @@
+{
+  "analyses": {
+    "confirm_200_229": {
+      "non_empty": {
+        "cohort_counts": [
+          6
+        ],
+        "worlds_per_cell_institution": 30
+      },
+      "open_vs_closed": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.015246,
+              0.018322
+            ],
+            "mean": 0.016784,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.00412,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.014988,
+              0.018084
+            ],
+            "mean": 0.016536,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.004146,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.014347,
+              0.019676
+            ],
+            "mean": 0.017011,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007137,
+            "zero": 0
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.013988,
+              0.019494
+            ],
+            "mean": 0.016741,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007375,
+            "zero": 0
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.012262,
+              0.01696
+            ],
+            "mean": 0.014611,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006291,
+            "zero": 0
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.012275,
+              0.016878
+            ],
+            "mean": 0.014577,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006163,
+            "zero": 0
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.013725,
+              0.020038
+            ],
+            "mean": 0.016882,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.008454,
+            "zero": 0
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.013427,
+              0.019964
+            ],
+            "mean": 0.016696,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.008754,
+            "zero": 0
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.003309,
+              0.001155
+            ],
+            "mean": -0.001077,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 13,
+            "sd": 0.005978,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.001297,
+              0.003276
+            ],
+            "mean": 0.000989,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.006125,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000487,
+              0.000423
+            ],
+            "mean": -3.2e-05,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 16,
+            "sd": 0.001219,
+            "zero": 1
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000196,
+              0.000345
+            ],
+            "mean": 7.5e-05,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 17,
+            "sd": 0.000724,
+            "zero": 1
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.00123,
+              0.003641
+            ],
+            "mean": 0.001206,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 18,
+            "sd": 0.006524,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.000366,
+              0.00028
+            ],
+            "mean": -4.3e-05,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 14,
+            "sd": 0.000865,
+            "zero": 1
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000627,
+              0.000257
+            ],
+            "mean": -0.000185,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 16,
+            "sd": 0.001184,
+            "zero": 1
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -0.002173,
+                "factor": "F1_profile",
+                "share_of_total": 24.6286
+              },
+              {
+                "delta": 0.002271,
+                "factor": "F2_impression",
+                "share_of_total": -25.7337
+              },
+              {
+                "delta": -0.000186,
+                "factor": "F3_satisfaction",
+                "share_of_total": 2.105
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -0.002173,
+                "factor": "F1_profile",
+                "share_of_total": 24.6286
+              },
+              {
+                "delta": -3.4e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.388
+              },
+              {
+                "delta": 0.002119,
+                "factor": "F2_impression",
+                "share_of_total": -24.0166
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": 0.000227,
+                "factor": "F2_impression",
+                "share_of_total": -2.5757
+              },
+              {
+                "delta": -0.00013,
+                "factor": "F1_profile",
+                "share_of_total": 1.4707
+              },
+              {
+                "delta": -0.000186,
+                "factor": "F3_satisfaction",
+                "share_of_total": 2.105
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": 0.000227,
+                "factor": "F2_impression",
+                "share_of_total": -2.5757
+              },
+              {
+                "delta": -0.00027,
+                "factor": "F3_satisfaction",
+                "share_of_total": 3.0635
+              },
+              {
+                "delta": -4.5e-05,
+                "factor": "F1_profile",
+                "share_of_total": 0.5123
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": -0.000248,
+                "factor": "F3_satisfaction",
+                "share_of_total": 2.8122
+              },
+              {
+                "delta": -0.001959,
+                "factor": "F1_profile",
+                "share_of_total": 22.2044
+              },
+              {
+                "delta": 0.002119,
+                "factor": "F2_impression",
+                "share_of_total": -24.0166
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": -0.000248,
+                "factor": "F3_satisfaction",
+                "share_of_total": 2.8122
+              },
+              {
+                "delta": 0.000205,
+                "factor": "F2_impression",
+                "share_of_total": -2.3245
+              },
+              {
+                "delta": -4.5e-05,
+                "factor": "F1_profile",
+                "share_of_total": 0.5123
+              }
+            ]
+          },
+          "total_111_minus_000": -8.8e-05
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.004467,
+              0.000121
+            ],
+            "mean": -0.002173,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.006145,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.00402,
+              0.000102
+            ],
+            "mean": -0.001959,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.005521,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.004092,
+              0.003832
+            ],
+            "mean": -0.00013,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 15,
+            "sd": 0.010611,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.004138,
+              0.004048
+            ],
+            "mean": -4.5e-05,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 13,
+            "sd": 0.010963,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.002839,
+              0.003294
+            ],
+            "mean": 0.000227,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 15,
+            "sd": 0.008213,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.002965,
+              0.003375
+            ],
+            "mean": 0.000205,
+            "n_worlds": 30,
+            "negative": 11,
+            "positive": 19,
+            "sd": 0.00849,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.001386,
+              0.005927
+            ],
+            "mean": 0.002271,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 18,
+            "sd": 0.009794,
+            "zero": 0
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.001497,
+              0.005735
+            ],
+            "mean": 0.002119,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.009685,
+            "zero": 0
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.001033,
+              0.000536
+            ],
+            "mean": -0.000248,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 10,
+            "sd": 0.002101,
+            "zero": 6
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.001257,
+              0.000717
+            ],
+            "mean": -0.00027,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 8,
+            "sd": 0.002644,
+            "zero": 8
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -0.000201,
+              0.000132
+            ],
+            "mean": -3.4e-05,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 14,
+            "sd": 0.000446,
+            "zero": 7
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.001024,
+              0.000652
+            ],
+            "mean": -0.000186,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 10,
+            "sd": 0.002244,
+            "zero": 8
+          }
+        }
+      },
+      "reinvest": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.013564,
+              0.018715
+            ],
+            "mean": 0.016139,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006898,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.013538,
+              0.018676
+            ],
+            "mean": 0.016107,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006881,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.008296,
+              0.01409
+            ],
+            "mean": 0.011193,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.00776,
+            "zero": 0
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.008898,
+              0.014418
+            ],
+            "mean": 0.011658,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007392,
+            "zero": 0
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.007958,
+              0.013644
+            ],
+            "mean": 0.010801,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 27,
+            "sd": 0.007614,
+            "zero": 2
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.008081,
+              0.013786
+            ],
+            "mean": 0.010934,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 27,
+            "sd": 0.007641,
+            "zero": 2
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.005987,
+              0.011839
+            ],
+            "mean": 0.008913,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 26,
+            "sd": 0.007837,
+            "zero": 3
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.004849,
+              0.011176
+            ],
+            "mean": 0.008012,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 24,
+            "sd": 0.008472,
+            "zero": 5
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.006491,
+              -0.001728
+            ],
+            "mean": -0.004109,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.006378,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.001106,
+              0.003399
+            ],
+            "mean": 0.001146,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.006033,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000766,
+              1e-06
+            ],
+            "mean": -0.000383,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 11,
+            "sd": 0.001027,
+            "zero": 2
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000698,
+              9.7e-05
+            ],
+            "mean": -0.0003,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 15,
+            "sd": 0.001065,
+            "zero": 2
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.005731,
+              -0.001371
+            ],
+            "mean": -0.003551,
+            "n_worlds": 30,
+            "negative": 21,
+            "positive": 9,
+            "sd": 0.005839,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.000497,
+              0.00023
+            ],
+            "mean": -0.000134,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 12,
+            "sd": 0.000974,
+            "zero": 2
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000446,
+              0.000278
+            ],
+            "mean": -8.4e-05,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 12,
+            "sd": 0.00097,
+            "zero": 2
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -0.005338,
+                "factor": "F1_profile",
+                "share_of_total": 0.6569
+              },
+              {
+                "delta": -0.001888,
+                "factor": "F2_impression",
+                "share_of_total": 0.2323
+              },
+              {
+                "delta": -0.000901,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.1108
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -0.005338,
+                "factor": "F1_profile",
+                "share_of_total": 0.6569
+              },
+              {
+                "delta": 0.000132,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0163
+              },
+              {
+                "delta": -0.002921,
+                "factor": "F2_impression",
+                "share_of_total": 0.3594
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -0.004946,
+                "factor": "F2_impression",
+                "share_of_total": 0.6086
+              },
+              {
+                "delta": -0.00228,
+                "factor": "F1_profile",
+                "share_of_total": 0.2805
+              },
+              {
+                "delta": -0.000901,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.1108
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -0.004946,
+                "factor": "F2_impression",
+                "share_of_total": 0.6086
+              },
+              {
+                "delta": 0.000465,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0573
+              },
+              {
+                "delta": -0.003646,
+                "factor": "F1_profile",
+                "share_of_total": 0.4486
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": -3.3e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.004
+              },
+              {
+                "delta": -0.005173,
+                "factor": "F1_profile",
+                "share_of_total": 0.6366
+              },
+              {
+                "delta": -0.002921,
+                "factor": "F2_impression",
+                "share_of_total": 0.3594
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": -3.3e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.004
+              },
+              {
+                "delta": -0.004449,
+                "factor": "F2_impression",
+                "share_of_total": 0.5474
+              },
+              {
+                "delta": -0.003646,
+                "factor": "F1_profile",
+                "share_of_total": 0.4486
+              }
+            ]
+          },
+          "total_111_minus_000": -0.008127
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.007949,
+              -0.002727
+            ],
+            "mean": -0.005338,
+            "n_worlds": 30,
+            "negative": 25,
+            "positive": 5,
+            "sd": 0.006993,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.007805,
+              -0.002541
+            ],
+            "mean": -0.005173,
+            "n_worlds": 30,
+            "negative": 24,
+            "positive": 6,
+            "sd": 0.00705,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.006166,
+              0.001607
+            ],
+            "mean": -0.00228,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 0.010409,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.007564,
+              0.000272
+            ],
+            "mean": -0.003646,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 11,
+            "sd": 0.010494,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.008217,
+              -0.001675
+            ],
+            "mean": -0.004946,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.008761,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.007643,
+              -0.001254
+            ],
+            "mean": -0.004449,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.008555,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.004965,
+              0.00119
+            ],
+            "mean": -0.001888,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 10,
+            "sd": 0.008243,
+            "zero": 1
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.006092,
+              0.00025
+            ],
+            "mean": -0.002921,
+            "n_worlds": 30,
+            "negative": 21,
+            "positive": 8,
+            "sd": 0.008493,
+            "zero": 1
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.000123,
+              5.8e-05
+            ],
+            "mean": -3.3e-05,
+            "n_worlds": 30,
+            "negative": 6,
+            "positive": 4,
+            "sd": 0.000241,
+            "zero": 20
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.000261,
+              0.001192
+            ],
+            "mean": 0.000465,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 8,
+            "sd": 0.001946,
+            "zero": 10
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -6.7e-05,
+              0.000332
+            ],
+            "mean": 0.000132,
+            "n_worlds": 30,
+            "negative": 6,
+            "positive": 9,
+            "sd": 0.000533,
+            "zero": 15
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.002204,
+              0.000402
+            ],
+            "mean": -0.000901,
+            "n_worlds": 30,
+            "negative": 11,
+            "positive": 5,
+            "sd": 0.003491,
+            "zero": 14
+          }
+        }
+      },
+      "reinvest_academy_points": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              1.614489,
+              4.918845
+            ],
+            "mean": 3.266667,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 25,
+            "sd": 4.425111,
+            "zero": 1
+          },
+          "001": {
+            "ci95_exploratory": [
+              2.248486,
+              5.018181
+            ],
+            "mean": 3.633333,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 25,
+            "sd": 3.709107,
+            "zero": 1
+          },
+          "010": {
+            "ci95_exploratory": [
+              -0.824881,
+              1.358214
+            ],
+            "mean": 0.266667,
+            "n_worlds": 30,
+            "negative": 11,
+            "positive": 10,
+            "sd": 2.923547,
+            "zero": 9
+          },
+          "011": {
+            "ci95_exploratory": [
+              -0.774647,
+              1.241313
+            ],
+            "mean": 0.233333,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 10,
+            "sd": 2.699723,
+            "zero": 7
+          },
+          "100": {
+            "ci95_exploratory": [
+              -0.207359,
+              1.740693
+            ],
+            "mean": 0.766667,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 11,
+            "sd": 2.608783,
+            "zero": 10
+          },
+          "101": {
+            "ci95_exploratory": [
+              -0.250037,
+              1.916704
+            ],
+            "mean": 0.833333,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 10,
+            "sd": 2.901644,
+            "zero": 11
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.416536,
+              2.650131
+            ],
+            "mean": 1.533333,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 16,
+            "sd": 2.991175,
+            "zero": 11
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.598602,
+              2.868065
+            ],
+            "mean": 1.733333,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 13,
+            "sd": 3.039207,
+            "zero": 14
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -1.661323,
+              0.394656
+            ],
+            "mean": -0.633333,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 11,
+            "sd": 2.753316,
+            "zero": 1
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              0.832699,
+              3.200634
+            ],
+            "mean": 2.016667,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 21,
+            "sd": 3.17108,
+            "zero": 1
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.094954,
+              0.361621
+            ],
+            "mean": 0.133333,
+            "n_worlds": 30,
+            "negative": 7,
+            "positive": 11,
+            "sd": 0.611433,
+            "zero": 12
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.247831,
+              0.214498
+            ],
+            "mean": -0.016667,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 7,
+            "sd": 0.619139,
+            "zero": 10
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -2.44732,
+              0.080653
+            ],
+            "mean": -1.183333,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 10,
+            "sd": 3.385398,
+            "zero": 2
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.335114,
+              0.20178
+            ],
+            "mean": -0.066667,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 9,
+            "sd": 0.718995,
+            "zero": 11
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.124716,
+              0.424716
+            ],
+            "mean": 0.15,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 12,
+            "sd": 0.735785,
+            "zero": 10
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -2.5,
+                "factor": "F1_profile",
+                "share_of_total": 1.6304
+              },
+              {
+                "delta": 0.766667,
+                "factor": "F2_impression",
+                "share_of_total": -0.5
+              },
+              {
+                "delta": 0.2,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.1304
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -2.5,
+                "factor": "F1_profile",
+                "share_of_total": 1.6304
+              },
+              {
+                "delta": 0.066667,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0435
+              },
+              {
+                "delta": 0.9,
+                "factor": "F2_impression",
+                "share_of_total": -0.587
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -3.0,
+                "factor": "F2_impression",
+                "share_of_total": 1.9565
+              },
+              {
+                "delta": 1.266667,
+                "factor": "F1_profile",
+                "share_of_total": -0.8261
+              },
+              {
+                "delta": 0.2,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.1304
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -3.0,
+                "factor": "F2_impression",
+                "share_of_total": 1.9565
+              },
+              {
+                "delta": -0.033333,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0217
+              },
+              {
+                "delta": 1.5,
+                "factor": "F1_profile",
+                "share_of_total": -0.9783
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": 0.366667,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.2391
+              },
+              {
+                "delta": -2.8,
+                "factor": "F1_profile",
+                "share_of_total": 1.8261
+              },
+              {
+                "delta": 0.9,
+                "factor": "F2_impression",
+                "share_of_total": -0.587
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": 0.366667,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.2391
+              },
+              {
+                "delta": -3.4,
+                "factor": "F2_impression",
+                "share_of_total": 2.2174
+              },
+              {
+                "delta": 1.5,
+                "factor": "F1_profile",
+                "share_of_total": -0.9783
+              }
+            ]
+          },
+          "total_111_minus_000": -1.533333
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -4.203226,
+              -0.796774
+            ],
+            "mean": -2.5,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 4.561836,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -4.403354,
+              -1.196646
+            ],
+            "mean": -2.8,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 4.294343,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.332284,
+              2.865617
+            ],
+            "mean": 1.266667,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 17,
+            "sd": 4.282549,
+            "zero": 5
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              0.007348,
+              2.992652
+            ],
+            "mean": 1.5,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 19,
+            "sd": 3.997844,
+            "zero": 2
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -5.049696,
+              -0.950304
+            ],
+            "mean": -3.0,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 7,
+            "sd": 5.489802,
+            "zero": 1
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -5.082926,
+              -1.717074
+            ],
+            "mean": -3.4,
+            "n_worlds": 30,
+            "negative": 24,
+            "positive": 6,
+            "sd": 4.507465,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.876029,
+              2.409362
+            ],
+            "mean": 0.766667,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 14,
+            "sd": 4.399713,
+            "zero": 6
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.762089,
+              2.562089
+            ],
+            "mean": 0.9,
+            "n_worlds": 30,
+            "negative": 11,
+            "positive": 12,
+            "sd": 4.451656,
+            "zero": 7
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.257193,
+              0.990526
+            ],
+            "mean": 0.366667,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 6,
+            "sd": 1.670914,
+            "zero": 21
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.528301,
+              0.461634
+            ],
+            "mean": -0.033333,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 6,
+            "sd": 1.325697,
+            "zero": 20
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -0.257542,
+              0.390876
+            ],
+            "mean": 0.066667,
+            "n_worlds": 30,
+            "negative": 2,
+            "positive": 3,
+            "sd": 0.868345,
+            "zero": 25
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.322526,
+              0.722526
+            ],
+            "mean": 0.2,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 4,
+            "sd": 1.399507,
+            "zero": 22
+          }
+        }
+      },
+      "reinvest_all12": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.006782,
+              0.009358
+            ],
+            "mean": 0.00807,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.003449,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.006769,
+              0.009338
+            ],
+            "mean": 0.008053,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.00344,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.004148,
+              0.007045
+            ],
+            "mean": 0.005596,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.00388,
+            "zero": 0
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.004449,
+              0.007209
+            ],
+            "mean": 0.005829,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.003696,
+            "zero": 0
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.003689,
+              0.006559
+            ],
+            "mean": 0.005124,
+            "n_worlds": 30,
+            "negative": 2,
+            "positive": 27,
+            "sd": 0.003844,
+            "zero": 1
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.003846,
+              0.006718
+            ],
+            "mean": 0.005282,
+            "n_worlds": 30,
+            "negative": 2,
+            "positive": 27,
+            "sd": 0.003845,
+            "zero": 1
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.002934,
+              0.005796
+            ],
+            "mean": 0.004365,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 27,
+            "sd": 0.003833,
+            "zero": 3
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.002326,
+              0.005483
+            ],
+            "mean": 0.003904,
+            "n_worlds": 30,
+            "negative": 2,
+            "positive": 25,
+            "sd": 0.004228,
+            "zero": 3
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.003407,
+              -0.00103
+            ],
+            "mean": -0.002218,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.003183,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.000456,
+              0.001736
+            ],
+            "mean": 0.00064,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.002935,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000447,
+              1.3e-05
+            ],
+            "mean": -0.000217,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 10,
+            "sd": 0.000616,
+            "zero": 4
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000297,
+              3.8e-05
+            ],
+            "mean": -0.00013,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 12,
+            "sd": 0.00045,
+            "zero": 4
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.002819,
+              -0.000598
+            ],
+            "mean": -0.001708,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.002975,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.00031,
+              0.000125
+            ],
+            "mean": -9.2e-05,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 10,
+            "sd": 0.000582,
+            "zero": 4
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000173,
+              0.00013
+            ],
+            "mean": -2.2e-05,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 10,
+            "sd": 0.000407,
+            "zero": 4
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -0.002946,
+                "factor": "F1_profile",
+                "share_of_total": 0.7073
+              },
+              {
+                "delta": -0.000759,
+                "factor": "F2_impression",
+                "share_of_total": 0.1821
+              },
+              {
+                "delta": -0.000461,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.1106
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -0.002946,
+                "factor": "F1_profile",
+                "share_of_total": 0.7073
+              },
+              {
+                "delta": 0.000158,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.038
+              },
+              {
+                "delta": -0.001377,
+                "factor": "F2_impression",
+                "share_of_total": 0.3307
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -0.002473,
+                "factor": "F2_impression",
+                "share_of_total": 0.5938
+              },
+              {
+                "delta": -0.001231,
+                "factor": "F1_profile",
+                "share_of_total": 0.2956
+              },
+              {
+                "delta": -0.000461,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.1106
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -0.002473,
+                "factor": "F2_impression",
+                "share_of_total": 0.5938
+              },
+              {
+                "delta": 0.000233,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0559
+              },
+              {
+                "delta": -0.001925,
+                "factor": "F1_profile",
+                "share_of_total": 0.462
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": -1.6e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0039
+              },
+              {
+                "delta": -0.002771,
+                "factor": "F1_profile",
+                "share_of_total": 0.6653
+              },
+              {
+                "delta": -0.001377,
+                "factor": "F2_impression",
+                "share_of_total": 0.3307
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": -1.6e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0039
+              },
+              {
+                "delta": -0.002224,
+                "factor": "F2_impression",
+                "share_of_total": 0.534
+              },
+              {
+                "delta": -0.001925,
+                "factor": "F1_profile",
+                "share_of_total": 0.462
+              }
+            ]
+          },
+          "total_111_minus_000": -0.004165
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.004266,
+              -0.001626
+            ],
+            "mean": -0.002946,
+            "n_worlds": 30,
+            "negative": 25,
+            "positive": 5,
+            "sd": 0.003535,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.004064,
+              -0.001479
+            ],
+            "mean": -0.002771,
+            "n_worlds": 30,
+            "negative": 24,
+            "positive": 6,
+            "sd": 0.003462,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.003133,
+              0.00067
+            ],
+            "mean": -0.001231,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 0.005093,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.003861,
+              1.2e-05
+            ],
+            "mean": -0.001925,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 11,
+            "sd": 0.005186,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.004109,
+              -0.000838
+            ],
+            "mean": -0.002473,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.00438,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.003821,
+              -0.000627
+            ],
+            "mean": -0.002224,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.004277,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.002289,
+              0.000772
+            ],
+            "mean": -0.000759,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 12,
+            "sd": 0.004099,
+            "zero": 1
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.002982,
+              0.000227
+            ],
+            "mean": -0.001378,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 10,
+            "sd": 0.004297,
+            "zero": 1
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -6.1e-05,
+              2.9e-05
+            ],
+            "mean": -1.6e-05,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 6,
+            "sd": 0.000121,
+            "zero": 15
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.000131,
+              0.000596
+            ],
+            "mean": 0.000233,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 7,
+            "sd": 0.000973,
+            "zero": 10
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -6.1e-05,
+              0.000377
+            ],
+            "mean": 0.000158,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 4,
+            "sd": 0.000586,
+            "zero": 22
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.001111,
+              0.00019
+            ],
+            "mean": -0.000461,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 5,
+            "sd": 0.001742,
+            "zero": 15
+          }
+        }
+      }
+    },
+    "explore_100_129": {
+      "non_empty": {
+        "cohort_counts": [
+          6
+        ],
+        "worlds_per_cell_institution": 30
+      },
+      "open_vs_closed": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.01544,
+              0.018567
+            ],
+            "mean": 0.017004,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.004188,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.015021,
+              0.018985
+            ],
+            "mean": 0.017003,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.00531,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.015107,
+              0.020323
+            ],
+            "mean": 0.017715,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006986,
+            "zero": 0
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.014026,
+              0.019551
+            ],
+            "mean": 0.016788,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007398,
+            "zero": 0
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.014586,
+              0.019292
+            ],
+            "mean": 0.016939,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006302,
+            "zero": 0
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.014875,
+              0.019035
+            ],
+            "mean": 0.016955,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.005571,
+            "zero": 0
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.013797,
+              0.018331
+            ],
+            "mean": 0.016064,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006072,
+            "zero": 0
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.013832,
+              0.018517
+            ],
+            "mean": 0.016175,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.006274,
+            "zero": 0
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.002465,
+              0.001276
+            ],
+            "mean": -0.000594,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 13,
+            "sd": 0.00501,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.002919,
+              0.001843
+            ],
+            "mean": -0.000538,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 15,
+            "sd": 0.006377,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000204,
+              0.000714
+            ],
+            "mean": 0.000255,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 18,
+            "sd": 0.00123,
+            "zero": 0
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000348,
+              0.000875
+            ],
+            "mean": 0.000264,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 21,
+            "sd": 0.001637,
+            "zero": 0
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.002596,
+              0.002016
+            ],
+            "mean": -0.00029,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.006176,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.00078,
+              0.000364
+            ],
+            "mean": -0.000208,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 0.001532,
+            "zero": 0
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000716,
+              0.000316
+            ],
+            "mean": -0.0002,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 0.001382,
+            "zero": 0
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -6.5e-05,
+                "factor": "F1_profile",
+                "share_of_total": 0.0783
+              },
+              {
+                "delta": -0.000875,
+                "factor": "F2_impression",
+                "share_of_total": 1.0557
+              },
+              {
+                "delta": 0.000111,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.134
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -6.5e-05,
+                "factor": "F1_profile",
+                "share_of_total": 0.0783
+              },
+              {
+                "delta": 1.7e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.02
+              },
+              {
+                "delta": -0.00078,
+                "factor": "F2_impression",
+                "share_of_total": 0.9417
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": 0.000711,
+                "factor": "F2_impression",
+                "share_of_total": -0.8578
+              },
+              {
+                "delta": -0.001651,
+                "factor": "F1_profile",
+                "share_of_total": 1.9918
+              },
+              {
+                "delta": 0.000111,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.134
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": 0.000711,
+                "factor": "F2_impression",
+                "share_of_total": -0.8578
+              },
+              {
+                "delta": -0.000926,
+                "factor": "F3_satisfaction",
+                "share_of_total": 1.1176
+              },
+              {
+                "delta": -0.000613,
+                "factor": "F1_profile",
+                "share_of_total": 0.7402
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": -1e-06,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0007
+              },
+              {
+                "delta": -4.8e-05,
+                "factor": "F1_profile",
+                "share_of_total": 0.0576
+              },
+              {
+                "delta": -0.00078,
+                "factor": "F2_impression",
+                "share_of_total": 0.9417
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": -1e-06,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0007
+              },
+              {
+                "delta": -0.000215,
+                "factor": "F2_impression",
+                "share_of_total": 0.2591
+              },
+              {
+                "delta": -0.000613,
+                "factor": "F1_profile",
+                "share_of_total": 0.7402
+              }
+            ]
+          },
+          "total_111_minus_000": -0.000829
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.002643,
+              0.002513
+            ],
+            "mean": -6.5e-05,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.006904,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.002598,
+              0.002502
+            ],
+            "mean": -4.8e-05,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.006829,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.005216,
+              0.001914
+            ],
+            "mean": -0.001651,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 16,
+            "sd": 0.009548,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.00424,
+              0.003013
+            ],
+            "mean": -0.000613,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 16,
+            "sd": 0.009714,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.002597,
+              0.004019
+            ],
+            "mean": 0.000711,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.00886,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.003784,
+              0.003355
+            ],
+            "mean": -0.000215,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 15,
+            "sd": 0.00956,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.00429,
+              0.00254
+            ],
+            "mean": -0.000875,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 13,
+            "sd": 0.009147,
+            "zero": 0
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.004059,
+              0.002498
+            ],
+            "mean": -0.00078,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.00878,
+            "zero": 0
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.001262,
+              0.00126
+            ],
+            "mean": -1e-06,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 10,
+            "sd": 0.003378,
+            "zero": 2
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.002363,
+              0.000511
+            ],
+            "mean": -0.000926,
+            "n_worlds": 30,
+            "negative": 14,
+            "positive": 6,
+            "sd": 0.003848,
+            "zero": 10
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -0.000912,
+              0.000945
+            ],
+            "mean": 1.7e-05,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 8,
+            "sd": 0.002486,
+            "zero": 5
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.000329,
+              0.000551
+            ],
+            "mean": 0.000111,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 8,
+            "sd": 0.001179,
+            "zero": 12
+          }
+        }
+      },
+      "reinvest": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.012572,
+              0.018029
+            ],
+            "mean": 0.015301,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007309,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.012578,
+              0.018046
+            ],
+            "mean": 0.015312,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.007323,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.007963,
+              0.013111
+            ],
+            "mean": 0.010537,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.006894,
+            "zero": 1
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.007799,
+              0.013372
+            ],
+            "mean": 0.010585,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.007462,
+            "zero": 1
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.008621,
+              0.014478
+            ],
+            "mean": 0.01155,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 28,
+            "sd": 0.007843,
+            "zero": 1
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.00814,
+              0.014008
+            ],
+            "mean": 0.011074,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 28,
+            "sd": 0.007859,
+            "zero": 1
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.006086,
+              0.009518
+            ],
+            "mean": 0.007802,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.004595,
+            "zero": 1
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.00572,
+              0.009039
+            ],
+            "mean": 0.007379,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.004444,
+            "zero": 1
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.005685,
+              -0.00128
+            ],
+            "mean": -0.003483,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 0.005898,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.001899,
+              0.002922
+            ],
+            "mean": 0.000512,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 17,
+            "sd": 0.006456,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000431,
+              0.00044
+            ],
+            "mean": 4e-06,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 13,
+            "sd": 0.001166,
+            "zero": 2
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000671,
+              0.000192
+            ],
+            "mean": -0.000239,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 12,
+            "sd": 0.001155,
+            "zero": 2
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.006644,
+              -0.001822
+            ],
+            "mean": -0.004233,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 0.006457,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.000407,
+              0.000452
+            ],
+            "mean": 2.2e-05,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 15,
+            "sd": 0.001151,
+            "zero": 2
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000628,
+              0.000209
+            ],
+            "mean": -0.00021,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 15,
+            "sd": 0.001121,
+            "zero": 2
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -0.003751,
+                "factor": "F1_profile",
+                "share_of_total": 0.4735
+              },
+              {
+                "delta": -0.003748,
+                "factor": "F2_impression",
+                "share_of_total": 0.4732
+              },
+              {
+                "delta": -0.000422,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0533
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -0.003751,
+                "factor": "F1_profile",
+                "share_of_total": 0.4735
+              },
+              {
+                "delta": -0.000476,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.06
+              },
+              {
+                "delta": -0.003695,
+                "factor": "F2_impression",
+                "share_of_total": 0.4664
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -0.004763,
+                "factor": "F2_impression",
+                "share_of_total": 0.6013
+              },
+              {
+                "delta": -0.002735,
+                "factor": "F1_profile",
+                "share_of_total": 0.3453
+              },
+              {
+                "delta": -0.000422,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0533
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -0.004763,
+                "factor": "F2_impression",
+                "share_of_total": 0.6013
+              },
+              {
+                "delta": 4.8e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0061
+              },
+              {
+                "delta": -0.003206,
+                "factor": "F1_profile",
+                "share_of_total": 0.4047
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": 1.2e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0015
+              },
+              {
+                "delta": -0.004238,
+                "factor": "F1_profile",
+                "share_of_total": 0.535
+              },
+              {
+                "delta": -0.003695,
+                "factor": "F2_impression",
+                "share_of_total": 0.4664
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": 1.2e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0015
+              },
+              {
+                "delta": -0.004727,
+                "factor": "F2_impression",
+                "share_of_total": 0.5967
+              },
+              {
+                "delta": -0.003206,
+                "factor": "F1_profile",
+                "share_of_total": 0.4047
+              }
+            ]
+          },
+          "total_111_minus_000": -0.007921
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.006847,
+              -0.000655
+            ],
+            "mean": -0.003751,
+            "n_worlds": 30,
+            "negative": 21,
+            "positive": 9,
+            "sd": 0.008293,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.007513,
+              -0.000962
+            ],
+            "mean": -0.004238,
+            "n_worlds": 30,
+            "negative": 21,
+            "positive": 9,
+            "sd": 0.008773,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.006196,
+              0.000725
+            ],
+            "mean": -0.002735,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 0.009269,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.006649,
+              0.000237
+            ],
+            "mean": -0.003206,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.009221,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.008519,
+              -0.001008
+            ],
+            "mean": -0.004763,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 0.010058,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.00844,
+              -0.001013
+            ],
+            "mean": -0.004727,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 0.009946,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.006885,
+              -0.00061
+            ],
+            "mean": -0.003748,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 11,
+            "sd": 0.008403,
+            "zero": 0
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.006896,
+              -0.000493
+            ],
+            "mean": -0.003695,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.008575,
+            "zero": 0
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.000181,
+              0.000204
+            ],
+            "mean": 1.2e-05,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 7,
+            "sd": 0.000515,
+            "zero": 15
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.001114,
+              0.00121
+            ],
+            "mean": 4.8e-05,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 10,
+            "sd": 0.003113,
+            "zero": 10
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -0.001428,
+              0.000477
+            ],
+            "mean": -0.000476,
+            "n_worlds": 30,
+            "negative": 7,
+            "positive": 6,
+            "sd": 0.002551,
+            "zero": 17
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.001226,
+              0.000382
+            ],
+            "mean": -0.000422,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 5,
+            "sd": 0.002153,
+            "zero": 17
+          }
+        }
+      },
+      "reinvest_academy_points": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.207901,
+              2.858766
+            ],
+            "mean": 1.533333,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 18,
+            "sd": 3.549972,
+            "zero": 3
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.137167,
+              3.196167
+            ],
+            "mean": 1.666667,
+            "n_worlds": 30,
+            "negative": 7,
+            "positive": 17,
+            "sd": 4.096536,
+            "zero": 6
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.10672,
+              1.89328
+            ],
+            "mean": 1.0,
+            "n_worlds": 30,
+            "negative": 7,
+            "positive": 15,
+            "sd": 2.392517,
+            "zero": 8
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.193372,
+              2.206628
+            ],
+            "mean": 1.2,
+            "n_worlds": 30,
+            "negative": 6,
+            "positive": 15,
+            "sd": 2.696102,
+            "zero": 9
+          },
+          "100": {
+            "ci95_exploratory": [
+              1.412822,
+              3.787178
+            ],
+            "mean": 2.6,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 22,
+            "sd": 3.179677,
+            "zero": 5
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.944387,
+              3.655613
+            ],
+            "mean": 2.3,
+            "n_worlds": 30,
+            "negative": 4,
+            "positive": 17,
+            "sd": 3.630807,
+            "zero": 9
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.337381,
+              2.062619
+            ],
+            "mean": 1.2,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 14,
+            "sd": 2.310396,
+            "zero": 13
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.471086,
+              2.195581
+            ],
+            "mean": 1.333333,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 15,
+            "sd": 2.309401,
+            "zero": 12
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.568403,
+              1.585069
+            ],
+            "mean": 0.508333,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 15,
+            "sd": 2.883876,
+            "zero": 2
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -1.402662,
+              0.719329
+            ],
+            "mean": -0.341667,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 16,
+            "sd": 2.841718,
+            "zero": 2
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.34234,
+              0.525673
+            ],
+            "mean": 0.091667,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 12,
+            "sd": 1.16242,
+            "zero": 6
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.486716,
+              0.236716
+            ],
+            "mean": -0.125,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 10,
+            "sd": 0.968802,
+            "zero": 8
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -1.945952,
+              0.262619
+            ],
+            "mean": -0.841667,
+            "n_worlds": 30,
+            "negative": 20,
+            "positive": 10,
+            "sd": 2.957663,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.186753,
+              0.436753
+            ],
+            "mean": 0.125,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 15,
+            "sd": 0.834984,
+            "zero": 6
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.300706,
+              0.384039
+            ],
+            "mean": 0.041667,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 9,
+            "sd": 0.916993,
+            "zero": 6
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": 1.066667,
+                "factor": "F1_profile",
+                "share_of_total": -5.3333
+              },
+              {
+                "delta": -1.4,
+                "factor": "F2_impression",
+                "share_of_total": 7.0
+              },
+              {
+                "delta": 0.133333,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.6667
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": 1.066667,
+                "factor": "F1_profile",
+                "share_of_total": -5.3333
+              },
+              {
+                "delta": -0.3,
+                "factor": "F3_satisfaction",
+                "share_of_total": 1.5
+              },
+              {
+                "delta": -0.966667,
+                "factor": "F2_impression",
+                "share_of_total": 4.8333
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -0.533333,
+                "factor": "F2_impression",
+                "share_of_total": 2.6667
+              },
+              {
+                "delta": 0.2,
+                "factor": "F1_profile",
+                "share_of_total": -1.0
+              },
+              {
+                "delta": 0.133333,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.6667
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -0.533333,
+                "factor": "F2_impression",
+                "share_of_total": 2.6667
+              },
+              {
+                "delta": 0.2,
+                "factor": "F3_satisfaction",
+                "share_of_total": -1.0
+              },
+              {
+                "delta": 0.133333,
+                "factor": "F1_profile",
+                "share_of_total": -0.6667
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": 0.133333,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.6667
+              },
+              {
+                "delta": 0.633333,
+                "factor": "F1_profile",
+                "share_of_total": -3.1667
+              },
+              {
+                "delta": -0.966667,
+                "factor": "F2_impression",
+                "share_of_total": 4.8333
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": 0.133333,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.6667
+              },
+              {
+                "delta": -0.466667,
+                "factor": "F2_impression",
+                "share_of_total": 2.3333
+              },
+              {
+                "delta": 0.133333,
+                "factor": "F1_profile",
+                "share_of_total": -0.6667
+              }
+            ]
+          },
+          "total_111_minus_000": -0.2
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.620064,
+              2.753397
+            ],
+            "mean": 1.066667,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 14,
+            "sd": 4.517654,
+            "zero": 4
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -1.370069,
+              2.636736
+            ],
+            "mean": 0.633333,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 13,
+            "sd": 5.365813,
+            "zero": 4
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -1.124223,
+              1.524223
+            ],
+            "mean": 0.2,
+            "n_worlds": 30,
+            "negative": 10,
+            "positive": 15,
+            "sd": 3.546732,
+            "zero": 5
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -1.21011,
+              1.476777
+            ],
+            "mean": 0.133333,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 13,
+            "sd": 3.598212,
+            "zero": 5
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -2.286578,
+              1.219912
+            ],
+            "mean": -0.533333,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 14,
+            "sd": 4.695804,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -2.321173,
+              1.38784
+            ],
+            "mean": -0.466667,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 10,
+            "sd": 4.967018,
+            "zero": 2
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -2.809334,
+              0.009334
+            ],
+            "mean": -1.4,
+            "n_worlds": 30,
+            "negative": 16,
+            "positive": 9,
+            "sd": 3.774689,
+            "zero": 5
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -2.389184,
+              0.455851
+            ],
+            "mean": -0.966667,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 9,
+            "sd": 3.809999,
+            "zero": 6
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -0.714296,
+              0.980962
+            ],
+            "mean": 0.133333,
+            "n_worlds": 30,
+            "negative": 7,
+            "positive": 6,
+            "sd": 2.270247,
+            "zero": 17
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.523183,
+              0.923183
+            ],
+            "mean": 0.2,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 6,
+            "sd": 1.936937,
+            "zero": 15
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -1.127058,
+              0.527058
+            ],
+            "mean": -0.3,
+            "n_worlds": 30,
+            "negative": 6,
+            "positive": 4,
+            "sd": 2.215152,
+            "zero": 20
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.323767,
+              0.590434
+            ],
+            "mean": 0.133333,
+            "n_worlds": 30,
+            "negative": 3,
+            "positive": 3,
+            "sd": 1.224276,
+            "zero": 24
+          }
+        }
+      },
+      "reinvest_all12": {
+        "cells": {
+          "000": {
+            "ci95_exploratory": [
+              0.006286,
+              0.009015
+            ],
+            "mean": 0.00765,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.003654,
+            "zero": 0
+          },
+          "001": {
+            "ci95_exploratory": [
+              0.006289,
+              0.009023
+            ],
+            "mean": 0.007656,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 30,
+            "sd": 0.003661,
+            "zero": 0
+          },
+          "010": {
+            "ci95_exploratory": [
+              0.003977,
+              0.006547
+            ],
+            "mean": 0.005262,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.003441,
+            "zero": 1
+          },
+          "011": {
+            "ci95_exploratory": [
+              0.003895,
+              0.006677
+            ],
+            "mean": 0.005286,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.003726,
+            "zero": 1
+          },
+          "100": {
+            "ci95_exploratory": [
+              0.004023,
+              0.006919
+            ],
+            "mean": 0.005471,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 28,
+            "sd": 0.003877,
+            "zero": 1
+          },
+          "101": {
+            "ci95_exploratory": [
+              0.003735,
+              0.006605
+            ],
+            "mean": 0.00517,
+            "n_worlds": 30,
+            "negative": 1,
+            "positive": 28,
+            "sd": 0.003843,
+            "zero": 1
+          },
+          "110": {
+            "ci95_exploratory": [
+              0.002835,
+              0.004614
+            ],
+            "mean": 0.003725,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.002383,
+            "zero": 1
+          },
+          "111": {
+            "ci95_exploratory": [
+              0.002661,
+              0.004395
+            ],
+            "mean": 0.003528,
+            "n_worlds": 30,
+            "negative": 0,
+            "positive": 29,
+            "sd": 0.002323,
+            "zero": 1
+          }
+        },
+        "mean_contrasts_2cubed": {
+          "F1": {
+            "ci95_exploratory": [
+              -0.003101,
+              -0.000879
+            ],
+            "mean": -0.00199,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.002977,
+            "zero": 0
+          },
+          "F1xF2": {
+            "ci95_exploratory": [
+              -0.000859,
+              0.001544
+            ],
+            "mean": 0.000342,
+            "n_worlds": 30,
+            "negative": 12,
+            "positive": 18,
+            "sd": 0.003218,
+            "zero": 0
+          },
+          "F1xF2xF3": {
+            "ci95_exploratory": [
+              -0.000197,
+              0.000239
+            ],
+            "mean": 2.1e-05,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 14,
+            "sd": 0.000584,
+            "zero": 3
+          },
+          "F1xF3": {
+            "ci95_exploratory": [
+              -0.000346,
+              8.2e-05
+            ],
+            "mean": -0.000132,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 10,
+            "sd": 0.000573,
+            "zero": 3
+          },
+          "F2": {
+            "ci95_exploratory": [
+              -0.003213,
+              -0.00086
+            ],
+            "mean": -0.002037,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.003152,
+            "zero": 0
+          },
+          "F2xF3": {
+            "ci95_exploratory": [
+              -0.000185,
+              0.000246
+            ],
+            "mean": 3.1e-05,
+            "n_worlds": 30,
+            "negative": 11,
+            "positive": 16,
+            "sd": 0.000577,
+            "zero": 3
+          },
+          "F3": {
+            "ci95_exploratory": [
+              -0.000325,
+              9.1e-05
+            ],
+            "mean": -0.000117,
+            "n_worlds": 30,
+            "negative": 15,
+            "positive": 12,
+            "sd": 0.000557,
+            "zero": 3
+          }
+        },
+        "order_dependence": {
+          "paths": {
+            "F1>F2>F3": [
+              {
+                "delta": -0.002179,
+                "factor": "F1_profile",
+                "share_of_total": 0.5286
+              },
+              {
+                "delta": -0.001746,
+                "factor": "F2_impression",
+                "share_of_total": 0.4236
+              },
+              {
+                "delta": -0.000197,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0477
+              }
+            ],
+            "F1>F3>F2": [
+              {
+                "delta": -0.002179,
+                "factor": "F1_profile",
+                "share_of_total": 0.5286
+              },
+              {
+                "delta": -0.000301,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.073
+              },
+              {
+                "delta": -0.001642,
+                "factor": "F2_impression",
+                "share_of_total": 0.3983
+              }
+            ],
+            "F2>F1>F3": [
+              {
+                "delta": -0.002388,
+                "factor": "F2_impression",
+                "share_of_total": 0.5794
+              },
+              {
+                "delta": -0.001537,
+                "factor": "F1_profile",
+                "share_of_total": 0.3729
+              },
+              {
+                "delta": -0.000197,
+                "factor": "F3_satisfaction",
+                "share_of_total": 0.0477
+              }
+            ],
+            "F2>F3>F1": [
+              {
+                "delta": -0.002388,
+                "factor": "F2_impression",
+                "share_of_total": 0.5794
+              },
+              {
+                "delta": 2.4e-05,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0059
+              },
+              {
+                "delta": -0.001758,
+                "factor": "F1_profile",
+                "share_of_total": 0.4265
+              }
+            ],
+            "F3>F1>F2": [
+              {
+                "delta": 6e-06,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0014
+              },
+              {
+                "delta": -0.002486,
+                "factor": "F1_profile",
+                "share_of_total": 0.603
+              },
+              {
+                "delta": -0.001642,
+                "factor": "F2_impression",
+                "share_of_total": 0.3983
+              }
+            ],
+            "F3>F2>F1": [
+              {
+                "delta": 6e-06,
+                "factor": "F3_satisfaction",
+                "share_of_total": -0.0014
+              },
+              {
+                "delta": -0.00237,
+                "factor": "F2_impression",
+                "share_of_total": 0.5748
+              },
+              {
+                "delta": -0.001758,
+                "factor": "F1_profile",
+                "share_of_total": 0.4265
+              }
+            ]
+          },
+          "total_111_minus_000": -0.004122
+        },
+        "single_factor_flips": {
+          "F1_profile|others=00": {
+            "ci95_exploratory": [
+              -0.003696,
+              -0.000662
+            ],
+            "mean": -0.002179,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.004063,
+            "zero": 0
+          },
+          "F1_profile|others=01": {
+            "ci95_exploratory": [
+              -0.004085,
+              -0.000886
+            ],
+            "mean": -0.002486,
+            "n_worlds": 30,
+            "negative": 22,
+            "positive": 8,
+            "sd": 0.004285,
+            "zero": 0
+          },
+          "F1_profile|others=10": {
+            "ci95_exploratory": [
+              -0.003306,
+              0.000232
+            ],
+            "mean": -0.001537,
+            "n_worlds": 30,
+            "negative": 19,
+            "positive": 11,
+            "sd": 0.004738,
+            "zero": 0
+          },
+          "F1_profile|others=11": {
+            "ci95_exploratory": [
+              -0.003519,
+              2e-06
+            ],
+            "mean": -0.001758,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.004716,
+            "zero": 0
+          },
+          "F2_impression|others=00": {
+            "ci95_exploratory": [
+              -0.004262,
+              -0.000514
+            ],
+            "mean": -0.002388,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 0.005019,
+            "zero": 0
+          },
+          "F2_impression|others=01": {
+            "ci95_exploratory": [
+              -0.004222,
+              -0.000517
+            ],
+            "mean": -0.00237,
+            "n_worlds": 30,
+            "negative": 23,
+            "positive": 7,
+            "sd": 0.004963,
+            "zero": 0
+          },
+          "F2_impression|others=10": {
+            "ci95_exploratory": [
+              -0.003279,
+              -0.000213
+            ],
+            "mean": -0.001746,
+            "n_worlds": 30,
+            "negative": 18,
+            "positive": 12,
+            "sd": 0.004106,
+            "zero": 0
+          },
+          "F2_impression|others=11": {
+            "ci95_exploratory": [
+              -0.00319,
+              -9.4e-05
+            ],
+            "mean": -0.001642,
+            "n_worlds": 30,
+            "negative": 17,
+            "positive": 13,
+            "sd": 0.004147,
+            "zero": 0
+          },
+          "F3_satisfaction|others=00": {
+            "ci95_exploratory": [
+              -9.1e-05,
+              0.000102
+            ],
+            "mean": 6e-06,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 3,
+            "sd": 0.000258,
+            "zero": 18
+          },
+          "F3_satisfaction|others=01": {
+            "ci95_exploratory": [
+              -0.000557,
+              0.000605
+            ],
+            "mean": 2.4e-05,
+            "n_worlds": 30,
+            "negative": 9,
+            "positive": 10,
+            "sd": 0.001557,
+            "zero": 11
+          },
+          "F3_satisfaction|others=10": {
+            "ci95_exploratory": [
+              -0.00078,
+              0.000178
+            ],
+            "mean": -0.000301,
+            "n_worlds": 30,
+            "negative": 13,
+            "positive": 5,
+            "sd": 0.001283,
+            "zero": 12
+          },
+          "F3_satisfaction|others=11": {
+            "ci95_exploratory": [
+              -0.000591,
+              0.000198
+            ],
+            "mean": -0.000197,
+            "n_worlds": 30,
+            "negative": 8,
+            "positive": 5,
+            "sd": 0.001057,
+            "zero": 17
+          }
+        }
+      }
+    }
+  },
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t019.py": "1d5f7a297a72185f87f25e848703086eee3d393481a6dfa0d96c649e97cc3492"
+  },
+  "cells": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "cli": {
+    "cli_equals_api": true,
+    "condition": "league_open_solidarity_factors_101",
+    "save_day14_resume_to35_equals_direct": true
+  },
+  "corner_reproduction": {
+    "fixed": {
+      "cell": "000",
+      "mean": 0.015301,
+      "paired_differences_equal_t016": true
+    },
+    "sampled": {
+      "cell": "111",
+      "mean": 0.007379,
+      "paired_differences_equal_t016": true
+    }
+  },
+  "days": 84,
+  "elapsed_seconds": 235.94792824999968,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "e997147f3398b56cb07466660db117e814118333f59cb59e88ac55f3a17ecd67",
+    "world_kind": "league_economy_loop"
+  },
+  "independence": {
+    "cells": 8,
+    "note": "F2 depends on F1 by definition (impressions are readings of the chosen profile); F3 changes only p3,p9 satisfaction",
+    "seeds": 4,
+    "single_factor_flips_checked": 96
+  },
+  "independently_audited_transactions": 861611,
+  "limitations": [
+    "uncalibrated ranges",
+    "F2 is conditional on F1 by definition",
+    "F1 includes academy/buyer type differences by design",
+    "confidence intervals are exploratory, no multiplicity adjustment"
+  ],
+  "max_rss_raw": 75104256,
+  "regression": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "runs": 1440,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seeds": {
+    "confirm": [
+      200,
+      229
+    ],
+    "explore": [
+      100,
+      129
+    ]
+  },
+  "task": "T019"
+}

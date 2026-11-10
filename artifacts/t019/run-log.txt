@@ -1,0 +1,3 @@
+regression {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+independence {'seeds': 4, 'cells': 8, 'single_factor_flips_checked': 96, 'note': 'F2 depends on F1 by definition (impressions are readings of the chosen profile); F3 changes only p3,p9 satisfaction'}
+{"runs": 1440, "independently_audited_transactions": 861611, "elapsed_seconds": 235.94792824999968}
