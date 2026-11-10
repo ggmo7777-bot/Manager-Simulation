@@ -6,6 +6,12 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def changed_sim_files(task):
+    """soccer_sim files that differ from a frozen bundle. T036 changed league_economy.py / league_observation.py on purpose (the default path is byte-identical in output: tests/test_t036.py)."""
+    bundle = ROOT / f'artifacts/{task}/source_bundle/soccer_sim'
+    return {p.name for p in (ROOT / 'soccer_sim').glob('*.py') if p.read_bytes() != (bundle / p.name).read_bytes()}
 sys.path.insert(0, str(ROOT))
 from experiments import t035, t034, t023
 from soccer_sim import league_economy as le
@@ -121,7 +127,7 @@ class TestExplanation(unittest.TestCase):
 
 class TestAudit(unittest.TestCase):
     def test_static_audit_finds_the_affine_default_range_calls(self):
-        a = t035.audit_code(ROOT)['by_file_and_class']
+        a = t035.audit_code(ROOT / 'artifacts/t035/source_bundle')['by_file_and_class']  # the frozen pre-T036 source (T036 routes these draws through observation_noise)
         self.assertEqual(a['league_economy.py'].get('default_range_affine_(u-0.5)*2*noise'), 4)  # self, coach, scout, match
         self.assertEqual(a['league_observation.py'].get('default_range_affine_(2u-1)*noise'), 1)  # fatigue
         for older in ('selection_loop.py', 'transfer_loop.py'):
@@ -142,7 +148,7 @@ class TestRealWorld(unittest.TestCase):
             self.assertLess(v['mean_nu_over_width'], -0.5, k)  # shifted towards negative in every kind
 
     def test_simulation_unchanged(self):
-        self.assertEqual(set(t034.check_sim_unchanged(ROOT)['files_compared']), {'t032', 't033'})
+        self.assertLessEqual(changed_sim_files('t032') | changed_sim_files('t033'), {'league_economy.py', 'league_observation.py'})  # only T036's two files differ
 
 
 if __name__ == '__main__':
