@@ -1,0 +1,20 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True, 'explicit_none_equals_default_advice_on': 14, 'receptiveness_default_identical': True, 'explicit_none_equals_default_aging_config': 14, 't026_default_check': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'save_fields': True} pure {'observe_scores_checked': 732} static {'exploration_readers': ['__post_init__', '_step_training_day', 'has_save_fields', 'to_dict']}
+leak {'off': {'days_compared_before_first_observation': 10}, 'on': {'days_compared_before_first_observation': 10}}
+main closed_no_solidarity
+main closed_no_solidarity_sampled_population
+main closed_solidarity
+main closed_solidarity_sampled_population
+main open_no_solidarity
+main open_no_solidarity_sampled_population
+main open_solidarity
+main open_solidarity_sampled_population
+main fixed_budget_no_inflow
+main fixed_budget_no_inflow_sampled_population
+main hoarder_buyer_policy
+main hoarder_buyer_policy_sampled_population
+main exploit_churn_guard
+main exploit_churn_guard_sampled_population
+analysis {"P1_observed": {"on": 1.0, "off": 0.6438492063492064, "supported": true}, "P2_started": {"diff": -0.003968253968254065, "supported": false}, "P3_error": {"on": 0.09346610615079365, "off": 0.09766189087301587, "cells_with_newcomers": 84, "cells_on_lower": 69, "supported": true}, "P4_costs": {"skill": {"mean_on_minus_off": -0.0016126865079365163, "sign_test": {"positive": 37, "negative": 47, "ties": 0, "p_two_sided": 0.32613417119198296}}, "satisfaction": {"mean_on_minus_off": 0.012867063492063482, "sign_test": {"positive": 31, "negative": 4, "ties": 49, "p_two_sided": 3.4654513001441956e-06}}, "trust": {"mean_on_minus_off": 0.004868424355158726, "sign_test": {"positive": 64, "negative": 20, "ties": 0, "p_two_sided": 1.5849255649693016e-06}}, "transfers": {"mean_on_minus_off": -0.16666666666666666, "sign_test": {"positive": 1, "negative": 14, "ties": 69, "p_two_sided": 0.0009765625}}, "starter_skill": {"mean_on_minus_off": 0.0023783666914682275, "sign_test": {"positive": 66, "negative": 18, "ties": 0, "p_two_sided": 1.3328736909323258e-07}}, "slot_share_propose": {"off": 0.6254960317460317, "on": 0.5238301917989419}, "slot_share_observe": {"off": 0.005942046957671958, "on": 0.05386078042328042}, "slot_share_scout": {"off": 0.3685619212962963, "on": 0.4223090277777778}, "slot_share_rest": {"off": 0.0, "on": 0.0}, "events_on_minus_off": -130.46428571428572, "observes_on_players_unseen_over_10_days": {"off": 160, "on": 3754, "observes_off": 575, "observes_on": 5212}}, "P4_material": {"skill_below_-0.005": false, "trust_below_-0.010": false, "skill_negative": true, "trust_negative": false, "starter_skill_not_positive": false}}
+persistence {'worlds': 14, 'coach_training_decisions': 16128} {'interventions': 1, 'stepped_equals_oneshot': True} {'load_league_snapshot': 'rejected', 'load_league_snapshot_trusted': 'accepted'}
+{"cells": 84, "elapsed_seconds": 360.98804466699994}

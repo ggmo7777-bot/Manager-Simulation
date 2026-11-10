@@ -1,0 +1,4017 @@
+{
+  "analysis": {
+    "P1_observed": {
+      "off": 0.6438492063492064,
+      "on": 1.0,
+      "supported": true
+    },
+    "P2_started": {
+      "diff": -0.003968253968254065,
+      "supported": false
+    },
+    "P3_error": {
+      "cells_on_lower": 69,
+      "cells_with_newcomers": 84,
+      "off": 0.09766189087301587,
+      "on": 0.09346610615079365,
+      "supported": true
+    },
+    "P4_costs": {
+      "events_on_minus_off": -130.46428571428572,
+      "observes_on_players_unseen_over_10_days": {
+        "observes_off": 575,
+        "observes_on": 5212,
+        "off": 160,
+        "on": 3754
+      },
+      "satisfaction": {
+        "mean_on_minus_off": 0.012867063492063482,
+        "sign_test": {
+          "negative": 4,
+          "p_two_sided": 3.4654513001441956e-06,
+          "positive": 31,
+          "ties": 49
+        }
+      },
+      "skill": {
+        "mean_on_minus_off": -0.0016126865079365163,
+        "sign_test": {
+          "negative": 47,
+          "p_two_sided": 0.32613417119198296,
+          "positive": 37,
+          "ties": 0
+        }
+      },
+      "slot_share_observe": {
+        "off": 0.005942046957671958,
+        "on": 0.05386078042328042
+      },
+      "slot_share_propose": {
+        "off": 0.6254960317460317,
+        "on": 0.5238301917989419
+      },
+      "slot_share_rest": {
+        "off": 0.0,
+        "on": 0.0
+      },
+      "slot_share_scout": {
+        "off": 0.3685619212962963,
+        "on": 0.4223090277777778
+      },
+      "starter_skill": {
+        "mean_on_minus_off": 0.0023783666914682275,
+        "sign_test": {
+          "negative": 18,
+          "p_two_sided": 1.3328736909323258e-07,
+          "positive": 66,
+          "ties": 0
+        }
+      },
+      "transfers": {
+        "mean_on_minus_off": -0.16666666666666666,
+        "sign_test": {
+          "negative": 14,
+          "p_two_sided": 0.0009765625,
+          "positive": 1,
+          "ties": 69
+        }
+      },
+      "trust": {
+        "mean_on_minus_off": 0.004868424355158726,
+        "sign_test": {
+          "negative": 20,
+          "p_two_sided": 1.5849255649693016e-06,
+          "positive": 64,
+          "ties": 0
+        }
+      }
+    },
+    "P4_material": {
+      "skill_below_-0.005": false,
+      "skill_negative": true,
+      "starter_skill_not_positive": false,
+      "trust_below_-0.010": false,
+      "trust_negative": false
+    },
+    "by_start": {
+      "29": {
+        "off": {
+          "newcomers": 504,
+          "observed_share": 0.6091269841269841,
+          "started_share": 0.6091269841269841
+        },
+        "on": {
+          "newcomers": 504,
+          "observed_share": 1.0,
+          "started_share": 0.6111111111111112
+        }
+      },
+      "33": {
+        "off": {
+          "newcomers": 504,
+          "observed_share": 0.6785714285714286,
+          "started_share": 0.6785714285714286
+        },
+        "on": {
+          "newcomers": 504,
+          "observed_share": 1.0,
+          "started_share": 0.6686507936507936
+        }
+      }
+    },
+    "newcomers": {
+      "off": {
+        "error_after_season": 0.09766189087301587,
+        "newcomers_with_a_full_season": 1008,
+        "observed_share": 0.6438492063492064,
+        "start_rate_per_matchday": 0.39120370370370366,
+        "started_share": 0.6438492063492064,
+        "top2_true_newcomers": 558,
+        "top2_true_started_share": 0.7096774193548387
+      },
+      "on": {
+        "error_after_season": 0.09346610615079365,
+        "newcomers_with_a_full_season": 1008,
+        "observed_share": 1.0,
+        "start_rate_per_matchday": 0.39087301587301587,
+        "started_share": 0.6398809523809523,
+        "top2_true_newcomers": 550,
+        "top2_true_started_share": 0.74
+      }
+    }
+  },
+  "branch": {
+    "interventions": 1,
+    "stepped_equals_oneshot": true
+  },
+  "cells": [
+    {
+      "off": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6900639166666668,
+          "transfers": 0,
+          "trust": 0.4806724791666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6987847222222222,
+          "rest": 0.0,
+          "scout": 0.2977430555555556
+        },
+        "starter_skill": 0.6213063489583334
+      },
+      "on": {
+        "events": 9169,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6807075833333333,
+          "transfers": 0,
+          "trust": 0.4850918333333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 41,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.6328125,
+          "rest": 0.0,
+          "scout": 0.3168402777777778
+        },
+        "starter_skill": 0.618116015625
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9237,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.85081975,
+          "transfers": 0,
+          "trust": 0.47557587500000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6258680555555556,
+          "rest": 0.0,
+          "scout": 0.3697916666666667
+        },
+        "starter_skill": 0.7052198281250001
+      },
+      "on": {
+        "events": 9129,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9312,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7068714166666666,
+          "transfers": 0,
+          "trust": 0.4727527916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.671875,
+          "rest": 0.0,
+          "scout": 0.3263888888888889
+        },
+        "starter_skill": 0.6281654739583333
+      },
+      "on": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7075880833333333,
+          "transfers": 0,
+          "trust": 0.4722089166666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 56,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.04861111111111111,
+          "propose": 0.6024305555555556,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.628195078125
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9291,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548174999999999,
+          "transfers": 0,
+          "trust": 0.45738556250000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6015625,
+          "rest": 0.0,
+          "scout": 0.3932291666666667
+        },
+        "starter_skill": 0.7158728333333334
+      },
+      "on": {
+        "events": 9154,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 40,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9262,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7026470833333334,
+          "transfers": 0,
+          "trust": 0.47881160416666674
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.6623263888888888,
+          "rest": 0.0,
+          "scout": 0.3359375
+        },
+        "starter_skill": 0.624993796875
+      },
+      "on": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7025098333333334,
+          "transfers": 0,
+          "trust": 0.4888027916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.5989583333333334,
+          "rest": 0.0,
+          "scout": 0.3515625
+        },
+        "starter_skill": 0.6288192604166667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9251,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.843962,
+          "transfers": 0,
+          "trust": 0.46879739583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5338541666666666,
+          "rest": 0.0,
+          "scout": 0.453125
+        },
+        "starter_skill": 0.6992156718750001
+      },
+      "on": {
+        "events": 9160,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9244,
+        "final": {
+          "satisfaction": 0.61,
+          "skill": 0.6969761666666666,
+          "transfers": 0,
+          "trust": 0.48659406250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6206597222222222,
+          "rest": 0.0,
+          "scout": 0.3758680555555556
+        },
+        "starter_skill": 0.607289078125
+      },
+      "on": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6839654999999999,
+          "transfers": 0,
+          "trust": 0.47692550000000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6004139322916667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9231,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8533904166666667,
+          "transfers": 0,
+          "trust": 0.4705821666666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 9,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.0078125,
+          "propose": 0.5911458333333334,
+          "rest": 0.0,
+          "scout": 0.4010416666666667
+        },
+        "starter_skill": 0.7003782083333333
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8486224166666667,
+          "transfers": 0,
+          "trust": 0.4849113541666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4470486111111111,
+          "rest": 0.0,
+          "scout": 0.5
+        },
+        "starter_skill": 0.7008551666666666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9351,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6863046666666667,
+          "transfers": 0,
+          "trust": 0.4771910416666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.3984375
+        },
+        "starter_skill": 0.6066376614583333
+      },
+      "on": {
+        "events": 9182,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6862936666666667,
+          "transfers": 0,
+          "trust": 0.4793026875
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 39,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.5217013888888888,
+          "rest": 0.0,
+          "scout": 0.4227430555555556
+        },
+        "starter_skill": 0.616746234375
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9293,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.855064,
+          "transfers": 0,
+          "trust": 0.4493255833333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.4001736111111111
+        },
+        "starter_skill": 0.70260253125
+      },
+      "on": {
+        "events": 9159,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8582569166666666,
+          "transfers": 0,
+          "trust": 0.47268414583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 59,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4505208333333333,
+          "rest": 0.0,
+          "scout": 0.4982638888888889
+        },
+        "starter_skill": 0.7013131927083333
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9289,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6835334166666667,
+          "transfers": 0,
+          "trust": 0.4637223750000001
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6128472222222222,
+          "rest": 0.0,
+          "scout": 0.3836805555555556
+        },
+        "starter_skill": 0.5920876770833333
+      },
+      "on": {
+        "events": 9178,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6808757500000001,
+          "transfers": 0,
+          "trust": 0.47111035416666674
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.5416666666666666,
+          "rest": 0.0,
+          "scout": 0.4079861111111111
+        },
+        "starter_skill": 0.6091078958333334
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9229,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84658275,
+          "transfers": 0,
+          "trust": 0.4709950833333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 18,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.015625,
+          "propose": 0.5329861111111112,
+          "rest": 0.0,
+          "scout": 0.4513888888888889
+        },
+        "starter_skill": 0.6916137031249999
+      },
+      "on": {
+        "events": 9136,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8446142499999999,
+          "transfers": 0,
+          "trust": 0.4792704791666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4609375,
+          "rest": 0.0,
+          "scout": 0.4852430555555556
+        },
+        "starter_skill": 0.6935709479166666
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6900639166666668,
+          "transfers": 0,
+          "trust": 0.4806724791666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6987847222222222,
+          "rest": 0.0,
+          "scout": 0.2977430555555556
+        },
+        "starter_skill": 0.6213063489583334
+      },
+      "on": {
+        "events": 9169,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6807075833333333,
+          "transfers": 0,
+          "trust": 0.4850918333333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 41,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.6328125,
+          "rest": 0.0,
+          "scout": 0.3168402777777778
+        },
+        "starter_skill": 0.618116015625
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9237,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.85081975,
+          "transfers": 0,
+          "trust": 0.47557587500000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6258680555555556,
+          "rest": 0.0,
+          "scout": 0.3697916666666667
+        },
+        "starter_skill": 0.7052198281250001
+      },
+      "on": {
+        "events": 9129,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9312,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7068714166666666,
+          "transfers": 0,
+          "trust": 0.4727527916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.671875,
+          "rest": 0.0,
+          "scout": 0.3263888888888889
+        },
+        "starter_skill": 0.6281654739583333
+      },
+      "on": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7075880833333333,
+          "transfers": 0,
+          "trust": 0.4722089166666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 56,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.04861111111111111,
+          "propose": 0.6024305555555556,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.628195078125
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9291,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548174999999999,
+          "transfers": 0,
+          "trust": 0.45738556250000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6015625,
+          "rest": 0.0,
+          "scout": 0.3932291666666667
+        },
+        "starter_skill": 0.7158728333333334
+      },
+      "on": {
+        "events": 9154,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 40,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9262,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7026470833333334,
+          "transfers": 0,
+          "trust": 0.47881160416666674
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.6623263888888888,
+          "rest": 0.0,
+          "scout": 0.3359375
+        },
+        "starter_skill": 0.624993796875
+      },
+      "on": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7025098333333334,
+          "transfers": 0,
+          "trust": 0.4888027916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.5989583333333334,
+          "rest": 0.0,
+          "scout": 0.3515625
+        },
+        "starter_skill": 0.6288192604166667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9251,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.843962,
+          "transfers": 0,
+          "trust": 0.46879739583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5338541666666666,
+          "rest": 0.0,
+          "scout": 0.453125
+        },
+        "starter_skill": 0.6992156718750001
+      },
+      "on": {
+        "events": 9160,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "off": {
+        "events": 9244,
+        "final": {
+          "satisfaction": 0.61,
+          "skill": 0.6969761666666666,
+          "transfers": 0,
+          "trust": 0.48659406250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6206597222222222,
+          "rest": 0.0,
+          "scout": 0.3758680555555556
+        },
+        "starter_skill": 0.607289078125
+      },
+      "on": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6839654999999999,
+          "transfers": 0,
+          "trust": 0.47692550000000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6004139322916667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9231,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8533904166666667,
+          "transfers": 0,
+          "trust": 0.4705821666666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 9,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.0078125,
+          "propose": 0.5911458333333334,
+          "rest": 0.0,
+          "scout": 0.4010416666666667
+        },
+        "starter_skill": 0.7003782083333333
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8486224166666667,
+          "transfers": 0,
+          "trust": 0.4849113541666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4470486111111111,
+          "rest": 0.0,
+          "scout": 0.5
+        },
+        "starter_skill": 0.7008551666666666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9351,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6863046666666667,
+          "transfers": 0,
+          "trust": 0.4771910416666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.3984375
+        },
+        "starter_skill": 0.6066376614583333
+      },
+      "on": {
+        "events": 9182,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6862936666666667,
+          "transfers": 0,
+          "trust": 0.4793026875
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 39,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.5217013888888888,
+          "rest": 0.0,
+          "scout": 0.4227430555555556
+        },
+        "starter_skill": 0.616746234375
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9293,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.855064,
+          "transfers": 0,
+          "trust": 0.4493255833333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.4001736111111111
+        },
+        "starter_skill": 0.70260253125
+      },
+      "on": {
+        "events": 9159,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8582569166666666,
+          "transfers": 0,
+          "trust": 0.47268414583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 59,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4505208333333333,
+          "rest": 0.0,
+          "scout": 0.4982638888888889
+        },
+        "starter_skill": 0.7013131927083333
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9289,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6835334166666667,
+          "transfers": 0,
+          "trust": 0.4637223750000001
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6128472222222222,
+          "rest": 0.0,
+          "scout": 0.3836805555555556
+        },
+        "starter_skill": 0.5920876770833333
+      },
+      "on": {
+        "events": 9178,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6808757500000001,
+          "transfers": 0,
+          "trust": 0.47111035416666674
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.5416666666666666,
+          "rest": 0.0,
+          "scout": 0.4079861111111111
+        },
+        "starter_skill": 0.6091078958333334
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9229,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84658275,
+          "transfers": 0,
+          "trust": 0.4709950833333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 18,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.015625,
+          "propose": 0.5329861111111112,
+          "rest": 0.0,
+          "scout": 0.4513888888888889
+        },
+        "starter_skill": 0.6916137031249999
+      },
+      "on": {
+        "events": 9136,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8446142499999999,
+          "transfers": 0,
+          "trust": 0.4792704791666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4609375,
+          "rest": 0.0,
+          "scout": 0.4852430555555556
+        },
+        "starter_skill": 0.6935709479166666
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9572,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6937504166666667,
+          "transfers": 2,
+          "trust": 0.46724766666666673
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 1,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.0008680555555555555,
+          "propose": 0.6727430555555556,
+          "rest": 0.0,
+          "scout": 0.3263888888888889
+        },
+        "starter_skill": 0.6544802760416667
+      },
+      "on": {
+        "events": 9439,
+        "final": {
+          "satisfaction": 0.5316666666666666,
+          "skill": 0.6911453333333334,
+          "transfers": 2,
+          "trust": 0.47309633333333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 55,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5651041666666666,
+          "rest": 0.0,
+          "scout": 0.3767361111111111
+        },
+        "starter_skill": 0.6518730364583333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9352,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.85081975,
+          "transfers": 0,
+          "trust": 0.47557587500000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6258680555555556,
+          "rest": 0.0,
+          "scout": 0.3697916666666667
+        },
+        "starter_skill": 0.7052198281250001
+      },
+      "on": {
+        "events": 9244,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9630,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6957135833333333,
+          "transfers": 2,
+          "trust": 0.47460658333333333
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6493055555555556,
+          "rest": 0.0,
+          "scout": 0.3463541666666667
+        },
+        "starter_skill": 0.653655359375
+      },
+      "on": {
+        "events": 9455,
+        "final": {
+          "satisfaction": 0.5316666666666666,
+          "skill": 0.6938534166666667,
+          "transfers": 2,
+          "trust": 0.4763887916666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 48,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5520833333333334,
+          "rest": 0.0,
+          "scout": 0.390625
+        },
+        "starter_skill": 0.6555786510416667
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9403,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548174999999999,
+          "transfers": 0,
+          "trust": 0.45738556250000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6015625,
+          "rest": 0.0,
+          "scout": 0.3932291666666667
+        },
+        "starter_skill": 0.7158728333333334
+      },
+      "on": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 40,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9609,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.69416925,
+          "transfers": 2,
+          "trust": 0.44991847916666666
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.6536458333333334,
+          "rest": 0.0,
+          "scout": 0.3446180555555556
+        },
+        "starter_skill": 0.654398625
+      },
+      "on": {
+        "events": 9416,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6821988333333334,
+          "transfers": 2,
+          "trust": 0.46336845833333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 50,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.5538194444444444,
+          "rest": 0.0,
+          "scout": 0.3897569444444444
+        },
+        "starter_skill": 0.6518326666666666
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9363,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.843962,
+          "transfers": 0,
+          "trust": 0.46879739583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5338541666666666,
+          "rest": 0.0,
+          "scout": 0.453125
+        },
+        "starter_skill": 0.6992156718750001
+      },
+      "on": {
+        "events": 9284,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "off": {
+        "events": 9488,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6790740833333334,
+          "transfers": 3,
+          "trust": 0.48258437500000007
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6032986111111112,
+          "rest": 0.0,
+          "scout": 0.3923611111111111
+        },
+        "starter_skill": 0.616407921875
+      },
+      "on": {
+        "events": 9383,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.6781835833333334,
+          "transfers": 3,
+          "trust": 0.4839031875
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 53,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5381944444444444,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.618518953125
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9381,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8433276666666667,
+          "transfers": 2,
+          "trust": 0.46044164583333336
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 8,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.006944444444444444,
+          "propose": 0.5789930555555556,
+          "rest": 0.0,
+          "scout": 0.4140625
+        },
+        "starter_skill": 0.6948536197916666
+      },
+      "on": {
+        "events": 9280,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8460546666666667,
+          "transfers": 1,
+          "trust": 0.4771955208333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 59,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4965277777777778
+        },
+        "starter_skill": 0.6986889166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9558,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.68019775,
+          "transfers": 2,
+          "trust": 0.47417887500000006
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 8,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.006944444444444444,
+          "propose": 0.5659722222222222,
+          "rest": 0.0,
+          "scout": 0.4270833333333333
+        },
+        "starter_skill": 0.6441995989583333
+      },
+      "on": {
+        "events": 9417,
+        "final": {
+          "satisfaction": 0.5591666666666667,
+          "skill": 0.6880995,
+          "transfers": 2,
+          "trust": 0.45808600000000005
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 42,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.4782986111111111,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.6506191666666666
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9411,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84760525,
+          "transfers": 3,
+          "trust": 0.4423929583333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 11,
+        "observes_on_players_unseen_over_10_days": 7,
+        "slots": {
+          "observe": 0.009548611111111112,
+          "propose": 0.5598958333333334,
+          "rest": 0.0,
+          "scout": 0.4305555555555556
+        },
+        "starter_skill": 0.694283328125
+      },
+      "on": {
+        "events": 9295,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8410608333333333,
+          "transfers": 2,
+          "trust": 0.45005100000000003
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 39,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4392361111111111,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.6950129583333333
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9535,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6807660000000001,
+          "transfers": 2,
+          "trust": 0.45394995833333335
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.5980902777777778,
+          "rest": 0.0,
+          "scout": 0.3984375
+        },
+        "starter_skill": 0.6298253645833333
+      },
+      "on": {
+        "events": 9440,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.6837356666666666,
+          "transfers": 2,
+          "trust": 0.46382058333333337
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 50,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4982638888888889,
+          "rest": 0.0,
+          "scout": 0.4461805555555556
+        },
+        "starter_skill": 0.6471290677083333
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9398,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8433717500000001,
+          "transfers": 2,
+          "trust": 0.46551233333333336
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.5946180555555556,
+          "rest": 0.0,
+          "scout": 0.4010416666666667
+        },
+        "starter_skill": 0.6901159843750001
+      },
+      "on": {
+        "events": 9275,
+        "final": {
+          "satisfaction": 0.6833333333333332,
+          "skill": 0.8393181666666667,
+          "transfers": 1,
+          "trust": 0.4601243541666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 50,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4670138888888889,
+          "rest": 0.0,
+          "scout": 0.4809027777777778
+        },
+        "starter_skill": 0.6942109531249999
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9656,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6688033333333333,
+          "transfers": 2,
+          "trust": 0.47242516666666673
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6649305555555556,
+          "rest": 0.0,
+          "scout": 0.3315972222222222
+        },
+        "starter_skill": 0.6581344531250001
+      },
+      "on": {
+        "events": 9531,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6702530833333333,
+          "transfers": 2,
+          "trust": 0.4790423750000001
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 56,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5494791666666666,
+          "rest": 0.0,
+          "scout": 0.3923611111111111
+        },
+        "starter_skill": 0.6671346927083334
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9347,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.85081975,
+          "transfers": 0,
+          "trust": 0.47557587500000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6258680555555556,
+          "rest": 0.0,
+          "scout": 0.3697916666666667
+        },
+        "starter_skill": 0.7052198281250001
+      },
+      "on": {
+        "events": 9239,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9710,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.66537375,
+          "transfers": 2,
+          "trust": 0.47208322916666673
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.640625,
+          "rest": 0.0,
+          "scout": 0.3550347222222222
+        },
+        "starter_skill": 0.6625295520833333
+      },
+      "on": {
+        "events": 9532,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.66786775,
+          "transfers": 2,
+          "trust": 0.4698449166666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5399305555555556,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.6687659583333333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9400,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548174999999999,
+          "transfers": 0,
+          "trust": 0.45738556250000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6015625,
+          "rest": 0.0,
+          "scout": 0.3932291666666667
+        },
+        "starter_skill": 0.7158728333333334
+      },
+      "on": {
+        "events": 9265,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 40,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9679,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6687612500000001,
+          "transfers": 2,
+          "trust": 0.45558918750000005
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.6501736111111112,
+          "rest": 0.0,
+          "scout": 0.3480902777777778
+        },
+        "starter_skill": 0.6675859062499999
+      },
+      "on": {
+        "events": 9501,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6617699166666667,
+          "transfers": 2,
+          "trust": 0.4598505416666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 51,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.546875,
+          "rest": 0.0,
+          "scout": 0.3958333333333333
+        },
+        "starter_skill": 0.6589657135416667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9359,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.843962,
+          "transfers": 0,
+          "trust": 0.46879739583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5338541666666666,
+          "rest": 0.0,
+          "scout": 0.453125
+        },
+        "starter_skill": 0.6992156718750001
+      },
+      "on": {
+        "events": 9278,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "off": {
+        "events": 9595,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6567484166666667,
+          "transfers": 3,
+          "trust": 0.48168145833333337
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6006944444444444,
+          "rest": 0.0,
+          "scout": 0.3940972222222222
+        },
+        "starter_skill": 0.614321734375
+      },
+      "on": {
+        "events": 9488,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6556611666666666,
+          "transfers": 3,
+          "trust": 0.4887122916666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 53,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5243055555555556,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6171625364583333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9448,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87808875,
+          "transfers": 2,
+          "trust": 0.4589415625
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5347222222222222,
+          "rest": 0.0,
+          "scout": 0.4522569444444444
+        },
+        "starter_skill": 0.7232221354166667
+      },
+      "on": {
+        "events": 9323,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8657359166666666,
+          "transfers": 1,
+          "trust": 0.4733309583333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 59,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4236111111111111,
+          "rest": 0.0,
+          "scout": 0.5251736111111112
+        },
+        "starter_skill": 0.7140874947916666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9642,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6562105833333334,
+          "transfers": 2,
+          "trust": 0.4701718541666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.5642361111111112,
+          "rest": 0.0,
+          "scout": 0.4305555555555556
+        },
+        "starter_skill": 0.6403428697916667
+      },
+      "on": {
+        "events": 9480,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6562571666666667,
+          "transfers": 2,
+          "trust": 0.4717411875
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4895833333333333,
+          "rest": 0.0,
+          "scout": 0.4539930555555556
+        },
+        "starter_skill": 0.6435330260416666
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9529,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.885733,
+          "transfers": 3,
+          "trust": 0.4407167291666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 14,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.012152777777777778,
+          "propose": 0.5234375,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.720803765625
+      },
+      "on": {
+        "events": 9390,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8846465,
+          "transfers": 2,
+          "trust": 0.4517380833333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 41,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.3880208333333333,
+          "rest": 0.0,
+          "scout": 0.5590277777777778
+        },
+        "starter_skill": 0.7242314479166666
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9622,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6607606666666667,
+          "transfers": 2,
+          "trust": 0.45813641666666666
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.5868055555555556,
+          "rest": 0.0,
+          "scout": 0.4105902777777778
+        },
+        "starter_skill": 0.6330677031249999
+      },
+      "on": {
+        "events": 9521,
+        "final": {
+          "satisfaction": 0.5783333333333334,
+          "skill": 0.6642954166666667,
+          "transfers": 2,
+          "trust": 0.45741450000000006
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 53,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4887152777777778,
+          "rest": 0.0,
+          "scout": 0.4557291666666667
+        },
+        "starter_skill": 0.646165984375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9513,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.859627,
+          "transfers": 2,
+          "trust": 0.4596021041666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.5798611111111112,
+          "rest": 0.0,
+          "scout": 0.4149305555555556
+        },
+        "starter_skill": 0.7023070520833333
+      },
+      "on": {
+        "events": 9313,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8579129999999999,
+          "transfers": 1,
+          "trust": 0.46489864583333335
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7037454010416666
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9398,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6607038333333334,
+          "transfers": 2,
+          "trust": 0.4609625
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.8715277777777778,
+          "rest": 0.0,
+          "scout": 0.1267361111111111
+        },
+        "starter_skill": 0.6481557291666666
+      },
+      "on": {
+        "events": 9270,
+        "final": {
+          "satisfaction": 0.5666666666666667,
+          "skill": 0.6612723333333334,
+          "transfers": 2,
+          "trust": 0.46722575000000005
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 49,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.7864583333333334,
+          "rest": 0.0,
+          "scout": 0.1545138888888889
+        },
+        "starter_skill": 0.6512435
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9071,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8458345,
+          "transfers": 0,
+          "trust": 0.46519237500000005
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 8,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.006944444444444444,
+          "propose": 0.7829861111111112,
+          "rest": 0.0,
+          "scout": 0.21006944444444445
+        },
+        "starter_skill": 0.7005361718750001
+      },
+      "on": {
+        "events": 8960,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8434415,
+          "transfers": 0,
+          "trust": 0.46626558333333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 63,
+        "observes_on_players_unseen_over_10_days": 38,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.7118055555555556,
+          "rest": 0.0,
+          "scout": 0.23350694444444445
+        },
+        "starter_skill": 0.7005339843749999
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9444,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.66051275,
+          "transfers": 2,
+          "trust": 0.4718224791666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.8428819444444444,
+          "rest": 0.0,
+          "scout": 0.1527777777777778
+        },
+        "starter_skill": 0.6555043385416667
+      },
+      "on": {
+        "events": 9247,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6605788333333333,
+          "transfers": 2,
+          "trust": 0.47566183333333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.7699652777777778,
+          "rest": 0.0,
+          "scout": 0.17100694444444445
+        },
+        "starter_skill": 0.65562475
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9162,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8514305833333333,
+          "transfers": 0,
+          "trust": 0.4585053958333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.7760416666666666,
+          "rest": 0.0,
+          "scout": 0.21961805555555555
+        },
+        "starter_skill": 0.7118947552083333
+      },
+      "on": {
+        "events": 8989,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.851252,
+          "transfers": 0,
+          "trust": 0.4660792708333334
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 32,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.6996527777777778,
+          "rest": 0.0,
+          "scout": 0.24479166666666666
+        },
+        "starter_skill": 0.7116518072916667
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9400,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6596843333333333,
+          "transfers": 2,
+          "trust": 0.454476125
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.8524305555555556,
+          "rest": 0.0,
+          "scout": 0.14583333333333334
+        },
+        "starter_skill": 0.659879296875
+      },
+      "on": {
+        "events": 9198,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6507670833333333,
+          "transfers": 2,
+          "trust": 0.45891256250000007
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 49,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.7517361111111112,
+          "rest": 0.0,
+          "scout": 0.19010416666666666
+        },
+        "starter_skill": 0.6346783072916667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9068,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8356741666666667,
+          "transfers": 0,
+          "trust": 0.46584033333333336
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 25,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.021701388888888888,
+          "propose": 0.7404513888888888,
+          "rest": 0.0,
+          "scout": 0.2378472222222222
+        },
+        "starter_skill": 0.6926442812500001
+      },
+      "on": {
+        "events": 8993,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.835242,
+          "transfers": 0,
+          "trust": 0.4500157916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 35,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.7022569444444444,
+          "rest": 0.0,
+          "scout": 0.24131944444444445
+        },
+        "starter_skill": 0.6946559843750001
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "off": {
+        "events": 9265,
+        "final": {
+          "satisfaction": 0.5441666666666667,
+          "skill": 0.6464584166666666,
+          "transfers": 3,
+          "trust": 0.4618684583333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.7682291666666666,
+          "rest": 0.0,
+          "scout": 0.2282986111111111
+        },
+        "starter_skill": 0.6028201979166666
+      },
+      "on": {
+        "events": 9126,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6481204166666666,
+          "transfers": 2,
+          "trust": 0.4762280208333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3528,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 48,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.7265625,
+          "rest": 0.0,
+          "scout": 0.2170138888888889
+        },
+        "starter_skill": 0.6042427916666667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9238,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.838458,
+          "transfers": 3,
+          "trust": 0.4438753541666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.765625,
+          "rest": 0.0,
+          "scout": 0.2300347222222222
+        },
+        "starter_skill": 0.6856930156250001
+      },
+      "on": {
+        "events": 9055,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84124825,
+          "transfers": 1,
+          "trust": 0.4706672291666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 34,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.7048611111111112,
+          "rest": 0.0,
+          "scout": 0.23958333333333334
+        },
+        "starter_skill": 0.6934753541666666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9357,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6518638333333333,
+          "transfers": 2,
+          "trust": 0.46572079166666674
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.7413194444444444,
+          "rest": 0.0,
+          "scout": 0.2534722222222222
+        },
+        "starter_skill": 0.6299262916666667
+      },
+      "on": {
+        "events": 9202,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6506048333333333,
+          "transfers": 2,
+          "trust": 0.4680417083333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 42,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.6779513888888888,
+          "rest": 0.0,
+          "scout": 0.2664930555555556
+        },
+        "starter_skill": 0.632205328125
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9256,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.83845775,
+          "transfers": 3,
+          "trust": 0.4325784375000001
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 13,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.011284722222222222,
+          "propose": 0.7413194444444444,
+          "rest": 0.0,
+          "scout": 0.24739583333333334
+        },
+        "starter_skill": 0.6912448177083333
+      },
+      "on": {
+        "events": 9068,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8340480833333334,
+          "transfers": 2,
+          "trust": 0.4418818541666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 37,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.6935763888888888,
+          "rest": 0.0,
+          "scout": 0.2543402777777778
+        },
+        "starter_skill": 0.6933008645833333
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9358,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6510568333333333,
+          "transfers": 2,
+          "trust": 0.4474631250000001
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.765625,
+          "rest": 0.0,
+          "scout": 0.23177083333333334
+        },
+        "starter_skill": 0.6133921979166667
+      },
+      "on": {
+        "events": 9104,
+        "final": {
+          "satisfaction": 0.6208333333333333,
+          "skill": 0.6502785,
+          "transfers": 1,
+          "trust": 0.45930093750000006
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3528,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 48,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.7239583333333334,
+          "rest": 0.0,
+          "scout": 0.2230902777777778
+        },
+        "starter_skill": 0.6143987291666667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9130,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8399226666666667,
+          "transfers": 1,
+          "trust": 0.4436097291666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.7743055555555556,
+          "rest": 0.0,
+          "scout": 0.22135416666666666
+        },
+        "starter_skill": 0.688401328125
+      },
+      "on": {
+        "events": 9014,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8397705000000001,
+          "transfers": 1,
+          "trust": 0.4452927708333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 38,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.7178819444444444,
+          "rest": 0.0,
+          "scout": 0.22916666666666666
+        },
+        "starter_skill": 0.6885756927083334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9728,
+        "final": {
+          "satisfaction": 0.535,
+          "skill": 0.6802667499999999,
+          "transfers": 4,
+          "trust": 0.4772294791666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3636,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.6588541666666666,
+          "rest": 0.0,
+          "scout": 0.3385416666666667
+        },
+        "starter_skill": 0.6551539322916666
+      },
+      "on": {
+        "events": 9551,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6612334166666667,
+          "transfers": 5,
+          "trust": 0.47261097916666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 54,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5685763888888888,
+          "rest": 0.0,
+          "scout": 0.3732638888888889
+        },
+        "starter_skill": 0.6510112916666667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9506,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8776139166666667,
+          "transfers": 2,
+          "trust": 0.4540524166666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 11,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.009548611111111112,
+          "propose": 0.5590277777777778,
+          "rest": 0.0,
+          "scout": 0.4314236111111111
+        },
+        "starter_skill": 0.7259611927083333
+      },
+      "on": {
+        "events": 9410,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8779303333333334,
+          "transfers": 2,
+          "trust": 0.46918379166666674
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 42,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4201388888888889,
+          "rest": 0.0,
+          "scout": 0.5303819444444444
+        },
+        "starter_skill": 0.7259750572916667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9632,
+        "final": {
+          "satisfaction": 0.535,
+          "skill": 0.6780981666666667,
+          "transfers": 3,
+          "trust": 0.46716643750000003
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3528,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6388888888888888,
+          "rest": 0.0,
+          "scout": 0.3576388888888889
+        },
+        "starter_skill": 0.647066984375
+      },
+      "on": {
+        "events": 9529,
+        "final": {
+          "satisfaction": 0.57,
+          "skill": 0.6772235833333333,
+          "transfers": 3,
+          "trust": 0.46921937500000005
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3528,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 48,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3862847222222222
+        },
+        "starter_skill": 0.6520294375
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9521,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8893276666666666,
+          "transfers": 2,
+          "trust": 0.4563034166666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 7,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.006076388888888889,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.4331597222222222
+        },
+        "starter_skill": 0.726715703125
+      },
+      "on": {
+        "events": 9419,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8874449166666666,
+          "transfers": 2,
+          "trust": 0.4629994375
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 34,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3776041666666667,
+          "rest": 0.0,
+          "scout": 0.5720486111111112
+        },
+        "starter_skill": 0.7275912031249999
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9633,
+        "final": {
+          "satisfaction": 0.535,
+          "skill": 0.6767552499999999,
+          "transfers": 3,
+          "trust": 0.4609629583333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3528,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6189236111111112,
+          "rest": 0.0,
+          "scout": 0.3776041666666667
+        },
+        "starter_skill": 0.6504244322916667
+      },
+      "on": {
+        "events": 9504,
+        "final": {
+          "satisfaction": 0.5583333333333333,
+          "skill": 0.6723143333333333,
+          "transfers": 3,
+          "trust": 0.46076989583333333
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 48,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5251736111111112,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6548765364583333
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9584,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87123075,
+          "transfers": 2,
+          "trust": 0.44578735416666665
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.5729166666666666,
+          "rest": 0.0,
+          "scout": 0.421875
+        },
+        "starter_skill": 0.7180024166666666
+      },
+      "on": {
+        "events": 9428,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87969175,
+          "transfers": 2,
+          "trust": 0.451500375
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3949652777777778,
+          "rest": 0.0,
+          "scout": 0.5546875
+        },
+        "starter_skill": 0.7219199322916667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "off": {
+        "events": 9628,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6563729166666666,
+          "transfers": 5,
+          "trust": 0.48428868750000004
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6050347222222222,
+          "rest": 0.0,
+          "scout": 0.390625
+        },
+        "starter_skill": 0.6143589375
+      },
+      "on": {
+        "events": 9543,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6557499166666667,
+          "transfers": 5,
+          "trust": 0.4847456041666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 51,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5138888888888888,
+          "rest": 0.0,
+          "scout": 0.4279513888888889
+        },
+        "starter_skill": 0.6173734375000001
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9474,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87808875,
+          "transfers": 2,
+          "trust": 0.4589415625
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5347222222222222,
+          "rest": 0.0,
+          "scout": 0.4522569444444444
+        },
+        "starter_skill": 0.7232221354166667
+      },
+      "on": {
+        "events": 9359,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8750540833333332,
+          "transfers": 2,
+          "trust": 0.4691856875
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 39,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3819444444444444,
+          "rest": 0.0,
+          "scout": 0.5677083333333334
+        },
+        "starter_skill": 0.7181216302083334
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9690,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6728435833333334,
+          "transfers": 3,
+          "trust": 0.47176747916666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.5763888888888888,
+          "rest": 0.0,
+          "scout": 0.4192708333333333
+        },
+        "starter_skill": 0.6216337656250001
+      },
+      "on": {
+        "events": 9599,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6561220833333333,
+          "transfers": 3,
+          "trust": 0.4697880625
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 47,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.453125,
+          "rest": 0.0,
+          "scout": 0.4878472222222222
+        },
+        "starter_skill": 0.6499118020833333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9554,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.885733,
+          "transfers": 3,
+          "trust": 0.4407167291666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 14,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.012152777777777778,
+          "propose": 0.5234375,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.720803765625
+      },
+      "on": {
+        "events": 9388,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8842455,
+          "transfers": 3,
+          "trust": 0.4553403125
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 35,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.3854166666666667,
+          "rest": 0.0,
+          "scout": 0.5625
+        },
+        "starter_skill": 0.714667546875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9619,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6660014166666667,
+          "transfers": 3,
+          "trust": 0.4718187708333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.5746527777777778,
+          "rest": 0.0,
+          "scout": 0.421875
+        },
+        "starter_skill": 0.6284551875000001
+      },
+      "on": {
+        "events": 9527,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.66558825,
+          "transfers": 3,
+          "trust": 0.46062552083333336
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 54,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4991319444444444,
+          "rest": 0.0,
+          "scout": 0.4444444444444444
+        },
+        "starter_skill": 0.634250859375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9569,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8708319166666666,
+          "transfers": 3,
+          "trust": 0.44958000000000004
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 11,
+        "observes_on_players_unseen_over_10_days": 6,
+        "slots": {
+          "observe": 0.009548611111111112,
+          "propose": 0.5512152777777778,
+          "rest": 0.0,
+          "scout": 0.4392361111111111
+        },
+        "starter_skill": 0.7134131875
+      },
+      "on": {
+        "events": 9410,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8757268333333333,
+          "transfers": 2,
+          "trust": 0.4503877708333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 58,
+        "observes_on_players_unseen_over_10_days": 44,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.4019097222222222,
+          "rest": 0.0,
+          "scout": 0.5477430555555556
+        },
+        "starter_skill": 0.7191603333333333
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9684,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6688033333333333,
+          "transfers": 2,
+          "trust": 0.47242516666666673
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 4,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.003472222222222222,
+          "propose": 0.6649305555555556,
+          "rest": 0.0,
+          "scout": 0.3315972222222222
+        },
+        "starter_skill": 0.6581344531250001
+      },
+      "on": {
+        "events": 9559,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6702530833333333,
+          "transfers": 2,
+          "trust": 0.4790423750000001
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 67,
+        "observes_on_players_unseen_over_10_days": 56,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5494791666666666,
+          "rest": 0.0,
+          "scout": 0.3923611111111111
+        },
+        "starter_skill": 0.6671346927083334
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9347,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.85081975,
+          "transfers": 0,
+          "trust": 0.47557587500000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.6258680555555556,
+          "rest": 0.0,
+          "scout": 0.3697916666666667
+        },
+        "starter_skill": 0.7052198281250001
+      },
+      "on": {
+        "events": 9239,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9738,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.66537375,
+          "transfers": 2,
+          "trust": 0.47208322916666673
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 5,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.004340277777777778,
+          "propose": 0.640625,
+          "rest": 0.0,
+          "scout": 0.3550347222222222
+        },
+        "starter_skill": 0.6625295520833333
+      },
+      "on": {
+        "events": 9560,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.66786775,
+          "transfers": 2,
+          "trust": 0.4698449166666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5399305555555556,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.6687659583333333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9400,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548174999999999,
+          "transfers": 0,
+          "trust": 0.45738556250000006
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6015625,
+          "rest": 0.0,
+          "scout": 0.3932291666666667
+        },
+        "starter_skill": 0.7158728333333334
+      },
+      "on": {
+        "events": 9265,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 57,
+        "observes_on_players_unseen_over_10_days": 40,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9707,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6687612500000001,
+          "transfers": 2,
+          "trust": 0.45558918750000005
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 2,
+        "observes_on_players_unseen_over_10_days": 0,
+        "slots": {
+          "observe": 0.001736111111111111,
+          "propose": 0.6501736111111112,
+          "rest": 0.0,
+          "scout": 0.3480902777777778
+        },
+        "starter_skill": 0.6675859062499999
+      },
+      "on": {
+        "events": 9527,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6617699166666667,
+          "transfers": 2,
+          "trust": 0.4598505416666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 66,
+        "observes_on_players_unseen_over_10_days": 51,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.546875,
+          "rest": 0.0,
+          "scout": 0.3958333333333333
+        },
+        "starter_skill": 0.6589657135416667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9359,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.843962,
+          "transfers": 0,
+          "trust": 0.46879739583333335
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5338541666666666,
+          "rest": 0.0,
+          "scout": 0.453125
+        },
+        "starter_skill": 0.6992156718750001
+      },
+      "on": {
+        "events": 9278,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "min_roster_any_day": 3,
+        "observe_scores_checked": 3456,
+        "observes": 62,
+        "observes_on_players_unseen_over_10_days": 43,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "off": {
+        "events": 9633,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6567484166666667,
+          "transfers": 3,
+          "trust": 0.48168145833333337
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.6006944444444444,
+          "rest": 0.0,
+          "scout": 0.3940972222222222
+        },
+        "starter_skill": 0.614321734375
+      },
+      "on": {
+        "events": 9526,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6556611666666666,
+          "transfers": 3,
+          "trust": 0.4887122916666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 68,
+        "observes_on_players_unseen_over_10_days": 53,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5243055555555556,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6171625364583333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9472,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87808875,
+          "transfers": 2,
+          "trust": 0.4589415625
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 15,
+        "observes_on_players_unseen_over_10_days": 5,
+        "slots": {
+          "observe": 0.013020833333333334,
+          "propose": 0.5347222222222222,
+          "rest": 0.0,
+          "scout": 0.4522569444444444
+        },
+        "starter_skill": 0.7232221354166667
+      },
+      "on": {
+        "events": 9335,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8657359166666666,
+          "transfers": 1,
+          "trust": 0.4733309583333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 59,
+        "observes_on_players_unseen_over_10_days": 45,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4236111111111111,
+          "rest": 0.0,
+          "scout": 0.5251736111111112
+        },
+        "starter_skill": 0.7140874947916666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9668,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6562105833333334,
+          "transfers": 2,
+          "trust": 0.4701718541666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 2,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.5642361111111112,
+          "rest": 0.0,
+          "scout": 0.4305555555555556
+        },
+        "starter_skill": 0.6403428697916667
+      },
+      "on": {
+        "events": 9506,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6562571666666667,
+          "transfers": 2,
+          "trust": 0.4717411875
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 65,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4895833333333333,
+          "rest": 0.0,
+          "scout": 0.4539930555555556
+        },
+        "starter_skill": 0.6435330260416666
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9565,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.885733,
+          "transfers": 3,
+          "trust": 0.4407167291666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 14,
+        "observes_on_players_unseen_over_10_days": 4,
+        "slots": {
+          "observe": 0.012152777777777778,
+          "propose": 0.5234375,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.720803765625
+      },
+      "on": {
+        "events": 9414,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8846465,
+          "transfers": 2,
+          "trust": 0.4517380833333334
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 61,
+        "observes_on_players_unseen_over_10_days": 41,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.3880208333333333,
+          "rest": 0.0,
+          "scout": 0.5590277777777778
+        },
+        "starter_skill": 0.7242314479166666
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9648,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6607606666666667,
+          "transfers": 2,
+          "trust": 0.45813641666666666
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3564,
+        "observes": 3,
+        "observes_on_players_unseen_over_10_days": 1,
+        "slots": {
+          "observe": 0.0026041666666666665,
+          "propose": 0.5868055555555556,
+          "rest": 0.0,
+          "scout": 0.4105902777777778
+        },
+        "starter_skill": 0.6330677031249999
+      },
+      "on": {
+        "events": 9549,
+        "final": {
+          "satisfaction": 0.5783333333333334,
+          "skill": 0.6642954166666667,
+          "transfers": 2,
+          "trust": 0.45741450000000006
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3600,
+        "observes": 64,
+        "observes_on_players_unseen_over_10_days": 53,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4887152777777778,
+          "rest": 0.0,
+          "scout": 0.4557291666666667
+        },
+        "starter_skill": 0.646165984375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "off": {
+        "events": 9537,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.859627,
+          "transfers": 2,
+          "trust": 0.4596021041666667
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 6,
+        "observes_on_players_unseen_over_10_days": 3,
+        "slots": {
+          "observe": 0.005208333333333333,
+          "propose": 0.5798611111111112,
+          "rest": 0.0,
+          "scout": 0.4149305555555556
+        },
+        "starter_skill": 0.7023070520833333
+      },
+      "on": {
+        "events": 9325,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8579129999999999,
+          "transfers": 1,
+          "trust": 0.46489864583333335
+        },
+        "min_roster_any_day": 2,
+        "observe_scores_checked": 3456,
+        "observes": 60,
+        "observes_on_players_unseen_over_10_days": 46,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7037454010416666
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    }
+  ],
+  "cells_identical_to_control": 0,
+  "control_cells_equal_to_t030": 84,
+  "days": 168,
+  "default_unchanged": {
+    "advice_mode_default_identical": true,
+    "equal_to_pre_implementation_digest": true,
+    "explicit_none_equals_default": 14,
+    "explicit_none_equals_default_advice_on": 14,
+    "explicit_none_equals_default_aging_config": 14,
+    "receptiveness_default_identical": true,
+    "t026_default_check": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 360.98804466699994,
+  "first_differing_event_day_min_max": [
+    11,
+    11
+  ],
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "6353260fa3d4f29e9df71faebeb3c7b03e06f60aa777a41d1d51eb6a70a106d0",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "save_fields": true,
+    "unknown": true
+  },
+  "leak_dynamic": {
+    "off": {
+      "days_compared_before_first_observation": 10
+    },
+    "on": {
+      "days_compared_before_first_observation": 10
+    }
+  },
+  "observe_scores_checked": 587952,
+  "persistence": {
+    "coach_training_decisions": 16128,
+    "worlds": 14
+  },
+  "pure_function": {
+    "observe_scores_checked": 732
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "season_length_days": 21,
+  "seeds": [
+    100,
+    101,
+    102
+  ],
+  "static": {
+    "exploration_readers": [
+      "__post_init__",
+      "_step_training_day",
+      "has_save_fields",
+      "to_dict"
+    ]
+  },
+  "tamper": {
+    "load_league_snapshot": "rejected",
+    "load_league_snapshot_trusted": "accepted"
+  },
+  "task": "T031"
+}
