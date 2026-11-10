@@ -1,0 +1,474 @@
+{
+  "cells": {
+    "closed_no_solidarity@21": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "closed_no_solidarity@42": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "closed_no_solidarity@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "closed_no_solidarity_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 0
+    },
+    "closed_no_solidarity_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "closed_no_solidarity_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "closed_solidarity@21": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "closed_solidarity@42": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "closed_solidarity@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "closed_solidarity_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 0
+    },
+    "closed_solidarity_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "closed_solidarity_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "exploit_churn_guard@21": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 3
+    },
+    "exploit_churn_guard@42": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 1
+    },
+    "exploit_churn_guard@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "exploit_churn_guard_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "exploit_churn_guard_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "exploit_churn_guard_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "fixed_budget_no_inflow@21": {
+      "champions": [
+        "club_b",
+        "club_b",
+        "club_b",
+        "club_d",
+        "club_d",
+        "club_d"
+      ],
+      "seasons": 6,
+      "tied_rows": 0
+    },
+    "fixed_budget_no_inflow@42": {
+      "champions": [
+        "club_b",
+        "club_d",
+        "club_d"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "fixed_budget_no_inflow@84": {
+      "champions": [
+        "club_b",
+        "club_d"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "fixed_budget_no_inflow_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_d",
+        "club_d",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "fixed_budget_no_inflow_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "fixed_budget_no_inflow_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "hoarder_buyer_policy@21": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "hoarder_buyer_policy@42": {
+      "champions": [
+        "club_b",
+        "club_a",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 1
+    },
+    "hoarder_buyer_policy@84": {
+      "champions": [
+        "club_b",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "hoarder_buyer_policy_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_c",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "hoarder_buyer_policy_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "hoarder_buyer_policy_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "open_no_solidarity@21": {
+      "champions": [
+        "club_b",
+        "club_b",
+        "club_c",
+        "club_d",
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 3
+    },
+    "open_no_solidarity@42": {
+      "champions": [
+        "club_b",
+        "club_b",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "open_no_solidarity@84": {
+      "champions": [
+        "club_b",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "open_no_solidarity_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c"
+      ],
+      "seasons": 6,
+      "tied_rows": 0
+    },
+    "open_no_solidarity_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "open_no_solidarity_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "open_solidarity@21": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 3
+    },
+    "open_solidarity@42": {
+      "champions": [
+        "club_b",
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 3,
+      "tied_rows": 1
+    },
+    "open_solidarity@84": {
+      "champions": [
+        "club_c",
+        "club_c"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    },
+    "open_solidarity_sampled_population@21": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_c",
+        "club_a",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 6,
+      "tied_rows": 1
+    },
+    "open_solidarity_sampled_population@42": {
+      "champions": [
+        "club_c",
+        "club_a",
+        "club_a"
+      ],
+      "seasons": 3,
+      "tied_rows": 0
+    },
+    "open_solidarity_sampled_population@84": {
+      "champions": [
+        "club_c",
+        "club_a"
+      ],
+      "seasons": 2,
+      "tied_rows": 0
+    }
+  },
+  "days": 126,
+  "default_unchanged": {
+    "equal_to_pre_implementation_digest": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 123.55869170799997,
+  "hand_case": {
+    "matches": 13,
+    "seasons": 4
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "b6eb7dac2186830bb20b7696dfc53d2d95e7cc7a2014675b69ae55c90606e6f9",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "goals_bool": true,
+    "goals_float": true,
+    "goals_negative": true,
+    "length_zero": true,
+    "match_after_world_day": true,
+    "same_club": true,
+    "unknown_club": true
+  },
+  "lengths": [
+    21,
+    42,
+    84
+  ],
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seed": 100,
+  "standings_follow_events": true,
+  "task": "T024",
+  "tied_rows_total": 19,
+  "unchanged_code": {
+    "identity_equal_to_t023": true,
+    "new_or_changed_package_files": [
+      "standings.py"
+    ],
+    "source_sha256": "b6eb7dac2186830bb20b7696dfc53d2d95e7cc7a2014675b69ae55c90606e6f9"
+  }
+}
