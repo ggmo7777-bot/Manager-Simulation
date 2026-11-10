@@ -7,7 +7,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from experiments import t023, t036, t040, t043, t044
+from experiments import t023, t036, t040, t043, t044, t044_growth
 from soccer_sim import league_economy as le
 
 NAME = t023.conditions()[3]
@@ -254,6 +254,34 @@ class TestStatistics(unittest.TestCase):
         self.assertEqual(out['cells'], 3)
         self.assertEqual(set(out['point']), set(out['ci95']))
         self.assertIn('contrast|rev|KN|top2', out['point'])
+
+
+class TestGrowthProbe(unittest.TestCase):
+    def test_population_sd_and_the_recorded_growth_by_hand(self):
+        self.assertAlmostEqual(t044_growth.population_sd([1.0, 3.0]), 1.0)
+        config = t036.make_cfg('t031', NAME, 29, 'legacy')
+        ranking = [{'player_id': 'a', 'score': 0.9, 'components': {'skill_term': 0.0, 'match_term': 0.0, 'fatigue_penalty': 0.0}},
+                   {'player_id': 'b', 'score': 0.5, 'components': {'skill_term': 0.0, 'match_term': 0.0, 'fatigue_penalty': 0.0}},
+                   {'player_id': 'c', 'score': 0.7, 'components': {'skill_term': 0.0, 'match_term': 0.0, 'fatigue_penalty': 0.0}}]
+        now = {'a': 0.80, 'b': 0.70, 'c': 0.60}  # true top two: a, b; the boundary pair is b (lowest score of the top two) and c
+        history = {0: {'a': 0.70, 'b': 0.68, 'c': 0.50}}
+        acc = {}
+        t044_growth.record_growth(acc, config, [{'kind': 'lineup_decision', 'data': {'ranking': ranking}}, {'kind': 'other', 'data': {}}], history, 14, now.get)
+        # day 14 is compared with day 0: a +0.10, b +0.02, c +0.10 -> the boundary pair b, c differ by 0.08
+        self.assertAlmostEqual(acc[('gr', 'pair')][1], 0.08, places=12)
+        self.assertAlmostEqual(acc[('gr', 'mean')][1], (0.10 + 0.02 + 0.10) / 3, places=12)
+        self.assertEqual(acc[('gr', 'pair')][0], 1)  # only the lineup decision is recorded
+        history = {0: {'a': 0.70, 'b': 0.68}, 6: {'a': 0.75, 'b': 0.60}}
+        acc = {}
+        t044_growth.record_growth(acc, config, [{'kind': 'lineup_decision', 'data': {'ranking': ranking}}], history, 20, now.get)  # day 20 vs day 6; the newcomer c has no past (change 0)
+        self.assertAlmostEqual(acc[('gr', 'pair')][1], abs((0.70 - 0.60) - 0.0), places=12)
+
+    def test_the_probe_changes_nothing(self):
+        theirs = t044.run_arm('t031', NAME, 100, 29, t044.ARMS['rev_o-0.0100'], days=SHORT)['acc']
+        ours = t044_growth.run_arm('t031', NAME, 100, 29, t044.ARMS['rev_o-0.0100'], days=SHORT)
+        for key in (('start', 'top2'), ('act', 'rest'), ('med', 'err')):
+            self.assertEqual(ours[key], theirs[key], key)
+        self.assertEqual(ours[('gr', 'pair')][0], ours[('med', 'err')][0])
 
 
 if __name__ == '__main__':
