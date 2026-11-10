@@ -1,0 +1,4209 @@
+{
+  "branch": {
+    "interventions": 1
+  },
+  "cells": {
+    "closed_no_solidarity@21@S18": {
+      "clamped_traits": 6,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6169159166666667,
+        "63": 0.6428600833333333,
+        "84": 0.6634294166666667,
+        "105": 0.6815329166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5749,
+      "final_composite": 0.7831053333333333,
+      "gap": 0.08579649999999994,
+      "gap_over_nominal": 0.7149708333333329,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999976,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000042,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999962,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01917408333333333,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.01796527777777777,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.6531144166666667,
+        "63": 0.6933428333333334,
+        "84": 0.7279739166666667,
+        "105": 0.75817975,
+        "126": 0.7831053333333333
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6169159166666667,
+        "63": 0.6428600833333333,
+        "84": 0.6634294166666667,
+        "105": 0.6815329166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5636,
+      "final_composite": 0.5256024166666667,
+      "gap": -0.17170641666666664,
+      "gap_over_nominal": 0.8176496031746031,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000018,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.02999999999999999,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000001,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.5888249166666667,
+        "63": 0.5893474166666667,
+        "84": 0.5759325833333334,
+        "105": 0.5546954166666667,
+        "126": 0.5256024166666667
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity@42@S18": {
+      "clamped_traits": 2,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6169159166666667,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5728,
+      "final_composite": 0.74401475,
+      "gap": 0.04670591666666657,
+      "gap_over_nominal": 0.7784319444444429,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999987,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01913861111111113,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6369159166666667,
+        "84": 0.6988815,
+        "126": 0.74401475
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6169159166666667,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5685,
+      "final_composite": 0.6454104166666667,
+      "gap": -0.051898416666666725,
+      "gap_over_nominal": 0.8649736111111122,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000054,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6069159166666667,
+        "84": 0.63535425,
+        "126": 0.6454104166666667
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5707,
+      "final_composite": 0.7128286666666667,
+      "gap": 0.015519833333333288,
+      "gap_over_nominal": 0.7759916666666644,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6834294166666667,
+        "126": 0.7128286666666667
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5704,
+      "final_composite": 0.6895543333333333,
+      "gap": -0.0077545000000001085,
+      "gap_over_nominal": 0.7754500000000109,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.00999999999999994,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6534294166666667,
+        "126": 0.6895543333333333
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@21@S18": {
+      "clamped_traits": 22,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6141004166666667,
+        "63": 0.6406128333333333,
+        "84": 0.6621426666666667,
+        "105": 0.6813937499999999,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5848,
+      "final_composite": 0.773711,
+      "gap": 0.07562991666666674,
+      "gap_over_nominal": 0.6302493055555562,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.01760330555555557,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.016451722222222215,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014999999999999977,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.6506156666666666,
+        "63": 0.69144125,
+        "84": 0.7247299166666666,
+        "105": 0.7521520833333333,
+        "126": 0.773711
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6141004166666667,
+        "63": 0.6406128333333333,
+        "84": 0.6621426666666667,
+        "105": 0.6813937499999999,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5767,
+      "final_composite": 0.5227434166666667,
+      "gap": -0.17533766666666661,
+      "gap_over_nominal": 0.8349412698412696,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.029999999999999995,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000002,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5847233333333334,
+        "63": 0.5848349166666666,
+        "84": 0.5726213333333333,
+        "105": 0.5514230833333333,
+        "126": 0.5227434166666667
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@42@S18": {
+      "clamped_traits": 8,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6141004166666667,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5828,
+      "final_composite": 0.7406184166666666,
+      "gap": 0.042537333333333316,
+      "gap_over_nominal": 0.7089555555555553,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.0158444722222222,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6341004166666667,
+        "84": 0.6977676666666667,
+        "126": 0.7406184166666666
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6141004166666667,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5808,
+      "final_composite": 0.6460513333333333,
+      "gap": -0.052029749999999986,
+      "gap_over_nominal": 0.8671624999999998,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000014,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999973,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000016,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6041004166666667,
+        "84": 0.6344781666666667,
+        "126": 0.6460513333333333
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5815,
+      "final_composite": 0.7132461666666666,
+      "gap": 0.015165083333333329,
+      "gap_over_nominal": 0.7582541666666665,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6821426666666667,
+        "126": 0.7132461666666666
+      },
+      "transfers": 0
+    },
+    "closed_no_solidarity_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5815,
+      "final_composite": 0.6903259166666667,
+      "gap": -0.007755166666666646,
+      "gap_over_nominal": 0.7755166666666646,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6521426666666666,
+        "126": 0.6903259166666667
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@21@S18": {
+      "clamped_traits": 6,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6169159166666667,
+        "63": 0.6428600833333333,
+        "84": 0.6634294166666667,
+        "105": 0.6815329166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5749,
+      "final_composite": 0.7831053333333333,
+      "gap": 0.08579649999999994,
+      "gap_over_nominal": 0.7149708333333329,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999976,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000042,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999962,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01917408333333333,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.01796527777777777,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.6531144166666667,
+        "63": 0.6933428333333334,
+        "84": 0.7279739166666667,
+        "105": 0.75817975,
+        "126": 0.7831053333333333
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6169159166666667,
+        "63": 0.6428600833333333,
+        "84": 0.6634294166666667,
+        "105": 0.6815329166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5636,
+      "final_composite": 0.5256024166666667,
+      "gap": -0.17170641666666664,
+      "gap_over_nominal": 0.8176496031746031,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000018,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.02999999999999999,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000001,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.5888249166666667,
+        "63": 0.5893474166666667,
+        "84": 0.5759325833333334,
+        "105": 0.5546954166666667,
+        "126": 0.5256024166666667
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@42@S18": {
+      "clamped_traits": 2,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6169159166666667,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5728,
+      "final_composite": 0.74401475,
+      "gap": 0.04670591666666657,
+      "gap_over_nominal": 0.7784319444444429,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999987,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01913861111111113,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6369159166666667,
+        "84": 0.6988815,
+        "126": 0.74401475
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6169159166666667,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5685,
+      "final_composite": 0.6454104166666667,
+      "gap": -0.051898416666666725,
+      "gap_over_nominal": 0.8649736111111122,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000054,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6069159166666667,
+        "84": 0.63535425,
+        "126": 0.6454104166666667
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5707,
+      "final_composite": 0.7128286666666667,
+      "gap": 0.015519833333333288,
+      "gap_over_nominal": 0.7759916666666644,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6834294166666667,
+        "126": 0.7128286666666667
+      },
+      "transfers": 0
+    },
+    "closed_solidarity@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6973088333333334,
+      "control_events": 5706,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6634294166666667,
+        "126": 0.6973088333333334
+      },
+      "control_transfers": 0,
+      "events": 5704,
+      "final_composite": 0.6895543333333333,
+      "gap": -0.0077545000000001085,
+      "gap_over_nominal": 0.7754500000000109,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.00999999999999994,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6534294166666667,
+        "126": 0.6895543333333333
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@21@S18": {
+      "clamped_traits": 22,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6141004166666667,
+        "63": 0.6406128333333333,
+        "84": 0.6621426666666667,
+        "105": 0.6813937499999999,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5848,
+      "final_composite": 0.773711,
+      "gap": 0.07562991666666674,
+      "gap_over_nominal": 0.6302493055555562,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.01760330555555557,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.016451722222222215,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014999999999999977,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.6506156666666666,
+        "63": 0.69144125,
+        "84": 0.7247299166666666,
+        "105": 0.7521520833333333,
+        "126": 0.773711
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6141004166666667,
+        "63": 0.6406128333333333,
+        "84": 0.6621426666666667,
+        "105": 0.6813937499999999,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5767,
+      "final_composite": 0.5227434166666667,
+      "gap": -0.17533766666666661,
+      "gap_over_nominal": 0.8349412698412696,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.029999999999999995,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000002,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5847233333333334,
+        "63": 0.5848349166666666,
+        "84": 0.5726213333333333,
+        "105": 0.5514230833333333,
+        "126": 0.5227434166666667
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@42@S18": {
+      "clamped_traits": 8,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6141004166666667,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5828,
+      "final_composite": 0.7406184166666666,
+      "gap": 0.042537333333333316,
+      "gap_over_nominal": 0.7089555555555553,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.0158444722222222,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6341004166666667,
+        "84": 0.6977676666666667,
+        "126": 0.7406184166666666
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6141004166666667,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5808,
+      "final_composite": 0.6460513333333333,
+      "gap": -0.052029749999999986,
+      "gap_over_nominal": 0.8671624999999998,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000014,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999973,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000016,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6041004166666667,
+        "84": 0.6344781666666667,
+        "126": 0.6460513333333333
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5815,
+      "final_composite": 0.7132461666666666,
+      "gap": 0.015165083333333329,
+      "gap_over_nominal": 0.7582541666666665,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6821426666666667,
+        "126": 0.7132461666666666
+      },
+      "transfers": 0
+    },
+    "closed_solidarity_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6980810833333333,
+      "control_events": 5813,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6621426666666667,
+        "126": 0.6980810833333333
+      },
+      "control_transfers": 0,
+      "events": 5815,
+      "final_composite": 0.6903259166666667,
+      "gap": -0.007755166666666646,
+      "gap_over_nominal": 0.7755166666666646,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6521426666666666,
+        "126": 0.6903259166666667
+      },
+      "transfers": 0
+    },
+    "exploit_churn_guard@21@S18": {
+      "clamped_traits": 10,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6294684166666666,
+        "63": 0.66020675,
+        "84": 0.6772320833333333,
+        "105": 0.69028475,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6117,
+      "final_composite": 0.7861465000000001,
+      "gap": 0.08533475000000001,
+      "gap_over_nominal": 0.7111229166666668,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999934,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01970177777777778,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.016972111111111104,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.6627773333333333,
+        "63": 0.70514,
+        "84": 0.7373634166666667,
+        "105": 0.7646844166666668,
+        "126": 0.7861465000000001
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6294684166666666,
+        "63": 0.66020675,
+        "84": 0.6772320833333333,
+        "105": 0.69028475,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6001,
+      "final_composite": 0.5218808333333333,
+      "gap": -0.17893091666666672,
+      "gap_over_nominal": 0.8520519841269844,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000014,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04000000000000003,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.04999999999999999,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.060000000000000005,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.6015004166666666,
+        "63": 0.6067545,
+        "84": 0.5898436666666667,
+        "105": 0.56117425,
+        "126": 0.5218808333333333
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard@42@S18": {
+      "clamped_traits": 2,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6294684166666666,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6088,
+      "final_composite": 0.7479524999999999,
+      "gap": 0.04714074999999984,
+      "gap_over_nominal": 0.785679166666664,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000004,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01950844444444445,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6494684166666667,
+        "84": 0.7097650833333334,
+        "126": 0.7479524999999999
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6294684166666666,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6048,
+      "final_composite": 0.6481554166666667,
+      "gap": -0.052656333333333416,
+      "gap_over_nominal": 0.877605555555557,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999972,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999966,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.029999999999999943,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6194684166666666,
+        "84": 0.6500589166666667,
+        "126": 0.6481554166666667
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6066,
+      "final_composite": 0.7176164166666666,
+      "gap": 0.01680466666666658,
+      "gap_over_nominal": 0.840233333333329,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.02000000000000002,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6972320833333333,
+        "126": 0.7176164166666666
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6055,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6052,
+      "final_composite": 0.6924091666666667,
+      "gap": -0.008402583333333324,
+      "gap_over_nominal": 0.8402583333333324,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999953,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6672320833333334,
+        "126": 0.6924091666666667
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@21@S18": {
+      "clamped_traits": 23,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6216983333333334,
+        "63": 0.6474223333333333,
+        "84": 0.665345,
+        "105": 0.6815172500000001,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6182,
+      "final_composite": 0.7750346666666666,
+      "gap": 0.07876116666666655,
+      "gap_over_nominal": 0.6563430555555546,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999973,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.018409805555555565,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.015867472222222224,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014138944444444449,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.658123,
+        "63": 0.6983933333333333,
+        "84": 0.7305290000000001,
+        "105": 0.75528575,
+        "126": 0.7750346666666666
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6216983333333334,
+        "63": 0.6474223333333333,
+        "84": 0.665345,
+        "105": 0.6815172500000001,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6073,
+      "final_composite": 0.51581925,
+      "gap": -0.18045425000000015,
+      "gap_over_nominal": 0.8593059523809531,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.050000000000000024,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.05999999999999998,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5899291666666666,
+        "63": 0.5922923333333333,
+        "84": 0.5754518333333333,
+        "105": 0.5504981666666666,
+        "126": 0.51581925
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@42@S18": {
+      "clamped_traits": 6,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6216983333333334,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6126,
+      "final_composite": 0.742636,
+      "gap": 0.04636249999999986,
+      "gap_over_nominal": 0.7727083333333311,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.017536666666666645,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6416983333333334,
+        "84": 0.7015180833333333,
+        "126": 0.742636
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6216983333333334,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6103,
+      "final_composite": 0.6435129166666667,
+      "gap": -0.052760583333333444,
+      "gap_over_nominal": 0.8793430555555575,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000014,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000028,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6116983333333333,
+        "84": 0.6373611666666666,
+        "126": 0.6435129166666667
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6118,
+      "final_composite": 0.7123110833333333,
+      "gap": 0.01603758333333316,
+      "gap_over_nominal": 0.801879166666658,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.685345,
+        "126": 0.7123110833333333
+      },
+      "transfers": 2
+    },
+    "exploit_churn_guard_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6117,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6113,
+      "final_composite": 0.6881444999999999,
+      "gap": -0.008129000000000164,
+      "gap_over_nominal": 0.8129000000000164,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.655345,
+        "126": 0.6881444999999999
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@21@S18": {
+      "clamped_traits": 6,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5628818333333333,
+        "42": 0.6141414166666667,
+        "63": 0.6467555833333333,
+        "84": 0.6614389166666667,
+        "105": 0.6741709166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5748,
+      "final_composite": 0.7795290833333334,
+      "gap": 0.09360499999999994,
+      "gap_over_nominal": 0.7800416666666662,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999993,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.019893138888888894,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.01836508333333332,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5828818333333333,
+        "42": 0.6556905,
+        "63": 0.6992593333333333,
+        "84": 0.7286881666666667,
+        "105": 0.7560926666666666,
+        "126": 0.7795290833333334
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5628818333333333,
+        "42": 0.6141414166666667,
+        "63": 0.6467555833333333,
+        "84": 0.6614389166666667,
+        "105": 0.6741709166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5658,
+      "final_composite": 0.5053996666666667,
+      "gap": -0.18052441666666674,
+      "gap_over_nominal": 0.8596400793650798,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999987,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04000000000000001,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.04999999999999999,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5528818333333333,
+        "42": 0.5864710000000001,
+        "63": 0.5964515,
+        "84": 0.57351725,
+        "105": 0.54340425,
+        "126": 0.5053996666666667
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@42@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6141414166666667,
+        "84": 0.6614389166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5704,
+      "final_composite": 0.7343216666666667,
+      "gap": 0.048397583333333216,
+      "gap_over_nominal": 0.8066263888888869,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6341414166666667,
+        "84": 0.69476025,
+        "126": 0.7343216666666667
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6141414166666667,
+        "84": 0.6614389166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5687,
+      "final_composite": 0.6325369166666667,
+      "gap": -0.05338716666666676,
+      "gap_over_nominal": 0.8897861111111127,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999993,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000002,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6041414166666667,
+        "84": 0.63392275,
+        "126": 0.6325369166666667
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6614389166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5691,
+      "final_composite": 0.7028929166666668,
+      "gap": 0.016968833333333322,
+      "gap_over_nominal": 0.8484416666666661,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000042,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6814389166666667,
+        "126": 0.7028929166666668
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6859240833333334,
+      "control_events": 5689,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6614389166666667,
+        "126": 0.6859240833333334
+      },
+      "control_transfers": 2,
+      "events": 5689,
+      "final_composite": 0.6774381666666667,
+      "gap": -0.00848591666666676,
+      "gap_over_nominal": 0.848591666666676,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999962,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6514389166666666,
+        "126": 0.6774381666666667
+      },
+      "transfers": 2
+    },
+    "fixed_budget_no_inflow_sampled_population@21@S18": {
+      "clamped_traits": 23,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.5588749166666667,
+        "42": 0.60973125,
+        "63": 0.64196,
+        "84": 0.6575778333333333,
+        "105": 0.6710342499999999,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5828,
+      "final_composite": 0.7641840833333333,
+      "gap": 0.08006541666666667,
+      "gap_over_nominal": 0.6672118055555556,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999962,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.017796416666666686,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.016507583333333364,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014962416666666664,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.5788749166666667,
+        "42": 0.6422985833333333,
+        "63": 0.6895493333333333,
+        "84": 0.7190975833333333,
+        "105": 0.7432416666666667,
+        "126": 0.7641840833333333
+      },
+      "transfers": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.5588749166666667,
+        "42": 0.60973125,
+        "63": 0.64196,
+        "84": 0.6575778333333333,
+        "105": 0.6710342499999999,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5711,
+      "final_composite": 0.5017969999999999,
+      "gap": -0.18232166666666672,
+      "gap_over_nominal": 0.8681984126984129,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000023,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.04999999999999999,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.060000000000000005,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.5488749166666667,
+        "42": 0.5810198333333333,
+        "63": 0.5866498333333333,
+        "84": 0.5674235,
+        "105": 0.538025,
+        "126": 0.5017969999999999
+      },
+      "transfers": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@42@S18": {
+      "clamped_traits": 7,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.60973125,
+        "84": 0.6575778333333333,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5783,
+      "final_composite": 0.73162625,
+      "gap": 0.04750758333333338,
+      "gap_over_nominal": 0.7917930555555563,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019990972222222198,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.017682861111111114,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.62973125,
+        "84": 0.693372,
+        "126": 0.73162625
+      },
+      "transfers": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.60973125,
+        "84": 0.6575778333333333,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5741,
+      "final_composite": 0.6305646666666667,
+      "gap": -0.05355399999999999,
+      "gap_over_nominal": 0.8925666666666665,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999995,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.02999999999999998,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.5997312499999999,
+        "84": 0.62991275,
+        "126": 0.6305646666666667
+      },
+      "transfers": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6575778333333333,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5762,
+      "final_composite": 0.7007007500000001,
+      "gap": 0.01658208333333344,
+      "gap_over_nominal": 0.8291041666666721,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6775778333333333,
+        "126": 0.7007007500000001
+      },
+      "transfers": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6841186666666667,
+      "control_events": 5746,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6575778333333333,
+        "126": 0.6841186666666667
+      },
+      "control_transfers": 3,
+      "events": 5748,
+      "final_composite": 0.6756934166666667,
+      "gap": -0.00842524999999994,
+      "gap_over_nominal": 0.842524999999994,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6475778333333334,
+        "126": 0.6756934166666667
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy@21@S18": {
+      "clamped_traits": 11,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6299886666666666,
+        "63": 0.6606299999999999,
+        "84": 0.6762590833333334,
+        "105": 0.692432,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6205,
+      "final_composite": 0.789276,
+      "gap": 0.08353316666666666,
+      "gap_over_nominal": 0.6961097222222222,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000035,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019726138888888883,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01896347222222225,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.016754333333333333,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.66326275,
+        "63": 0.7082533333333334,
+        "84": 0.7388414999999999,
+        "105": 0.7672005,
+        "126": 0.789276
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6299886666666666,
+        "63": 0.6606299999999999,
+        "84": 0.6762590833333334,
+        "105": 0.692432,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6094,
+      "final_composite": 0.5308860000000001,
+      "gap": -0.17485683333333324,
+      "gap_over_nominal": 0.8326515873015868,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000002,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04000000000000001,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.049999999999999996,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.6020473333333333,
+        "63": 0.6092823333333334,
+        "84": 0.5899409166666666,
+        "105": 0.5651805,
+        "126": 0.5308860000000001
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy@42@S18": {
+      "clamped_traits": 3,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6299886666666666,
+        "84": 0.6762590833333334,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6175,
+      "final_composite": 0.75278675,
+      "gap": 0.04704391666666663,
+      "gap_over_nominal": 0.7840652777777772,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999976,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01923022222222222,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6499886666666667,
+        "84": 0.7108265,
+        "126": 0.75278675
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6299886666666666,
+        "84": 0.6762590833333334,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6139,
+      "final_composite": 0.6537620000000001,
+      "gap": -0.051980833333333254,
+      "gap_over_nominal": 0.8663472222222209,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999972,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999962,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.02999999999999997,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6199886666666666,
+        "84": 0.6490315,
+        "126": 0.6537620000000001
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6762590833333334,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6161,
+      "final_composite": 0.7219052499999999,
+      "gap": 0.016162416666666624,
+      "gap_over_nominal": 0.8081208333333312,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6962590833333334,
+        "126": 0.7219052499999999
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7057428333333333,
+      "control_events": 6155,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6762590833333334,
+        "126": 0.7057428333333333
+      },
+      "control_transfers": 4,
+      "events": 6151,
+      "final_composite": 0.6976611666666667,
+      "gap": -0.008081666666666654,
+      "gap_over_nominal": 0.8081666666666654,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999976,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6662590833333334,
+        "126": 0.6976611666666667
+      },
+      "transfers": 4
+    },
+    "hoarder_buyer_policy_sampled_population@21@S18": {
+      "clamped_traits": 33,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.62937,
+        "63": 0.6645215,
+        "84": 0.6845417500000001,
+        "105": 0.6986564999999999,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6199,
+      "final_composite": 0.7805355,
+      "gap": 0.07199025000000014,
+      "gap_over_nominal": 0.5999187500000013,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.017160777777777792,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.015207777777777765,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.011997472222222175,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.66509025,
+        "63": 0.71039575,
+        "84": 0.7418148333333333,
+        "105": 0.7650454999999999,
+        "126": 0.7805355
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.62937,
+        "63": 0.6645215,
+        "84": 0.6845417500000001,
+        "105": 0.6986564999999999,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6123,
+      "final_composite": 0.5324064166666667,
+      "gap": -0.17613883333333324,
+      "gap_over_nominal": 0.8387563492063488,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.029999999999999985,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000001,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06000000000000002,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5974638333333333,
+        "63": 0.6082174166666666,
+        "84": 0.596067,
+        "105": 0.5699895,
+        "126": 0.5324064166666667
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy_sampled_population@42@S18": {
+      "clamped_traits": 11,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.62937,
+        "84": 0.6845417500000001,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6199,
+      "final_composite": 0.7529821666666666,
+      "gap": 0.044436916666666715,
+      "gap_over_nominal": 0.7406152777777786,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000004,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019526972222222227,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.016026888888888886,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.64937,
+        "84": 0.7175365,
+        "126": 0.7529821666666666
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.62937,
+        "84": 0.6845417500000001,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6180,
+      "final_composite": 0.6566376666666667,
+      "gap": -0.05190758333333323,
+      "gap_over_nominal": 0.8651263888888872,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000028,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.61937,
+        "84": 0.6570215833333334,
+        "126": 0.6566376666666667
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy_sampled_population@84@S18": {
+      "clamped_traits": 1,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6845417500000001,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6175,
+      "final_composite": 0.7260249166666667,
+      "gap": 0.017479666666666782,
+      "gap_over_nominal": 0.8739833333333391,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.019669055555555575,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.70421075,
+        "126": 0.7260249166666667
+      },
+      "transfers": 3
+    },
+    "hoarder_buyer_policy_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7085452499999999,
+      "control_events": 6191,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6845417500000001,
+        "126": 0.7085452499999999
+      },
+      "control_transfers": 3,
+      "events": 6186,
+      "final_composite": 0.7002896666666666,
+      "gap": -0.008255583333333316,
+      "gap_over_nominal": 0.8255583333333316,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999981,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6745417499999999,
+        "126": 0.7002896666666666
+      },
+      "transfers": 3
+    },
+    "open_no_solidarity@21@S18": {
+      "clamped_traits": 5,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.62489425,
+        "63": 0.6504741666666667,
+        "84": 0.6686445,
+        "105": 0.6851793333333333,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5925,
+      "final_composite": 0.7859079166666666,
+      "gap": 0.0859631666666667,
+      "gap_over_nominal": 0.7163597222222226,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999952,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01974691666666667,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.01856658333333333,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.65955675,
+        "63": 0.6976971666666666,
+        "84": 0.7306125,
+        "105": 0.7603979166666667,
+        "126": 0.7859079166666666
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.62489425,
+        "63": 0.6504741666666667,
+        "84": 0.6686445,
+        "105": 0.6851793333333333,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5799,
+      "final_composite": 0.5239398333333333,
+      "gap": -0.17600491666666662,
+      "gap_over_nominal": 0.8381186507936507,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000004,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03000000000000001,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.04999999999999999,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.06,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.5967664166666666,
+        "63": 0.59645675,
+        "84": 0.5804108333333333,
+        "105": 0.5559855,
+        "126": 0.5239398333333333
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity@42@S18": {
+      "clamped_traits": 2,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.62489425,
+        "84": 0.6686445,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5892,
+      "final_composite": 0.7475968333333333,
+      "gap": 0.04765208333333337,
+      "gap_over_nominal": 0.7942013888888896,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01950844444444444,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.64489425,
+        "84": 0.7037050833333334,
+        "126": 0.7475968333333333
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.62489425,
+        "84": 0.6686445,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5838,
+      "final_composite": 0.6482483333333333,
+      "gap": -0.05169641666666658,
+      "gap_over_nominal": 0.861606944444443,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.01,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999966,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.02999999999999998,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.61489425,
+        "84": 0.6417151666666666,
+        "126": 0.6482483333333333
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6686445,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5869,
+      "final_composite": 0.7160700000000001,
+      "gap": 0.016125250000000202,
+      "gap_over_nominal": 0.8062625000000101,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.02000000000000002,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6886445,
+        "126": 0.7160700000000001
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6999447499999999,
+      "control_events": 5862,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6686445,
+        "126": 0.6999447499999999
+      },
+      "control_transfers": 2,
+      "events": 5858,
+      "final_composite": 0.6918820833333333,
+      "gap": -0.008062666666666551,
+      "gap_over_nominal": 0.8062666666666551,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999972,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6586445,
+        "126": 0.6918820833333333
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@21@S18": {
+      "clamped_traits": 22,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.62055975,
+        "63": 0.6441628333333334,
+        "84": 0.6623885833333333,
+        "105": 0.6806280833333332,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 6051,
+      "final_composite": 0.77504775,
+      "gap": 0.07714575000000001,
+      "gap_over_nominal": 0.6428812500000002,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000028,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.018409805555555547,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01656772222222221,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014744666666666675,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.6567013333333334,
+        "63": 0.6952521666666667,
+        "84": 0.7269850833333332,
+        "105": 0.7535020833333334,
+        "126": 0.77504775
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.62055975,
+        "63": 0.6441628333333334,
+        "84": 0.6623885833333333,
+        "105": 0.6806280833333332,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 5947,
+      "final_composite": 0.5167624166666667,
+      "gap": -0.18113958333333335,
+      "gap_over_nominal": 0.8625694444444446,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.05000000000000002,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.05999999999999999,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5895205833333333,
+        "63": 0.5865743333333333,
+        "84": 0.5702655,
+        "105": 0.54877325,
+        "126": 0.5167624166666667
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@42@S18": {
+      "clamped_traits": 7,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.62055975,
+        "84": 0.6623885833333333,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 6000,
+      "final_composite": 0.7424261666666666,
+      "gap": 0.04452416666666659,
+      "gap_over_nominal": 0.7420694444444431,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.016605416666666633,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.64055975,
+        "84": 0.6981324166666667,
+        "126": 0.7424261666666666
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.62055975,
+        "84": 0.6623885833333333,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 5972,
+      "final_composite": 0.6456374166666666,
+      "gap": -0.05226458333333339,
+      "gap_over_nominal": 0.8710763888888899,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000014,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000028,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.61055975,
+        "84": 0.6343059999999999,
+        "126": 0.6456374166666666
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6623885833333333,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 5988,
+      "final_composite": 0.7132851666666666,
+      "gap": 0.015383166666666614,
+      "gap_over_nominal": 0.7691583333333307,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999973,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6823885833333333,
+        "126": 0.7132851666666666
+      },
+      "transfers": 2
+    },
+    "open_no_solidarity_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.697902,
+      "control_events": 5983,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6623885833333333,
+        "126": 0.697902
+      },
+      "control_transfers": 2,
+      "events": 5983,
+      "final_composite": 0.6899847499999999,
+      "gap": -0.007917250000000098,
+      "gap_over_nominal": 0.7917250000000098,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000037,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.6523885833333333,
+        "126": 0.6899847499999999
+      },
+      "transfers": 2
+    },
+    "open_solidarity@21@S18": {
+      "clamped_traits": 10,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6294684166666666,
+        "63": 0.66020675,
+        "84": 0.6772320833333333,
+        "105": 0.69028475,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6089,
+      "final_composite": 0.7861465000000001,
+      "gap": 0.08533475000000001,
+      "gap_over_nominal": 0.7111229166666668,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000014,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999934,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.01970177777777778,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.016972111111111104,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5945073333333334,
+        "42": 0.6627773333333333,
+        "63": 0.70514,
+        "84": 0.7373634166666667,
+        "105": 0.7646844166666668,
+        "126": 0.7861465000000001
+      },
+      "transfers": 2
+    },
+    "open_solidarity@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5745073333333334,
+        "42": 0.6294684166666666,
+        "63": 0.66020675,
+        "84": 0.6772320833333333,
+        "105": 0.69028475,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 5973,
+      "final_composite": 0.5218808333333333,
+      "gap": -0.17893091666666672,
+      "gap_over_nominal": 0.8520519841269844,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000014,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.04000000000000003,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.04999999999999999,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.060000000000000005,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "21": 0.5645073333333334,
+        "42": 0.6015004166666666,
+        "63": 0.6067545,
+        "84": 0.5898436666666667,
+        "105": 0.56117425,
+        "126": 0.5218808333333333
+      },
+      "transfers": 2
+    },
+    "open_solidarity@42@S18": {
+      "clamped_traits": 2,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6294684166666666,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6060,
+      "final_composite": 0.7479524999999999,
+      "gap": 0.04714074999999984,
+      "gap_over_nominal": 0.785679166666664,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000007,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000004,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.01950844444444445,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6494684166666667,
+        "84": 0.7097650833333334,
+        "126": 0.7479524999999999
+      },
+      "transfers": 2
+    },
+    "open_solidarity@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6294684166666666,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6020,
+      "final_composite": 0.6481554166666667,
+      "gap": -0.052656333333333416,
+      "gap_over_nominal": 0.877605555555557,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999972,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.019999999999999966,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.029999999999999943,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "42": 0.6194684166666666,
+        "84": 0.6500589166666667,
+        "126": 0.6481554166666667
+      },
+      "transfers": 2
+    },
+    "open_solidarity@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6038,
+      "final_composite": 0.7176164166666666,
+      "gap": 0.01680466666666658,
+      "gap_over_nominal": 0.840233333333329,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.02000000000000002,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6972320833333333,
+        "126": 0.7176164166666666
+      },
+      "transfers": 2
+    },
+    "open_solidarity@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.7008117500000001,
+      "control_events": 6027,
+      "control_trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6772320833333333,
+        "126": 0.7008117500000001
+      },
+      "control_transfers": 2,
+      "events": 6024,
+      "final_composite": 0.6924091666666667,
+      "gap": -0.008402583333333324,
+      "gap_over_nominal": 0.8402583333333324,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.009999999999999953,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46638891666666665,
+        "84": 0.6672320833333334,
+        "126": 0.6924091666666667
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@21@S18": {
+      "clamped_traits": 23,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6216983333333334,
+        "63": 0.6474223333333333,
+        "84": 0.665345,
+        "105": 0.6815172500000001,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6156,
+      "final_composite": 0.7750346666666666,
+      "gap": 0.07876116666666655,
+      "gap_over_nominal": 0.6563430555555546,
+      "nominal_cumulative_delta": 0.12,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.020000000000000018,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.019999999999999973,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.02,
+          "season": 3
+        },
+        {
+          "age": 22,
+          "delta": 0.02,
+          "mean_composite_change": 0.018409805555555565,
+          "season": 4
+        },
+        {
+          "age": 23,
+          "delta": 0.02,
+          "mean_composite_change": 0.015867472222222224,
+          "season": 5
+        },
+        {
+          "age": 24,
+          "delta": 0.02,
+          "mean_composite_change": 0.014138944444444449,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.59063125,
+        "42": 0.658123,
+        "63": 0.6983933333333333,
+        "84": 0.7305290000000001,
+        "105": 0.75528575,
+        "126": 0.7750346666666666
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@21@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.57063125,
+        "42": 0.6216983333333334,
+        "63": 0.6474223333333333,
+        "84": 0.665345,
+        "105": 0.6815172500000001,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6047,
+      "final_composite": 0.51581925,
+      "gap": -0.18045425000000015,
+      "gap_over_nominal": 0.8593059523809531,
+      "nominal_cumulative_delta": -0.21,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000004,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.02,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.03,
+          "season": 3
+        },
+        {
+          "age": 33,
+          "delta": -0.04,
+          "mean_composite_change": -0.040000000000000015,
+          "season": 4
+        },
+        {
+          "age": 34,
+          "delta": -0.05,
+          "mean_composite_change": -0.050000000000000024,
+          "season": 5
+        },
+        {
+          "age": 35,
+          "delta": -0.06,
+          "mean_composite_change": -0.05999999999999998,
+          "season": 6
+        }
+      ],
+      "trait_updates": 216,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "21": 0.56063125,
+        "42": 0.5899291666666666,
+        "63": 0.5922923333333333,
+        "84": 0.5754518333333333,
+        "105": 0.5504981666666666,
+        "126": 0.51581925
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@42@S18": {
+      "clamped_traits": 6,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6216983333333334,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6100,
+      "final_composite": 0.742636,
+      "gap": 0.04636249999999986,
+      "gap_over_nominal": 0.7727083333333311,
+      "nominal_cumulative_delta": 0.06,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999999,
+          "season": 1
+        },
+        {
+          "age": 20,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 2
+        },
+        {
+          "age": 21,
+          "delta": 0.02,
+          "mean_composite_change": 0.017536666666666645,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6416983333333334,
+        "84": 0.7015180833333333,
+        "126": 0.742636
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@42@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6216983333333334,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6077,
+      "final_composite": 0.6435129166666667,
+      "gap": -0.052760583333333444,
+      "gap_over_nominal": 0.8793430555555575,
+      "nominal_cumulative_delta": -0.06,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000014,
+          "season": 1
+        },
+        {
+          "age": 31,
+          "delta": -0.02,
+          "mean_composite_change": -0.020000000000000028,
+          "season": 2
+        },
+        {
+          "age": 32,
+          "delta": -0.03,
+          "mean_composite_change": -0.030000000000000027,
+          "season": 3
+        }
+      ],
+      "trait_updates": 108,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "42": 0.6116983333333333,
+        "84": 0.6373611666666666,
+        "126": 0.6435129166666667
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@84@S18": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6092,
+      "final_composite": 0.7123110833333333,
+      "gap": 0.01603758333333316,
+      "gap_over_nominal": 0.801879166666658,
+      "nominal_cumulative_delta": 0.02,
+      "seasons": [
+        {
+          "age": 19,
+          "delta": 0.02,
+          "mean_composite_change": 0.01999999999999998,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.685345,
+        "126": 0.7123110833333333
+      },
+      "transfers": 2
+    },
+    "open_solidarity_sampled_population@84@S29": {
+      "clamped_traits": 0,
+      "control_composite": 0.6962735000000001,
+      "control_events": 6091,
+      "control_trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.665345,
+        "126": 0.6962735000000001
+      },
+      "control_transfers": 2,
+      "events": 6087,
+      "final_composite": 0.6881444999999999,
+      "gap": -0.008129000000000164,
+      "gap_over_nominal": 0.8129000000000164,
+      "nominal_cumulative_delta": -0.01,
+      "seasons": [
+        {
+          "age": 30,
+          "delta": -0.01,
+          "mean_composite_change": -0.010000000000000009,
+          "season": 1
+        }
+      ],
+      "trait_updates": 36,
+      "trajectory": {
+        "0": 0.46176191666666666,
+        "84": 0.655345,
+        "126": 0.6881444999999999
+      },
+      "transfers": 2
+    }
+  },
+  "curve": "hypothesis_v1",
+  "days": 126,
+  "default_unchanged": {
+    "aging_on_curve_none_matches_t025": 14,
+    "equal_to_pre_implementation_digest": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 386.78634349999993,
+  "expected_delta": {
+    "18": 0.02,
+    "19": 0.02,
+    "20": 0.02,
+    "21": 0.02,
+    "22": 0.02,
+    "23": 0.02,
+    "24": 0.02,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": -0.01,
+    "31": -0.02,
+    "32": -0.03,
+    "33": -0.04,
+    "34": -0.05,
+    "35": -0.06,
+    "36": -0.07,
+    "37": -0.08,
+    "38": -0.09,
+    "39": -0.1,
+    "40": -0.11
+  },
+  "hand_case": {
+    "S18_L21": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "S29_L42": [
+      -0.01,
+      -0.02,
+      -0.03
+    ]
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "709e4ff8a2bf5b3a5d421e1417433efcb942eb1a97ebcba7c1a54d595ccc491e",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "unknown": true,
+    "without_start_age": true
+  },
+  "isolation": {
+    "events_added": 2,
+    "only_traits_changed": true
+  },
+  "lengths": [
+    21,
+    42,
+    84
+  ],
+  "policy_blind": {
+    "readers": [
+      "__post_init__",
+      "_age_players",
+      "_snapshot_payload_unchecked",
+      "_validate_league_invariants",
+      "to_dict"
+    ]
+  },
+  "predictions": {
+    "P1": true,
+    "P2": true,
+    "P3": true
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seed": 100,
+  "start_ages": [
+    18,
+    29
+  ],
+  "summary": {
+    "S18": {
+      "cells": 42,
+      "clamped_share": 0.05734126984126984,
+      "gap_negative": 0,
+      "gap_positive": 42,
+      "mean_gap": 0.04795615277777775,
+      "mean_gap_over_nominal": 0.7515857969576712,
+      "mean_transfer_difference": 0.0
+    },
+    "S29": {
+      "cells": 42,
+      "clamped_share": 0.0,
+      "gap_negative": 42,
+      "gap_positive": 0,
+      "mean_gap": -0.07930086507936511,
+      "mean_gap_over_nominal": 0.8424665391156475,
+      "mean_transfer_difference": 0.0
+    }
+  },
+  "tamper_rejected": {
+    "after_changed/load_league_snapshot": true,
+    "after_changed/load_league_snapshot_trusted": true,
+    "delta_changed/load_league_snapshot": true,
+    "delta_changed/load_league_snapshot_trusted": true,
+    "event_deleted/load_league_snapshot": true,
+    "event_deleted/load_league_snapshot_trusted": true,
+    "snapshot_player_traits_changed/load_league_snapshot": true,
+    "snapshot_player_traits_changed/load_league_snapshot_trusted": true
+  },
+  "task": "T026"
+}
