@@ -1,0 +1,6 @@
+default_and_null {'default_regression': {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}, 'null_equals_baseline_pairs': 6}
+initial {'seeds': 2, 'cells_checked': 40}
+reproduction {'rows_compared': 1440, 'identical': True}
+{"runs": 1710, "independently_audited_transactions": 1076428, "elapsed_seconds": 343.9636092499986}
+{"H1": {"result": "supported", "scope": "18 executed perturbations + baseline; refused ones are not judged: []", "not_positive": [], "mean_positive_interval_includes_zero": []}, "H2": {"result": "supported", "largest_group": "rate", "group_max_abs_delta": {"rate": {"perturbation": "rate_cp", "delta": 0.004226, "paired_halfwidth": 0.003285}, "cap": {"perturbation": "cap_cm", "delta": -0.001832, "paired_halfwidth": 0.001783}, "noise": {"perturbation": "noise_w05", "delta": -0.001782, "paired_halfwidth": 0.001789}, "trait": {"perturbation": "trait_w05", "delta": 0.001602, "paired_halfwidth": 0.002164}, "psych": {"perturbation": "psych_w05", "delta": 0.000305, "paired_halfwidth": 0.00079}}, "beyond_baseline_detectable_difference": true}, "H3": {"result": "indeterminate", "perturbation": "noise_w05", "abs_delta": 0.001782, "paired_halfwidth": 0.001789, "threshold": 0.003551}}
+done
