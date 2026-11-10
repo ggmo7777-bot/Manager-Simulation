@@ -1,0 +1,17 @@
+................................................................................................................................................................................................................................................F.....
+======================================================================
+FAIL: test_only_standings_module_is_new_and_runtime_identity_is_unchanged (test_t024.TestStandings.test_only_standings_module_is_new_and_runtime_identity_is_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/tests/test_t024.py", line 35, in test_only_standings_module_is_new_and_runtime_identity_is_unchanged
+    self.assertTrue(t024.check_unchanged_code(ROOT)['identity_equal_to_t023'])
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t024.py", line 168, in check_unchanged_code
+    assert le.league_identity() == manifest['identity']  # same source hash as T023
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+----------------------------------------------------------------------
+Ran 246 tests in 141.304s
+
+FAILED (failures=1)

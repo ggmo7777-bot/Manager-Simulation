@@ -1,0 +1,387 @@
+{
+  "branch": {
+    "interventions": 1
+  },
+  "cells": {
+    "closed_no_solidarity@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5706,
+      "events": 5712,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "closed_no_solidarity@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5706,
+      "events": 5709,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "closed_no_solidarity@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5706,
+      "events": 5707,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "closed_no_solidarity_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5813,
+      "events": 5819,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "closed_no_solidarity_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5813,
+      "events": 5816,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "closed_no_solidarity_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5813,
+      "events": 5814,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "closed_solidarity@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5706,
+      "events": 5712,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "closed_solidarity@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5706,
+      "events": 5709,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "closed_solidarity@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5706,
+      "events": 5707,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "closed_solidarity_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5813,
+      "events": 5819,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "closed_solidarity_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5813,
+      "events": 5816,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "closed_solidarity_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5813,
+      "events": 5814,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "exploit_churn_guard@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6055,
+      "events": 6061,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "exploit_churn_guard@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6055,
+      "events": 6058,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "exploit_churn_guard@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6055,
+      "events": 6056,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "exploit_churn_guard_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6117,
+      "events": 6123,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "exploit_churn_guard_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6117,
+      "events": 6120,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "exploit_churn_guard_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6117,
+      "events": 6118,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "fixed_budget_no_inflow@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5689,
+      "events": 5695,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "fixed_budget_no_inflow@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5689,
+      "events": 5692,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "fixed_budget_no_inflow@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5689,
+      "events": 5690,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "fixed_budget_no_inflow_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5746,
+      "events": 5752,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "fixed_budget_no_inflow_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5746,
+      "events": 5749,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "fixed_budget_no_inflow_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5746,
+      "events": 5747,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "hoarder_buyer_policy@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6155,
+      "events": 6161,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "hoarder_buyer_policy@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6155,
+      "events": 6158,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "hoarder_buyer_policy@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6155,
+      "events": 6156,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "hoarder_buyer_policy_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6191,
+      "events": 6197,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "hoarder_buyer_policy_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6191,
+      "events": 6194,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "hoarder_buyer_policy_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6191,
+      "events": 6192,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "open_no_solidarity@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5862,
+      "events": 5868,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "open_no_solidarity@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5862,
+      "events": 5865,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "open_no_solidarity@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5862,
+      "events": 5863,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "open_no_solidarity_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 5983,
+      "events": 5989,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "open_no_solidarity_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 5983,
+      "events": 5986,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "open_no_solidarity_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 5983,
+      "events": 5984,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "open_solidarity@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6027,
+      "events": 6033,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "open_solidarity@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6027,
+      "events": 6030,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "open_solidarity@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6027,
+      "events": 6028,
+      "final_age": 19,
+      "season_aged_events": 1
+    },
+    "open_solidarity_sampled_population@21": {
+      "cause_refs_to_season_aged": 5,
+      "control_events": 6091,
+      "events": 6097,
+      "final_age": 24,
+      "season_aged_events": 6
+    },
+    "open_solidarity_sampled_population@42": {
+      "cause_refs_to_season_aged": 2,
+      "control_events": 6091,
+      "events": 6094,
+      "final_age": 21,
+      "season_aged_events": 3
+    },
+    "open_solidarity_sampled_population@84": {
+      "cause_refs_to_season_aged": 1,
+      "control_events": 6091,
+      "events": 6092,
+      "final_age": 19,
+      "season_aged_events": 1
+    }
+  },
+  "days": 126,
+  "default_unchanged": {
+    "equal_to_pre_implementation_digest": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 352.8143494169999,
+  "forged_manifest_trusted_reader": "rejected",
+  "hand_case": [
+    [
+      42,
+      1,
+      [
+        19
+      ]
+    ],
+    [
+      84,
+      2,
+      [
+        20
+      ]
+    ],
+    [
+      126,
+      3,
+      [
+        21
+      ]
+    ]
+  ],
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "9a9515be6cf23a35405234ff14364f02ce5b0ab64fd1c7c0ba029aa439e64d0f",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "bool": true,
+    "float": true,
+    "negative": true,
+    "str": true,
+    "without_season": true
+  },
+  "lengths": [
+    21,
+    42,
+    84
+  ],
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seed": 100,
+  "start_age": 18,
+  "tamper_rejected": {
+    "age_key_missing/load_league_snapshot": true,
+    "age_key_missing/load_league_snapshot_trusted": true,
+    "age_value/load_league_snapshot": true,
+    "age_value/load_league_snapshot_trusted": true,
+    "ages_removed/load_league_snapshot": true,
+    "ages_removed/load_league_snapshot_trusted": true,
+    "event_ages_changed/load_league_snapshot": true,
+    "event_ages_changed/load_league_snapshot_trusted": true,
+    "event_deleted/load_league_snapshot": true,
+    "event_deleted/load_league_snapshot_trusted": true
+  },
+  "task": "T025"
+}

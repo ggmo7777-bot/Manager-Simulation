@@ -31,8 +31,11 @@ class TestStandings(unittest.TestCase):
         self.assertEqual(sum(r['played'] for s in table['seasons'].values() for r in s['table']), 16)
 
     def test_only_standings_module_is_new_and_runtime_identity_is_unchanged(self):
-        if (ROOT / 'artifacts/t023/source_bundle/manifest.json').is_file():
-            self.assertTrue(t024.check_unchanged_code(ROOT)['identity_equal_to_t023'])
+        # T025 changed the live source, so the T024 claim is checked on the frozen bundles: only standings.py differs from T023.
+        old, new = ROOT / 'artifacts/t023/source_bundle/soccer_sim', ROOT / 'artifacts/t024/source_bundle/soccer_sim'
+        if old.is_dir() and new.is_dir():
+            differing = [p.name for p in sorted(new.glob('*.py')) if not (old / p.name).is_file() or (old / p.name).read_bytes() != p.read_bytes()]
+            self.assertEqual(differing, ['standings.py'])
 
 
 if __name__ == '__main__':

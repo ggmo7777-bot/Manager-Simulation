@@ -1,0 +1,18 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 185, in <module>
+    run(parser.parse_args().out.resolve(), CODE_ROOT)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 161, in run
+    branch = check_branch_round_trip(Path(tmp) / 'b')
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 85, in check_branch_round_trip
+    child = le.fork_league_world(parent, kind='coach_belief_override', player_id='p3', coach_id='c1', value=0.5, reason='t025')
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/soccer_sim/league_economy.py", line 3154, in fork_league_world
+    record = _prepare_intervention(world, kind=kind, player_id=player_id,
+                                   coach_id=coach_id, value=value, reason=reason)
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/soccer_sim/league_economy.py", line 3112, in _prepare_intervention
+    value = _intervention_arguments(kind=kind, player_id=player_id, coach_id=coach_id,
+                                    value=value, reason=reason)
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/soccer_sim/league_economy.py", line 3068, in _intervention_arguments
+    raise ValueError("unknown intervention kind")
+ValueError: unknown intervention kind
