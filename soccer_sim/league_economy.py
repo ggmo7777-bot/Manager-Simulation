@@ -269,6 +269,19 @@ def _personality_traits(seed: int, player_ids: Any) -> dict[str, dict[str, float
                   for name in PERSONALITY_TRAITS} for pid in sorted(player_ids)}
 
 
+def _age_offset(seed: int, spread: int, channel: str, pid: str) -> int:
+    """game-v3: whole years in 0..spread from one keyed population draw on its own channel; spread 0 draws nothing (default runs untouched)."""
+    return min(spread, int(_population_draw(seed, f"age_{channel}", pid, 0.0, spread + 1.0))) if spread else 0
+
+
+def _initial_age(seed: int, config: "LeagueEconomyConfig", pid: str) -> int:
+    return config.aging_start_age - _age_offset(seed, config.age_spread, "initial", pid)
+
+
+def _intake_age(seed: int, config: "LeagueEconomyConfig", pid: str) -> int:
+    return YOUTH_INTAKE_AGE + _age_offset(seed, config.age_spread, "youth", pid)
+
+
 def _aging_delta(age: int) -> float:
     """T026 hypothesis_v1: per-season additive trait change on reaching `age`. Uncalibrated (no real-world data source chosen)."""
     return 0.02 if age <= 24 else 0.0 if age <= 29 else round6(-0.01 * (age - 29))
@@ -398,6 +411,7 @@ class LeagueEconomyConfig:
     observation_noise_mode: str = "legacy"  # T036: "legacy" (observation noise has mean -width, a porting slip found in T035) or "centered_v1" (symmetric [-width, width]); same draws, only the offset changes
     coach_practice_rating: str = "none"  # T032: "none" or "blend_v1" (a practice-day observation also updates the coach's match-rating estimate, 0.70 old + 0.30 observed; B-layer only)
     coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
+    age_spread: int = 0  # game-v3 (uncalibrated): 0 = everyone starts at aging_start_age and newcomers join at 18; k>0 = initial age = start - n and newcomer age = 18 + n with n a keyed whole-year draw in 0..k (own channels); needs generations
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
     advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
@@ -463,7 +477,7 @@ class LeagueEconomyConfig:
                 if type(value) is not str or not value:
                     raise ValueError(f"{spec.name} must be a nonempty string")
             elif type(spec.default) is int:
-                minimum = 0 if spec.name.endswith("_units") or spec.name in ("max_dividend_triggers", "season_length_days", "aging_start_age") else 1
+                minimum = 0 if spec.name.endswith("_units") or spec.name in ("max_dividend_triggers", "season_length_days", "aging_start_age", "age_spread") else 1
                 if type(value) is not int or value < minimum:
                     raise ValueError(f"{spec.name} must be an integer >= {minimum}")
             else:
@@ -520,6 +534,8 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid generations: {self.generations}")
         if self.generations != "none" and not self.aging_start_age:
             raise ValueError("generations requires aging_start_age")
+        if self.age_spread and (self.generations == "none" or self.age_spread >= self.aging_start_age - YOUTH_INTAKE_AGE):
+            raise ValueError("age_spread requires generations and must be smaller than aging_start_age - 18")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -542,6 +558,8 @@ class LeagueEconomyConfig:
             data["coach_belief"] = self.coach_belief
         if self.generations != "none":
             data["generations"] = self.generations
+        if self.age_spread:
+            data["age_spread"] = self.age_spread
         if self.coach_exploration != "none":
             data["coach_exploration"] = self.coach_exploration
         if self.coach_practice_rating != "none":
@@ -620,7 +638,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "age_spread", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -1421,7 +1439,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         ledger=ledger,
         public_last_starters=public_last_starters,
         events=[],
-        player_ages={pid: config.aging_start_age for pid in sorted(players)} if config.aging_start_age else {},
+        player_ages={pid: _initial_age(seed, config, pid) for pid in sorted(players)} if config.aging_start_age else {},
         player_personality=_personality_traits(seed, players) if config.personality != "none" else {},
         coach_beliefs={cid: {} for cid in sorted(coaches)} if config.coach_belief != "none" else {},
     )
@@ -3022,7 +3040,7 @@ def _generational_turnover(world: LeagueWorldState, season: int) -> None:
             pid = f"p{len(world.players) + 1}"
             ref = _append_event(
                 world, day=day, kind="season_youth_joined", actor=cid,
-                data={"season": season, "player_id": pid, "club_id": cid, "age": YOUTH_INTAKE_AGE, "reason": "roster_below_target",
+                data={"season": season, "player_id": pid, "club_id": cid, "age": _intake_age(world.seed, world.config, pid), "reason": "roster_below_target",
                       "roster_size_before": len(world.club_rosters[cid])},
                 cause_refs=retired[cid] or [aging_ref])
             truth, spec = _youth_truth(world.seed, world.config.range_perturbation, pid, cid)
@@ -3031,7 +3049,7 @@ def _generational_turnover(world: LeagueWorldState, season: int) -> None:
             for coach in world.coaches.values():
                 coach.evaluations[pid] = _new_coach_evaluation(day, ref)
             world.club_rosters[cid].append(pid)
-            world.player_ages[pid] = YOUTH_INTAKE_AGE
+            world.player_ages[pid] = _intake_age(world.seed, world.config, pid)
             if world.config.personality != "none":
                 world.player_personality[pid] = _personality_traits(world.seed, [pid])[pid]
 
@@ -3088,7 +3106,7 @@ def _generation_fold(world: LeagueWorldState) -> tuple[dict[str, int], list[str]
     cfg, ev_keys = world.config, {"retire": {"record_class", "season", "player_id", "club_id", "age", "playing_time_satisfaction", "reason", "rule"},
                                   "join": {"season", "player_id", "club_id", "age", "reason", "roster_size_before"}}
     length = cfg.season_length_days
-    ages, everyone = {pid: cfg.aging_start_age for pid in PLAYER_IDS}, list(PLAYER_IDS)
+    ages, everyone = {pid: _initial_age(world.seed, cfg, pid) for pid in PLAYER_IDS}, list(PLAYER_IDS)
     club = {pid: cid for cid, pids in INITIAL_CLUB_ROSTERS.items() for pid in pids}
     size, season, last_aging, retired, joined = {cid: len(pids) for cid, pids in INITIAL_CLUB_ROSTERS.items()}, 0, None, {}, {}
     for ev in world.events:
@@ -3118,10 +3136,10 @@ def _generation_fold(world: LeagueWorldState) -> tuple[dict[str, int], list[str]
         elif kind == "season_youth_joined":
             pid, cid = data.get("player_id"), data.get("club_id")
             if set(data) != ev_keys["join"] or pid != f"p{len(everyone) + 1}" or season < 1 or ev["day"] != season * length or cid not in CLUB_IDS \
-                    or ev["actor"] != cid or data["season"] != season or data["age"] != YOUTH_INTAKE_AGE or data["reason"] != "roster_below_target" \
+                    or ev["actor"] != cid or data["season"] != season or data["age"] != _intake_age(world.seed, cfg, pid) or data["reason"] != "roster_below_target" \
                     or data["roster_size_before"] != size[cid] or size[cid] >= CLUB_TARGET_ROSTER or ev["cause_refs"] != (retired[cid] or [last_aging]):
                 raise ValueError("season_youth_joined event does not match the intake record")
-            ages[pid], club[pid], joined[pid] = YOUTH_INTAKE_AGE, cid, cid
+            ages[pid], club[pid], joined[pid] = data["age"], cid, cid
             everyone.append(pid)
             size[cid] += 1
     if season != world.day // length or size != {cid: len(world.club_rosters[cid]) for cid in CLUB_IDS}:

@@ -139,7 +139,7 @@ def check_static():
     assert not touched(funcs['_new_coach_evaluation']) & (FORBIDDEN | TRUE_VALUE_WORDS), touched(funcs['_new_coach_evaluation'])
     words = {'generations', 'season_retired', 'season_youth_joined', 'decide_retirement', '_generational_turnover', 'YOUTH_INTAKE_AGE', 'CLUB_TARGET_ROSTER'}
     allowed = {'decide_retirement', '_generational_turnover', '_generation_fold', '__post_init__', 'to_dict', 'has_save_fields', '_validate_league_invariants',
-               'advance_league_days', '_age_players', '_youth_truth'}
+               'advance_league_days', '_age_players', '_youth_truth', '_intake_age'}
     readers = {name for name, node in funcs.items() if touched(node) & words}
     assert readers <= allowed, sorted(readers - allowed)
     assert not any(name.startswith('decide_') and name != 'decide_retirement' or ('coach' in name and name != '_new_coach_evaluation') for name in readers)

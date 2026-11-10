@@ -27,8 +27,8 @@ GAME_CONFIG = replace(
     season_length_days=SEASON_DAYS, personality="latent_v1", advice_response="personality_v1",
     coach_belief="observe_v1", observation_noise_mode="centered_v1", coach_practice_rating="blend_v1",
     coach_exploration="unseen_bonus_v1",
-    # shortcut: every player starts at one age (research constraint), so 33 (the value T030 tested) makes veterans retire within 3 seasons; no calibrated spread.
-    aging_start_age=33, aging_curve="hypothesis_v1", generations="retire_replace_v1")
+    # Uncalibrated game defaults: initial ages 29..34 and newcomers 18..23 (age_spread=5, game-v3) so retirements are staggered; no real-world data behind these.
+    aging_start_age=34, age_spread=5, aging_curve="hypothesis_v1", generations="retire_replace_v1")
 
 
 SAVE_VERSION = 2
