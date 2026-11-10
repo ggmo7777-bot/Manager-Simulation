@@ -232,6 +232,7 @@ def _coach_receptiveness(world: "LeagueWorldState", coach_id: str) -> dict[str, 
 
 GENERATION_MODES = ("none", "retire_replace_v1")
 COACH_EXPLORATION_MODES = ("none", "unseen_bonus_v1")
+COACH_PRACTICE_RATING_MODES = ("none", "blend_v1")
 EXPLORE_STALENESS_CAP = 40  # T031: days unseen after which a player stops getting more observation value (the default cap is 10)
 # T030 (pre-registered, uncalibrated): retirement thresholds, the club size intake restores, the newcomer age, and the coach's constant first impression (skill, match rating, fatigue).
 RETIRE_SOFT_AGE, RETIRE_HARD_AGE, RETIRE_SATISFACTION_BELOW = 33, 36, 0.5
@@ -388,6 +389,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    coach_practice_rating: str = "none"  # T032: "none" or "blend_v1" (a practice-day observation also updates the coach's match-rating estimate, 0.70 old + 0.30 observed; B-layer only)
     coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
@@ -503,6 +505,8 @@ class LeagueEconomyConfig:
             raise ValueError("coach_belief requires advice_response")
         if self.coach_exploration not in COACH_EXPLORATION_MODES:
             raise ValueError(f"invalid coach_exploration: {self.coach_exploration}")
+        if self.coach_practice_rating not in COACH_PRACTICE_RATING_MODES:
+            raise ValueError(f"invalid coach_practice_rating: {self.coach_practice_rating}")
         if self.generations not in GENERATION_MODES:
             raise ValueError(f"invalid generations: {self.generations}")
         if self.generations != "none" and not self.aging_start_age:
@@ -531,6 +535,8 @@ class LeagueEconomyConfig:
             data["generations"] = self.generations
         if self.coach_exploration != "none":
             data["coach_exploration"] = self.coach_exploration
+        if self.coach_practice_rating != "none":
+            data["coach_practice_rating"] = self.coach_practice_rating
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -603,7 +609,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration", "coach_practice_rating"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -2360,6 +2366,8 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                     0.98,
                 )
             )
+            if cfg.coach_practice_rating != "none":  # T032 (B layer): the observed skill also feeds the match-rating estimate used in selection (same literal 0.70/0.30 as the scouting observation)
+                c_ev.match_rating_estimate = round6(clamp(0.70 * c_ev.match_rating_estimate + 0.30 * c_obs_skill, 0.10, 0.98))
             c_ev.fatigue_estimate = observe_fatigue(
                 true_fatigue=p.fatigue, noise=cfg.coach_fatigue_noise, seed=world.seed,
                 day=day, observer_id=c_id, player_id=pid, context="training_coach")
@@ -2388,6 +2396,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                     "obs_gain": c_obs_gain,
                     "obs_fatigue": c_ev.fatigue_estimate,
                     "skill_estimate": c_ev.skill_estimate,
+                    **({"match_rating_estimate": c_ev.match_rating_estimate} if cfg.coach_practice_rating != "none" else {}),
                 },
                 cause_refs=[p_dec_ev, session_ref, c_ev.last_obs_ref],
             )
