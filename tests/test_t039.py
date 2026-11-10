@@ -125,6 +125,21 @@ class TestRecorder(unittest.TestCase):
         self.assertEqual(mine['flat'], {k: v for k, v in theirs['flat'].items() if k in mine['flat']})
         self.assertEqual(t039.check_sim_unchanged(ROOT)['changed'], [])
 
+    def test_shadow_all_equals_shifted_run_where_histories_have_not_diverged(self):
+        by_mode = {m: [t039.run_cell(t036.make_cfg('t032', NAME, 29, m), seed, days=14) for seed in (100, 101, 102)] for m in ('legacy', 'shifted_v1')}
+        got = t039.check_shadow_vs_shifted_run({'t032': by_mode})['t032']
+        self.assertEqual([g['rows'] for g in got[:2]], [36, 36])
+        self.assertEqual(got[0]['agree'], 36)  # at the first match nothing has diverged
+        self.assertGreaterEqual(got[1]['agree'], 10)  # at the second, many rows still agree to 2e-6: a wrong offset (about 0.01) would agree nowhere
+        moved = sum(abs(ests['all'][0] - ests['actual'][0]) > 1e-4 for cell in by_mode['legacy'] for snapshots in cell['early'].values() for ests in snapshots[1].values())
+        self.assertGreater(moved, 0)  # and the shadow does differ from the real legacy estimate
+
+    def test_promotion_keys_partition_the_rows(self):
+        acc = t039.run_cell(t036.make_cfg('t031', NAME, 29, 'legacy'), 100, days=70)['acc']
+        self.assertEqual(acc[('promo', 'played')][0], acc[('cnt', 'played', 'match')][0])
+        self.assertEqual(acc[('promo', 'played')][0] + acc[('promo', 'benched')][0] + acc[('cnt', 'arrived', 'match')][0], acc[('top2', 'actual')][0] * 3)  # rosters of 3
+        self.assertLessEqual(acc[('promo', 'benched_top2')][0], acc[('promo', 'benched')][0])
+
     def test_legacy_shadow_all_shifts_estimates_up(self):
         acc = t039.run_cell(t036.make_cfg('t032', NAME, 29, 'legacy'), 100, days=70)['acc']
         self.assertGreater(acc[('shift', 'all', 'all', 'skill')][1], 0.0)  # the added width pushes skill estimates up

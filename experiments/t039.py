@@ -33,6 +33,8 @@ OBS_UPPER = 0.98
 VARIANTS = {'all': ('all', COMPS, GROUPS), **{c: (c, COMPS, GROUPS) for c in CHANNELS},
             **{f'comp_{c}': ('all', (c,), GROUPS) for c in COMPS}, **{f'grp_{g}': ('all', COMPS, (g,)) for g in GROUPS}}
 PAIR_CLASSES = ('better_benched', 'better_played')
+EARLY_DECISIONS = 4  # post hoc A looks at each club's first four matches (days 7, 14, 21, 28)
+PROMO_KEYS = ('played', 'benched', 'benched_top2', 'played_not_top2')
 MIN_TRUE_GAP = t038.MIN_TRUE_GAP
 FROZEN = t038.FROZEN
 add, merge, stat, top2, mean_of, interval = t038.add, t038.merge, t038.stat, t038.top2, t038.mean_of, t038.interval
@@ -92,7 +94,7 @@ def pair_rows(rows, rank):
             yield ('better_benched' if better[1] == 'benched' else 'better_played'), rank[better[0]] < rank[worse[0]]
 
 
-def record_decision(acc, config, rows, shadows, true_set):
+def record_decision(acc, config, rows, shadows, true_set, starters):
     """The per-decision statistics of one club's lineup. rows: (id, group, truth, {shadow: estimates}) for the roster."""
     scores = {}
     for name in ('actual',) + (tuple(VARIANTS) if 'all' in shadows else ()):
@@ -105,6 +107,13 @@ def record_decision(acc, config, rows, shadows, true_set):
             add(acc, ('pair', cls, name), 0.0, float(right))
     for pid, g, truth, ests in rows:
         actual = ests['actual']
+        if g != 'arrived':  # post hoc C: promotions and demotions
+            started = float(pid in starters)
+            add(acc, ('promo', g), started)
+            if g == 'benched' and pid in true_set:
+                add(acc, ('promo', 'benched_top2'), started)
+            if g == 'played' and pid not in true_set:
+                add(acc, ('promo', 'played_not_top2'), started)
         for gg in (g, 'all'):
             add(acc, ('err', gg, 'skill'), actual[0] - truth)
             add(acc, ('err', gg, 'match'), actual[1] - truth)
@@ -123,7 +132,7 @@ def run_cell(config, seed, days=DAYS):
     states = {(coach_id, pid): {s: [ev.skill_estimate, ev.match_rating_estimate, ev.fatigue_estimate] for s in shadows}
               for coach_id, mind in world.coaches.items() for pid, ev in mind.evaluations.items()}
     counts = {key: dict.fromkeys(CHANNELS, 0) for key in states}
-    prev, fatigue_log, acc = {}, [], {}
+    prev, fatigue_log, acc, seen_by_club = {}, [], {}, {}
     logged = 0
     original = le.observe_fatigue
 
@@ -174,7 +183,9 @@ def run_cell(config, seed, days=DAYS):
                     true_set = top2([(pid, truth_value) for pid, _, truth_value, _ in rows])
                     assert top2([(r['player_id'], r['score']) for r in d['ranking']]) == set(d['starters'])
                     add(acc, ('start', 'true_top2_match'), float(set(d['starters']) == true_set))
-                    record_decision(acc, config, rows, shadows, true_set)
+                    record_decision(acc, config, rows, shadows, true_set, set(d['starters']))
+                    if len(seen_by_club.setdefault(club, [])) < EARLY_DECISIONS:  # post hoc A: the state at each club's first decisions, for the legacy-shadow vs shifted-run diagnostic
+                        seen_by_club[club].append({pid: {name: list(est) for name, est in ests.items()} for pid, _, _, ests in rows})
                     prev[club] = (frozenset(r['player_id'] for r in d['ranking']), frozenset(d['starters']))
     finally:
         le.observe_fatigue = original
@@ -183,7 +194,7 @@ def run_cell(config, seed, days=DAYS):
     assert acc[('top2', 'actual')][:2] == acc[('start', 'true_top2_match')][:2]  # the replayed scores pick the coach's own starters
     flat = {f'final_{k}': v for k, v in t030.final_metrics(world).items()}
     flat['events'] = len(world.events)
-    return {'acc': acc, 'flat': flat}
+    return {'acc': acc, 'flat': flat, 'early': seen_by_club}
 
 
 # ---- gates ----
@@ -200,6 +211,21 @@ def check_t037_reproduced(root, pooled_by_setting):
             out[f'{t}_{m}'] = got['n'] == want['n'] and abs(got['mean'] - want['mean']) <= 1e-9
     assert all(out.values()), [k for k, v in out.items() if not v]
     return {'compared': len(out), 'all_equal': True}
+
+
+def check_shadow_vs_shifted_run(cells_by_setting, tolerance=2e-6):
+    """Post hoc A: at a club's k-th match the legacy 'all' estimates equal the shifted_v1 run's real estimates unless the histories have already diverged (counted per k)."""
+    out = {}
+    for t, by_mode in cells_by_setting.items():
+        counts = [{'rows': 0, 'agree': 0} for _ in range(EARLY_DECISIONS)]
+        for legacy_cell, shifted_cell in zip(by_mode['legacy'], by_mode['shifted_v1']):
+            for club, snapshots in legacy_cell['early'].items():
+                for k, players in enumerate(snapshots):
+                    for pid, ests in players.items():
+                        counts[k]['rows'] += 1
+                        counts[k]['agree'] += max(abs(x - y) for x, y in zip(ests['all'], shifted_cell['early'][club][k][pid]['actual'])) <= tolerance
+        out[t] = counts
+    return out
 
 
 # ---- statistics ----
@@ -264,6 +290,15 @@ def scalars(p):
             out[f'pair_{cls}_{name}'] = share(acc, ('pair', cls, 'actual'))
         out[f'pair_{cls}_legacy_all'] = share(leg, ('pair', cls, 'all'))
         out[f'pair_{cls}_n'] = leg.get(('pair', cls, 'actual'), [0])[0]
+    for mode, acc in p.items():
+        for key in PROMO_KEYS:
+            out[f'promo_{mode}_{key}'] = mean_of(acc, ('promo', key))
+    for mode in ('shifted_v1', 'centered_v1'):
+        for key in PROMO_KEYS:
+            out[f'real_promo_{mode}_{key}'] = diff(out[f'promo_{mode}_{key}'], out[f'promo_legacy_{key}'])
+        for g in ('played', 'benched', 'all'):
+            for channel in CHANNELS:
+                out[f'real_cnt_{mode}_{g}_{channel}'] = diff(out[f'cnt_{mode}_{g}_{channel}'], out[f'cnt_legacy_{g}_{channel}'])
     out['static_vs_realized_gap_ratio'] = out['gap_skill'] / out['real_gap_shifted_v1_skill'] if out['real_gap_shifted_v1_skill'] else None
     return out
 
@@ -304,8 +339,9 @@ def run(out, root, boots=1000):
             print(t, name, flush=True)
     gates['legacy_cells_equal_frozen'] = equal
     gates['replay_equals_recorded_decisions'] = {'runs': 756, 'decisions_per_mode': sum(c['acc'][('top2', 'actual')][0] for t in SETTINGS for c in cells['legacy'][t])}  # run_cell asserts every decision (gate 3)
+    diagnostics = {'shadow_all_vs_shifted_run_first_match': check_shadow_vs_shifted_run({t: {m: cells[m][t] for m in MODES} for t in SETTINGS})}
     gates['t037_reproduced'] = check_t037_reproduced(root, {t: {m: pool(c['acc'] for c in cells[m][t]) for m in MODES} for t in SETTINGS})
-    result = {'task': 'T039', 'identity': le.league_identity(), 'runtime': runtime(), 'seeds': list(SEEDS), 'days': DAYS, 'gates': gates, 'variants': list(VARIANTS),
+    result = {'task': 'T039', 'identity': le.league_identity(), 'runtime': runtime(), 'seeds': list(SEEDS), 'days': DAYS, 'gates': gates, 'diagnostics': diagnostics, 'variants': list(VARIANTS),
               'all': summarise({m: [c['acc'] for t in SETTINGS for c in cells[m][t]] for m in MODES}, boots),
               'settings': {t: summarise({m: [c['acc'] for c in cells[m][t]] for m in MODES}, boots) for t in SETTINGS}}
     result['elapsed_seconds'] = perf_counter() - start
