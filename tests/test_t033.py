@@ -7,6 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from experiments import t033, t023
 
+
+def changed_sim_files(task):
+    """soccer_sim files that differ from a frozen bundle. T036 changed league_economy.py / league_observation.py on purpose (the default path is byte-identical in output: tests/test_t036.py)."""
+    bundle = ROOT / f'artifacts/{task}/source_bundle/soccer_sim'
+    return {p.name for p in (ROOT / 'soccer_sim').glob('*.py') if p.read_bytes() != (bundle / p.name).read_bytes()}
+
 W = (0.55, 0.48, 0.22)
 
 
@@ -87,7 +93,7 @@ class TestRealWorld(unittest.TestCase):
         self.assertEqual(len(t033.check_selection_source()['select_weights_read']), 3)
 
     def test_simulation_unchanged(self):
-        self.assertGreater(t033.check_sim_unchanged(ROOT)['files_compared'], 10)
+        self.assertLessEqual(changed_sim_files('t032'), {'league_economy.py', 'league_observation.py'})  # only T036's two files differ from T032's bundle
 
 
 if __name__ == '__main__':

@@ -69,6 +69,8 @@ def run_cell(config, seed, days=DAYS):
         add(acc, ('fat', kw['context']), got - kw['true_fatigue'], float(got in (0.0, 0.95)))
         if kw['true_fatigue'] >= kw['noise'] and kw['true_fatigue'] + kw['noise'] <= 0.95:  # clamping cannot happen (the pre-registered "clamp excluded" set)
             add(acc, ('fat_free', kw['context']), got - kw['true_fatigue'])
+        if kw['true_fatigue'] >= 3 * kw['noise'] and kw['true_fatigue'] + kw['noise'] <= 0.95:  # post hoc (added after the first full run): also the legacy range [-3 w, w] cannot clamp
+            add(acc, ('fat_free_strict', kw['context']), got - kw['true_fatigue'])
         return got
     le.observe_fatigue = recording
     try:
@@ -264,6 +266,7 @@ def summarise(pooled):
         s = {'obs': {k: stat(acc.get(('obs', k))) for k in ('session', 'scout', 'self')},
              'fatigue': {c: stat(acc.get(('fat', c))) for c in FAT_CTX},
              'fatigue_clamp_free': {c: stat(acc.get(('fat_free', c))) for c in FAT_CTX},
+             'fatigue_clamp_free_strict_posthoc': {c: stat(acc.get(('fat_free_strict', c))) for c in FAT_CTX},
              'est_after': {f'{k}_{g}': stat(acc.get(('est_after', k, g))) for k in ('session', 'scout') for g in ('inc', 'new')},
              'lineup': {f'{g}_{m}': stat(acc.get(('lu', g, m))) for g in ('inc', 'new', 'new_t0', 'new_t1', 'new_t2') for m in ('skill', 'match')},
              'start': {'true_top2_match': stat(acc.get(('start', 'true_top2_match'))), 'new_share': stat(acc.get(('start', 'new')))}}
@@ -278,6 +281,7 @@ def predictions(summary, diffs):
     out['P2_obs_error'] = {'legacy': {k: leg['obs'][k]['mean'] for k in leg['obs']}, 'centered': {k: cen['obs'][k]['mean'] for k in cen['obs']}}
     out['P2_fatigue_difference_all'] = {c: cen['fatigue'][c]['mean'] - leg['fatigue'][c]['mean'] for c in FAT_CTX}
     out['P2_fatigue_difference_clamp_free'] = {c: cen['fatigue_clamp_free'][c]['mean'] - leg['fatigue_clamp_free'][c]['mean'] for c in FAT_CTX}
+    out['P2_fatigue_difference_strict_posthoc'] = {c: cen['fatigue_clamp_free_strict_posthoc'][c]['mean'] - leg['fatigue_clamp_free_strict_posthoc'][c]['mean'] for c in FAT_CTX}
     out['P3_incumbents'] = {'bias_legacy': g(leg, 'lineup', 'inc_skill', 'mean'), 'bias_centered': g(cen, 'lineup', 'inc_skill', 'mean'), 'mae_legacy': g(leg, 'lineup', 'inc_skill', 'mae'), 'mae_centered': g(cen, 'lineup', 'inc_skill', 'mae')}
     out['P4_newcomers'] = {'bias_legacy': g(leg, 'lineup', 'new_skill', 'mean'), 'bias_centered': g(cen, 'lineup', 'new_skill', 'mean'), 'mae_legacy': g(leg, 'lineup', 'new_skill', 'mae'), 'mae_centered': g(cen, 'lineup', 'new_skill', 'mae'),
                            'bias_15_21_legacy': g(leg, 'lineup', 'new_t2_skill', 'mean'), 'bias_15_21_centered': g(cen, 'lineup', 'new_t2_skill', 'mean')}
