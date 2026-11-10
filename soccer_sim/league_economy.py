@@ -230,6 +230,30 @@ def _coach_receptiveness(world: "LeagueWorldState", coach_id: str) -> dict[str, 
     return {pid: belief_mean_sd(b)[0] for pid, b in world.coach_beliefs.get(coach_id, {}).items()}
 
 
+GENERATION_MODES = ("none", "retire_replace_v1")
+# T030 (pre-registered, uncalibrated): retirement thresholds, the club size intake restores, the newcomer age, and the coach's constant first impression (skill, match rating, fatigue).
+RETIRE_SOFT_AGE, RETIRE_HARD_AGE, RETIRE_SATISFACTION_BELOW = 33, 36, 0.5
+CLUB_TARGET_ROSTER, YOUTH_INTAKE_AGE, YOUTH_PRIOR = 3, 18, (0.5, 0.5, 0.10)
+
+
+def decide_retirement(*, age: int, playing_time_satisfaction: float) -> dict[str, Any]:
+    """T030: the player's own state only (age, satisfaction); no RNG, id, skill or trait."""
+    reason = "age_limit" if age >= RETIRE_HARD_AGE else \
+        "veteran_low_playing_time" if age >= RETIRE_SOFT_AGE and playing_time_satisfaction < RETIRE_SATISFACTION_BELOW else None
+    return {"retire": reason is not None, "reason": reason}
+
+
+def _new_coach_evaluation(day: int, ref: str) -> "CoachPlayerEvaluation":
+    """T030: a coach's first impression of a newcomer is a constant, never the true value; observation rules do the rest."""
+    return CoachPlayerEvaluation(skill_estimate=YOUTH_PRIOR[0], match_rating_estimate=YOUTH_PRIOR[1], fatigue_estimate=YOUTH_PRIOR[2],
+                                 last_seen_day=day, method_residuals={"A": 0.0, "B": 0.0}, last_obs_ref=ref)
+
+
+def _active_pids(world: "LeagueWorldState") -> list[str]:
+    """T030: players currently on a roster, in id order (equals PLAYER_IDS while nobody has retired)."""
+    return sorted((pid for roster in world.club_rosters.values() for pid in roster), key=lambda pid: int(pid[1:]))
+
+
 def _personality_traits(seed: int, player_ids: Any) -> dict[str, dict[str, float]]:
     """T027 latent_v1: one keyed uniform draw per (trait, player) on its own channel, so no existing draw is touched."""
     return {pid: {name: round6(uniform_from_key(seed, 0, f"personality:{name}", pid, low=PERSONALITY_RANGE[0], high=PERSONALITY_RANGE[1]))
@@ -362,6 +386,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
     advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
     personality: str = "none"  # T027: "none" or "latent_v1" (two latent traits as true player state; no decision reads them yet)
@@ -473,6 +498,10 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid coach_belief: {self.coach_belief}")
         if self.coach_belief != "none" and self.advice_response == "none":
             raise ValueError("coach_belief requires advice_response")
+        if self.generations not in GENERATION_MODES:
+            raise ValueError(f"invalid generations: {self.generations}")
+        if self.generations != "none" and not self.aging_start_age:
+            raise ValueError("generations requires aging_start_age")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -493,6 +522,8 @@ class LeagueEconomyConfig:
             data["advice_response"] = self.advice_response
         if self.coach_belief != "none":
             data["coach_belief"] = self.coach_belief
+        if self.generations != "none":
+            data["generations"] = self.generations
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -565,7 +596,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -1048,29 +1079,34 @@ def _sample_population(seed: int, perturbation: str = "none") -> tuple[dict[str,
     return specs, _sample_impressions(seed, specs, perturbation)
 
 
+def _profile_spec(seed: int, pid: str, kind: str, ranges: dict[tuple[str, str], tuple[float, float]], prefix: str = "") -> dict[str, Any]:
+    """One player's profile drawn from the `kind` ranges; `prefix` names a separate RNG channel (T030 youth) and is empty for the initial population."""
+    r = {p: ranges[kind, p] for p in ("trait", "rate", "cap")}
+
+    def draw(name: str, low: float, high: float) -> float:
+        return round6(_population_draw(seed, prefix + name, pid, low, high))
+    traits = tuple(draw(f"trait{i}", *r["trait"]) for i in range(3))
+    level = sum(traits) / 3.0
+    cap = max(draw("cap", *r["cap"]), min(0.98, max(traits) + 0.05))
+    return {
+        "traits": traits,
+        "rates": {"A": draw("rateA", *r["rate"]), "B": draw("rateB", *r["rate"])},
+        "cap": round6(cap),
+        "pref": "A" if draw("pref", 0.0, 1.0) < 0.5 else "B",
+        "loyalty": draw("loyalty", *ranges["all", "loyalty"]),
+        "ambition": draw("ambition", *ranges["all", "ambition"]),
+        "autonomy": draw("autonomy", *ranges["all", "autonomy"]),
+        "self_est": round6(min(0.95, max(0.05, level + draw("self_bias", *ranges["all", "self_bias"])))),
+    }
+
+
 def _sample_profiles(seed: int, perturbation: str = "none") -> dict[str, dict[str, Any]]:
     ranges = sampled_ranges(perturbation)
     specs: dict[str, dict[str, Any]] = {}
     for cid, pids in INITIAL_CLUB_ROSTERS.items():
         kind = "academy" if cid in ACADEMY_CLUB_IDS else "buyer"
-        r = {p: ranges[kind, p] for p in ("trait", "rate", "cap")}
         for pid in pids:
-            def draw(name: str, low: float, high: float) -> float:
-                return round6(_population_draw(seed, name, pid, low, high))
-            traits = tuple(draw(f"trait{i}", *r["trait"]) for i in range(3))
-            level = sum(traits) / 3.0
-            cap = max(draw("cap", *r["cap"]), min(0.98, max(traits) + 0.05))
-            specs[pid] = {
-                "club": cid,
-                "traits": traits,
-                "rates": {"A": draw("rateA", *r["rate"]), "B": draw("rateB", *r["rate"])},
-                "cap": round6(cap),
-                "pref": "A" if draw("pref", 0.0, 1.0) < 0.5 else "B",
-                "loyalty": draw("loyalty", *ranges["all", "loyalty"]),
-                "ambition": draw("ambition", *ranges["all", "ambition"]),
-                "autonomy": draw("autonomy", *ranges["all", "autonomy"]),
-                "self_est": round6(min(0.95, max(0.05, level + draw("self_bias", *ranges["all", "self_bias"])))),
-            }
+            specs[pid] = {"club": cid, **_profile_spec(seed, pid, kind, ranges)}
     return specs
 
 
@@ -1087,6 +1123,28 @@ def _sample_impressions(seed: int, specs: dict[str, dict[str, Any]], perturbatio
             impressions[coach_id, pid] = (round6(min(0.95, max(0.05, skill))),
                                           round6(min(0.95, max(0.05, match))))
     return impressions
+
+
+def _new_player_mind(pid: str, spec: dict[str, Any], satisfaction: float, last_obs_ref: str) -> PlayerMind:
+    return PlayerMind(
+        player_id=pid,
+        self_estimate=float(spec["self_est"]),
+        expected_gains={"A": 0.042, "B": 0.042},
+        trust_by_coach={coach_id: 0.56 for coach_id in COACH_IDS},
+        autonomy=float(spec["autonomy"]),
+        ambition=float(spec["ambition"]),
+        loyalty_bias=float(spec["loyalty"]),
+        rest_preference=0.012,
+        preferred_method=str(spec["pref"]),
+        playing_time_satisfaction=satisfaction,
+        perceived_fatigue=0.10,
+        style=MatchStyle(
+            directness=0.55 if spec["pref"] == "B" else 0.48,
+            pass_bias=0.55 if spec["pref"] == "A" else 0.46,
+            press_bias=0.52,
+        ),
+        last_obs_ref=last_obs_ref,
+    )
 
 
 def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldState:
@@ -1271,25 +1329,8 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         players[pid] = truth
         initial_players[pid] = PlayerTruth.from_dict(truth.to_dict())
 
-        player_minds[pid] = PlayerMind(
-            player_id=pid,
-            self_estimate=float(spec["self_est"]),
-            expected_gains={"A": 0.042, "B": 0.042},
-            trust_by_coach={coach_id: 0.56 for coach_id in COACH_IDS},
-            autonomy=float(spec["autonomy"]),
-            ambition=float(spec["ambition"]),
-            loyalty_bias=float(spec["loyalty"]),
-            rest_preference=0.012,
-            preferred_method=str(spec["pref"]),
-            playing_time_satisfaction=0.50 if (f3 == "sampled" or pid not in TALENT_PLAYER_IDS) else 0.42,
-            perceived_fatigue=0.10,
-            style=MatchStyle(
-                directness=0.55 if spec["pref"] == "B" else 0.48,
-                pass_bias=0.55 if spec["pref"] == "A" else 0.46,
-                press_bias=0.52,
-            ),
-            last_obs_ref="init:0",
-        )
+        player_minds[pid] = _new_player_mind(
+            pid, spec, 0.50 if (f3 == "sampled" or pid not in TALENT_PLAYER_IDS) else 0.42, "init:0")
 
     coaches: dict[str, CoachMind] = {}
     for coach_id in COACH_IDS:
@@ -1837,7 +1878,8 @@ class TransferOffer:
     to_coach: str
 
     def __post_init__(self) -> None:
-        if self.player_id not in PLAYER_IDS or self.to_club not in CLUB_IDS:
+        known = self.player_id in PLAYER_IDS or (self.player_id[:1] == "p" and self.player_id[1:].isdigit() and int(self.player_id[1:]) > len(PLAYER_IDS))  # T030: newcomers p13..
+        if not known or self.to_club not in CLUB_IDS:
             raise ValueError("invalid transfer offer recipient or club")
         if CLUB_COACH_MAP[self.to_club] != self.to_coach:
             raise ValueError("transfer offer sender does not represent its club")
@@ -2083,15 +2125,16 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
             )
 
     # 2. Coaches choose 2 daily slots (observe / propose / scout / rest)
-    proposals_by_player: dict[str, list[dict[str, Any]]] = {pid: [] for pid in PLAYER_IDS}
-    observed_sessions: dict[str, list[tuple[str, str]]] = {pid: [] for pid in PLAYER_IDS}
+    active = _active_pids(world)
+    proposals_by_player: dict[str, list[dict[str, Any]]] = {pid: [] for pid in active}
+    observed_sessions: dict[str, list[tuple[str, str]]] = {pid: [] for pid in active}
     scouted_targets: list[tuple[str, str, str]] = []
 
     for coach_id in COACH_IDS:
         coach = world.coaches[coach_id]
         own_roster = list(world.club_rosters[coach.club_id])
         other_players = [
-            pid for pid in PLAYER_IDS if world.players[pid].club_id != coach.club_id
+            pid for pid in active if world.players[pid].club_id != coach.club_id
         ]
         already_targeted: set[str] = set()
         for slot in range(1, cfg.coach_daily_slots + 1):
@@ -2144,7 +2187,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                 scouted_targets.append((coach_id, str(target), tx_id))
 
     # 3. Players decide A / B / rest and update A (traits/fatigue) & B (beliefs/trust)
-    for pid in PLAYER_IDS:
+    for pid in active:
         p = world.players[pid]
         mind = world.player_minds[pid]
         cid = p.club_id
@@ -2752,7 +2795,7 @@ def _step_transfer_window(world: LeagueWorldState, day: int) -> None:
         )
         return
 
-    for pid in PLAYER_IDS:
+    for pid in _active_pids(world):
         p = world.players[pid]
         pm = world.player_minds[pid]
         from_club = p.club_id
@@ -2902,6 +2945,8 @@ def advance_league_days(world: LeagueWorldState, days: int) -> None:
         length = world.config.aging_start_age and world.config.season_length_days
         if length and world.day % length == 0:
             _age_players(world, world.day // length)
+            if world.config.generations != "none":
+                _generational_turnover(world, world.day // length)
 
 
 def _age_players(world: LeagueWorldState, season: int) -> None:
@@ -2913,15 +2958,62 @@ def _age_players(world: LeagueWorldState, season: int) -> None:
     if world.config.aging_curve == "none":
         return
     # T026: the only place true skill changes with age, once per season end, recorded with before/after.
+    # T030: with generations the ages differ, so delta is recorded per player; otherwise one scalar as before.
     delta, rows = _aging_delta(world.player_ages[min(world.player_ages)]), {}
+    deltas = dict.fromkeys(world.player_ages, delta)
+    if world.config.generations != "none":
+        deltas = delta = {pid: _aging_delta(age) for pid, age in sorted(world.player_ages.items())}
     for pid in sorted(world.player_ages):
         p = world.players[pid]
         before = [p.traits.pace, p.traits.passing, p.traits.shooting]
-        after = _aged_traits(before, delta, p.cap)
+        after = _aged_traits(before, deltas[pid], p.cap)
         p.traits = MatchTraits(*after)
         rows[pid] = {"before": before, "after": after}
     _append_event(world, day=world.day, kind="season_skill_aged", actor="league",
                   data={"season": season, "delta": delta, "traits": rows}, cause_refs=[aged_ref])
+
+
+def _youth_truth(seed: int, perturbation: str, pid: str, club_id: str) -> tuple[PlayerTruth, dict[str, Any]]:
+    """T030: a newcomer's true state, drawn on the separate `population:youth_*` channels from the academy ranges (also used to re-verify on load)."""
+    spec = _profile_spec(seed, pid, "academy", sampled_ranges(perturbation), "youth_")
+    t0, t1, t2 = spec["traits"]
+    truth = PlayerTruth(player_id=pid, origin_club_id=club_id, club_id=club_id, traits=MatchTraits(pace=t0, passing=t1, shooting=t2),
+                        rates=dict(spec["rates"]), cap=float(spec["cap"]), fatigue=0.10, appearances_by_club={cl: 0 for cl in CLUB_IDS})
+    return truth, spec
+
+
+def _generational_turnover(world: LeagueWorldState, season: int) -> None:
+    """T030 retire_replace_v1: right after the season-end aging, active players retire by decide_retirement(own age, own satisfaction);
+    every club below CLUB_TARGET_ROSTER then gets newcomers the same day. Both are recorded events with reasons; retirees keep their records."""
+    aging_ref, day, retired = world.events[-1]["id"], world.day, {cid: [] for cid in CLUB_IDS}
+    for pid in _active_pids(world):
+        p, age, satisfaction = world.players[pid], world.player_ages[pid], world.player_minds[pid].playing_time_satisfaction
+        decision = decide_retirement(age=age, playing_time_satisfaction=satisfaction)
+        if decision["retire"]:
+            retired[p.club_id].append(_append_event(
+                world, day=day, kind="season_retired", actor=pid,
+                data={"record_class": "player_reason", "season": season, "player_id": pid, "club_id": p.club_id, "age": age,
+                      "playing_time_satisfaction": satisfaction, "reason": decision["reason"], "rule": world.config.generations},
+                cause_refs=[aging_ref]))
+            world.club_rosters[p.club_id].remove(pid)
+            del world.player_ages[pid]
+    for cid in CLUB_IDS:
+        while len(world.club_rosters[cid]) < CLUB_TARGET_ROSTER:
+            pid = f"p{len(world.players) + 1}"
+            ref = _append_event(
+                world, day=day, kind="season_youth_joined", actor=cid,
+                data={"season": season, "player_id": pid, "club_id": cid, "age": YOUTH_INTAKE_AGE, "reason": "roster_below_target",
+                      "roster_size_before": len(world.club_rosters[cid])},
+                cause_refs=retired[cid] or [aging_ref])
+            truth, spec = _youth_truth(world.seed, world.config.range_perturbation, pid, cid)
+            world.players[pid], world.initial_players[pid] = truth, PlayerTruth.from_dict(truth.to_dict())
+            world.player_minds[pid] = _new_player_mind(pid, spec, 0.50, ref)
+            for coach in world.coaches.values():
+                coach.evaluations[pid] = _new_coach_evaluation(day, ref)
+            world.club_rosters[cid].append(pid)
+            world.player_ages[pid] = YOUTH_INTAKE_AGE
+            if world.config.personality != "none":
+                world.player_personality[pid] = _personality_traits(world.seed, [pid])[pid]
 
 
 def season_progress(world: LeagueWorldState) -> dict[str, int]:
@@ -2970,6 +3062,57 @@ def run_league_world(
 # Cheap runtime invariants, replay-verified persistence, and summary
 # ============================================================================
 
+def _generation_fold(world: LeagueWorldState) -> tuple[dict[str, int], list[str]]:
+    """T030: re-derive who is active, their ages and everyone ever seen from the events alone, checking each aging/retirement/intake event
+    against the rules (the retirement rule on its recorded inputs, the intake against the roster sizes folded from transfers)."""
+    cfg, ev_keys = world.config, {"retire": {"record_class", "season", "player_id", "club_id", "age", "playing_time_satisfaction", "reason", "rule"},
+                                  "join": {"season", "player_id", "club_id", "age", "reason", "roster_size_before"}}
+    length = cfg.season_length_days
+    ages, everyone = {pid: cfg.aging_start_age for pid in PLAYER_IDS}, list(PLAYER_IDS)
+    club = {pid: cid for cid, pids in INITIAL_CLUB_ROSTERS.items() for pid in pids}
+    size, season, last_aging, retired, joined = {cid: len(pids) for cid, pids in INITIAL_CLUB_ROSTERS.items()}, 0, None, {}, {}
+    for ev in world.events:
+        kind, data = ev["kind"], ev["data"]
+        if kind == "season_aged":
+            season, last_aging, retired = season + 1, ev["id"], {cid: [] for cid in CLUB_IDS}
+            ages = {pid: age + 1 for pid, age in ages.items()}
+            if ev["day"] != season * length or ev["actor"] != "league" or ev["cause_refs"] or data != {"season": season, "ages": dict(sorted(ages.items()))}:
+                raise ValueError(f"season_aged event {season} does not match the aging rule")
+        elif kind == "season_skill_aged":
+            last_aging = ev["id"]
+        elif kind == "transfer_completed":
+            club[data["player_id"]] = data["to_club"]
+            size[data["from_club"]] -= 1
+            size[data["to_club"]] += 1
+        elif kind == "season_retired":
+            pid = data.get("player_id")
+            if set(data) != ev_keys["retire"] or pid not in ages or season < 1 or ev["day"] != season * length or ev["actor"] != pid \
+                    or ev["cause_refs"] != [last_aging] or data["season"] != season or data["rule"] != cfg.generations \
+                    or data["age"] != ages[pid] or data["club_id"] != club[pid] or data["record_class"] != "player_reason":
+                raise ValueError("season_retired event does not match the retirement record")
+            if decide_retirement(age=data["age"], playing_time_satisfaction=data["playing_time_satisfaction"]) != {"retire": True, "reason": data["reason"]}:
+                raise ValueError("season_retired event does not follow the retirement rule")
+            retired[club[pid]].append(ev["id"])
+            size[club[pid]] -= 1
+            del ages[pid]
+        elif kind == "season_youth_joined":
+            pid, cid = data.get("player_id"), data.get("club_id")
+            if set(data) != ev_keys["join"] or pid != f"p{len(everyone) + 1}" or season < 1 or ev["day"] != season * length or cid not in CLUB_IDS \
+                    or ev["actor"] != cid or data["season"] != season or data["age"] != YOUTH_INTAKE_AGE or data["reason"] != "roster_below_target" \
+                    or data["roster_size_before"] != size[cid] or size[cid] >= CLUB_TARGET_ROSTER or ev["cause_refs"] != (retired[cid] or [last_aging]):
+                raise ValueError("season_youth_joined event does not match the intake record")
+            ages[pid], club[pid], joined[pid] = YOUTH_INTAKE_AGE, cid, cid
+            everyone.append(pid)
+            size[cid] += 1
+    if season != world.day // length or size != {cid: len(world.club_rosters[cid]) for cid in CLUB_IDS}:
+        raise ValueError("generation events do not match the season count or roster sizes")
+    for pid, cid in joined.items():
+        truth, _ = _youth_truth(world.seed, cfg.range_perturbation, pid, cid)
+        if world.initial_players[pid].to_dict() != truth.to_dict() or world.players[pid].origin_club_id != cid:
+            raise ValueError(f"newcomer {pid} does not match the seeded youth generator")
+    return ages, everyone
+
+
 def _validate_league_invariants(world: LeagueWorldState) -> None:
     """Fast checks during experiments; these alone do not certify a checkpoint."""
     if type(world.day) is not int or world.day < 0 or type(world.seed) is not int:
@@ -2988,8 +3131,14 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
             if world.players[pid].club_id != cid:
                 raise ValueError(f"player {pid} club_id {world.players[pid].club_id} != roster club {cid}")
             seen_pids.append(pid)
-    if sorted(seen_pids) != sorted(PLAYER_IDS):
-        raise ValueError("club rosters do not form an exact partition of PLAYER_IDS")
+    gen_ages, everyone = _generation_fold(world) if world.config.generations != "none" else ({}, list(PLAYER_IDS))
+    if world.config.generations == "none":
+        if any(ev["kind"] in ("season_retired", "season_youth_joined") for ev in world.events):
+            raise ValueError("retirement/intake events present but generations is none")
+    elif set(world.players) != set(everyone) or set(world.initial_players) != set(everyone) or set(world.player_minds) != set(everyone):
+        raise ValueError("player records do not match the players recorded by the generation events")
+    if sorted(seen_pids) != sorted(gen_ages if world.config.generations != "none" else PLAYER_IDS):
+        raise ValueError("club rosters do not form an exact partition of the active players")
 
     # All monetary state is exact and nonnegative, including unused contracts.
     _validate_money_fields(world.config)
@@ -3017,6 +3166,9 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
     if not start:
         if ages or aged:
             raise ValueError("player_ages/season_aged present but aging is disabled")
+    elif world.config.generations != "none":  # T030: ages are re-derived by the generation fold (already checked event by event)
+        if ages != gen_ages or any(type(a) is not int for a in ages.values()):
+            raise ValueError("player_ages do not match the ages derived from the events")
     else:
         if type(ages) is not dict or set(ages) != set(world.players) or len(aged) != world.day // length:
             raise ValueError("player_ages do not match players or season_aged count")
@@ -3053,13 +3205,17 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
         if [i for i, _ in skill] != [i + 1 for i in positions]:
             raise ValueError("season_skill_aged must directly follow each season_aged")
         for n, (_, ev) in enumerate(skill, start=1):
-            delta = _aging_delta(start + n)
+            aged_ages = world.events[positions[n - 1]]["data"]["ages"]
+            if world.config.generations == "none":  # one scalar delta; T030: a per-player delta from the ages recorded in that season_aged
+                delta, expected_ids = _aging_delta(start + n), set(world.players)
+            else:
+                delta, expected_ids = {pid: _aging_delta(age) for pid, age in sorted(aged_ages.items())}, set(aged_ages)
             if ev["actor"] != "league" or ev["day"] != n * length or ev["cause_refs"] != [world.events[positions[n - 1]]["id"]] \
                     or set(ev["data"]) != {"season", "delta", "traits"} or ev["data"]["season"] != n or ev["data"]["delta"] != delta \
-                    or set(ev["data"]["traits"]) != set(world.players):
+                    or set(ev["data"]["traits"]) != expected_ids:
                 raise ValueError(f"season_skill_aged event {n} does not match the aging curve")
             for pid, row in ev["data"]["traits"].items():
-                if set(row) != {"before", "after"} or row["after"] != _aged_traits(row["before"], delta, world.players[pid].cap):
+                if set(row) != {"before", "after"} or row["after"] != _aged_traits(row["before"], delta[pid] if type(delta) is dict else delta, world.players[pid].cap):
                     raise ValueError(f"season_skill_aged event {n} traits do not match the aging curve")
 
     # 1-pass event causal chain & transfer invariant check
