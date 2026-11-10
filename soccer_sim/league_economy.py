@@ -233,6 +233,12 @@ def _coach_receptiveness(world: "LeagueWorldState", coach_id: str) -> dict[str, 
 GENERATION_MODES = ("none", "retire_replace_v1")
 COACH_EXPLORATION_MODES = ("none", "unseen_bonus_v1")
 COACH_PRACTICE_RATING_MODES = ("none", "blend_v1")
+OBSERVATION_NOISE_MODES = ("legacy", "centered_v1")
+
+
+def observation_noise(u: float, width: float, mode: str) -> float:
+    """T036: u is a keyed draw in [-1, 1]. legacy is the pre-T036 expression bit for bit ((u-0.5)*2*width, mean -width); centered_v1 is u*width, symmetric in [-width, width]."""
+    return (u - 0.5) * 2.0 * width if mode == "legacy" else u * width
 EXPLORE_STALENESS_CAP = 40  # T031: days unseen after which a player stops getting more observation value (the default cap is 10)
 # T030 (pre-registered, uncalibrated): retirement thresholds, the club size intake restores, the newcomer age, and the coach's constant first impression (skill, match rating, fatigue).
 RETIRE_SOFT_AGE, RETIRE_HARD_AGE, RETIRE_SATISFACTION_BELOW = 33, 36, 0.5
@@ -389,6 +395,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    observation_noise_mode: str = "legacy"  # T036: "legacy" (observation noise has mean -width, a porting slip found in T035) or "centered_v1" (symmetric [-width, width]); same draws, only the offset changes
     coach_practice_rating: str = "none"  # T032: "none" or "blend_v1" (a practice-day observation also updates the coach's match-rating estimate, 0.70 old + 0.30 observed; B-layer only)
     coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
@@ -507,6 +514,8 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid coach_exploration: {self.coach_exploration}")
         if self.coach_practice_rating not in COACH_PRACTICE_RATING_MODES:
             raise ValueError(f"invalid coach_practice_rating: {self.coach_practice_rating}")
+        if self.observation_noise_mode not in OBSERVATION_NOISE_MODES:
+            raise ValueError(f"invalid observation_noise_mode: {self.observation_noise_mode}")
         if self.generations not in GENERATION_MODES:
             raise ValueError(f"invalid generations: {self.generations}")
         if self.generations != "none" and not self.aging_start_age:
@@ -537,6 +546,8 @@ class LeagueEconomyConfig:
             data["coach_exploration"] = self.coach_exploration
         if self.coach_practice_rating != "none":
             data["coach_practice_rating"] = self.coach_practice_rating
+        if self.observation_noise_mode != "legacy":
+            data["observation_noise_mode"] = self.observation_noise_mode
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -609,7 +620,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration", "coach_practice_rating"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -2276,12 +2287,12 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         true_gain = round6(post_skill - pre_skill)
 
         # Self observation & B update
-        noise = (uniform_from_key(world.seed, day, "self_obs", pid) - 0.5) * 2.0 * cfg.self_noise
+        noise = observation_noise(uniform_from_key(world.seed, day, "self_obs", pid), cfg.self_noise, cfg.observation_noise_mode)
         obs_skill = round6(clamp(post_skill + noise, 0.10, 0.98))
         obs_gain = round6(true_gain + noise * 0.35) if action in TRAINING_METHODS else 0.0
         obs_fatigue = observe_fatigue(true_fatigue=p.fatigue, noise=cfg.self_fatigue_noise,
                                       seed=world.seed, day=day, observer_id=pid,
-                                      player_id=pid, context="training_self")
+                                      player_id=pid, context="training_self", centered=cfg.observation_noise_mode == "centered_v1")
         obs_ev = _append_event(
             world,
             day=day,
@@ -2351,11 +2362,8 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         for c_id, session_ref in observed_sessions[pid]:
             c_mind = world.coaches[c_id]
             c_ev = c_mind.evaluations[pid]
-            c_noise = (
-                (uniform_from_key(world.seed, day, "coach_obs", f"{c_id}:{pid}") - 0.5)
-                * 2.0
-                * cfg.coach_noise
-            )
+            c_noise = observation_noise(
+                uniform_from_key(world.seed, day, "coach_obs", f"{c_id}:{pid}"), cfg.coach_noise, cfg.observation_noise_mode)
             c_obs_skill = round6(clamp(post_skill + c_noise, 0.10, 0.98))
             c_obs_gain = round6(true_gain + c_noise * 0.35) if action in TRAINING_METHODS else 0.0
             c_ev.skill_estimate = round6(
@@ -2370,7 +2378,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                 c_ev.match_rating_estimate = round6(clamp(0.70 * c_ev.match_rating_estimate + 0.30 * c_obs_skill, 0.10, 0.98))
             c_ev.fatigue_estimate = observe_fatigue(
                 true_fatigue=p.fatigue, noise=cfg.coach_fatigue_noise, seed=world.seed,
-                day=day, observer_id=c_id, player_id=pid, context="training_coach")
+                day=day, observer_id=c_id, player_id=pid, context="training_coach", centered=cfg.observation_noise_mode == "centered_v1")
             c_ev.last_seen_day = day
             if action in TRAINING_METHODS:
                 base_g = c_mind.base_method_gains[action]
@@ -2407,11 +2415,8 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         c_mind = world.coaches[c_id]
         c_ev = c_mind.evaluations[target_pid]
         p_target = world.players[target_pid]
-        s_noise = (
-            (uniform_from_key(world.seed, day, "scout_obs", f"{c_id}:{target_pid}") - 0.5)
-            * 2.0
-            * cfg.scout_noise
-        )
+        s_noise = observation_noise(
+            uniform_from_key(world.seed, day, "scout_obs", f"{c_id}:{target_pid}"), cfg.scout_noise, cfg.observation_noise_mode)
         s_obs_skill = round6(clamp(p_target.composite_skill() + s_noise, 0.10, 0.98))
         c_ev.skill_estimate = round6(
             clamp(
@@ -2430,7 +2435,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         )
         c_ev.fatigue_estimate = observe_fatigue(
             true_fatigue=p_target.fatigue, noise=cfg.scout_fatigue_noise, seed=world.seed,
-            day=day, observer_id=c_id, player_id=target_pid, context="scout")
+            day=day, observer_id=c_id, player_id=target_pid, context="scout", centered=cfg.observation_noise_mode == "centered_v1")
         c_ev.last_seen_day = day
         s_obs_id = _append_event(
             world,
@@ -2728,11 +2733,8 @@ def _step_matchday(world: LeagueWorldState, day: int) -> None:
                         c_id = CLUB_COACH_MAP[obs_cid]
                         c_mind = world.coaches[c_id]
                         c_ev = c_mind.evaluations[pid]
-                        m_noise = (
-                            (uniform_from_key(world.seed, day, "match_obs", f"{c_id}:{pid}") - 0.5)
-                            * 2.0
-                            * cfg.match_obs_noise
-                        )
+                        m_noise = observation_noise(
+                            uniform_from_key(world.seed, day, "match_obs", f"{c_id}:{pid}"), cfg.match_obs_noise, cfg.observation_noise_mode)
                         rating_obs = round6(clamp(perf_raw + m_noise, 0.15, 0.98))
                         c_ev.match_rating_estimate = round6(
                             clamp(
@@ -2752,7 +2754,7 @@ def _step_matchday(world: LeagueWorldState, day: int) -> None:
                         )
                         c_ev.fatigue_estimate = observe_fatigue(
                             true_fatigue=p.fatigue, noise=cfg.match_fatigue_noise, seed=world.seed,
-                            day=day, observer_id=c_id, player_id=pid, context="match_coach")
+                            day=day, observer_id=c_id, player_id=pid, context="match_coach", centered=cfg.observation_noise_mode == "centered_v1")
                         c_ev.last_seen_day = day
                         c_ev.last_obs_ref = _append_event(
                             world, day=day, kind="coach_match_observation", actor=c_id,
@@ -2772,7 +2774,7 @@ def _step_matchday(world: LeagueWorldState, day: int) -> None:
 
                 pm.perceived_fatigue = observe_fatigue(
                     true_fatigue=p.fatigue, noise=cfg.self_fatigue_noise, seed=world.seed,
-                    day=day, observer_id=pid, player_id=pid, context="match_self")
+                    day=day, observer_id=pid, player_id=pid, context="match_self", centered=cfg.observation_noise_mode == "centered_v1")
                 pm.last_obs_ref = _append_event(
                     world, day=day, kind="player_fatigue_observation", actor=pid,
                     data={"player_id": pid, "match_id": match_id, "started": pid in starters,
