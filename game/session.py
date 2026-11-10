@@ -4,10 +4,14 @@ The human replaces exactly two decisions of coach c1 (club_a), by wrapping the r
 functions for the duration of one step: the lineup, and the first coaching slot of a week (advice).
 Everything else, including the assistant coach's remaining slots, stays with the research Policy.
 """
+import hashlib
+import json
 from contextlib import contextmanager
 from dataclasses import replace
+from pathlib import Path
 
 from soccer_sim import league_economy as le
+from soccer_sim.fingerprints import league_runtime_fingerprint
 
 from . import observation as obs
 from .reveal import season_reveal
@@ -23,8 +27,21 @@ GAME_CONFIG = replace(
     coach_exploration="unseen_bonus_v1")
 
 
+SAVE_VERSION = 1
+
+
 class InvalidInput(ValueError):
     pass
+
+
+def _sha256(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+
+
+def code_fingerprint():
+    """Research runtime + game step rules + season config: a save only replays on identical rules."""
+    return _sha256({"runtime": league_runtime_fingerprint()["sha256"], "config": GAME_CONFIG.to_dict(),
+                    "session": hashlib.sha256(Path(__file__).read_bytes()).hexdigest()})
 
 
 @contextmanager
@@ -46,6 +63,7 @@ class GameSession:
             raise InvalidInput("seed must be an integer")
         self.seed = seed
         self.world = le._build_initial_world(seed=seed, config=GAME_CONFIG)
+        self.inputs = []  # every accepted player input, in order: the whole save besides the seed
 
     @property
     def phase(self):
@@ -78,7 +96,9 @@ class GameSession:
         self._require_phase("training")
         if advice is not None:
             self._check_advice(advice)
-        return self._run(TRAINING_DAYS_PER_WEEK, decide_coach_training=self._advice_hook(advice))
+        result = self._run(TRAINING_DAYS_PER_WEEK, decide_coach_training=self._advice_hook(advice))
+        self.inputs.append({"kind": "train", "advice": advice})
+        return result
 
     def play_match(self, starters):
         self._require_phase("lineup")
@@ -92,7 +112,37 @@ class GameSession:
             if coach.coach_id != obs.OWN_COACH:
                 return decision
             return {**decision, "starters": list(starters), "bench": [pid for pid in roster if pid not in starters]}
-        return self._run(1, decide_club_lineup=human_lineup)
+        result = self._run(1, decide_club_lineup=human_lineup)
+        self.inputs.append({"kind": "lineup", "starters": list(starters)})
+        return result
+
+    def save_payload(self):
+        """Seed + player inputs only (no world state, so no true value). view_digest is over the player's view."""
+        return {"version": SAVE_VERSION, "code": code_fingerprint(), "seed": self.seed, "inputs": self.inputs,
+                "view_digest": _sha256(self.state())}
+
+    @classmethod
+    def resume(cls, payload):
+        """Replay the saved inputs from the seed; reject a save from other code or one that does not reproduce."""
+        if type(payload) is not dict or payload.get("version") != SAVE_VERSION:
+            raise InvalidInput("save file format is not supported")
+        if payload.get("code") != code_fingerprint():
+            raise InvalidInput("save was made by different game/research code and cannot be replayed")
+        session = cls(payload.get("seed"))
+        inputs = payload.get("inputs")
+        if type(inputs) is not list:
+            raise InvalidInput("save inputs must be a list")
+        for item in inputs:
+            kind = item.get("kind") if type(item) is dict else None
+            if kind == "train":
+                session.train(item.get("advice"))
+            elif kind == "lineup":
+                session.play_match(item.get("starters"))
+            else:
+                raise InvalidInput("save contains an unknown input")
+        if _sha256(session.state()) != payload.get("view_digest"):
+            raise InvalidInput("save was altered: the replay does not reach the saved state")
+        return session
 
     def reveal(self):
         self._require_phase("season_end")
