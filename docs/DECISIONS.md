@@ -513,3 +513,16 @@
 - 戻し方: configキー、関数、イベント2種、`advice_mode`の削除のみ。新成果物は`artifacts/t028/`のみ。
 - 最終判断(T028、2026-11-10): 採用(`advice_response="personality_v1"`、`decide_advice_response`、`_player_advice_response`、イベント`player_advice_response`/`coach_advice_outcome`、`decide_player_training`の任意`advice_mode`)。既定14条件はT018・T023基準と一致、onの全28,402応答を独立実装と実状態から再計算して一致、拒否は助言なし判断と同一・従うは提案方法。特性は決定に入った(41%の入力で特性の差し替えが応答を変える)。監督の記録はキー固定でfloatなし、静的・動的の漏れ検査合格。予測P1(規律性→従う)・P2(不安定→不満時に拒否)・P3(縮退しない)は支持、拒否が62.6%と多数で主因は`trust_below_autonomy`(性格より信頼の状態)。機構の効果(mid−off)は技能−0.0030・信頼−0.0059で有意、特性の効果(on−mid)は技能+0.0024で有意だが理由は未分解。特性と成長の相関(P5)は見えない。信頼readerは応答改ざんをmanifest偽造後に受理(T022の限界)。260テスト合格。[T028結果](experiments/T028-RESULTS.md)。
 - 次(未着手): T029で監督が`coach_advice_outcome`を使う(拒否された助言の評価・提案の変更。特性は見せない)か、引退・新人(特性の継承)。
+
+## D044 — 監督の認識(B層): 助言への反応の記録から選手の受容度を推定し、提案の判断が最小限それを参照する(T029)
+
+- 日付/状態: 2026-11-10、実装前登録(ブランチt029、t028から積む、未実装、結果前)。
+- 問題: T028の監督は`coach_advice_outcome`を何にも使わない。助言の62.6%は拒否され、主因は信頼<自律。AGENTSはA(状態)・B(認識)・C(Policy学習)の分離を要請する。観測された結果から監督が選手についての認識を更新する経路が無い。
+- 候補: ①現状維持、②方針の重みを更新(C、範囲外・分離違反の恐れ)、③特性を監督に見せる(CHARTER違反)、④結果(態度・表明理由)だけから監督×選手の受容度の信念(Beta疑似回数、減衰0.97)を更新し、記録イベントで残す。使うか否かは2段(`observe_v1`=記録のみ、`use_v1`=提案候補の価値に`min(1,mean/0.5)`を掛ける)に分ける(④採用。禁止・探索ボーナス・表明理由での方法変更は不採用)。
+- 変更(承認後): config`coach_belief`、`world.coach_beliefs`、純関数`update_receptiveness_belief`、`_beliefs_from_events`(不変条件)、`decide_coach_training`の任意引数`receptiveness`、イベント`coach_belief_update`。
+- 保存/互換: 既定は不変。`observe_v1`は信念イベントを除けば履歴不変。`use_v1`は履歴が変わる(意図した変化)。save17・指紋scope不変、source hashは変わる(既存規則)。
+- 予想: 信念は現在の受容度と正に相関し定数より近い。useは提案を減らし拒否割合を下げる。結果(技能・満足・信頼)への効果は方向を予測しない。反証され得る。
+- 副作用/限界: 係数は未校正。受容度が低いと提案が減り信念が更新されにくい。信念は結果から導く推定で特性の推定ではない。
+- 比較: [T029契約](tasks/T029.md)、[事前条件](experiments/T029-PROTOCOL.md)。base対observe(判断不変の確認)、use対observe(利用の効果)。
+- 戻し方: configキー、`coach_beliefs`、関数、イベント1種、`receptiveness`引数の削除のみ。新成果物は`artifacts/t029/`のみ。
+- 最終判断: 未実施。
