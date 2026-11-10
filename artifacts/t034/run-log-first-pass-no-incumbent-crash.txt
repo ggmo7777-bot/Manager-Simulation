@@ -1,0 +1,32 @@
+sim {'files_compared': {'t032': 29, 't033': 29}, 'source_sha256': 'af1ae694c7f035d9075d6577dbe45cd4f7f128ddf080387ef27850ec4c5d4fd6'}
+t030 closed_no_solidarity
+t030 closed_no_solidarity_sampled_population
+t030 closed_solidarity
+t030 closed_solidarity_sampled_population
+t030 open_no_solidarity
+t030 open_no_solidarity_sampled_population
+t030 open_solidarity
+t030 open_solidarity_sampled_population
+t030 fixed_budget_no_inflow
+t030 fixed_budget_no_inflow_sampled_population
+t030 hoarder_buyer_policy
+t030 hoarder_buyer_policy_sampled_population
+t030 exploit_churn_guard
+t030 exploit_churn_guard_sampled_population
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t034.py", line 321, in <module>
+    run(parser.parse_args().out.resolve(), CODE_ROOT)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t034.py", line 304, in run
+    per_setting[t] = {'all': summarise(rows, newcomers), **{f'start_age_{st}': summarise([r for r in rows if r['start_age'] == st], [n for n in newcomers if n['start_age'] == st]) for st in STARTS}}
+                             ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t034.py", line 259, in summarise
+    return {'frequency': freq(newcomers), 'all_rows': agg_rows(rows), 'by_third': [agg_rows([r for r in rows if third_of(r['since_join']) == i]) for i in range(3)],
+                         ~~~~^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t034.py", line 248, in freq
+    'incumbent_mean_n': {k: mean(n['inc_n'][k] for n in newcomers) for k in KINDS}, 'incumbent_mean_total': mean(n['inc_n_total'] for n in newcomers),
+                            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t030.py", line 171, in mean
+    return sum(xs) / len(xs) if xs else None
+           ~~~^^^^
+TypeError: unsupported operand type(s) for +: 'float' and 'NoneType'
