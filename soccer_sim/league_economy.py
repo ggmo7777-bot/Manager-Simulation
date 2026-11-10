@@ -129,30 +129,40 @@ RANGE_PERTURBATIONS = {
     "cap_cm": ("cap", "add", -0.03), "cap_cp": ("cap", "add", 0.03),
 }
 RANGE_NAMES = ("none", "null") + tuple(RANGE_PERTURBATIONS)
+# T021: the three T020-refused perturbations under pre-registered rules. R1: cap ceiling 0.98 (the generation rule's own
+# maximum). R2: a width perturbation still outside the bound is shrunk symmetrically about its centre to the largest fit.
+RANGE_EXTENSIONS = {"cap_w15_x": ("cap", "width", 1.5), "cap_cp_x": ("cap", "add", 0.03), "psych_w15_x": ("psych", "width", 1.5)}
+RANGE_ALL_NAMES = RANGE_NAMES + tuple(RANGE_EXTENSIONS)
 # Value-type ranges must stay inside [0.05, 0.95]; violations are refused, never clipped.
 RANGE_BOUNDED = ("trait", "cap", "loyalty", "ambition", "autonomy")
 
 
 def sampled_ranges(name: str) -> dict[tuple[str, str], tuple[float, float]]:
     """Ranges used to draw the sampled population; "none"/"null" return the defaults unchanged."""
-    if name not in RANGE_NAMES:
+    if name not in RANGE_ALL_NAMES:
         raise ValueError(f"invalid range_perturbation: {name}")
     ranges = dict(RANGE_BASE)
-    if name in RANGE_PERTURBATIONS:
-        group, op, amount = RANGE_PERTURBATIONS[name]
+    extended = name in RANGE_EXTENSIONS
+    if name in RANGE_PERTURBATIONS or extended:
+        group, op, amount = RANGE_EXTENSIONS[name] if extended else RANGE_PERTURBATIONS[name]
         for (kind, param), (low, high) in RANGE_BASE.items():
             if param not in RANGE_GROUPS[group]:
                 continue
             centre, half = (low + high) / 2, (high - low) / 2
+            top = 0.98 if extended and param == "cap" else 0.95
             if op == "width":
-                low, high = centre - half * amount, centre + half * amount
+                if extended and param in RANGE_BOUNDED:
+                    k = min(amount, (centre - 0.05) / half, (top - centre) / half)
+                else:
+                    k = amount
+                low, high = centre - half * k, centre + half * k
             elif op == "add":
                 low, high = low + amount, high + amount
             else:
                 low, high = low * amount, high * amount
             ranges[kind, param] = (round(low, 6), round(high, 6))
     for (kind, param), (low, high) in ranges.items():
-        if not low < high or (param in RANGE_BOUNDED and not (0.05 <= low and high <= 0.95)) or (param == "rate" and low <= 0):
+        if not low < high or (param in RANGE_BOUNDED and not (0.05 <= low and high <= (0.98 if extended and param == "cap" else 0.95))) or (param == "rate" and low <= 0):
             raise ValueError(f"range_perturbation {name} makes {kind} {param} range invalid: ({low}, {high})")
     return ranges
 
@@ -166,7 +176,7 @@ def _range_valid(name: str) -> bool:
 
 
 # Perturbations whose ranges pass the validity rule; the others are refused (T020 records which).
-RANGE_RUNNABLE = tuple(name for name in RANGE_NAMES[1:] if _range_valid(name))
+RANGE_RUNNABLE = tuple(name for name in RANGE_ALL_NAMES[1:] if _range_valid(name))
 
 MIN_CLUB_ROSTER = 2
 MAX_CLUB_ROSTER = 4
@@ -423,7 +433,7 @@ def config_for_condition(condition: str) -> LeagueEconomyConfig:
     if RANGE_SUFFIX in c:
         # T020: a perturbation applies to a sampled population only.
         stem, _, name = c.rpartition(RANGE_SUFFIX)
-        if name not in RANGE_NAMES[1:] or not stem.endswith(POPULATION_SUFFIX):
+        if name not in RANGE_ALL_NAMES[1:] or not stem.endswith(POPULATION_SUFFIX):
             raise ValueError(f"Unknown T011 condition: {condition}")
         return replace(config_for_condition(stem), condition=c, range_perturbation=name)
     if FACTORS_SUFFIX in c:

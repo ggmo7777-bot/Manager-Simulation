@@ -13,7 +13,7 @@ args = parser.parse_args()
 loader = unittest.TestLoader()
 if args.suite == "fast":
     suite = loader.loadTestsFromNames([
-        "test_t013", "test_t014", "test_t016", "test_t016_analysis", "test_t020",
+        "test_t013", "test_t014", "test_t016", "test_t016_analysis", "test_t020", "test_t021",
         "test_t017.TestSampledLeagueCLI.test_help_lists_all_fixed_and_sampled_league_conditions",
         "test_t017.TestSampledLeagueCLI.test_unknown_nonleague_and_duplicate_suffix_conditions_make_no_output",
         "test_t011_r1.TestLeagueEconomicMechanism", "test_t011_r1.TestLeagueOfferBoundary"])
