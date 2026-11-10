@@ -234,6 +234,7 @@ GENERATION_MODES = ("none", "retire_replace_v1")
 COACH_EXPLORATION_MODES = ("none", "unseen_bonus_v1")
 COACH_PRACTICE_RATING_MODES = ("none", "blend_v1")
 OBSERVATION_NOISE_MODES = ("legacy", "centered_v1")
+TRANSFER_WINDOW_CYCLES = ("fixed", "per_season_v1")
 
 
 def observation_noise(u: float, width: float, mode: str) -> float:
@@ -412,6 +413,7 @@ class LeagueEconomyConfig:
     coach_practice_rating: str = "none"  # T032: "none" or "blend_v1" (a practice-day observation also updates the coach's match-rating estimate, 0.70 old + 0.30 observed; B-layer only)
     coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
     age_spread: int = 0  # game-v3 (uncalibrated): 0 = everyone starts at aging_start_age and newcomers join at 18; k>0 = initial age = start - n and newcomer age = 18 + n with n a keyed whole-year draw in 0..k (own channels); needs generations
+    transfer_window_cycle: str = "fixed"  # game-v6: "fixed" (windows only on days 28 and 56) or "per_season_v1" (the same in-season days of those two, i.e. offsets 28 and 14 for a 42-day season, recur every season); needs season_length_days; no RNG
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
     advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
@@ -532,6 +534,10 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid observation_noise_mode: {self.observation_noise_mode}")
         if self.generations not in GENERATION_MODES:
             raise ValueError(f"invalid generations: {self.generations}")
+        if self.transfer_window_cycle not in TRANSFER_WINDOW_CYCLES:
+            raise ValueError(f"invalid transfer_window_cycle: {self.transfer_window_cycle}")
+        if self.transfer_window_cycle != "fixed" and not self.season_length_days:
+            raise ValueError("transfer_window_cycle requires season_length_days")
         if self.generations != "none" and not self.aging_start_age:
             raise ValueError("generations requires aging_start_age")
         if self.age_spread and (self.generations == "none" or self.age_spread >= self.aging_start_age - YOUTH_INTAKE_AGE):
@@ -560,6 +566,8 @@ class LeagueEconomyConfig:
             data["generations"] = self.generations
         if self.age_spread:
             data["age_spread"] = self.age_spread
+        if self.transfer_window_cycle != "fixed":
+            data["transfer_window_cycle"] = self.transfer_window_cycle
         if self.coach_exploration != "none":
             data["coach_exploration"] = self.coach_exploration
         if self.coach_practice_rating != "none":
@@ -638,7 +646,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "age_spread", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "age_spread", "transfer_window_cycle", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -2816,8 +2824,16 @@ def _step_matchday(world: LeagueWorldState, day: int) -> None:
                 )
 
     # 4. Transfer window processing on Day 28 and Day 56
-    if day in TRANSFER_WINDOW_DAYS:
+    if is_transfer_window_day(world.config, day):
         _step_transfer_window(world, day)
+
+
+def is_transfer_window_day(config: LeagueEconomyConfig, day: int) -> bool:
+    """Fixed days 28/56, or (per_season_v1) the same in-season days every season."""
+    if config.transfer_window_cycle == "fixed":
+        return day in TRANSFER_WINDOW_DAYS
+    length = config.season_length_days
+    return day % length in {window % length for window in TRANSFER_WINDOW_DAYS}
 
 
 def _step_transfer_window(world: LeagueWorldState, day: int) -> None:

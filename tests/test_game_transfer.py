@@ -11,10 +11,12 @@ from game.session import GameSession, InvalidInput
 from soccer_sim import league_economy as le
 from test_game_save import world_state
 
+WINDOW_DAY = 28
+
 
 def to_window(session):
-    """Play weeks with no scouting or bids until the lineup of the week that is followed by a transfer window."""
-    while not session.state()["market"]["window"]["open_now"]:
+    """Play weeks with no scouting or bids until the lineup before the in-season day 28 window (by day 14 the club cannot yet pay the fee and reserve)."""
+    while not (lambda w: w["open_now"] and w["day"] == WINDOW_DAY)(session.state()["market"]["window"]):
         session.train(None) if session.phase == "training" else session.play_match(session.state()["recommended_starters"])
     return session
 
@@ -120,7 +122,7 @@ class TestOffers(unittest.TestCase):
 
 
 def play_with_inputs(session, seasons):
-    """Every input kind, in a fixed pattern, over several seasons (windows fall in seasons 1 and 2)."""
+    """Every input kind, in a fixed pattern, over several seasons (windows recur in every season)."""
     for season in range(seasons):
         while session.phase != "season_end":
             state = session.state()
@@ -152,11 +154,18 @@ class TestReplayWithTransferInputs(unittest.TestCase):
         played = play_with_inputs(GameSession(7), 1)
         good = json.loads(json.dumps(played.save_payload()))
         for field, value in (("scout", "p4"), ("offers", ["p6"])):
-            index = next(i for i, item in enumerate(good["inputs"]) if item.get(field))
+            index = max(i for i, item in enumerate(good["inputs"]) if item.get(field))  # the last one: the earliest bids can fail for lack of cash whatever they name
             bad = json.loads(json.dumps(good))
             bad["inputs"][index][field] = value
             with self.subTest(field), self.assertRaises(InvalidInput):
                 GameSession.resume(bad)
+
+    def test_bids_in_season_three_complete_and_replay(self):
+        played = play_with_inputs(GameSession(3), 4)
+        late = [e for e in played.world.events if e["kind"] == "transfer_completed" and e["data"]["to_club"] == "club_a" and e["day"] > 2 * 42]
+        self.assertTrue(late)
+        resumed = GameSession.resume(json.loads(json.dumps(played.save_payload())))
+        self.assertEqual(world_state(resumed.world), world_state(played.world))
 
     def test_other_seeds_replay_too(self):
         for seed in (1, 2, 3, 12):

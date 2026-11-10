@@ -106,9 +106,9 @@ def required_offer_fee(config):
 
 
 def market_view(world, season_days):
-    """Own budget and the public market rules; window is the next transfer window (fixed days of the research rules)."""
+    """Own budget and the public market rules; window is the next transfer window (the research rule's days)."""
     config, roster = world.config, world.club_rosters[OWN_CLUB]
-    upcoming = next((day for day in le.TRANSFER_WINDOW_DAYS if day > world.day), None)
+    upcoming = next((day for day in range(world.day + 1, world.day + season_days + 1) if le.is_transfer_window_day(config, day)), None)
     window = None if upcoming is None else {
         "season": (upcoming - 1) // season_days + 1, "day": (upcoming - 1) % season_days + 1, "open_now": upcoming == world.day + 1}
     return {"cash": world.club_accounts[OWN_CLUB].cash_units, "scout_cost": config.scout_action_cost_units,

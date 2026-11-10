@@ -30,7 +30,7 @@ GAME_CONFIG = replace(
     coach_belief="observe_v1", observation_noise_mode="centered_v1", coach_practice_rating="blend_v1",
     coach_exploration="unseen_bonus_v1",
     # Uncalibrated game defaults: initial ages 29..34 and newcomers 18..23 (age_spread=5, game-v3) so retirements are staggered; no real-world data behind these.
-    aging_start_age=34, age_spread=5, aging_curve="hypothesis_v1", generations="retire_replace_v1")
+    aging_start_age=34, age_spread=5, transfer_window_cycle="per_season_v1", aging_curve="hypothesis_v1", generations="retire_replace_v1")
 
 
 SAVE_VERSION = 3
@@ -251,7 +251,7 @@ class GameSession:
         others = obs.other_club_players(self.world)
         if type(offers) is not list or len(set(map(str, offers))) != len(offers) or not all(o in others for o in offers):
             raise InvalidInput(f"offers must be distinct players of other clubs: {others}")
-        if offers and self.world.day + 1 not in le.TRANSFER_WINDOW_DAYS:
+        if offers and not le.is_transfer_window_day(self.world.config, self.world.day + 1):
             raise InvalidInput("no transfer window follows this match day, so no offers can be made")
 
     def _training_hook(self, advice, scout):

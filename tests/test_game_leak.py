@@ -74,7 +74,7 @@ def play_season(session, collect):
 
 SEEDS = range(1, 21)
 TRANSFER_KINDS = ("offer_resolved", "transfer_response", "coach_scout_observation")
-SEASONS = 3
+SEASONS = 4  # transfer windows recur every season (game-v6), so bids are made in seasons 3 and 4 too
 
 
 class TestPlayerViewHasNoTruth(unittest.TestCase):
@@ -101,6 +101,17 @@ class TestPlayerViewHasNoTruth(unittest.TestCase):
                 if season < SEASONS - 1:
                     session.next_season()
         self.assertTrue(set(TRANSFER_KINDS) <= seen, seen)
+
+    def test_bids_complete_in_season_three_and_later(self):
+        late = 0
+        for seed in SEEDS:
+            session = GameSession(seed)
+            for season in range(SEASONS):
+                play_season(session, lambda payload: None)
+                if season < SEASONS - 1:
+                    session.next_season()
+            late += sum(1 for e in session.world.events if e["kind"] == "transfer_completed" and e["data"]["to_club"] == "club_a" and e["day"] > 2 * 42)
+        self.assertGreater(late, 0)
 
     def test_player_responses_carry_a_stated_reason_and_no_scores(self):
         for seed in SEEDS:
