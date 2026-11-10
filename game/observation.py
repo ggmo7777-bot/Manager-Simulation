@@ -4,6 +4,7 @@ Every field is picked by name from the coach's own mind, public records, or even
 witnessed. Nothing is copied wholesale from PlayerTruth / PlayerMind / personality.
 Labels follow the charter: 事実 / 観測 / 本人の理由 / 推定.
 """
+import random
 import re
 
 from soccer_sim import league_economy as le
@@ -25,6 +26,38 @@ def _observation_counts(world):
             pid = _observed_player(event)
             counts[pid] = counts.get(pid, 0) + 1
     return counts
+
+
+def advice_records(world):
+    """The coach's own record of advice answers per player: how often asked and refused, and the last wording the player gave."""
+    records = {}
+    for event in world.events:
+        if event["kind"] == "coach_advice_outcome" and event["data"]["coach_id"] == OWN_COACH:
+            row = records.setdefault(event["data"]["player_id"], {"asked": 0, "refused": 0, "last_stated_reason": None})
+            row["asked"] += 1
+            row["refused"] += event["data"]["response"] == "refused"
+            row["last_stated_reason"] = event["data"]["stated_reason"]
+    return records
+
+
+_SURNAMES = "佐藤 鈴木 高橋 田中 伊藤 渡辺 山本 中村 小林 加藤 吉田 山田 松本 井上 木村 林 斎藤 清水 山口 池田".split()
+_GIVEN_NAMES = "蒼 陽翔 湊 悠真 颯 大和 樹 律 蓮 朝陽 駿 隼人 拓海 翔太 凌 健太 瑛太 海斗 慎 遼".split()
+
+
+def display_names(seed, world):
+    """Game-side nicknames for every player id: a function of the seed and the id number only, unique within 400 ids, carrying no hidden value."""
+    surnames, givens = random.Random(seed).sample(_SURNAMES, len(_SURNAMES)), random.Random(~seed).sample(_GIVEN_NAMES, len(_GIVEN_NAMES))
+    width = len(surnames)
+    names = {}
+    for pid in world.players:
+        number = int(pid[1:]) - 1
+        names[pid] = surnames[number % width] + givens[(number // width + number) % width]
+    return names
+
+
+def notices_view(world, since_day):
+    """Sales of own players since a day: what happened and the wording the player gave (the cause stays in the reveal)."""
+    return [item for item in observed_events(world, 0) if item["kind"] == "player_sold" and item["day"] > since_day]
 
 
 def _public_match_records(world):
@@ -60,6 +93,7 @@ def squad_view(world):
             "appearances": records.get(pid, {}).get("appearances", 0),
             "goals": records.get(pid, {}).get("goals", 0),
             "receptiveness": None,
+            "advice_record": advice_records(world).get(pid, {"asked": 0, "refused": 0, "last_stated_reason": None}),
         }
         if pid in beliefs:
             mean, sd = le.belief_mean_sd(beliefs[pid])
@@ -182,6 +216,10 @@ def _event_item(event):
         response, stated = transfer_response(data)
         return {"label": FACT if stated is None else REASON, "kind": "transfer_response", "day": day,
                 "player_id": data["player_id"], "response": response, "stated_reason": stated}
+    if kind == "transfer_window_decision" and data["from_club"] == OWN_CLUB and data["chosen_to_club"] not in (None, OWN_CLUB):
+        # the research rule sells a player only when he asked to leave, so the stated reason is always his own request
+        return {"label": REASON, "kind": "player_sold", "day": day, "player_id": data["player_id"],
+                "to_club": data["chosen_to_club"], "stated_reason": "wants_move"}
     if kind == "season_retired" and data["club_id"] == OWN_CLUB:
         return {"label": REASON, "kind": kind, "day": day, "player_id": data["player_id"], "age": data["age"],
                 "reason": data["reason"]}
@@ -210,6 +248,22 @@ def _event_item(event):
 def observed_events(world, since_index):
     items = (_event_item(event) for event in world.events[since_index:])
     return [item for item in items if item is not None]
+
+
+def is_your_event(item, move, first_day):
+    """Whether an observed item is the direct consequence of the player's own input (the rest is the assistant coach and the market)."""
+    kind, pid = item["kind"], item.get("player_id")
+    if move["kind"] == "train":
+        advice, scout = move["advice"], move["scout"]
+        if kind in ("advice_given", "coach_advice_outcome"):
+            return bool(advice) and item["day"] == first_day and pid == advice["player_id"] \
+                and (kind == "coach_advice_outcome" or item["method"] == advice["method"])
+        return kind == "coach_scout_observation" and item["day"] == first_day and pid == scout
+    if move["kind"] == "lineup":
+        if kind in ("lineup_decision", "league_match_completed"):
+            return True
+        return kind in ("offer_resolved", "transfer_response", "transfer_completed") and pid in move["offers"]
+    return False
 
 
 def estimate_changes(before, after):
@@ -244,6 +298,7 @@ reason skill_before skill_estimate skill_mae squad squad_size standings starters
 share_code
 accepted market cash scout_cost reserve offer_fee roster_size roster_min roster_max window open_now targets scoutable
 recommended_offers
+your_move your_events auto_events advice scout offers names notices advice_record asked refused last_stated_reason
 """.split())
 _ID_KEY = re.compile(r"(p|c)\d+|club_[a-z]+")
 

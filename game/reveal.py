@@ -23,7 +23,8 @@ def season_reveal(world, season_start_day):
                 "true_terms": e["data"]["terms"]}
                for e in world.events if e["kind"] == "player_advice_response" and e["data"]["coach_id"] == OWN_COACH
                and e["day"] > season_start_day]
-    return {"players": players, "advice_reasons": reasons, "transfer_reasons": _transfer_reasons(world, season_start_day)}
+    return {"players": players, "advice_reasons": reasons, "transfer_reasons": _transfer_reasons(world, season_start_day),
+            "sale_reasons": _sale_reasons(world, season_start_day)}
 
 
 def _transfer_reasons(world, season_start_day):
@@ -41,3 +42,12 @@ def _transfer_reasons(world, season_start_day):
                                     "player_rank_in_from": decision["player_rank_in_from"], "acceptance_score": own["acceptance_score"],
                                     "chosen_to_club": decision["chosen_to_club"]}})
     return rows
+
+
+def _sale_reasons(world, season_start_day):
+    """For each own player sold this season: his stated reason beside the recorded request score and his rank in the squad."""
+    return [{"day": e["day"], "player_id": e["data"]["player_id"], "to_club": e["data"]["chosen_to_club"], "stated_reason": "wants_move",
+             "true_cause": {"request_score": e["data"]["request_score"], "player_rank_in_from": e["data"]["player_rank_in_from"],
+                            "release_surplus_score": e["data"]["release_surplus_score"]}}
+            for e in world.events if e["kind"] == "transfer_window_decision" and e["day"] > season_start_day
+            and e["data"]["from_club"] == OWN_CLUB and e["data"]["chosen_to_club"] not in (None, OWN_CLUB)]
