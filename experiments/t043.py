@@ -68,7 +68,7 @@ def executed_gains(kind, param, real, alt, level):
         return {m: value + level for m, value in real.items()}
     if kind == 'spread':
         return {m: value - level for m, value in alt.items()}
-    if kind == 'offset':
+    if kind == 'offset' and param:  # a zero offset is no shift (adding 0.0 would turn the recorded -0.0 into 0.0)
         return {m: value + param for m, value in real.items()}
     return dict(real)
 

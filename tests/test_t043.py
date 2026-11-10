@@ -40,7 +40,8 @@ class TestArmsAndShifts(unittest.TestCase):
         self.assertEqual({m: round(v, 9) for m, v in t043.executed_gains('level', None, real, alt, c).items()}, {'A': 0.045, 'B': 0.035})  # the real spread, the shifted mean
         self.assertEqual({m: round(v, 9) for m, v in t043.executed_gains('spread', None, real, alt, c).items()}, {'A': 0.045, 'B': 0.015})  # the alt spread around the real level
         self.assertEqual({m: round(v, 9) for m, v in t043.executed_gains('offset', -0.01, real, alt, c).items()}, {'A': 0.030, 'B': 0.020})
-        self.assertEqual(t043.executed_gains('swap', None, real, alt, c), alt)
+        negative_zero = t043.executed_gains('offset', 0.0, {'A': -0.0, 'B': 0.0}, alt, c)
+        self.assertEqual([str(v) for v in negative_zero.values()], ['-0.0', '0.0'])  # a zero offset changes not even the sign of a zero
         self.assertIsNot(t043.executed_gains('swap', None, real, alt, c), alt)  # a copy: the tracker's column is never handed out
 
     def test_the_level_constants_are_the_registered_ones_from_t042(self):
