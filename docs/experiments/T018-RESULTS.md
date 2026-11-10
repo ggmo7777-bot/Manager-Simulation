@@ -27,7 +27,16 @@ cache後の再実行は`artifacts/t018/rerun-after-cache/`。**Python 3.14.0で�
 
 初回(3.13.3)と再実行(3.14.0)で一致した項目: `frozen_t017_equal=14`、`cli_api_equal=14`、`baseline_chain_api_equal`、`parent_and_base_branches_unchanged`、監査取引2,993、admission_totals、負例、実行ファイル12件の拒否、`changed_package_files`。5種の変更×5操作もバイト一致。
 
-差が出た項目: Pythonバージョン、runtime sha256、`fingerprints.py`のhash、分析ファイル一覧(`experiments/custom_growth/*`の6件が追加)、`snapshot_sha256`。identityの`source_sha256`が`027a191b…`から`0f71cbee…`へ変わったのはcache追加(ソース変更)による。ただしidentityの入力にsource_sha256が含まれるため、3.14.0の影響とソース変更の影響は分離できていない。3.13での再実行は未実施。
+差が出た項目: Pythonバージョン、runtime sha256、`fingerprints.py`のhash、分析ファイル一覧(`experiments/custom_growth/*`の6件が追加)、`snapshot_sha256`。identityの`source_sha256`が`027a191b…`から`0f71cbee…`へ変わったのはcache追加(ソース変更)による。この分離は下記の3.13.3再実行で行った。
+
+### Python 3.13.3での再確認(逸脱の解消)
+
+2026-11-10、`uv python install 3.13.3`で基準版CPython 3.13.3を導入し、cache後と同一のソースで再実行した(`artifacts/t018/rerun-py313/`、全テスト`artifacts/t018/review/tests-all-py313.txt`)。高速ゲート50件、全unittest 211件(86.311秒)合格。比較は14/14(凍結T017、CLI/API)、監査2,993取引で初回・3.14.0再実行と同じ。
+
+- 3.13.3再実行の`snapshot_sha256`とidentityの`source_sha256`(`0f71cbee…`)は、3.14.0再実行と45/45のsnapshot.jsonでバイト一致。初回(3.13.3、cache前の`027a191b…`)とは0/45。
+- したがって初回との差の原因は`fingerprints.py`のcache追加(ソース変更)であり、Pythonの版ではない。3.14.0と3.13.3で同一ソースのsnapshotは同一。manifestはruntime欄の版が異なるため全件異なる(来歴のみ)。
+- 補足として途中でCPython 3.13.16でも同一ソースを実行し、snapshot45/45が一致した(記録は保管せず、この文のみ)。
+- 残る制約3(3.13.3未確認)は解消。ただし単一マシン(arm64 macOS)の確認。
 
 ## 版と保管
 
@@ -39,7 +48,7 @@ save17、scope `league-runtime-files-v1`。現在のruntime source hash(再実�
 
 1. ファイル単位で保守的。同居する旧writer、評価、直接使わない部分のみの変更でも再開を拒否する。
 2. 静的import解析はこのpackageの契約であり、汎用Python解析でも署名でも任意コードの安全性証明でもない。外部データ/モデル導入時は契約を再設計する。
-3. Python 3.14.0での再実行は上記の逸脱。3.13.3基準の完全な再確認は未実施。
+3. 3.14.0での再実行は逸脱だったが、3.13.3での再確認で解消済み(上記)。
 4. `experiments/custom_growth/*`が分析来歴に入った。実行指紋には影響しない。
 5. 実行中のソース変更は未対応。保存フォルダ全体の原子性は保証しない。
 6. 35日・seed100の比較であり、新しい頑健性・多seed・1000日の結論を出さない。生成分布の校正、世代交代、C、毎季市場、全再演readerの高速化は未実施。
