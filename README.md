@@ -2,13 +2,13 @@
 
 独立した選手・監督の経験と選択から、再現可能で理由を追跡できる世界の歴史を生むプロジェクト。最強の競技AIを主目的にしない。
 
-**T021でT020の拒否3摂動を再実行し、初期範囲の感度掃引（2026-11-10、範囲は不変）が19セルで完了。育成還元の効果に最も効くのは成長率の中心で、上限・忠誠を除く心理の幅は検出可能差以下。実データによる校正は未着手。**T019では育成還元の効果の縮小（fixed→sampled）がプロフィールと初期印象にほぼ二分され、p3/p9満足度は寄与しないと分解した。T018のリーグ実行指紋とCLI・分析来歴の分離を前提とする。 進行ルールはT015、保存形式はsave17、評価版は`t016-initial-cohort-v1`。4クラブ・4監督・12選手で、育成、選考、2対2、合意移籍、有限資金と育成還元を接続している。学習はA（技能状態）とB（認識・信頼）。C、加齢・引退・新人供給は未実装。
+**T022でリーグ保存の信頼manifest付き直接reader(`load_league_snapshot_trusted`、読込のみ約4〜6倍、認証は既定の全再演)を追加。T021でT020の拒否3摂動を再実行し、初期範囲の感度掃引（2026-11-10、範囲は不変）が19セルで完了。育成還元の効果に最も効くのは成長率の中心で、上限・忠誠を除く心理の幅は検出可能差以下。実データによる校正は未着手。**T019では育成還元の効果の縮小（fixed→sampled）がプロフィールと初期印象にほぼ二分され、p3/p9満足度は寄与しないと分解した。T018のリーグ実行指紋とCLI・分析来歴の分離を前提とする。 進行ルールはT015、保存形式はsave17、評価版は`t016-initial-cohort-v1`。4クラブ・4監督・12選手で、育成、選考、2対2、合意移籍、有限資金と育成還元を接続している。学習はA（技能状態）とB（認識・信頼）。C、加齢・引退・新人供給は未実装。
 
 制度比較は初期育成6名を移籍後も追跡する。移籍しなかった選手は対象ID・人数を添えた記述統計に分ける。旧固定4名の集計は`legacy_four_slot_*`へ改名した。初期プロフィールは`fixed`（既定）または`sampled`で、生成範囲は引き続き未校正の仮説。
 
-全230テスト合格（T021時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
+全234テスト合格（T022時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
 
-[現在の状態](docs/STATUS.md) · [T021結果](docs/experiments/T021-RESULTS.md) · [T020結果](docs/experiments/T020-RESULTS.md) · [T019結果](docs/experiments/T019-RESULTS.md) · [T018結果](docs/experiments/T018-RESULTS.md) · [T017結果](docs/experiments/T017-RESULTS.md) · [T016結果](docs/experiments/T016-RESULTS.md) · [T015の旧評価問題](docs/reviews/2026-11-08-T015-STATUS-REVIEW.md) · [外部14点の対応](docs/reviews/2026-11-08-EXTERNAL-REVIEW.md)
+[現在の状態](docs/STATUS.md) · [T022結果](docs/experiments/T022-RESULTS.md) · [T021結果](docs/experiments/T021-RESULTS.md) · [T020結果](docs/experiments/T020-RESULTS.md) · [T019結果](docs/experiments/T019-RESULTS.md) · [T018結果](docs/experiments/T018-RESULTS.md) · [T017結果](docs/experiments/T017-RESULTS.md) · [T016結果](docs/experiments/T016-RESULTS.md) · [T015の旧評価問題](docs/reviews/2026-11-08-T015-STATUS-REVIEW.md) · [外部14点の対応](docs/reviews/2026-11-08-EXTERNAL-REVIEW.md)
 
 ## 依頼された10項目
 
@@ -42,7 +42,7 @@ python3 -B -m soccer_sim branch --snapshot artifacts/local/t017-sampled14/snapsh
 
 出力はsnapshot.json、events.jsonl、summary.json、manifest.json。真値ログと研究介入は研究者向けで、Policyの入力ではない。`--days`は追加日数。日常CLIは同じ出力先を更新するため、凍結フォルダへ出力しない。branchは親の出力ディレクトリを拒否する。
 
-現行リーグsave17は全再演方式。記録付きの監督技能推定/選手信頼介入だけを復元できる。無記録の変更は拒否する。リーグの実行ファイル12件のhash(`league-runtime-files-v1`)が違う保存、およびsave16以前は対応する旧source_bundleで読む。指紋を手で書き換えて互換扱いにしない。
+現行リーグsave17の既定は全再演方式(T022で、保存時検証済みmanifestに束縛した高速な`load_league_snapshot_trusted`を追加)。記録付きの監督技能推定/選手信頼介入だけを復元できる。無記録の変更は拒否する。リーグの実行ファイル12件のhash(`league-runtime-files-v1`)が違う保存、およびsave16以前は対応する旧source_bundleで読む。指紋を手で書き換えて互換扱いにしない。
 
 7つのリーグ条件すべてで`_sampled_population`接尾辞を使用できる。接尾辞なしは従来のfixed条件。`resume`/`branch`はsnapshot内の集団設定を保持する。上の例は存在しない出力先で実行する。
 
@@ -60,7 +60,7 @@ T001〜T007で育成・認識・信頼、T008で最小2D競技、T009で出場�
 
 移籍窓は日28/56の2回だけで、1000日試験は世代交代や毎季の市場の検証ではない。初期プロフィールは固定fixtureまたは未校正の範囲生成であり、現時点の結果を豊かな世界史の完成とは扱わない。次の作業は、その回に依頼された最小タスクだけを実施する。
 
-旧T011/T011-R1には疲労真値漏洩と未実試行ガードが残っていた。旧拒否率をガード有効性の証拠にしない。直接readerは未実装。初期集団の範囲生成はT015で導入し、T016で評価を修正した。範囲の校正は未実施。
+旧T011/T011-R1には疲労真値漏洩と未実試行ガードが残っていた。旧拒否率をガード有効性の証拠にしない。直接reader(信頼manifest付き、読込のみ)はT022で追加、保存・forkは全再演のまま。初期集団の範囲生成はT015で導入し、T016で評価を修正した。範囲の校正は未実施。
 
 金額APIの例（無次元の技能・疲労・倍率は従来どおり）:
 

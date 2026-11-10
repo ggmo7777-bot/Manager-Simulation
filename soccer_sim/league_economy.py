@@ -3151,7 +3151,7 @@ def save_league_artifacts(world: LeagueWorldState, out_dir: str | Path) -> dict[
     return summary
 
 
-def load_league_snapshot(path: str | Path) -> LeagueWorldState:
+def _read_snapshot_json(path: str | Path) -> Any:
     def unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
         result: dict[str, Any] = {}
         for key, value in pairs:
@@ -3160,8 +3160,52 @@ def load_league_snapshot(path: str | Path) -> LeagueWorldState:
             result[key] = value
         return result
 
-    raw = json.loads(
+    return json.loads(
         Path(path).read_text(encoding="utf-8"), parse_float=parse_float,
         parse_constant=reject_nonfinite, object_pairs_hook=unique_object,
     )
-    return _replay_snapshot_payload(raw)
+
+
+def load_league_snapshot(path: str | Path) -> LeagueWorldState:
+    return _replay_snapshot_payload(_read_snapshot_json(path))
+
+
+def load_league_snapshot_trusted(path: str | Path) -> LeagueWorldState:
+    """T022: restore state directly, without replaying history.
+
+    Accepts only a snapshot whose digest equals the snapshot_sha256 that a full-replay save
+    wrote to the sibling manifest.json, under the current identity. This is an integrity
+    check, not a signature: a snapshot AND manifest forged together can hide a history that
+    violates the rules. Use load_league_snapshot when that matters.
+    """
+    raw = _read_snapshot_json(path)
+    if type(raw) is not dict:
+        raise ValueError("snapshot root must be a dict")
+    manifest = _read_snapshot_json(Path(path).with_name("manifest.json"))
+    if type(manifest) is not dict or manifest.get("snapshot_sha256") != digest(raw):
+        raise ValueError("snapshot does not match its manifest snapshot_sha256")
+    _assert_same(raw.get("identity"), league_identity(), "snapshot.identity")
+    _assert_same(manifest.get("identity"), league_identity(), "manifest.identity")
+    try:
+        if not LeagueEconomyConfig.has_save_fields(raw["config"]) or type(raw["events"]) is not list:
+            raise ValueError("config fields do not match save17 schema")
+        world = LeagueWorldState(
+            seed=raw["seed"], day=raw["day"], config=LeagueEconomyConfig(**raw["config"]),
+            club_rosters={k: list(v) for k, v in raw["club_rosters"].items()},
+            club_accounts={k: ClubAccountState.from_dict(v) for k, v in raw["club_accounts"].items()},
+            players={k: PlayerTruth.from_dict(v) for k, v in raw["players"].items()},
+            initial_players={k: PlayerTruth.from_dict(v) for k, v in raw["initial_players"].items()},
+            player_minds={k: PlayerMind.from_dict(v) for k, v in raw["player_minds"].items()},
+            coaches={k: CoachMind.from_dict(v) for k, v in raw["coaches"].items()},
+            ledger=WorldFinanceLedger.from_dict(raw["ledger"]),
+            public_last_starters={k: list(v) for k, v in raw["public_last_starters"].items()},
+            events=raw["events"],
+            interventions=tuple(_record_from_payload(r) for r in raw["interventions"]),
+        )
+        _validate_league_invariants(world)
+    except (KeyError, TypeError, AttributeError) as error:
+        raise ValueError(f"trusted restore failed: {error!r}") from error
+    # Re-serializing must reproduce the file exactly (types, extra keys, rounding). Events are the file's own list.
+    _assert_same({k: v for k, v in raw.items() if k != "events"},
+                 {k: v for k, v in _snapshot_payload_unchecked(world).items() if k != "events"})
+    return world

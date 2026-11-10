@@ -1,0 +1,267 @@
+{
+  "continuation": {
+    "interventions_after_third": 3,
+    "interventions_preserved": 2,
+    "multi_step_branch_equal": true,
+    "resume_to_35_equal": true
+  },
+  "elapsed_seconds": 113.78617175,
+  "equivalence": [
+    {
+      "condition": "closed_no_solidarity",
+      "days": 35,
+      "events": 1521,
+      "snapshot_sha256": "1389b307eadb47c6fce54369d03b83bc401ec0a92091d95aba0e8eb405877e3b"
+    },
+    {
+      "condition": "closed_no_solidarity_sampled_population",
+      "days": 35,
+      "events": 1569,
+      "snapshot_sha256": "ca4292b3036944a9930473fb3bd7f6eae162d1a21d37d950747515db79dcd8fb"
+    },
+    {
+      "condition": "closed_solidarity",
+      "days": 35,
+      "events": 1521,
+      "snapshot_sha256": "79fd0768f80bec91e5a3a2d72b2c43b0677b4fac891c16c2d47ae27c07283749"
+    },
+    {
+      "condition": "closed_solidarity_sampled_population",
+      "days": 35,
+      "events": 1569,
+      "snapshot_sha256": "b7b9eb7a8d9792f7a2ee55c45c2746441eba4b4f3351287d52b46cbfc3190623"
+    },
+    {
+      "condition": "open_no_solidarity",
+      "days": 35,
+      "events": 1612,
+      "snapshot_sha256": "3ecab0533d9d312b03af611478cad2b63fb60140a44ecbab0c0b18f12c2fb8b9"
+    },
+    {
+      "condition": "open_no_solidarity_sampled_population",
+      "days": 35,
+      "events": 1643,
+      "snapshot_sha256": "a7600f9e6289af41ebda0809e44c4a24a8adc4f8cd890101efbbfd5491f30789"
+    },
+    {
+      "condition": "open_solidarity",
+      "days": 35,
+      "events": 1621,
+      "snapshot_sha256": "fea166f2f0c5af93782fa147f0361fe21c3e276a7af7b2462b3cafc43f5fb26d"
+    },
+    {
+      "condition": "open_solidarity_sampled_population",
+      "days": 35,
+      "events": 1648,
+      "snapshot_sha256": "a6440f2cfd4ee7de829ade22b649c2642c4e0f48f8b6a4dc6d004b0321eeb889"
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "days": 35,
+      "events": 1582,
+      "snapshot_sha256": "fbde72738e9d675dc901a22673e555ae83863970ec31d36190add0ba00f9cfa9"
+    },
+    {
+      "condition": "fixed_budget_no_inflow_sampled_population",
+      "days": 35,
+      "events": 1604,
+      "snapshot_sha256": "eac7940662ea3c6e36235f44112a8931adac519c4b7803b94ea176e1decc4c0f"
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "days": 35,
+      "events": 1646,
+      "snapshot_sha256": "e5206162e83ead27ba4f34fb670a0240885be70cd2f6ecd30218b0695b33c730"
+    },
+    {
+      "condition": "hoarder_buyer_policy_sampled_population",
+      "days": 35,
+      "events": 1672,
+      "snapshot_sha256": "81ffbab40026995124e47fb5f4d3dcb80dd68cff999d85e3a127028da575614d"
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "days": 35,
+      "events": 1625,
+      "snapshot_sha256": "e9a680c7152b44e26368f93fbec842f82f3b0b337de7115257213a95318a8858"
+    },
+    {
+      "condition": "exploit_churn_guard_sampled_population",
+      "days": 35,
+      "events": 1650,
+      "snapshot_sha256": "5643b0f045e639279c9a9d6db34136460cc58cd682a3f9a36488149107719a89"
+    }
+  ],
+  "equivalence_worlds": 14,
+  "forged_manifest_characterization": {
+    "cash_change": {
+      "replay": true,
+      "trusted": true
+    },
+    "day_change": {
+      "replay": true,
+      "trusted": false
+    },
+    "drop_last_event": {
+      "replay": true,
+      "trusted": false
+    },
+    "extra_key": {
+      "replay": true,
+      "trusted": true
+    },
+    "type_change_float_to_int": {
+      "replay": true,
+      "trusted": true
+    },
+    "value_change": {
+      "replay": true,
+      "trusted": false
+    }
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "01711d1da4ceee3554e5744ab055ceb87fd92220f11f91a1f16f011c9072c229",
+    "world_kind": "league_economy_loop"
+  },
+  "rejections": {
+    "cash_change": true,
+    "day_change": true,
+    "drop_last_event": true,
+    "duplicate_json_key": true,
+    "extra_key": true,
+    "manifest_hash_mismatch": true,
+    "manifest_identity_mismatch": true,
+    "manifest_missing": true,
+    "old_save16_identity": true,
+    "type_change_float_to_int": true,
+    "value_change": true
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seed": 100,
+  "speed": [
+    {
+      "condition": "open_solidarity",
+      "days": 35,
+      "replay_median": 0.196,
+      "replay_s": [
+        0.196,
+        0.196,
+        0.195
+      ],
+      "speedup": 4.32,
+      "trusted_median": 0.045,
+      "trusted_s": [
+        0.046,
+        0.045,
+        0.045
+      ]
+    },
+    {
+      "condition": "open_solidarity",
+      "days": 84,
+      "replay_median": 0.464,
+      "replay_s": [
+        0.464,
+        0.461,
+        0.482
+      ],
+      "speedup": 4.38,
+      "trusted_median": 0.106,
+      "trusted_s": [
+        0.115,
+        0.106,
+        0.103
+      ]
+    },
+    {
+      "condition": "open_solidarity",
+      "days": 1000,
+      "replay_median": 7.528,
+      "replay_s": [
+        7.826,
+        6.579,
+        7.528
+      ],
+      "speedup": 5.8,
+      "trusted_median": 1.297,
+      "trusted_s": [
+        1.246,
+        1.297,
+        2.039
+      ]
+    },
+    {
+      "condition": "open_solidarity_sampled_population",
+      "days": 35,
+      "replay_median": 0.212,
+      "replay_s": [
+        0.212,
+        0.206,
+        0.213
+      ],
+      "speedup": 4.26,
+      "trusted_median": 0.05,
+      "trusted_s": [
+        0.05,
+        0.061,
+        0.049
+      ]
+    },
+    {
+      "condition": "open_solidarity_sampled_population",
+      "days": 84,
+      "replay_median": 0.491,
+      "replay_s": [
+        0.488,
+        0.493,
+        0.491
+      ],
+      "speedup": 3.62,
+      "trusted_median": 0.136,
+      "trusted_s": [
+        0.116,
+        0.136,
+        0.136
+      ]
+    },
+    {
+      "condition": "open_solidarity_sampled_population",
+      "days": 1000,
+      "replay_median": 6.423,
+      "replay_s": [
+        6.423,
+        7.036,
+        6.383
+      ],
+      "speedup": 4.14,
+      "trusted_median": 1.553,
+      "trusted_s": [
+        2.056,
+        1.541,
+        1.553
+      ]
+    }
+  ],
+  "speed_target_met": true,
+  "targets": {
+    "1000": 3.0,
+    "84": 2.0
+  },
+  "task": "T022"
+}
