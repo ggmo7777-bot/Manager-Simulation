@@ -251,6 +251,7 @@ class LeagueEconomyConfig:
     impression_mode: str = "follow"
     satisfaction_mode: str = "follow"
     range_perturbation: str = "none"
+    season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -312,7 +313,7 @@ class LeagueEconomyConfig:
                 if type(value) is not str or not value:
                     raise ValueError(f"{spec.name} must be a nonempty string")
             elif type(spec.default) is int:
-                minimum = 0 if spec.name.endswith("_units") or spec.name == "max_dividend_triggers" else 1
+                minimum = 0 if spec.name.endswith("_units") or spec.name in ("max_dividend_triggers", "season_length_days") else 1
                 if type(value) is not int or value < minimum:
                     raise ValueError(f"{spec.name} must be an integer >= {minimum}")
             else:
@@ -351,6 +352,8 @@ class LeagueEconomyConfig:
         data.update({name: getattr(self, name) for name in FACTOR_FIELDS if getattr(self, name) != "follow"})
         if self.range_perturbation != "none":
             data["range_perturbation"] = self.range_perturbation
+        if self.season_length_days:
+            data["season_length_days"] = self.season_length_days
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -423,7 +426,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -2718,6 +2721,33 @@ def advance_league_days(world: LeagueWorldState, days: int) -> None:
             _step_matchday(world, world.day)
         else:
             _step_training_day(world, world.day)
+
+
+def season_progress(world: LeagueWorldState) -> dict[str, int]:
+    """T023: season counter derived from the day (no stored state). Season ends on days that are multiples of the length."""
+    length = world.config.season_length_days
+    if length <= 0:
+        raise ValueError("season_length_days is not set")
+    day = world.day
+    return {"season": (day - 1) // length + 1 if day else 1, "day_in_season": (day - 1) % length + 1 if day else 0,
+            "seasons_completed": day // length}
+
+
+def advance_league_seasons(world: LeagueWorldState, seasons: int, on_season_end: Any = None) -> None:
+    """T023: advance to `seasons` further season ends, calling on_season_end(world, seasons_completed) at each.
+
+    The hook is the place a later task will add aging/retirement/intake as recorded events; it must not mutate the world otherwise.
+    """
+    if type(seasons) is not int or seasons < 0:
+        raise ValueError("seasons must be a nonnegative integer")
+    if on_season_end is not None and not callable(on_season_end):
+        raise ValueError("on_season_end must be callable")
+    season_progress(world)  # raises when no season length is set
+    length = world.config.season_length_days
+    for _ in range(seasons):
+        advance_league_days(world, length - world.day % length)
+        if on_season_end is not None:
+            on_season_end(world, season_progress(world)["seasons_completed"])
 
 
 def run_league_world(

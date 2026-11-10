@@ -1,0 +1,20 @@
+default digests {'worlds': 14, 'equal_to_pre_implementation_digest': True}
+default vs T018 {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+history identical closed_no_solidarity
+history identical closed_no_solidarity_sampled_population
+history identical closed_solidarity
+history identical closed_solidarity_sampled_population
+history identical open_no_solidarity
+history identical open_no_solidarity_sampled_population
+history identical open_solidarity
+history identical open_solidarity_sampled_population
+history identical fixed_budget_no_inflow
+history identical fixed_budget_no_inflow_sampled_population
+history identical hoarder_buyer_policy
+history identical hoarder_buyer_policy_sampled_population
+history identical exploit_churn_guard
+history identical exploit_churn_guard_sampled_population
+hooks {'from_0_three': [(42, 1), (84, 2), (126, 3)], 'from_10_two': [(42, 1), (84, 2)], 'from_boundary_one': [(84, 2)], 'zero': []}
+persistence {'replay_reader_equal': True, 'trusted_reader_equal': True, 'progress': {'season': 3, 'day_in_season': 42, 'seasons_completed': 3}}
+invalid {'length_-1': True, 'length_True': True, 'length_1.5': True, "length_'42'": True, 'length_None': True, 'progress_without_length': True, 'advance_without_length': True, 'seasons_negative': True, 'seasons_bool': True, 'seasons_float': True, 'hook_not_callable': True}
+{"cells": 42, "elapsed_seconds": 594.9354587079997}

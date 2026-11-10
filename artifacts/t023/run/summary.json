@@ -1,0 +1,144 @@
+{
+  "days": 126,
+  "default_unchanged": {
+    "equal_to_pre_implementation_digest": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 594.9354587079997,
+  "events_per_cell": {
+    "closed_no_solidarity@21": 5706,
+    "closed_no_solidarity@42": 5706,
+    "closed_no_solidarity@84": 5706,
+    "closed_no_solidarity_sampled_population@21": 5813,
+    "closed_no_solidarity_sampled_population@42": 5813,
+    "closed_no_solidarity_sampled_population@84": 5813,
+    "closed_solidarity@21": 5706,
+    "closed_solidarity@42": 5706,
+    "closed_solidarity@84": 5706,
+    "closed_solidarity_sampled_population@21": 5813,
+    "closed_solidarity_sampled_population@42": 5813,
+    "closed_solidarity_sampled_population@84": 5813,
+    "exploit_churn_guard@21": 6055,
+    "exploit_churn_guard@42": 6055,
+    "exploit_churn_guard@84": 6055,
+    "exploit_churn_guard_sampled_population@21": 6117,
+    "exploit_churn_guard_sampled_population@42": 6117,
+    "exploit_churn_guard_sampled_population@84": 6117,
+    "fixed_budget_no_inflow@21": 5689,
+    "fixed_budget_no_inflow@42": 5689,
+    "fixed_budget_no_inflow@84": 5689,
+    "fixed_budget_no_inflow_sampled_population@21": 5746,
+    "fixed_budget_no_inflow_sampled_population@42": 5746,
+    "fixed_budget_no_inflow_sampled_population@84": 5746,
+    "hoarder_buyer_policy@21": 6155,
+    "hoarder_buyer_policy@42": 6155,
+    "hoarder_buyer_policy@84": 6155,
+    "hoarder_buyer_policy_sampled_population@21": 6191,
+    "hoarder_buyer_policy_sampled_population@42": 6191,
+    "hoarder_buyer_policy_sampled_population@84": 6191,
+    "open_no_solidarity@21": 5862,
+    "open_no_solidarity@42": 5862,
+    "open_no_solidarity@84": 5862,
+    "open_no_solidarity_sampled_population@21": 5983,
+    "open_no_solidarity_sampled_population@42": 5983,
+    "open_no_solidarity_sampled_population@84": 5983,
+    "open_solidarity@21": 6027,
+    "open_solidarity@42": 6027,
+    "open_solidarity@84": 6027,
+    "open_solidarity_sampled_population@21": 6091,
+    "open_solidarity_sampled_population@42": 6091,
+    "open_solidarity_sampled_population@84": 6091
+  },
+  "history_identical_cells": 42,
+  "hooks": {
+    "from_0_three": [
+      [
+        42,
+        1
+      ],
+      [
+        84,
+        2
+      ],
+      [
+        126,
+        3
+      ]
+    ],
+    "from_10_two": [
+      [
+        42,
+        1
+      ],
+      [
+        84,
+        2
+      ]
+    ],
+    "from_boundary_one": [
+      [
+        84,
+        2
+      ]
+    ],
+    "zero": []
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "b6eb7dac2186830bb20b7696dfc53d2d95e7cc7a2014675b69ae55c90606e6f9",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "advance_without_length": true,
+    "hook_not_callable": true,
+    "length_'42'": true,
+    "length_-1": true,
+    "length_1.5": true,
+    "length_None": true,
+    "length_True": true,
+    "progress_without_length": true,
+    "seasons_bool": true,
+    "seasons_float": true,
+    "seasons_negative": true
+  },
+  "lengths": [
+    21,
+    42,
+    84
+  ],
+  "persistence": {
+    "progress": {
+      "day_in_season": 42,
+      "season": 3,
+      "seasons_completed": 3
+    },
+    "replay_reader_equal": true,
+    "trusted_reader_equal": true
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seed": 100,
+  "task": "T023"
+}
