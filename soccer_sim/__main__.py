@@ -24,6 +24,12 @@ def main():
             name + league_economy.POPULATION_SUFFIX
         )
         for name in league_economy.T011_ALL_CONDITIONS
+    } | {
+        # T019: the six mixed cells; 000 and 111 are the existing fixed and sampled conditions.
+        f"league_{name}{league_economy.FACTORS_SUFFIX}{bits}": league_economy.config_for_condition(
+            f"{name}{league_economy.FACTORS_SUFFIX}{bits}")
+        for name in league_economy.T011_ALL_CONDITIONS
+        for bits in ("001", "010", "011", "100", "101", "110")
     }
     parser = argparse.ArgumentParser(prog="python3 -m soccer_sim")
     commands = parser.add_subparsers(dest="command", required=True)

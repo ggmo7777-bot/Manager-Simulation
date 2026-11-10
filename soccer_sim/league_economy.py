@@ -105,6 +105,10 @@ TALENT_PLAYER_IDS = ("p3", "p9")
 # mode they are only two ordinary player slots; summaries keep the key names for comparison.
 POPULATION_MODES = ("fixed", "sampled")
 POPULATION_SUFFIX = "_sampled_population"
+# T019: "follow" uses population_mode; "fixed"/"sampled" overrides one factor of the initial population.
+FACTOR_FIELDS = ("profile_mode", "impression_mode", "satisfaction_mode")
+FACTOR_MODES = ("follow", "fixed", "sampled")
+FACTORS_SUFFIX = "_factors_"
 
 MIN_CLUB_ROSTER = 2
 MAX_CLUB_ROSTER = 4
@@ -175,6 +179,9 @@ class LeagueEconomyConfig:
     buyer_strategy: str = "standard"
     adversarial_mode: str = "none"
     population_mode: str = "fixed"
+    profile_mode: str = "follow"
+    impression_mode: str = "follow"
+    satisfaction_mode: str = "follow"
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -261,11 +268,20 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid adversarial_mode: {self.adversarial_mode}")
         if self.population_mode not in POPULATION_MODES:
             raise ValueError(f"invalid population_mode: {self.population_mode}")
+        for name in FACTOR_FIELDS:
+            if getattr(self, name) not in FACTOR_MODES:
+                raise ValueError(f"invalid {name}: {getattr(self, name)}")
         if self.match_interval_days <= 0 or self.match_ticks <= 0 or self.coach_daily_slots <= 0:
             raise ValueError("intervals, ticks, and slots must be positive")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
+        data = self._base_dict()
+        # Factor keys appear only when set, so default saves stay byte-identical to save17 before T019.
+        data.update({name: getattr(self, name) for name in FACTOR_FIELDS if getattr(self, name) != "follow"})
+        return data
+
+    def _base_dict(self) -> dict[str, Any]:
         return {
             "condition": self.condition,
             "market_mode": self.market_mode,
@@ -329,13 +345,25 @@ class LeagueEconomyConfig:
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> LeagueEconomyConfig:
-        if type(data) is not dict or set(data) != {spec.name for spec in fields(cls)}:
+        if not cls.has_save_fields(data):
             raise ValueError("config fields do not match save17 schema")
         return cls(**data)
+
+    @classmethod
+    def has_save_fields(cls, data: Any) -> bool:
+        base = {spec.name for spec in fields(cls)} - set(FACTOR_FIELDS)
+        return type(data) is dict and base <= set(data) <= base | set(FACTOR_FIELDS)
 
 
 def config_for_condition(condition: str) -> LeagueEconomyConfig:
     c = condition.removeprefix("league_")
+    if FACTORS_SUFFIX in c:
+        # Same institution as the base condition; each factor of the initial population is set explicitly.
+        stem, _, bits = c.rpartition(FACTORS_SUFFIX)
+        if stem not in T011_ALL_CONDITIONS or len(bits) != 3 or set(bits) - {"0", "1"}:
+            raise ValueError(f"Unknown T011 condition: {condition}")
+        return replace(config_for_condition(stem), condition=c, **{
+            name: ("fixed", "sampled")[int(bit)] for name, bit in zip(FACTOR_FIELDS, bits)})
     if c.endswith(POPULATION_SUFFIX):
         # Same institution as the base condition; only the initial population differs.
         base = config_for_condition(c.removesuffix(POPULATION_SUFFIX))
@@ -792,6 +820,11 @@ def _sample_population(seed: int) -> tuple[dict[str, dict[str, Any]], dict[tuple
     player's visible level; they are not copied from truth and not scripted by player id.
     These ranges are hypotheses, not calibrated to real football.
     """
+    specs = _sample_profiles(seed)
+    return specs, _sample_impressions(seed, specs)
+
+
+def _sample_profiles(seed: int) -> dict[str, dict[str, Any]]:
     ranges = {
         "academy": {"trait": (0.42, 0.52), "rate": (0.104, 0.126), "cap": (0.90, 0.95)},
         "buyer": {"trait": (0.34, 0.64), "rate": (0.020, 0.046), "cap": (0.64, 0.88)},
@@ -817,6 +850,11 @@ def _sample_population(seed: int) -> tuple[dict[str, dict[str, Any]], dict[tuple
                 "autonomy": draw("autonomy", 0.32, 0.38),
                 "self_est": round6(min(0.95, max(0.05, level + draw("self_bias", -0.03, 0.03)))),
             }
+    return specs
+
+
+def _sample_impressions(seed: int, specs: dict[str, dict[str, Any]]) -> dict[tuple[str, str], tuple[float, float]]:
+    """Each coach's noisy first reading of the level of the given profiles (T019: any profile set)."""
     impressions: dict[tuple[str, str], tuple[float, float]] = {}
     for coach_id in COACH_IDS:
         for pid, spec in specs.items():
@@ -826,7 +864,7 @@ def _sample_population(seed: int) -> tuple[dict[str, dict[str, Any]], dict[tuple
             match = level + _population_draw(seed, "coach_match", token, -0.06, 0.06)
             impressions[coach_id, pid] = (round6(min(0.95, max(0.05, skill))),
                                           round6(min(0.95, max(0.05, match))))
-    return specs, impressions
+    return impressions
 
 
 def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldState:
@@ -984,9 +1022,11 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         },
     }
 
-    sampled_impressions = None
-    if config.population_mode == "sampled":
-        player_specs, sampled_impressions = _sample_population(seed)
+    # T019: each factor follows population_mode unless its own field says otherwise.
+    f1, f2, f3 = (config.population_mode if getattr(config, name) == "follow" else getattr(config, name) for name in FACTOR_FIELDS)
+    if f1 == "sampled":
+        player_specs = _sample_profiles(seed)
+    sampled_impressions = _sample_impressions(seed, player_specs) if f2 == "sampled" else None
 
     players: dict[str, PlayerTruth] = {}
     initial_players: dict[str, PlayerTruth] = {}
@@ -1019,7 +1059,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
             loyalty_bias=float(spec["loyalty"]),
             rest_preference=0.012,
             preferred_method=str(spec["pref"]),
-            playing_time_satisfaction=0.50 if (sampled_impressions is not None or pid not in TALENT_PLAYER_IDS) else 0.42,
+            playing_time_satisfaction=0.50 if (f3 == "sampled" or pid not in TALENT_PLAYER_IDS) else 0.42,
             perceived_fatigue=0.10,
             style=MatchStyle(
                 directness=0.55 if spec["pref"] == "B" else 0.48,
@@ -2855,7 +2895,7 @@ def _replay_snapshot_payload(raw: dict[str, Any]) -> LeagueWorldState:
     seed, day, config_data = raw.get("seed"), raw.get("day"), raw.get("config")
     if type(seed) is not int or type(day) is not int or day < 0:
         raise ValueError("snapshot seed/day must be integers; day must be nonnegative")
-    if type(config_data) is not dict or set(config_data) != {f.name for f in fields(LeagueEconomyConfig)}:
+    if not LeagueEconomyConfig.has_save_fields(config_data):
         raise ValueError("config fields do not match save17 schema")
     config = LeagueEconomyConfig(**config_data)
     records = raw.get("interventions")
