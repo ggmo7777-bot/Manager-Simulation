@@ -137,6 +137,18 @@ RANGE_ALL_NAMES = RANGE_NAMES + tuple(RANGE_EXTENSIONS)
 RANGE_BOUNDED = ("trait", "cap", "loyalty", "ambition", "autonomy")
 
 
+AGING_CURVES = ("none", "hypothesis_v1")
+
+
+def _aging_delta(age: int) -> float:
+    """T026 hypothesis_v1: per-season additive trait change on reaching `age`. Uncalibrated (no real-world data source chosen)."""
+    return 0.02 if age <= 24 else 0.0 if age <= 29 else round6(-0.01 * (age - 29))
+
+
+def _aged_traits(values: list[float], delta: float, cap: float) -> list[float]:
+    return [round6(clamp(v + delta, 0.15, cap)) for v in values]
+
+
 def sampled_ranges(name: str) -> dict[tuple[str, str], tuple[float, float]]:
     """Ranges used to draw the sampled population; "none"/"null" return the defaults unchanged."""
     if name not in RANGE_ALL_NAMES:
@@ -253,6 +265,7 @@ class LeagueEconomyConfig:
     range_perturbation: str = "none"
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
+    aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -347,6 +360,10 @@ class LeagueEconomyConfig:
             raise ValueError("intervals, ticks, and slots must be positive")
         if self.aging_start_age and not self.season_length_days:
             raise ValueError("aging_start_age requires season_length_days")
+        if self.aging_curve not in AGING_CURVES:
+            raise ValueError(f"invalid aging_curve: {self.aging_curve}")
+        if self.aging_curve != "none" and not self.aging_start_age:
+            raise ValueError("aging_curve requires aging_start_age")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -359,6 +376,8 @@ class LeagueEconomyConfig:
             data["season_length_days"] = self.season_length_days
         if self.aging_start_age:
             data["aging_start_age"] = self.aging_start_age
+        if self.aging_curve != "none":
+            data["aging_curve"] = self.aging_curve
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -431,7 +450,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -2737,8 +2756,20 @@ def _age_players(world: LeagueWorldState, season: int) -> None:
     """T025: season-end aging as a recorded event. Only the age counter changes (no skill, RNG, transfer or wage effect)."""
     for pid in world.player_ages:
         world.player_ages[pid] += 1
-    _append_event(world, day=world.day, kind="season_aged", actor="league",
-                  data={"season": season, "ages": dict(sorted(world.player_ages.items()))}, cause_refs=[])
+    aged_ref = _append_event(world, day=world.day, kind="season_aged", actor="league",
+                             data={"season": season, "ages": dict(sorted(world.player_ages.items()))}, cause_refs=[])
+    if world.config.aging_curve == "none":
+        return
+    # T026: the only place true skill changes with age, once per season end, recorded with before/after.
+    delta, rows = _aging_delta(world.player_ages[min(world.player_ages)]), {}
+    for pid in sorted(world.player_ages):
+        p = world.players[pid]
+        before = [p.traits.pace, p.traits.passing, p.traits.shooting]
+        after = _aged_traits(before, delta, p.cap)
+        p.traits = MatchTraits(*after)
+        rows[pid] = {"before": before, "after": after}
+    _append_event(world, day=world.day, kind="season_skill_aged", actor="league",
+                  data={"season": season, "delta": delta, "traits": rows}, cause_refs=[aged_ref])
 
 
 def season_progress(world: LeagueWorldState) -> dict[str, int]:
@@ -2843,6 +2874,24 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
                 raise ValueError(f"season_aged event {n} does not match the aging rule")
         if any(type(a) is not int or a != start + len(aged) for a in ages.values()):
             raise ValueError("player_ages do not equal start age plus season_aged count")
+    # T026: with a curve, every season_aged is followed at once by exactly one season_skill_aged that obeys the curve.
+    skill = [(i, ev) for i, ev in enumerate(world.events) if ev.get("kind") == "season_skill_aged"]
+    if world.config.aging_curve == "none":
+        if skill:
+            raise ValueError("season_skill_aged present but aging_curve is none")
+    else:
+        positions = [i for i, ev in enumerate(world.events) if ev.get("kind") == "season_aged"]
+        if [i for i, _ in skill] != [i + 1 for i in positions]:
+            raise ValueError("season_skill_aged must directly follow each season_aged")
+        for n, (_, ev) in enumerate(skill, start=1):
+            delta = _aging_delta(start + n)
+            if ev["actor"] != "league" or ev["day"] != n * length or ev["cause_refs"] != [world.events[positions[n - 1]]["id"]] \
+                    or set(ev["data"]) != {"season", "delta", "traits"} or ev["data"]["season"] != n or ev["data"]["delta"] != delta \
+                    or set(ev["data"]["traits"]) != set(world.players):
+                raise ValueError(f"season_skill_aged event {n} does not match the aging curve")
+            for pid, row in ev["data"]["traits"].items():
+                if set(row) != {"before", "after"} or row["after"] != _aged_traits(row["before"], delta, world.players[pid].cap):
+                    raise ValueError(f"season_skill_aged event {n} traits do not match the aging curve")
 
     # 1-pass event causal chain & transfer invariant check
     seen_event_ids: set[str] = {"init:0"}

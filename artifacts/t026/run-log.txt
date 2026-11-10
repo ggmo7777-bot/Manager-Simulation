@@ -1,0 +1,19 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'aging_on_curve_none_matches_t025': 14} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+hand {'S29_L42': [-0.01, -0.02, -0.03], 'S18_L21': [0.02, 0.02, 0.02, 0.02, 0.02, 0.02]} isolation {'events_added': 2, 'only_traits_changed': True} readers ['__post_init__', '_age_players', '_snapshot_payload_unchecked', '_validate_league_invariants', 'to_dict'] stepped_eq_oneshot True
+branch {'interventions': 1} tamper {'event_deleted/load_league_snapshot': True, 'event_deleted/load_league_snapshot_trusted': True, 'delta_changed/load_league_snapshot': True, 'delta_changed/load_league_snapshot_trusted': True, 'after_changed/load_league_snapshot': True, 'after_changed/load_league_snapshot_trusted': True, 'snapshot_player_traits_changed/load_league_snapshot': True, 'snapshot_player_traits_changed/load_league_snapshot_trusted': True}
+cells done closed_no_solidarity
+cells done closed_no_solidarity_sampled_population
+cells done closed_solidarity
+cells done closed_solidarity_sampled_population
+cells done open_no_solidarity
+cells done open_no_solidarity_sampled_population
+cells done open_solidarity
+cells done open_solidarity_sampled_population
+cells done fixed_budget_no_inflow
+cells done fixed_budget_no_inflow_sampled_population
+cells done hoarder_buyer_policy
+cells done hoarder_buyer_policy_sampled_population
+cells done exploit_churn_guard
+cells done exploit_churn_guard_sampled_population
+{"cells": 84, "summary": {"S18": {"cells": 42, "gap_positive": 42, "gap_negative": 0, "mean_gap": 0.04795615277777775, "clamped_share": 0.05734126984126984, "mean_gap_over_nominal": 0.7515857969576712, "mean_transfer_difference": 0.0}, "S29": {"cells": 42, "gap_positive": 0, "gap_negative": 42, "mean_gap": -0.07930086507936511, "clamped_share": 0.0, "mean_gap_over_nominal": 0.8424665391156475, "mean_transfer_difference": 0.0}}, "predictions": {"P1": true, "P2": true, "P3": true}, "elapsed_seconds": 386.78634349999993}
+done
