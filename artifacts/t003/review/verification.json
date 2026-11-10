@@ -1,0 +1,21 @@
+{
+  "cross_reference_mismatch_metric_excluded": true,
+  "date_jst": "2026-11-05",
+  "legacy_semantic_comparisons": 240,
+  "main_comparison_runs": 240,
+  "no_noise_probe": "no-noise.json",
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32
+  },
+  "representative_hash": "20224992031f081132323b7e5284a3cebb50ed613d64666e45787a25e53b801d",
+  "representative_resume_byte_equal": true,
+  "tests_passed": 35,
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t003-training-v3",
+    "save": 3,
+    "source_sha256": "af93fc01821514e669d7ba352909e7ffd67e5a1e0098f95036a3db41a2cdc272"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "task": "T016",
+  "implementation_date": "2026-11-08",
+  "final_verification_date": "2026-11-09",
+  "status": "evaluation correction validated and archived; population ranges remain uncalibrated",
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 16,
+    "rules": "t015-sampled-population-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "source_sha256": "b64227f57002046605fe1ac33dd59c63d81ad6a851f3bc7f53f202ba7002e7b4"
+  },
+  "evaluation_version": "t016-initial-cohort-v1",
+  "runtime": {
+    "python": "3.13.3",
+    "implementation": "cpython",
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "source_bundle_file_count": 136,
+  "old_reference": "artifacts/t015/reference_before_t016/source_bundle",
+  "commands": [
+    "python3 -B -m unittest discover -s tests -v",
+    "python3 -B tools/check.py --suite fast",
+    "python3 -B experiments/t016.py --out artifacts/t016/comparison",
+    "python3 -B tools/artifact_inventory.py verify --inventory artifacts/t016/preflight/historical-inventory.json"
+  ],
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t016.py": "6deb7fb40add3639fe2964c318971fc3ef3f211327deaa5711949b1215a8b9df"
+  },
+  "results": {
+    "all_tests": 190,
+    "fast_tests": 48,
+    "full_state_equal_worlds": 180,
+    "old_metrics_reproduced_worlds": 180,
+    "transactions_independently_audited": 107376,
+    "representative_resume_conditions": 4,
+    "sampled_branch_resume": true,
+    "historical_files_unchanged": 1702
+  },
+  "limitations": [
+    "exploratory reanalysis of the same 30 world seeds",
+    "uncalibrated initial ranges",
+    "never-transferred groups are descriptive, not a paired causal estimand",
+    "sampled run CLI is not connected",
+    "no new 1000-day benchmark",
+    "state replay cost and source-hash scope unchanged"
+  ],
+  "locations": {
+    "comparison": "comparison/summary.json",
+    "per_world": "comparison/runs.json",
+    "tests": "review/tests-all.txt",
+    "cohort_contract": "docs/tasks/T016.md",
+    "result_report": "docs/experiments/T016-RESULTS.md"
+  }
+}

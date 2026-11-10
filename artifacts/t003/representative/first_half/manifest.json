@@ -1,0 +1,66 @@
+{
+  "config": {
+    "beliefs": {
+      "coach_skill": true,
+      "player_gain": true,
+      "recency": true,
+      "self_skill": true
+    },
+    "coach_alpha": 0.48,
+    "coach_noise": 0.065,
+    "duration": 1.0,
+    "fatigue_noise": 0.025,
+    "focus": 1.0,
+    "gain_alpha": 0.5,
+    "homogeneous_rates": false,
+    "policy": {
+      "advice_weight": 0.055,
+      "coach_freshness_days": 6,
+      "coach_method_fit": 0.05,
+      "coach_need_weight": 0.12,
+      "coach_observation_need": 0.04,
+      "coach_observation_weight": 0.15,
+      "coach_rest_value": 0.035,
+      "rest_fatigue_weight": 0.14,
+      "training_fatigue_weight": 0.045
+    },
+    "rest_recovery": 0.42,
+    "self_alpha": 0.45,
+    "self_noise": 0.025,
+    "sleep_recovery": 0.13,
+    "training_fatigue": 0.25,
+    "trust": {
+      "enabled": true,
+      "scale": 0.05,
+      "step": 0.05
+    }
+  },
+  "daily_slots": {
+    "coach": 2,
+    "player": 1
+  },
+  "day": 42,
+  "rng": {
+    "key_fields": [
+      "channel",
+      "day",
+      "actor_id",
+      "draw_index"
+    ],
+    "root_seed": 17
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "simulation_sha256": "91c0a7e6727e2cf805f55ace206fe6ac1ff8f2dcdfe56a0788dc81ff3d04bd1c",
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t003-training-v3",
+    "save": 3,
+    "source_sha256": "af93fc01821514e669d7ba352909e7ffd67e5a1e0098f95036a3db41a2cdc272"
+  }
+}

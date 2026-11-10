@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 12,
+    "rules": "t011-league-economy-v2",
+    "policy": "t011-league-economy-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Codex (T011-R1)",
+    "source_sha256": "065520159972c459515c27adf338986994b99693c901cb39c4ae30709c6df441"
+  },
+  "historical_files_match_preflight_after_restoration": 624,
+  "frozen_bundle_and_root_files_match": 57,
+  "all_330_runs_match_final_identity_and_conservation": true,
+  "updated_document_links_checked": 15,
+  "broken_links": []
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "bytes": 6148,
+    "path": ".DS_Store",
+    "sha256": "cffb5973bb090d4866e450406dc29c0cc56ea982734d459864424c73befd93b0"
+  },
+  {
+    "bytes": 17972449,
+    "path": "experiments/comparison.json",
+    "sha256": "264fbf56624f8064120aad18ecaed96a56570a176afde0d16c06506f6c8bd9a9"
+  },
+  {
+    "bytes": 99204,
+    "path": "experiments/summary.json",
+    "sha256": "ccaac6de2acd0499d28a392e2202dc58c0bd811b7ba8cf00b9b21ce559ec63e8"
+  },
+  {
+    "bytes": 525388,
+    "path": "preflight/legacy_reference.json",
+    "sha256": "5e30991f353bfb725c701636be08e960f69de0f899d35c82790d8e35e1e2bc81"
+  },
+  {
+    "bytes": 2063,
+    "path": "preflight/semantic_projection.py",
+    "sha256": "2bdf53ce1d15bee335235767434835ad76d2b46ea62d78e96fefbb99c62029e4"
+  },
+  {
+    "bytes": 5211,
+    "path": "preflight/t001-inventory.json",
+    "sha256": "e0739ef52fc7a7e3e38d07ae7be7cdc347670b045034ea4403c1df9a28672030"
+  },
+  {
+    "bytes": 4947,
+    "path": "preflight/t002-inventory.json",
+    "sha256": "c032c85013c601d20c6abd21b1c01e694b498d5849d63aad1bbb2672ffe45226"
+  },
+  {
+    "bytes": 6049,
+    "path": "preflight/t003-inventory.json",
+    "sha256": "d2fbb05c3eb7dea6b3727fee7ba91beefdbb4c1d124795a17562aaf0262d0ea9"
+  },
+  {
+    "bytes": 6993,
+    "path": "preflight/t004-inventory.json",
+    "sha256": "1c3b3c6a3582a639ec04524031401436cdc82738ca63ce79e447dee64a339ee7"
+  },
+  {
+    "bytes": 428954,
+    "path": "representative/first_half/events.jsonl",
+    "sha256": "b139d1eeabc75985fb50a1029056591fdde00306763a2d56808c74dff28dbe0a"
+  },
+  {
+    "bytes": 1633,
+    "path": "representative/first_half/manifest.json",
+    "sha256": "4d0d53a2d8d9ca04f24fb6671a61061aa163d7d4cf4ac4bb80fd2a42e76abf95"
+  },
+  {
+    "bytes": 431297,
+    "path": "representative/first_half/snapshot.json",
+    "sha256": "b3f3d1330c9c872415ec3bb2a234845ef04f8c5f7d5eaffeba82eb077b1b0586"
+  },
+  {
+    "bytes": 1692,
+    "path": "representative/first_half/summary.json",
+    "sha256": "a9c5b0f3d6a3923a81179dfb2d45015e8f5928f1866acc8649b2cd56a54d059e"
+  },
+  {
+    "bytes": 852464,
+    "path": "representative/full/events.jsonl",
+    "sha256": "157022fae313a709db8f0c59896f7d6955f996f649d34ba0daaeceed2036007e"
+  },
+  {
+    "bytes": 1633,
+    "path": "representative/full/manifest.json",
+    "sha256": "f34c16a01fde348c30c29022d85ac4467d034667b3b6c0a9f4e5eb08ffe9296c"
+  },
+  {
+    "bytes": 854819,
+    "path": "representative/full/snapshot.json",
+    "sha256": "70efd49eab8d488f0d9f9137175a925d51961b766636e4d9cf6a27f58ee3497b"
+  },
+  {
+    "bytes": 1693,
+    "path": "representative/full/summary.json",
+    "sha256": "183f2d51e9e8805fd49d19a6998466de87eb3347b565a3b9239b15fc1bb21785"
+  },
+  {
+    "bytes": 852464,
+    "path": "representative/resumed/events.jsonl",
+    "sha256": "157022fae313a709db8f0c59896f7d6955f996f649d34ba0daaeceed2036007e"
+  },
+  {
+    "bytes": 1633,
+    "path": "representative/resumed/manifest.json",
+    "sha256": "f34c16a01fde348c30c29022d85ac4467d034667b3b6c0a9f4e5eb08ffe9296c"
+  },
+  {
+    "bytes": 854819,
+    "path": "representative/resumed/snapshot.json",
+    "sha256": "70efd49eab8d488f0d9f9137175a925d51961b766636e4d9cf6a27f58ee3497b"
+  },
+  {
+    "bytes": 1694,
+    "path": "representative/resumed/summary.json",
+    "sha256": "b78311aa5a83f26a56c0d1e096a95d0205586a2ed0c24d9355c18b6c716b0a1c"
+  },
+  {
+    "bytes": 630,
+    "path": "review/bundle-verification.json",
+    "sha256": "6ddf91bd1eb4102de2f14fabd136c8ae6b8cf8e138a27e57a2dd6a331cd13cd9"
+  },
+  {
+    "bytes": 5523,
+    "path": "review/causal-trace.json",
+    "sha256": "3d7d199a1b541f973ce6b3668683c8d55d40a7cc067c9df98b15a02d150ecd31"
+  },
+  {
+    "bytes": 473,
+    "path": "review/tests.json",
+    "sha256": "a36041d8799295f527afcb6f0b816d6e2b6567fbbac13353e035691b2bc05469"
+  },
+  {
+    "bytes": 606,
+    "path": "review/verification.json",
+    "sha256": "9af891288d690d446967c53fa743d45bcc6f37adc16a298b48274bf5f4caea3f"
+  },
+  {
+    "bytes": 3447,
+    "path": "review/verify_compatibility.py",
+    "sha256": "ae3591ba9e13d91b390c801912a232c184e2c8b88c522bc66de1dc8a9af002e8"
+  },
+  {
+    "bytes": 7993,
+    "path": "source_bundle/docs/experiments/T005-PROTOCOL.md",
+    "sha256": "65316ae57b9703adb6421cbbd30facd53c3252f9be0c65e9e884414a2f864230"
+  },
+  {
+    "bytes": 4447,
+    "path": "source_bundle/docs/tasks/T005.md",
+    "sha256": "e10e36cbb0a9d8d6c13e71749a071af4de25cee3c083a1d25fb41c0a55563430"
+  },
+  {
+    "bytes": 3867,
+    "path": "source_bundle/manifest.json",
+    "sha256": "6705c010e03223bacfcb81659758a6735bdbf17cb75d90076001e2037c303542"
+  },
+  {
+    "bytes": 93,
+    "path": "source_bundle/pyproject.toml",
+    "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+  },
+  {
+    "bytes": 64,
+    "path": "source_bundle/soccer_sim/__init__.py",
+    "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+  },
+  {
+    "bytes": 2832,
+    "path": "source_bundle/soccer_sim/__main__.py",
+    "sha256": "3cd657b2877029ba81104114c29d566d1a36fc4eea0dea04491bd7b1001f475d"
+  },
+  {
+    "bytes": 2380,
+    "path": "source_bundle/soccer_sim/advice.py",
+    "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+  },
+  {
+    "bytes": 14457,
+    "path": "source_bundle/soccer_sim/experiment_t002.py",
+    "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+  },
+  {
+    "bytes": 8927,
+    "path": "source_bundle/soccer_sim/experiment_t003.py",
+    "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+  },
+  {
+    "bytes": 12647,
+    "path": "source_bundle/soccer_sim/experiment_t004.py",
+    "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+  },
+  {
+    "bytes": 12114,
+    "path": "source_bundle/soccer_sim/experiment_t005.py",
+    "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+  },
+  {
+    "bytes": 7833,
+    "path": "source_bundle/soccer_sim/experiments.py",
+    "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+  },
+  {
+    "bytes": 2298,
+    "path": "source_bundle/soccer_sim/observation.py",
+    "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+  },
+  {
+    "bytes": 3954,
+    "path": "source_bundle/soccer_sim/policy.py",
+    "sha256": "0ca608096064a8553407caa634a9d5e41342ed4598f0b55cd74145a8235525c4"
+  },
+  {
+    "bytes": 17340,
+    "path": "source_bundle/soccer_sim/simulation.py",
+    "sha256": "79599012ba27b1f21f70218c6579d28354b21173e231beda3c8fafadd50dd5db"
+  },
+  {
+    "bytes": 11898,
+    "path": "source_bundle/soccer_sim/state.py",
+    "sha256": "6ee0a87e05c733c5c2f17ce3762ca2cde90ffd1b4efcaf0754a0eb1a29dee8db"
+  },
+  {
+    "bytes": 14966,
+    "path": "source_bundle/soccer_sim/storage.py",
+    "sha256": "c19c8bb105e20c2cfe191140271e1a52a1c5bd8d6faecd4d2351b31f93290e75"
+  },
+  {
+    "bytes": 10005,
+    "path": "source_bundle/tests/test_t001.py",
+    "sha256": "cf1c672f8a257c8f5890f9fc26137e7bc44800c43eeddac7e2b0284c3106e552"
+  },
+  {
+    "bytes": 10849,
+    "path": "source_bundle/tests/test_t002.py",
+    "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+  },
+  {
+    "bytes": 15043,
+    "path": "source_bundle/tests/test_t003.py",
+    "sha256": "1c272a8ee3a2f5e4470f88015a5c4d1b22746adf0f55d3685a1b221377b1db46"
+  },
+  {
+    "bytes": 13707,
+    "path": "source_bundle/tests/test_t004.py",
+    "sha256": "b11ad8757f326488f8b62eba5beea6d414fd5112e4f95b703c769453937bb98b"
+  },
+  {
+    "bytes": 19835,
+    "path": "source_bundle/tests/test_t005.py",
+    "sha256": "26aee43a83cc233a55b699b0136adc9b11b051e2954d512b86345562969c06fd"
+  }
+]

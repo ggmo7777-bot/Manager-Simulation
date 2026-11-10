@@ -1,0 +1,288 @@
+{
+  "baseline": {
+    "end_day": 84,
+    "first_behavior_difference": null,
+    "interventions": [],
+    "ledger_discrepancy": 0.0,
+    "metrics": {
+      "academy_clubs_cash": 50.36,
+      "academy_clubs_points": 34,
+      "all_decisions_disagreement": 0.0,
+      "lineup_disagreement": 0.0,
+      "mean_skill_gain": 0.210843,
+      "p3_appearances_after14": 8,
+      "p3_gain_after14": 0.201701,
+      "p3_satisfaction": 0.98,
+      "p3_training_disagreement": 0.0,
+      "p3_transfers": 1,
+      "p3_trust_c1": 0.315508
+    },
+    "p3_end_club": "club_b",
+    "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+    "parent_day": 14,
+    "seed": 100,
+    "semantic_projection_sha256": "3e0599a659adb7bd7a8c91dba5c26c379b7784d422215e888c216354c2e9eb64",
+    "set": "confirmation",
+    "variant": "baseline"
+  },
+  "coach_high": {
+    "end_day": 84,
+    "first_behavior_difference": {
+      "actor": "c1",
+      "baseline": {
+        "cause_refs": [
+          "e276",
+          "e279",
+          "e579",
+          "e582",
+          "e587",
+          "e590",
+          "init:0"
+        ],
+        "choice": [
+          "propose",
+          "p3",
+          "A"
+        ],
+        "id": "e630"
+      },
+      "branch": {
+        "cause_refs": [
+          "e276",
+          "e279",
+          "e579",
+          "e582",
+          "e587",
+          "e590",
+          "e622",
+          "init:0"
+        ],
+        "choice": [
+          "propose",
+          "p2",
+          "A"
+        ],
+        "id": "e631"
+      },
+      "day": 15,
+      "evidence_path_to_research_intervention": [
+        "e631",
+        "e622"
+      ],
+      "interpretation": "earliest changed chosen action; graph link alone is not a causal proof",
+      "kind": "coach_training_decision"
+    },
+    "interventions": [
+      {
+        "after_value": 0.9,
+        "before_value": 0.39,
+        "coach_id": "c1",
+        "day": 14,
+        "kind": "coach_skill_estimate",
+        "observer_id": "c1",
+        "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+        "phase": "day_boundary",
+        "player_id": "p3",
+        "previous_obs_ref": "init:0",
+        "reason": "T012 preregistered coach_high at day14",
+        "sequence": 1
+      }
+    ],
+    "ledger_discrepancy": 0.0,
+    "metrics": {
+      "academy_clubs_cash": 51.8,
+      "academy_clubs_points": 36,
+      "all_decisions_disagreement": 0.26424050632911394,
+      "lineup_disagreement": 0.65,
+      "mean_skill_gain": 0.204085,
+      "p3_appearances_after14": 10,
+      "p3_gain_after14": 0.149556,
+      "p3_satisfaction": 0.98,
+      "p3_training_disagreement": 0.25,
+      "p3_transfers": 0,
+      "p3_trust_c1": 0.460585
+    },
+    "p3_end_club": "club_a",
+    "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+    "parent_day": 14,
+    "seed": 100,
+    "semantic_projection_sha256": "7a4b654922585934f17cfe55666af27b1bfbcad43b662c2e02d875c5cf5ca397",
+    "set": "confirmation",
+    "variant": "coach_high"
+  },
+  "noop": {
+    "end_day": 84,
+    "first_behavior_difference": null,
+    "interventions": [
+      {
+        "after_value": 0.39,
+        "before_value": 0.39,
+        "coach_id": "c1",
+        "day": 14,
+        "kind": "coach_skill_estimate",
+        "observer_id": "c1",
+        "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+        "phase": "day_boundary",
+        "player_id": "p3",
+        "previous_obs_ref": "init:0",
+        "reason": "T012 preregistered noop at day14",
+        "sequence": 1
+      }
+    ],
+    "ledger_discrepancy": 0.0,
+    "metrics": {
+      "academy_clubs_cash": 50.36,
+      "academy_clubs_points": 34,
+      "all_decisions_disagreement": 0.0,
+      "lineup_disagreement": 0.0,
+      "mean_skill_gain": 0.210843,
+      "p3_appearances_after14": 8,
+      "p3_gain_after14": 0.201701,
+      "p3_satisfaction": 0.98,
+      "p3_training_disagreement": 0.0,
+      "p3_transfers": 1,
+      "p3_trust_c1": 0.315508
+    },
+    "p3_end_club": "club_b",
+    "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+    "parent_day": 14,
+    "seed": 100,
+    "semantic_projection_sha256": "3e0599a659adb7bd7a8c91dba5c26c379b7784d422215e888c216354c2e9eb64",
+    "set": "confirmation",
+    "variant": "noop"
+  },
+  "trust_high": {
+    "end_day": 84,
+    "first_behavior_difference": {
+      "actor": "p3",
+      "baseline": {
+        "cause_refs": [
+          "e585",
+          "e630"
+        ],
+        "choice": "B",
+        "id": "e642"
+      },
+      "branch": {
+        "cause_refs": [
+          "e622",
+          "e631"
+        ],
+        "choice": "A",
+        "id": "e643"
+      },
+      "day": 15,
+      "evidence_path_to_research_intervention": [
+        "e643",
+        "e622"
+      ],
+      "interpretation": "earliest changed chosen action; graph link alone is not a causal proof",
+      "kind": "player_training_decision"
+    },
+    "interventions": [
+      {
+        "after_value": 0.95,
+        "before_value": 0.460585,
+        "coach_id": "c1",
+        "day": 14,
+        "kind": "player_trust",
+        "observer_id": "p3",
+        "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+        "phase": "day_boundary",
+        "player_id": "p3",
+        "previous_obs_ref": "e585",
+        "reason": "T012 preregistered trust_high at day14",
+        "sequence": 1
+      }
+    ],
+    "ledger_discrepancy": 0.0,
+    "metrics": {
+      "academy_clubs_cash": 50.16,
+      "academy_clubs_points": 33,
+      "all_decisions_disagreement": 0.0189873417721519,
+      "lineup_disagreement": 0.05,
+      "mean_skill_gain": 0.210863,
+      "p3_appearances_after14": 8,
+      "p3_gain_after14": 0.201938,
+      "p3_satisfaction": 0.98,
+      "p3_training_disagreement": 0.08333333333333333,
+      "p3_transfers": 1,
+      "p3_trust_c1": 0.545787
+    },
+    "p3_end_club": "club_b",
+    "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+    "parent_day": 14,
+    "seed": 100,
+    "semantic_projection_sha256": "c1b0ec86a8e2918350fb4782fe8839789ad525be592f01a6e0fe3ff3385f68a7",
+    "set": "confirmation",
+    "variant": "trust_high"
+  },
+  "trust_low": {
+    "end_day": 84,
+    "first_behavior_difference": {
+      "actor": "p3",
+      "baseline": {
+        "cause_refs": [
+          "e643",
+          "e672"
+        ],
+        "choice": "A",
+        "id": "e684"
+      },
+      "branch": {
+        "cause_refs": [
+          "e644",
+          "e673"
+        ],
+        "choice": "B",
+        "id": "e685"
+      },
+      "day": 16,
+      "evidence_path_to_research_intervention": [
+        "e685",
+        "e644",
+        "e643",
+        "e622"
+      ],
+      "interpretation": "earliest changed chosen action; graph link alone is not a causal proof",
+      "kind": "player_training_decision"
+    },
+    "interventions": [
+      {
+        "after_value": 0.05,
+        "before_value": 0.460585,
+        "coach_id": "c1",
+        "day": 14,
+        "kind": "player_trust",
+        "observer_id": "p3",
+        "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+        "phase": "day_boundary",
+        "player_id": "p3",
+        "previous_obs_ref": "e585",
+        "reason": "T012 preregistered trust_low at day14",
+        "sequence": 1
+      }
+    ],
+    "ledger_discrepancy": 0.0,
+    "metrics": {
+      "academy_clubs_cash": 50.41,
+      "academy_clubs_points": 35,
+      "all_decisions_disagreement": 0.01819620253164557,
+      "lineup_disagreement": 0.0,
+      "mean_skill_gain": 0.211477,
+      "p3_appearances_after14": 8,
+      "p3_gain_after14": 0.209293,
+      "p3_satisfaction": 0.98,
+      "p3_training_disagreement": 0.08333333333333333,
+      "p3_transfers": 1,
+      "p3_trust_c1": 0.05
+    },
+    "p3_end_club": "club_b",
+    "parent_checkpoint_sha256": "568fa82c40220b860b50456d3cbbd9a2f5f8d4c653bd18c6af4adaa86998da97",
+    "parent_day": 14,
+    "seed": 100,
+    "semantic_projection_sha256": "28152c26db4eae43be1287d85a578b02469c7a163e74789b73f935dea36ef01a",
+    "set": "confirmation",
+    "variant": "trust_low"
+  }
+}

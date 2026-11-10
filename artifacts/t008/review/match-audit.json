@@ -1,0 +1,39 @@
+{
+  "all_invariants_passed": true,
+  "author": "Antigravity (Gemini 4 Argon)",
+  "condition_audits": {
+    "baseline": {
+      "decisions_checked": 160,
+      "goals_checked": 0,
+      "summaries_checked": 40,
+      "unseen_entities_checked": 80
+    },
+    "home_pass_style": {
+      "decisions_checked": 160,
+      "goals_checked": 0,
+      "summaries_checked": 40,
+      "unseen_entities_checked": 80
+    },
+    "home_position_plus": {
+      "decisions_checked": 160,
+      "goals_checked": 0,
+      "summaries_checked": 40,
+      "unseen_entities_checked": 0
+    },
+    "home_skill_plus": {
+      "decisions_checked": 160,
+      "goals_checked": 2,
+      "summaries_checked": 40,
+      "unseen_entities_checked": 18
+    }
+  },
+  "policy_functions_called": 0,
+  "representative_audit": {
+    "decisions_checked": 160,
+    "goals_checked": 1,
+    "summaries_checked": 40,
+    "unseen_entities_checked": 46
+  },
+  "representative_snapshot": "artifacts/t008/representative/full/snapshot.json",
+  "total_decisions_independently_recomputed": 800
+}

@@ -1,0 +1,4 @@
+factorial old: 30 runs complete
+factorial bonus_removed: 30 runs complete
+factorial public_tie_only: 30 runs complete
+factorial both_fixed: 30 runs complete

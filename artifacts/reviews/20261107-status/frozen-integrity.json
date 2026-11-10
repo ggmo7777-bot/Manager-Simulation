@@ -1,0 +1,72 @@
+{
+  "t001": {
+    "expected": 34,
+    "actual": 34,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t002": {
+    "expected": 32,
+    "actual": 32,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t003": {
+    "expected": 38,
+    "actual": 38,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t004": {
+    "expected": 44,
+    "actual": 44,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t005": {
+    "expected": 47,
+    "actual": 47,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t006": {
+    "expected": 55,
+    "actual": 55,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t007": {
+    "expected": 88,
+    "actual": 88,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t008": {
+    "expected": 83,
+    "actual": 83,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t009": {
+    "expected": 64,
+    "actual": 64,
+    "missing": [],
+    "added": [],
+    "modified": []
+  },
+  "t010": {
+    "expected": 60,
+    "actual": 60,
+    "missing": [],
+    "added": [],
+    "modified": []
+  }
+}

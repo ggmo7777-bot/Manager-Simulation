@@ -1,0 +1,15 @@
+fixed equivalence: closed_no_solidarity
+fixed equivalence: closed_solidarity
+fixed equivalence: open_no_solidarity
+fixed equivalence: open_solidarity
+fixed equivalence: fixed_budget_no_inflow
+fixed equivalence: hoarder_buyer_policy
+fixed equivalence: exploit_churn_guard
+Traceback (most recent call last):
+  File "/tmp/soccer-status-t015-audit.py", line 61, in <module>
+    admissions.update(admission_audit(raw))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/collections/__init__.py", line 698, in update
+    self[elem] = count + self_get(elem, 0)
+                 ~~~~~~^~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'dict' and 'dict'

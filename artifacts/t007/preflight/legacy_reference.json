@@ -1,0 +1,1451 @@
+{
+  "runs": [
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "bc0c405b8ab162aa00d696f1d6edf8236981d058bc3d84f3d222330563a462f3",
+      "seed": 0
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "7d3a26ea5bdf7588b33e25174f30c2fa6e5934978db1490e01eeb664aaaf5eeb",
+      "seed": 0
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ad72652e1e2913af31204c2a88bcb3efaf6230c0f642aa766836ef32ca6ea98d",
+      "seed": 0
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "b89457a67e572d5c5baefb9e791e481ccaa0cb1c62e1880dbd21e18e475ca71b",
+      "seed": 0
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "f6616d463147c8c8eefd9d401a847dd6b3e7b835db7b0ffb3ee57ed4a663edef",
+      "seed": 1
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "a8d61c31edaa3d005167b1230ec434817c2fda2bc1723b661a39961bcada34f8",
+      "seed": 1
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "fb984ce6fbf457d610d9ab9e9e57e0d70009d81c8116672c886aa0f92f2e1380",
+      "seed": 1
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "60fd2f8abd2d4791a85cd30b21e239e7e4d1c000694075f3a85d2ba84a1d57a4",
+      "seed": 1
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "aed2f62014b1ec17ef1dfb8d2ecd15341da696728b851a2b5454c4d60063f36f",
+      "seed": 2
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "64347a214e4e653217d699229daaf755613dd87396f4df663c71d1af0ab44240",
+      "seed": 2
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "9e4e66c63c545cd8d3aa684c5908821aacadf275ce4b699f46eefbecc98a8f38",
+      "seed": 2
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "c064bfb5e19fd39ab05204bedd74fc6b433fcf3fa5fd52ec572a378b110a4411",
+      "seed": 2
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a1eaf608fa2c1fa98d96b6c36214eed2f34409f32a42413914d6d0448d0ca854",
+      "seed": 3
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "6e2e6a884244dac454c7aa86cf019437b0e250560daac37a8580bdc25cc0ff6b",
+      "seed": 3
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "17fce67f3b2c5c4adcbdb4dd6b98d84d51690ea336a339a4c02c608ae75aa961",
+      "seed": 3
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "34eec03dc268f6a7021507d8382fbfbdc35bf4ab7bc28cd37755d5d412d3da65",
+      "seed": 3
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a9204231a65b86b61ed77a925d8e9742a37e4a07b0455aca3de5e8ec690ccfae",
+      "seed": 4
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "55997a8c14f9cc0a2d224439943db167f999abf86b10207decfe9852f82f2de1",
+      "seed": 4
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "8a5fe6801f067cbc30500afaa6df876a87bfc7af102c09125217a955ac012603",
+      "seed": 4
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "e7d193d70f5fbda2e8aba9e1656e18c378684968fda9eb75423bf8068031ddda",
+      "seed": 4
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "64ce1651a31ca201a3941a17ad04755f9b5c2f1f2e6391f9f2ae21c61a486536",
+      "seed": 5
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "8244134ae9d0b25e3908fefa3cf6796bf2da8c5020bc9989504d5ec7f54575fa",
+      "seed": 5
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "2124e772cf3a6f65371965066baa544d1b17b0105fabb6fbdaebaec8fd942c23",
+      "seed": 5
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "0b00332abccd440ffe89f2aa0a731ed372d07d936e288d03efdd1c08e0b4ac7f",
+      "seed": 5
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "207f3625b819ed1d57687293f2d882ee56858cfaec32f923c049f51c577cb239",
+      "seed": 6
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "d89d241cb24f2279defed97ffcd2fad3b0c3533130adf796da93e95611e9d5cb",
+      "seed": 6
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "fbb4b607a653aad1df34d14b396b3a1d0ac712891b30bc19aedb0fd2e58c856a",
+      "seed": 6
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "3ee3cb91b21cab9e4eec955200a347d436ba3a025091c6ae90e1145e21bcd8fe",
+      "seed": 6
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "da5cae42091c68630a453015ddcdcd4d79e68d6ffd5fb9d4b99f11dc22cfd3c8",
+      "seed": 7
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "90c8e9fce24016eed81bfe7aadbd0d014bd4e6c2d836e5b689b1c37790448c40",
+      "seed": 7
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ace1589a4aa2d50f6b16f9facf24e5eb7a4f8d9b77774d7899770cd03c4c37db",
+      "seed": 7
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "2a6626b90cd523dc8a5d109f2323cc5db3bfdc88c0aec82cd5c29946e0e9acf9",
+      "seed": 7
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "d6307f83d78d2aa77e5a62d603d22f085fcc91209690c656e80808cbc9505582",
+      "seed": 8
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "badba7116656ec5eb0c0329f081bfa9223be426a9e8ec85e373784da1790c575",
+      "seed": 8
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "97da2707d401d1214e720bdaf8732cc9cbc67b994a764a8cf656e478532d5d08",
+      "seed": 8
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "f9495c7eebd32e9273f38b00c7ec6f175edf5b34879b61b9faf6eb0116c6af53",
+      "seed": 8
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "56f34f3d5d8e942f23cd4dbacc9d3e76565fd714aeea0d304b0445bfc0346c20",
+      "seed": 9
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "49276faa1b17e35bdedaa856158db0a5c1b25f2f8474cd9b51004dacd37f717b",
+      "seed": 9
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "a4e9c9d4c4d816242f2f87bfda0193d6400f7539c363fa5e984b14d7c7692ac7",
+      "seed": 9
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "2d5a11e56943e9b9de27293ac72dca04106a976746fb6d0db7acf03650543e7f",
+      "seed": 9
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a59df5df3ba1b9b058e23250a52601e87377022f9d243e866f0a495dab1a870e",
+      "seed": 10
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "5ec82760d87b1c6aa84e67ce9300b88f4ffa3ff2794419fa3cb9841bc507e4bc",
+      "seed": 10
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "8456b08c2abd80e62317e8c2d0b24d4d537faf3034413a87752fd1a33cd595c2",
+      "seed": 10
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "d0d25381a2449668cd3853d1e52765266633722c94908ac96279c345306e1a26",
+      "seed": 10
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "88cc4c3b6e047706d7aeada95ac412664e5b237d0aa2bb94b95ffe9bde7141e4",
+      "seed": 11
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "089219d22623c14c3caf8aaa88a442599ee4d8b2d02ce60dfcd41661db27c050",
+      "seed": 11
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "3c835e3e0bfc90f6588b680f9b0f33452b23347918626cfd3fefee0b45d43595",
+      "seed": 11
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "424218bd95c7193fc91f13450126a3643be7bab1fe5b780aeef841723af923a4",
+      "seed": 11
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "0b031d4a59db4550999628cd624dfab07b2708fa31b0a2f46b102188f5c25c42",
+      "seed": 12
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "585da2268232b48086e1c9199bc8b81027c98dffd86ae3e29d260d457e691230",
+      "seed": 12
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d051b557957f1e9b19c8f646e58eaf1aa0e34ced7e31e750f8b25e714797e779",
+      "seed": 12
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "3bb4eaea70352528783787cf9517eb20d3fe60e65dc4d775e1743c35cbf79506",
+      "seed": 12
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "24923c1a19fdf78cb1343919a5f6e2eaadb5c76822aaff59df0662d318c73ebe",
+      "seed": 13
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "ffa31d8b11829c4d823f3c44b98d3d398b2fc31296216f2186c88ea0bf68346e",
+      "seed": 13
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d62cf86840dc1e663448bb2d8b42d2804df39af7c03fd636fee09206e7c6e9b1",
+      "seed": 13
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "e316437a3ce01d5a9c05a2cf4c44ca584dc2059ff4b05c509b7b9f590bef92be",
+      "seed": 13
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "65ad431fecba30e9c5c24a645814b9b8318fa1c3d8775455b0aef93aa398715d",
+      "seed": 14
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "2b6ef5a7cb972a6d627c44cea07cc6401cef209b31dcee91ad5ae7b64cd430e3",
+      "seed": 14
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "941a1c8652d4f112428a98db85a62e0b164fb6b4cb9d5b5d3ef47e406a608167",
+      "seed": 14
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "ba8654f5b55d6d29111b520fc13b3884f0f4d500feea604c8196a41d91206868",
+      "seed": 14
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "79cbd64db709e94a207e33a6a937fecd9fef8f3209804c1a45b4e23534d01733",
+      "seed": 15
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "24bbc4c5d98415e0e5dffba24d4bbe952006cc07c4c805701a64709147de4fe4",
+      "seed": 15
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "b5adbdabc11ef2285bfba8558965c4a6b58455294452d8f3d816415720c375e3",
+      "seed": 15
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "78d06030fd6f44046acf7b31d181a82605f9f13e7a8c3a4165dbcfe616362ac2",
+      "seed": 15
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "b5f1765a1479626e2bfbbad543711636398e5548dbf15b6aa7e94eb820d43da3",
+      "seed": 16
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "77a1444bfb3d08211af11848a3dba2b2762077dfe8fa95e09f4fdeb4e28650db",
+      "seed": 16
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "e950c2ceed04636fedc642cb0a717bf32b4dfff2d04e45bea3c49454e115b789",
+      "seed": 16
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "4bc9473e7ee6729aa6020113a400e90b3d7b5f2bed35ad82dd847ba15a8a1655",
+      "seed": 16
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "cde3b0a7f050a97d4e47fda9401ea41386538a6d856bdef2d0293b1de7072fe6",
+      "seed": 17
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "897147de3437534deb347322f516a3223a04c4907756127970393b92531be8ce",
+      "seed": 17
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "a789d01eefc79d818d5373385417999f1ca3ea95849fc829422a149e4bfe5a52",
+      "seed": 17
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "093ee3079c05ce5f42c819abc9640f09c1d1ef44916b323863184e9c9febab60",
+      "seed": 17
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "aaeda75710f8d5fba3f766e009f66649365830e50302357e8f3eb7618f54c6b0",
+      "seed": 18
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "79c76350f846b233c2f66896b043d2118282b8825608e20b1da034f3a7227b04",
+      "seed": 18
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "291965b6e5f72eb9973b5aa197077a02d61df919e6972a408f40ab503d4d9bdb",
+      "seed": 18
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "b8bded6ec316cf75f2188af7ae190e1ff1faeb5a0d9cd663f946f2ed0e9d9129",
+      "seed": 18
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "86baf0a498bf5366b25432993a6039d38a1f88f55a54294631dfdf18fff682c0",
+      "seed": 19
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "0c04ce3ea44e32a57d933151e2c8c3009cbe3162759c8f04f783130e7c47f033",
+      "seed": 19
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ab293f40acc4e4d4fb42ed9b0923ae7ec0dc5ab97447c6351d5014564a9a8ecc",
+      "seed": 19
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "73228fb61dce29069f253e9311236599b44f0265b31f7a0416718a4cb0381e38",
+      "seed": 19
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "3c273acfdce257142bd0d2cb039cb77e3d519a919985cd92c4326bc5027fe9f2",
+      "seed": 20
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "77d8a34dd3454abbbeda36ac98cff6ab557628b0bc5f6fc4d9d95cfa56dac20f",
+      "seed": 20
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "7313daf3b88c5de8a5017860afaf131b95a1d61fe2932015493682eb52416d6a",
+      "seed": 20
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "904c733a8720dbff04b86ffe552b17843449d758f45c7e82ef8645c6dd8322e0",
+      "seed": 20
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "678a9ff4dc87cf49be0bba2fad6fa537d1937277bc75fcacc8fa5f7f979b0863",
+      "seed": 21
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "8c7df9727199bad027cd55b388d7c3ede68e780e44ab3adab6520b959119e86d",
+      "seed": 21
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "66059e236c46cb46e4fdce44a519613f2626450b8f7024d6088bd5d8a87ffdd2",
+      "seed": 21
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "5c947af02d6736dad7452dfb2e43956c35769a1007f716288f207af13fd21d35",
+      "seed": 21
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "fdb16546b0b44b4da56a7faee91667f6a83eb97dbc2c2da492c38654661b72be",
+      "seed": 22
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "37a20da5c3b9d5e1e16e16623eafdb83620735a91b85999de556b420f246cf8e",
+      "seed": 22
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "1401fba512826b3fa49f66c8ec2527913e43c345451abb75f89570bdd16402f0",
+      "seed": 22
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "44e30c47017d0bc1ef77666762ba21624690ddc9bd362b6bcf9c24e0a5d03a84",
+      "seed": 22
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "179ddb6fb15b3d30a8993fc5a16fde41ea586c5d7203741b2dc3a3d8c8fd3cc7",
+      "seed": 23
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "ff6bf2bb6231c36301d220816414a2d715e53881e52eea0a1ed7e0591244c5d8",
+      "seed": 23
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "32a400bcbf59e43a230e3850bc08054bf2dd8c4903c190ee9cb010ff19faf846",
+      "seed": 23
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "c7e8345b4c02dc4801f5ed6b6b2e978cccdcfb0c083e424b2238524e547ced39",
+      "seed": 23
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "339d1fc6ca57634a15af5ae110456efeb77e85b6c5862eab385cbad1201c0abe",
+      "seed": 24
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "960e6b05b0ed04c128e5cb70334b35a335c2f5922a47628973cf2644fdba8325",
+      "seed": 24
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "1084c87a9e2803c6ce4d321dc1455d08f2191b82d001c4d48a107383df8419fd",
+      "seed": 24
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "b660110dbbd95d42e5b689b83603a374a49c373a1f5fb72317b9018084e76568",
+      "seed": 24
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "781ab1d77493ce8210ddc049ec28606f7e75e2a21b5fefdb179af0dee9a75e8c",
+      "seed": 25
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "5f3758c0b532e8c2cfbdc13bb21097a9708fa6249eb4227faa5a4279ccbc5b10",
+      "seed": 25
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "40fb6cab2906e01b71d56c02662bb29de97c50b8f29fa6786ab15885fd9eca78",
+      "seed": 25
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "cc28941263d645e37b2ed1022800d9770a1949a0784978820f6488d754ea6a79",
+      "seed": 25
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "7c27bbf9ee18964f59ec7804095a9d31efe74d4fb024934a2ec9f71aa77a9cd9",
+      "seed": 26
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "bfdb617ada0b203b7f169b9e2d8c240f7f2ba7ac046197d3bd9c0a784c72668b",
+      "seed": 26
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ab4ecaa1503e156fbe159b3dd04209614050830328746860ee86ec526a72e968",
+      "seed": 26
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "bf8a3909584f1e3a50fe9d6f9c2ddd96bb83df2b88df519e2ebe53582e04490e",
+      "seed": 26
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "d4f673d34f5f187a88584fa2362f4cf7ecfda5bb123a531b38d5585e2b909424",
+      "seed": 27
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "1948790ccee89221484458cfcd8704966b5ab1a4472a1f9f13753769bab029cc",
+      "seed": 27
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "5c9ad85caef65e468f829eef335e2349877f7fdc4f0c495ae5c5adbc4833de6d",
+      "seed": 27
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "ac725df4a1352308953d6b802a18269601f57f014d008fc837ab8f7a7e53dfae",
+      "seed": 27
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "919030d56fc24a3ca87bbb7ab6783285a64be2ef1ac42709e5b3dfa966af6b31",
+      "seed": 28
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "d0f8da14fea67b9ac9bf942ddadf87a9f7605bc4bb9e701fc882b676ae88d4b5",
+      "seed": 28
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "362050cc57c53d7692e8d1b6be902c54d1cfd77070ca40ca80e94502eba4bb52",
+      "seed": 28
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "bbb0e19b5702f5806cfcfe4314a48f3925e4e51cd0babfce1712e3fe9b196a59",
+      "seed": 28
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "ab1f84fead5f8eb3cbdef9444ac671a326db3c7cff32cf6c1a0a179c535b94e4",
+      "seed": 29
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "aed1825da445218ee0c9fae21f90d1a75fe64408f959b34ff6a8270f78a905ff",
+      "seed": 29
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "329a005298d8554e86691061e0b83bf9a05f40f820a137d7b6acc2e5372c7c67",
+      "seed": 29
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "171fcecc5515d4183529f124e1cec0d001e1002caf104af7dd1613773512ef13",
+      "seed": 29
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a6dc0defc19e01ef1001ecfe32d64ac120254f57bdd0ce966e7a9e588f150a91",
+      "seed": 100
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "e5ca4f0fabe76add2d3f206f05e9087e87bf4d1b98874abd631d0f19df04455f",
+      "seed": 100
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "b362c0da554c2335f0c4be36f329809da41815dbeca4830bb55fb2f60f95a61e",
+      "seed": 100
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "34008c76cbfe1fce611922527e4d3f1da980ea8e2d152ce9732c9a06d5a24a84",
+      "seed": 100
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "8ac23133765daf373156f7d5fe9e4ea349022a1e8f7d1ba9516d655ce6dbdb48",
+      "seed": 101
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "1d7856c48114fe9205f84260bd5da4eecc18cfa41638711b08a3464ee72de243",
+      "seed": 101
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "3e352516ef4813875acb32e98ffd19f0d732b1215129c72fc2bda825ce7ee3b0",
+      "seed": 101
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "b542e333d3032ef735d99e9d9b6ad45815591ec87e6a896e670aa8b36098a86d",
+      "seed": 101
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "97484818f6c9203acd41e7529061d94bfba4dabab470469f62c3c25301f60295",
+      "seed": 102
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "03f9c9ec44008f702b1b66e6d0e8e8e42f3eac4513a3ff838766c1ec7a0f80a2",
+      "seed": 102
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "b2635790a73c4bef7f0393fecbd6ef1a2836630fceeda6c0989b8cf762fdcab0",
+      "seed": 102
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "c1fc9470affdde91e374adfb44bc55918452fea8ccff03fb4806cf57796597ee",
+      "seed": 102
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a36b3ce7e15d708388af4e3544d75eb7d583775280c99a0b03e0c8e4df2dc60e",
+      "seed": 103
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "9e2905b214d4284ae4c3b18d5218e47e93b57be5774f743897d98bd4177ee780",
+      "seed": 103
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d2f30c39458fb0ea2dd2e3ba9592fbdd2d96fbc83aa76630957f400b49b20ccd",
+      "seed": 103
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "52834c0a6bc425a576ef23f654cc145e4529161e34769456f002969da540652b",
+      "seed": 103
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "23c039dd8e9f4e3dd7719c547548401f21812536db025e83e2ff66c2897d8b54",
+      "seed": 104
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "abc6d7d2b0041037d63d32597ca835bffe7a3a6bc175c7083eaa50888678c92f",
+      "seed": 104
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "2033d39db8eeb0e8465b858138d600b8d554e4ff5338b8ccfe3369b068bc9b89",
+      "seed": 104
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "84bf2acb70b927d5c68b9313433555646bdcf9041bd1efa94ec882fee5623901",
+      "seed": 104
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "5f653230caa649d988293aa85fefd18d920a4bd03806d5c1c3cc675ca977034f",
+      "seed": 105
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "4b942d191a7f76e8a814436cf19e4be37c01abd9d397955a6ee22e8f710a7473",
+      "seed": 105
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "3d73e846543e42309a7a6b70645bb7c336bc97dcc14322f1ea19c687439b93fc",
+      "seed": 105
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "420ab537b24b08cbb015a6e3882ce14189172827f60574aeecab90c530434a52",
+      "seed": 105
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "bb68235fc30aeb68faa120823c912ca0ce515d57809686d9aadaf29d3583c7fb",
+      "seed": 106
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "f7ce9318e1a1e894a3aa98ed1e963db73bac1cf28a0a78e5624c1cc63e8ba82b",
+      "seed": 106
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "375cd9e7dc9a4a3499ea5f4ad37a6ac351c753f79ac4fb6d4430a4a7c895260a",
+      "seed": 106
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "fd8f7d84a8cd1fd8ffe7601235b68b12b600af407e31e366c5c2adc159c0ea39",
+      "seed": 106
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "639679ef77a16562929d992a5a532ffb54c4cfee2a645e57141893c26a8af8c4",
+      "seed": 107
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "0759143e71e548f7ddcacb4283357c7412360dad5fbfae96994ee37723d8b6fa",
+      "seed": 107
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "79301cd316ea34590ab12146e0edaf58898617192f9455f4021f1ce5887d197a",
+      "seed": 107
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "e69e89988951b99bdd66330f474abc3291756d9f77ae970cb232e05564623e73",
+      "seed": 107
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "65da170bbe94a23afab0bffb2897341bb0897ddf8fde5c25ee1d96ce1d5461e2",
+      "seed": 108
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "19b4a502ed69f68cdbed31e97e81d9321bde77977d33d71a29837e62bf8643c3",
+      "seed": 108
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ac78fb6269acc57dd146b85adf0f1913d555644bbd1f066097d40757097e4739",
+      "seed": 108
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "0e02faa3308be5d87de1406bc7656a80d5462c28cc2c20cbae4b17d5eeb19f59",
+      "seed": 108
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "bb20f2912911814c85aca84a719a547d45197fff10b9d158815750913cabb3f6",
+      "seed": 109
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "373d7e6de26393426e1fc40f40542dabaa3057e6dd63ec6a9f528b0396efed9c",
+      "seed": 109
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "932f171cd06a8761d5e6b5ca0fc9aacfa2e20dec30553257c0790857044847a8",
+      "seed": 109
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "cbbb316b1af2a067216a00bb084792a8ac2c396cdf79827c3550ac282773e8ee",
+      "seed": 109
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "31203dcc57c2412dcc5c9c29a61bf5824cbbc044af024e7554ef8f3e58598ba0",
+      "seed": 110
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "7359518631926ad4ecdd2ab0abc7484764d9a5d9f396c5ef804a74009fe18c7e",
+      "seed": 110
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d1872c4da3884067ace07610d6ce6db8c0bea8888616649daf3dbc42632025c2",
+      "seed": 110
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "948b5ccbcad46df76004a925f76cec0e94e718cf3697b60aaa49496cf16dd6bc",
+      "seed": 110
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "60fb673d8f10d8fe08045bb788fbbfbc763c40706884cb20dfe6ea13301bda14",
+      "seed": 111
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "78c660a1bea2735c39ae24c61931a305e8db6aa318af94c5a6634e1bd208a9a4",
+      "seed": 111
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "2171046f830c7bf81745aa27032131755ae1bff2f894bb6f8575a9ce7005b6de",
+      "seed": 111
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "c80bcd78617bd926177b9f0973745c801aa40e268395f38f3300fbd5256f3554",
+      "seed": 111
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a7159c698645f043cdd053d49ad8ffeb6e56ecf473a694c89630f115486a46f3",
+      "seed": 112
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "c7580122b720eeb360e753679471cd15b0fbeb97a8357cd0fc9f8a90231edcb8",
+      "seed": 112
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "2a7d292365c074e2155d2d9a9760e356c0e0df8cd00d752bf04680829d364d84",
+      "seed": 112
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "bea23f197304f3e67c5dbd0c96650370643ddeb529495e7f690baa3667ef883a",
+      "seed": 112
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "d27df00de2d33eede69ef8f183120c66cbdde4c050a0fd7e9181d7a492e6b3d2",
+      "seed": 113
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "28f3ff4a3f8ea61a2525fdbffa8861b06be56fe652330f172e309829a1d31c17",
+      "seed": 113
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "7a2371dc54e1014648d9fd36c1908eee406013d363aafb0182008df367f7c041",
+      "seed": 113
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "4359f4f1a631c7afb2c932a7ed2a7b30728cbfaa6667d644b527e830955450c6",
+      "seed": 113
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "6859025d32a317a945f6de6664d9aeffddd8abb883a42ab8850c55e6fd9626f3",
+      "seed": 114
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "54439e0e4490a194889415a0c329f00877e8accf2e4502dba54d47d398712f6a",
+      "seed": 114
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "e001e87cc613ec65c4baae2e9d94d4c4f1d053abdd8637bc07546fdbf5dcaa29",
+      "seed": 114
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "dce1a5fad0207e53db796a7b7c91f2476aee7a33b046a587565fbdbb1cba4c1b",
+      "seed": 114
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "a470abeb5997498349222a65a76f92b2a0b39fd6ebc73d5d8d1681372720d234",
+      "seed": 115
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "636777ea263fb61a77b1c26f6cf77a859e93e0fb65d6a338b1b0a91320701be4",
+      "seed": 115
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "16d6a45de7ca29ee6b9aa729a1f0d1aecab07fc3ac4982c5180f20cf0a86dcf8",
+      "seed": 115
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "a08e656b1e474373cd38b752bd9076348c84e59be505303e64ded2c06c0a6a1b",
+      "seed": 115
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "dd3ac01358c834fc2bad6239209342023e6184ec31a6c4174b461ebecac82a0b",
+      "seed": 116
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "755cb149f6eda93cc07f86f902501f8ef364d4ed5d4499683ebde086c4fc2d2f",
+      "seed": 116
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "64dd40472e0675212aa5b8e1a1111f8a0469b6f707f36f53a2a9f35d54c1004c",
+      "seed": 116
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "5a979c373b0cbafbfeb9430574ca3af82f7e81904b33419e826f1e451ea0ab5c",
+      "seed": 116
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "d1c39964c5e7be3a089d4d272e314d1c0e620fcd663aa3f9e711772ded7327ab",
+      "seed": 117
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "dbb9bd47007aa99ee4385c550e3660dd7a8f9a35a83716650cdf9ac96b0cad6b",
+      "seed": 117
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "9ae660a013d29d15f37e155d2b874e0c5e953083e76c861848b14655966f7e25",
+      "seed": 117
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "a44631ff7041066361b3ed82dd24964cbf9a7254d43130cae360dc5f5dc95598",
+      "seed": 117
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "ad8deb27f78cb038e83df12926c61f83b1e78946fa19fa74149d6c2d2985b5b9",
+      "seed": 118
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "1fb93e5b1ecf29e5c4aa36a6b1b594ede13e07cec3abe7f1251d8d681f3b9ec8",
+      "seed": 118
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "5813c2ce52d6f85b5a41931d3ea40c1e94f595c9eb81049e8bb39b1beb40d69a",
+      "seed": 118
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "48af2e181d3ccb3280fa887cf6a51078493678baf6a43ac66a673045dfb0bffd",
+      "seed": 118
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "9e2dd1d2c1d13cec1905fdd5f75495cf696262b567e52fcaf4c95147221892ce",
+      "seed": 119
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "ee7b58e2c70d029b06981ae69d92d4cb9a26286ff81789fb2b90154b35fcc07e",
+      "seed": 119
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "bc7fe247127b360a0d799fcd2487159cd9512b1182c1599b6fed40e950a78d1f",
+      "seed": 119
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "b380e7c4694a323277be1f4613fec9d202851d85f0c3d45b88946e7a2294ea13",
+      "seed": 119
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "3a513dbb0ae0f49d063f99bce12a1a067c55b79cca033caef6032f847146599b",
+      "seed": 120
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "50302bdf41a7ea953f4867570907b1acc524a3f73159e06aef4556974ea7bbfb",
+      "seed": 120
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "e7399a56553d80ddf0a524798ce8b58401618a244028de9a0ac0630293bf7174",
+      "seed": 120
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "2907c4dfd22b8253a13b096fdeb117cdc367d6a7edaddaf0b163e14de0ffbe91",
+      "seed": 120
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "6518f33a11843f190f13e262559ab1281985e851b90082b781b551f6654412ed",
+      "seed": 121
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "000841026653c09a9fe552da4ce61b5d71a5124e088856f159e4ef264153f176",
+      "seed": 121
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "214a16318724c9b3d8c876f70646c75d8ae93a08508aaa45b3390f7c7e07d778",
+      "seed": 121
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "7e3d5e4a44321af68ff2843a1d6234bcc1a8a9665ef684fc555288e18116a6b5",
+      "seed": 121
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "8bd655fa5faf18efbc2858b9c8db4b18b41638f5f87b23885e3809ce1904cb7b",
+      "seed": 122
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "0bed10bade726e9415f715081576ef86b123b42df0ed50e29c759664ddf7d50d",
+      "seed": 122
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "974e983b05f3a27cd4cbc79fcd586ddcf606d6d26af4a7e0e6af8669c8b0c1fc",
+      "seed": 122
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "0b817f963b6e17f46c8f990292f2ad3f46ee7283a0cc118e7fa8731c4f2cb577",
+      "seed": 122
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "f76802bd8665687c0b72dbcb4250a23f5eef20d941cd98f3bd8fd9f886e3c246",
+      "seed": 123
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "a689fb3a35078459bbd4a32df8d57dd10d2e5af5efe902f9dafcfc9c3e4ff273",
+      "seed": 123
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "ff7042f3fa1e94664eb3d2ca272f309de89ec17fdb0e7c6578d4daea187ebf65",
+      "seed": 123
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "e7885f9e92b66b91d5df716356a5f4527bba2d7d710974d70c2d84d485f0d934",
+      "seed": 123
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "f3f6d9a7c1df4d037d82e6be188fdb333897e5bb8eaac4372da23c6511f53565",
+      "seed": 124
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "5597226a9f8ceb9135583d7aefd98d26fe1d218044d5896eb1c37f6c06b10d7a",
+      "seed": 124
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "23f8e3ee68ad48dbb8acd773c1d66ffacf08d7b05638c6804931bfd2d73c61e3",
+      "seed": 124
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "e04aee81c604717e2b803c046570012b43dc3de21169f29bf014c63b8cfe1d4d",
+      "seed": 124
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "bfd3fc6e51ef6455d71ccf8241402d3898722fc40008c9fdcf01981eb2656e96",
+      "seed": 125
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "c35a10af5d240a758d6d3abdd7da5cdfbe802c7c44a5cca38da6a1052a59bf64",
+      "seed": 125
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "4d0d01e3f4bead88c23e9d7353e239e2810c7184c607fb98bed3ba6c7d33e391",
+      "seed": 125
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "3b4e53a5e16acd84448f8172509defeb3bf81d59df0cb64b1734829881f3f269",
+      "seed": 125
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "9d30e0a5522dd8e867e525b6d9e277e680423162298b991c69ebf760baeaaf9a",
+      "seed": 126
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "d7a26f1572f4b9c6b53a10e04cfe2c66170072ada297f7c6062d946fed6de9b9",
+      "seed": 126
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "15ad5f733c2d22a486fc0e3e0bc59dda24ae8b986b6df42d1c13c935899e4ccb",
+      "seed": 126
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "d4a98d5b84573e2fd5f8e7dcc82ad73b0c1c7421628f9cb6f26d27620c72e210",
+      "seed": 126
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "82f3835c272dd0d608d1963b5852447a0c1c60b6b9863238b1be2bceb4ddf07c",
+      "seed": 127
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "839ce891ee78849446c4eeac563dd0b6d4f062f62779ec64b85f481d1cecd379",
+      "seed": 127
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d6838763f798e537744555d96547f6710ba2d3929c9f08760edd16f795ba217e",
+      "seed": 127
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "42f9a12777f5e8adac54d6f98341fd9317b15b588cb75ebf3b28114cb3ed0bed",
+      "seed": 127
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "7b4e94cd6e73bc123c54c10b076aae68309c5c7dac0a13841575fa4c7805a775",
+      "seed": 128
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "f8cbcb6e2db9a67fd234286e90e807c22d80719f612b0ae0f67f7a91b579e65b",
+      "seed": 128
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "d8646ecc5da77934d9ec6a646c1e64539c622663ff7ea5300b25bcffadabe663",
+      "seed": 128
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "63ede9781e793586d3657dccf602ad1d691ae897d12fcfad123b41f459da15e3",
+      "seed": 128
+    },
+    {
+      "condition": "frozen_legacy",
+      "days": 84,
+      "projection_sha256": "35d1ac9be6bc31d6ae9fc13bb6524d8a699a7cfe4966bde80d5b1f761332970e",
+      "seed": 129
+    },
+    {
+      "condition": "frozen_rank",
+      "days": 84,
+      "projection_sha256": "8396f80b0bb36190ca5bb2ecbd922338ec024c0069527d3d330fb6977bb3011c",
+      "seed": 129
+    },
+    {
+      "condition": "learning_legacy",
+      "days": 84,
+      "projection_sha256": "a680cb29fd03c3910f9790e6a9e68dec3cea1cca9369cbacec6bf5d82f6428cc",
+      "seed": 129
+    },
+    {
+      "condition": "learning_rank",
+      "days": 84,
+      "projection_sha256": "2fa22aaca643c86e7496efc82883adaf1f570959f961a5a6b40ac5a7c14f9b38",
+      "seed": 129
+    }
+  ],
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "bytes": 238888,
+    "path": "baseline/events.jsonl",
+    "sha256": "f17dbd9768f19f940cf1e0721773115ed38c7ec4b7b8ca8d86511e595a6c95ef"
+  },
+  {
+    "bytes": 1334,
+    "path": "baseline/manifest.json",
+    "sha256": "83afe3a38ffef30637286ccc460e22ce7d032e50d1ceddf72eeec77a145e8793"
+  },
+  {
+    "bytes": 240557,
+    "path": "baseline/snapshot.json",
+    "sha256": "9197160990ce0f4209aa28e2c0e44fdf341523f19a46edcf1e6ae385f369e53f"
+  },
+  {
+    "bytes": 1063,
+    "path": "baseline/summary.json",
+    "sha256": "beefa7e637361724674418cbff1de59869a4af46f5676187d85563905a62a681"
+  },
+  {
+    "bytes": 170844,
+    "path": "experiments/comparison.json",
+    "sha256": "4af6eba127806da361d00b12282adacbf0aadbf8e6cd4e98ad7435d587b27cf1"
+  },
+  {
+    "bytes": 2369,
+    "path": "experiments/summary.json",
+    "sha256": "0d14bf16d302b850467aff0ce218f8a30a3875005baef771317381e3e1ecda32"
+  },
+  {
+    "bytes": 118205,
+    "path": "first_half/events.jsonl",
+    "sha256": "20862f1f055bbb6688529c633e29edb74a105bfdbb2a690bfd24d67b08f84994"
+  },
+  {
+    "bytes": 1334,
+    "path": "first_half/manifest.json",
+    "sha256": "8247c65541488e1547bf49cc4659d4ae9d34f78f4019055cc1c2c8e93dd56008"
+  },
+  {
+    "bytes": 119873,
+    "path": "first_half/snapshot.json",
+    "sha256": "8ec9dc9f378194d7a1fb7fed297af9d4e97ac1eba8029820e7d2d6cf6272afc7"
+  },
+  {
+    "bytes": 1046,
+    "path": "first_half/summary.json",
+    "sha256": "439c5b0a78aad4efa500ef630ebe5eb8a7886afabcefc4e4d7306e0310c51a09"
+  },
+  {
+    "bytes": 238888,
+    "path": "resumed/events.jsonl",
+    "sha256": "f17dbd9768f19f940cf1e0721773115ed38c7ec4b7b8ca8d86511e595a6c95ef"
+  },
+  {
+    "bytes": 1334,
+    "path": "resumed/manifest.json",
+    "sha256": "83afe3a38ffef30637286ccc460e22ce7d032e50d1ceddf72eeec77a145e8793"
+  },
+  {
+    "bytes": 240557,
+    "path": "resumed/snapshot.json",
+    "sha256": "9197160990ce0f4209aa28e2c0e44fdf341523f19a46edcf1e6ae385f369e53f"
+  },
+  {
+    "bytes": 1063,
+    "path": "resumed/summary.json",
+    "sha256": "37a98278b43b44457e08017ce06742524c112e38987d7ac47a75ae3b39052406"
+  },
+  {
+    "bytes": 777,
+    "path": "review/performance.json",
+    "sha256": "de115a8f6caa9f6d44eb5d5808fe7ce908f5648f5502d0167d2d27122b7d33e0"
+  },
+  {
+    "bytes": 755,
+    "path": "review/verification.json",
+    "sha256": "04159c821bd638089f68c5a8f4c8c09425176b2a02d386c5c9abd27c3a0143fd"
+  },
+  {
+    "bytes": 3143,
+    "path": "source_bundle/docs/CHARTER.md",
+    "sha256": "fcd94f446e8875b693b99ea128fdf3c1b48f7be99533d940871917f1bd956e41"
+  },
+  {
+    "bytes": 2823,
+    "path": "source_bundle/docs/experiments/T001-PROTOCOL.md",
+    "sha256": "5213a0b6450116bff659cf0a526ff27a4b78df987fdc856447ca72fb946932a0"
+  },
+  {
+    "bytes": 10078,
+    "path": "source_bundle/docs/tasks/T001.md",
+    "sha256": "1db68b88a8a7bc48905656fbfeabb31dd75bfd6e78e936e6f3a6fffe9e06ecef"
+  },
+  {
+    "bytes": 2348,
+    "path": "source_bundle/manifest.json",
+    "sha256": "82b9495db78f303e64963357a86150094851d3aab7ec144feaeac764b6bffee6"
+  },
+  {
+    "bytes": 93,
+    "path": "source_bundle/pyproject.toml",
+    "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+  },
+  {
+    "bytes": 64,
+    "path": "source_bundle/soccer_sim/__init__.py",
+    "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+  },
+  {
+    "bytes": 1901,
+    "path": "source_bundle/soccer_sim/__main__.py",
+    "sha256": "80bb25ede9ec06f403ce36486f362814ed149e1fc0821c04f21c32e7d1077610"
+  },
+  {
+    "bytes": 6792,
+    "path": "source_bundle/soccer_sim/experiments.py",
+    "sha256": "0c0b428774d38b00007d14ea987dd25573c77852fc96b38913874265136a1266"
+  },
+  {
+    "bytes": 2516,
+    "path": "source_bundle/soccer_sim/observation.py",
+    "sha256": "38d09daac5865c39e3d15be6c2fefcb1f582c371475d2b256277c69e54805732"
+  },
+  {
+    "bytes": 3849,
+    "path": "source_bundle/soccer_sim/policy.py",
+    "sha256": "5948d0253205cf51fa713fbd74a04f49d7d6e05b2971e59d63b168cea885d91f"
+  },
+  {
+    "bytes": 9664,
+    "path": "source_bundle/soccer_sim/simulation.py",
+    "sha256": "9b96a7f45231bd4164401c9ca6b8449615248781c3b6cf42b0adf4b70efb077b"
+  },
+  {
+    "bytes": 6636,
+    "path": "source_bundle/soccer_sim/state.py",
+    "sha256": "ba85cfbe075ae1b26f42d010a673840453b2c78f1351b095f4a65dcbd11f98dd"
+  },
+  {
+    "bytes": 6134,
+    "path": "source_bundle/soccer_sim/storage.py",
+    "sha256": "d1f37ac70237135b44c29beecf091322994b0e408036a636808cf7c9ad9ce84d"
+  },
+  {
+    "bytes": 9260,
+    "path": "source_bundle/tests/test_t001.py",
+    "sha256": "c4d2f48cd800d77e90b2078ed2dfd22419f190f9d2653c42c0989cf44c169886"
+  },
+  {
+    "bytes": 8756833,
+    "path": "stress_1000/events.jsonl",
+    "sha256": "c33765de7f986c291904470c51f6b7234b0a99d00672b1814865c4d6fc950f23"
+  },
+  {
+    "bytes": 1336,
+    "path": "stress_1000/manifest.json",
+    "sha256": "1474df986f6afeedb77c7aae0ef68e43eacb9c6872ef05e86ada87c5447d1429"
+  },
+  {
+    "bytes": 8758524,
+    "path": "stress_1000/snapshot.json",
+    "sha256": "df8f30c256b5f4fc0bd9451fd991275e2c512f86c3df0a42efc8ed215b665969"
+  },
+  {
+    "bytes": 1033,
+    "path": "stress_1000/summary.json",
+    "sha256": "3d7a4040c4cc0d7ae0342d4d8b4059ecc744f7ad1432efc30b7b668eb650409b"
+  }
+]

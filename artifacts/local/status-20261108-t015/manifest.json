@@ -1,0 +1,118 @@
+{
+  "purpose": "T015 status review, not adoption or freeze",
+  "date": "2026-11-08",
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 16,
+    "rules": "t015-sampled-population-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "source_sha256": "483c47178c7683f125ba53a704f42909972b4201b889a069f2c988402c57a9f3"
+  },
+  "runtime": {
+    "python": "3.13.3",
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "commands": [
+    "python3 -B -m unittest discover -s tests -v",
+    "python3 -B experiments/review_t015.py --out artifacts/local/status-20261108-t015/verified",
+    "python3 -B tools/artifact_inventory.py verify --inventory artifacts/t014/inventory.json",
+    "python3 -B tools/artifact_inventory.py verify --inventory artifacts/t014/preflight/historical-inventory.json",
+    "python3 -B -m soccer_sim run --condition league_open_solidarity_sampled_population --seed 100 --days 1 --out /tmp/soccer-status-t015-cli-unused"
+  ],
+  "results": {
+    "all_tests": 175,
+    "test_seconds": 94.784,
+    "fixed_full_state_equivalence": 35,
+    "reproduced_metric_runs": 180,
+    "transactions_audited": 107376,
+    "sampled_cli_exit": 2
+  },
+  "files_at_review": {
+    "experiments/review_t015.py": {
+      "sha256": "648ba9cacc9273e4e7d8494b376a76a149e3a1c429dc404c93ff40b01489c77e",
+      "bytes": 5795
+    },
+    "experiments/audit_t014.py": {
+      "sha256": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+      "bytes": 6900
+    },
+    "experiments/t015.py": {
+      "sha256": "5ecd3d7e6cbfdf9a4378285b702390458b8c99c404315847e2001a13e9d30ddb",
+      "bytes": 5108
+    },
+    "docs/reviews/2026-11-08-T015-STATUS-REVIEW.md": {
+      "sha256": "337004ed8943ffd367f420656b64a4f38bc075c73b594885479d6fd0427d0ff9",
+      "bytes": 6014
+    },
+    "README.md": {
+      "sha256": "7fae276fc77aad536882b4761ada30564b600e7b48b263c9f007526992ef3106",
+      "bytes": 6326
+    },
+    "docs/STATUS.md": {
+      "sha256": "2131fe05bee31da9ba2ee9a9dd3391b4e0ea986f349c9cd573cb68327dc003cb",
+      "bytes": 5237
+    },
+    "docs/SOL-HANDOFF.md": {
+      "sha256": "d69d2f65ddc66e40ba228ee51de7cf6169bb59e72ca10459cde3c247938e968d",
+      "bytes": 5232
+    },
+    "docs/experiments/T015-RESULTS.md": {
+      "sha256": "da44c95cc5f4b66a41f4c668527699c651fc62ef4d4b367342638257ed34dd44",
+      "bytes": 3835
+    },
+    "docs/DECISIONS.md": {
+      "sha256": "52ba93e9f662629c4dc5a35080b1c560a278cfa93d882bd06f9149a0f427aac2",
+      "bytes": 64104
+    },
+    "docs/reviews/2026-11-08-EXTERNAL-REVIEW.md": {
+      "sha256": "ea83f25c117adad9c4665f8dc055f4f6badf10123e6a820e9a22756234643c41",
+      "bytes": 5776
+    },
+    "artifacts/local/status-20261108-t015/verified/audit.json": {
+      "sha256": "8b7d60551b5ee4a49956b39f16ca5378f882eb197c6aea664b6158451320fe2f",
+      "bytes": 100556
+    },
+    "artifacts/local/status-20261108-t015/tests.txt": {
+      "sha256": "dc0925dcb0cdbd3185774b43d926593562776212b6e83cea7c5277e1506c931f",
+      "bytes": 26080
+    },
+    "artifacts/local/status-20261108-t015/audit-log.txt": {
+      "sha256": "d842b4c81d9edd9779508a2ad06e4f0bd6169aa8642c0e620a6867a471cee3fc",
+      "bytes": 1908
+    },
+    "artifacts/local/status-20261108-t015/sampled-cli.txt": {
+      "sha256": "718083acf071ab84a533f4a81d0246bf65d381cbf6031c61f8e203a05dcb7de0",
+      "bytes": 2743
+    },
+    "artifacts/local/status-20261108-t015/diagnostic-attempt1.log": {
+      "sha256": "0602ce0034fcc7c85adde7e05d3bdc6a36f9773a609dc6a67bf1365d8730be95",
+      "bytes": 728
+    }
+  },
+  "historical_inventories": {
+    "artifacts/t014/inventory.json": {
+      "sha256": "a009c660862146acbfb23e2b3c397fb9b8978518e0d35da72a8fc4ea61cf8800",
+      "files": 252
+    },
+    "artifacts/t014/preflight/historical-inventory.json": {
+      "sha256": "d12c92dbb7fdaf9cd7bb35d4f08a5f2ca5f40443a24b4e8d994d7ff582d715b9",
+      "files": 1311
+    }
+  },
+  "old_t015_result_sha256_unchanged": true,
+  "limits": [
+    "T015 remains unfrozen",
+    "reported retained-player metric actually uses four fixed slots",
+    "normal run CLI has no sampled conditions",
+    "180-run comparison verifies saved metrics; prior complete sampled histories unavailable",
+    "first diagnostic-only attempt failed in counter aggregation; corrected audit reran all comparisons"
+  ]
+}

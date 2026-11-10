@@ -1,0 +1,16 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "command": "python3 -B -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "output": "tests.txt",
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t008-match2d-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t008-match2d-v1",
+    "save": 8,
+    "source_sha256": "a7c6c651c9629b8003d8b5817f8cd69d7e28b58320e085e05147d74a0d1013b1",
+    "world_kind": "match_2d"
+  },
+  "wall_seconds": 8.841806
+}

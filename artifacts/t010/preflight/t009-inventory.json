@@ -1,0 +1,322 @@
+[
+  {
+    "bytes": 4306030,
+    "path": "experiments/comparison.json",
+    "sha256": "cb5ad9c77f468e4fc7fcbf4a5976fc9dbbb8a3ab987b01cd9b6edac353639f3f"
+  },
+  {
+    "bytes": 617,
+    "path": "experiments/manifest.json",
+    "sha256": "386a77f988ae68995d9da94125ae958a37ddfb7affaddf862de99e555d7f3409"
+  },
+  {
+    "bytes": 3838676,
+    "path": "experiments/summary.json",
+    "sha256": "c3be2011eac47688de7f7fa89233c041bd0d548be086fba79b1c52cedfedcd1e"
+  },
+  {
+    "bytes": 43936,
+    "path": "preflight/legacy_reference.json",
+    "sha256": "226ed00f03f298c17b493a90cb33602d960b40b09b4cc754de2b3a99ee0694ab"
+  },
+  {
+    "bytes": 385,
+    "path": "preflight/semantic_projection.py",
+    "sha256": "c98f981c9510fee664507ed57c1f020173c8b83d81007206ec43b8eb7de91dea"
+  },
+  {
+    "bytes": 5211,
+    "path": "preflight/t001-inventory.json",
+    "sha256": "e0739ef52fc7a7e3e38d07ae7be7cdc347670b045034ea4403c1df9a28672030"
+  },
+  {
+    "bytes": 4947,
+    "path": "preflight/t002-inventory.json",
+    "sha256": "c032c85013c601d20c6abd21b1c01e694b498d5849d63aad1bbb2672ffe45226"
+  },
+  {
+    "bytes": 6049,
+    "path": "preflight/t003-inventory.json",
+    "sha256": "d2fbb05c3eb7dea6b3727fee7ba91beefdbb4c1d124795a17562aaf0262d0ea9"
+  },
+  {
+    "bytes": 6993,
+    "path": "preflight/t004-inventory.json",
+    "sha256": "1c3b3c6a3582a639ec04524031401436cdc82738ca63ce79e447dee64a339ee7"
+  },
+  {
+    "bytes": 7473,
+    "path": "preflight/t005-inventory.json",
+    "sha256": "6843f884d707f179972534400d629bd5168bd20f660964568a41b42785b4f9c4"
+  },
+  {
+    "bytes": 8694,
+    "path": "preflight/t006-inventory.json",
+    "sha256": "737d30c246a9f15def98bf427be8a97e4dfd6fb770759e7c8346479bc04149bd"
+  },
+  {
+    "bytes": 14438,
+    "path": "preflight/t007-inventory.json",
+    "sha256": "4ca5fc0e37e1bff83cc8b6239f9e015a027c38bb1214c452853debb297f6aa43"
+  },
+  {
+    "bytes": 13527,
+    "path": "preflight/t008-inventory.json",
+    "sha256": "61fe536d4b7c8b871a9bbab4cd85fe44fe6ca91185ad1dc4a9da13632140ef95"
+  },
+  {
+    "bytes": 530729,
+    "path": "representative/first_half/events.jsonl",
+    "sha256": "234e0e45f396e5260b0a67bb9afb911eb8b9afdda2e8281e50ee65ec8f7a08a7"
+  },
+  {
+    "bytes": 1768,
+    "path": "representative/first_half/manifest.json",
+    "sha256": "1b20e9db6878dc369b8f55facc40c47c52854d523552a2da3a3b12550f8afb31"
+  },
+  {
+    "bytes": 537913,
+    "path": "representative/first_half/snapshot.json",
+    "sha256": "9b492e4b57ccc1115b94de0c4416de3b6263270c3a3c17d1c7133d75776cfe67"
+  },
+  {
+    "bytes": 6730,
+    "path": "representative/first_half/summary.json",
+    "sha256": "d997f20eb4cd39a7b83ced9f6498a71af388b4430cdb26f03f90577586cef5fd"
+  },
+  {
+    "bytes": 1066384,
+    "path": "representative/full/events.jsonl",
+    "sha256": "559194c4e21bfd701ffd6ecc20fd487cdad2980336a15ec7c724f229d770a417"
+  },
+  {
+    "bytes": 1768,
+    "path": "representative/full/manifest.json",
+    "sha256": "c88f7ff6ffedac5a829309ec0664215dd12ad303ee3c965299cddf34a9b86d81"
+  },
+  {
+    "bytes": 1076510,
+    "path": "representative/full/snapshot.json",
+    "sha256": "61827ba1fd77df347aaceafa79147127cca3f4cca8f994aaa311a8115f809943"
+  },
+  {
+    "bytes": 9763,
+    "path": "representative/full/summary.json",
+    "sha256": "26d863718364e70e27acc64ed259c7de3ba59590928af1616fc224abd30aa7f0"
+  },
+  {
+    "bytes": 1066384,
+    "path": "representative/resumed/events.jsonl",
+    "sha256": "559194c4e21bfd701ffd6ecc20fd487cdad2980336a15ec7c724f229d770a417"
+  },
+  {
+    "bytes": 1768,
+    "path": "representative/resumed/manifest.json",
+    "sha256": "c88f7ff6ffedac5a829309ec0664215dd12ad303ee3c965299cddf34a9b86d81"
+  },
+  {
+    "bytes": 1076510,
+    "path": "representative/resumed/snapshot.json",
+    "sha256": "61827ba1fd77df347aaceafa79147127cca3f4cca8f994aaa311a8115f809943"
+  },
+  {
+    "bytes": 9763,
+    "path": "representative/resumed/summary.json",
+    "sha256": "82fd9a59f01e308f55f6525133bda26a46cbf4b2ba47aa6c2366b3a96a065100"
+  },
+  {
+    "bytes": 6123,
+    "path": "review/audit_selection.py",
+    "sha256": "61136967c1f8d4c0a5c1f16f132c334af8c0a8fd5f0f9c377d0d3c540015be81"
+  },
+  {
+    "bytes": 1322,
+    "path": "review/selection-audit.json",
+    "sha256": "2c6d0f3aa27ec39bf78355fe4189dfd30443d17971dd3b3468e5d7cc690e255e"
+  },
+  {
+    "bytes": 225,
+    "path": "review/tests.json",
+    "sha256": "eaaac82d37fb76ecd55bd13c580e7dacf82dabd4f97dd6a3f8f95a4f6ca5f665"
+  },
+  {
+    "bytes": 14886,
+    "path": "review/tests.txt",
+    "sha256": "bd1e797847bd0cfbdac2c4c97ff192a35a400a5b8072f9bb22ea85c2b1dbdea1"
+  },
+  {
+    "bytes": 879,
+    "path": "review/verification.json",
+    "sha256": "076e993ff8bba48fe5cd3eaf83302833d95f454e2ea487dde9b35b10ea91d4d7"
+  },
+  {
+    "bytes": 3476,
+    "path": "review/verify_compatibility.py",
+    "sha256": "2b4651c855c8c11bb949354c77b1ffeade8f7cb8507a6182f14322dcd5176a3d"
+  },
+  {
+    "bytes": 11188,
+    "path": "source_bundle/docs/experiments/T009-PROTOCOL.md",
+    "sha256": "5bacd4da1b1e74c9a9ed0f07e54a25575c077855b3813c6036068e76cb672eb2"
+  },
+  {
+    "bytes": 8850,
+    "path": "source_bundle/docs/tasks/T009.md",
+    "sha256": "3a3dff75e4988b2368b40bc782eadd1f2b8ed36d720d5cc2c875e6223b639792"
+  },
+  {
+    "bytes": 5643,
+    "path": "source_bundle/manifest.json",
+    "sha256": "b59ae2c66576632bfa125ff69ebfd6b445b0194c41fdbf231d94a114831083f6"
+  },
+  {
+    "bytes": 64,
+    "path": "source_bundle/soccer_sim/__init__.py",
+    "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+  },
+  {
+    "bytes": 5497,
+    "path": "source_bundle/soccer_sim/__main__.py",
+    "sha256": "f3a0bb21ae54ab964e0b910c9bc22eb3a2fb9ca44032245170af74e2cdc766f5"
+  },
+  {
+    "bytes": 2380,
+    "path": "source_bundle/soccer_sim/advice.py",
+    "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+  },
+  {
+    "bytes": 14457,
+    "path": "source_bundle/soccer_sim/experiment_t002.py",
+    "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+  },
+  {
+    "bytes": 8927,
+    "path": "source_bundle/soccer_sim/experiment_t003.py",
+    "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+  },
+  {
+    "bytes": 12647,
+    "path": "source_bundle/soccer_sim/experiment_t004.py",
+    "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+  },
+  {
+    "bytes": 12114,
+    "path": "source_bundle/soccer_sim/experiment_t005.py",
+    "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+  },
+  {
+    "bytes": 9948,
+    "path": "source_bundle/soccer_sim/experiment_t006.py",
+    "sha256": "872358c291967c739b75e2d499e3d7e36a844080ba7e4abfdcae71e699ef86fd"
+  },
+  {
+    "bytes": 12058,
+    "path": "source_bundle/soccer_sim/experiment_t007.py",
+    "sha256": "77e066cec6abea9bf56e54db34583689a6119d2182622883a16b5d370c62bdec"
+  },
+  {
+    "bytes": 19130,
+    "path": "source_bundle/soccer_sim/experiment_t008.py",
+    "sha256": "49b2c8e4a95811820673c8e1234b509423b4e02a4aebc904511536d53ca26676"
+  },
+  {
+    "bytes": 22347,
+    "path": "source_bundle/soccer_sim/experiment_t009.py",
+    "sha256": "b202a6494cbf023ac3e13961a5348155345477834ebf3feebf823af3f368da98"
+  },
+  {
+    "bytes": 7833,
+    "path": "source_bundle/soccer_sim/experiments.py",
+    "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+  },
+  {
+    "bytes": 69311,
+    "path": "source_bundle/soccer_sim/match_2d.py",
+    "sha256": "85e475df0257616ad5daa08b216d8bbe42333d4e08a6b60625ce4dde29a9fe7c"
+  },
+  {
+    "bytes": 23669,
+    "path": "source_bundle/soccer_sim/multi_coach.py",
+    "sha256": "366d192bcaf9ba27effe524e3d5b4943a17104da7eae00d178eab5a1148fc393"
+  },
+  {
+    "bytes": 6279,
+    "path": "source_bundle/soccer_sim/multi_storage.py",
+    "sha256": "47d6bfad0b89a312b0178d501a5abcddd81d69f3345a7823528054adc790e046"
+  },
+  {
+    "bytes": 2298,
+    "path": "source_bundle/soccer_sim/observation.py",
+    "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+  },
+  {
+    "bytes": 5604,
+    "path": "source_bundle/soccer_sim/policy.py",
+    "sha256": "209381ece43689f1fb37e4e1149c27d1139b3a9520e410be94d489396dcae015"
+  },
+  {
+    "bytes": 82791,
+    "path": "source_bundle/soccer_sim/selection_loop.py",
+    "sha256": "3bf3d0ba45bf213ad86d49086a6055b053c301aec8d3debbe0cdafbf8086051c"
+  },
+  {
+    "bytes": 17340,
+    "path": "source_bundle/soccer_sim/simulation.py",
+    "sha256": "42644476ee757ad1c47f741f1b8cda0991bb8aafcad0a5fc9b9030beb54438e5"
+  },
+  {
+    "bytes": 12071,
+    "path": "source_bundle/soccer_sim/state.py",
+    "sha256": "01bb927daa06d4a7f91ef8f38e3fdddc1e7b4baa5ea033faf3fd3e3e07839424"
+  },
+  {
+    "bytes": 17495,
+    "path": "source_bundle/soccer_sim/storage.py",
+    "sha256": "64aea665707825a55086650ae16b25212ff8b8f60d490fa27d1a4ceb4708a99a"
+  },
+  {
+    "bytes": 10005,
+    "path": "source_bundle/tests/test_t001.py",
+    "sha256": "cf1c672f8a257c8f5890f9fc26137e7bc44800c43eeddac7e2b0284c3106e552"
+  },
+  {
+    "bytes": 10849,
+    "path": "source_bundle/tests/test_t002.py",
+    "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+  },
+  {
+    "bytes": 15043,
+    "path": "source_bundle/tests/test_t003.py",
+    "sha256": "1c272a8ee3a2f5e4470f88015a5c4d1b22746adf0f55d3685a1b221377b1db46"
+  },
+  {
+    "bytes": 13707,
+    "path": "source_bundle/tests/test_t004.py",
+    "sha256": "b11ad8757f326488f8b62eba5beea6d414fd5112e4f95b703c769453937bb98b"
+  },
+  {
+    "bytes": 19835,
+    "path": "source_bundle/tests/test_t005.py",
+    "sha256": "26aee43a83cc233a55b699b0136adc9b11b051e2954d512b86345562969c06fd"
+  },
+  {
+    "bytes": 12197,
+    "path": "source_bundle/tests/test_t006.py",
+    "sha256": "140afd1e0a3cb52be50200ae20a430a7607ed7e4c59975361d4ebd045c5b1c90"
+  },
+  {
+    "bytes": 15721,
+    "path": "source_bundle/tests/test_t007.py",
+    "sha256": "9cd59302a21e80cf0e7c54f473f2b3715a5ca7019edb8a57c0760400f9b12b59"
+  },
+  {
+    "bytes": 14767,
+    "path": "source_bundle/tests/test_t008.py",
+    "sha256": "ac9f37137508f0d824418c23a04171e0d69ff6950f6fcecbdad09b1a0f23f966"
+  },
+  {
+    "bytes": 11872,
+    "path": "source_bundle/tests/test_t009.py",
+    "sha256": "e11b62ccf0617c3ce311bb985ae90b8de207006365ad352817a3f8bbb4c424c6"
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "all_passed": true,
+  "author": "Antigravity (Gemini 4 Argon)",
+  "conditions_seed_100": {
+    "coupled_stay": {
+      "counts": {
+        "advice_feedback": 146,
+        "coach_training_decision": 288,
+        "lineup_decision": 24,
+        "player_training_decision": 432,
+        "transfer_window_decision": 12
+      },
+      "mismatch_count": 0,
+      "mismatches": [],
+      "total_decisions_and_feedback_audited": 902
+    },
+    "coupled_transfer": {
+      "counts": {
+        "advice_feedback": 147,
+        "coach_training_decision": 288,
+        "lineup_decision": 24,
+        "player_training_decision": 432,
+        "transfer_window_decision": 12
+      },
+      "mismatch_count": 0,
+      "mismatches": [],
+      "total_decisions_and_feedback_audited": 903
+    },
+    "decoupled_stay": {
+      "counts": {
+        "advice_feedback": 146,
+        "coach_training_decision": 288,
+        "lineup_decision": 24,
+        "player_training_decision": 432,
+        "transfer_window_decision": 12
+      },
+      "mismatch_count": 0,
+      "mismatches": [],
+      "total_decisions_and_feedback_audited": 902
+    },
+    "decoupled_transfer": {
+      "counts": {
+        "advice_feedback": 153,
+        "coach_training_decision": 288,
+        "lineup_decision": 24,
+        "player_training_decision": 432,
+        "transfer_window_decision": 12
+      },
+      "mismatch_count": 0,
+      "mismatches": [],
+      "total_decisions_and_feedback_audited": 909
+    }
+  },
+  "policy_functions_called": 0,
+  "representative_seed_17_coupled_transfer": {
+    "counts": {
+      "advice_feedback": 156,
+      "coach_training_decision": 288,
+      "lineup_decision": 24,
+      "player_training_decision": 432,
+      "transfer_window_decision": 12
+    },
+    "mismatch_count": 0,
+    "mismatches": [],
+    "total_decisions_and_feedback_audited": 912
+  },
+  "task": "T010",
+  "total_mismatches": 0
+}

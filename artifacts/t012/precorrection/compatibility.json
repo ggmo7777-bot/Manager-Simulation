@@ -1,0 +1,152 @@
+{
+  "excludes": [
+    "identity",
+    "new empty interventions",
+    "new false research_branch"
+  ],
+  "matched": 24,
+  "new_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t011-league-economy-score-v2",
+    "previous_revision_author": "Codex (T011-R1)",
+    "revision_author": "Sol 6.1 High (T012)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t011-league-economy-v2",
+    "save": 13,
+    "source_sha256": "0c14eb4873528a800c78116bcfea7e661777a69995de62d8cdb53be0b3c2f02a",
+    "world_kind": "league_economy_loop"
+  },
+  "old_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t011-league-economy-score-v2",
+    "revision_author": "Codex (T011-R1)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t011-league-economy-v2",
+    "save": 12,
+    "source_sha256": "065520159972c459515c27adf338986994b99693c901cb39c4ae30709c6df441",
+    "world_kind": "league_economy_loop"
+  },
+  "runs": [
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "84904d29873af18d3b3ae4c6c5b1e5c0c18ccf8c90a677cd8d56563c21f84c88",
+      "seed": 1
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "00555799480208d8fde0f570dac9a11fdda73ed168aa588a47cec0994c418e38",
+      "seed": 2
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "9e44cb6e5ef8232ffb9aeb0dccbbbebd72710422dc8971396a7b670a22aa6652",
+      "seed": 3
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "68810cc2394d4d45fef65440720eaebfc039f4a677dba9635d0ea33bb94c9cfd",
+      "seed": 100
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "acf25db3a9e421a4f59529d88e8a2fe61055dd5253861b58c6f61ae88005e3c5",
+      "seed": 101
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "projection_sha256": "abc1fe7d1d14c3b2f0cfb672cacd059901f479ada461e542bac6de2baf8dc76a",
+      "seed": 102
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "689a50c59cf0a89234459ad74c25b2bb29fdd98a016ce08e4a0da373e5ffb7c6",
+      "seed": 1
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "db5b96eb2a2b6b149678ac5e4c9850fd149129ba819a87ce3377a363012bd759",
+      "seed": 2
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "55df66e3420d3d99355f58fafce0712c1df425d9cff694e1b9f15b70e9809305",
+      "seed": 3
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "685f19d57f2345442ecad7f4eb1a7d6c8aeab2ebcd2e517380d7eec4ad01e7ef",
+      "seed": 100
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "78aeaf2911e956c19f5c57072ff75924b5d1f8389322274e26db641135324725",
+      "seed": 101
+    },
+    {
+      "condition": "closed_solidarity",
+      "projection_sha256": "fcf6cc8341b80a7c10d8cbd37b6c48b615d16b9f2769ea133963e75d1bdd303b",
+      "seed": 102
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "77c2e8b76615ce3e2749e67a1cf264b14541f33be952c2a8fbc50a48c83b72aa",
+      "seed": 1
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "1b167a06af63616becca97ece9eabbfdc24e80305913b5012c416ec0fb7c2b23",
+      "seed": 2
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "605ea63833ec3124b4274af256d113a7a53dc4ce18fb0727ed1cc457bb4ce215",
+      "seed": 3
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "b7c3a620c19277c0e9013b3130eac33fd95605bacff31f57548940aaaa7bac5b",
+      "seed": 100
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "b7667ae9444d75ecd5ffaa629328d982be6a47ca8e50c767dde026db64284032",
+      "seed": 101
+    },
+    {
+      "condition": "open_no_solidarity",
+      "projection_sha256": "5f156f1ee3107def21626a14f25e2612a51ce67698abb1324a920a8fd835bb7b",
+      "seed": 102
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "ae3d1d8e545902548b8a5a0d86c816702ff080c32066343f4fb725a87b2a8b28",
+      "seed": 1
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "fedfd0f29ca0aea92aa00ae27553aa3a9edf775611f317e0334e0f4d2e223c17",
+      "seed": 2
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "43848d21df9b95a84b1900a512282e311648187d78b782dc47ab3d52353b37da",
+      "seed": 3
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "9ebe03af44156f9142cbc0c3ae18d25cb681926b17ca8d89f8ae5a6f3f708453",
+      "seed": 100
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "9abf62f983648a7b932db2f514f794ca137f656094132d0e04ed5a98cf8671f8",
+      "seed": 101
+    },
+    {
+      "condition": "open_solidarity",
+      "projection_sha256": "0e7d08264643387b852c5a3611dca6bc794b82243481d4c6d676accdcc22abe1",
+      "seed": 102
+    }
+  ]
+}

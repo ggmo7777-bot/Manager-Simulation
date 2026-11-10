@@ -1,0 +1,17 @@
+{
+  "baseline_resume_byte_equal": true,
+  "bundle_file_count": 14,
+  "comparison_runs": 420,
+  "date_jst": "2026-11-05",
+  "old_files_unchanged": 34,
+  "old_new_semantic_pairs": 120,
+  "self_estimate_negative_control_pairs": 60,
+  "tests_passed": 21,
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t002-training-v2",
+    "save": 2,
+    "source_sha256": "bd6ce4245252baefe7de97bc7fa6b91ce94245be8200c3664b70c9f8d63c1368"
+  }
+}

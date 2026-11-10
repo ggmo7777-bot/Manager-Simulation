@@ -1,0 +1,46 @@
+{
+  "all_verified": true,
+  "author": "Antigravity (Gemini 4 Argon)",
+  "condition_seed100_audits": {
+    "coupled_feedback": {
+      "advice_feedback_events": 81,
+      "coach_training_decisions": 144,
+      "lineup_decisions": 12,
+      "player_training_decisions": 216,
+      "total_decisions": 372
+    },
+    "coupled_prior": {
+      "advice_feedback_events": 79,
+      "coach_training_decisions": 144,
+      "lineup_decisions": 12,
+      "player_training_decisions": 216,
+      "total_decisions": 372
+    },
+    "decoupled_feedback": {
+      "advice_feedback_events": 77,
+      "coach_training_decisions": 144,
+      "lineup_decisions": 12,
+      "player_training_decisions": 216,
+      "total_decisions": 372
+    },
+    "decoupled_prior": {
+      "advice_feedback_events": 79,
+      "coach_training_decisions": 144,
+      "lineup_decisions": 12,
+      "player_training_decisions": 216,
+      "total_decisions": 372
+    }
+  },
+  "date_jst": "2026-11-07",
+  "policy_functions_called": 0,
+  "representative_seed17_audit": {
+    "advice_feedback_events": 56,
+    "coach_training_decisions": 144,
+    "lineup_decisions": 12,
+    "player_training_decisions": 216,
+    "total_decisions": 372
+  },
+  "total_decisions_independently_verified": 1860,
+  "total_feedback_events_verified": 372,
+  "world_kind": "selection_loop"
+}

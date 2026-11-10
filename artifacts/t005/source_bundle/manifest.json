@@ -1,0 +1,124 @@
+{
+  "external_test_fixtures": [
+    "artifacts/t001",
+    "artifacts/t002",
+    "artifacts/t003",
+    "artifacts/t004",
+    "artifacts/t005/preflight"
+  ],
+  "files": [
+    {
+      "bytes": 7993,
+      "path": "docs/experiments/T005-PROTOCOL.md",
+      "sha256": "65316ae57b9703adb6421cbbd30facd53c3252f9be0c65e9e884414a2f864230"
+    },
+    {
+      "bytes": 4447,
+      "path": "docs/tasks/T005.md",
+      "sha256": "e10e36cbb0a9d8d6c13e71749a071af4de25cee3c083a1d25fb41c0a55563430"
+    },
+    {
+      "bytes": 93,
+      "path": "pyproject.toml",
+      "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+    },
+    {
+      "bytes": 64,
+      "path": "soccer_sim/__init__.py",
+      "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+    },
+    {
+      "bytes": 2832,
+      "path": "soccer_sim/__main__.py",
+      "sha256": "3cd657b2877029ba81104114c29d566d1a36fc4eea0dea04491bd7b1001f475d"
+    },
+    {
+      "bytes": 2380,
+      "path": "soccer_sim/advice.py",
+      "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+    },
+    {
+      "bytes": 14457,
+      "path": "soccer_sim/experiment_t002.py",
+      "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+    },
+    {
+      "bytes": 8927,
+      "path": "soccer_sim/experiment_t003.py",
+      "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+    },
+    {
+      "bytes": 12647,
+      "path": "soccer_sim/experiment_t004.py",
+      "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+    },
+    {
+      "bytes": 12114,
+      "path": "soccer_sim/experiment_t005.py",
+      "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+    },
+    {
+      "bytes": 7833,
+      "path": "soccer_sim/experiments.py",
+      "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+    },
+    {
+      "bytes": 2298,
+      "path": "soccer_sim/observation.py",
+      "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+    },
+    {
+      "bytes": 3954,
+      "path": "soccer_sim/policy.py",
+      "sha256": "0ca608096064a8553407caa634a9d5e41342ed4598f0b55cd74145a8235525c4"
+    },
+    {
+      "bytes": 17340,
+      "path": "soccer_sim/simulation.py",
+      "sha256": "79599012ba27b1f21f70218c6579d28354b21173e231beda3c8fafadd50dd5db"
+    },
+    {
+      "bytes": 11898,
+      "path": "soccer_sim/state.py",
+      "sha256": "6ee0a87e05c733c5c2f17ce3762ca2cde90ffd1b4efcaf0754a0eb1a29dee8db"
+    },
+    {
+      "bytes": 14966,
+      "path": "soccer_sim/storage.py",
+      "sha256": "c19c8bb105e20c2cfe191140271e1a52a1c5bd8d6faecd4d2351b31f93290e75"
+    },
+    {
+      "bytes": 10005,
+      "path": "tests/test_t001.py",
+      "sha256": "cf1c672f8a257c8f5890f9fc26137e7bc44800c43eeddac7e2b0284c3106e552"
+    },
+    {
+      "bytes": 10849,
+      "path": "tests/test_t002.py",
+      "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+    },
+    {
+      "bytes": 15043,
+      "path": "tests/test_t003.py",
+      "sha256": "1c272a8ee3a2f5e4470f88015a5c4d1b22746adf0f55d3685a1b221377b1db46"
+    },
+    {
+      "bytes": 13707,
+      "path": "tests/test_t004.py",
+      "sha256": "b11ad8757f326488f8b62eba5beea6d414fd5112e4f95b703c769453937bb98b"
+    },
+    {
+      "bytes": 19835,
+      "path": "tests/test_t005.py",
+      "sha256": "26aee43a83cc233a55b699b0136adc9b11b051e2954d512b86345562969c06fd"
+    }
+  ],
+  "note": "Frozen runtime can run/resume alone; integration tests require the listed fixtures at their project-relative paths. Do not edit this bundle.",
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t005-training-v5",
+    "save": 5,
+    "source_sha256": "ef6415602e782734b8baa47bd13a0fbf05931452368868d902b37afbf6c92ce1"
+  }
+}

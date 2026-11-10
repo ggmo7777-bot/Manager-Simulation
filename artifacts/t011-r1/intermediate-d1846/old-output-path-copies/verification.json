@@ -1,0 +1,34 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "comparison_excludes_only": [
+    "identity.source_sha256"
+  ],
+  "date_jst": "2026-11-07",
+  "legacy_t010_full_history_comparisons": 240,
+  "main_comparison_runs": 240,
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32,
+    "t003": 38,
+    "t004": 44,
+    "t005": 47,
+    "t006": 55,
+    "t007": 88,
+    "t008": 83,
+    "t009": 64,
+    "t010": 60
+  },
+  "representative_hash": "decb846f1303a255ee32959aa6c071480e4c838d058a11d47ad58e608c93db03",
+  "representative_resume_byte_equal": true,
+  "total_frozen_files_verified": 545,
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t011-league-economy-score-v2",
+    "revision_author": "Codex (T011-R1)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t011-league-economy-v2",
+    "save": 12,
+    "source_sha256": "d1846e8a0c5037bbf24567c05534bd6b37643b011f065cdd9569002fc9a8dffb",
+    "world_kind": "league_economy_loop"
+  }
+}

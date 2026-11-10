@@ -1,0 +1,2313 @@
+{
+  "admission_totals": {
+    "claim_accepted": 10,
+    "claim_duplicate": 3,
+    "payments": 10,
+    "requests": 167
+  },
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t017.py": "b62622c0b15c158d24989bcb9dc44a6676e90234833851b2e5147071df91d293"
+  },
+  "changed_package_files": [
+    "__main__.py"
+  ],
+  "cli_api_equal": 14,
+  "comparisons": [
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.681217,
+            "gain": 0.21455,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.466438,
+            "gain": 0.069771,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.685644,
+            "gain": 0.225644,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.705822,
+            "gain": 0.199155,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.472926,
+            "gain": 0.079593,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.675287,
+            "gain": 0.215287,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.678862,
+            "gain": 0.228862,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.702731,
+            "gain": 0.202731,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "closed_no_solidarity",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 192
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "9d2d6c4ac4b83f90b959dc7dd5fbda88d151611159c6734c4b4b189f350ddbb7"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.681217,
+            "gain": 0.21455,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.466438,
+            "gain": 0.069771,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.685644,
+            "gain": 0.225644,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.705822,
+            "gain": 0.199155,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.472926,
+            "gain": 0.079593,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.675287,
+            "gain": 0.215287,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.678862,
+            "gain": 0.228862,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.702731,
+            "gain": 0.202731,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "closed_solidarity",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 192
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "f39ae4509160abd12e2cf8380eb439fc2bde225af872fff279c59f86bc8b18cb"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 14
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.686705,
+            "gain": 0.220038,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.459378,
+            "gain": 0.062711,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.696669,
+            "gain": 0.236669,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.72816,
+            "gain": 0.221493,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": false,
+            "player_id": "p3",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.466081,
+            "gain": 0.072748,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.695094,
+            "gain": 0.235094,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.689916,
+            "gain": 0.239916,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.725401,
+            "gain": 0.225401,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "open_no_solidarity",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 209
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "a9d1442ea75752b4416a9780750451eb69b750b360f363d2bfabdd32e557921d"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 2,
+          "payments": 2
+        },
+        "no_duplicate_payment": true,
+        "requests": 16
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.692067,
+            "gain": 0.2254,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.459378,
+            "gain": 0.062711,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.701986,
+            "gain": 0.241986,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.72816,
+            "gain": 0.221493,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": false,
+            "player_id": "p3",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.466081,
+            "gain": 0.072748,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.695094,
+            "gain": 0.235094,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.689916,
+            "gain": 0.239916,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.725401,
+            "gain": 0.225401,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "open_solidarity",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 214
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "b92636c966374d8ce8b7db760a465af743919c7c6c2da877870f47e8ff54e094"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 2,
+          "payments": 2
+        },
+        "no_duplicate_payment": true,
+        "requests": 16
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.645718,
+            "gain": 0.179051,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.459378,
+            "gain": 0.062711,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.649356,
+            "gain": 0.189356,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.708849,
+            "gain": 0.202182,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": false,
+            "player_id": "p3",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.466081,
+            "gain": 0.072748,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.678658,
+            "gain": 0.218658,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.673697,
+            "gain": 0.223697,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.699838,
+            "gain": 0.199838,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "fixed_budget_no_inflow",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 180
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "0eac2f0e10ad406c58aaec9209368b91e0658e2dcfd000bd50d3b7be6bd16f44"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 1,
+          "payments": 1
+        },
+        "no_duplicate_payment": true,
+        "requests": 24
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.692067,
+            "gain": 0.2254,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.466438,
+            "gain": 0.069771,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.701986,
+            "gain": 0.241986,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.72816,
+            "gain": 0.221493,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": false,
+            "player_id": "p3",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.466081,
+            "gain": 0.072748,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.414072,
+            "gain": 0.050739,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": false,
+            "player_id": "p6",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.695094,
+            "gain": 0.235094,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.689916,
+            "gain": 0.239916,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.718307,
+            "gain": 0.218307,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "hoarder_buyer_policy",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 220
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "b1651e78c1b48928714bcb1ded3652fb17aadb809ffa734df33d8681af600c32"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 2,
+          "claim_duplicate": 2,
+          "payments": 2
+        },
+        "no_duplicate_payment": true,
+        "requests": 18
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.692067,
+            "gain": 0.2254,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.466667,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.680401,
+            "gain": 0.067068,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.613333,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.459378,
+            "gain": 0.062711,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.396667,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.417827,
+            "gain": 0.05116,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.366667,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.701986,
+            "gain": 0.241986,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.72816,
+            "gain": 0.221493,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.506667,
+            "never_transferred": false,
+            "player_id": "p3",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.682787,
+            "gain": 0.062787,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.62,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.466081,
+            "gain": 0.072748,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.393333,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.417121,
+            "gain": 0.053788,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.363333,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.695094,
+            "gain": 0.235094,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.46,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.689916,
+            "gain": 0.239916,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.45,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.725401,
+            "gain": 0.225401,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.5,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "exploit_churn_guard",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 214
+      },
+      "population": "fixed",
+      "seed": 100,
+      "snapshot_sha256": "bd607350913af77d59055b468bf0987fe6579b9ac7a851a4e9504ce28a014a1c"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.659857,
+            "gain": 0.199127,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.683402,
+            "gain": 0.226447,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.678165,
+            "gain": 0.214402,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.554141,
+            "gain": 0.044198,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.682931,
+            "gain": 0.229007,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.697105,
+            "gain": 0.200479,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.665856,
+            "gain": 0.203014,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "closed_no_solidarity_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 222
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "8bf5fc6b66000309d6b98fc9864653a45167ef254ace06b5cdfae787a9506f1b"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_a",
+            "final_skill": 0.659857,
+            "gain": 0.199127,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": true,
+            "player_id": "p1",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.683402,
+            "gain": 0.226447,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.678165,
+            "gain": 0.214402,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.554141,
+            "gain": 0.044198,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.682931,
+            "gain": 0.229007,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.697105,
+            "gain": 0.200479,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.665856,
+            "gain": 0.203014,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "closed_solidarity_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 222
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "a85637fe161c7b922558f1111869685ef4e0137eb247994b32d615590cf26f40"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 14
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_b",
+            "final_skill": 0.681915,
+            "gain": 0.221185,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": false,
+            "player_id": "p1",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.699232,
+            "gain": 0.242277,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.694109,
+            "gain": 0.230346,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.549696,
+            "gain": 0.039753,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.682931,
+            "gain": 0.229007,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.697105,
+            "gain": 0.200479,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.665856,
+            "gain": 0.203014,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "open_no_solidarity_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 229
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "291d41d4ff23bb25414ce6ab1e607ccc4ca1c0c7ee6387fef34d2960ea43e552"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 1,
+          "payments": 1
+        },
+        "no_duplicate_payment": true,
+        "requests": 15
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_b",
+            "final_skill": 0.681915,
+            "gain": 0.221185,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": false,
+            "player_id": "p1",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.699232,
+            "gain": 0.242277,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.694109,
+            "gain": 0.230346,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.549696,
+            "gain": 0.039753,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.682931,
+            "gain": 0.229007,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.697105,
+            "gain": 0.200479,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.665856,
+            "gain": 0.203014,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "open_solidarity_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 232
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "19dd71ed0a9cf82806d9576dd903f9b914ea92a2c2cad443fb9bc6d8794078e3"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 14
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_b",
+            "final_skill": 0.648788,
+            "gain": 0.188058,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": false,
+            "player_id": "p1",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.67838,
+            "gain": 0.221425,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.677599,
+            "gain": 0.213836,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.554141,
+            "gain": 0.044198,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.650707,
+            "gain": 0.196783,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.672123,
+            "gain": 0.175497,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.631781,
+            "gain": 0.168939,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "fixed_budget_no_inflow_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 193
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "c3dcd44656361f5ad178135f47237d440bf4332d1c6133777abe83ab12e6e905"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 1,
+          "payments": 1
+        },
+        "no_duplicate_payment": true,
+        "requests": 20
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_b",
+            "final_skill": 0.68924,
+            "gain": 0.22851,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": false,
+            "player_id": "p1",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.699232,
+            "gain": 0.242277,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.694109,
+            "gain": 0.230346,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.470731,
+            "gain": 0.071948,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": false,
+            "player_id": "p5",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.549696,
+            "gain": 0.039753,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.702239,
+            "gain": 0.248315,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.706673,
+            "gain": 0.210047,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.68219,
+            "gain": 0.219348,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": false,
+            "player_id": "p9",
+            "transfers": 1
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "hoarder_buyer_policy_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 242
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "0dd143f920d1aa6a4237b57c8c2fa0d75fa7246ccfa45512f0fb292adc8cc15f"
+    },
+    {
+      "admission_audit": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 1,
+          "claim_duplicate": 1,
+          "payments": 1
+        },
+        "no_duplicate_payment": true,
+        "requests": 16
+      },
+      "cli_api_state_events_summary_equal": true,
+      "cohort_audit": {
+        "members_counts_and_gains_equal": true,
+        "players": [
+          {
+            "final_club": "club_b",
+            "final_skill": 0.681915,
+            "gain": 0.221185,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.46073,
+            "never_transferred": false,
+            "player_id": "p1",
+            "transfers": 1
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.553018,
+            "gain": 0.047655,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.505363,
+            "never_transferred": true,
+            "player_id": "p10",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.496321,
+            "gain": 0.084639,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.411682,
+            "never_transferred": true,
+            "player_id": "p11",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_d",
+            "final_skill": 0.52046,
+            "gain": 0.105077,
+            "initial_academy": false,
+            "initial_club": "club_d",
+            "initial_skill": 0.415383,
+            "never_transferred": true,
+            "player_id": "p12",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.699232,
+            "gain": 0.242277,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.456955,
+            "never_transferred": true,
+            "player_id": "p2",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_a",
+            "final_skill": 0.694109,
+            "gain": 0.230346,
+            "initial_academy": true,
+            "initial_club": "club_a",
+            "initial_skill": 0.463763,
+            "never_transferred": true,
+            "player_id": "p3",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.575903,
+            "gain": 0.070754,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.505149,
+            "never_transferred": true,
+            "player_id": "p4",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.470677,
+            "gain": 0.071894,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.398783,
+            "never_transferred": true,
+            "player_id": "p5",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_b",
+            "final_skill": 0.549696,
+            "gain": 0.039753,
+            "initial_academy": false,
+            "initial_club": "club_b",
+            "initial_skill": 0.509943,
+            "never_transferred": true,
+            "player_id": "p6",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.682931,
+            "gain": 0.229007,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.453924,
+            "never_transferred": true,
+            "player_id": "p7",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.697105,
+            "gain": 0.200479,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.496626,
+            "never_transferred": true,
+            "player_id": "p8",
+            "transfers": 0
+          },
+          {
+            "final_club": "club_c",
+            "final_skill": 0.665856,
+            "gain": 0.203014,
+            "initial_academy": true,
+            "initial_club": "club_c",
+            "initial_skill": 0.462842,
+            "never_transferred": true,
+            "player_id": "p9",
+            "transfers": 0
+          }
+        ],
+        "transfer_facts_equal": true
+      },
+      "condition": "exploit_churn_guard_sampled_population",
+      "days": 35,
+      "frozen_t016_state_and_summary_equal": true,
+      "ledger_audit": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 232
+      },
+      "population": "sampled",
+      "seed": 100,
+      "snapshot_sha256": "11fcb92b57e8dba49b63a5a394dbfe70eb188456cf9b4025b396cc4b6c85e731"
+    }
+  ],
+  "default_baseline_unchanged": true,
+  "elapsed_seconds": 24.126758540980518,
+  "evaluation_version": "t016-initial-cohort-v1",
+  "frozen_t016_equal": 14,
+  "help_has_all_seven_sampled_conditions": true,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 16,
+    "source_sha256": "b542bfdcea7b87eea39e01aa733105ca56ac225bc63adbd468d64b3c59b9b3d8",
+    "world_kind": "league_economy_loop"
+  },
+  "independently_audited_transactions": 2993,
+  "invalid_conditions_rejected_without_output": [
+    "baseline_sampled_population",
+    "league_unknown_sampled_population",
+    "league_open_solidarity_sampled_population_sampled_population"
+  ],
+  "limits": [
+    "one seed and 35-day CLI integration, not a new robustness study",
+    "same save16 but older source hashes still rejected",
+    "no population calibration or new world rules"
+  ],
+  "old_checkpoint_rejected_without_output": true,
+  "old_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 16,
+    "source_sha256": "b64227f57002046605fe1ac33dd59c63d81ad6a851f3bc7f53f202ba7002e7b4",
+    "world_kind": "league_economy_loop"
+  },
+  "parent_unchanged": true,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "sampled_branch_and_resume_api_equal": true,
+  "sampled_resume_equal": {
+    "events.jsonl": true,
+    "snapshot.json": true,
+    "summary.json": true
+  },
+  "task": "T017"
+}

@@ -1,0 +1,82 @@
+{
+  "baseline": {
+    "acceptance_rate": 0.49122807017543857,
+    "accepted_count": 560,
+    "days": 840,
+    "event_count": 17160,
+    "log_bytes": 7180734,
+    "mean_coach_absolute_error": 0.02914540969957751,
+    "mean_final_skill_gap": 0.0638339932869437,
+    "mean_self_absolute_error": 0.009490021587371953,
+    "mean_skill_gain": 0.39482665374304077,
+    "player_action_share": {
+      "A": 0.33035714285714285,
+      "B": 0.4107142857142857,
+      "rest": 0.2589285714285714
+    },
+    "proposal_count": 1140,
+    "rejected_count": 580,
+    "runs": 30,
+    "seconds": 0.21455433289520442
+  },
+  "homogeneous_rates": {
+    "acceptance_rate": 0.493859649122807,
+    "accepted_count": 563,
+    "days": 840,
+    "event_count": 17160,
+    "log_bytes": 7183708,
+    "mean_coach_absolute_error": 0.03704229875825484,
+    "mean_final_skill_gap": 0.039701208608159455,
+    "mean_self_absolute_error": 0.01009673970213284,
+    "mean_skill_gain": 0.4169061800443896,
+    "player_action_share": {
+      "A": 0.39166666666666666,
+      "B": 0.35773809523809524,
+      "rest": 0.2505952380952381
+    },
+    "proposal_count": 1140,
+    "rejected_count": 577,
+    "runs": 30,
+    "seconds": 0.21592300105839968
+  },
+  "no_belief_updates": {
+    "acceptance_rate": 0.6,
+    "accepted_count": 90,
+    "days": 840,
+    "event_count": 19140,
+    "log_bytes": 7179624,
+    "mean_coach_absolute_error": 0.3084696429873835,
+    "mean_final_skill_gap": 0.03603284685715454,
+    "mean_self_absolute_error": 0.3134696429873835,
+    "mean_skill_gain": 0.3184696429873835,
+    "player_action_share": {
+      "A": 0.4125,
+      "B": 0.37202380952380953,
+      "rest": 0.21547619047619046
+    },
+    "proposal_count": 150,
+    "rejected_count": 60,
+    "runs": 30,
+    "seconds": 0.22391424886882305
+  },
+  "no_noise": {
+    "acceptance_rate": 0.5263157894736842,
+    "accepted_count": 600,
+    "days": 840,
+    "event_count": 17160,
+    "log_bytes": 7109250,
+    "mean_coach_absolute_error": 0.021255561517634414,
+    "mean_final_skill_gap": 0.09764247840832374,
+    "mean_self_absolute_error": 0.003496376959591707,
+    "mean_skill_gain": 0.4055878797125079,
+    "player_action_share": {
+      "A": 0.25,
+      "B": 0.48214285714285715,
+      "rest": 0.26785714285714285
+    },
+    "proposal_count": 1140,
+    "rejected_count": 540,
+    "runs": 30,
+    "seconds": 0.2139975051395595
+  }
+}

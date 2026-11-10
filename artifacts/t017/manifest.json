@@ -1,0 +1,61 @@
+{
+  "task": "T017",
+  "date": "2026-11-09",
+  "implementation_author": "Sol 6.1 High (CLI only)",
+  "design_and_independent_verification": "Codex",
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 16,
+    "rules": "t015-sampled-population-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "source_sha256": "b542bfdcea7b87eea39e01aa733105ca56ac225bc63adbd468d64b3c59b9b3d8"
+  },
+  "evaluation_version": "t016-initial-cohort-v1",
+  "runtime": {
+    "python": "3.13.3",
+    "implementation": "cpython",
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "source_bundle_file_count": 140,
+  "changed_package_files": [
+    "__main__.py"
+  ],
+  "commands": [
+    "python3 -B -m unittest discover -s tests -v",
+    "python3 -B tools/check.py --suite fast",
+    "python3 -B experiments/t017.py --out artifacts/t017/comparison",
+    "python3 -B tools/artifact_inventory.py verify --inventory artifacts/t017/preflight/historical-inventory.json"
+  ],
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t017.py": "b62622c0b15c158d24989bcb9dc44a6676e90234833851b2e5147071df91d293"
+  },
+  "results": {
+    "all_tests": 196,
+    "fast_tests": 50,
+    "cli_api_and_frozen_equal": 14,
+    "transactions_independently_audited": 2993,
+    "sampled_resume_and_branch": true,
+    "historical_files_unchanged": 1911
+  },
+  "limits": [
+    "one seed and 35-day CLI integration, not a new robustness study",
+    "same save16 but older source hashes still rejected",
+    "no population calibration or new world rules"
+  ],
+  "locations": {
+    "comparison": "comparison/summary.json",
+    "actual_cli_commands": "comparison/commands.json",
+    "tests": "review/tests-all.txt",
+    "result_report": "docs/experiments/T017-RESULTS.md"
+  }
+}

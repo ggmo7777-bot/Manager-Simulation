@@ -1,0 +1,373 @@
+{
+  "clipped": {
+    "decision": {
+      "actor": "p2",
+      "causes": [
+        309,
+        312,
+        303,
+        210,
+        3
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "rest",
+            "method": null,
+            "score": 0.01769373461622749,
+            "target": null,
+            "terms": {
+              "recovery_value": 0.01769373461622749
+            }
+          },
+          {
+            "action": "A",
+            "method": "A",
+            "score": 0.02671068852907123,
+            "target": null,
+            "terms": {
+              "advice": 0.0,
+              "expected_gain": 0.010397960370001496,
+              "felt_fatigue_cost": -0.005687271840930264,
+              "preference": 0.022
+            }
+          },
+          {
+            "action": "B",
+            "method": "B",
+            "score": 0.019571741706240008,
+            "target": null,
+            "terms": {
+              "advice": -0.016499999999999997,
+              "expected_gain": 0.02775901354717027,
+              "felt_fatigue_cost": -0.005687271840930264,
+              "preference": 0.014
+            }
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "method": "A",
+          "score": 0.02671068852907123,
+          "target": null,
+          "terms": {
+            "advice": 0.0,
+            "expected_gain": 0.010397960370001496,
+            "felt_fatigue_cost": -0.005687271840930264,
+            "preference": 0.022
+          }
+        },
+        "memory_ids": [
+          303,
+          210,
+          3
+        ],
+        "observation_ids": [
+          309,
+          312
+        ],
+        "policy_version": "t001-score-v1",
+        "proposal_response": "rejected"
+      },
+      "day": 14,
+      "event_id": 317,
+      "kind": "decision",
+      "phase": "choice",
+      "target": "p2"
+    },
+    "gain_memories": [
+      {
+        "actor": "p2",
+        "causes": [
+          258,
+          286,
+          302,
+          295
+        ],
+        "data": {
+          "expected_after": 0.010397960370001496,
+          "expected_before": 0.020795920740002992,
+          "measured_gain": 0.0,
+          "method": "A",
+          "source": "self_observations"
+        },
+        "day": 13,
+        "event_id": 303,
+        "kind": "player_gain_belief",
+        "phase": "evening",
+        "target": "p2"
+      },
+      {
+        "actor": "p2",
+        "causes": [
+          166,
+          193,
+          209,
+          202
+        ],
+        "data": {
+          "expected_after": 0.02775901354717027,
+          "expected_before": 0.045298139269467054,
+          "measured_gain": 0.010219887824873486,
+          "method": "B",
+          "source": "self_observations"
+        },
+        "day": 9,
+        "event_id": 210,
+        "kind": "player_gain_belief",
+        "phase": "evening",
+        "target": "p2"
+      }
+    ],
+    "observations": [
+      {
+        "actor": "p2",
+        "causes": [
+          299
+        ],
+        "data": {
+          "fatigue_key": [
+            "felt-fatigue",
+            14,
+            "p2",
+            0
+          ],
+          "fatigue_signal": 0.1263838186873392,
+          "skill_key": [
+            "self-pre",
+            14,
+            "p2",
+            0
+          ],
+          "skill_signal": 0.6712399443570289,
+          "source": "self-pre"
+        },
+        "day": 14,
+        "event_id": 309,
+        "kind": "self_observation",
+        "phase": "morning",
+        "target": "p2"
+      },
+      {
+        "actor": "coach",
+        "causes": [
+          311,
+          305,
+          5
+        ],
+        "data": {
+          "action": "propose",
+          "expected_gain": 0.0395159959318939,
+          "method": "B",
+          "perceived_skill": 0.604840040681061,
+          "slots": 1,
+          "subjective_rate": 0.1
+        },
+        "day": 14,
+        "event_id": 312,
+        "kind": "coach_action",
+        "phase": "coach",
+        "target": "p2"
+      }
+    ]
+  },
+  "day": 14,
+  "player": "p2",
+  "prior_true_state_update": {
+    "actor": "p2",
+    "causes": [
+      297,
+      275
+    ],
+    "data": {
+      "fatigue_after": 0.12,
+      "fatigue_before": 0.0,
+      "skill_after": 0.6861318198692373,
+      "skill_before": 0.6755830574546988,
+      "skill_gain": 0.010548762414538504,
+      "source": "training_rule"
+    },
+    "day": 13,
+    "event_id": 299,
+    "kind": "state_update",
+    "phase": "resolve",
+    "target": "p2"
+  },
+  "scope": "First action divergence, same seed17; current signed adaptive versus frozen T003 clipped adaptive, excluding metadata differences.",
+  "signed": {
+    "decision": {
+      "actor": "p2",
+      "causes": [
+        309,
+        312,
+        303,
+        210,
+        3
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "rest",
+            "method": null,
+            "score": 0.01769373461622749,
+            "target": null,
+            "terms": {
+              "recovery_value": 0.01769373461622749
+            }
+          },
+          {
+            "action": "A",
+            "method": "A",
+            "score": 0.01605425199227691,
+            "target": null,
+            "terms": {
+              "advice": 0.0,
+              "expected_gain": -0.0002584761667928266,
+              "felt_fatigue_cost": -0.005687271840930264,
+              "preference": 0.022
+            }
+          },
+          {
+            "action": "B",
+            "method": "B",
+            "score": 0.019571741706240008,
+            "target": null,
+            "terms": {
+              "advice": -0.016499999999999997,
+              "expected_gain": 0.02775901354717027,
+              "felt_fatigue_cost": -0.005687271840930264,
+              "preference": 0.014
+            }
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "method": "B",
+          "score": 0.019571741706240008,
+          "target": null,
+          "terms": {
+            "advice": -0.016499999999999997,
+            "expected_gain": 0.02775901354717027,
+            "felt_fatigue_cost": -0.005687271840930264,
+            "preference": 0.014
+          }
+        },
+        "memory_ids": [
+          303,
+          210,
+          3
+        ],
+        "observation_ids": [
+          309,
+          312
+        ],
+        "policy_version": "t001-score-v1",
+        "proposal_response": "accepted"
+      },
+      "day": 14,
+      "event_id": 317,
+      "kind": "decision",
+      "phase": "choice",
+      "target": "p2"
+    },
+    "gain_memories": [
+      {
+        "actor": "p2",
+        "causes": [
+          258,
+          286,
+          302,
+          295
+        ],
+        "data": {
+          "expected_after": -0.0002584761667928266,
+          "expected_before": 0.020795920740002992,
+          "gain_target_mode": "signed",
+          "measured_gain": -0.021312873073588645,
+          "method": "A",
+          "signed_observed_gain": -0.021312873073588645,
+          "source": "self_observations"
+        },
+        "day": 13,
+        "event_id": 303,
+        "kind": "player_gain_belief",
+        "phase": "evening",
+        "target": "p2"
+      },
+      {
+        "actor": "p2",
+        "causes": [
+          166,
+          193,
+          209,
+          202
+        ],
+        "data": {
+          "expected_after": 0.02775901354717027,
+          "expected_before": 0.045298139269467054,
+          "gain_target_mode": "signed",
+          "measured_gain": 0.010219887824873486,
+          "method": "B",
+          "signed_observed_gain": 0.010219887824873486,
+          "source": "self_observations"
+        },
+        "day": 9,
+        "event_id": 210,
+        "kind": "player_gain_belief",
+        "phase": "evening",
+        "target": "p2"
+      }
+    ],
+    "observations": [
+      {
+        "actor": "p2",
+        "causes": [
+          299
+        ],
+        "data": {
+          "fatigue_key": [
+            "felt-fatigue",
+            14,
+            "p2",
+            0
+          ],
+          "fatigue_signal": 0.1263838186873392,
+          "skill_key": [
+            "self-pre",
+            14,
+            "p2",
+            0
+          ],
+          "skill_signal": 0.6712399443570289,
+          "source": "self-pre"
+        },
+        "day": 14,
+        "event_id": 309,
+        "kind": "self_observation",
+        "phase": "morning",
+        "target": "p2"
+      },
+      {
+        "actor": "coach",
+        "causes": [
+          311,
+          305,
+          5
+        ],
+        "data": {
+          "action": "propose",
+          "expected_gain": 0.0395159959318939,
+          "method": "B",
+          "perceived_skill": 0.604840040681061,
+          "slots": 1,
+          "subjective_rate": 0.1
+        },
+        "day": 14,
+        "event_id": 312,
+        "kind": "coach_action",
+        "phase": "coach",
+        "target": "p2"
+      }
+    ]
+  }
+}

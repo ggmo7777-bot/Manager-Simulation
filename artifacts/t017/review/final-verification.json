@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-09",
+  "all_tests": 196,
+  "fast_tests": 50,
+  "cli_api_frozen_comparisons": 14,
+  "source_files_match_freeze": 140,
+  "analysis_code_matches_experiment": true,
+  "document_links_valid": true,
+  "historical_files_unchanged": 1911,
+  "frozen_cli_verified": true
+}

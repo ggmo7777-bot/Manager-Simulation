@@ -1,0 +1,19 @@
+{
+  "date_jst": "2026-11-05",
+  "legacy_semantic_comparisons": 240,
+  "main_comparison_runs": 240,
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32,
+    "t003": 38
+  },
+  "representative_hash": "1bc638b71ec370fce6b8714677f08c4ca4fd7ee461212f1f2832a940eb53ea3c",
+  "representative_resume_byte_equal": true,
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t004-training-v4",
+    "save": 4,
+    "source_sha256": "778c1c72a0fde499ca5312082998aa69790781ff266da470eac2af280ee216e1"
+  }
+}

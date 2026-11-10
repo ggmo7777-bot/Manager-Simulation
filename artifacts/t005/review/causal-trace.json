@@ -1,0 +1,246 @@
+{
+  "experience": {
+    "actor": "coach",
+    "causes": [
+      62,
+      76,
+      6
+    ],
+    "data": {
+      "base_gain": 0.06799999999999999,
+      "base_squared_error": 0.008910029069880539,
+      "expected_gain": 0.06799999999999999,
+      "forecast_squared_error": 0.008910029069880539,
+      "method": "A",
+      "residual_after": -0.04719647515938171,
+      "residual_before": 0.0,
+      "residual_memory_id": 6,
+      "signed_observed_gain": -0.02639295031876343,
+      "source": "paid_session",
+      "target_residual": -0.09439295031876342,
+      "updates_enabled": true
+    },
+    "day": 3,
+    "event_id": 77,
+    "kind": "coach_method_experience",
+    "phase": "evening",
+    "target": "p1"
+  },
+  "later_decision": {
+    "actor": "p1",
+    "causes": [
+      126,
+      130,
+      120,
+      1,
+      119
+    ],
+    "data": {
+      "candidates": [
+        {
+          "action": "rest",
+          "method": null,
+          "score": 0.016391067543766284,
+          "target": null,
+          "terms": {
+            "recovery_value": 0.016391067543766284
+          }
+        },
+        {
+          "action": "A",
+          "method": "A",
+          "score": 0.08068731046984262,
+          "target": null,
+          "terms": {
+            "advice": 0.023790820016322378,
+            "expected_gain": 0.05316504787830226,
+            "felt_fatigue_cost": -0.005268557424782019,
+            "preference": 0.009
+          }
+        },
+        {
+          "action": "B",
+          "method": "B",
+          "score": 0.05873144257521798,
+          "target": null,
+          "terms": {
+            "advice": 0.0,
+            "expected_gain": 0.046,
+            "felt_fatigue_cost": -0.005268557424782019,
+            "preference": 0.018
+          }
+        }
+      ],
+      "chosen": {
+        "action": "A",
+        "method": "A",
+        "score": 0.08068731046984262,
+        "target": null,
+        "terms": {
+          "advice": 0.023790820016322378,
+          "expected_gain": 0.05316504787830226,
+          "felt_fatigue_cost": -0.005268557424782019,
+          "preference": 0.009
+        }
+      },
+      "memory_ids": [
+        120,
+        1,
+        119
+      ],
+      "observation_ids": [
+        126,
+        130
+      ],
+      "policy_version": "t001-score-v1",
+      "proposal_response": "accepted"
+    },
+    "day": 6,
+    "event_id": 135,
+    "kind": "decision",
+    "phase": "choice",
+    "target": "p1"
+  },
+  "player_feedback": {
+    "actor": "p1",
+    "causes": [
+      70,
+      71,
+      108,
+      112,
+      114,
+      104,
+      118
+    ],
+    "data": {
+      "coach_loss": 0.0035470867333472376,
+      "evidence": -0.9358036453217708,
+      "method": "A",
+      "prior_trust_memory_id": 70,
+      "q_coach_received": 0.010982732824568256,
+      "q_self_before_action": 0.035789939101356354,
+      "self_gain_memory_id": 71,
+      "self_loss": 0.0012075776200428099,
+      "signed_observed_gain": 0.07054015665524815,
+      "source": "self_observations",
+      "trust_after": 0.6725603639331341,
+      "trust_before": 0.7193505461992227,
+      "trust_change": -0.046790182266088554,
+      "trust_enabled": true
+    },
+    "day": 5,
+    "event_id": 119,
+    "kind": "advice_feedback",
+    "phase": "evening",
+    "target": "p1"
+  },
+  "private_post": {
+    "actor": "coach",
+    "causes": [
+      62,
+      65,
+      67
+    ],
+    "data": {
+      "performed_action": "A",
+      "skill_key": [
+        "coach-skill-post",
+        3,
+        "p1",
+        0
+      ],
+      "skill_signal": 0.4982068833489457,
+      "source": "paid_session_post"
+    },
+    "day": 3,
+    "event_id": 76,
+    "kind": "coach_post_observation",
+    "phase": "evening",
+    "target": "p1"
+  },
+  "private_pre": {
+    "actor": "coach",
+    "causes": [
+      61,
+      44,
+      2,
+      5,
+      6
+    ],
+    "data": {
+      "forecasts": {
+        "A": {
+          "base_gain": 0.06799999999999999,
+          "expected_gain": 0.06799999999999999,
+          "residual_before": 0.0,
+          "residual_memory_id": 6
+        },
+        "B": {
+          "base_gain": 0.06799999999999999,
+          "expected_gain": 0.06799999999999999,
+          "residual_before": 0.0,
+          "residual_memory_id": 6
+        }
+      },
+      "perceived_skill": 0.32,
+      "skill_key": [
+        "coach-skill",
+        3,
+        "p1",
+        0
+      ],
+      "skill_signal": 0.5245998336677091,
+      "source": "paid_sample"
+    },
+    "day": 3,
+    "event_id": 62,
+    "kind": "coach_observation",
+    "phase": "coach",
+    "target": "p1"
+  },
+  "proposal": {
+    "actor": "coach",
+    "causes": [
+      107,
+      78,
+      5,
+      77
+    ],
+    "data": {
+      "action": "propose",
+      "base_gain": 0.05817920798394997,
+      "expected_gain": 0.010982732824568256,
+      "method": "A",
+      "perceived_skill": 0.41820792016050035,
+      "residual_before": -0.04719647515938171,
+      "residual_memory_id": 77,
+      "slots": 1,
+      "subjective_rate": 0.1
+    },
+    "day": 5,
+    "event_id": 108,
+    "kind": "coach_action",
+    "phase": "coach",
+    "target": "p1"
+  },
+  "true_outcome_research_only": {
+    "actor": "p1",
+    "causes": [
+      65,
+      44
+    ],
+    "data": {
+      "fatigue_after": 0.44000000000000006,
+      "fatigue_before": 0.32,
+      "skill_after": 0.5316356625616,
+      "skill_before": 0.49462354399999997,
+      "skill_gain": 0.03701211856160003,
+      "source": "training_rule"
+    },
+    "day": 3,
+    "event_id": 67,
+    "kind": "state_update",
+    "phase": "resolve",
+    "target": "p1"
+  }
+}

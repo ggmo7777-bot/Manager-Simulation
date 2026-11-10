@@ -1,0 +1,15 @@
+test_arguments_strictly_rejected (test_t012.TestRecordedIntervention.test_arguments_strictly_rejected) ... ok
+test_cli_branch_and_normal_resume_preserve_source (test_t012.TestRecordedIntervention.test_cli_branch_and_normal_resume_preserve_source) ... ok
+test_corrupt_parent_and_unrecorded_child_patch_rejected (test_t012.TestRecordedIntervention.test_corrupt_parent_and_unrecorded_child_patch_rejected) ... ok
+test_corrupt_records_and_state_rejected_before_trusting_patch (test_t012.TestRecordedIntervention.test_corrupt_records_and_state_rejected_before_trusting_patch) ... ok
+test_day_zero_same_day_multiple_refork_and_saved_resume (test_t012.TestRecordedIntervention.test_day_zero_same_day_multiple_refork_and_saved_resume) ... ok
+test_internal_record_types_and_unserialized_precision_rejected (test_t012.TestRecordedIntervention.test_internal_record_types_and_unserialized_precision_rejected) ... ok
+test_invalid_branch_cannot_overwrite_saved_branch (test_t012.TestRecordedIntervention.test_invalid_branch_cannot_overwrite_saved_branch) ... ok
+test_noop_has_explicit_record_but_same_behaviour_and_economy (test_t012.TestRecordedIntervention.test_noop_has_explicit_record_but_same_behaviour_and_economy) ... ok
+test_parent_unchanged_and_only_selected_b_and_reference_change (test_t012.TestRecordedIntervention.test_parent_unchanged_and_only_selected_b_and_reference_change) ... ok
+test_save12_and_unknown_intervention_version_rejected (test_t012.TestRecordedIntervention.test_save12_and_unknown_intervention_version_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 12.358s
+
+OK

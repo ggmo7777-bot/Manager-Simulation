@@ -1,0 +1,183 @@
+{
+  "all_first_changed_choices_have_intervention_path": true,
+  "branches_unchanged_numeric_and_semantic_runs": 200,
+  "economy_unchanged_numeric_and_semantic_runs": 240,
+  "full_tests_passed": 153,
+  "historical_files_unchanged": 808,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
+    "revision_author": "Codex (T013)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t013-observation-claims-v1",
+    "save": 14,
+    "source_sha256": "f05e4b33449f1d2757ad31ac9478e6137fa369efc05e7d4778b933e1b21592ad",
+    "world_kind": "league_economy_loop"
+  },
+  "independent_audits": {
+    "final/branches/stress_1000/chained1014/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 264,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 301
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 6174
+      }
+    },
+    "final/branches/stress_1000/day1000/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 260,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 297
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 6094
+      }
+    },
+    "final/economy/representative/closed_no_solidarity/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 496
+      }
+    },
+    "final/economy/representative/closed_solidarity/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 0
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 496
+      }
+    },
+    "final/economy/representative/exploit_churn_guard/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "circular_rejected": 2,
+          "claim_accepted": 12,
+          "claim_duplicate": 12,
+          "claim_trigger_limit": 4,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 45
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 616
+      }
+    },
+    "final/economy/representative/fixed_budget_no_inflow/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 4,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 34
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 477
+      }
+    },
+    "final/economy/representative/hoarder_buyer_policy/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 10,
+          "claim_trigger_limit": 2,
+          "payments": 10
+        },
+        "no_duplicate_payment": true,
+        "requests": 56
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 627
+      }
+    },
+    "final/economy/representative/open_no_solidarity/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {},
+        "no_duplicate_payment": true,
+        "requests": 17
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 523
+      }
+    },
+    "final/economy/representative/open_solidarity/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 4,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 31
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 616
+      }
+    },
+    "final/economy/representative/open_solidarity_perfect_fatigue/full/snapshot.json": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 4,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 35
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 645
+      }
+    }
+  },
+  "injected_duplicate_payment_rejected_by_independent_audit": true,
+  "runtime_identity_unchanged": true
+}

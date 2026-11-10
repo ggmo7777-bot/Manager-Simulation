@@ -1,0 +1,19 @@
+{
+  "all_attribution_scores_and_prior_references_match": true,
+  "coach_decisions_checked": 168,
+  "coach_training_experiences": 50,
+  "feedback_checked": 26,
+  "feedback_to_non_score_source": 0,
+  "paid_observations": 108,
+  "player_decisions_checked": 168,
+  "two_prediction_trace_found": false,
+  "uses_production_policy_or_feedback_functions": false,
+  "versions": {
+    "policy": "t007-private-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t007-private-training-v1",
+    "save": 7,
+    "source_sha256": "7bbfcefbb6e4f5b03f1315c3e44e1b17d1e1df1cdc4bb4c87d6cd0fcfb1ab2f7",
+    "world_kind": "multi_coach"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "advice_feedbacks": 541,
+  "author": "Antigravity (Gemini 4 Argon)",
+  "coach_training_decisions": 2880,
+  "ledger_transactions": 2826,
+  "lineup_decisions": 240,
+  "player_training_decisions": 4320,
+  "policy_functions_called": 0,
+  "runs": {
+    "rep_seed17_open_solidarity": {
+      "advice_feedbacks": 116,
+      "coach_training_decisions": 576,
+      "ledger_transactions": 635,
+      "lineup_decisions": 48,
+      "mismatches": 0,
+      "player_training_decisions": 864,
+      "transfer_window_decisions": 24
+    },
+    "seed100_closed_no_solidarity": {
+      "advice_feedbacks": 107,
+      "coach_training_decisions": 576,
+      "ledger_transactions": 519,
+      "lineup_decisions": 48,
+      "mismatches": 0,
+      "player_training_decisions": 864,
+      "transfer_window_decisions": 0
+    },
+    "seed100_closed_solidarity": {
+      "advice_feedbacks": 107,
+      "coach_training_decisions": 576,
+      "ledger_transactions": 519,
+      "lineup_decisions": 48,
+      "mismatches": 0,
+      "player_training_decisions": 864,
+      "transfer_window_decisions": 0
+    },
+    "seed100_open_no_solidarity": {
+      "advice_feedbacks": 102,
+      "coach_training_decisions": 576,
+      "ledger_transactions": 531,
+      "lineup_decisions": 48,
+      "mismatches": 0,
+      "player_training_decisions": 864,
+      "transfer_window_decisions": 24
+    },
+    "seed100_open_solidarity": {
+      "advice_feedbacks": 109,
+      "coach_training_decisions": 576,
+      "ledger_transactions": 622,
+      "lineup_decisions": 48,
+      "mismatches": 0,
+      "player_training_decisions": 864,
+      "transfer_window_decisions": 24
+    }
+  },
+  "total_decisions_audited": 7512,
+  "total_events_audited": 10879,
+  "total_mismatches": 0,
+  "transfer_window_decisions": 72,
+  "world_kind": "league_economy_loop"
+}

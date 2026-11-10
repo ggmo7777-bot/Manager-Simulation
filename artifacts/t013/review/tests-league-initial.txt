@@ -1,0 +1,28 @@
+test_adversarial_churn_and_duplicate_claim_guards (test_t011.TestT011LeagueEconomy.test_adversarial_churn_and_duplicate_claim_guards) ... ok
+test_author_and_identity_attribution (test_t011.TestT011LeagueEconomy.test_author_and_identity_attribution) ... ok
+test_checkpoint_save_resume_exact_equality_all_conditions (test_t011.TestT011LeagueEconomy.test_checkpoint_save_resume_exact_equality_all_conditions) ... ok
+test_corrupted_snapshots_rejected (test_t011.TestT011LeagueEconomy.test_corrupted_snapshots_rejected) ... ok
+test_ledger_conservation_and_roster_invariants_all_conditions (test_t011.TestT011LeagueEconomy.test_ledger_conservation_and_roster_invariants_all_conditions) ... ok
+test_market_and_solidarity_dividend_effects (test_t011.TestT011LeagueEconomy.test_market_and_solidarity_dividend_effects) ... ok
+test_multi_party_agreement_and_budget_required_for_transfer (test_t011.TestT011LeagueEconomy.test_multi_party_agreement_and_budget_required_for_transfer) ... ok
+test_non_leakage_in_all_policy_functions (test_t011.TestT011LeagueEconomy.test_non_leakage_in_all_policy_functions) ... ok
+test_day_zero_and_custom_config_resume (test_t011_r1.TestLeagueCheckpointIntegrity.test_day_zero_and_custom_config_resume) ... ok
+test_duplicate_json_keys_rejected (test_t011_r1.TestLeagueCheckpointIntegrity.test_duplicate_json_keys_rejected) ... ok
+test_history_edits_missing_boundary_and_accounting_forgery_rejected (test_t011_r1.TestLeagueCheckpointIntegrity.test_history_edits_missing_boundary_and_accounting_forgery_rejected) ... ok
+test_invalid_world_cannot_overwrite_valid_save (test_t011_r1.TestLeagueCheckpointIntegrity.test_invalid_world_cannot_overwrite_valid_save) ... ok
+test_original_four_reader_regressions (test_t011_r1.TestLeagueCheckpointIntegrity.test_original_four_reader_regressions) ... ok
+test_strict_types_ranges_nonfinite_and_fields_rejected (test_t011_r1.TestLeagueCheckpointIntegrity.test_strict_types_ranges_nonfinite_and_fields_rejected) ... ok
+test_valid_range_changes_and_wrong_memory_owner_rejected (test_t011_r1.TestLeagueCheckpointIntegrity.test_valid_range_changes_and_wrong_memory_owner_rejected) ... ok
+test_facility_payment_mediates_training_gain (test_t011_r1.TestLeagueEconomicMechanism.test_facility_payment_mediates_training_gain) ... ok
+test_receipt_history_alone_does_not_change_training (test_t011_r1.TestLeagueEconomicMechanism.test_receipt_history_alone_does_not_change_training) ... ok
+test_removed_bonus_cannot_be_loaded_as_config (test_t011_r1.TestLeagueEconomicMechanism.test_removed_bonus_cannot_be_loaded_as_config) ... ok
+test_offer_order_does_not_change_choice_and_payload_is_immutable (test_t011_r1.TestLeagueOfferBoundary.test_offer_order_does_not_change_choice_and_payload_is_immutable) ... ok
+test_own_trust_and_offer_availability_affect_choice (test_t011_r1.TestLeagueOfferBoundary.test_own_trust_and_offer_availability_affect_choice) ... ok
+test_received_messages_are_logged_before_player_choice (test_t011_r1.TestLeagueOfferBoundary.test_received_messages_are_logged_before_player_choice) ... ok
+test_uncommunicated_coach_score_cannot_break_player_tie (test_t011_r1.TestLeagueOfferBoundary.test_uncommunicated_coach_score_cannot_break_player_tie) ... ok
+test_wrong_recipient_duplicate_and_impersonated_offers_rejected (test_t011_r1.TestLeagueOfferBoundary.test_wrong_recipient_duplicate_and_impersonated_offers_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 27.089s
+
+OK

@@ -1,0 +1,26 @@
+{
+  "comparison_excludes_only": [
+    "versions",
+    "config.policy.coach_method_mode",
+    "decision.policy_version"
+  ],
+  "date_jst": "2026-11-05",
+  "legacy_full_history_comparisons": 240,
+  "main_comparison_runs": 240,
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32,
+    "t003": 38,
+    "t004": 44,
+    "t005": 48
+  },
+  "representative_hash": "2d3ae182f3fc63f64abe0563e05bdc072262f8d832b8f24b91afe882c4ef043e",
+  "representative_resume_byte_equal": true,
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

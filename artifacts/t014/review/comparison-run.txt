@@ -1,0 +1,15 @@
+closed_no_solidarity: 30 full-history comparisons and audits complete
+closed_solidarity: 30 full-history comparisons and audits complete
+open_no_solidarity: 30 full-history comparisons and audits complete
+open_solidarity: 30 full-history comparisons and audits complete
+fixed_budget_no_inflow: 30 full-history comparisons and audits complete
+hoarder_buyer_policy: 30 full-history comparisons and audits complete
+exploit_churn_guard: 30 full-history comparisons and audits complete
+open_solidarity_perfect_fatigue: 30 full-history comparisons and audits complete
+branch seed 1: five whole-history comparisons complete
+branch seed 2: five whole-history comparisons complete
+branch seed 3: five whole-history comparisons complete
+branch seed 100: five whole-history comparisons complete
+branch seed 101: five whole-history comparisons complete
+branch seed 102: five whole-history comparisons complete
+{"economic_runs": 240, "economic_full_history_equal": 240, "branch_series": 30, "branch_full_history_equal": 30, "elapsed_seconds": 434.4095054171048}

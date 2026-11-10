@@ -1,0 +1,15 @@
+{
+  "unchanged_function_ast": {
+    "decide_player_training": true,
+    "decide_club_lineup": true,
+    "choose_player_transfer_offer": true,
+    "decide_player_transfer_request": true,
+    "decide_transfer_release": true,
+    "decide_transfer_acquisition": true,
+    "_run_2d_fixture": true,
+    "advance_league_days": true,
+    "_apply_intervention": true,
+    "fork_league_world": true,
+    "_prepare_intervention": true
+  }
+}

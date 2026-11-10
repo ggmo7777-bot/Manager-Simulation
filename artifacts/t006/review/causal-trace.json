@@ -1,0 +1,420 @@
+{
+  "coach_decision": {
+    "actor": "coach",
+    "causes": [
+      87,
+      78,
+      79,
+      5,
+      77,
+      6,
+      4,
+      7
+    ],
+    "data": {
+      "candidates": [
+        {
+          "action": "rest",
+          "method": null,
+          "score": 0.035,
+          "target": null,
+          "terms": {
+            "rest_baseline": 0.035
+          }
+        },
+        {
+          "action": "observe",
+          "method": null,
+          "score": 0.04827168319357998,
+          "target": "p1",
+          "terms": {
+            "staleness": 0.024999999999999998,
+            "uncertain_development_need": 0.023271683193579987
+          }
+        },
+        {
+          "action": "propose",
+          "method": "A",
+          "method_selection": {
+            "basis": "forecast_rank",
+            "forecasts": {
+              "A": {
+                "base_gain": 0.05817920798394997,
+                "expected_gain": 0.010982732824568256,
+                "residual_before": -0.04719647515938171,
+                "residual_memory_id": 77
+              },
+              "B": {
+                "base_gain": 0.05817920798394997,
+                "expected_gain": 0.05817920798394997,
+                "residual_before": 0.0,
+                "residual_memory_id": 6
+              }
+            },
+            "method_rates": {
+              "A": 0.1,
+              "B": 0.1
+            },
+            "mode": "forecast_rank",
+            "perceived_skill": 0.41820792016050035,
+            "preferred_method": "B",
+            "rate_memory_id": 5,
+            "skill_memory_id": 78
+          },
+          "score": 0.06981504958073996,
+          "target": "p1",
+          "terms": {
+            "development_need": 0.06981504958073996,
+            "method_fit": 0.0
+          }
+        },
+        {
+          "action": "propose",
+          "method": "B",
+          "method_selection": {
+            "basis": "forecast_rank",
+            "forecasts": {
+              "A": {
+                "base_gain": 0.05817920798394997,
+                "expected_gain": 0.010982732824568256,
+                "residual_before": -0.04719647515938171,
+                "residual_memory_id": 77
+              },
+              "B": {
+                "base_gain": 0.05817920798394997,
+                "expected_gain": 0.05817920798394997,
+                "residual_before": 0.0,
+                "residual_memory_id": 6
+              }
+            },
+            "method_rates": {
+              "A": 0.1,
+              "B": 0.1
+            },
+            "mode": "forecast_rank",
+            "perceived_skill": 0.41820792016050035,
+            "preferred_method": "B",
+            "rate_memory_id": 5,
+            "skill_memory_id": 78
+          },
+          "score": 0.09890465357271494,
+          "target": "p1",
+          "terms": {
+            "development_need": 0.06981504958073996,
+            "method_fit": 0.029089603991974983
+          }
+        },
+        {
+          "action": "propose",
+          "method": "A",
+          "method_selection": {
+            "basis": "tie_legacy",
+            "forecasts": {
+              "A": {
+                "base_gain": 0.054000000000000006,
+                "expected_gain": 0.054000000000000006,
+                "residual_before": 0.0,
+                "residual_memory_id": 7
+              },
+              "B": {
+                "base_gain": 0.054000000000000006,
+                "expected_gain": 0.054000000000000006,
+                "residual_before": 0.0,
+                "residual_memory_id": 7
+              }
+            },
+            "method_rates": {
+              "A": 0.1,
+              "B": 0.1
+            },
+            "mode": "forecast_rank",
+            "perceived_skill": 0.46,
+            "preferred_method": null,
+            "rate_memory_id": 5,
+            "skill_memory_id": 4
+          },
+          "score": 0.09179999999999999,
+          "target": "p2",
+          "terms": {
+            "development_need": 0.0648,
+            "method_fit": 0.027000000000000003
+          }
+        },
+        {
+          "action": "propose",
+          "method": "B",
+          "method_selection": {
+            "basis": "tie_legacy",
+            "forecasts": {
+              "A": {
+                "base_gain": 0.054000000000000006,
+                "expected_gain": 0.054000000000000006,
+                "residual_before": 0.0,
+                "residual_memory_id": 7
+              },
+              "B": {
+                "base_gain": 0.054000000000000006,
+                "expected_gain": 0.054000000000000006,
+                "residual_before": 0.0,
+                "residual_memory_id": 7
+              }
+            },
+            "method_rates": {
+              "A": 0.1,
+              "B": 0.1
+            },
+            "mode": "forecast_rank",
+            "perceived_skill": 0.46,
+            "preferred_method": null,
+            "rate_memory_id": 5,
+            "skill_memory_id": 4
+          },
+          "score": 0.0878,
+          "target": "p2",
+          "terms": {
+            "development_need": 0.0648,
+            "method_fit": 0.023000000000000003
+          }
+        }
+      ],
+      "chosen": {
+        "action": "propose",
+        "method": "B",
+        "method_selection": {
+          "basis": "forecast_rank",
+          "forecasts": {
+            "A": {
+              "base_gain": 0.05817920798394997,
+              "expected_gain": 0.010982732824568256,
+              "residual_before": -0.04719647515938171,
+              "residual_memory_id": 77
+            },
+            "B": {
+              "base_gain": 0.05817920798394997,
+              "expected_gain": 0.05817920798394997,
+              "residual_before": 0.0,
+              "residual_memory_id": 6
+            }
+          },
+          "method_rates": {
+            "A": 0.1,
+            "B": 0.1
+          },
+          "mode": "forecast_rank",
+          "perceived_skill": 0.41820792016050035,
+          "preferred_method": "B",
+          "rate_memory_id": 5,
+          "skill_memory_id": 78
+        },
+        "score": 0.09890465357271494,
+        "target": "p1",
+        "terms": {
+          "development_need": 0.06981504958073996,
+          "method_fit": 0.029089603991974983
+        }
+      },
+      "memory_ids": [
+        78,
+        79,
+        5,
+        77,
+        6,
+        4,
+        7
+      ],
+      "observation_ids": [
+        87
+      ],
+      "policy_version": "t006-score-v2",
+      "proposal_response": null
+    },
+    "day": 4,
+    "event_id": 88,
+    "kind": "decision",
+    "phase": "coach",
+    "target": "p1"
+  },
+  "interpretation": "Same-state legacy method is a scoring comparison, not an alternate full history.",
+  "player_action": {
+    "actor": "p1",
+    "causes": [
+      90
+    ],
+    "data": {
+      "action": "B",
+      "slots": 1
+    },
+    "day": 4,
+    "event_id": 92,
+    "kind": "player_action",
+    "phase": "resolve",
+    "target": "p1"
+  },
+  "player_decision": {
+    "actor": "p1",
+    "causes": [
+      81,
+      89,
+      71,
+      1,
+      70
+    ],
+    "data": {
+      "candidates": [
+        {
+          "action": "rest",
+          "method": null,
+          "score": 0.06194597347321424,
+          "target": null,
+          "terms": {
+            "recovery_value": 0.06194597347321424
+          }
+        },
+        {
+          "action": "A",
+          "method": "A",
+          "score": 0.024878733342108918,
+          "target": null,
+          "terms": {
+            "advice": 0.0,
+            "expected_gain": 0.035789939101356354,
+            "felt_fatigue_cost": -0.019911205759247434,
+            "preference": 0.009
+          }
+        },
+        {
+          "action": "B",
+          "method": "B",
+          "score": 0.07045307428170981,
+          "target": null,
+          "terms": {
+            "advice": 0.02636428004095725,
+            "expected_gain": 0.046,
+            "felt_fatigue_cost": -0.019911205759247434,
+            "preference": 0.018
+          }
+        }
+      ],
+      "chosen": {
+        "action": "B",
+        "method": "B",
+        "score": 0.07045307428170981,
+        "target": null,
+        "terms": {
+          "advice": 0.02636428004095725,
+          "expected_gain": 0.046,
+          "felt_fatigue_cost": -0.019911205759247434,
+          "preference": 0.018
+        }
+      },
+      "memory_ids": [
+        71,
+        1,
+        70
+      ],
+      "observation_ids": [
+        81,
+        89
+      ],
+      "policy_version": "t006-score-v2",
+      "proposal_response": "accepted"
+    },
+    "day": 4,
+    "event_id": 90,
+    "kind": "decision",
+    "phase": "choice",
+    "target": "p1"
+  },
+  "prior_experiences": [
+    {
+      "actor": "coach",
+      "causes": [
+        5
+      ],
+      "data": {
+        "residuals": [
+          0.0,
+          0.0
+        ]
+      },
+      "day": 0,
+      "event_id": 6,
+      "kind": "initial_coach_adjustment",
+      "phase": "setup",
+      "target": "p1"
+    },
+    {
+      "actor": "coach",
+      "causes": [
+        62,
+        76,
+        6
+      ],
+      "data": {
+        "base_gain": 0.06799999999999999,
+        "base_squared_error": 0.008910029069880539,
+        "expected_gain": 0.06799999999999999,
+        "forecast_squared_error": 0.008910029069880539,
+        "method": "A",
+        "residual_after": -0.04719647515938171,
+        "residual_before": 0.0,
+        "residual_memory_id": 6,
+        "signed_observed_gain": -0.02639295031876343,
+        "source": "paid_session",
+        "target_residual": -0.09439295031876342,
+        "updates_enabled": true
+      },
+      "day": 3,
+      "event_id": 77,
+      "kind": "coach_method_experience",
+      "phase": "evening",
+      "target": "p1"
+    }
+  ],
+  "proposal": {
+    "actor": "coach",
+    "causes": [
+      88,
+      78,
+      5,
+      6
+    ],
+    "data": {
+      "action": "propose",
+      "base_gain": 0.05817920798394997,
+      "expected_gain": 0.05817920798394997,
+      "method": "B",
+      "perceived_skill": 0.41820792016050035,
+      "residual_before": 0.0,
+      "residual_memory_id": 6,
+      "slots": 1,
+      "subjective_rate": 0.1
+    },
+    "day": 4,
+    "event_id": 89,
+    "kind": "coach_action",
+    "phase": "coach",
+    "target": "p1"
+  },
+  "same_state_legacy_method": "A",
+  "true_update": {
+    "actor": "p1",
+    "causes": [
+      92,
+      67
+    ],
+    "data": {
+      "fatigue_after": 0.56,
+      "fatigue_before": 0.44000000000000006,
+      "skill_after": 0.5382676035753926,
+      "skill_before": 0.5316356625616,
+      "skill_gain": 0.006631941013792608,
+      "source": "training_rule"
+    },
+    "day": 4,
+    "event_id": 94,
+    "kind": "state_update",
+    "phase": "resolve",
+    "target": "p1"
+  }
+}

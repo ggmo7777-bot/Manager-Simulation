@@ -1,0 +1,31 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "comparison_excludes_only": [
+    "identity.source_sha256"
+  ],
+  "date_jst": "2026-11-07",
+  "legacy_t008_full_history_comparisons": 240,
+  "main_comparison_runs": 240,
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32,
+    "t003": 38,
+    "t004": 44,
+    "t005": 47,
+    "t006": 55,
+    "t007": 88,
+    "t008": 83
+  },
+  "representative_hash": "8f09732d973c5970f153b874feca8d4ed37d3b85f0ee2a71563d210b352893fd",
+  "representative_resume_byte_equal": true,
+  "total_frozen_files_verified": 421,
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t009-selection-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t009-selection-loop-v1",
+    "save": 9,
+    "source_sha256": "01b01a0075b0541349d87fd86d2794f3be9b32ce1abf101b5805d969ba9a7c1f",
+    "world_kind": "selection_loop"
+  }
+}

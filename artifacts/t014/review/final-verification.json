@@ -1,0 +1,46 @@
+{
+  "branch_full_history_equal": 30,
+  "chained1014_independent_audits": {
+    "admission": {
+      "all_resolved_once": true,
+      "counts": {
+        "claim_accepted": 12,
+        "claim_trigger_limit": 264,
+        "payments": 12
+      },
+      "no_duplicate_payment": true,
+      "requests": 301
+    },
+    "ledger": {
+      "account_reconciliation": true,
+      "conservation_at_each_transaction": true,
+      "transactions": 6174
+    }
+  },
+  "economic_full_history_equal": 240,
+  "fast_tests": 33,
+  "full_tests": 168,
+  "historical_files_unchanged": 1311,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t014-integer-money-v1",
+    "save": 15,
+    "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+    "world_kind": "league_economy_loop"
+  },
+  "long_1000_full_history_equal": true,
+  "negative_audits": {
+    "duplicate_dividend": "rejected",
+    "float_transaction": "rejected",
+    "one_unit_transaction_change": "rejected"
+  },
+  "runtime_one_unit_error_rejected": true,
+  "unchanged_policy_competition_intervention_ast": 11
+}

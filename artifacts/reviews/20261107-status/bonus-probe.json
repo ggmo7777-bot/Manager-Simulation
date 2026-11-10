@@ -1,0 +1,32 @@
+{
+  "seed": 100,
+  "comparison": "branch at same prior day, change only curriculum bonus from .38 to 0, advance one day",
+  "selection_rule": "first affected training day after window, check days29..34",
+  "trials": [
+    {
+      "day": 29,
+      "training_actions_equal": true,
+      "cash_equal": true,
+      "training_gains": {}
+    },
+    {
+      "day": 30,
+      "training_actions_equal": true,
+      "cash_equal": true,
+      "training_gains": {
+        "p1": {
+          "bonus": 0.012442,
+          "without_bonus": 0.009541
+        },
+        "p2": {
+          "bonus": 0.012856,
+          "without_bonus": 0.009859
+        },
+        "p7": {
+          "bonus": 0.012647,
+          "without_bonus": 0.009699
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "action_mismatches": {
+    "coach": 2,
+    "p1": 39,
+    "p2": 2
+  },
+  "adaptive_trust": {
+    "config": {
+      "beliefs": {
+        "coach_skill": true,
+        "player_gain": true,
+        "recency": true,
+        "self_skill": true
+      },
+      "coach_alpha": 0.48,
+      "coach_noise": 0.0,
+      "duration": 1.0,
+      "fatigue_noise": 0.0,
+      "focus": 1.0,
+      "gain_alpha": 0.5,
+      "homogeneous_rates": false,
+      "policy": {
+        "advice_weight": 0.055,
+        "coach_freshness_days": 6,
+        "coach_method_fit": 0.05,
+        "coach_need_weight": 0.12,
+        "coach_observation_need": 0.04,
+        "coach_observation_weight": 0.15,
+        "coach_rest_value": 0.035,
+        "rest_fatigue_weight": 0.14,
+        "training_fatigue_weight": 0.045
+      },
+      "rest_recovery": 0.42,
+      "self_alpha": 0.45,
+      "self_noise": 0.0,
+      "sleep_recovery": 0.13,
+      "training_fatigue": 0.25,
+      "trust": {
+        "enabled": true,
+        "scale": 0.05,
+        "step": 0.05
+      }
+    },
+    "final_skill": {
+      "p1": 0.8432742073151479,
+      "p2": 0.8983456136515604
+    },
+    "final_trust": {
+      "p1": 0.27942871084575627,
+      "p2": 0.28
+    }
+  },
+  "counts": {
+    "coach": 168,
+    "p1": 84,
+    "p2": 84
+  },
+  "fixed_trust": {
+    "config": {
+      "beliefs": {
+        "coach_skill": true,
+        "player_gain": true,
+        "recency": true,
+        "self_skill": true
+      },
+      "coach_alpha": 0.48,
+      "coach_noise": 0.0,
+      "duration": 1.0,
+      "fatigue_noise": 0.0,
+      "focus": 1.0,
+      "gain_alpha": 0.5,
+      "homogeneous_rates": false,
+      "policy": {
+        "advice_weight": 0.055,
+        "coach_freshness_days": 6,
+        "coach_method_fit": 0.05,
+        "coach_need_weight": 0.12,
+        "coach_observation_need": 0.04,
+        "coach_observation_weight": 0.15,
+        "coach_rest_value": 0.035,
+        "rest_fatigue_weight": 0.14,
+        "training_fatigue_weight": 0.045
+      },
+      "rest_recovery": 0.42,
+      "self_alpha": 0.45,
+      "self_noise": 0.0,
+      "sleep_recovery": 0.13,
+      "training_fatigue": 0.25,
+      "trust": {
+        "enabled": false,
+        "scale": 0.05,
+        "step": 0.05
+      }
+    },
+    "final_skill": {
+      "p1": 0.834201747346143,
+      "p2": 0.8984861693971892
+    },
+    "final_trust": {
+      "p1": 0.75,
+      "p2": 0.28
+    }
+  },
+  "scope": "Exploratory root-review extension, seed17, 84 days, all observation noise zero; not part of main 240 runs."
+}

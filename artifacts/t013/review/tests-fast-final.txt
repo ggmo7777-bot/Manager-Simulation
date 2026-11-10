@@ -1,0 +1,23 @@
+test_budget_and_cap_rejections_allow_no_payment (test_t013.TestActualClaimAdmission.test_budget_and_cap_rejections_allow_no_payment) ... ok
+test_duplicate_metric_is_derived_from_paid_transactions (test_t013.TestActualClaimAdmission.test_duplicate_metric_is_derived_from_paid_transactions) ... ok
+test_invalid_ledger_arguments_are_atomic (test_t013.TestActualClaimAdmission.test_invalid_ledger_arguments_are_atomic) ... ok
+test_rejected_requests_do_not_change_financial_state (test_t013.TestActualClaimAdmission.test_rejected_requests_do_not_change_financial_state) ... ok
+test_same_request_submitted_twice_pays_once_and_consumes_one_trigger (test_t013.TestActualClaimAdmission.test_same_request_submitted_twice_pays_once_and_consumes_one_trigger) ... ok
+test_all_observation_routes_use_measurements_bench_coach_keeps_prior (test_t013.TestFatigueObservation.test_all_observation_routes_use_measurements_bench_coach_keeps_prior) ... ok
+test_measurement_boundary_can_be_fixed_without_exposing_truth (test_t013.TestFatigueObservation.test_measurement_boundary_can_be_fixed_without_exposing_truth) ... ok
+test_measurement_is_repeatable_observer_specific_and_can_be_controlled (test_t013.TestFatigueObservation.test_measurement_is_repeatable_observer_specific_and_can_be_controlled) ... ok
+test_circular_offer_is_a_real_admission_request (test_t013.TestIndividualTransferPolicies.test_circular_offer_is_a_real_admission_request) ... ok
+test_private_minds_stay_with_their_owners (test_t013.TestIndividualTransferPolicies.test_private_minds_stay_with_their_owners) ... ok
+test_facility_payment_mediates_training_gain (test_t011_r1.TestLeagueEconomicMechanism.test_facility_payment_mediates_training_gain) ... ok
+test_receipt_history_alone_does_not_change_training (test_t011_r1.TestLeagueEconomicMechanism.test_receipt_history_alone_does_not_change_training) ... ok
+test_removed_bonus_cannot_be_loaded_as_config (test_t011_r1.TestLeagueEconomicMechanism.test_removed_bonus_cannot_be_loaded_as_config) ... ok
+test_offer_order_does_not_change_choice_and_payload_is_immutable (test_t011_r1.TestLeagueOfferBoundary.test_offer_order_does_not_change_choice_and_payload_is_immutable) ... ok
+test_own_trust_and_offer_availability_affect_choice (test_t011_r1.TestLeagueOfferBoundary.test_own_trust_and_offer_availability_affect_choice) ... ok
+test_received_messages_are_logged_before_player_choice (test_t011_r1.TestLeagueOfferBoundary.test_received_messages_are_logged_before_player_choice) ... ok
+test_uncommunicated_coach_score_cannot_break_player_tie (test_t011_r1.TestLeagueOfferBoundary.test_uncommunicated_coach_score_cannot_break_player_tie) ... ok
+test_wrong_recipient_duplicate_and_impersonated_offers_rejected (test_t011_r1.TestLeagueOfferBoundary.test_wrong_recipient_duplicate_and_impersonated_offers_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.300s
+
+OK

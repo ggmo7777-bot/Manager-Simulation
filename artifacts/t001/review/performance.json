@@ -1,0 +1,22 @@
+{
+  "date_jst": "2026-11-04",
+  "days": 1000,
+  "events": 20336,
+  "machine": "arm64",
+  "measurement_scope": "Fresh Python process including imports, 1000-day simulation, snapshot write and read; original and loaded worlds coexist at end. No NN learning.",
+  "peak_rss_bytes": 131661824,
+  "peak_rss_raw": 131661824,
+  "platform": "Darwin",
+  "python": "3.13.3",
+  "reloaded_state_and_events_equal": true,
+  "simulation_seconds": 0.24764033313840628,
+  "snapshot_read_seconds": 0.2699766671285033,
+  "snapshot_write_seconds": 0.13917474984191358,
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t001-training-v1",
+    "save": 1,
+    "source_sha256": "7990ccd905dfb73012f2f164a066da0b409eaa1038d4aac173ab9956bcc82101"
+  }
+}

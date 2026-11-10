@@ -1,0 +1,34 @@
+T016 implementation targeted verification (Sol 6.1 High)
+
+Command: python3 -B -m unittest discover -s tests -p 'test_t016.py' -v
+Result: 10 tests passed in 1.518s.
+Coverage: both day-zero populations; real sampled transfer p1 and retained p3/p9;
+initial/current/origin membership counterexample; returnee and club mismatch;
+all-transferred and empty-initial null groups; player relabeling and growth;
+non-destructive summary; summary/manifest save and resume; experiment report.
+The first command's console output was observed via exec/write_stdin; only its
+completion tail follows (this file is a recorded result, not a full first log):
+
+ok
+test_summary_is_non_destructive_and_does_not_alias_world (test_t016.TestT016Cohorts.test_summary_is_non_destructive_and_does_not_alias_world) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.518s
+
+OK
+
+Command: python3 -B -m unittest discover -s tests -p 'test_t011.py' -v
+test_adversarial_churn_and_duplicate_claim_guards (test_t011.TestT011LeagueEconomy.test_adversarial_churn_and_duplicate_claim_guards) ... ok
+test_author_and_identity_attribution (test_t011.TestT011LeagueEconomy.test_author_and_identity_attribution) ... ok
+test_checkpoint_save_resume_exact_equality_all_conditions (test_t011.TestT011LeagueEconomy.test_checkpoint_save_resume_exact_equality_all_conditions) ... ok
+test_corrupted_snapshots_rejected (test_t011.TestT011LeagueEconomy.test_corrupted_snapshots_rejected) ... ok
+test_ledger_conservation_and_roster_invariants_all_conditions (test_t011.TestT011LeagueEconomy.test_ledger_conservation_and_roster_invariants_all_conditions) ... ok
+test_market_and_solidarity_dividend_effects (test_t011.TestT011LeagueEconomy.test_market_and_solidarity_dividend_effects) ... ok
+test_multi_party_agreement_and_budget_required_for_transfer (test_t011.TestT011LeagueEconomy.test_multi_party_agreement_and_budget_required_for_transfer) ... ok
+test_non_leakage_in_all_policy_functions (test_t011.TestT011LeagueEconomy.test_non_leakage_in_all_policy_functions) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 21.869s
+
+OK
+

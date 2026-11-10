@@ -1,0 +1,46 @@
+{
+  "task": "T014",
+  "date": "2026-11-08",
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t014-integer-money-v1",
+    "save": 15,
+    "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+    "world_kind": "league_economy_loop"
+  },
+  "adoption": "adopted and frozen by user instruction 2026-11-08; freeze work performed by Claude Sonnet 5.5 (not the implementing author)",
+  "commands": [
+    "python3 -B -m unittest discover -s tests",
+    "python3 -B tools/check.py --suite fast",
+    "python3 -B experiments/t014.py (stored comparison, not re-run by freezer)",
+    "python3 -B experiments/verify_t014.py (stored final-verification.json)",
+    "python3 -B tools/artifact_inventory.py verify --inventory artifacts/t014/preflight/historical-inventory.json"
+  ],
+  "experiment_code_sha256": {
+    "experiments/t014.py": "e671557a1b2e8bbb630a37d57696dd66b05ffd3a81742127c825a22869686cfa",
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/verify_t014.py": "f2a064d3750e34adf57aaf45168b4496f1ef8f4954d3973a473d8bbcbb7255ae"
+  },
+  "source_bundle_file_count": 123,
+  "results": {
+    "full_tests": 168,
+    "fast_tests": 33,
+    "economic_full_history_equal": 240,
+    "branch_full_history_equal": 30,
+    "historical_files_unchanged": 1311,
+    "basis": "stored values in comparison/summary.json and review/final-verification.json; unittest and historical hash independently re-run"
+  },
+  "limits": [
+    "240-run comparison not re-run by the freezer",
+    "full-replay persistence remains",
+    "fixed initial population",
+    "runtime hash still includes legacy experiment modules"
+  ]
+}

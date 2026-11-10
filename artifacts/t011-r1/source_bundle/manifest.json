@@ -1,0 +1,250 @@
+{
+  "task": "T011-R1",
+  "status": "specified three fixes verified",
+  "date_jst": "2026-11-08",
+  "versions": {
+    "world_kind": "league_economy_loop",
+    "save": 12,
+    "rules": "t011-league-economy-v2",
+    "policy": "t011-league-economy-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Codex (T011-R1)",
+    "source_sha256": "065520159972c459515c27adf338986994b99693c901cb39c4ae30709c6df441"
+  },
+  "package_source_sha256": "065520159972c459515c27adf338986994b99693c901cb39c4ae30709c6df441",
+  "tests": 132,
+  "comparison_runs": 330,
+  "diagnostic_factorial_runs": 120,
+  "files": {
+    "soccer_sim/__init__.py": {
+      "bytes": 64,
+      "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+    },
+    "soccer_sim/__main__.py": {
+      "bytes": 7268,
+      "sha256": "c52bc0c22a89764f2b494b2ff66b0c55a4437aa86bac2ec71c49926283682276"
+    },
+    "soccer_sim/advice.py": {
+      "bytes": 2380,
+      "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+    },
+    "soccer_sim/experiment_t002.py": {
+      "bytes": 14457,
+      "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+    },
+    "soccer_sim/experiment_t003.py": {
+      "bytes": 8927,
+      "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+    },
+    "soccer_sim/experiment_t004.py": {
+      "bytes": 12647,
+      "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+    },
+    "soccer_sim/experiment_t005.py": {
+      "bytes": 12114,
+      "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+    },
+    "soccer_sim/experiment_t006.py": {
+      "bytes": 9948,
+      "sha256": "872358c291967c739b75e2d499e3d7e36a844080ba7e4abfdcae71e699ef86fd"
+    },
+    "soccer_sim/experiment_t007.py": {
+      "bytes": 12058,
+      "sha256": "77e066cec6abea9bf56e54db34583689a6119d2182622883a16b5d370c62bdec"
+    },
+    "soccer_sim/experiment_t008.py": {
+      "bytes": 19130,
+      "sha256": "49b2c8e4a95811820673c8e1234b509423b4e02a4aebc904511536d53ca26676"
+    },
+    "soccer_sim/experiment_t009.py": {
+      "bytes": 22347,
+      "sha256": "b202a6494cbf023ac3e13961a5348155345477834ebf3feebf823af3f368da98"
+    },
+    "soccer_sim/experiment_t010.py": {
+      "bytes": 13805,
+      "sha256": "d768d376ac0f484b3acb06137216d13d1a657c6e299cadff20ce70c80740895b"
+    },
+    "soccer_sim/experiment_t011.py": {
+      "bytes": 15288,
+      "sha256": "37cb3307a1794c76afd7df1a5e67f91354f964b9279f4534f3c1f0bde3e3f9e5"
+    },
+    "soccer_sim/experiments.py": {
+      "bytes": 7833,
+      "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+    },
+    "soccer_sim/league_economy.py": {
+      "bytes": 106611,
+      "sha256": "0f97225bcedda1ab061db547b1c39e63838a2b18fd0f0604c18d5b0b947355d5"
+    },
+    "soccer_sim/match_2d.py": {
+      "bytes": 69311,
+      "sha256": "85e475df0257616ad5daa08b216d8bbe42333d4e08a6b60625ce4dde29a9fe7c"
+    },
+    "soccer_sim/multi_coach.py": {
+      "bytes": 23669,
+      "sha256": "366d192bcaf9ba27effe524e3d5b4943a17104da7eae00d178eab5a1148fc393"
+    },
+    "soccer_sim/multi_storage.py": {
+      "bytes": 6279,
+      "sha256": "47d6bfad0b89a312b0178d501a5abcddd81d69f3345a7823528054adc790e046"
+    },
+    "soccer_sim/observation.py": {
+      "bytes": 2298,
+      "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+    },
+    "soccer_sim/policy.py": {
+      "bytes": 5604,
+      "sha256": "209381ece43689f1fb37e4e1149c27d1139b3a9520e410be94d489396dcae015"
+    },
+    "soccer_sim/selection_loop.py": {
+      "bytes": 82791,
+      "sha256": "3bf3d0ba45bf213ad86d49086a6055b053c301aec8d3debbe0cdafbf8086051c"
+    },
+    "soccer_sim/simulation.py": {
+      "bytes": 17340,
+      "sha256": "42644476ee757ad1c47f741f1b8cda0991bb8aafcad0a5fc9b9030beb54438e5"
+    },
+    "soccer_sim/state.py": {
+      "bytes": 12071,
+      "sha256": "01bb927daa06d4a7f91ef8f38e3fdddc1e7b4baa5ea033faf3fd3e3e07839424"
+    },
+    "soccer_sim/storage.py": {
+      "bytes": 17495,
+      "sha256": "64aea665707825a55086650ae16b25212ff8b8f60d490fa27d1a4ceb4708a99a"
+    },
+    "soccer_sim/transfer_loop.py": {
+      "bytes": 94085,
+      "sha256": "0fe94da968da7a9925a9d4b95b97a7f1eb49b57648e66af09a7edeaf8253565c"
+    },
+    "tests/test_t001.py": {
+      "bytes": 10005,
+      "sha256": "cf1c672f8a257c8f5890f9fc26137e7bc44800c43eeddac7e2b0284c3106e552"
+    },
+    "tests/test_t002.py": {
+      "bytes": 10849,
+      "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+    },
+    "tests/test_t003.py": {
+      "bytes": 15043,
+      "sha256": "1c272a8ee3a2f5e4470f88015a5c4d1b22746adf0f55d3685a1b221377b1db46"
+    },
+    "tests/test_t004.py": {
+      "bytes": 13707,
+      "sha256": "b11ad8757f326488f8b62eba5beea6d414fd5112e4f95b703c769453937bb98b"
+    },
+    "tests/test_t005.py": {
+      "bytes": 19835,
+      "sha256": "26aee43a83cc233a55b699b0136adc9b11b051e2954d512b86345562969c06fd"
+    },
+    "tests/test_t006.py": {
+      "bytes": 12197,
+      "sha256": "140afd1e0a3cb52be50200ae20a430a7607ed7e4c59975361d4ebd045c5b1c90"
+    },
+    "tests/test_t007.py": {
+      "bytes": 15721,
+      "sha256": "9cd59302a21e80cf0e7c54f473f2b3715a5ca7019edb8a57c0760400f9b12b59"
+    },
+    "tests/test_t008.py": {
+      "bytes": 14767,
+      "sha256": "ac9f37137508f0d824418c23a04171e0d69ff6950f6fcecbdad09b1a0f23f966"
+    },
+    "tests/test_t009.py": {
+      "bytes": 11872,
+      "sha256": "e11b62ccf0617c3ce311bb985ae90b8de207006365ad352817a3f8bbb4c424c6"
+    },
+    "tests/test_t010.py": {
+      "bytes": 11850,
+      "sha256": "fd7f4c3f9ec0e39766f0121dc4e0db744e312b8c6be2ff0e91fdb8778adf9faa"
+    },
+    "tests/test_t011.py": {
+      "bytes": 12968,
+      "sha256": "6311cb250dc2c2bbd8870df343bff2dda6a70d34993dfb0f192362ef5f7fbc60"
+    },
+    "tests/test_t011_r1.py": {
+      "bytes": 12434,
+      "sha256": "f18b64705a7e2fbcd3692277c44d394fc7c0a76d3ec58deaad9d410630b65d02"
+    },
+    "README.md": {
+      "bytes": 4828,
+      "sha256": "8bf0d31af15a3c38c6a0451b82598f01896246d299d87dcd30cdd5a9bae90308"
+    },
+    "AGENTS.md": {
+      "bytes": 1263,
+      "sha256": "144aafe807aa8d750dfbac15df397c94981917cfc0fa8c9021e403d60a24b5a8"
+    },
+    "pyproject.toml": {
+      "bytes": 93,
+      "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+    },
+    "docs/CHARTER.md": {
+      "bytes": 3475,
+      "sha256": "540f18228da3585ca2b505224e86ed1df63c4b2e5deb03f3746c975274900b89"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 55045,
+      "sha256": "77d139392756c86d7f5459bc34ca31d3bd5d505f14fbb2d4dea0437e2162d26b"
+    },
+    "docs/DESIGN.md": {
+      "bytes": 30643,
+      "sha256": "2155078c9afdb138f3c8e19f013cd66023c1d430cb86b636e230af1aa5a06132"
+    },
+    "docs/GOVERNANCE.md": {
+      "bytes": 4758,
+      "sha256": "75e6d094cabc85c18a785d347029fa786e95534409b7da1688cb222bc874044d"
+    },
+    "docs/OPEN-QUESTIONS.md": {
+      "bytes": 10044,
+      "sha256": "71c14d4e084ab22fad90cb4019ffeb6c7d1d99922ca6314fa0a731c5fe129868"
+    },
+    "docs/RESEARCH.md": {
+      "bytes": 5730,
+      "sha256": "b7b164cff64c991b05faf352a2f461812bccdaea9f7ff89f491431f6b0a3c46c"
+    },
+    "docs/ROADMAP.md": {
+      "bytes": 11659,
+      "sha256": "6292cf4d3c9eb048028e40c64fb000557805cbbd7822848ee0dfca74bddb27f6"
+    },
+    "docs/SOL-HANDOFF.md": {
+      "bytes": 3832,
+      "sha256": "9c42e07a9be1a0fe78c08fe5b067a660199e6b6273e54b9a0f74411aba7cd8aa"
+    },
+    "docs/STATUS.md": {
+      "bytes": 33998,
+      "sha256": "ccaf18bc2a4984a149f85d40f3a7851544dc5305a754aacc64623ea269d4c02e"
+    },
+    "docs/experiments/T011-PROTOCOL.md": {
+      "bytes": 6229,
+      "sha256": "4c124bd6e5bd438a624019535ae557b88594fd258090e05c4421340c0418b126"
+    },
+    "docs/experiments/T011-R1-PROTOCOL.md": {
+      "bytes": 3854,
+      "sha256": "bd5bd30077aa6d95d90b928dab1664c2f846f98124f4fa69d16e8b1ac042f3ff"
+    },
+    "docs/experiments/T011-R1-RESULTS.md": {
+      "bytes": 7344,
+      "sha256": "4b2b01dbe50c23f3eb541ca1504cc681794dc7660ea0f4c09d768600f3d6abcb"
+    },
+    "docs/experiments/T011-R1-REVIEW.md": {
+      "bytes": 4379,
+      "sha256": "9eae496a740f896ba36b599108606d1c4d608d01f920fe7e0af4377bbcf5818e"
+    },
+    "docs/experiments/T011-RESULTS.md": {
+      "bytes": 601,
+      "sha256": "7bd8062a871bae16eeee0cfa3a7d0f78c67a257f6b77f35d51af45225edd1c5a"
+    },
+    "docs/experiments/T011-REVIEW.md": {
+      "bytes": 391,
+      "sha256": "ad29bc9458e2bbff9722fc0574e1d791ca81bdc307e7eb0230cf8b92b0ef9843"
+    },
+    "docs/tasks/T011-R1.md": {
+      "bytes": 1139,
+      "sha256": "d3e77d8d22efe66100a9bfe5ca5f3511344dca0b3a85b0b22d05020def20de6a"
+    },
+    "docs/tasks/T011.md": {
+      "bytes": 8397,
+      "sha256": "f8ecaecda03766c69e40d5ea898019e2fc6e5c19cee3a8a98d683efac1b18c8b"
+    }
+  },
+  "validation": "artifacts/t011-r1/review/verification.json"
+}

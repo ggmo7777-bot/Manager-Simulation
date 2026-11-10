@@ -1,0 +1,708 @@
+{
+  "actions": {
+    "c1": [
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ]
+    ],
+    "c2": [
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ]
+    ],
+    "p1": [
+      "B",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B"
+    ],
+    "p2": [
+      "A",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "A",
+      "B",
+      "rest",
+      "A",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A"
+    ]
+  },
+  "coaches": {
+    "c1": {
+      "by_player_method": {
+        "p1": {
+          "A": {
+            "observed_training": 3,
+            "proposals": 7,
+            "residual": -0.019635569068416844,
+            "updates": 3
+          },
+          "B": {
+            "observed_training": 1,
+            "proposals": 6,
+            "residual": 0.028672659133216816,
+            "updates": 1
+          }
+        },
+        "p2": {
+          "A": {
+            "observed_training": 6,
+            "proposals": 1,
+            "residual": -0.04258497373513561,
+            "updates": 6
+          },
+          "B": {
+            "observed_training": 4,
+            "proposals": 2,
+            "residual": -0.030930158441996227,
+            "updates": 4
+          }
+        }
+      },
+      "observe": 26,
+      "observed_base_mse": 0.0028095678064814465,
+      "observed_forecast_mse": 0.0033303513483147963,
+      "observed_training_samples": 14,
+      "propose": 16,
+      "rest": 0,
+      "slots": 42
+    },
+    "c2": {
+      "by_player_method": {
+        "p1": {
+          "A": {
+            "observed_training": 3,
+            "proposals": 5,
+            "residual": -0.024830208287070245,
+            "updates": 3
+          },
+          "B": {
+            "observed_training": 1,
+            "proposals": 8,
+            "residual": -0.04926370038588271,
+            "updates": 1
+          }
+        },
+        "p2": {
+          "A": {
+            "observed_training": 6,
+            "proposals": 0,
+            "residual": -0.02609329076310362,
+            "updates": 6
+          },
+          "B": {
+            "observed_training": 4,
+            "proposals": 3,
+            "residual": -0.01418659186090402,
+            "updates": 4
+          }
+        }
+      },
+      "observe": 26,
+      "observed_base_mse": 0.0025757288713237343,
+      "observed_forecast_mse": 0.00239186137502218,
+      "observed_training_samples": 14,
+      "propose": 16,
+      "rest": 0,
+      "slots": 42
+    }
+  },
+  "days": 42,
+  "duplicate_observation_days": 26,
+  "elapsed_seconds": 0.018806166015565395,
+  "event_count": 1125,
+  "mean_skill_gain": 0.4656244010876695,
+  "players": {
+    "p1": {
+      "actions": {
+        "A": 17,
+        "B": 12,
+        "rest": 13
+      },
+      "by_coach": {
+        "c1": {
+          "feedback_count": 8,
+          "method_match": 8,
+          "method_mismatch": 5,
+          "non_dominating_feedback": 0,
+          "received": 13,
+          "received_forecast_mse": 0.0019602727775617753,
+          "rest_with_proposal": 0,
+          "score_source": {
+            "A": 7,
+            "B": 6
+          },
+          "self_mse_on_received_sample": 0.0007989998239972012,
+          "trust_change": -0.17107240520245715,
+          "trust_final": 0.5789275947975429
+        },
+        "c2": {
+          "feedback_count": 6,
+          "method_match": 6,
+          "method_mismatch": 7,
+          "non_dominating_feedback": 0,
+          "received": 13,
+          "received_forecast_mse": 0.0033110468367931185,
+          "rest_with_proposal": 0,
+          "score_source": {
+            "A": 5,
+            "B": 8
+          },
+          "self_mse_on_received_sample": 0.001441521890502407,
+          "trust_change": -0.13015065940696413,
+          "trust_final": 0.6198493405930359
+        }
+      },
+      "conflicting_two": 10,
+      "final_skill": 0.8390908244350149,
+      "received": {
+        "0": 26,
+        "1": 6,
+        "2": 10
+      },
+      "same_method_two": 0,
+      "skill_gain": 0.4590908244350149,
+      "trust_gap_c1_minus_c2": -0.040921745795493014
+    },
+    "p2": {
+      "actions": {
+        "A": 17,
+        "B": 12,
+        "rest": 13
+      },
+      "by_coach": {
+        "c1": {
+          "feedback_count": 0,
+          "method_match": 0,
+          "method_mismatch": 3,
+          "non_dominating_feedback": 0,
+          "received": 3,
+          "received_forecast_mse": null,
+          "rest_with_proposal": 1,
+          "score_source": {
+            "A": 1,
+            "B": 2
+          },
+          "self_mse_on_received_sample": null,
+          "trust_change": 0.0,
+          "trust_final": 0.28
+        },
+        "c2": {
+          "feedback_count": 1,
+          "method_match": 1,
+          "method_mismatch": 2,
+          "non_dominating_feedback": 0,
+          "received": 3,
+          "received_forecast_mse": 0.0011862289269291197,
+          "rest_with_proposal": 2,
+          "score_source": {
+            "A": 0,
+            "B": 3
+          },
+          "self_mse_on_received_sample": 0.000640636376878364,
+          "trust_change": -0.010911851001015105,
+          "trust_final": 0.2690881489989849
+        }
+      },
+      "conflicting_two": 0,
+      "final_skill": 0.8521579777403241,
+      "received": {
+        "0": 36,
+        "1": 6,
+        "2": 0
+      },
+      "same_method_two": 0,
+      "skill_gain": 0.4721579777403241,
+      "trust_gap_c1_minus_c2": 0.010911851001015105
+    }
+  },
+  "seed": 17,
+  "simulation_sha256": "d96d755aa18bcbf8a119eac149f44ae2063a47f6baebeb0d22282e4adabd9418",
+  "two_observers_days": 26
+}

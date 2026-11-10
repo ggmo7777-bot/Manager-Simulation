@@ -1,0 +1,21 @@
+{
+  "all_main_runs_coach_slots": {
+    "observe": 55,
+    "propose": 113,
+    "rest": 0
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 6006,
+  "control_runs": 12,
+  "frozen_control_pairs_equal": 3,
+  "frozen_pairs_equal_actions_players_coach_experiences": 60,
+  "main_runs": 240,
+  "rank_decisions_preserving_same_state_kind_and_target": 20160,
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

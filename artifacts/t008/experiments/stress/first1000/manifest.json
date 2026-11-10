@@ -1,0 +1,31 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "config": {
+    "away_observation_mode": "local",
+    "condition": "baseline",
+    "home_observation_mode": "local",
+    "mirror_rng_by_slot": false,
+    "noise_scale": 1.0,
+    "policy_version": "t008-match2d-score-v1",
+    "vision_radius": 6.5
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.13",
+    "system": "Darwin"
+  },
+  "seed": 17,
+  "simulation_sha256": "48ac885630213423821de97c874890220807c052a081e352991495d3c80d6d49",
+  "ticks": 1000,
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t008-match2d-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t008-match2d-v1",
+    "save": 8,
+    "source_sha256": "a7c6c651c9629b8003d8b5817f8cd69d7e28b58320e085e05147d74a0d1013b1",
+    "world_kind": "match_2d"
+  },
+  "world_kind": "match_2d"
+}

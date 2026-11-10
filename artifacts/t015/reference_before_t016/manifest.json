@@ -1,0 +1,20 @@
+{
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 16,
+    "rules": "t015-sampled-population-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "source_sha256": "483c47178c7683f125ba53a704f42909972b4201b889a069f2c988402c57a9f3"
+  },
+  "source_bundle_files": 129,
+  "status": "archival reference only, T015 remains experimental",
+  "recorded_result": "artifacts/t015/run1/comparison.json",
+  "recorded_result_sha256": "d4c71beda8bbb959cf7e3743e0b3de94fc3a255d9f45c28c6a75d535dbb1fc60"
+}

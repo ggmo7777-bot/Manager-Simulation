@@ -1,0 +1,26 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "experiments/t015.py",
+      "--out",
+      "/tmp/soccer-t016-old-analysis-unused"
+    ],
+    "exit_code": 1,
+    "message": "Historical T015 metrics require the archived T015 runtime. Use experiments/t016.py for the current cohort evaluation; reference: artifacts/t015/reference_before_t016/source_bundle.",
+    "output_not_created": true
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "experiments/review_t015.py",
+      "--out",
+      "/tmp/soccer-t016-old-review-unused"
+    ],
+    "exit_code": 1,
+    "message": "Historical T015 review requires its archived runtime; use experiments/t016.py for the current evaluation.",
+    "output_not_created": true
+  }
+]

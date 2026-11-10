@@ -1,0 +1,196 @@
+{
+  "day": 55,
+  "decision": {
+    "actor": "p2",
+    "causes": [
+      1444,
+      1448,
+      1450,
+      1406,
+      1224,
+      1304,
+      1383
+    ],
+    "data": {
+      "candidates": [
+        {
+          "action": "rest",
+          "method": null,
+          "score": 0.0,
+          "target": null,
+          "terms": {
+            "recovery_value": 0.0
+          }
+        },
+        {
+          "action": "A",
+          "method": "A",
+          "score": 0.01976362243627306,
+          "target": null,
+          "terms": {
+            "advice": -0.018996882753399245,
+            "expected_gain": 0.016760505189672308,
+            "felt_fatigue_cost": -0.0,
+            "preference": 0.022
+          }
+        },
+        {
+          "action": "B",
+          "method": "B",
+          "score": 0.005326485840859369,
+          "target": null,
+          "terms": {
+            "advice": 0.0,
+            "expected_gain": -0.008673514159140631,
+            "felt_fatigue_cost": -0.0,
+            "preference": 0.014
+          }
+        }
+      ],
+      "chosen": {
+        "action": "A",
+        "method": "A",
+        "score": 0.01976362243627306,
+        "target": null,
+        "terms": {
+          "advice": -0.018996882753399245,
+          "expected_gain": 0.016760505189672308,
+          "felt_fatigue_cost": -0.0,
+          "preference": 0.022
+        }
+      },
+      "memory_ids": [
+        1406,
+        1224,
+        1304,
+        1383
+      ],
+      "observation_ids": [
+        1444,
+        1448,
+        1450
+      ],
+      "policy_version": "t007-private-score-v1",
+      "proposal_responses": [
+        {
+          "coach_id": "c1",
+          "feedback_eligible": true,
+          "method_match": true,
+          "proposal_id": 1448
+        },
+        {
+          "coach_id": "c2",
+          "feedback_eligible": true,
+          "method_match": true,
+          "proposal_id": 1450
+        }
+      ],
+      "received": [
+        {
+          "coach_id": "c1",
+          "event_id": 1448,
+          "expected_gain": 0.06589676383298275,
+          "method": "A"
+        },
+        {
+          "coach_id": "c2",
+          "event_id": 1450,
+          "expected_gain": 0.02808551004413498,
+          "method": "A"
+        }
+      ],
+      "score_sources": {
+        "A": {
+          "coach_id": "c1",
+          "proposal_id": 1448,
+          "trust": 0.2346021317563773,
+          "trust_memory_id": 1304
+        },
+        "B": null
+      }
+    },
+    "day": 55,
+    "event_id": 1452,
+    "kind": "decision",
+    "phase": "choice",
+    "target": "p2"
+  },
+  "feedback": [
+    {
+      "actor": "p2",
+      "causes": [
+        1304,
+        1406,
+        1448,
+        1452,
+        1455,
+        1444,
+        1459
+      ],
+      "data": {
+        "coach_id": "c1",
+        "coach_loss": 0.00443695265600292,
+        "evidence": -1.0,
+        "feedback_eligible": true,
+        "method": "A",
+        "prior_trust_memory_id": 1304,
+        "proposal_id": 1448,
+        "q_coach_received": 0.06589676383298275,
+        "q_self_before_action": 0.016760505189672308,
+        "score_source": "c1",
+        "self_gain_memory_id": 1406,
+        "self_loss": 0.0003053475227546514,
+        "signed_observed_gain": -0.0007136907218611155,
+        "source": "self_observations",
+        "trust_after": 0.1846021317563773,
+        "trust_before": 0.2346021317563773,
+        "trust_change": -0.05000000000000002,
+        "trust_enabled": true
+      },
+      "day": 55,
+      "event_id": 1460,
+      "kind": "advice_feedback",
+      "phase": "evening",
+      "target": "p2"
+    },
+    {
+      "actor": "p2",
+      "causes": [
+        1383,
+        1406,
+        1450,
+        1452,
+        1455,
+        1444,
+        1459
+      ],
+      "data": {
+        "coach_id": "c2",
+        "coach_loss": 0.0008293939647601501,
+        "evidence": -0.20961857680219945,
+        "feedback_eligible": true,
+        "method": "A",
+        "prior_trust_memory_id": 1383,
+        "proposal_id": 1450,
+        "q_coach_received": 0.02808551004413498,
+        "q_self_before_action": 0.016760505189672308,
+        "score_source": "c1",
+        "self_gain_memory_id": 1406,
+        "self_loss": 0.0003053475227546514,
+        "signed_observed_gain": -0.0007136907218611155,
+        "source": "self_observations",
+        "trust_after": 0.21643277229390243,
+        "trust_before": 0.2269137011340124,
+        "trust_change": -0.010480928840109982,
+        "trust_enabled": true
+      },
+      "day": 55,
+      "event_id": 1461,
+      "kind": "advice_feedback",
+      "phase": "evening",
+      "target": "p2"
+    }
+  ],
+  "interpretation": "Both received predictions concern the executed method; score source and feedback owner are separate.",
+  "player": "p2"
+}

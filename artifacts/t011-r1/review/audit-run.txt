@@ -1,0 +1,12 @@
+audit closed_no_solidarity: resume and independent accounts passed
+audit closed_solidarity: resume and independent accounts passed
+audit open_no_solidarity: resume and independent accounts passed
+audit open_solidarity: resume and independent accounts passed
+Traceback (most recent call last):
+  File "/Users/yamaguchitoshi/Documents/soccer/artifacts/t011-r1/review/verify_r1.py", line 218, in <module>
+    {"factorial": factorial, "audit": audit}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yamaguchitoshi/Documents/soccer/artifacts/t011-r1/review/verify_r1.py", line 207, in audit
+    assert not changed, changed
+           ^^^^^^^^^^^
+AssertionError: ['artifacts/t011/review/economy-audit.json', 'artifacts/t011/review/verification.json']

@@ -1,0 +1,520 @@
+[
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--help"
+    ],
+    "returncode": 0,
+    "seconds": 0.12398050003685057,
+    "stderr": "",
+    "stdout": "usage: python3 -m soccer_sim run [-h] --seed SEED\n                                 [--condition {baseline,player_gain_frozen,coach_skill_frozen,gain_and_coach_frozen,legacy_all_frozen,self_skill_frozen,recency_frozen,fixed_trust,adaptive_trust,fixed_trust_gain_frozen,adaptive_trust_gain_frozen,clipped_fixed,clipped_adaptive,signed_fixed,signed_adaptive,coach_frozen_clipped,coach_learning_clipped,coach_frozen_signed,coach_learning_signed,frozen_legacy,frozen_rank,learning_legacy,learning_rank,multi_frozen_fixed,multi_frozen_adaptive,multi_learning_fixed,multi_learning_adaptive,match_baseline,match_home_skill_plus,match_home_position_plus,match_home_pass_style,match_home_directive_press,match_home_oracle_view,match_home_always_shoot,match_home_ball_camp_wait,select_decoupled_prior,select_coupled_prior,select_decoupled_feedback,select_coupled_feedback,select_rotation_feedback,select_fair_prior_p3,select_p1_pass_style_plus,transfer_decoupled_stay,transfer_coupled_stay,transfer_decoupled_transfer,transfer_coupled_transfer,transfer_fair_c1_prior_p3,transfer_low_c2_scouting_p3,transfer_high_loyalty_p3,league_closed_no_solidarity,league_closed_solidarity,league_open_no_solidarity,league_open_solidarity,league_fixed_budget_no_inflow,league_hoarder_buyer_policy,league_exploit_churn_guard,league_closed_no_solidarity_sampled_population,league_closed_solidarity_sampled_population,league_open_no_solidarity_sampled_population,league_open_solidarity_sampled_population,league_fixed_budget_no_inflow_sampled_population,league_hoarder_buyer_policy_sampled_population,league_exploit_churn_guard_sampled_population}]\n                                 --days DAYS --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --seed SEED\n  --condition {baseline,player_gain_frozen,coach_skill_frozen,gain_and_coach_frozen,legacy_all_frozen,self_skill_frozen,recency_frozen,fixed_trust,adaptive_trust,fixed_trust_gain_frozen,adaptive_trust_gain_frozen,clipped_fixed,clipped_adaptive,signed_fixed,signed_adaptive,coach_frozen_clipped,coach_learning_clipped,coach_frozen_signed,coach_learning_signed,frozen_legacy,frozen_rank,learning_legacy,learning_rank,multi_frozen_fixed,multi_frozen_adaptive,multi_learning_fixed,multi_learning_adaptive,match_baseline,match_home_skill_plus,match_home_position_plus,match_home_pass_style,match_home_directive_press,match_home_oracle_view,match_home_always_shoot,match_home_ball_camp_wait,select_decoupled_prior,select_coupled_prior,select_decoupled_feedback,select_coupled_feedback,select_rotation_feedback,select_fair_prior_p3,select_p1_pass_style_plus,transfer_decoupled_stay,transfer_coupled_stay,transfer_decoupled_transfer,transfer_coupled_transfer,transfer_fair_c1_prior_p3,transfer_low_c2_scouting_p3,transfer_high_loyalty_p3,league_closed_no_solidarity,league_closed_solidarity,league_open_no_solidarity,league_open_solidarity,league_fixed_budget_no_inflow,league_hoarder_buyer_policy,league_exploit_churn_guard,league_closed_no_solidarity_sampled_population,league_closed_solidarity_sampled_population,league_open_no_solidarity_sampled_population,league_open_solidarity_sampled_population,league_fixed_budget_no_inflow_sampled_population,league_hoarder_buyer_policy_sampled_population,league_exploit_churn_guard_sampled_population}\n  --days DAYS           additional simulated days\n  --out OUT\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_closed_no_solidarity",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/closed_no_solidarity"
+    ],
+    "returncode": 0,
+    "seconds": 0.7002008750569075,
+    "stderr": "",
+    "stdout": "day 35, 1521 events, SHA-256 9d2d6c4ac4b83f90b959dc7dd5fbda88d151611159c6734c4b4b189f350ddbb7\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_closed_solidarity",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/closed_solidarity"
+    ],
+    "returncode": 0,
+    "seconds": 0.7019565841183066,
+    "stderr": "",
+    "stdout": "day 35, 1521 events, SHA-256 f39ae4509160abd12e2cf8380eb439fc2bde225af872fff279c59f86bc8b18cb\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_no_solidarity",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/open_no_solidarity"
+    ],
+    "returncode": 0,
+    "seconds": 0.7092067499179393,
+    "stderr": "",
+    "stdout": "day 35, 1612 events, SHA-256 a9d1442ea75752b4416a9780750451eb69b750b360f363d2bfabdd32e557921d\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_solidarity",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/open_solidarity"
+    ],
+    "returncode": 0,
+    "seconds": 0.7175444578751922,
+    "stderr": "",
+    "stdout": "day 35, 1621 events, SHA-256 b92636c966374d8ce8b7db760a465af743919c7c6c2da877870f47e8ff54e094\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_fixed_budget_no_inflow",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/fixed_budget_no_inflow"
+    ],
+    "returncode": 0,
+    "seconds": 0.6944782501086593,
+    "stderr": "",
+    "stdout": "day 35, 1582 events, SHA-256 0eac2f0e10ad406c58aaec9209368b91e0658e2dcfd000bd50d3b7be6bd16f44\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_hoarder_buyer_policy",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/hoarder_buyer_policy"
+    ],
+    "returncode": 0,
+    "seconds": 0.6773685000371188,
+    "stderr": "",
+    "stdout": "day 35, 1646 events, SHA-256 b1651e78c1b48928714bcb1ded3652fb17aadb809ffa734df33d8681af600c32\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_exploit_churn_guard",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/exploit_churn_guard"
+    ],
+    "returncode": 0,
+    "seconds": 0.8116227500140667,
+    "stderr": "",
+    "stdout": "day 35, 1625 events, SHA-256 bd607350913af77d59055b468bf0987fe6579b9ac7a851a4e9504ce28a014a1c\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_closed_no_solidarity_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/closed_no_solidarity_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7215933341067284,
+    "stderr": "",
+    "stdout": "day 35, 1569 events, SHA-256 8bf5fc6b66000309d6b98fc9864653a45167ef254ace06b5cdfae787a9506f1b\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_closed_solidarity_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/closed_solidarity_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7448679581284523,
+    "stderr": "",
+    "stdout": "day 35, 1569 events, SHA-256 a85637fe161c7b922558f1111869685ef4e0137eb247994b32d615590cf26f40\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_no_solidarity_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/open_no_solidarity_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7238148329779506,
+    "stderr": "",
+    "stdout": "day 35, 1643 events, SHA-256 291d41d4ff23bb25414ce6ab1e607ccc4ca1c0c7ee6387fef34d2960ea43e552\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_solidarity_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/open_solidarity_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7237540420610458,
+    "stderr": "",
+    "stdout": "day 35, 1648 events, SHA-256 19dd71ed0a9cf82806d9576dd903f9b914ea92a2c2cad443fb9bc6d8794078e3\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_fixed_budget_no_inflow_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/fixed_budget_no_inflow_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7090520421043038,
+    "stderr": "",
+    "stdout": "day 35, 1604 events, SHA-256 c3dcd44656361f5ad178135f47237d440bf4332d1c6133777abe83ab12e6e905\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_hoarder_buyer_policy_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/hoarder_buyer_policy_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.6935609998181462,
+    "stderr": "",
+    "stdout": "day 35, 1672 events, SHA-256 0dd143f920d1aa6a4237b57c8c2fa0d75fa7246ccfa45512f0fb292adc8cc15f\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_exploit_churn_guard_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "35",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/runs/exploit_churn_guard_sampled_population"
+    ],
+    "returncode": 0,
+    "seconds": 0.7039545839652419,
+    "stderr": "",
+    "stdout": "day 35, 1650 events, SHA-256 11fcb92b57e8dba49b63a5a394dbfe70eb188456cf9b4025b396cc4b6c85e731\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_solidarity_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "14",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/parent14"
+    ],
+    "returncode": 0,
+    "seconds": 0.36735979095101357,
+    "stderr": "",
+    "stdout": "day 14, 624 events, SHA-256 341e2bc9f942a6350eebd9cf19ed97e881d3c05bf29b914b38915db2567ed98d\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "resume",
+      "--snapshot",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/parent14/snapshot.json",
+      "--days",
+      "21",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/resumed35"
+    ],
+    "returncode": 0,
+    "seconds": 0.7517653340473771,
+    "stderr": "",
+    "stdout": "day 35, 1648 events, SHA-256 19dd71ed0a9cf82806d9576dd903f9b914ea92a2c2cad443fb9bc6d8794078e3\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "branch",
+      "--snapshot",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/parent14/snapshot.json",
+      "--kind",
+      "player_trust",
+      "--player",
+      "p3",
+      "--coach",
+      "c1",
+      "--value",
+      "0.05",
+      "--reason",
+      "T017 sampled CLI trust branch",
+      "--days",
+      "14",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/branch28"
+    ],
+    "returncode": 0,
+    "seconds": 0.7935766659211367,
+    "stderr": "",
+    "stdout": "day 28, 1322 events, SHA-256 8b791b69fafe020b4ba1e7b01184d54604b07ff367ae6f6c2c9bc180f869d4f9\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "resume",
+      "--snapshot",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/branch28/snapshot.json",
+      "--days",
+      "7",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/branch_resumed35"
+    ],
+    "returncode": 0,
+    "seconds": 0.8174303330015391,
+    "stderr": "",
+    "stdout": "day 35, 1649 events, SHA-256 d3102d2f668901ad9e268f5dcabc7745b76e1b5952ce05b314f147b42b3abf6b\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "baseline_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/invalid-0"
+    ],
+    "returncode": 2,
+    "seconds": 0.11298654112033546,
+    "stderr": "usage: python3 -m soccer_sim run [-h] --seed SEED\n                                 [--condition {baseline,player_gain_frozen,coach_skill_frozen,gain_and_coach_frozen,legacy_all_frozen,self_skill_frozen,recency_frozen,fixed_trust,adaptive_trust,fixed_trust_gain_frozen,adaptive_trust_gain_frozen,clipped_fixed,clipped_adaptive,signed_fixed,signed_adaptive,coach_frozen_clipped,coach_learning_clipped,coach_frozen_signed,coach_learning_signed,frozen_legacy,frozen_rank,learning_legacy,learning_rank,multi_frozen_fixed,multi_frozen_adaptive,multi_learning_fixed,multi_learning_adaptive,match_baseline,match_home_skill_plus,match_home_position_plus,match_home_pass_style,match_home_directive_press,match_home_oracle_view,match_home_always_shoot,match_home_ball_camp_wait,select_decoupled_prior,select_coupled_prior,select_decoupled_feedback,select_coupled_feedback,select_rotation_feedback,select_fair_prior_p3,select_p1_pass_style_plus,transfer_decoupled_stay,transfer_coupled_stay,transfer_decoupled_transfer,transfer_coupled_transfer,transfer_fair_c1_prior_p3,transfer_low_c2_scouting_p3,transfer_high_loyalty_p3,league_closed_no_solidarity,league_closed_solidarity,league_open_no_solidarity,league_open_solidarity,league_fixed_budget_no_inflow,league_hoarder_buyer_policy,league_exploit_churn_guard,league_closed_no_solidarity_sampled_population,league_closed_solidarity_sampled_population,league_open_no_solidarity_sampled_population,league_open_solidarity_sampled_population,league_fixed_budget_no_inflow_sampled_population,league_hoarder_buyer_policy_sampled_population,league_exploit_churn_guard_sampled_population}]\n                                 --days DAYS --out OUT\npython3 -m soccer_sim run: error: argument --condition: invalid choice: 'baseline_sampled_population' (choose from baseline, player_gain_frozen, coach_skill_frozen, gain_and_coach_frozen, legacy_all_frozen, self_skill_frozen, recency_frozen, fixed_trust, adaptive_trust, fixed_trust_gain_frozen, adaptive_trust_gain_frozen, clipped_fixed, clipped_adaptive, signed_fixed, signed_adaptive, coach_frozen_clipped, coach_learning_clipped, coach_frozen_signed, coach_learning_signed, frozen_legacy, frozen_rank, learning_legacy, learning_rank, multi_frozen_fixed, multi_frozen_adaptive, multi_learning_fixed, multi_learning_adaptive, match_baseline, match_home_skill_plus, match_home_position_plus, match_home_pass_style, match_home_directive_press, match_home_oracle_view, match_home_always_shoot, match_home_ball_camp_wait, select_decoupled_prior, select_coupled_prior, select_decoupled_feedback, select_coupled_feedback, select_rotation_feedback, select_fair_prior_p3, select_p1_pass_style_plus, transfer_decoupled_stay, transfer_coupled_stay, transfer_decoupled_transfer, transfer_coupled_transfer, transfer_fair_c1_prior_p3, transfer_low_c2_scouting_p3, transfer_high_loyalty_p3, league_closed_no_solidarity, league_closed_solidarity, league_open_no_solidarity, league_open_solidarity, league_fixed_budget_no_inflow, league_hoarder_buyer_policy, league_exploit_churn_guard, league_closed_no_solidarity_sampled_population, league_closed_solidarity_sampled_population, league_open_no_solidarity_sampled_population, league_open_solidarity_sampled_population, league_fixed_budget_no_inflow_sampled_population, league_hoarder_buyer_policy_sampled_population, league_exploit_churn_guard_sampled_population)\n",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_unknown_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/invalid-1"
+    ],
+    "returncode": 2,
+    "seconds": 0.11241987510584295,
+    "stderr": "usage: python3 -m soccer_sim run [-h] --seed SEED\n                                 [--condition {baseline,player_gain_frozen,coach_skill_frozen,gain_and_coach_frozen,legacy_all_frozen,self_skill_frozen,recency_frozen,fixed_trust,adaptive_trust,fixed_trust_gain_frozen,adaptive_trust_gain_frozen,clipped_fixed,clipped_adaptive,signed_fixed,signed_adaptive,coach_frozen_clipped,coach_learning_clipped,coach_frozen_signed,coach_learning_signed,frozen_legacy,frozen_rank,learning_legacy,learning_rank,multi_frozen_fixed,multi_frozen_adaptive,multi_learning_fixed,multi_learning_adaptive,match_baseline,match_home_skill_plus,match_home_position_plus,match_home_pass_style,match_home_directive_press,match_home_oracle_view,match_home_always_shoot,match_home_ball_camp_wait,select_decoupled_prior,select_coupled_prior,select_decoupled_feedback,select_coupled_feedback,select_rotation_feedback,select_fair_prior_p3,select_p1_pass_style_plus,transfer_decoupled_stay,transfer_coupled_stay,transfer_decoupled_transfer,transfer_coupled_transfer,transfer_fair_c1_prior_p3,transfer_low_c2_scouting_p3,transfer_high_loyalty_p3,league_closed_no_solidarity,league_closed_solidarity,league_open_no_solidarity,league_open_solidarity,league_fixed_budget_no_inflow,league_hoarder_buyer_policy,league_exploit_churn_guard,league_closed_no_solidarity_sampled_population,league_closed_solidarity_sampled_population,league_open_no_solidarity_sampled_population,league_open_solidarity_sampled_population,league_fixed_budget_no_inflow_sampled_population,league_hoarder_buyer_policy_sampled_population,league_exploit_churn_guard_sampled_population}]\n                                 --days DAYS --out OUT\npython3 -m soccer_sim run: error: argument --condition: invalid choice: 'league_unknown_sampled_population' (choose from baseline, player_gain_frozen, coach_skill_frozen, gain_and_coach_frozen, legacy_all_frozen, self_skill_frozen, recency_frozen, fixed_trust, adaptive_trust, fixed_trust_gain_frozen, adaptive_trust_gain_frozen, clipped_fixed, clipped_adaptive, signed_fixed, signed_adaptive, coach_frozen_clipped, coach_learning_clipped, coach_frozen_signed, coach_learning_signed, frozen_legacy, frozen_rank, learning_legacy, learning_rank, multi_frozen_fixed, multi_frozen_adaptive, multi_learning_fixed, multi_learning_adaptive, match_baseline, match_home_skill_plus, match_home_position_plus, match_home_pass_style, match_home_directive_press, match_home_oracle_view, match_home_always_shoot, match_home_ball_camp_wait, select_decoupled_prior, select_coupled_prior, select_decoupled_feedback, select_coupled_feedback, select_rotation_feedback, select_fair_prior_p3, select_p1_pass_style_plus, transfer_decoupled_stay, transfer_coupled_stay, transfer_decoupled_transfer, transfer_coupled_transfer, transfer_fair_c1_prior_p3, transfer_low_c2_scouting_p3, transfer_high_loyalty_p3, league_closed_no_solidarity, league_closed_solidarity, league_open_no_solidarity, league_open_solidarity, league_fixed_budget_no_inflow, league_hoarder_buyer_policy, league_exploit_churn_guard, league_closed_no_solidarity_sampled_population, league_closed_solidarity_sampled_population, league_open_no_solidarity_sampled_population, league_open_solidarity_sampled_population, league_fixed_budget_no_inflow_sampled_population, league_hoarder_buyer_policy_sampled_population, league_exploit_churn_guard_sampled_population)\n",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--condition",
+      "league_open_solidarity_sampled_population_sampled_population",
+      "--seed",
+      "100",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/invalid-2"
+    ],
+    "returncode": 2,
+    "seconds": 0.11414616694673896,
+    "stderr": "usage: python3 -m soccer_sim run [-h] --seed SEED\n                                 [--condition {baseline,player_gain_frozen,coach_skill_frozen,gain_and_coach_frozen,legacy_all_frozen,self_skill_frozen,recency_frozen,fixed_trust,adaptive_trust,fixed_trust_gain_frozen,adaptive_trust_gain_frozen,clipped_fixed,clipped_adaptive,signed_fixed,signed_adaptive,coach_frozen_clipped,coach_learning_clipped,coach_frozen_signed,coach_learning_signed,frozen_legacy,frozen_rank,learning_legacy,learning_rank,multi_frozen_fixed,multi_frozen_adaptive,multi_learning_fixed,multi_learning_adaptive,match_baseline,match_home_skill_plus,match_home_position_plus,match_home_pass_style,match_home_directive_press,match_home_oracle_view,match_home_always_shoot,match_home_ball_camp_wait,select_decoupled_prior,select_coupled_prior,select_decoupled_feedback,select_coupled_feedback,select_rotation_feedback,select_fair_prior_p3,select_p1_pass_style_plus,transfer_decoupled_stay,transfer_coupled_stay,transfer_decoupled_transfer,transfer_coupled_transfer,transfer_fair_c1_prior_p3,transfer_low_c2_scouting_p3,transfer_high_loyalty_p3,league_closed_no_solidarity,league_closed_solidarity,league_open_no_solidarity,league_open_solidarity,league_fixed_budget_no_inflow,league_hoarder_buyer_policy,league_exploit_churn_guard,league_closed_no_solidarity_sampled_population,league_closed_solidarity_sampled_population,league_open_no_solidarity_sampled_population,league_open_solidarity_sampled_population,league_fixed_budget_no_inflow_sampled_population,league_hoarder_buyer_policy_sampled_population,league_exploit_churn_guard_sampled_population}]\n                                 --days DAYS --out OUT\npython3 -m soccer_sim run: error: argument --condition: invalid choice: 'league_open_solidarity_sampled_population_sampled_population' (choose from baseline, player_gain_frozen, coach_skill_frozen, gain_and_coach_frozen, legacy_all_frozen, self_skill_frozen, recency_frozen, fixed_trust, adaptive_trust, fixed_trust_gain_frozen, adaptive_trust_gain_frozen, clipped_fixed, clipped_adaptive, signed_fixed, signed_adaptive, coach_frozen_clipped, coach_learning_clipped, coach_frozen_signed, coach_learning_signed, frozen_legacy, frozen_rank, learning_legacy, learning_rank, multi_frozen_fixed, multi_frozen_adaptive, multi_learning_fixed, multi_learning_adaptive, match_baseline, match_home_skill_plus, match_home_position_plus, match_home_pass_style, match_home_directive_press, match_home_oracle_view, match_home_always_shoot, match_home_ball_camp_wait, select_decoupled_prior, select_coupled_prior, select_decoupled_feedback, select_coupled_feedback, select_rotation_feedback, select_fair_prior_p3, select_p1_pass_style_plus, transfer_decoupled_stay, transfer_coupled_stay, transfer_decoupled_transfer, transfer_coupled_transfer, transfer_fair_c1_prior_p3, transfer_low_c2_scouting_p3, transfer_high_loyalty_p3, league_closed_no_solidarity, league_closed_solidarity, league_open_no_solidarity, league_open_solidarity, league_fixed_budget_no_inflow, league_hoarder_buyer_policy, league_exploit_churn_guard, league_closed_no_solidarity_sampled_population, league_closed_solidarity_sampled_population, league_open_no_solidarity_sampled_population, league_open_solidarity_sampled_population, league_fixed_budget_no_inflow_sampled_population, league_hoarder_buyer_policy_sampled_population, league_exploit_churn_guard_sampled_population)\n",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "resume",
+      "--snapshot",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t016/comparison/representative/open_solidarity_sampled_population/checkpoint/snapshot.json",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/rejected-old-checkpoint"
+    ],
+    "returncode": 2,
+    "seconds": 0.1676762499846518,
+    "stderr": "error: replay mismatch at snapshot.identity.source_sha256: value\n",
+    "stdout": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--seed",
+      "100",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/default"
+    ],
+    "returncode": 0,
+    "seconds": 0.118817999958992,
+    "stderr": "",
+    "stdout": "day 0, 9 events, SHA-256 459504ba61bab79c6876465b8d2a6dba6dae00a50e8f5300ac44f8738ede30bd\n"
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-B",
+      "-m",
+      "soccer_sim",
+      "run",
+      "--seed",
+      "100",
+      "--condition",
+      "baseline",
+      "--days",
+      "0",
+      "--out",
+      "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/comparison/baseline"
+    ],
+    "returncode": 0,
+    "seconds": 0.11349879205226898,
+    "stderr": "",
+    "stdout": "day 0, 9 events, SHA-256 459504ba61bab79c6876465b8d2a6dba6dae00a50e8f5300ac44f8738ede30bd\n"
+  }
+]

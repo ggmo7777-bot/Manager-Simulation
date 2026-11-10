@@ -1,0 +1,8 @@
+closed_no_solidarity: 30 worlds, independent ledgers/requests passed
+closed_solidarity: 30 worlds, independent ledgers/requests passed
+open_no_solidarity: 30 worlds, independent ledgers/requests passed
+open_solidarity: 30 worlds, independent ledgers/requests passed
+fixed_budget_no_inflow: 30 worlds, independent ledgers/requests passed
+hoarder_buyer_policy: 30 worlds, independent ledgers/requests passed
+exploit_churn_guard: 30 worlds, independent ledgers/requests passed
+open_solidarity_perfect_fatigue: 30 worlds, independent ledgers/requests passed

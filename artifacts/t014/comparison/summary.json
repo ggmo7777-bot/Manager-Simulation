@@ -1,0 +1,162 @@
+{
+  "all_old_runs_match_T013_stored_summaries": true,
+  "branch_full_history_equal": 30,
+  "branch_resumed84": {
+    "baseline": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "coach_high": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "noop": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "trust_high": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "trust_low": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    }
+  },
+  "branch_series": 30,
+  "economic_full_history_equal": 240,
+  "economic_runs": 240,
+  "elapsed_seconds": 434.4095054171048,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t014-integer-money-v1",
+    "save": 15,
+    "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+    "world_kind": "league_economy_loop"
+  },
+  "long_horizon": {
+    "audit": {
+      "admission": {
+        "all_resolved_once": true,
+        "counts": {
+          "claim_accepted": 12,
+          "claim_trigger_limit": 260,
+          "payments": 12
+        },
+        "no_duplicate_payment": true,
+        "requests": 297
+      },
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 6094
+      }
+    },
+    "chained_same_day_plus7_equal": true,
+    "comparison": {
+      "equal": true,
+      "first_difference": null,
+      "new_normalized_sha256": "b88e5cacc9fa530f873615a2d59c5d2005e1bf3d96eacc613a3c11961077a815",
+      "old_normalized_sha256": "b88e5cacc9fa530f873615a2d59c5d2005e1bf3d96eacc613a3c11961077a815"
+    },
+    "days": 1000,
+    "load_seconds": 7.8171800000127405,
+    "resume_plus14_equal": true,
+    "save_seconds": 10.309996624942869,
+    "simulation_seconds": 5.45593279087916,
+    "snapshot_bytes": 72331966
+  },
+  "max_rss_raw": 966885376,
+  "normalization": {
+    "excludes": [
+      "identity",
+      "parent_checkpoint_sha256"
+    ],
+    "legacy_monetary_fields": [
+      "academy_clubs_cash",
+      "amount",
+      "base_fee",
+      "base_transfer_fee_no_solidarity",
+      "base_transfer_fee_solidarity",
+      "buyer_clubs_cash",
+      "buyer_min_cash_reserve",
+      "buyer_minus_academy_cash",
+      "cash",
+      "cash_after",
+      "cumulative_external_inflow",
+      "cumulative_external_outflow",
+      "cumulative_facility_paid",
+      "cumulative_inflow",
+      "cumulative_scouting_paid",
+      "cumulative_solidarity_paid",
+      "cumulative_solidarity_received",
+      "cumulative_transfer_fees_paid",
+      "cumulative_transfer_fees_received",
+      "cumulative_wages_paid",
+      "cumulative_wages_received",
+      "development_dividend_per_start",
+      "dividend_per_start",
+      "facility_daily_cost",
+      "facility_reserve_floor",
+      "initial_academy_cash",
+      "initial_buyer_cash",
+      "initial_cash",
+      "initial_total_cash",
+      "ledger_discrepancy",
+      "matchday_base_inflow",
+      "matchday_draw_bonus",
+      "matchday_win_bonus",
+      "player_matchday_wage",
+      "required_upfront_fee",
+      "scout_action_cost",
+      "solidarity_dividends_paid",
+      "solidarity_grant",
+      "solidarity_transfer_grant"
+    ],
+    "scale": 1000000
+  },
+  "old_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
+    "revision_author": "Codex (T013)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t013-observation-claims-v1",
+    "save": 14,
+    "source_sha256": "f05e4b33449f1d2757ad31ac9478e6137fa369efc05e7d4778b933e1b21592ad",
+    "world_kind": "league_economy_loop"
+  },
+  "resumed84": {
+    "closed_no_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "closed_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "open_no_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    },
+    "open_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true
+    }
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "task": "T014"
+}

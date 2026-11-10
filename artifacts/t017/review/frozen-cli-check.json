@@ -1,0 +1,23 @@
+{
+  "frozen_cli_command": [
+    "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "-B",
+    "-m",
+    "soccer_sim",
+    "run",
+    "--condition",
+    "league_open_solidarity_sampled_population",
+    "--seed",
+    "100",
+    "--days",
+    "1",
+    "--out",
+    "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/review/frozen-cli"
+  ],
+  "cwd": "/Users/yamaguchitoshi/Documents/soccer/artifacts/t017/source_bundle",
+  "exit": 0,
+  "stdout": "day 1, 46 events, SHA-256 feaf63edfaf6a613d02584e890705cb0e01e57284c70e223908d81663f0b0aec\n",
+  "identity_matches": true,
+  "one_day_state_matches_live_api": true,
+  "population": "sampled"
+}

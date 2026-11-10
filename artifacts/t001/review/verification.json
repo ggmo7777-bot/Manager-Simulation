@@ -1,0 +1,22 @@
+{
+  "baseline_hash": "c4757774d5958043f794c0d966b8c7ccb49bf987e7adfde3354e89467f2eac19",
+  "checks": {
+    "baseline_hash_matches_manifest": true,
+    "baseline_loads_current_code": true,
+    "events_byte_equal": true,
+    "experiment_runs": 120,
+    "experiment_source_matches_current": true,
+    "snapshot_byte_equal": true
+  },
+  "date_jst": "2026-11-04",
+  "reviewer_test_command": "python3 -m unittest discover -s tests -v",
+  "reviewer_test_result": "11 tests passed",
+  "source_bundle": "artifacts/t001/source_bundle",
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t001-training-v1",
+    "save": 1,
+    "source_sha256": "7990ccd905dfb73012f2f164a066da0b409eaa1038d4aac173ab9956bcc82101"
+  }
+}

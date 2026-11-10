@@ -1,0 +1,4 @@
+audit closed_no_solidarity: resume and independent accounts passed
+audit closed_solidarity: resume and independent accounts passed
+audit open_no_solidarity: resume and independent accounts passed
+audit open_solidarity: resume and independent accounts passed

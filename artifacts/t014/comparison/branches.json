@@ -1,0 +1,2340 @@
+{
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t014-integer-money-v1",
+    "save": 15,
+    "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+    "world_kind": "league_economy_loop"
+  },
+  "old_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
+    "revision_author": "Codex (T013)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t013-observation-claims-v1",
+    "save": 14,
+    "source_sha256": "f05e4b33449f1d2757ad31ac9478e6137fa369efc05e7d4778b933e1b21592ad",
+    "world_kind": "league_economy_loop"
+  },
+  "runs": [
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 35
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 647
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "9148b9867f03fbd311459edc8918148b81981cee3df632ea195bcad743f0b816",
+        "old_normalized_sha256": "9148b9867f03fbd311459edc8918148b81981cee3df632ea195bcad743f0b816"
+      },
+      "seed": 1,
+      "summary": {
+        "academy_clubs_cash_units": 49150000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 29,
+        "academy_facility_days": 134,
+        "academy_retained_skill_gain": 0.333725,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36840000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 37,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12310000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 8,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4075,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.214542,
+        "seed": 1,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.309683,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 35
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 647
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "21a8c8279d6b74906adfb77121c1df895e4ae08cb4877e863c3870ede84d0526",
+        "old_normalized_sha256": "21a8c8279d6b74906adfb77121c1df895e4ae08cb4877e863c3870ede84d0526"
+      },
+      "seed": 1,
+      "summary": {
+        "academy_clubs_cash_units": 49150000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 29,
+        "academy_facility_days": 134,
+        "academy_retained_skill_gain": 0.333725,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36840000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 37,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12310000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 8,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4076,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.214542,
+        "seed": 1,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.309683,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 10,
+            "claim_trigger_limit": 2,
+            "payments": 10
+          },
+          "no_duplicate_payment": true,
+          "requests": 38
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 627
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "cabd28647673f70ef6a9fb4911ebc1350779d847919c8a7c541a2ada8aa670b8",
+        "old_normalized_sha256": "cabd28647673f70ef6a9fb4911ebc1350779d847919c8a7c541a2ada8aa670b8"
+      },
+      "seed": 1,
+      "summary": {
+        "academy_clubs_cash_units": 53520000,
+        "academy_clubs_gd": 17,
+        "academy_clubs_points": 44,
+        "academy_facility_days": 111,
+        "academy_retained_skill_gain": 0.305305,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 38760000,
+        "buyer_clubs_gd": -17,
+        "buyer_clubs_points": 23,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14760000,
+        "buyer_minus_academy_gd": -34,
+        "buyer_minus_academy_points": -21,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4073,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.201381,
+        "seed": 1,
+        "solidarity_dividends_paid_units": 17500000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.287733,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 36
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 647
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "6459182bff09a11945ca490a6deabecc96e1bf34ee874edcc97c7a1d344a3f2b",
+        "old_normalized_sha256": "6459182bff09a11945ca490a6deabecc96e1bf34ee874edcc97c7a1d344a3f2b"
+      },
+      "seed": 1,
+      "summary": {
+        "academy_clubs_cash_units": 49300000,
+        "academy_clubs_gd": -2,
+        "academy_clubs_points": 30,
+        "academy_facility_days": 134,
+        "academy_retained_skill_gain": 0.333725,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36590000,
+        "buyer_clubs_gd": 2,
+        "buyer_clubs_points": 35,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12710000,
+        "buyer_minus_academy_gd": 4,
+        "buyer_minus_academy_points": 5,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4081,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.214535,
+        "seed": 1,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.309642,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 35
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 648
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "e5a0376f0f3bc800ff75b0a15931e12efa013f846a0f167678d8e2eb51f36b70",
+        "old_normalized_sha256": "e5a0376f0f3bc800ff75b0a15931e12efa013f846a0f167678d8e2eb51f36b70"
+      },
+      "seed": 1,
+      "summary": {
+        "academy_clubs_cash_units": 49100000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 29,
+        "academy_facility_days": 134,
+        "academy_retained_skill_gain": 0.333725,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36840000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 37,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12260000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 8,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4078,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.214532,
+        "seed": 1,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.309623,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 37
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 625
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "7587eaec600076d70969f8f5076af06e48e4122773e03a3e3ee173264a74ca39",
+        "old_normalized_sha256": "7587eaec600076d70969f8f5076af06e48e4122773e03a3e3ee173264a74ca39"
+      },
+      "seed": 2,
+      "summary": {
+        "academy_clubs_cash_units": 50610000,
+        "academy_clubs_gd": 3,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.300587,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36840000,
+        "buyer_clubs_gd": -3,
+        "buyer_clubs_points": 31,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13770000,
+        "buyer_minus_academy_gd": -6,
+        "buyer_minus_academy_points": -3,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4029,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.205374,
+        "seed": 2,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_d",
+          "club_b",
+          "club_a"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.326858,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 37
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 625
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "ac27061accffc2bcc7b38dc103f79fbf257a4b767f95c7319dcf92b85e1a8530",
+        "old_normalized_sha256": "ac27061accffc2bcc7b38dc103f79fbf257a4b767f95c7319dcf92b85e1a8530"
+      },
+      "seed": 2,
+      "summary": {
+        "academy_clubs_cash_units": 50610000,
+        "academy_clubs_gd": 3,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.300587,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36840000,
+        "buyer_clubs_gd": -3,
+        "buyer_clubs_points": 31,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13770000,
+        "buyer_minus_academy_gd": -6,
+        "buyer_minus_academy_points": -3,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4030,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.205374,
+        "seed": 2,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_d",
+          "club_b",
+          "club_a"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.326858,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 10,
+            "claim_trigger_limit": 2,
+            "payments": 10
+          },
+          "no_duplicate_payment": true,
+          "requests": 41
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 598
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "a94dc1da1517f029d6138b8b44dd13b9c4e495e0b7fd6f8907d96059e201c057",
+        "old_normalized_sha256": "a94dc1da1517f029d6138b8b44dd13b9c4e495e0b7fd6f8907d96059e201c057"
+      },
+      "seed": 2,
+      "summary": {
+        "academy_clubs_cash_units": 53500000,
+        "academy_clubs_gd": 9,
+        "academy_clubs_points": 39,
+        "academy_facility_days": 110,
+        "academy_retained_skill_gain": 0.290157,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 40260000,
+        "buyer_clubs_gd": -9,
+        "buyer_clubs_points": 26,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13240000,
+        "buyer_minus_academy_gd": -18,
+        "buyer_minus_academy_points": -13,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4012,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.197992,
+        "seed": 2,
+        "solidarity_dividends_paid_units": 17500000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.299519,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 37
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 625
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "e0f5496e2193465dfd82c16fb19c8600a7f9a20d1796b18b587fec0465a2ae85",
+        "old_normalized_sha256": "e0f5496e2193465dfd82c16fb19c8600a7f9a20d1796b18b587fec0465a2ae85"
+      },
+      "seed": 2,
+      "summary": {
+        "academy_clubs_cash_units": 50860000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 36,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.300587,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36690000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 30,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14170000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4034,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.205361,
+        "seed": 2,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_d",
+          "club_a",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.326784,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 37
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 625
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "966fed040aa6d99e78438141bd6c10165c341c4bb4b4d18d43d01518766de323",
+        "old_normalized_sha256": "966fed040aa6d99e78438141bd6c10165c341c4bb4b4d18d43d01518766de323"
+      },
+      "seed": 2,
+      "summary": {
+        "academy_clubs_cash_units": 50860000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 36,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.300587,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36690000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 30,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14170000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4032,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.20539,
+        "seed": 2,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_d",
+          "club_a",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.326956,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 629
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "a129ebd2738104ae1b216b659a26e968028f18c0a85dd871c6d3835db6a48d78",
+        "old_normalized_sha256": "a129ebd2738104ae1b216b659a26e968028f18c0a85dd871c6d3835db6a48d78"
+      },
+      "seed": 3,
+      "summary": {
+        "academy_clubs_cash_units": 50740000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 131,
+        "academy_retained_skill_gain": 0.287334,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36140000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 25,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14600000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4031,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.198826,
+        "seed": 3,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_a",
+          "club_d",
+          "club_c",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.311542,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 629
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "a270b2ecb84a9f256db0d6f660c905db1176fd0e3e525f29ddd2c875fa07cdb5",
+        "old_normalized_sha256": "a270b2ecb84a9f256db0d6f660c905db1176fd0e3e525f29ddd2c875fa07cdb5"
+      },
+      "seed": 3,
+      "summary": {
+        "academy_clubs_cash_units": 50740000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 131,
+        "academy_retained_skill_gain": 0.287334,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36140000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 25,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14600000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4032,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.198826,
+        "seed": 3,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_a",
+          "club_d",
+          "club_c",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.311542,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 10,
+            "claim_trigger_limit": 2,
+            "payments": 10
+          },
+          "no_duplicate_payment": true,
+          "requests": 39
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 602
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "91c8c1196687475feefcf294f2b01fae81228ae90829df0eec0f03b07bd97018",
+        "old_normalized_sha256": "91c8c1196687475feefcf294f2b01fae81228ae90829df0eec0f03b07bd97018"
+      },
+      "seed": 3,
+      "summary": {
+        "academy_clubs_cash_units": 53430000,
+        "academy_clubs_gd": 9,
+        "academy_clubs_points": 39,
+        "academy_facility_days": 109,
+        "academy_retained_skill_gain": 0.266048,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 40560000,
+        "buyer_clubs_gd": -9,
+        "buyer_clubs_points": 28,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12870000,
+        "buyer_minus_academy_gd": -18,
+        "buyer_minus_academy_points": -11,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4021,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.186911,
+        "seed": 3,
+        "solidarity_dividends_paid_units": 17500000,
+        "standings": [
+          "club_a",
+          "club_b",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.283836,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 629
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "25aa0266ae13ad36a742e07208a413410eb6ee3906b4f64cc787b2cb7571a401",
+        "old_normalized_sha256": "25aa0266ae13ad36a742e07208a413410eb6ee3906b4f64cc787b2cb7571a401"
+      },
+      "seed": 3,
+      "summary": {
+        "academy_clubs_cash_units": 50740000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 131,
+        "academy_retained_skill_gain": 0.287334,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36140000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 25,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14600000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4036,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.199037,
+        "seed": 3,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_a",
+          "club_d",
+          "club_c",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.312808,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 629
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "c63bd26d610c427f8dfe9a64d66436ad88610db915489d2454b8e162e431b13c",
+        "old_normalized_sha256": "c63bd26d610c427f8dfe9a64d66436ad88610db915489d2454b8e162e431b13c"
+      },
+      "seed": 3,
+      "summary": {
+        "academy_clubs_cash_units": 50740000,
+        "academy_clubs_gd": 4,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 131,
+        "academy_retained_skill_gain": 0.287334,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36140000,
+        "buyer_clubs_gd": -4,
+        "buyer_clubs_points": 25,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14600000,
+        "buyer_minus_academy_gd": -8,
+        "buyer_minus_academy_points": -9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4033,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.198824,
+        "seed": 3,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_a",
+          "club_d",
+          "club_c",
+          "club_b"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.311534,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 31
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 616
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "80793f7cd10de3bd47155509c82300c7de94e6635f8ce038872324b5f28cf3ee",
+        "old_normalized_sha256": "80793f7cd10de3bd47155509c82300c7de94e6635f8ce038872324b5f28cf3ee"
+      },
+      "seed": 100,
+      "summary": {
+        "academy_clubs_cash_units": 50360000,
+        "academy_clubs_gd": 3,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.321215,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37240000,
+        "buyer_clubs_gd": -3,
+        "buyer_clubs_points": 28,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13120000,
+        "buyer_minus_academy_gd": -6,
+        "buyer_minus_academy_points": -6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 3999,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210843,
+        "seed": 100,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.315669,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 31
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 616
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "7efca9fc1903616cdfe5de4bf1c9943f55c117efee5a62ecfbe0293e0341d96d",
+        "old_normalized_sha256": "7efca9fc1903616cdfe5de4bf1c9943f55c117efee5a62ecfbe0293e0341d96d"
+      },
+      "seed": 100,
+      "summary": {
+        "academy_clubs_cash_units": 50360000,
+        "academy_clubs_gd": 3,
+        "academy_clubs_points": 34,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.321215,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37240000,
+        "buyer_clubs_gd": -3,
+        "buyer_clubs_points": 28,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13120000,
+        "buyer_minus_academy_gd": -6,
+        "buyer_minus_academy_points": -6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4000,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210843,
+        "seed": 100,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.315669,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 9,
+            "claim_trigger_limit": 2,
+            "payments": 9
+          },
+          "no_duplicate_payment": true,
+          "requests": 36
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 595
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "7f26e9a3505ab68c5c32df5d59b55bb222e40e9e1d338d677bfed6a3f12f87a4",
+        "old_normalized_sha256": "7f26e9a3505ab68c5c32df5d59b55bb222e40e9e1d338d677bfed6a3f12f87a4"
+      },
+      "seed": 100,
+      "summary": {
+        "academy_clubs_cash_units": 51800000,
+        "academy_clubs_gd": 7,
+        "academy_clubs_points": 36,
+        "academy_facility_days": 110,
+        "academy_retained_skill_gain": 0.31197,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 41960000,
+        "buyer_clubs_gd": -7,
+        "buyer_clubs_points": 28,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -9840000,
+        "buyer_minus_academy_gd": -14,
+        "buyer_minus_academy_points": -8,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4008,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.204085,
+        "seed": 100,
+        "solidarity_dividends_paid_units": 16250000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.289596,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 31
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 616
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "86b7a12db7386dfa5ad2f1cf901462a8855fa65900286eab4db2b087737d8ef9",
+        "old_normalized_sha256": "86b7a12db7386dfa5ad2f1cf901462a8855fa65900286eab4db2b087737d8ef9"
+      },
+      "seed": 100,
+      "summary": {
+        "academy_clubs_cash_units": 50160000,
+        "academy_clubs_gd": 2,
+        "academy_clubs_points": 33,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.321215,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37540000,
+        "buyer_clubs_gd": -2,
+        "buyer_clubs_points": 30,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12620000,
+        "buyer_minus_academy_gd": -4,
+        "buyer_minus_academy_points": -3,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4004,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210863,
+        "seed": 100,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_d",
+          "club_a"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.315787,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 33
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 617
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "1bd36128c4312139975b1833b533bbfe854e3a25ac9df67edac6abd7f57fb0c8",
+        "old_normalized_sha256": "1bd36128c4312139975b1833b533bbfe854e3a25ac9df67edac6abd7f57fb0c8"
+      },
+      "seed": 100,
+      "summary": {
+        "academy_clubs_cash_units": 50410000,
+        "academy_clubs_gd": 3,
+        "academy_clubs_points": 35,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.321218,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37340000,
+        "buyer_clubs_gd": -3,
+        "buyer_clubs_points": 29,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13070000,
+        "buyer_minus_academy_gd": -6,
+        "buyer_minus_academy_points": -6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4008,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.211477,
+        "seed": 100,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_b",
+          "club_a",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.319465,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 623
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "57d181ea2776b906470ce39c60cadc3618bd98c08ddf563fbaa2c7ad13494582",
+        "old_normalized_sha256": "57d181ea2776b906470ce39c60cadc3618bd98c08ddf563fbaa2c7ad13494582"
+      },
+      "seed": 101,
+      "summary": {
+        "academy_clubs_cash_units": 50880000,
+        "academy_clubs_gd": 8,
+        "academy_clubs_points": 40,
+        "academy_facility_days": 133,
+        "academy_retained_skill_gain": 0.318294,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36340000,
+        "buyer_clubs_gd": -8,
+        "buyer_clubs_points": 24,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14540000,
+        "buyer_minus_academy_gd": -16,
+        "buyer_minus_academy_points": -16,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4018,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.209564,
+        "seed": 101,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_a",
+          "club_b",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.314482,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 623
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "d6a9e7adbf093f1c74956da966b14bbf1ba8378fa6e87be950b8ac25f2f8c303",
+        "old_normalized_sha256": "d6a9e7adbf093f1c74956da966b14bbf1ba8378fa6e87be950b8ac25f2f8c303"
+      },
+      "seed": 101,
+      "summary": {
+        "academy_clubs_cash_units": 50880000,
+        "academy_clubs_gd": 8,
+        "academy_clubs_points": 40,
+        "academy_facility_days": 133,
+        "academy_retained_skill_gain": 0.318294,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36340000,
+        "buyer_clubs_gd": -8,
+        "buyer_clubs_points": 24,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14540000,
+        "buyer_minus_academy_gd": -16,
+        "buyer_minus_academy_points": -16,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4019,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.209564,
+        "seed": 101,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_a",
+          "club_b",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.314482,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 10,
+            "claim_trigger_limit": 2,
+            "payments": 10
+          },
+          "no_duplicate_payment": true,
+          "requests": 42
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 596
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "5d705e2d53ea9fe919f1f1f755ed78190c848a428cc54e1d15a82be428f6c3b6",
+        "old_normalized_sha256": "5d705e2d53ea9fe919f1f1f755ed78190c848a428cc54e1d15a82be428f6c3b6"
+      },
+      "seed": 101,
+      "summary": {
+        "academy_clubs_cash_units": 53070000,
+        "academy_clubs_gd": 11,
+        "academy_clubs_points": 38,
+        "academy_facility_days": 111,
+        "academy_retained_skill_gain": 0.311257,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 40360000,
+        "buyer_clubs_gd": -11,
+        "buyer_clubs_points": 25,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12710000,
+        "buyer_minus_academy_gd": -22,
+        "buyer_minus_academy_points": -13,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4023,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.206297,
+        "seed": 101,
+        "solidarity_dividends_paid_units": 17500000,
+        "standings": [
+          "club_c",
+          "club_a",
+          "club_b",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.309239,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 33
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 623
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "ae8aeef142c35ad981925db2c6f1789cfa8f0fcfab7eeed9c45c9a7b344271a3",
+        "old_normalized_sha256": "ae8aeef142c35ad981925db2c6f1789cfa8f0fcfab7eeed9c45c9a7b344271a3"
+      },
+      "seed": 101,
+      "summary": {
+        "academy_clubs_cash_units": 51030000,
+        "academy_clubs_gd": 8,
+        "academy_clubs_points": 41,
+        "academy_facility_days": 133,
+        "academy_retained_skill_gain": 0.324392,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36190000,
+        "buyer_clubs_gd": -8,
+        "buyer_clubs_points": 23,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14840000,
+        "buyer_minus_academy_gd": -16,
+        "buyer_minus_academy_points": -18,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4024,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.212248,
+        "seed": 101,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_a",
+          "club_b",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.318391,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 32
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 623
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "d44476d62d9e8d6b4c4760c158b1796bd32c8c094f239203657990d44140bb7a",
+        "old_normalized_sha256": "d44476d62d9e8d6b4c4760c158b1796bd32c8c094f239203657990d44140bb7a"
+      },
+      "seed": 101,
+      "summary": {
+        "academy_clubs_cash_units": 50880000,
+        "academy_clubs_gd": 8,
+        "academy_clubs_points": 40,
+        "academy_facility_days": 133,
+        "academy_retained_skill_gain": 0.318294,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 36340000,
+        "buyer_clubs_gd": -8,
+        "buyer_clubs_points": 24,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -14540000,
+        "buyer_minus_academy_gd": -16,
+        "buyer_minus_academy_points": -16,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4019,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.209564,
+        "seed": 101,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_c",
+          "club_a",
+          "club_b",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.314481,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 34
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 632
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "a3d65f41525a7a2fdeb82457067a003bc126011e1621278d3ed90d27f77c706d",
+        "old_normalized_sha256": "a3d65f41525a7a2fdeb82457067a003bc126011e1621278d3ed90d27f77c706d"
+      },
+      "seed": 102,
+      "summary": {
+        "academy_clubs_cash_units": 49810000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 30,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.31095,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37690000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 39,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12120000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4044,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210257,
+        "seed": 102,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.323396,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "baseline"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 34
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 632
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "d275635eb961671489552ecf15c68bb67bade883a41455ff33f2e3eec8c41e84",
+        "old_normalized_sha256": "d275635eb961671489552ecf15c68bb67bade883a41455ff33f2e3eec8c41e84"
+      },
+      "seed": 102,
+      "summary": {
+        "academy_clubs_cash_units": 49810000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 30,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.31095,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37690000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 39,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12120000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4045,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210257,
+        "seed": 102,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.323396,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "noop"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 10,
+            "claim_trigger_limit": 2,
+            "payments": 10
+          },
+          "no_duplicate_payment": true,
+          "requests": 39
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 614
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "5023c46efed1fadb7d5551475e5741c7e34239dd01b38bafc87318d1c691620e",
+        "old_normalized_sha256": "5023c46efed1fadb7d5551475e5741c7e34239dd01b38bafc87318d1c691620e"
+      },
+      "seed": 102,
+      "summary": {
+        "academy_clubs_cash_units": 53470000,
+        "academy_clubs_gd": 12,
+        "academy_clubs_points": 43,
+        "academy_facility_days": 111,
+        "academy_retained_skill_gain": 0.297115,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 39660000,
+        "buyer_clubs_gd": -12,
+        "buyer_clubs_points": 26,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -13810000,
+        "buyer_minus_academy_gd": -24,
+        "buyer_minus_academy_points": -17,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4050,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.201963,
+        "seed": 102,
+        "solidarity_dividends_paid_units": 17500000,
+        "standings": [
+          "club_a",
+          "club_b",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 9.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.303376,
+        "talents_transferred_rate": 0.5,
+        "total_transfers": 2
+      },
+      "variant": "coach_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 35
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 632
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "d4ebe2f0d0d4d761d791a6aa02ceee5e5c530def7ed477e179f803af773b759f",
+        "old_normalized_sha256": "d4ebe2f0d0d4d761d791a6aa02ceee5e5c530def7ed477e179f803af773b759f"
+      },
+      "seed": 102,
+      "summary": {
+        "academy_clubs_cash_units": 49960000,
+        "academy_clubs_gd": -1,
+        "academy_clubs_points": 31,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.31095,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37440000,
+        "buyer_clubs_gd": 1,
+        "buyer_clubs_points": 37,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12520000,
+        "buyer_minus_academy_gd": 2,
+        "buyer_minus_academy_points": 6,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4049,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210225,
+        "seed": 102,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.323204,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_high"
+    },
+    {
+      "audits": {
+        "admission": {
+          "all_resolved_once": true,
+          "counts": {
+            "claim_accepted": 12,
+            "claim_trigger_limit": 4,
+            "payments": 12
+          },
+          "no_duplicate_payment": true,
+          "requests": 34
+        },
+        "ledger": {
+          "account_reconciliation": true,
+          "conservation_at_each_transaction": true,
+          "transactions": 632
+        }
+      },
+      "comparison": {
+        "equal": true,
+        "first_difference": null,
+        "new_normalized_sha256": "b72aadabf8e5326302398e628f157e81b3676d5e1770da96cab47023a9b9a1dd",
+        "old_normalized_sha256": "b72aadabf8e5326302398e628f157e81b3676d5e1770da96cab47023a9b9a1dd"
+      },
+      "seed": 102,
+      "summary": {
+        "academy_clubs_cash_units": 49810000,
+        "academy_clubs_gd": -3,
+        "academy_clubs_points": 30,
+        "academy_facility_days": 132,
+        "academy_retained_skill_gain": 0.31095,
+        "actual_duplicate_claims": 0,
+        "blocked_circular_transfers": 0,
+        "blocked_duplicate_claims": 0,
+        "buyer_clubs_cash_units": 37690000,
+        "buyer_clubs_gd": 3,
+        "buyer_clubs_points": 39,
+        "buyer_facility_days": 144,
+        "buyer_minus_academy_cash_units": -12120000,
+        "buyer_minus_academy_gd": 6,
+        "buyer_minus_academy_points": 9,
+        "condition": "open_solidarity",
+        "days": 84,
+        "event_count": 4045,
+        "identity": {
+          "author": "Antigravity (Gemini 4 Argon)",
+          "intervention": "t012-recorded-belief-intervention-v1",
+          "money": "integer-micro-v1",
+          "money_scale": 1000000,
+          "policy": "t013-independent-transfer-score-v1",
+          "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+          "revision_author": "Sol 6.1 High (T014)",
+          "rng": "sha256-keyed-uniform53-v1",
+          "rules": "t014-integer-money-v1",
+          "save": 15,
+          "source_sha256": "18bdefbba81f1b741725b64b8fd08f9f6f37752f410bc0bc4c3d292e4a1b5747",
+          "world_kind": "league_economy_loop"
+        },
+        "insolvency_events": 0,
+        "ledger_discrepancy_units": 0,
+        "mean_skill_gain": 0.210261,
+        "seed": 102,
+        "solidarity_dividends_paid_units": 20000000,
+        "standings": [
+          "club_b",
+          "club_a",
+          "club_c",
+          "club_d"
+        ],
+        "talents_appearances": 8.0,
+        "talents_satisfaction": 0.98,
+        "talents_skill_gain": 0.323423,
+        "talents_transferred_rate": 1.0,
+        "total_transfers": 2
+      },
+      "variant": "trust_low"
+    }
+  ]
+}

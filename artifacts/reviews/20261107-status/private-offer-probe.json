@@ -1,0 +1,92 @@
+{
+  "player_mind_unchanged": true,
+  "changed_only": "c4 private p3 skill_estimate .8 -> .98",
+  "before": {
+    "chosen": "club_b",
+    "offers": [
+      {
+        "to_club": "club_b",
+        "to_coach": "c2",
+        "offer_score": 0.3676,
+        "target_valuation": 0.7226,
+        "second_starter_score": 0.39,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.208,
+        "offer_accepted": true
+      },
+      {
+        "to_club": "club_c",
+        "to_coach": "c3",
+        "offer_score": 0.0574,
+        "target_valuation": 0.5239,
+        "second_starter_score": 0.4415,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.159,
+        "offer_accepted": true
+      },
+      {
+        "to_club": "club_d",
+        "to_coach": "c4",
+        "offer_score": 0.2982,
+        "target_valuation": 0.6532,
+        "second_starter_score": 0.39,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.208,
+        "offer_accepted": true
+      }
+    ]
+  },
+  "after": {
+    "chosen": "club_d",
+    "offers": [
+      {
+        "to_club": "club_b",
+        "to_coach": "c2",
+        "offer_score": 0.3676,
+        "target_valuation": 0.7226,
+        "second_starter_score": 0.39,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.208,
+        "offer_accepted": true
+      },
+      {
+        "to_club": "club_c",
+        "to_coach": "c3",
+        "offer_score": 0.0574,
+        "target_valuation": 0.5239,
+        "second_starter_score": 0.4415,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.159,
+        "offer_accepted": true
+      },
+      {
+        "to_club": "club_d",
+        "to_coach": "c4",
+        "offer_score": 0.3972,
+        "target_valuation": 0.7522,
+        "second_starter_score": 0.39,
+        "has_roster_room": true,
+        "has_budget": true,
+        "is_circular": false,
+        "offer_made": true,
+        "acceptance_score": 0.208,
+        "offer_accepted": true
+      }
+    ]
+  }
+}

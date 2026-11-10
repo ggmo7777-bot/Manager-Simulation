@@ -1,0 +1,14 @@
+{
+  "command": "python3 -B -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "output": "tests.txt",
+  "versions": {
+    "policy": "t007-private-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t007-private-training-v1",
+    "save": 7,
+    "source_sha256": "7bbfcefbb6e4f5b03f1315c3e44e1b17d1e1df1cdc4bb4c87d6cd0fcfb1ab2f7",
+    "world_kind": "multi_coach"
+  },
+  "wall_seconds": 7.885118999984115
+}

@@ -1,0 +1,4299 @@
+{
+  "identity": {
+    "world_kind": "league_economy_loop",
+    "save": 16,
+    "rules": "t015-sampled-population-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "author": "Antigravity (Gemini 4 Argon)",
+    "revision_author": "Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "source_sha256": "483c47178c7683f125ba53a704f42909972b4201b889a069f2c988402c57a9f3"
+  },
+  "source_unchanged_during_review": true,
+  "recorded_result_sha256": "d4c71beda8bbb959cf7e3743e0b3de94fc3a255d9f45c28c6a75d535dbb1fc60",
+  "review_script_sha256": "648ba9cacc9273e4e7d8494b376a76a149e3a1c429dc404c93ff40b01489c77e",
+  "fixed_full_state_equivalence": [
+    {
+      "condition": "closed_no_solidarity",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_no_solidarity",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_solidarity",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_solidarity",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_solidarity",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_solidarity",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "closed_solidarity",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_no_solidarity",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_no_solidarity",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_no_solidarity",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_no_solidarity",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_no_solidarity",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_solidarity",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_solidarity",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_solidarity",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_solidarity",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "open_solidarity",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "fixed_budget_no_inflow",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "hoarder_buyer_policy",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "seed": 100,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "seed": 101,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "seed": 102,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "seed": 103,
+      "full_state_and_events_equal": true
+    },
+    {
+      "condition": "exploit_churn_guard",
+      "seed": 104,
+      "full_state_and_events_equal": true
+    }
+  ],
+  "reproduced_metric_runs": 180,
+  "transactions_independently_audited": 107376,
+  "admission_audit_totals": {
+    "requests": 3344,
+    "payments": 624,
+    "claim_accepted": 624,
+    "claim_trigger_limit": 170
+  },
+  "retained_metric_membership_checks": {
+    "fixed|closed_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "fixed|open_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "fixed|open_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "sampled|closed_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "sampled|open_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 27,
+      "transferred_player_run_occurrences": 43,
+      "runs": 30
+    },
+    "sampled|open_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 27,
+      "transferred_player_run_occurrences": 43,
+      "runs": 30
+    }
+  },
+  "row_diagnostics": [
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.27701,
+      "all_six_initial_academy_mean_gain": 0.2834935
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.278548,
+      "all_six_initial_academy_mean_gain": 0.28564666666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.270245,
+      "all_six_initial_academy_mean_gain": 0.27857099999999996
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.276846,
+      "all_six_initial_academy_mean_gain": 0.28342066666666665
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.272652,
+      "all_six_initial_academy_mean_gain": 0.2812766666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.27518,
+      "all_six_initial_academy_mean_gain": 0.2833853333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.2786,
+      "all_six_initial_academy_mean_gain": 0.28280316666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.275205,
+      "all_six_initial_academy_mean_gain": 0.2813113333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.280564,
+      "all_six_initial_academy_mean_gain": 0.287293
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.269445,
+      "all_six_initial_academy_mean_gain": 0.2777973333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.268454,
+      "all_six_initial_academy_mean_gain": 0.27662416666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.269757,
+      "all_six_initial_academy_mean_gain": 0.27953
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.271125,
+      "all_six_initial_academy_mean_gain": 0.2795215
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.273125,
+      "all_six_initial_academy_mean_gain": 0.28207533333333334
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274143,
+      "all_six_initial_academy_mean_gain": 0.28157483333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.272788,
+      "all_six_initial_academy_mean_gain": 0.2805681666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.276326,
+      "all_six_initial_academy_mean_gain": 0.28499516666666663
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274306,
+      "all_six_initial_academy_mean_gain": 0.28132783333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.270905,
+      "all_six_initial_academy_mean_gain": 0.27937833333333334
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.277673,
+      "all_six_initial_academy_mean_gain": 0.2835931666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274657,
+      "all_six_initial_academy_mean_gain": 0.28128966666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.285023,
+      "all_six_initial_academy_mean_gain": 0.2893845
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274019,
+      "all_six_initial_academy_mean_gain": 0.28274466666666664
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.266812,
+      "all_six_initial_academy_mean_gain": 0.2735375
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.271743,
+      "all_six_initial_academy_mean_gain": 0.2803291666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.270657,
+      "all_six_initial_academy_mean_gain": 0.27810783333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.267033,
+      "all_six_initial_academy_mean_gain": 0.27797316666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.28395,
+      "all_six_initial_academy_mean_gain": 0.28851999999999994
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.275112,
+      "all_six_initial_academy_mean_gain": 0.2829581666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "closed_no_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.271958,
+      "all_six_initial_academy_mean_gain": 0.2793288333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.295452,
+      "all_six_initial_academy_mean_gain": 0.30219099999999993
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.294378,
+      "all_six_initial_academy_mean_gain": 0.30107966666666663
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.284086,
+      "all_six_initial_academy_mean_gain": 0.2971895
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.298849,
+      "all_six_initial_academy_mean_gain": 0.30424883333333336
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.295112,
+      "all_six_initial_academy_mean_gain": 0.3009273333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.302663,
+      "all_six_initial_academy_mean_gain": 0.30515200000000003
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.288623,
+      "all_six_initial_academy_mean_gain": 0.29890083333333334
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.291562,
+      "all_six_initial_academy_mean_gain": 0.3009765
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.292716,
+      "all_six_initial_academy_mean_gain": 0.29625883333333336
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.281042,
+      "all_six_initial_academy_mean_gain": 0.29419166666666663
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.280389,
+      "all_six_initial_academy_mean_gain": 0.288879
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.296262,
+      "all_six_initial_academy_mean_gain": 0.3009016666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.280146,
+      "all_six_initial_academy_mean_gain": 0.2929145
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.281403,
+      "all_six_initial_academy_mean_gain": 0.2945196666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.293007,
+      "all_six_initial_academy_mean_gain": 0.30048800000000003
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.292085,
+      "all_six_initial_academy_mean_gain": 0.2984415
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.298523,
+      "all_six_initial_academy_mean_gain": 0.302719
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.296937,
+      "all_six_initial_academy_mean_gain": 0.29724416666666664
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.289536,
+      "all_six_initial_academy_mean_gain": 0.29547083333333335
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.292721,
+      "all_six_initial_academy_mean_gain": 0.2982255
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.288384,
+      "all_six_initial_academy_mean_gain": 0.29556866666666665
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.306058,
+      "all_six_initial_academy_mean_gain": 0.3061861666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.285292,
+      "all_six_initial_academy_mean_gain": 0.2912695
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.289255,
+      "all_six_initial_academy_mean_gain": 0.2967976666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.285752,
+      "all_six_initial_academy_mean_gain": 0.29686666666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.292202,
+      "all_six_initial_academy_mean_gain": 0.30440866666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.282755,
+      "all_six_initial_academy_mean_gain": 0.29034183333333335
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.299026,
+      "all_six_initial_academy_mean_gain": 0.3026355
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.294126,
+      "all_six_initial_academy_mean_gain": 0.299387
+    },
+    {
+      "population": "fixed",
+      "institution": "open_no_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.29611,
+      "all_six_initial_academy_mean_gain": 0.30408633333333335
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.321215,
+      "all_six_initial_academy_mean_gain": 0.3193661666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.318294,
+      "all_six_initial_academy_mean_gain": 0.3170233333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.31095,
+      "all_six_initial_academy_mean_gain": 0.31509883333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.355407,
+      "all_six_initial_academy_mean_gain": 0.3419548333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.318289,
+      "all_six_initial_academy_mean_gain": 0.3163783333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.325842,
+      "all_six_initial_academy_mean_gain": 0.32060483333333334
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.312965,
+      "all_six_initial_academy_mean_gain": 0.315129
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.305914,
+      "all_six_initial_academy_mean_gain": 0.3105446666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.311198,
+      "all_six_initial_academy_mean_gain": 0.3085801666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.293238,
+      "all_six_initial_academy_mean_gain": 0.30232216666666667
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.282443,
+      "all_six_initial_academy_mean_gain": 0.29024833333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.324603,
+      "all_six_initial_academy_mean_gain": 0.31979566666666664
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.289781,
+      "all_six_initial_academy_mean_gain": 0.29933533333333334
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.294254,
+      "all_six_initial_academy_mean_gain": 0.30308716666666663
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.312279,
+      "all_six_initial_academy_mean_gain": 0.31333583333333337
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.309913,
+      "all_six_initial_academy_mean_gain": 0.31032666666666664
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.326172,
+      "all_six_initial_academy_mean_gain": 0.3211518333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.321484,
+      "all_six_initial_academy_mean_gain": 0.31360849999999996
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.31667,
+      "all_six_initial_academy_mean_gain": 0.31356
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.30806,
+      "all_six_initial_academy_mean_gain": 0.30844933333333335
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.306681,
+      "all_six_initial_academy_mean_gain": 0.3077668333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.347666,
+      "all_six_initial_academy_mean_gain": 0.333925
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.309597,
+      "all_six_initial_academy_mean_gain": 0.30747149999999995
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.298284,
+      "all_six_initial_academy_mean_gain": 0.30281699999999995
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.292834,
+      "all_six_initial_academy_mean_gain": 0.30158816666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.329097,
+      "all_six_initial_academy_mean_gain": 0.3290053333333333
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.316475,
+      "all_six_initial_academy_mean_gain": 0.31282166666666666
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.323993,
+      "all_six_initial_academy_mean_gain": 0.3192805
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.326512,
+      "all_six_initial_academy_mean_gain": 0.320976
+    },
+    {
+      "population": "fixed",
+      "institution": "open_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.32288,
+      "all_six_initial_academy_mean_gain": 0.32193266666666664
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.27449,
+      "all_six_initial_academy_mean_gain": 0.2778055
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.28137,
+      "all_six_initial_academy_mean_gain": 0.2927883333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.277505,
+      "all_six_initial_academy_mean_gain": 0.2636865
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.296191,
+      "all_six_initial_academy_mean_gain": 0.28792483333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.265209,
+      "all_six_initial_academy_mean_gain": 0.26999533333333336
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.302411,
+      "all_six_initial_academy_mean_gain": 0.2910385
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.280173,
+      "all_six_initial_academy_mean_gain": 0.2773211666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.293408,
+      "all_six_initial_academy_mean_gain": 0.285503
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.300591,
+      "all_six_initial_academy_mean_gain": 0.2962223333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.292937,
+      "all_six_initial_academy_mean_gain": 0.29079083333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.286358,
+      "all_six_initial_academy_mean_gain": 0.27915
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.255433,
+      "all_six_initial_academy_mean_gain": 0.26846133333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274226,
+      "all_six_initial_academy_mean_gain": 0.27051616666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.284092,
+      "all_six_initial_academy_mean_gain": 0.2797523333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.284975,
+      "all_six_initial_academy_mean_gain": 0.2785688333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.284757,
+      "all_six_initial_academy_mean_gain": 0.27187849999999997
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.278825,
+      "all_six_initial_academy_mean_gain": 0.28374933333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.279073,
+      "all_six_initial_academy_mean_gain": 0.28257766666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.288766,
+      "all_six_initial_academy_mean_gain": 0.2815123333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.274648,
+      "all_six_initial_academy_mean_gain": 0.29129333333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.286239,
+      "all_six_initial_academy_mean_gain": 0.27880866666666665
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.288129,
+      "all_six_initial_academy_mean_gain": 0.2859598333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.262871,
+      "all_six_initial_academy_mean_gain": 0.2738561666666666
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.271539,
+      "all_six_initial_academy_mean_gain": 0.28162
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.286222,
+      "all_six_initial_academy_mean_gain": 0.28345183333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.286627,
+      "all_six_initial_academy_mean_gain": 0.27827833333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.288277,
+      "all_six_initial_academy_mean_gain": 0.27828749999999997
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.278564,
+      "all_six_initial_academy_mean_gain": 0.27854833333333334
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.284736,
+      "all_six_initial_academy_mean_gain": 0.2849355
+    },
+    {
+      "population": "sampled",
+      "institution": "closed_no_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.299375,
+      "all_six_initial_academy_mean_gain": 0.2884525
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.281574,
+      "all_six_initial_academy_mean_gain": 0.28464933333333337
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.287681,
+      "all_six_initial_academy_mean_gain": 0.30930233333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.296963,
+      "all_six_initial_academy_mean_gain": 0.2786206666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.327146,
+      "all_six_initial_academy_mean_gain": 0.30920600000000004
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.27756,
+      "all_six_initial_academy_mean_gain": 0.2806735
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.312056,
+      "all_six_initial_academy_mean_gain": 0.3016805
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.319389,
+      "all_six_initial_academy_mean_gain": 0.3083335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.305992,
+      "all_six_initial_academy_mean_gain": 0.302095
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.318144,
+      "all_six_initial_academy_mean_gain": 0.309302
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.312127,
+      "all_six_initial_academy_mean_gain": 0.3056028333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.317751,
+      "all_six_initial_academy_mean_gain": 0.30479683333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.272061,
+      "all_six_initial_academy_mean_gain": 0.28974649999999996
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.307758,
+      "all_six_initial_academy_mean_gain": 0.29714100000000004
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.296009,
+      "all_six_initial_academy_mean_gain": 0.29454450000000004
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.291474,
+      "all_six_initial_academy_mean_gain": 0.2829018333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.31057,
+      "all_six_initial_academy_mean_gain": 0.2897998333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.291475,
+      "all_six_initial_academy_mean_gain": 0.30045716666666666
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.29391,
+      "all_six_initial_academy_mean_gain": 0.29962099999999997
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.30104,
+      "all_six_initial_academy_mean_gain": 0.29182183333333334
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.285488,
+      "all_six_initial_academy_mean_gain": 0.3059176666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.307571,
+      "all_six_initial_academy_mean_gain": 0.3019025
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.30411,
+      "all_six_initial_academy_mean_gain": 0.2977903333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.272765,
+      "all_six_initial_academy_mean_gain": 0.2804523333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.287129,
+      "all_six_initial_academy_mean_gain": 0.2962605
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.296293,
+      "all_six_initial_academy_mean_gain": 0.29205333333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.311358,
+      "all_six_initial_academy_mean_gain": 0.29913883333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.306627,
+      "all_six_initial_academy_mean_gain": 0.2923091666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.309995,
+      "all_six_initial_academy_mean_gain": 0.30249866666666664
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.313929,
+      "all_six_initial_academy_mean_gain": 0.30560133333333334
+    },
+    {
+      "population": "sampled",
+      "institution": "open_no_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.31869,
+      "all_six_initial_academy_mean_gain": 0.30375916666666664
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 100,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.28341,
+      "all_six_initial_academy_mean_gain": 0.2905621666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 101,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.296218,
+      "all_six_initial_academy_mean_gain": 0.314942
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 102,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.311067,
+      "all_six_initial_academy_mean_gain": 0.28802333333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 103,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.337137,
+      "all_six_initial_academy_mean_gain": 0.31694500000000003
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 104,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.285717,
+      "all_six_initial_academy_mean_gain": 0.28610850000000004
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 105,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.321436,
+      "all_six_initial_academy_mean_gain": 0.3110461666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 106,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.323035,
+      "all_six_initial_academy_mean_gain": 0.31857966666666665
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 107,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.307914,
+      "all_six_initial_academy_mean_gain": 0.31142433333333336
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 108,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.329202,
+      "all_six_initial_academy_mean_gain": 0.31970383333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 109,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.312127,
+      "all_six_initial_academy_mean_gain": 0.3124328333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 110,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.31961,
+      "all_six_initial_academy_mean_gain": 0.3080481666666666
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 111,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.29587,
+      "all_six_initial_academy_mean_gain": 0.3056195
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 112,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.321657,
+      "all_six_initial_academy_mean_gain": 0.30831233333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 113,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.299507,
+      "all_six_initial_academy_mean_gain": 0.3055428333333334
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 114,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.291474,
+      "all_six_initial_academy_mean_gain": 0.2829018333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 115,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.312198,
+      "all_six_initial_academy_mean_gain": 0.2908851666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 116,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.294271,
+      "all_six_initial_academy_mean_gain": 0.30760366666666666
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 117,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.299048,
+      "all_six_initial_academy_mean_gain": 0.3030465
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 118,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.306008,
+      "all_six_initial_academy_mean_gain": 0.29513416666666664
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 119,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.291744,
+      "all_six_initial_academy_mean_gain": 0.3100886666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 120,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.307571,
+      "all_six_initial_academy_mean_gain": 0.30864383333333334
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 121,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.321859,
+      "all_six_initial_academy_mean_gain": 0.30962316666666667
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 122,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.273784,
+      "all_six_initial_academy_mean_gain": 0.2811315
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 123,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.294403,
+      "all_six_initial_academy_mean_gain": 0.30110966666666666
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 124,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.298194,
+      "all_six_initial_academy_mean_gain": 0.296572
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 125,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.316353,
+      "all_six_initial_academy_mean_gain": 0.3101725
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 126,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2",
+        "p8"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.306631,
+      "all_six_initial_academy_mean_gain": 0.2949035
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 127,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.31631,
+      "all_six_initial_academy_mean_gain": 0.3106128333333333
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 128,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p2"
+      ],
+      "never_transferred_initial_academy": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reported_four_slot_gain": 0.334657,
+      "all_six_initial_academy_mean_gain": 0.32543133333333335
+    },
+    {
+      "population": "sampled",
+      "institution": "open_solidarity",
+      "seed": 129,
+      "recorded_metrics_reproduced": true,
+      "reported_retained_slots": [
+        "p1",
+        "p2",
+        "p7",
+        "p8"
+      ],
+      "selected_slots_that_transferred": [
+        "p1",
+        "p7"
+      ],
+      "never_transferred_initial_academy": [
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "reported_four_slot_gain": 0.332817,
+      "all_six_initial_academy_mean_gain": 0.3142143333333333
+    }
+  ],
+  "changed_runtime_functions": [
+    "_build_initial_world",
+    "_replay_snapshot_payload",
+    "config_for_condition",
+    "league_identity"
+  ],
+  "new_runtime_functions": [
+    "_population_draw",
+    "_sample_population"
+  ],
+  "elapsed_seconds": 130.8239851249382
+}

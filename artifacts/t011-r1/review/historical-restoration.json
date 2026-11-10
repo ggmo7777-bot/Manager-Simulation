@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "cause": "Intermediate-version review outputs found in original T011 output paths. Original review scripts hard-code these paths; origin of invocation not asserted.",
+  "method": "Captured frozen-runtime audit in memory and restored only after exact size/hash equality against preflight; verification identity restored under same check.",
+  "files": [
+    {
+      "path": "artifacts/t011/review/economy-audit.json",
+      "found_sha256": "95c452f8cdd2204b7356afab1eefb607d25762a60382a2fb0a10ec4815852035",
+      "restored_sha256": "f03ea6e6d77bdb326eec382c3c3ff4feb0af49e703ad1ffe949db4899a01cfcc",
+      "matches_preflight_exactly": true
+    },
+    {
+      "path": "artifacts/t011/review/verification.json",
+      "found_sha256": "c33f7c385e93e1df3b9ab03b2d879efab1dc2d5ef329ba2612640b9c30691065",
+      "restored_sha256": "2132b29f1e6fbaeb0f6159b06d0dcf647f26dd3834d8cb9463ba52701d0ce117",
+      "matches_preflight_exactly": true
+    }
+  ]
+}

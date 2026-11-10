@@ -1,0 +1,5352 @@
+{
+  "club_accounts": {
+    "club_a": {
+      "cash_units": 20720000,
+      "club_id": "club_a",
+      "cumulative_facility_paid_units": 280000,
+      "cumulative_inflow_units": 0,
+      "cumulative_scouting_paid_units": 0,
+      "cumulative_solidarity_paid_units": 0,
+      "cumulative_solidarity_received_units": 0,
+      "cumulative_transfer_fees_paid_units": 0,
+      "cumulative_transfer_fees_received_units": 0,
+      "cumulative_wages_paid_units": 0,
+      "draws": 0,
+      "facility_active_days": 1,
+      "goals_against": 0,
+      "goals_for": 0,
+      "initial_cash_units": 21000000,
+      "losses": 0,
+      "matches_played": 0,
+      "pass_completions": 0,
+      "philosophy": "academy",
+      "points": 0,
+      "possession_ticks": 0,
+      "shots_for": 0,
+      "wins": 0
+    },
+    "club_b": {
+      "cash_units": 58720000,
+      "club_id": "club_b",
+      "cumulative_facility_paid_units": 280000,
+      "cumulative_inflow_units": 0,
+      "cumulative_scouting_paid_units": 0,
+      "cumulative_solidarity_paid_units": 0,
+      "cumulative_solidarity_received_units": 0,
+      "cumulative_transfer_fees_paid_units": 0,
+      "cumulative_transfer_fees_received_units": 0,
+      "cumulative_wages_paid_units": 0,
+      "draws": 0,
+      "facility_active_days": 1,
+      "goals_against": 0,
+      "goals_for": 0,
+      "initial_cash_units": 59000000,
+      "losses": 0,
+      "matches_played": 0,
+      "pass_completions": 0,
+      "philosophy": "buyer",
+      "points": 0,
+      "possession_ticks": 0,
+      "shots_for": 0,
+      "wins": 0
+    },
+    "club_c": {
+      "cash_units": 20720000,
+      "club_id": "club_c",
+      "cumulative_facility_paid_units": 280000,
+      "cumulative_inflow_units": 0,
+      "cumulative_scouting_paid_units": 0,
+      "cumulative_solidarity_paid_units": 0,
+      "cumulative_solidarity_received_units": 0,
+      "cumulative_transfer_fees_paid_units": 0,
+      "cumulative_transfer_fees_received_units": 0,
+      "cumulative_wages_paid_units": 0,
+      "draws": 0,
+      "facility_active_days": 1,
+      "goals_against": 0,
+      "goals_for": 0,
+      "initial_cash_units": 21000000,
+      "losses": 0,
+      "matches_played": 0,
+      "pass_completions": 0,
+      "philosophy": "academy",
+      "points": 0,
+      "possession_ticks": 0,
+      "shots_for": 0,
+      "wins": 0
+    },
+    "club_d": {
+      "cash_units": 58720000,
+      "club_id": "club_d",
+      "cumulative_facility_paid_units": 280000,
+      "cumulative_inflow_units": 0,
+      "cumulative_scouting_paid_units": 0,
+      "cumulative_solidarity_paid_units": 0,
+      "cumulative_solidarity_received_units": 0,
+      "cumulative_transfer_fees_paid_units": 0,
+      "cumulative_transfer_fees_received_units": 0,
+      "cumulative_wages_paid_units": 0,
+      "draws": 0,
+      "facility_active_days": 1,
+      "goals_against": 0,
+      "goals_for": 0,
+      "initial_cash_units": 59000000,
+      "losses": 0,
+      "matches_played": 0,
+      "pass_completions": 0,
+      "philosophy": "buyer",
+      "points": 0,
+      "possession_ticks": 0,
+      "shots_for": 0,
+      "wins": 0
+    }
+  },
+  "club_rosters": {
+    "club_a": [
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "club_b": [
+      "p4",
+      "p5",
+      "p6"
+    ],
+    "club_c": [
+      "p7",
+      "p8",
+      "p9"
+    ],
+    "club_d": [
+      "p10",
+      "p11",
+      "p12"
+    ]
+  },
+  "coaches": {
+    "c1": {
+      "base_method_gains": {
+        "A": 0.044,
+        "B": 0.044
+      },
+      "club_id": "club_a",
+      "coach_id": "c1",
+      "evaluations": {
+        "p1": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.454658,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.450162
+        },
+        "p10": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.541023,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.513852
+        },
+        "p11": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.382079,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.43714
+        },
+        "p12": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.388024,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.385677
+        },
+        "p2": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.487174,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.49798
+        },
+        "p3": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.434742,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.47083
+        },
+        "p4": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.453404,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.533919
+        },
+        "p5": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.400744,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.390883
+        },
+        "p6": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.556301,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.555888
+        },
+        "p7": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.472541,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.506371
+        },
+        "p8": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.532763,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.484386
+        },
+        "p9": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.505921,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.497558
+        }
+      },
+      "philosophy": "academy",
+      "preferred_method": "A"
+    },
+    "c2": {
+      "base_method_gains": {
+        "A": 0.044,
+        "B": 0.044
+      },
+      "club_id": "club_b",
+      "coach_id": "c2",
+      "evaluations": {
+        "p1": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.463227,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.479011
+        },
+        "p10": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.477115,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.522219
+        },
+        "p11": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.401463,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.365256
+        },
+        "p12": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.391444,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.382138
+        },
+        "p2": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.493753,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.474012
+        },
+        "p3": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.420582,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.442563
+        },
+        "p4": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.506833,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.462639
+        },
+        "p5": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.452319,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.350803
+        },
+        "p6": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.468282,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.50358
+        },
+        "p7": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.503925,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.482483
+        },
+        "p8": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.506534,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.493391
+        },
+        "p9": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.447671,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.409927
+        }
+      },
+      "philosophy": "buyer",
+      "preferred_method": "B"
+    },
+    "c3": {
+      "base_method_gains": {
+        "A": 0.044,
+        "B": 0.044
+      },
+      "club_id": "club_c",
+      "coach_id": "c3",
+      "evaluations": {
+        "p1": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.412052,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.498291
+        },
+        "p10": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.546379,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.529815
+        },
+        "p11": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.423053,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.408075
+        },
+        "p12": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.375411,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.372889
+        },
+        "p2": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.446565,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.472746
+        },
+        "p3": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.489808,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.507594
+        },
+        "p4": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.526251,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.522393
+        },
+        "p5": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.44571,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.388871
+        },
+        "p6": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.45344,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.556869
+        },
+        "p7": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.434466,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.444387
+        },
+        "p8": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.531399,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.493298
+        },
+        "p9": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.444506,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.432006
+        }
+      },
+      "philosophy": "academy",
+      "preferred_method": "B"
+    },
+    "c4": {
+      "base_method_gains": {
+        "A": 0.044,
+        "B": 0.044
+      },
+      "club_id": "club_d",
+      "coach_id": "c4",
+      "evaluations": {
+        "p1": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.444523,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.520645
+        },
+        "p10": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.468226,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.501105
+        },
+        "p11": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.396212,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.404617
+        },
+        "p12": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.456448,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.387847
+        },
+        "p2": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.483999,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.440831
+        },
+        "p3": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.484188,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.475168
+        },
+        "p4": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.502543,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.484381
+        },
+        "p5": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.37008,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.367937
+        },
+        "p6": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.51012,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.49549
+        },
+        "p7": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.404204,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.399811
+        },
+        "p8": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.550163,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.509061
+        },
+        "p9": {
+          "fatigue_estimate": 0.1,
+          "last_obs_ref": "init:0",
+          "last_seen_day": 0,
+          "match_rating_estimate": 0.40854,
+          "method_residuals": {
+            "A": 0.0,
+            "B": 0.0
+          },
+          "skill_estimate": 0.413829
+        }
+      },
+      "philosophy": "buyer",
+      "preferred_method": "A"
+    }
+  },
+  "config": {
+    "adversarial_mode": "none",
+    "advice_weight": 0.055,
+    "base_transfer_fee_no_solidarity_units": 1500000,
+    "base_transfer_fee_solidarity_units": 9500000,
+    "buyer_min_cash_reserve_units": 8000000,
+    "buyer_strategy": "standard",
+    "coach_daily_slots": 2,
+    "coach_fatigue_noise": 0.045,
+    "coach_match_alpha": 0.35,
+    "coach_match_skill_blend": 0.18,
+    "coach_method_fit": 0.24,
+    "coach_need_weight": 0.42,
+    "coach_noise": 0.024,
+    "coach_residual_alpha": 0.15,
+    "coach_rest_value": 0.11,
+    "coach_scout_alpha": 0.32,
+    "coach_skill_alpha": 0.36,
+    "coach_staleness_weight": 0.018,
+    "condition": "open_solidarity_sampled_population",
+    "development_dividend_per_start_units": 1250000,
+    "facility_Active_multiplier": 1.25,
+    "facility_daily_cost_units": 280000,
+    "facility_inactive_multiplier": 0.52,
+    "facility_reserve_floor_units": 16500000,
+    "inflow_mode": "standard",
+    "initial_academy_cash_units": 21000000,
+    "initial_buyer_cash_units": 59000000,
+    "market_mode": "open",
+    "match_fatigue_noise": 0.05,
+    "match_interval_days": 7,
+    "match_noise_scale": 1.0,
+    "match_obs_noise": 0.02,
+    "match_ticks": 40,
+    "matchday_base_inflow_units": 1200000,
+    "matchday_draw_bonus_units": 150000,
+    "matchday_win_bonus_units": 400000,
+    "max_dividend_triggers": 6,
+    "player_gain_alpha": 0.3,
+    "player_matchday_wage_units": 380000,
+    "player_skill_alpha": 0.32,
+    "population_mode": "sampled",
+    "rest_fatigue_weight": 0.125,
+    "satisfaction_drive_weight": 0.022,
+    "scout_action_cost_units": 50000,
+    "scout_fatigue_noise": 0.065,
+    "scout_noise": 0.03,
+    "select_fatigue_weight": 0.22,
+    "select_match_weight": 0.48,
+    "select_skill_weight": 0.55,
+    "self_fatigue_noise": 0.025,
+    "self_noise": 0.018,
+    "solidarity_mode": "enabled",
+    "solidarity_transfer_grant_units": 2500000,
+    "training_fatigue_weight": 0.095,
+    "transfer_offer_threshold": 0.022,
+    "transfer_request_threshold": 0.08,
+    "trust_alpha": 0.16,
+    "trust_scale": 18.0
+  },
+  "day": 1,
+  "events": [
+    {
+      "actor": "world",
+      "cause_refs": [],
+      "data": {
+        "club_rosters": {
+          "club_a": [
+            "p1",
+            "p2",
+            "p3"
+          ],
+          "club_b": [
+            "p4",
+            "p5",
+            "p6"
+          ],
+          "club_c": [
+            "p7",
+            "p8",
+            "p9"
+          ],
+          "club_d": [
+            "p10",
+            "p11",
+            "p12"
+          ]
+        },
+        "condition": "open_solidarity_sampled_population",
+        "initial_total_cash_units": 160000000,
+        "seed": 100
+      },
+      "day": 0,
+      "id": "e1",
+      "kind": "world_initialized"
+    },
+    {
+      "actor": "club_a",
+      "cause_refs": [
+        "e1"
+      ],
+      "data": {
+        "amount_units": 280000,
+        "payee": "external_treasury_outflow",
+        "payer": "club_a",
+        "reason": "training_facility_operation"
+      },
+      "day": 1,
+      "id": "e2",
+      "kind": "ledger_transaction"
+    },
+    {
+      "actor": "club_a",
+      "cause_refs": [
+        "e2"
+      ],
+      "data": {
+        "cash_after_units": 20720000,
+        "club_id": "club_a",
+        "facility_active": true
+      },
+      "day": 1,
+      "id": "e3",
+      "kind": "club_facility_status"
+    },
+    {
+      "actor": "club_b",
+      "cause_refs": [
+        "e3"
+      ],
+      "data": {
+        "amount_units": 280000,
+        "payee": "external_treasury_outflow",
+        "payer": "club_b",
+        "reason": "training_facility_operation"
+      },
+      "day": 1,
+      "id": "e4",
+      "kind": "ledger_transaction"
+    },
+    {
+      "actor": "club_b",
+      "cause_refs": [
+        "e4"
+      ],
+      "data": {
+        "cash_after_units": 58720000,
+        "club_id": "club_b",
+        "facility_active": true
+      },
+      "day": 1,
+      "id": "e5",
+      "kind": "club_facility_status"
+    },
+    {
+      "actor": "club_c",
+      "cause_refs": [
+        "e5"
+      ],
+      "data": {
+        "amount_units": 280000,
+        "payee": "external_treasury_outflow",
+        "payer": "club_c",
+        "reason": "training_facility_operation"
+      },
+      "day": 1,
+      "id": "e6",
+      "kind": "ledger_transaction"
+    },
+    {
+      "actor": "club_c",
+      "cause_refs": [
+        "e6"
+      ],
+      "data": {
+        "cash_after_units": 20720000,
+        "club_id": "club_c",
+        "facility_active": true
+      },
+      "day": 1,
+      "id": "e7",
+      "kind": "club_facility_status"
+    },
+    {
+      "actor": "club_d",
+      "cause_refs": [
+        "e7"
+      ],
+      "data": {
+        "amount_units": 280000,
+        "payee": "external_treasury_outflow",
+        "payer": "club_d",
+        "reason": "training_facility_operation"
+      },
+      "day": 1,
+      "id": "e8",
+      "kind": "ledger_transaction"
+    },
+    {
+      "actor": "club_d",
+      "cause_refs": [
+        "e8"
+      ],
+      "data": {
+        "cash_after_units": 58720000,
+        "club_id": "club_d",
+        "facility_active": true
+      },
+      "day": 1,
+      "id": "e9",
+      "kind": "club_facility_status"
+    },
+    {
+      "actor": "c1",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.072564,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.210564,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.138532,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.391132,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.138532,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.376132,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "need": 0.062044,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.200044,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.118448,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.371048,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.118448,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.356048,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "need": 0.068017,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.206017,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.129851,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.382451,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.129851,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.367451,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.085427,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.191427,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.062541,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.168541,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.088942,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.194942,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.081019,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.187019,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077502,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.183502,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079609,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.185609,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.082216,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.188216,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.069942,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.175942,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.061708,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.167708,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.138532,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "A",
+          "score": 0.391132,
+          "target": "p1"
+        },
+        "club_id": "club_a",
+        "coach_id": "c1",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 1
+      },
+      "day": 1,
+      "id": "e10",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c1",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.072564,
+              "repeat_penalty": -0.25,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": -0.039436,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.138532,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.141132,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.138532,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.126132,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "need": 0.062044,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.200044,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.118448,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.371048,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.118448,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.356048,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "need": 0.068017,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.206017,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.129851,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.382451,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.129851,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.367451,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.085427,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.191427,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.062541,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.168541,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.088942,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.194942,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.081019,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.187019,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077502,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.183502,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079609,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.185609,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.082216,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.188216,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.069942,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.175942,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.061708,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.167708,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.129851,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "A",
+          "score": 0.382451,
+          "target": "p3"
+        },
+        "club_id": "club_a",
+        "coach_id": "c1",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 2
+      },
+      "day": 1,
+      "id": "e11",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c2",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.069819,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.207819,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.133292,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.370892,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.133292,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.385892,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "need": 0.094423,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.232423,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.180263,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.417863,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.180263,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.432863,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "need": 0.060812,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.198812,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.116096,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.353696,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.116096,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.368696,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.076642,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.227642,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.075842,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.226842,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.07081,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.22181,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077197,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.228197,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.078943,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.229943,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.065588,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.216588,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083555,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.234555,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.058441,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.209441,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.061142,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.212142,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.180263,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "B",
+          "score": 0.432863,
+          "target": "p5"
+        },
+        "club_id": "club_b",
+        "coach_id": "c2",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 1
+      },
+      "day": 1,
+      "id": "e12",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c2",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.069819,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.207819,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.133292,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.370892,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.133292,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.385892,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "need": 0.094423,
+              "repeat_penalty": -0.25,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": -0.017577,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.180263,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.167863,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.180263,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.182863,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "need": 0.060812,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.198812,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.116096,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.353696,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.116096,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.368696,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.076642,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.227642,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.075842,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.226842,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.07081,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.22181,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077197,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.228197,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.078943,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.229943,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.065588,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.216588,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083555,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.234555,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.058441,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.209441,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.061142,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.212142,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.133292,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "B",
+          "score": 0.385892,
+          "target": "p4"
+        },
+        "club_id": "club_b",
+        "coach_id": "c2",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 2
+      },
+      "day": 1,
+      "id": "e13",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c3",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.073835,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.211835,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.140957,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.378557,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.140957,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.393557,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "need": 0.063074,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.201074,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.120415,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.358015,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.120415,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.373015,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "need": 0.076559,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.214559,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.146157,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.383757,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.146157,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.398757,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079727,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.185727,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.075639,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.181639,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.081215,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.187215,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083583,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.189583,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.062219,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.168219,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.089099,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.195099,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.08477,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.19077,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.065292,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.171292,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.059662,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.165662,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.146157,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "B",
+          "score": 0.398757,
+          "target": "p9"
+        },
+        "club_id": "club_c",
+        "coach_id": "c3",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 1
+      },
+      "day": 1,
+      "id": "e14",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c3",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.073835,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.211835,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.140957,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.378557,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.140957,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.393557,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "need": 0.063074,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.201074,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.120415,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.358015,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.120415,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.373015,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "need": 0.076559,
+              "repeat_penalty": -0.25,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": -0.035441,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.146157,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.133757,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.146157,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.148757,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079727,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.185727,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.075639,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.181639,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.081215,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.187215,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083583,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.189583,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.062219,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.168219,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.089099,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.195099,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.08477,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.19077,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.065292,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.171292,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.01,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.059662,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.165662,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.140957,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "B",
+          "score": 0.393557,
+          "target": "p7"
+        },
+        "club_id": "club_c",
+        "coach_id": "c3",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 2
+      },
+      "day": 1,
+      "id": "e15",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c4",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.061357,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.199357,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.117136,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.369736,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.117136,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.354736,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "need": 0.082584,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.220584,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.157661,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.410261,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.157661,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.395261,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "need": 0.086274,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.224274,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.164704,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.417304,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.164704,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.402304,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083303,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.234303,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.070533,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.221533,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.076027,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.227027,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077501,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.228501,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.05887,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.20987,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079278,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.230278,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.06397,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.21497,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.08145,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.23245,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.066213,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.217213,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.164704,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "A",
+          "score": 0.417304,
+          "target": "p12"
+        },
+        "club_id": "club_d",
+        "coach_id": "c4",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 1
+      },
+      "day": 1,
+      "id": "e16",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "c4",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "components": {
+              "need": 0.061357,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.199357,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.117136,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.369736,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.117136,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.354736,
+            "target": "p10"
+          },
+          {
+            "components": {
+              "need": 0.082584,
+              "repeat_penalty": -0.0,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": 0.220584,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.157661,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.410261,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.157661,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.0
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.395261,
+            "target": "p11"
+          },
+          {
+            "components": {
+              "need": 0.086274,
+              "repeat_penalty": -0.25,
+              "staleness": 0.018
+            },
+            "kind": "observe",
+            "method": null,
+            "score": -0.025726,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.164704,
+              "pref_bonus": 0.015,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "A",
+            "score": 0.167304,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "fatigue_penalty": -0.018,
+              "forecast_term": 0.1056,
+              "need_term": 0.164704,
+              "pref_bonus": 0.0,
+              "repeat_penalty": -0.25
+            },
+            "forecast": 0.044,
+            "kind": "propose",
+            "method": "B",
+            "score": 0.152304,
+            "target": "p12"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.083303,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.234303,
+            "target": "p1"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.070533,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.221533,
+            "target": "p2"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.076027,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.227027,
+            "target": "p3"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.077501,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.228501,
+            "target": "p4"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.05887,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.20987,
+            "target": "p5"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.079278,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.230278,
+            "target": "p6"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.06397,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.21497,
+            "target": "p7"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.08145,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.23245,
+            "target": "p8"
+          },
+          {
+            "components": {
+              "buyer_bonus": 0.055,
+              "repeat_penalty": -0.0,
+              "skill_interest": 0.066213,
+              "staleness": 0.016
+            },
+            "kind": "scout",
+            "method": null,
+            "score": 0.217213,
+            "target": "p9"
+          },
+          {
+            "components": {
+              "base_rest": 0.11
+            },
+            "kind": "rest",
+            "method": null,
+            "score": 0.11,
+            "target": null
+          }
+        ],
+        "chosen": {
+          "components": {
+            "fatigue_penalty": -0.018,
+            "forecast_term": 0.1056,
+            "need_term": 0.157661,
+            "pref_bonus": 0.015,
+            "repeat_penalty": -0.0
+          },
+          "forecast": 0.044,
+          "kind": "propose",
+          "method": "A",
+          "score": 0.410261,
+          "target": "p11"
+        },
+        "club_id": "club_d",
+        "coach_id": "c4",
+        "obs_refs": [
+          "init:0"
+        ],
+        "slot": 2
+      },
+      "day": 1,
+      "id": "e17",
+      "kind": "coach_training_decision"
+    },
+    {
+      "actor": "p1",
+      "cause_refs": [
+        "init:0",
+        "e10"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.012752,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004356
+            },
+            "score": 0.049608,
+            "score_source": "c1"
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004356
+            },
+            "score": 0.048856,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.012752,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.0,
+            "unsatisfied_drive": 0.004356
+          },
+          "score": 0.049608,
+          "score_source": "c1"
+        },
+        "club_id": "club_a",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p1",
+        "received_proposals": [
+          {
+            "club_id": "club_a",
+            "coach_id": "c1",
+            "decision_ref": "e10",
+            "forecast": 0.044,
+            "method": "A"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e18",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p1",
+      "cause_refs": [
+        "e18"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.003874,
+        "obs_skill": 0.442023,
+        "perceived_fatigue": 0.177777,
+        "player_id": "p1"
+      },
+      "day": 1,
+      "id": "e19",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p1",
+      "cause_refs": [
+        "e19",
+        "e10"
+      ],
+      "data": {
+        "coach_id": "c1",
+        "coach_prediction": 0.044,
+        "method": "A",
+        "new_trust": 0.55424,
+        "obs_gain": 0.003874,
+        "old_trust": 0.56,
+        "player_id": "p1",
+        "self_prediction": 0.042
+      },
+      "day": 1,
+      "id": "e20",
+      "kind": "advice_feedback"
+    },
+    {
+      "actor": "p2",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004028
+            },
+            "score": 0.048528,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004028
+            },
+            "score": 0.036528,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004028
+          },
+          "score": 0.048528,
+          "score_source": null
+        },
+        "club_id": "club_a",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p2",
+        "received_proposals": []
+      },
+      "day": 1,
+      "id": "e21",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p2",
+      "cause_refs": [
+        "e21"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.000507,
+        "obs_skill": 0.425912,
+        "perceived_fatigue": 0.186647,
+        "player_id": "p2"
+      },
+      "day": 1,
+      "id": "e22",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p3",
+      "cause_refs": [
+        "init:0",
+        "e11"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.011994,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.0044
+            },
+            "score": 0.060894,
+            "score_source": "c1"
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.0044
+            },
+            "score": 0.0369,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.011994,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.0044
+          },
+          "score": 0.060894,
+          "score_source": "c1"
+        },
+        "club_id": "club_a",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p3",
+        "received_proposals": [
+          {
+            "club_id": "club_a",
+            "coach_id": "c1",
+            "decision_ref": "e11",
+            "forecast": 0.044,
+            "method": "A"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e23",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p3",
+      "cause_refs": [
+        "e23"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.019828,
+        "obs_skill": 0.489747,
+        "perceived_fatigue": 0.149511,
+        "player_id": "p3"
+      },
+      "day": 1,
+      "id": "e24",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p3",
+      "cause_refs": [
+        "e24",
+        "e11"
+      ],
+      "data": {
+        "coach_id": "c1",
+        "coach_prediction": 0.044,
+        "method": "A",
+        "new_trust": 0.55424,
+        "obs_gain": 0.019828,
+        "old_trust": 0.56,
+        "player_id": "p3",
+        "self_prediction": 0.042
+      },
+      "day": 1,
+      "id": "e25",
+      "kind": "advice_feedback"
+    },
+    {
+      "actor": "p4",
+      "cause_refs": [
+        "init:0",
+        "e13"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004273
+            },
+            "score": 0.036773,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.01007,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004273
+            },
+            "score": 0.058843,
+            "score_source": "c2"
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "components": {
+            "advice_term": 0.01007,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004273
+          },
+          "score": 0.058843,
+          "score_source": "c2"
+        },
+        "club_id": "club_b",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p4",
+        "received_proposals": [
+          {
+            "club_id": "club_b",
+            "coach_id": "c2",
+            "decision_ref": "e13",
+            "forecast": 0.044,
+            "method": "B"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e26",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p4",
+      "cause_refs": [
+        "e26"
+      ],
+      "data": {
+        "action": "B",
+        "obs_gain": -0.013869,
+        "obs_skill": 0.458792,
+        "perceived_fatigue": 0.159219,
+        "player_id": "p4"
+      },
+      "day": 1,
+      "id": "e27",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p4",
+      "cause_refs": [
+        "e27",
+        "e13"
+      ],
+      "data": {
+        "coach_id": "c2",
+        "coach_prediction": 0.044,
+        "method": "B",
+        "new_trust": 0.55424,
+        "obs_gain": -0.013869,
+        "old_trust": 0.56,
+        "player_id": "p4",
+        "self_prediction": 0.042
+      },
+      "day": 1,
+      "id": "e28",
+      "kind": "advice_feedback"
+    },
+    {
+      "actor": "p5",
+      "cause_refs": [
+        "init:0",
+        "e12"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004397
+            },
+            "score": 0.036897,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.010206,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004397
+            },
+            "score": 0.059103,
+            "score_source": "c2"
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "components": {
+            "advice_term": 0.010206,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004397
+          },
+          "score": 0.059103,
+          "score_source": "c2"
+        },
+        "club_id": "club_b",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p5",
+        "received_proposals": [
+          {
+            "club_id": "club_b",
+            "coach_id": "c2",
+            "decision_ref": "e12",
+            "forecast": 0.044,
+            "method": "B"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e29",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p5",
+      "cause_refs": [
+        "e29"
+      ],
+      "data": {
+        "action": "B",
+        "obs_gain": -0.012542,
+        "obs_skill": 0.355463,
+        "perceived_fatigue": 0.105444,
+        "player_id": "p5"
+      },
+      "day": 1,
+      "id": "e30",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p5",
+      "cause_refs": [
+        "e30",
+        "e12"
+      ],
+      "data": {
+        "coach_id": "c2",
+        "coach_prediction": 0.044,
+        "method": "B",
+        "new_trust": 0.55424,
+        "obs_gain": -0.012542,
+        "old_trust": 0.56,
+        "player_id": "p5",
+        "self_prediction": 0.042
+      },
+      "day": 1,
+      "id": "e31",
+      "kind": "advice_feedback"
+    },
+    {
+      "actor": "p6",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.00433
+            },
+            "score": 0.04883,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.00433
+            },
+            "score": 0.03683,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.00433
+          },
+          "score": 0.04883,
+          "score_source": null
+        },
+        "club_id": "club_b",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p6",
+        "received_proposals": []
+      },
+      "day": 1,
+      "id": "e32",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p6",
+      "cause_refs": [
+        "e32"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": -0.006107,
+        "obs_skill": 0.488143,
+        "perceived_fatigue": 0.123238,
+        "player_id": "p6"
+      },
+      "day": 1,
+      "id": "e33",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p7",
+      "cause_refs": [
+        "init:0",
+        "e15"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004235
+            },
+            "score": 0.048735,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.010883,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004235
+            },
+            "score": 0.047618,
+            "score_source": "c3"
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004235
+          },
+          "score": 0.048735,
+          "score_source": null
+        },
+        "club_id": "club_c",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p7",
+        "received_proposals": [
+          {
+            "club_id": "club_c",
+            "coach_id": "c3",
+            "decision_ref": "e15",
+            "forecast": 0.044,
+            "method": "B"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e34",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p7",
+      "cause_refs": [
+        "e34"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.019127,
+        "obs_skill": 0.476485,
+        "perceived_fatigue": 0.173347,
+        "player_id": "p7"
+      },
+      "day": 1,
+      "id": "e35",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p8",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004289
+            },
+            "score": 0.048789,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004289
+            },
+            "score": 0.036789,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004289
+          },
+          "score": 0.048789,
+          "score_source": null
+        },
+        "club_id": "club_c",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p8",
+        "received_proposals": []
+      },
+      "day": 1,
+      "id": "e36",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p8",
+      "cause_refs": [
+        "e36"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.018891,
+        "obs_skill": 0.52455,
+        "perceived_fatigue": 0.14025,
+        "player_id": "p8"
+      },
+      "day": 1,
+      "id": "e37",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p9",
+      "cause_refs": [
+        "init:0",
+        "e14"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004365
+            },
+            "score": 0.048865,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.012188,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004365
+            },
+            "score": 0.049053,
+            "score_source": "c3"
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "components": {
+            "advice_term": 0.012188,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.0,
+            "unsatisfied_drive": 0.004365
+          },
+          "score": 0.049053,
+          "score_source": "c3"
+        },
+        "club_id": "club_c",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p9",
+        "received_proposals": [
+          {
+            "club_id": "club_c",
+            "coach_id": "c3",
+            "decision_ref": "e14",
+            "forecast": 0.044,
+            "method": "B"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e38",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p9",
+      "cause_refs": [
+        "e38"
+      ],
+      "data": {
+        "action": "B",
+        "obs_gain": 0.021184,
+        "obs_skill": 0.492522,
+        "perceived_fatigue": 0.194849,
+        "player_id": "p9"
+      },
+      "day": 1,
+      "id": "e39",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p9",
+      "cause_refs": [
+        "e39",
+        "e14"
+      ],
+      "data": {
+        "coach_id": "c3",
+        "coach_prediction": 0.044,
+        "method": "B",
+        "new_trust": 0.55424,
+        "obs_gain": 0.021184,
+        "old_trust": 0.56,
+        "player_id": "p9",
+        "self_prediction": 0.042
+      },
+      "day": 1,
+      "id": "e40",
+      "kind": "advice_feedback"
+    },
+    {
+      "actor": "p10",
+      "cause_refs": [
+        "init:0"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004442
+            },
+            "score": 0.048942,
+            "score_source": null
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004442
+            },
+            "score": 0.036942,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "A",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004442
+          },
+          "score": 0.048942,
+          "score_source": null
+        },
+        "club_id": "club_d",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p10",
+        "received_proposals": []
+      },
+      "day": 1,
+      "id": "e41",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p10",
+      "cause_refs": [
+        "e41"
+      ],
+      "data": {
+        "action": "A",
+        "obs_gain": 0.003708,
+        "obs_skill": 0.512168,
+        "perceived_fatigue": 0.178799,
+        "player_id": "p10"
+      },
+      "day": 1,
+      "id": "e42",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p11",
+      "cause_refs": [
+        "init:0",
+        "e17"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.01128,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.003974
+            },
+            "score": 0.047754,
+            "score_source": "c4"
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.003974
+            },
+            "score": 0.048474,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.003974
+          },
+          "score": 0.048474,
+          "score_source": null
+        },
+        "club_id": "club_d",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p11",
+        "received_proposals": [
+          {
+            "club_id": "club_d",
+            "coach_id": "c4",
+            "decision_ref": "e17",
+            "forecast": 0.044,
+            "method": "A"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e43",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p11",
+      "cause_refs": [
+        "e43"
+      ],
+      "data": {
+        "action": "B",
+        "obs_gain": -0.01044,
+        "obs_skill": 0.372901,
+        "perceived_fatigue": 0.109543,
+        "player_id": "p11"
+      },
+      "day": 1,
+      "id": "e44",
+      "kind": "player_self_observation"
+    },
+    {
+      "actor": "p12",
+      "cause_refs": [
+        "init:0",
+        "e16"
+      ],
+      "data": {
+        "candidates": [
+          {
+            "action": "A",
+            "components": {
+              "advice_term": 0.009917,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.0,
+              "unsatisfied_drive": 0.004154
+            },
+            "score": 0.046571,
+            "score_source": "c4"
+          },
+          {
+            "action": "B",
+            "components": {
+              "advice_term": 0.0,
+              "expected_gain": 0.042,
+              "fatigue_penalty": -0.0095,
+              "pref_bonus": 0.012,
+              "unsatisfied_drive": 0.004154
+            },
+            "score": 0.048654,
+            "score_source": null
+          },
+          {
+            "action": "rest",
+            "components": {
+              "fatigue_recovery_need": 0.0125,
+              "rest_preference": 0.012
+            },
+            "score": 0.0245,
+            "score_source": null
+          }
+        ],
+        "chosen": {
+          "action": "B",
+          "components": {
+            "advice_term": 0.0,
+            "expected_gain": 0.042,
+            "fatigue_penalty": -0.0095,
+            "pref_bonus": 0.012,
+            "unsatisfied_drive": 0.004154
+          },
+          "score": 0.048654,
+          "score_source": null
+        },
+        "club_id": "club_d",
+        "obs_refs": [
+          "init:0"
+        ],
+        "player_id": "p12",
+        "received_proposals": [
+          {
+            "club_id": "club_d",
+            "coach_id": "c4",
+            "decision_ref": "e16",
+            "forecast": 0.044,
+            "method": "A"
+          }
+        ]
+      },
+      "day": 1,
+      "id": "e45",
+      "kind": "player_training_decision"
+    },
+    {
+      "actor": "p12",
+      "cause_refs": [
+        "e45"
+      ],
+      "data": {
+        "action": "B",
+        "obs_gain": 0.001218,
+        "obs_skill": 0.408628,
+        "perceived_fatigue": 0.140945,
+        "player_id": "p12"
+      },
+      "day": 1,
+      "id": "e46",
+      "kind": "player_self_observation"
+    }
+  ],
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 16,
+    "source_sha256": "b542bfdcea7b87eea39e01aa733105ca56ac225bc63adbd468d64b3c59b9b3d8",
+    "world_kind": "league_economy_loop"
+  },
+  "initial_players": {
+    "p1": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.903487,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p1",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.110782,
+        "B": 0.104792
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.465108,
+        "passing": 0.470013,
+        "shooting": 0.44707
+      },
+      "transfers_count": 0
+    },
+    "p10": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.711899,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p10",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.023807,
+        "B": 0.022079
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.363851,
+        "passing": 0.574361,
+        "shooting": 0.577876
+      },
+      "transfers_count": 0
+    },
+    "p11": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.784585,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p11",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.02711,
+        "B": 0.034334
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.457582,
+        "passing": 0.349577,
+        "shooting": 0.427888
+      },
+      "transfers_count": 0
+    },
+    "p12": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.719872,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p12",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.031944,
+        "B": 0.044123
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.382333,
+        "passing": 0.348861,
+        "shooting": 0.514954
+      },
+      "transfers_count": 0
+    },
+    "p2": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.912666,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p2",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.118656,
+        "B": 0.116688
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.471025,
+        "passing": 0.46529,
+        "shooting": 0.434549
+      },
+      "transfers_count": 0
+    },
+    "p3": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.922403,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p3",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.112458,
+        "B": 0.117141
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.483072,
+        "passing": 0.475909,
+        "shooting": 0.432308
+      },
+      "transfers_count": 0
+    },
+    "p4": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.774692,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p4",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.0376,
+        "B": 0.035286
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.487508,
+        "passing": 0.46781,
+        "shooting": 0.560128
+      },
+      "transfers_count": 0
+    },
+    "p5": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.81514,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p5",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.027127,
+        "B": 0.026721
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.422689,
+        "passing": 0.428215,
+        "shooting": 0.345445
+      },
+      "transfers_count": 0
+    },
+    "p6": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.688599,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p6",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.030577,
+        "B": 0.02242
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.391197,
+        "passing": 0.570002,
+        "shooting": 0.56863
+      },
+      "transfers_count": 0
+    },
+    "p7": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.910932,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p7",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.116626,
+        "B": 0.11455
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.444373,
+        "passing": 0.440046,
+        "shooting": 0.477352
+      },
+      "transfers_count": 0
+    },
+    "p8": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.910404,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p8",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.104512,
+        "B": 0.118196
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.51919,
+        "passing": 0.5091,
+        "shooting": 0.461587
+      },
+      "transfers_count": 0
+    },
+    "p9": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.915489,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.1,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p9",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.104427,
+        "B": 0.113757
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.443314,
+        "passing": 0.501268,
+        "shooting": 0.443943
+      },
+      "transfers_count": 0
+    }
+  },
+  "interventions": [],
+  "ledger": {
+    "blocked_circular_transfers": 0,
+    "blocked_duplicate_claims": 0,
+    "claimed_dividend_keys": [],
+    "cumulative_external_inflow_units": 0,
+    "cumulative_external_outflow_units": 1120000,
+    "initial_total_cash_units": 160000000,
+    "insolvency_events": 0,
+    "transfer_contracts": {}
+  },
+  "player_minds": {
+    "p1": {
+      "ambition": 0.640217,
+      "autonomy": 0.328152,
+      "expected_gains": {
+        "A": 0.030562,
+        "B": 0.042
+      },
+      "last_obs_ref": "e19",
+      "loyalty_bias": 0.102249,
+      "perceived_fatigue": 0.177777,
+      "player_id": "p1",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "B",
+      "rest_preference": 0.012,
+      "self_estimate": 0.473979,
+      "style": {
+        "directness": 0.55,
+        "pass_bias": 0.46,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.55424,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p10": {
+      "ambition": 0.691858,
+      "autonomy": 0.379275,
+      "expected_gains": {
+        "A": 0.030512,
+        "B": 0.042
+      },
+      "last_obs_ref": "e42",
+      "loyalty_bias": 0.065012,
+      "perceived_fatigue": 0.178799,
+      "player_id": "p10",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.500276,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p11": {
+      "ambition": 0.408474,
+      "autonomy": 0.35491,
+      "expected_gains": {
+        "A": 0.042,
+        "B": 0.026268
+      },
+      "last_obs_ref": "e44",
+      "loyalty_bias": 0.237066,
+      "perceived_fatigue": 0.109543,
+      "player_id": "p11",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "B",
+      "rest_preference": 0.012,
+      "self_estimate": 0.406147,
+      "style": {
+        "directness": 0.55,
+        "pass_bias": 0.46,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p12": {
+      "ambition": 0.517517,
+      "autonomy": 0.379686,
+      "expected_gains": {
+        "A": 0.042,
+        "B": 0.029765
+      },
+      "last_obs_ref": "e46",
+      "loyalty_bias": 0.161221,
+      "perceived_fatigue": 0.140945,
+      "player_id": "p12",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "B",
+      "rest_preference": 0.012,
+      "self_estimate": 0.428946,
+      "style": {
+        "directness": 0.55,
+        "pass_bias": 0.46,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p2": {
+      "ambition": 0.441123,
+      "autonomy": 0.33406,
+      "expected_gains": {
+        "A": 0.029552,
+        "B": 0.042
+      },
+      "last_obs_ref": "e22",
+      "loyalty_bias": 0.128063,
+      "perceived_fatigue": 0.186647,
+      "player_id": "p2",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.465338,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p3": {
+      "ambition": 0.666695,
+      "autonomy": 0.341927,
+      "expected_gains": {
+        "A": 0.035348,
+        "B": 0.042
+      },
+      "last_obs_ref": "e24",
+      "loyalty_bias": 0.277837,
+      "perceived_fatigue": 0.149511,
+      "player_id": "p3",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.477075,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.55424,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p4": {
+      "ambition": 0.589478,
+      "autonomy": 0.376903,
+      "expected_gains": {
+        "A": 0.042,
+        "B": 0.025239
+      },
+      "last_obs_ref": "e27",
+      "loyalty_bias": 0.08543,
+      "perceived_fatigue": 0.159219,
+      "player_id": "p4",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "B",
+      "rest_preference": 0.012,
+      "self_estimate": 0.509863,
+      "style": {
+        "directness": 0.55,
+        "pass_bias": 0.46,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.55424,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p5": {
+      "ambition": 0.664632,
+      "autonomy": 0.374442,
+      "expected_gains": {
+        "A": 0.042,
+        "B": 0.025637
+      },
+      "last_obs_ref": "e30",
+      "loyalty_bias": 0.05944,
+      "perceived_fatigue": 0.105444,
+      "player_id": "p5",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "B",
+      "rest_preference": 0.012,
+      "self_estimate": 0.386013,
+      "style": {
+        "directness": 0.55,
+        "pass_bias": 0.46,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.55424,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p6": {
+      "ambition": 0.624097,
+      "autonomy": 0.321513,
+      "expected_gains": {
+        "A": 0.027568,
+        "B": 0.042
+      },
+      "last_obs_ref": "e33",
+      "loyalty_bias": 0.154808,
+      "perceived_fatigue": 0.123238,
+      "player_id": "p6",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.503113,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p7": {
+      "ambition": 0.566639,
+      "autonomy": 0.362132,
+      "expected_gains": {
+        "A": 0.035138,
+        "B": 0.042
+      },
+      "last_obs_ref": "e35",
+      "loyalty_bias": 0.223973,
+      "perceived_fatigue": 0.173347,
+      "player_id": "p7",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.477709,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p8": {
+      "ambition": 0.599572,
+      "autonomy": 0.338802,
+      "expected_gains": {
+        "A": 0.035067,
+        "B": 0.042
+      },
+      "last_obs_ref": "e37",
+      "loyalty_bias": 0.132872,
+      "perceived_fatigue": 0.14025,
+      "player_id": "p8",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.507513,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.56,
+        "c4": 0.56
+      }
+    },
+    "p9": {
+      "ambition": 0.645472,
+      "autonomy": 0.338402,
+      "expected_gains": {
+        "A": 0.042,
+        "B": 0.035755
+      },
+      "last_obs_ref": "e39",
+      "loyalty_bias": 0.21611,
+      "perceived_fatigue": 0.194849,
+      "player_id": "p9",
+      "playing_time_satisfaction": 0.5,
+      "preferred_method": "A",
+      "rest_preference": 0.012,
+      "self_estimate": 0.470685,
+      "style": {
+        "directness": 0.48,
+        "pass_bias": 0.55,
+        "press_bias": 0.52
+      },
+      "trust_by_coach": {
+        "c1": 0.56,
+        "c2": 0.56,
+        "c3": 0.55424,
+        "c4": 0.56
+      }
+    }
+  },
+  "players": {
+    "p1": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.903487,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p1",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.110782,
+        "B": 0.104792
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.472323,
+        "passing": 0.49326,
+        "shooting": 0.464705
+      },
+      "transfers_count": 0
+    },
+    "p10": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.711899,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p10",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.023807,
+        "B": 0.022079
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.364769,
+        "passing": 0.577319,
+        "shooting": 0.58012
+      },
+      "transfers_count": 0
+    },
+    "p11": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.784585,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p11",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.02711,
+        "B": 0.034334
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.46457,
+        "passing": 0.351746,
+        "shooting": 0.433189
+      },
+      "transfers_count": 0
+    },
+    "p12": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.719872,
+      "club_id": "club_d",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_d",
+      "passes_completed": 0,
+      "player_id": "p12",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.031944,
+        "B": 0.044123
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.390325,
+        "passing": 0.351341,
+        "shooting": 0.521017
+      },
+      "transfers_count": 0
+    },
+    "p2": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.912666,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p2",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.118656,
+        "B": 0.116688
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.478898,
+        "passing": 0.49066,
+        "shooting": 0.453795
+      },
+      "transfers_count": 0
+    },
+    "p3": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.922403,
+      "club_id": "club_a",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_a",
+      "passes_completed": 0,
+      "player_id": "p3",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.112458,
+        "B": 0.117141
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.490503,
+        "passing": 0.499853,
+        "shooting": 0.450472
+      },
+      "transfers_count": 0
+    },
+    "p4": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.774692,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p4",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.0376,
+        "B": 0.035286
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.492765,
+        "passing": 0.469442,
+        "shooting": 0.564116
+      },
+      "transfers_count": 0
+    },
+    "p5": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.81514,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p5",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.027127,
+        "B": 0.026721
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.428533,
+        "passing": 0.430029,
+        "shooting": 0.349879
+      },
+      "transfers_count": 0
+    },
+    "p6": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.688599,
+      "club_id": "club_b",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_b",
+      "passes_completed": 0,
+      "player_id": "p6",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.030577,
+        "B": 0.02242
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.392251,
+        "passing": 0.573399,
+        "shooting": 0.571207
+      },
+      "transfers_count": 0
+    },
+    "p7": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.910932,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p7",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.116626,
+        "B": 0.11455
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.452148,
+        "passing": 0.4651,
+        "shooting": 0.496359
+      },
+      "transfers_count": 0
+    },
+    "p8": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.910404,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p8",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.104512,
+        "B": 0.118196
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.525502,
+        "passing": 0.52944,
+        "shooting": 0.477017
+      },
+      "transfers_count": 0
+    },
+    "p9": {
+      "active_transfer_id": null,
+      "appearances": 0,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 0,
+        "club_c": 0,
+        "club_d": 0
+      },
+      "bench_streak": 0,
+      "cap": 0.915489,
+      "club_id": "club_c",
+      "cumulative_wages_received_units": 0,
+      "fatigue": 0.175,
+      "goals_scored": 0,
+      "max_bench_streak": 0,
+      "origin_club_id": "club_c",
+      "passes_completed": 0,
+      "player_id": "p9",
+      "previous_clubs": [],
+      "rates": {
+        "A": 0.104427,
+        "B": 0.113757
+      },
+      "shots_taken": 0,
+      "tackles_won": 0,
+      "traits": {
+        "pace": 0.467398,
+        "passing": 0.508742,
+        "shooting": 0.462214
+      },
+      "transfers_count": 0
+    }
+  },
+  "public_last_starters": {
+    "club_a": [
+      "p1",
+      "p2"
+    ],
+    "club_b": [
+      "p4",
+      "p5"
+    ],
+    "club_c": [
+      "p7",
+      "p8"
+    ],
+    "club_d": [
+      "p10",
+      "p11"
+    ]
+  },
+  "research_branch": false,
+  "seed": 100
+}

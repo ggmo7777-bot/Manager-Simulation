@@ -1,0 +1,86 @@
+{
+  "external_test_fixtures": [
+    "artifacts/t001",
+    "artifacts/t002/preflight"
+  ],
+  "files": [
+    {
+      "bytes": 64,
+      "path": "soccer_sim/__init__.py",
+      "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+    },
+    {
+      "bytes": 2435,
+      "path": "soccer_sim/__main__.py",
+      "sha256": "3453e111c6ca4298e535de1465a675ecdf8f1d7fb23157a5ca47a1deffd2a9d9"
+    },
+    {
+      "bytes": 14005,
+      "path": "soccer_sim/experiment_t002.py",
+      "sha256": "83ecb272b791e3133445613ce33bc8e34ea4c078714727a3d102a020e92f0db8"
+    },
+    {
+      "bytes": 7821,
+      "path": "soccer_sim/experiments.py",
+      "sha256": "cf7fb9008b1d8d025b17b59d8dc3312270e6143cc1da0ca5f9dc6bd160d4eb2f"
+    },
+    {
+      "bytes": 2148,
+      "path": "soccer_sim/observation.py",
+      "sha256": "12fa628f037ffea1d97c09f93c8b299499f0eff6b4ca00c3e7677726a2052194"
+    },
+    {
+      "bytes": 3906,
+      "path": "soccer_sim/policy.py",
+      "sha256": "5d3de68cfa5badc33bdf8fc7faad605da9ca219879d298b504f5e984d3dda5e8"
+    },
+    {
+      "bytes": 11415,
+      "path": "soccer_sim/simulation.py",
+      "sha256": "6fc01101a54bb8e2eac1e1b5adf35c72d54c875d8fe7cea2bd8aabfd2de151d1"
+    },
+    {
+      "bytes": 7854,
+      "path": "soccer_sim/state.py",
+      "sha256": "f44f879b93a19672d7d4e31e7112414133c94ad930af24c18a3e0ece8f8472a5"
+    },
+    {
+      "bytes": 6723,
+      "path": "soccer_sim/storage.py",
+      "sha256": "77207243aea0d83606126912b4d5d2681d5e45c7da08a56b0943052a4a6cc97a"
+    },
+    {
+      "bytes": 10002,
+      "path": "tests/test_t001.py",
+      "sha256": "15dd3b38a1782241618a1b0aafeb2cb935568a62cb443550eef38601b4712164"
+    },
+    {
+      "bytes": 10849,
+      "path": "tests/test_t002.py",
+      "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+    },
+    {
+      "bytes": 93,
+      "path": "pyproject.toml",
+      "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+    },
+    {
+      "bytes": 3265,
+      "path": "docs/tasks/T002.md",
+      "sha256": "7abaea6ee3a2024265922ed1dedcba2fea5f09bb7a007231731007b7e7dd3501"
+    },
+    {
+      "bytes": 6276,
+      "path": "docs/experiments/T002-PROTOCOL.md",
+      "sha256": "6c9b08185246a02b825c81e34c7848ee98816cda4e188a3da268be52b43120db"
+    }
+  ],
+  "note": "Frozen runtime can run/resume alone; integration tests require the listed fixtures at their project-relative paths. Do not edit this bundle.",
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t002-training-v2",
+    "save": 2,
+    "source_sha256": "bd6ce4245252baefe7de97bc7fa6b91ce94245be8200c3664b70c9f8d63c1368"
+  }
+}

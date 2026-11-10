@@ -1,0 +1,70 @@
+{
+  "config": {
+    "beliefs": {
+      "coach_forecast_learning": true,
+      "coach_session_observation": true,
+      "coach_skill": true,
+      "gain_target_mode": "signed",
+      "player_gain": true,
+      "recency": true,
+      "self_skill": true
+    },
+    "coach_alpha": 0.48,
+    "coach_noise": 0.065,
+    "duration": 1.0,
+    "fatigue_noise": 0.025,
+    "focus": 1.0,
+    "gain_alpha": 0.5,
+    "homogeneous_rates": false,
+    "policy": {
+      "advice_weight": 0.055,
+      "coach_freshness_days": 6,
+      "coach_method_fit": 0.05,
+      "coach_method_mode": "forecast_rank",
+      "coach_need_weight": 0.12,
+      "coach_observation_need": 0.04,
+      "coach_observation_weight": 0.15,
+      "coach_rest_value": 0.035,
+      "rest_fatigue_weight": 0.14,
+      "training_fatigue_weight": 0.045
+    },
+    "rest_recovery": 0.42,
+    "self_alpha": 0.45,
+    "self_noise": 0.025,
+    "sleep_recovery": 0.13,
+    "training_fatigue": 0.25,
+    "trust": {
+      "enabled": true,
+      "scale": 0.05,
+      "step": 0.05
+    }
+  },
+  "daily_slots": {
+    "coach": 2,
+    "player": 1
+  },
+  "day": 42,
+  "rng": {
+    "key_fields": [
+      "channel",
+      "day",
+      "actor_id",
+      "draw_index"
+    ],
+    "root_seed": 17
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "simulation_sha256": "2a2bd450507cd2f3f1b1c58056163aa252e1eb8e4424b89a043470c2a1eeb1f5",
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

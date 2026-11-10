@@ -1,0 +1,110 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "files": {
+    "soccer_sim/__init__.py": {
+      "bytes": 64,
+      "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+    },
+    "soccer_sim/__main__.py": {
+      "bytes": 6383,
+      "sha256": "6f6ddd319edadda72a843f7bebc3f5751e588fc7dd474689b9e56bd88204a59e"
+    },
+    "soccer_sim/advice.py": {
+      "bytes": 2380,
+      "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+    },
+    "soccer_sim/experiment_t002.py": {
+      "bytes": 14457,
+      "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+    },
+    "soccer_sim/experiment_t003.py": {
+      "bytes": 8927,
+      "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+    },
+    "soccer_sim/experiment_t004.py": {
+      "bytes": 12647,
+      "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+    },
+    "soccer_sim/experiment_t005.py": {
+      "bytes": 12114,
+      "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+    },
+    "soccer_sim/experiment_t006.py": {
+      "bytes": 9948,
+      "sha256": "872358c291967c739b75e2d499e3d7e36a844080ba7e4abfdcae71e699ef86fd"
+    },
+    "soccer_sim/experiment_t007.py": {
+      "bytes": 12058,
+      "sha256": "77e066cec6abea9bf56e54db34583689a6119d2182622883a16b5d370c62bdec"
+    },
+    "soccer_sim/experiment_t008.py": {
+      "bytes": 19130,
+      "sha256": "49b2c8e4a95811820673c8e1234b509423b4e02a4aebc904511536d53ca26676"
+    },
+    "soccer_sim/experiment_t009.py": {
+      "bytes": 22347,
+      "sha256": "b202a6494cbf023ac3e13961a5348155345477834ebf3feebf823af3f368da98"
+    },
+    "soccer_sim/experiment_t010.py": {
+      "bytes": 13805,
+      "sha256": "d768d376ac0f484b3acb06137216d13d1a657c6e299cadff20ce70c80740895b"
+    },
+    "soccer_sim/experiments.py": {
+      "bytes": 7833,
+      "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+    },
+    "soccer_sim/match_2d.py": {
+      "bytes": 69311,
+      "sha256": "85e475df0257616ad5daa08b216d8bbe42333d4e08a6b60625ce4dde29a9fe7c"
+    },
+    "soccer_sim/multi_coach.py": {
+      "bytes": 23669,
+      "sha256": "366d192bcaf9ba27effe524e3d5b4943a17104da7eae00d178eab5a1148fc393"
+    },
+    "soccer_sim/multi_storage.py": {
+      "bytes": 6279,
+      "sha256": "47d6bfad0b89a312b0178d501a5abcddd81d69f3345a7823528054adc790e046"
+    },
+    "soccer_sim/observation.py": {
+      "bytes": 2298,
+      "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+    },
+    "soccer_sim/policy.py": {
+      "bytes": 5604,
+      "sha256": "209381ece43689f1fb37e4e1149c27d1139b3a9520e410be94d489396dcae015"
+    },
+    "soccer_sim/selection_loop.py": {
+      "bytes": 82791,
+      "sha256": "3bf3d0ba45bf213ad86d49086a6055b053c301aec8d3debbe0cdafbf8086051c"
+    },
+    "soccer_sim/simulation.py": {
+      "bytes": 17340,
+      "sha256": "42644476ee757ad1c47f741f1b8cda0991bb8aafcad0a5fc9b9030beb54438e5"
+    },
+    "soccer_sim/state.py": {
+      "bytes": 12071,
+      "sha256": "01bb927daa06d4a7f91ef8f38e3fdddc1e7b4baa5ea033faf3fd3e3e07839424"
+    },
+    "soccer_sim/storage.py": {
+      "bytes": 17495,
+      "sha256": "64aea665707825a55086650ae16b25212ff8b8f60d490fa27d1a4ceb4708a99a"
+    },
+    "soccer_sim/transfer_loop.py": {
+      "bytes": 94085,
+      "sha256": "0fe94da968da7a9925a9d4b95b97a7f1eb49b57648e66af09a7edeaf8253565c"
+    }
+  },
+  "note": "Author Antigravity (Gemini 4 Argon) is distinct from the creator of T001-T007 (Sol 6.1 High).",
+  "package_source_sha256": "f3a8b07d06f17ec4adf3ac5fd13e905a800aa9edf3e3a47b40b2c420e0fc6a48",
+  "task": "T010",
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t010-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t010-transfer-loop-v1",
+    "save": 10,
+    "source_sha256": "f3a8b07d06f17ec4adf3ac5fd13e905a800aa9edf3e3a47b40b2c420e0fc6a48",
+    "world_kind": "transfer_loop"
+  },
+  "world_kind": "transfer_loop"
+}

@@ -1,0 +1,68 @@
+{
+  "acceptance_rate": 0.49122807017543857,
+  "accepted_count": 28,
+  "coach_action_counts": {
+    "observe": 27,
+    "propose": 57,
+    "rest": 0
+  },
+  "days": 42,
+  "event_count": 1016,
+  "final_skill_gap": 0.05411185171230615,
+  "log_bytes": 428954,
+  "player_action_counts": {
+    "A": 27,
+    "B": 33,
+    "rest": 24
+  },
+  "player_action_share": {
+    "A": 0.32142857142857145,
+    "B": 0.39285714285714285,
+    "rest": 0.2857142857142857
+  },
+  "players": {
+    "p1": {
+      "action_counts": {
+        "A": 11,
+        "B": 19,
+        "rest": 12
+      },
+      "coach_absolute_error": 0.012477101792093492,
+      "expected_gains": {
+        "A": 0.0049658999459059015,
+        "B": 0.011579945798397138
+      },
+      "final_skill": 0.8078145806161532,
+      "last_observed_day": 42,
+      "observations": 14,
+      "proposals": 33,
+      "remembered_last_observed_day": 42,
+      "self_absolute_error": 0.009340174845867022,
+      "skill_gain": 0.4278145806161532
+    },
+    "p2": {
+      "action_counts": {
+        "A": 16,
+        "B": 14,
+        "rest": 12
+      },
+      "coach_absolute_error": 0.041949078645969196,
+      "expected_gains": {
+        "A": 8.379925587256344e-05,
+        "B": 0.004482988492086434
+      },
+      "final_skill": 0.8619264323284593,
+      "last_observed_day": 40,
+      "observations": 13,
+      "proposals": 24,
+      "remembered_last_observed_day": 40,
+      "self_absolute_error": 0.006326442577036739,
+      "skill_gain": 0.48192643232845933
+    }
+  },
+  "proposal_count": 57,
+  "rejected_count": 29,
+  "seconds": 0.012817292008548975,
+  "seed": 17,
+  "simulation_sha256": "cd61d8d9f6d30f4e74e585b6cb0444eba9ee967607fa648a3ef8fe5a4ba26098"
+}

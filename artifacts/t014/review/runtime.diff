@@ -1,0 +1,1042 @@
+--- T013 frozen league_economy.py
++++ T014 league_economy.py
+@@ -4,6 +4,7 @@
+ T011-R1 corrections: Codex. See docs/DECISIONS.md D026.
+ T012 recorded belief interventions: Sol 6.1 High. See D027.
+ T013 observation/admission corrections: Codex. See D028.
++T014 integer money: Sol 6.1 High. See D029.
+ """
+ from __future__ import annotations
+ 
+@@ -27,6 +28,7 @@
+ )
+ from .observation import RNG_VERSION
+ from .league_observation import observe_fatigue
++from .money import MONEY_SCALE, MONEY_VERSION, validate_money_units
+ from .storage import (
+     atomic_write,
+     canonical,
+@@ -45,12 +47,30 @@
+     return float(val)
+ 
+ 
++def _validate_money_fields(record: Any) -> None:
++    for spec in fields(record):
++        if spec.name.endswith("_units"):
++            validate_money_units(getattr(record, spec.name), spec.name)
++
++
++def _validate_event_money(value: Any) -> None:
++    if isinstance(value, dict):
++        for key, item in value.items():
++            if key.endswith("_units"):
++                validate_money_units(item, key)
++            else:
++                _validate_event_money(item)
++    elif isinstance(value, list):
++        for item in value:
++            _validate_event_money(item)
++
++
+ # Explicit author attribution (distinct from T001-T007 creator Sol 6.1 High)
+ LEAGUE_AUTHOR = "Antigravity (Gemini 4 Argon)"
+ LEAGUE_WORLD_KIND = "league_economy_loop"
+-LEAGUE_SAVE_VERSION = 14
++LEAGUE_SAVE_VERSION = 15
+ LEAGUE_INTERVENTION_VERSION = "t012-recorded-belief-intervention-v1"
+-LEAGUE_RULE_VERSION = "t013-observation-claims-v1"
++LEAGUE_RULE_VERSION = "t014-integer-money-v1"
+ LEAGUE_POLICY_VERSION = "t013-independent-transfer-score-v1"
+ 
+ CLUB_IDS = ("club_a", "club_b", "club_c", "club_d")
+@@ -128,9 +148,11 @@
+         "rules": LEAGUE_RULE_VERSION,
+         "policy": LEAGUE_POLICY_VERSION,
+         "rng": RNG_VERSION,
++        "money": MONEY_VERSION,
++        "money_scale": MONEY_SCALE,
+         "author": LEAGUE_AUTHOR,
+-        "revision_author": "Codex (T013)",
+-        "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
++        "revision_author": "Sol 6.1 High (T014)",
++        "previous_revision_author": "Codex (T011-R1/T013); Sol 6.1 High (T012)",
+         "intervention": LEAGUE_INTERVENTION_VERSION,
+         "source_sha256": base["source_sha256"],
+     }
+@@ -177,23 +199,23 @@
+     select_match_weight: float = 0.48
+     select_fatigue_weight: float = 0.22
+     # Financial & market parameters
+-    initial_academy_cash: float = 21.0
+-    initial_buyer_cash: float = 59.0
+-    facility_reserve_floor: float = 16.5
+-    facility_daily_cost: float = 0.28
++    initial_academy_cash_units: int = 21000000
++    initial_buyer_cash_units: int = 59000000
++    facility_reserve_floor_units: int = 16500000
++    facility_daily_cost_units: int = 280000
+     facility_Active_multiplier: float = 1.25
+     facility_inactive_multiplier: float = 0.52
+-    matchday_base_inflow: float = 1.20
+-    matchday_win_bonus: float = 0.40
+-    matchday_draw_bonus: float = 0.15
+-    player_matchday_wage: float = 0.38
+-    scout_action_cost: float = 0.05
+-    base_transfer_fee_solidarity: float = 9.50
+-    solidarity_transfer_grant: float = 2.50
+-    base_transfer_fee_no_solidarity: float = 1.50
+-    development_dividend_per_start: float = 1.25
++    matchday_base_inflow_units: int = 1200000
++    matchday_win_bonus_units: int = 400000
++    matchday_draw_bonus_units: int = 150000
++    player_matchday_wage_units: int = 380000
++    scout_action_cost_units: int = 50000
++    base_transfer_fee_solidarity_units: int = 9500000
++    solidarity_transfer_grant_units: int = 2500000
++    base_transfer_fee_no_solidarity_units: int = 1500000
++    development_dividend_per_start_units: int = 1250000
+     max_dividend_triggers: int = 6
+-    buyer_min_cash_reserve: float = 8.0
++    buyer_min_cash_reserve_units: int = 8000000
+     transfer_request_threshold: float = 0.08
+     transfer_offer_threshold: float = 0.022
+ 
+@@ -205,7 +227,7 @@
+                 if type(value) is not str or not value:
+                     raise ValueError(f"{spec.name} must be a nonempty string")
+             elif type(spec.default) is int:
+-                minimum = 0 if spec.name == "max_dividend_triggers" else 1
++                minimum = 0 if spec.name.endswith("_units") or spec.name == "max_dividend_triggers" else 1
+                 if type(value) is not int or value < minimum:
+                     raise ValueError(f"{spec.name} must be an integer >= {minimum}")
+             else:
+@@ -232,6 +254,7 @@
+             raise ValueError("intervals, ticks, and slots must be positive")
+ 
+     def to_dict(self) -> dict[str, Any]:
++        _validate_money_fields(self)
+         return {
+             "condition": self.condition,
+             "market_mode": self.market_mode,
+@@ -271,23 +294,23 @@
+             "select_skill_weight": self.select_skill_weight,
+             "select_match_weight": self.select_match_weight,
+             "select_fatigue_weight": self.select_fatigue_weight,
+-            "initial_academy_cash": self.initial_academy_cash,
+-            "initial_buyer_cash": self.initial_buyer_cash,
+-            "facility_reserve_floor": self.facility_reserve_floor,
+-            "facility_daily_cost": self.facility_daily_cost,
++            "initial_academy_cash_units": self.initial_academy_cash_units,
++            "initial_buyer_cash_units": self.initial_buyer_cash_units,
++            "facility_reserve_floor_units": self.facility_reserve_floor_units,
++            "facility_daily_cost_units": self.facility_daily_cost_units,
+             "facility_Active_multiplier": self.facility_Active_multiplier,
+             "facility_inactive_multiplier": self.facility_inactive_multiplier,
+-            "matchday_base_inflow": self.matchday_base_inflow,
+-            "matchday_win_bonus": self.matchday_win_bonus,
+-            "matchday_draw_bonus": self.matchday_draw_bonus,
+-            "player_matchday_wage": self.player_matchday_wage,
+-            "scout_action_cost": self.scout_action_cost,
+-            "base_transfer_fee_solidarity": self.base_transfer_fee_solidarity,
+-            "solidarity_transfer_grant": self.solidarity_transfer_grant,
+-            "base_transfer_fee_no_solidarity": self.base_transfer_fee_no_solidarity,
+-            "development_dividend_per_start": self.development_dividend_per_start,
++            "matchday_base_inflow_units": self.matchday_base_inflow_units,
++            "matchday_win_bonus_units": self.matchday_win_bonus_units,
++            "matchday_draw_bonus_units": self.matchday_draw_bonus_units,
++            "player_matchday_wage_units": self.player_matchday_wage_units,
++            "scout_action_cost_units": self.scout_action_cost_units,
++            "base_transfer_fee_solidarity_units": self.base_transfer_fee_solidarity_units,
++            "solidarity_transfer_grant_units": self.solidarity_transfer_grant_units,
++            "base_transfer_fee_no_solidarity_units": self.base_transfer_fee_no_solidarity_units,
++            "development_dividend_per_start_units": self.development_dividend_per_start_units,
+             "max_dividend_triggers": self.max_dividend_triggers,
+-            "buyer_min_cash_reserve": self.buyer_min_cash_reserve,
++            "buyer_min_cash_reserve_units": self.buyer_min_cash_reserve_units,
+             "transfer_request_threshold": self.transfer_request_threshold,
+             "transfer_offer_threshold": self.transfer_offer_threshold,
+         }
+@@ -295,67 +318,8 @@
+     @classmethod
+     def from_dict(cls, data: dict[str, Any]) -> LeagueEconomyConfig:
+         if type(data) is not dict or set(data) != {spec.name for spec in fields(cls)}:
+-            raise ValueError("config fields do not match save14 schema")
+-        cls(**data)  # Reject invalid types before legacy conversions below.
+-        return cls(
+-            condition=str(data["condition"]),
+-            market_mode=str(data["market_mode"]),
+-            solidarity_mode=str(data["solidarity_mode"]),
+-            inflow_mode=str(data["inflow_mode"]),
+-            buyer_strategy=str(data["buyer_strategy"]),
+-            adversarial_mode=str(data["adversarial_mode"]),
+-            match_interval_days=int(data["match_interval_days"]),
+-            match_ticks=int(data["match_ticks"]),
+-            coach_daily_slots=int(data["coach_daily_slots"]),
+-            self_noise=_f(data["self_noise"]),
+-            coach_noise=_f(data["coach_noise"]),
+-            scout_noise=_f(data["scout_noise"]),
+-            match_obs_noise=_f(data["match_obs_noise"]),
+-            self_fatigue_noise=_f(data["self_fatigue_noise"]),
+-            coach_fatigue_noise=_f(data["coach_fatigue_noise"]),
+-            scout_fatigue_noise=_f(data["scout_fatigue_noise"]),
+-            match_fatigue_noise=_f(data["match_fatigue_noise"]),
+-            match_noise_scale=_f(data["match_noise_scale"]),
+-            player_skill_alpha=_f(data["player_skill_alpha"]),
+-            player_gain_alpha=_f(data["player_gain_alpha"]),
+-            coach_skill_alpha=_f(data["coach_skill_alpha"]),
+-            coach_scout_alpha=_f(data["coach_scout_alpha"]),
+-            coach_residual_alpha=_f(data["coach_residual_alpha"]),
+-            coach_match_alpha=_f(data["coach_match_alpha"]),
+-            coach_match_skill_blend=_f(data["coach_match_skill_blend"]),
+-            trust_alpha=_f(data["trust_alpha"]),
+-            trust_scale=_f(data["trust_scale"]),
+-            advice_weight=_f(data["advice_weight"]),
+-            training_fatigue_weight=_f(data["training_fatigue_weight"]),
+-            rest_fatigue_weight=_f(data["rest_fatigue_weight"]),
+-            satisfaction_drive_weight=_f(data["satisfaction_drive_weight"]),
+-            coach_need_weight=_f(data["coach_need_weight"]),
+-            coach_method_fit=_f(data["coach_method_fit"]),
+-            coach_staleness_weight=_f(data["coach_staleness_weight"]),
+-            coach_rest_value=_f(data["coach_rest_value"]),
+-            select_skill_weight=_f(data["select_skill_weight"]),
+-            select_match_weight=_f(data["select_match_weight"]),
+-            select_fatigue_weight=_f(data["select_fatigue_weight"]),
+-            initial_academy_cash=_f(data["initial_academy_cash"]),
+-            initial_buyer_cash=_f(data["initial_buyer_cash"]),
+-            facility_reserve_floor=_f(data["facility_reserve_floor"]),
+-            facility_daily_cost=_f(data["facility_daily_cost"]),
+-            facility_Active_multiplier=_f(data["facility_Active_multiplier"]),
+-            facility_inactive_multiplier=_f(data["facility_inactive_multiplier"]),
+-            matchday_base_inflow=_f(data["matchday_base_inflow"]),
+-            matchday_win_bonus=_f(data["matchday_win_bonus"]),
+-            matchday_draw_bonus=_f(data["matchday_draw_bonus"]),
+-            player_matchday_wage=_f(data["player_matchday_wage"]),
+-            scout_action_cost=_f(data["scout_action_cost"]),
+-            base_transfer_fee_solidarity=_f(data["base_transfer_fee_solidarity"]),
+-            solidarity_transfer_grant=_f(data["solidarity_transfer_grant"]),
+-            base_transfer_fee_no_solidarity=_f(data["base_transfer_fee_no_solidarity"]),
+-            development_dividend_per_start=_f(data["development_dividend_per_start"]),
+-            max_dividend_triggers=int(data["max_dividend_triggers"]),
+-            buyer_min_cash_reserve=_f(data["buyer_min_cash_reserve"]),
+-            transfer_request_threshold=_f(data["transfer_request_threshold"]),
+-            transfer_offer_threshold=_f(data["transfer_offer_threshold"]),
+-        )
++            raise ValueError("config fields do not match save15 schema")
++        return cls(**data)
+ 
+ 
+ def config_for_condition(condition: str) -> LeagueEconomyConfig:
+@@ -413,12 +377,16 @@
+     transfers_count: int = 0
+     previous_clubs: list[str] = field(default_factory=list)
+     active_transfer_id: str | None = None
+-    cumulative_wages_received: float = 0.0
++    cumulative_wages_received_units: int = 0
+ 
+     def composite_skill(self) -> float:
+         return round6((self.traits.pace + self.traits.passing + self.traits.shooting) / 3.0)
+ 
++    def __post_init__(self) -> None:
++        _validate_money_fields(self)
++
+     def to_dict(self) -> dict[str, Any]:
++        _validate_money_fields(self)
+         return {
+             "player_id": self.player_id,
+             "origin_club_id": self.origin_club_id,
+@@ -438,7 +406,7 @@
+             "transfers_count": self.transfers_count,
+             "previous_clubs": list(self.previous_clubs),
+             "active_transfer_id": self.active_transfer_id,
+-            "cumulative_wages_received": round6(self.cumulative_wages_received),
++            "cumulative_wages_received_units": self.cumulative_wages_received_units,
+         }
+ 
+     @classmethod
+@@ -462,7 +430,7 @@
+             transfers_count=int(data["transfers_count"]),
+             previous_clubs=[str(x) for x in data["previous_clubs"]],
+             active_transfer_id=None if data["active_transfer_id"] is None else str(data["active_transfer_id"]),
+-            cumulative_wages_received=_f(data["cumulative_wages_received"]),
++            cumulative_wages_received_units=validate_money_units(data["cumulative_wages_received_units"]),
+         )
+ 
+ 
+@@ -584,17 +552,17 @@
+ class ClubAccountState:
+     club_id: str
+     philosophy: str
+-    cash: float
+-    initial_cash: float
++    cash_units: int
++    initial_cash_units: int
+     facility_active_days: int = 0
+-    cumulative_inflow: float = 0.0
+-    cumulative_wages_paid: float = 0.0
+-    cumulative_facility_paid: float = 0.0
+-    cumulative_scouting_paid: float = 0.0
+-    cumulative_transfer_fees_paid: float = 0.0
+-    cumulative_transfer_fees_received: float = 0.0
+-    cumulative_solidarity_paid: float = 0.0
+-    cumulative_solidarity_received: float = 0.0
++    cumulative_inflow_units: int = 0
++    cumulative_wages_paid_units: int = 0
++    cumulative_facility_paid_units: int = 0
++    cumulative_scouting_paid_units: int = 0
++    cumulative_transfer_fees_paid_units: int = 0
++    cumulative_transfer_fees_received_units: int = 0
++    cumulative_solidarity_paid_units: int = 0
++    cumulative_solidarity_received_units: int = 0
+     points: int = 0
+     matches_played: int = 0
+     wins: int = 0
+@@ -606,21 +574,25 @@
+     possession_ticks: int = 0
+     pass_completions: int = 0
+ 
++    def __post_init__(self) -> None:
++        _validate_money_fields(self)
++
+     def to_dict(self) -> dict[str, Any]:
++        _validate_money_fields(self)
+         return {
+             "club_id": self.club_id,
+             "philosophy": self.philosophy,
+-            "cash": round6(self.cash),
+-            "initial_cash": round6(self.initial_cash),
++            "cash_units": self.cash_units,
++            "initial_cash_units": self.initial_cash_units,
+             "facility_active_days": self.facility_active_days,
+-            "cumulative_inflow": round6(self.cumulative_inflow),
+-            "cumulative_wages_paid": round6(self.cumulative_wages_paid),
+-            "cumulative_facility_paid": round6(self.cumulative_facility_paid),
+-            "cumulative_scouting_paid": round6(self.cumulative_scouting_paid),
+-            "cumulative_transfer_fees_paid": round6(self.cumulative_transfer_fees_paid),
+-            "cumulative_transfer_fees_received": round6(self.cumulative_transfer_fees_received),
+-            "cumulative_solidarity_paid": round6(self.cumulative_solidarity_paid),
+-            "cumulative_solidarity_received": round6(self.cumulative_solidarity_received),
++            "cumulative_inflow_units": self.cumulative_inflow_units,
++            "cumulative_wages_paid_units": self.cumulative_wages_paid_units,
++            "cumulative_facility_paid_units": self.cumulative_facility_paid_units,
++            "cumulative_scouting_paid_units": self.cumulative_scouting_paid_units,
++            "cumulative_transfer_fees_paid_units": self.cumulative_transfer_fees_paid_units,
++            "cumulative_transfer_fees_received_units": self.cumulative_transfer_fees_received_units,
++            "cumulative_solidarity_paid_units": self.cumulative_solidarity_paid_units,
++            "cumulative_solidarity_received_units": self.cumulative_solidarity_received_units,
+             "points": self.points,
+             "matches_played": self.matches_played,
+             "wins": self.wins,
+@@ -638,17 +610,17 @@
+         return cls(
+             club_id=str(data["club_id"]),
+             philosophy=str(data["philosophy"]),
+-            cash=_f(data["cash"]),
+-            initial_cash=_f(data["initial_cash"]),
++            cash_units=validate_money_units(data["cash_units"]),
++            initial_cash_units=validate_money_units(data["initial_cash_units"]),
+             facility_active_days=int(data["facility_active_days"]),
+-            cumulative_inflow=_f(data["cumulative_inflow"]),
+-            cumulative_wages_paid=_f(data["cumulative_wages_paid"]),
+-            cumulative_facility_paid=_f(data["cumulative_facility_paid"]),
+-            cumulative_scouting_paid=_f(data["cumulative_scouting_paid"]),
+-            cumulative_transfer_fees_paid=_f(data["cumulative_transfer_fees_paid"]),
+-            cumulative_transfer_fees_received=_f(data["cumulative_transfer_fees_received"]),
+-            cumulative_solidarity_paid=_f(data["cumulative_solidarity_paid"]),
+-            cumulative_solidarity_received=_f(data["cumulative_solidarity_received"]),
++            cumulative_inflow_units=validate_money_units(data["cumulative_inflow_units"]),
++            cumulative_wages_paid_units=validate_money_units(data["cumulative_wages_paid_units"]),
++            cumulative_facility_paid_units=validate_money_units(data["cumulative_facility_paid_units"]),
++            cumulative_scouting_paid_units=validate_money_units(data["cumulative_scouting_paid_units"]),
++            cumulative_transfer_fees_paid_units=validate_money_units(data["cumulative_transfer_fees_paid_units"]),
++            cumulative_transfer_fees_received_units=validate_money_units(data["cumulative_transfer_fees_received_units"]),
++            cumulative_solidarity_paid_units=validate_money_units(data["cumulative_solidarity_paid_units"]),
++            cumulative_solidarity_received_units=validate_money_units(data["cumulative_solidarity_received_units"]),
+             points=int(data["points"]),
+             matches_played=int(data["matches_played"]),
+             wins=int(data["wins"]),
+@@ -670,13 +642,17 @@
+     origin_club_id: str
+     from_club: str
+     to_club: str
+-    base_fee: float
+-    solidarity_grant: float
+-    dividend_per_start: float
++    base_fee_units: int
++    solidarity_grant_units: int
++    dividend_per_start_units: int
+     max_dividend_triggers: int
+     dividend_triggers_used: int = 0
+ 
++    def __post_init__(self) -> None:
++        _validate_money_fields(self)
++
+     def to_dict(self) -> dict[str, Any]:
++        _validate_money_fields(self)
+         return {
+             "transfer_id": self.transfer_id,
+             "day": self.day,
+@@ -684,9 +660,9 @@
+             "origin_club_id": self.origin_club_id,
+             "from_club": self.from_club,
+             "to_club": self.to_club,
+-            "base_fee": round6(self.base_fee),
+-            "solidarity_grant": round6(self.solidarity_grant),
+-            "dividend_per_start": round6(self.dividend_per_start),
++            "base_fee_units": self.base_fee_units,
++            "solidarity_grant_units": self.solidarity_grant_units,
++            "dividend_per_start_units": self.dividend_per_start_units,
+             "max_dividend_triggers": self.max_dividend_triggers,
+             "dividend_triggers_used": self.dividend_triggers_used,
+         }
+@@ -700,9 +676,9 @@
+             origin_club_id=str(data["origin_club_id"]),
+             from_club=str(data["from_club"]),
+             to_club=str(data["to_club"]),
+-            base_fee=_f(data["base_fee"]),
+-            solidarity_grant=_f(data["solidarity_grant"]),
+-            dividend_per_start=_f(data["dividend_per_start"]),
++            base_fee_units=validate_money_units(data["base_fee_units"]),
++            solidarity_grant_units=validate_money_units(data["solidarity_grant_units"]),
++            dividend_per_start_units=validate_money_units(data["dividend_per_start_units"]),
+             max_dividend_triggers=int(data["max_dividend_triggers"]),
+             dividend_triggers_used=int(data["dividend_triggers_used"]),
+         )
+@@ -710,20 +686,24 @@
+ 
+ @dataclass
+ class WorldFinanceLedger:
+-    initial_total_cash: float
+-    cumulative_external_inflow: float = 0.0
+-    cumulative_external_outflow: float = 0.0
++    initial_total_cash_units: int
++    cumulative_external_inflow_units: int = 0
++    cumulative_external_outflow_units: int = 0
+     insolvency_events: int = 0
+     blocked_circular_transfers: int = 0
+     blocked_duplicate_claims: int = 0
+     claimed_dividend_keys: set[str] = field(default_factory=set)
+     transfer_contracts: dict[str, TransferContractRecord] = field(default_factory=dict)
+ 
++    def __post_init__(self) -> None:
++        _validate_money_fields(self)
++
+     def to_dict(self) -> dict[str, Any]:
++        _validate_money_fields(self)
+         return {
+-            "initial_total_cash": round6(self.initial_total_cash),
+-            "cumulative_external_inflow": round6(self.cumulative_external_inflow),
+-            "cumulative_external_outflow": round6(self.cumulative_external_outflow),
++            "initial_total_cash_units": self.initial_total_cash_units,
++            "cumulative_external_inflow_units": self.cumulative_external_inflow_units,
++            "cumulative_external_outflow_units": self.cumulative_external_outflow_units,
+             "insolvency_events": self.insolvency_events,
+             "blocked_circular_transfers": self.blocked_circular_transfers,
+             "blocked_duplicate_claims": self.blocked_duplicate_claims,
+@@ -734,9 +714,9 @@
+     @classmethod
+     def from_dict(cls, data: dict[str, Any]) -> WorldFinanceLedger:
+         return cls(
+-            initial_total_cash=_f(data["initial_total_cash"]),
+-            cumulative_external_inflow=_f(data["cumulative_external_inflow"]),
+-            cumulative_external_outflow=_f(data["cumulative_external_outflow"]),
++            initial_total_cash_units=validate_money_units(data["initial_total_cash_units"]),
++            cumulative_external_inflow_units=validate_money_units(data["cumulative_external_inflow_units"]),
++            cumulative_external_outflow_units=validate_money_units(data["cumulative_external_outflow_units"]),
+             insolvency_events=int(data["insolvency_events"]),
+             blocked_circular_transfers=int(data["blocked_circular_transfers"]),
+             blocked_duplicate_claims=int(data["blocked_duplicate_claims"]),
+@@ -789,12 +769,12 @@
+     club_accounts: dict[str, ClubAccountState] = {}
+     for cid in CLUB_IDS:
+         phil = "academy" if cid in ACADEMY_CLUB_IDS else "buyer"
+-        init_cash = config.initial_academy_cash if phil == "academy" else config.initial_buyer_cash
++        init_cash_units = config.initial_academy_cash_units if phil == "academy" else config.initial_buyer_cash_units
+         club_accounts[cid] = ClubAccountState(
+             club_id=cid,
+             philosophy=phil,
+-            cash=round6(init_cash),
+-            initial_cash=round6(init_cash),
++            cash_units=(init_cash_units),
++            initial_cash_units=(init_cash_units),
+         )
+ 
+     # 12 players across 4 clubs
+@@ -1019,8 +999,8 @@
+             evaluations=evals,
+         )
+ 
+-    total_init_cash = round6(sum(acc.initial_cash for acc in club_accounts.values()))
+-    ledger = WorldFinanceLedger(initial_total_cash=total_init_cash)
++    total_init_cash_units = (sum(acc.initial_cash_units for acc in club_accounts.values()))
++    ledger = WorldFinanceLedger(initial_total_cash_units=total_init_cash_units)
+     public_last_starters = {
+         "club_a": ["p1", "p2"],
+         "club_b": ["p4", "p5"],
+@@ -1050,7 +1030,7 @@
+         data={
+             "seed": seed,
+             "condition": config.condition,
+-            "initial_total_cash": total_init_cash,
++            "initial_total_cash_units": total_init_cash_units,
+             "club_rosters": {k: list(v) for k, v in club_rosters.items()},
+         },
+         cause_refs=[],
+@@ -1087,64 +1067,59 @@
+     day: int,
+     payer: str,
+     payee: str,
+-    amount: float,
++    amount_units: int,
+     reason: str,
+     cause_refs: list[str],
+ ) -> str:
+     # Validate both ends before mutating either account.
+-    if type(amount) not in (int, float) or not isfinite(amount) or amount < 0:
+-        raise ValueError("transaction amount must be finite and nonnegative")
++    validate_money_units(amount_units, "transaction amount_units")
+     if payer not in world.club_accounts and payer != "external_league_pool":
+         raise ValueError(f"unknown payer: {payer}")
+     if (payee not in world.club_accounts and payee not in world.players
+             and payee != "external_treasury_outflow"):
+         raise ValueError(f"unknown payee: {payee}")
+-    amt = round6(amount)
+-    if amt < 0.0:
+-        raise ValueError(f"negative transaction amount: {amt}")
++    amt_units = amount_units
++    _validate_money_fields(world.ledger)
++    for account_id in (payer, payee):
++        if account_id in world.club_accounts:
++            _validate_money_fields(world.club_accounts[account_id])
++        elif account_id in world.players:
++            _validate_money_fields(world.players[account_id])
+     if payer in world.club_accounts:
+         acc = world.club_accounts[payer]
+-        if acc.cash + 1e-9 < amt:
++        if acc.cash_units < amt_units:
+             world.ledger.insolvency_events += 1
+-            raise ValueError(f"insolvency: club {payer} cash {acc.cash} < {amt}")
+-        acc.cash = round6(acc.cash - amt)
++            raise ValueError(f"insolvency: club {payer} cash_units {acc.cash_units} < {amt_units}")
++        acc.cash_units = acc.cash_units - amt_units
+         if reason == "player_wage":
+-            acc.cumulative_wages_paid = round6(acc.cumulative_wages_paid + amt)
++            acc.cumulative_wages_paid_units = acc.cumulative_wages_paid_units + amt_units
+         elif reason == "training_facility_operation":
+-            acc.cumulative_facility_paid = round6(acc.cumulative_facility_paid + amt)
++            acc.cumulative_facility_paid_units = acc.cumulative_facility_paid_units + amt_units
+         elif reason == "scout_expense":
+-            acc.cumulative_scouting_paid = round6(acc.cumulative_scouting_paid + amt)
++            acc.cumulative_scouting_paid_units = acc.cumulative_scouting_paid_units + amt_units
+         elif reason == "transfer_base_fee":
+-            acc.cumulative_transfer_fees_paid = round6(acc.cumulative_transfer_fees_paid + amt)
++            acc.cumulative_transfer_fees_paid_units = acc.cumulative_transfer_fees_paid_units + amt_units
+         elif reason in ("transfer_solidarity_grant", "development_appearance_dividend"):
+-            acc.cumulative_solidarity_paid = round6(acc.cumulative_solidarity_paid + amt)
++            acc.cumulative_solidarity_paid_units = acc.cumulative_solidarity_paid_units + amt_units
+     elif payer == "external_league_pool":
+-        world.ledger.cumulative_external_inflow = round6(
+-            world.ledger.cumulative_external_inflow + amt
+-        )
++        world.ledger.cumulative_external_inflow_units = world.ledger.cumulative_external_inflow_units + amt_units
+     else:
+         raise ValueError(f"unknown payer: {payer}")
+ 
+     if payee in world.club_accounts:
+         acc_to = world.club_accounts[payee]
+-        acc_to.cash = round6(acc_to.cash + amt)
++        acc_to.cash_units = acc_to.cash_units + amt_units
+         if reason == "matchday_revenue":
+-            acc_to.cumulative_inflow = round6(acc_to.cumulative_inflow + amt)
++            acc_to.cumulative_inflow_units = acc_to.cumulative_inflow_units + amt_units
+         elif reason == "transfer_base_fee":
+-            acc_to.cumulative_transfer_fees_received = round6(
+-                acc_to.cumulative_transfer_fees_received + amt
+-            )
++            acc_to.cumulative_transfer_fees_received_units = acc_to.cumulative_transfer_fees_received_units + amt_units
+         elif reason in ("transfer_solidarity_grant", "development_appearance_dividend"):
+-            acc_to.cumulative_solidarity_received = round6(
+-                acc_to.cumulative_solidarity_received + amt
+-            )
++            acc_to.cumulative_solidarity_received_units = acc_to.cumulative_solidarity_received_units + amt_units
+     elif payee in world.players:
+         p = world.players[payee]
+-        p.cumulative_wages_received = round6(p.cumulative_wages_received + amt)
++        p.cumulative_wages_received_units = p.cumulative_wages_received_units + amt_units
+     elif payee == "external_treasury_outflow":
+-        world.ledger.cumulative_external_outflow = round6(
+-            world.ledger.cumulative_external_outflow + amt
+-        )
++        world.ledger.cumulative_external_outflow_units = world.ledger.cumulative_external_outflow_units + amt_units
+     else:
+         raise ValueError(f"unknown payee: {payee}")
+ 
+@@ -1156,7 +1131,7 @@
+         data={
+             "payer": payer,
+             "payee": payee,
+-            "amount": amt,
++            "amount_units": amt_units,
+             "reason": reason,
+         },
+         cause_refs=cause_refs,
+@@ -1167,7 +1142,7 @@
+                            claimant_club: str, match_event_ref: str) -> dict[str, Any]:
+     """World-side admission, used identically for normal claims and re-submission.
+ 
+-    Rejection does not spend cash, consume a trigger, or mark a key as paid.
++    Rejection does not spend cash_units, consume a trigger, or mark a key as paid.
+     Match evidence must describe this day's eligible appearance for the active
+     contract; merely guessing an unused key does not establish entitlement.
+     """
+@@ -1191,7 +1166,7 @@
+         reason = "unknown_contract"
+     elif claimant_club != contract.origin_club_id:
+         reason = "wrong_claimant"
+-    elif (world.config.solidarity_mode != "enabled" or contract.dividend_per_start <= 0
++    elif (world.config.solidarity_mode != "enabled" or contract.dividend_per_start_units <= 0
+           or contract.to_club == contract.origin_club_id):
+         reason = "not_entitled"
+     elif (world.players[contract.player_id].active_transfer_id != transfer_id
+@@ -1212,14 +1187,14 @@
+             reason = "duplicate"
+         elif contract.dividend_triggers_used >= contract.max_dividend_triggers:
+             reason = "trigger_limit"
+-        elif world.club_accounts[contract.to_club].cash < contract.dividend_per_start:
++        elif world.club_accounts[contract.to_club].cash_units < contract.dividend_per_start_units:
+             reason = "insufficient_cash"
+ 
+     tx_ref = None
+     if reason == "accepted":
+         tx_ref = _record_ledger_tx(
+             world, day=world.day, payer=contract.to_club, payee=contract.origin_club_id,
+-            amount=contract.dividend_per_start, reason="development_appearance_dividend",
++            amount_units=contract.dividend_per_start_units, reason="development_appearance_dividend",
+             cause_refs=[request_ref])
+         world.ledger.claimed_dividend_keys.add(key)
+         contract.dividend_triggers_used += 1
+@@ -1243,14 +1218,14 @@
+     return len(keys) - len(set(keys))
+ 
+ 
+-def compute_ledger_discrepancy(world: LeagueWorldState) -> float:
+-    lhs = round6(
+-        world.ledger.initial_total_cash + world.ledger.cumulative_external_inflow
+-    )
+-    club_sum = sum(acc.cash for acc in world.club_accounts.values())
+-    wage_sum = sum(p.cumulative_wages_received for p in world.players.values())
+-    rhs = round6(club_sum + wage_sum + world.ledger.cumulative_external_outflow)
+-    return round6(abs(lhs - rhs))
++def compute_ledger_discrepancy(world: LeagueWorldState) -> int:
++    for record in (world.ledger, *world.club_accounts.values(), *world.players.values()):
++        _validate_money_fields(record)
++    lhs = world.ledger.initial_total_cash_units + world.ledger.cumulative_external_inflow_units
++    club_sum = sum(acc.cash_units for acc in world.club_accounts.values())
++    wage_sum = sum(p.cumulative_wages_received_units for p in world.players.values())
++    rhs = club_sum + wage_sum + world.ledger.cumulative_external_outflow_units
++    return abs(lhs - rhs)
+ 
+ 
+ # ============================================================================
+@@ -1262,12 +1237,13 @@
+     coach: CoachMind,
+     own_roster: list[str],
+     other_players: list[str],
+-    club_cash: float,
++    club_cash_units: int,
+     day: int,
+     slot: int,
+     already_targeted: set[str],
+     config: LeagueEconomyConfig,
+ ) -> dict[str, Any]:
++    validate_money_units(club_cash_units, "club_cash_units")
+     candidates: list[dict[str, Any]] = []
+     obs_refs: list[str] = []
+ 
+@@ -1331,8 +1307,8 @@
+                 }
+             )
+ 
+-    # Scout candidate on other clubs if club can afford scout_action_cost
+-    if club_cash >= config.scout_action_cost + config.buyer_min_cash_reserve:
++    # Scout candidate on other clubs if club can afford scout_action_cost_units
++    if club_cash_units >= config.scout_action_cost_units + config.buyer_min_cash_reserve_units:
+         for pid in other_players:
+             ev = coach.evaluations[pid]
+             obs_refs.append(ev.last_obs_ref)
+@@ -1604,13 +1580,15 @@
+ 
+ 
+ def resolve_transfer_offer_request(*, from_club: str, to_club: str, previous_clubs: list[str],
+-                                   roster_size: int, cash: float, required_cash: float) -> dict[str, Any]:
++                                   roster_size: int, cash_units: int, required_cash_units: int) -> dict[str, Any]:
+     """World market rule, used for ordinary offers AND attempted churn offers."""
++    validate_money_units(cash_units, "cash_units")
++    validate_money_units(required_cash_units, "required_cash_units")
+     if from_club not in CLUB_IDS or to_club not in CLUB_IDS:
+         raise ValueError("unknown club in transfer request")
+     circular = to_club in previous_clubs
+     room = roster_size < MAX_CLUB_ROSTER
+-    budget = cash >= required_cash
++    budget = cash_units >= required_cash_units
+     if to_club == from_club:
+         reason = "same_club"
+     elif circular:
+@@ -1635,9 +1613,11 @@
+     player_mind: PlayerMind,
+     coaches: dict[str, CoachMind],
+     club_rosters: dict[str, list[str]],
+-    club_cashes: dict[str, float],
++    club_cashes_units: dict[str, int],
+     config: LeagueEconomyConfig,
+ ) -> dict[str, Any]:
++    for value in club_cashes_units.values():
++        validate_money_units(value, "club_cashes_units")
+     # World-side coordinator. The following pure policies receive ONE Mind each.
+     # This combined private diagnostic is never passed to an agent.
+     request = decide_player_transfer_request(mind=player_mind, bench_streak=bench_streak, config=config)
+@@ -1645,10 +1625,10 @@
+     release = decide_transfer_release(coach=from_coach, roster=from_roster,
+                                       player_id=player_id, config=config)
+ 
+-    required_upfront = (
+-        round6(config.base_transfer_fee_solidarity + config.solidarity_transfer_grant)
++    required_upfront_units = (
++        (config.base_transfer_fee_solidarity_units + config.solidarity_transfer_grant_units)
+         if config.solidarity_mode == "enabled"
+-        else round6(config.base_transfer_fee_no_solidarity)
++        else (config.base_transfer_fee_no_solidarity_units)
+     )
+ 
+     club_offers: list[dict[str, Any]] = []
+@@ -1667,8 +1647,8 @@
+         if submitted:
+             resolution = resolve_transfer_offer_request(
+                 from_club=from_club, to_club=to_club, previous_clubs=previous_clubs,
+-                roster_size=len(club_rosters[to_club]), cash=club_cashes[to_club],
+-                required_cash=round6(required_upfront + config.buyer_min_cash_reserve))
++                roster_size=len(club_rosters[to_club]), cash_units=club_cashes_units[to_club],
++                required_cash_units=(required_upfront_units + config.buyer_min_cash_reserve_units))
+             if resolution["reason"] == "circular_transfer":
+                 circular_attempts_blocked += 1
+         obs_refs.extend(private["obs_refs"])
+@@ -1677,7 +1657,7 @@
+             "offer_score": private["offer_score"], "target_valuation": private["target_valuation"],
+             "second_starter_score": private["second_starter_score"],
+             "has_roster_room": len(club_rosters[to_club]) < MAX_CLUB_ROSTER,
+-            "has_budget": club_cashes[to_club] >= round6(required_upfront + config.buyer_min_cash_reserve),
++            "has_budget": club_cashes_units[to_club] >= (required_upfront_units + config.buyer_min_cash_reserve_units),
+             "is_circular": is_circular, "request_submitted": submitted,
+             "request_source": "adversarial_probe" if forced else "coach_policy",
+             "resolution": resolution, "obs_refs": private["obs_refs"],
+@@ -1705,7 +1685,7 @@
+         "release_consented": release["release_consented"],
+         "player_rank_in_from": release["player_rank_in_from"],
+         "release_surplus_score": release["release_surplus_score"],
+-        "required_upfront_fee": required_upfront,
++        "required_upfront_fee_units": required_upfront_units,
+         "club_offers": club_offers,
+         "player_choice": player_choice,
+         "chosen_to_club": chosen_to_club,
+@@ -1721,17 +1701,17 @@
+ 
+ def _step_training_day(world: LeagueWorldState, day: int) -> None:
+     cfg = world.config
+-    # 1. Club training facility operation check (uses club cash)
++    # 1. Club training facility operation check (uses club cash_units)
+     facility_active_by_club: dict[str, bool] = {}
+     for cid in CLUB_IDS:
+         acc = world.club_accounts[cid]
+-        if acc.cash >= round6(cfg.facility_reserve_floor + cfg.facility_daily_cost):
++        if acc.cash_units >= (cfg.facility_reserve_floor_units + cfg.facility_daily_cost_units):
+             tx_ev = _record_ledger_tx(
+                 world,
+                 day=day,
+                 payer=cid,
+                 payee="external_treasury_outflow",
+-                amount=cfg.facility_daily_cost,
++                amount_units=cfg.facility_daily_cost_units,
+                 reason="training_facility_operation",
+                 cause_refs=[world.events[-1]["id"]],
+             )
+@@ -1742,7 +1722,7 @@
+                 day=day,
+                 kind="club_facility_status",
+                 actor=cid,
+-                data={"club_id": cid, "facility_active": True, "cash_after": acc.cash},
++                data={"club_id": cid, "facility_active": True, "cash_after_units": acc.cash_units},
+                 cause_refs=[tx_ev],
+             )
+         else:
+@@ -1752,7 +1732,7 @@
+                 day=day,
+                 kind="club_facility_status",
+                 actor=cid,
+-                data={"club_id": cid, "facility_active": False, "cash_after": acc.cash},
++                data={"club_id": cid, "facility_active": False, "cash_after_units": acc.cash_units},
+                 cause_refs=[world.events[-1]["id"]],
+             )
+ 
+@@ -1769,12 +1749,12 @@
+         ]
+         already_targeted: set[str] = set()
+         for slot in range(1, cfg.coach_daily_slots + 1):
+-            club_cash = world.club_accounts[coach.club_id].cash
++            club_cash_units = world.club_accounts[coach.club_id].cash_units
+             dec = decide_coach_training(
+                 coach=coach,
+                 own_roster=own_roster,
+                 other_players=other_players,
+-                club_cash=club_cash,
++                club_cash_units=club_cash_units,
+                 day=day,
+                 slot=slot,
+                 already_targeted=already_targeted,
+@@ -1810,7 +1790,7 @@
+                     day=day,
+                     payer=coach.club_id,
+                     payee="external_treasury_outflow",
+-                    amount=cfg.scout_action_cost,
++                    amount_units=cfg.scout_action_cost_units,
+                     reason="scout_expense",
+                     cause_refs=[ev_id],
+                 )
+@@ -2223,21 +2203,21 @@
+             h_acc.wins += 1
+             h_acc.points += 3
+             a_acc.losses += 1
+-            h_inflow = cfg.matchday_base_inflow + cfg.matchday_win_bonus
+-            a_inflow = cfg.matchday_base_inflow
++            h_inflow_units = cfg.matchday_base_inflow_units + cfg.matchday_win_bonus_units
++            a_inflow_units = cfg.matchday_base_inflow_units
+         elif ag > hg:
+             a_acc.wins += 1
+             a_acc.points += 3
+             h_acc.losses += 1
+-            h_inflow = cfg.matchday_base_inflow
+-            a_inflow = cfg.matchday_base_inflow + cfg.matchday_win_bonus
++            h_inflow_units = cfg.matchday_base_inflow_units
++            a_inflow_units = cfg.matchday_base_inflow_units + cfg.matchday_win_bonus_units
+         else:
+             h_acc.draws += 1
+             a_acc.draws += 1
+             h_acc.points += 1
+             a_acc.points += 1
+-            h_inflow = cfg.matchday_base_inflow + cfg.matchday_draw_bonus
+-            a_inflow = cfg.matchday_base_inflow + cfg.matchday_draw_bonus
++            h_inflow_units = cfg.matchday_base_inflow_units + cfg.matchday_draw_bonus_units
++            a_inflow_units = cfg.matchday_base_inflow_units + cfg.matchday_draw_bonus_units
+ 
+         if cfg.inflow_mode == "standard":
+             _record_ledger_tx(
+@@ -2245,7 +2225,7 @@
+                 day=day,
+                 payer="external_league_pool",
+                 payee=home_club,
+-                amount=h_inflow,
++                amount_units=h_inflow_units,
+                 reason="matchday_revenue",
+                 cause_refs=[m_ev],
+             )
+@@ -2254,7 +2234,7 @@
+                 day=day,
+                 payer="external_league_pool",
+                 payee=away_club,
+-                amount=a_inflow,
++                amount_units=a_inflow_units,
+                 reason="matchday_revenue",
+                 cause_refs=[m_ev],
+             )
+@@ -2367,18 +2347,18 @@
+                           "obs_fatigue": pm.perceived_fatigue},
+                     cause_refs=[m_ev, pm.last_obs_ref])
+ 
+-    # 3. Pay matchday wages to all players from club cash
++    # 3. Pay matchday wages to all players from club cash_units
+     for cid in CLUB_IDS:
+         for pid in world.club_rosters[cid]:
+             acc = world.club_accounts[cid]
+-            wage = min(acc.cash, cfg.player_matchday_wage)
+-            if wage > 0.0:
++            wage_units = min(acc.cash_units, cfg.player_matchday_wage_units)
++            if wage_units > 0:
+                 _record_ledger_tx(
+                     world,
+                     day=day,
+                     payer=cid,
+                     payee=pid,
+-                    amount=wage,
++                    amount_units=wage_units,
+                     reason="player_wage",
+                     cause_refs=[lineup_ev_by_club[cid]],
+                 )
+@@ -2406,7 +2386,7 @@
+         pm = world.player_minds[pid]
+         from_club = p.club_id
+         from_roster = list(world.club_rosters[from_club])
+-        club_cashes = {cid: world.club_accounts[cid].cash for cid in CLUB_IDS}
++        club_cashes_units = {cid: world.club_accounts[cid].cash_units for cid in CLUB_IDS}
+ 
+         t_dec = decide_transfer_bidding(
+             player_id=pid,
+@@ -2417,7 +2397,7 @@
+             player_mind=pm,
+             coaches=world.coaches,
+             club_rosters=world.club_rosters,
+-            club_cashes=club_cashes,
++            club_cashes_units=club_cashes_units,
+             config=cfg,
+         )
+         offer_refs = []
+@@ -2455,15 +2435,15 @@
+ 
+         if t_dec["transfer_approved"] and t_dec["chosen_to_club"] is not None:
+             to_club = str(t_dec["chosen_to_club"])
+-            base_fee = (
+-                cfg.base_transfer_fee_solidarity
++            base_fee_units = (
++                cfg.base_transfer_fee_solidarity_units
+                 if cfg.solidarity_mode == "enabled"
+-                else cfg.base_transfer_fee_no_solidarity
++                else cfg.base_transfer_fee_no_solidarity_units
+             )
+-            sol_grant = (
+-                cfg.solidarity_transfer_grant
++            sol_grant_units = (
++                cfg.solidarity_transfer_grant_units
+                 if cfg.solidarity_mode == "enabled"
+-                else 0.0
++                else 0
+             )
+ 
+             tx_refs = [t_ev]
+@@ -2472,18 +2452,18 @@
+                 day=day,
+                 payer=to_club,
+                 payee=from_club,
+-                amount=base_fee,
++                amount_units=base_fee_units,
+                 reason="transfer_base_fee",
+                 cause_refs=[t_ev],
+             )
+             tx_refs.append(tx1)
+-            if sol_grant > 0.0:
++            if sol_grant_units > 0:
+                 tx2 = _record_ledger_tx(
+                     world,
+                     day=day,
+                     payer=to_club,
+                     payee=p.origin_club_id,
+-                    amount=sol_grant,
++                    amount_units=sol_grant_units,
+                     reason="transfer_solidarity_grant",
+                     cause_refs=[t_ev],
+                 )
+@@ -2509,12 +2489,12 @@
+                 origin_club_id=p.origin_club_id,
+                 from_club=from_club,
+                 to_club=to_club,
+-                base_fee=base_fee,
+-                solidarity_grant=sol_grant,
+-                dividend_per_start=(
+-                    cfg.development_dividend_per_start
++                base_fee_units=base_fee_units,
++                solidarity_grant_units=sol_grant_units,
++                dividend_per_start_units=(
++                    cfg.development_dividend_per_start_units
+                     if cfg.solidarity_mode == "enabled"
+-                    else 0.0
++                    else 0
+                 ),
+                 max_dividend_triggers=cfg.max_dividend_triggers,
+                 dividend_triggers_used=0,
+@@ -2531,8 +2511,8 @@
+                     "origin_club_id": p.origin_club_id,
+                     "from_club": from_club,
+                     "to_club": to_club,
+-                    "base_fee": round6(base_fee),
+-                    "solidarity_grant": round6(sol_grant),
++                    "base_fee_units": (base_fee_units),
++                    "solidarity_grant_units": (sol_grant_units),
+                 },
+                 cause_refs=tx_refs,
+             )
+@@ -2590,12 +2570,19 @@
+     if sorted(seen_pids) != sorted(PLAYER_IDS):
+         raise ValueError("club rosters do not form an exact partition of PLAYER_IDS")
+ 
+-    # Non-negative cash & strict ledger conservation invariant
++    # All monetary state is exact and nonnegative, including unused contracts.
++    _validate_money_fields(world.config)
++    for record in (*world.club_accounts.values(), *world.players.values(),
++                   *world.initial_players.values(), world.ledger,
++                   *world.ledger.transfer_contracts.values()):
++        _validate_money_fields(record)
++
++    # Non-negative cash_units & strict ledger conservation invariant
+     for cid, acc in world.club_accounts.items():
+-        if acc.cash < -1e-9:
+-            raise ValueError(f"negative club cash for {cid}: {acc.cash}")
++        if acc.cash_units < 0:
++            raise ValueError(f"negative club cash_units for {cid}: {acc.cash_units}")
+     disc = compute_ledger_discrepancy(world)
+-    if disc > 1e-5:
++    if disc != 0:
+         raise ValueError(f"ledger conservation violated: discrepancy={disc}")
+     if actual_duplicate_payments(world) > 0:
+         raise ValueError("duplicate dividend claim detected in ledger")
+@@ -2605,6 +2592,7 @@
+     # 1-pass event causal chain & transfer invariant check
+     seen_event_ids: set[str] = {"init:0"}
+     for idx, ev in enumerate(world.events, start=1):
++        _validate_event_money(ev.get("data"))
+         ev_id = str(ev.get("id", ""))
+         if ev_id != f"e{idx}":
+             raise ValueError(f"non-monotonic event id at {idx}: {ev_id}")
+@@ -2660,11 +2648,9 @@
+     buyer_gd = (ac_b.goals_for - ac_b.goals_against) + (ac_d.goals_for - ac_d.goals_against)
+     academy_facility_days = ac_a.facility_active_days + ac_c.facility_active_days
+     buyer_facility_days = ac_b.facility_active_days + ac_d.facility_active_days
+-    solidarity_dividends_paid = round6(
+-        ac_a.cumulative_solidarity_received + ac_c.cumulative_solidarity_received
+-    )
+-    academy_cash = round6(ac_a.cash + ac_c.cash)
+-    buyer_cash = round6(ac_b.cash + ac_d.cash)
++    solidarity_dividends_paid_units = ac_a.cumulative_solidarity_received_units + ac_c.cumulative_solidarity_received_units
++    academy_cash_units = ac_a.cash_units + ac_c.cash_units
++    buyer_cash_units = ac_b.cash_units + ac_d.cash_units
+ 
+     standings = sorted(
+         CLUB_IDS,
+@@ -2688,7 +2674,7 @@
+         "talents_skill_gain": round6(sum(talent_gains) / len(talent_gains)),
+         "academy_retained_skill_gain": round6(sum(academy_retained_gains) / len(academy_retained_gains)),
+         "mean_skill_gain": round6(sum(all_gains) / len(all_gains)),
+-        "solidarity_dividends_paid": solidarity_dividends_paid,
++        "solidarity_dividends_paid_units": solidarity_dividends_paid_units,
+         "academy_facility_days": academy_facility_days,
+         "buyer_facility_days": buyer_facility_days,
+         "academy_clubs_points": academy_points,
+@@ -2697,10 +2683,10 @@
+         "academy_clubs_gd": academy_gd,
+         "buyer_clubs_gd": buyer_gd,
+         "buyer_minus_academy_gd": buyer_gd - academy_gd,
+-        "academy_clubs_cash": academy_cash,
+-        "buyer_clubs_cash": buyer_cash,
+-        "buyer_minus_academy_cash": round6(buyer_cash - academy_cash),
+-        "ledger_discrepancy": compute_ledger_discrepancy(world),
++        "academy_clubs_cash_units": academy_cash_units,
++        "buyer_clubs_cash_units": buyer_cash_units,
++        "buyer_minus_academy_cash_units": (buyer_cash_units - academy_cash_units),
++        "ledger_discrepancy_units": compute_ledger_discrepancy(world),
+         "insolvency_events": world.ledger.insolvency_events,
+         "blocked_circular_transfers": world.ledger.blocked_circular_transfers,
+         "blocked_duplicate_claims": world.ledger.blocked_duplicate_claims,
+@@ -2763,7 +2749,7 @@
+     if type(seed) is not int or type(day) is not int or day < 0:
+         raise ValueError("snapshot seed/day must be integers; day must be nonnegative")
+     if type(config_data) is not dict or set(config_data) != {f.name for f in fields(LeagueEconomyConfig)}:
+-        raise ValueError("config fields do not match save14 schema")
++        raise ValueError("config fields do not match save15 schema")
+     config = LeagueEconomyConfig(**config_data)
+     records = raw.get("interventions")
+     if type(records) is not list or type(raw.get("research_branch")) is not bool:

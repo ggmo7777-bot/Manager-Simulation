@@ -1,0 +1,7 @@
+fixed closed_no_solidarity 30 histories and cohorts verified
+fixed open_no_solidarity 30 histories and cohorts verified
+fixed open_solidarity 30 histories and cohorts verified
+sampled closed_no_solidarity 30 histories and cohorts verified
+sampled open_no_solidarity 30 histories and cohorts verified
+sampled open_solidarity 30 histories and cohorts verified
+{"runs": 180, "full_state_equal_runs": 180, "independently_audited_transactions": 107376, "elapsed_seconds": 272.32000404107384}

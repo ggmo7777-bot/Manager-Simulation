@@ -1,0 +1,15 @@
+{
+  "command": "python3 -B -m unittest discover -s tests -v",
+  "execution": "Root independent review after Sol completed implementation/experiments then hit usage limit",
+  "status": "passed",
+  "test_count": 71,
+  "test_duration_seconds": 6.204,
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  },
+  "wall_seconds": 6.38561320793815
+}

@@ -1,0 +1,3 @@
+fixed seven CLI/API/frozen comparisons verified
+sampled seven CLI/API/frozen comparisons verified
+{"cli_api_equal": 14, "frozen_t016_equal": 14, "independently_audited_transactions": 2993, "elapsed_seconds": 24.126758540980518}

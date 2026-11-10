@@ -1,0 +1,1451 @@
+{
+  "runs": [
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "b0d9dd3a7264a2cbaf389a02684f020a18fd3c4bed335fb76e33b0fb558df23f",
+      "seed": 0
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "50b1cb95db4e0e87044af09edac91b7af4283b374b18130cca22f4e105591c55",
+      "seed": 0
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "6c569865039420c16d57b3426880b54e4a59aad27345b7d871e328dc9831249d",
+      "seed": 0
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "a86fe03fa9747284264317ffe76adb821af23a99d14e3b5e886fa03c62f076d3",
+      "seed": 0
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "029451e9d802e3847421ffe3076a7e536440f9ed6b06292a7cce454f7afd46b6",
+      "seed": 1
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "6050dcad4df314645fdfc0526a95e39879cb4f5aa2fda80a582def495599c77f",
+      "seed": 1
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "e6c05dfe1640caecb8b1e50106af86c7c5bffda06baf169193db7288314297c9",
+      "seed": 1
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "1533679903c4920f6000269c35b7234147fb2a1e83b7ea5ca93725d391f1a85d",
+      "seed": 1
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "266e2fb9ac8c8b70601e6c3460941e60f29f1733779a8db5d0794ad6dee5b982",
+      "seed": 2
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "79c8cd292a37e0f2e5a65383d9c937efcfbcb9cb5e5d0f2ea52fadeb5486a259",
+      "seed": 2
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "800ddefd1d908996e3b3ebf41a2733ba2e82eb0fb372f03b8eff4eeb960bb9c8",
+      "seed": 2
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "5ab0ddc9cc22cf75e153b35a79c5907c945bd881c2d17648abcee839fa8f689e",
+      "seed": 2
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "4f7d207b6d436ec0223dff726d2b03545234427db655707073d948f5cf2cb1a3",
+      "seed": 3
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "83ec8b6f7a2ff242b34211bdf73ed32c9867aec0962648a4745e4f81dfb73236",
+      "seed": 3
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "576c51ec68120ac93c10a4343dcf99f4aecbcd974dbab86a4a4f037e5e943d36",
+      "seed": 3
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "b961e6fdac2c61dba8b032bd934c0a5d66fa103a34aa3da289ab905fa0f61ada",
+      "seed": 3
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "cc7244b956007f41fae94e566d8ce9a3f7a06080970bc479d816f732d62229c7",
+      "seed": 4
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "48f7ac0c9db245854cfd38732146ac0dd863b83dd2f8160e6220b87906b5b06d",
+      "seed": 4
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "c76984889d19b8495bbe8f431adcf72fb883e7530053d22f8c1c613e651db343",
+      "seed": 4
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "1d3294be6daf42fe741b2a978e7f0f5b8549056aa48cc48f86e15e645927e55b",
+      "seed": 4
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ef5104a371cf890b2bdad2f5d2090cb9e721eb36d69fa8d38ab80ab07b1e762d",
+      "seed": 5
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "cd42c744a0f5783b4443d57967f9a44c7105835755114743dac4efee6177918c",
+      "seed": 5
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "ba8a677b5308b7846f2c2666d0cb3b5b3ed47ca0be71be8593584079923cb178",
+      "seed": 5
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "1d97daf8edb4434b2d7d40dfcfb60dee8b22c27b48b905ac6c18d6ad35522121",
+      "seed": 5
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "85fc0979f31042daa125790c66b1490fe703c5dabf91579d768c37d0a7450939",
+      "seed": 6
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "2a20084d13c021ec4d19d95c526b2bc63f6dc76665cdfbdff0377c9a963cd23d",
+      "seed": 6
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "f009c9acb69053839101bc7a3b2097ca5a7395bb85950e8cd840c72fe5a9697a",
+      "seed": 6
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "dd8009535ee28297dd8b154d4058a7c1a73332b1dde7f5c11abdc9c107310b40",
+      "seed": 6
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "a9dcc92ba75cfe24378132bdf5119c7895cc5b2ef5979f916593c50267790345",
+      "seed": 7
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "473efe49390ee470df65ed3c51180c39274cd9d5688db666a71bada444d6b812",
+      "seed": 7
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "68e7e6234a4282df7544ec7b221a47d37fe9ef2cd2ae9a5cb4eb573ffc60fd19",
+      "seed": 7
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ab7efdf1aec9a1090b9443a6dd78b911387c90fdbf3b887281ddd240dae32d6b",
+      "seed": 7
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "9d2ce8547e3aa33b905621972aac890db57f899d3417632d212e0c9516241bcd",
+      "seed": 8
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "5111ecea2a67cee4f44fdc4f584d55abaefc6d398a17760992242e2ea923b7b1",
+      "seed": 8
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "e6361a20000103685e8a010ec9a466831d37791b41f9d7660006b8576f19b577",
+      "seed": 8
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "4b79a73eef3e4fbe91244df0a76234238adfa99680f4acfc7480f17232e1eef1",
+      "seed": 8
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "40c2e08e2b7e24d53d5b66505998f57c9a914cf7ce2d95d64bcb9e2ff35f5409",
+      "seed": 9
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "52d04b5f8740b758552fc7745aada5ba328871d427636569de95e0a0eaf545a6",
+      "seed": 9
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "603b7e0b4483add7223f34f7426d18e10d41d642dca5d56919b6d6e238b3571c",
+      "seed": 9
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "eb04939408211768e3fa0f65c79e0f8bcb3a7c3c211e7f7380ac620fb08c6d0b",
+      "seed": 9
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "3cb7726193525ca1ae98b0456e1b09c1f40260a1b08edd9e209551cffb6a8c7e",
+      "seed": 10
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "e60da2fe12c40d8d4ea02e494a790e75f146888ded242a6a1515cb20b62e4406",
+      "seed": 10
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "a211772b75ef1ec579f415e42bdaad41cfb6f46b54b05bf8af51dc433ef10fd7",
+      "seed": 10
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "43eca291473aa2113256410031660f72aa2ddff09fd9093d0a87f5f07e4b881c",
+      "seed": 10
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "52c6a06780d7479da3d16cba26d91cb875acc2e88cf8f0d3f1809abe6f8dfcfa",
+      "seed": 11
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "47d1507ec7cac66cbb5467cf5f19de79c1ef0eb7518b97962b4e691f56d27f28",
+      "seed": 11
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "93d78d857273d1bcbcdb5d07e1b7381a131241fb813dec2d426c25c42dec60f1",
+      "seed": 11
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "932db10b71b11f2a9af7b8394e15bcfa479806234138a4202bd01f1affad6908",
+      "seed": 11
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "58ca20ce204e833e4edb24418317b40f8685d5cfe8ea743ea4d40878228bf197",
+      "seed": 12
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "876e5af144f86239b1696e8d366e45a208849b2fe76d0cdc6d62c6388acfb981",
+      "seed": 12
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "1eb8ff7a666e4889181207d562a11533a31c15753c975c03a77d4d6a8e91c74a",
+      "seed": 12
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "b1c666d35fda732f2c136e5ded67bd3bd62496b8194a70e5d7a7b8797345e15c",
+      "seed": 12
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "02a29f60a4b7f750a45207d50c6598f9fb37cc33062d2f420c3c154684a27dca",
+      "seed": 13
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "5215bbf6b5a6feb2c238eea799a34d5f1994a433894c2397d8322f2a771e0924",
+      "seed": 13
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "7b71ba9142f157ec020540028745f45bacdc7f0f331314c7b4c0e8f50c363e1e",
+      "seed": 13
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "bf7fbffb507e68a929919e8e5eb7d3aeed0cf5d0e35011b1b065f74ce53ea9be",
+      "seed": 13
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "692202133e6737b0ad9cdcae01b1bb0473f397671fd0dfb471401d3d821d24e7",
+      "seed": 14
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "da3702d48fd9a0be87ad08e7a64f90e45b9b55304e1ffc52de1817d63befcf6c",
+      "seed": 14
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "fc071b47126bdcc3256fd934db4ed35bc4cf639411fa9f90f52f1f5f33781ccc",
+      "seed": 14
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ba9387af2944d5d11324da59925ae961ce6204089df8550b431f3f6936b0942f",
+      "seed": 14
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "f905620aa2f9b338d9293912644396c68df302155fb7a0928fe4451d73b89b8b",
+      "seed": 15
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "9c01fc45a86eb6da9615556b23118b2bcad39eb34e0d314ab8329f8935bde5ce",
+      "seed": 15
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "7acdff2d61cfaba3a2824fe16a8421356e6c99539257bda08dfc3628a918bd10",
+      "seed": 15
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "8eb0d6c9c3d278e0054c6112618c5be23df36724ab4148bf0b39ba0df6302393",
+      "seed": 15
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "699260b09f81e4af6dab1fe67470c2cea50e817ebfa91d27ff590eecedfd484b",
+      "seed": 16
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "ba0554a6dbf97113874c4e03d640a39a9ef5bf3fbc1a36b4637ed60bad722f80",
+      "seed": 16
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "fe79d579499a9004b93e4763045ea6ab746b008b103678fc71205a62d73be773",
+      "seed": 16
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "2fc559dd880ba4a6282eaa41f4dd844a96776a8c9ecf3f247a4e8accb2041b74",
+      "seed": 16
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ff15c1dcf6921a0087a14874488b92e15c802593fa651f82e1406a0eaf7b3a86",
+      "seed": 17
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "1e8b2569553d980b17da5be481dc211a2f8b7c3f778088b1eeed048d54f16c59",
+      "seed": 17
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "9bc2aa1fb80831dab3aa718a193991a0f622ecd8275400a60d97d541318f31aa",
+      "seed": 17
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "6612835e4ddca87e0dac7238f547616122d9d3a2f1fb1bb5990055823377004e",
+      "seed": 17
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "80d0de3723d94f3b62e6cb4ab1c9214ee519a31199a5061cd51f1104c61a081f",
+      "seed": 18
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "fb117521d52e3f314a6b24acf2f307060532ca6b784dcec8ef4a44c08f8683d8",
+      "seed": 18
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "29e7513caa316301acc4672754b9bc70ffb0e93baeb063938221aa5269f75cd5",
+      "seed": 18
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "45889fddbc48262b7a24613badda7f7f77031ac2ed43ec4182975ec8e9a92606",
+      "seed": 18
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "923e5c119bdc4b77b2a71899b5b97364d450c24c0a60baaa94157aca10c8e4fd",
+      "seed": 19
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "a9d45fd16da7acaec54ecfdb170cea742becc11ad9d9fc59b396ad3f7116b4d6",
+      "seed": 19
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "3e128b6c9cd48da46f8fe01d6861c121287f3ee3e2f8508a543c1552b40d17db",
+      "seed": 19
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "b4785ea92f75136056339e8df057a15e9401e6233e2ddbfa7184e823a11db303",
+      "seed": 19
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "e37406ed0c30a1728d2ef6fc5822cdf736827cc9e7ee8293bdf36fcb8a036b4f",
+      "seed": 20
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "8d4cdc2f99ff156c0987efa178847bf7c4190c95c2309e0fa2d8ead43c35d062",
+      "seed": 20
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "8f44f8d4f4cb56de3f5a5b3e1b3c2667ee9b7a1a436fed872da33f05cf74eb1b",
+      "seed": 20
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "4f7bf1898d3de38a6f42c8963fbaa800d7602a3374d17a16369a20675fcc8a35",
+      "seed": 20
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "58645286a627d7d7abb2830c40b872489828e811aa233aa98c79293ba7f7f3af",
+      "seed": 21
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "78811df2c2c8a3813eee230efd241023c4c949f9ce986df3aadb965e354e8ef0",
+      "seed": 21
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "fad7e9ba07506d28f59998a5a023e16f9e0b22e0aadf2598a877d6c0076378f3",
+      "seed": 21
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "8aee83288b15d39387c94d0c410b3a0cf5d2fda495543b0d9facddf0d6434614",
+      "seed": 21
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "dab9a6f359da5df3cf57d465f030b25f94c22d60792f55de4ddb20a956d30149",
+      "seed": 22
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "7a9bf32a4e749816c893287ebb7a6ea9a90cab427d38b45194747c8a669d9662",
+      "seed": 22
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "e25c7d6ce7c55648ca4b72f35d6983744d6ed80f158e3aaab414d904f7185de6",
+      "seed": 22
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "b1176db61ea83e31f6becb4bfc75aa4d915cd856a982d4b05be2eeb3efaf59f1",
+      "seed": 22
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "6c18565ce68bad51322c1f3bcc3a294c80780a23cc0ee9ec1f07e7de9b883fb8",
+      "seed": 23
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "5ea126a5062b071305d8b626ac5795dbc1ca1a60e5264999ee05a9af41fe17bd",
+      "seed": 23
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "bac2f1412b56aeee40bd887ee497053f74af8154721f9afff6a56417f3ec4149",
+      "seed": 23
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "f7d93dd2f555d9043c0584bcce784a50bd44d5779aa2d6864391078e04737280",
+      "seed": 23
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "c3697f626a5c57c0f3954a076857938a60a92f80837824334e354bfadcf7fd99",
+      "seed": 24
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "36b321e62929ddb14fce7dc4e1b5cf45780a880044d551abd90ff3a36a7979ce",
+      "seed": 24
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "10a31af76321ba5cbc62e2ac334c8b2cf461d8c99d473b62549c6817db6a1a2a",
+      "seed": 24
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "04c14eb5a1628dfa98812be48d38dc6f10332919e73414b4bbb3420ffb5d2ee9",
+      "seed": 24
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "1437f3c2360768acaf1bcc4a93c1cd413924b594585a306c1cc35c2e56a9c4f3",
+      "seed": 25
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "4a9764e17518df4b7ee1822ab001329020810a472ba004ff8785c8a253d54565",
+      "seed": 25
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "fa183aba014f183e95c52ea3d9a189c68585e602416c745bae0a49d588a6543e",
+      "seed": 25
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ccf322a8dfc02f4f4e47ee6ed3812d3c8c40478248fc97d4ef5f9c3c1e0665a0",
+      "seed": 25
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "95a4d41ce96b33e21961f24d10818155e528ab7f2ad7cc1273d77b96da16ecc1",
+      "seed": 26
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "f6d5e4073a78613610db8f0cb324eeabac82fde2b22b1d9fa3afe06816b8ccca",
+      "seed": 26
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "3bb892a3aad83ae6bb97c028372c0e10a1f9683d68d5368d2aeb9073816be754",
+      "seed": 26
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "3bd70f73705e6cf02fcfc9781e5f163e084df74417a3d466e0200d4d8a2df8dd",
+      "seed": 26
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "eb6282077a37fd97946fd4391136f8c5449736173d15c2b9844355b8bfd48a00",
+      "seed": 27
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "bdc5a564c1ec3972d077eb97092edc969a7ab1f3d8b05236c544888b7a9db847",
+      "seed": 27
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "46a84a072daeff14ab61a82fd8f4b22e2a216e3d86bdd31b4d4cde9bd81f8f6c",
+      "seed": 27
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "1198292c479c1b2e3c713453a7c8a26b8ae8e33572e415ebaa966c8f2440949b",
+      "seed": 27
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "8a870abc5505272a63681a4f1f8bec9d5f875b0ffaefacebd91c95234bd9c83e",
+      "seed": 28
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "d45b9f3e317644b1c6692f7df59e30cd443507323533745c1c4c1673d2c0e1d6",
+      "seed": 28
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "21fa34ffff60cfb3d4d44e8a16336a8cc8f119d9afab3d4e65f3b97002e9cbf1",
+      "seed": 28
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ed297b57c3055338174f9dc1f84f368e162d70edd4e9e1662b45b87ee9b68d82",
+      "seed": 28
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "38123b65eb00891c16bc9241755b0ae2bebf046524be848a3f7c744c9b75ba7d",
+      "seed": 29
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "9a3f31e7f588fb0d6149eb497413e3145a3e3034e874fe363c8823f15d618599",
+      "seed": 29
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "f26225957683baeea89625309159bf6146cb4ce557fe8fd5fcdf99ea2b1a3107",
+      "seed": 29
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "18f54a6c6abf0cb3c2ca17819113204a64b24d6bb36368dbed4e17ff68fb6784",
+      "seed": 29
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "f33673ac3afcf7c28f84eaf8845fb8537772200619bc157602c609890c370ddf",
+      "seed": 100
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "226e2d8211878e50dfd0a870607e5138b5ac897797981672ef25801c48d8ee4e",
+      "seed": 100
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "4c878b58ba4ee8c38f8619b353e7ce6667370dcbacfb7265e36378fc74dd9233",
+      "seed": 100
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "02900890da84e29a35d05296e022466d59539edca92a17ed7b74cc2e2fbbde70",
+      "seed": 100
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "a011330fbf9a542aa5273194f58c4eeab16b67245c82da722a35e21741f2cba6",
+      "seed": 101
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "b1f83d300b87e31480b7434ab1731a61370236a699602c5a0b8689289e87fa03",
+      "seed": 101
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "72289f3668942b754ad08915afb21c91a495dbb05194c502d776e6481419c1ca",
+      "seed": 101
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "72ace57fa4342ef04e1f6189b2ff9f494b6df806dca09a860cd31883d699ea53",
+      "seed": 101
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "c1509f99269f44ce9303d080887517ccb1a51e925a4216bc6fa6395eba73153d",
+      "seed": 102
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "46177451848da2bd4465ff14c14d41c910c5cb26021a263d0d8448b6db396b65",
+      "seed": 102
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "8f3a6663de4828dbe3144b6b43f3f5fd60fb14f14d4cde4ae8d2af268035c0e2",
+      "seed": 102
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ca5a378b3c9412b15ce9311cd430c1a37c32b6b1655f3b318d5b6edd161f1983",
+      "seed": 102
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "36d8a42c48c0ccbb1e389b9e7c46935c5be6efd44ce01a0c09cb82ab3ccd2e19",
+      "seed": 103
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "3775b3b24968ed58fba58df0a61c0daa660e721ad39c3e6334384bca05191af8",
+      "seed": 103
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "152eaa77da0fef8bb27d87b5ef91c72539e9317f036680478d74b4b8233d9324",
+      "seed": 103
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "84521bc0b3c7b5deadf29b660bc363b3c34f66f17348952bfa4f4c8a49be59c3",
+      "seed": 103
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ffb9e74d8bb6e43f02ebc25566d71987503db655f75f653c8aaf1dc6921d925a",
+      "seed": 104
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "05d10efcc5cfa99bf68570135fb5738639c9fac4d832e93d8d6d76db5870d037",
+      "seed": 104
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "34effc4f5aa3bcf93910dcbcb5f3baff4f3b2ef652523ffc7523142f1202d897",
+      "seed": 104
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "1b6fd0ae57cffa29080d5af493f513f503a1384e6e14fd76e44dbd1f4f9704d9",
+      "seed": 104
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "8e6525dbb8243c9d14fc1a112b01fbf28dc7c461e15f6c1a447ae71b6ce60690",
+      "seed": 105
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "1de13376b50eebed21866f92a97b2b17d35135053c5cae138f783c2a09c8d089",
+      "seed": 105
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "ae3fd72a85385b77db40544d2467fe253389551ab819e9822249b049505d3dae",
+      "seed": 105
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "d6a1bb480459f9ac4355d3199a1c3ca6517bbef0888514b3fa7ccea0cce07510",
+      "seed": 105
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ccf750f68a23eccfee55b7fb482597466f877ff5ffff373ea7c897b920ad45d7",
+      "seed": 106
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "93cc06c443f18226e8054d8a5b181674bb91e4c29e996ba56b3b51bc990abca7",
+      "seed": 106
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "badfa68d77fd1b9e488b98b9c4dc25190f64717a0d47a6b967b74f229eae4b3f",
+      "seed": 106
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "818ceb945a0017c120b6c12aa3ae9a6e7c6f7f55d390fd76c357831a927a45f1",
+      "seed": 106
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "2847e9c8398818cdfa2d420017d0097bdd690fd1e24610eb00ec3ea8bf3ca0a3",
+      "seed": 107
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "09a0fa7bce6318df5cf2b2dbbae63d3abe8acd7375f2cbeac79eb58b5e44d646",
+      "seed": 107
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "b50dc14430d7c32d1f7e3422c0f880f73ef9cd1b4ed2ad8a6dbf9ac1ecc8063c",
+      "seed": 107
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "95203758b0c7253ee7b4c8bd46fb6fbe2ded597987a1c51c93c3d8240ac18e69",
+      "seed": 107
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "7b2476466898226651b98e8c2497a6125fcc0a8a2397831c1bae1a3c0dc066df",
+      "seed": 108
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "f0e8981ed5788a7202b5bdbb9a5bfbb617c0f4d887e29cdce2aa2e9a1558e86a",
+      "seed": 108
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "b502d2d957d0c5c37356ba6c088caa10aeae3e01278985ed3e882cb405f5e609",
+      "seed": 108
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "e1901e5f22079b6c4383766fc5c1eda4f350a229d960b99e69946ea2eab1f710",
+      "seed": 108
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "fecf051d811b76abc3fae61dc53b3fb255fc0eb2ec7fee00bbbecc219e95f118",
+      "seed": 109
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "eea70a0974f5ee687913158a8140aa09dbeea101c352d40e9510441003ab1333",
+      "seed": 109
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "38e942ccbbaf40f6c682f9adb249b25338c31d30626bc6bf54f648f596f7ee95",
+      "seed": 109
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "b346e340b259c1aff24b422baad1b6395cb26060c4d518271b84434826e681ed",
+      "seed": 109
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "b7f4dfa4ec06e4235e67fb0f653bd6089c8055c0584ebd373ce2774dcfca84ed",
+      "seed": 110
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "d50bc07f42de47b7e1176f080ad17696da3a1569259ce512190d77ae11c99628",
+      "seed": 110
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "0b594a14277d7b16d00a2c75aa0cdb9627bbed3e43a36bb71ea1e322db6e0248",
+      "seed": 110
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "670d8cb9024d79ff54fbdffb28ed81aedf2bafac67c9a697399c1758f5f98063",
+      "seed": 110
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "561ef4a5682ecd37f45956187839847ef2883d43c0fa2b2bb69984c73e59084c",
+      "seed": 111
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "6bdf9b81c2d337397e7690616635f0b81e67fca89e97fba48f543910b02417cc",
+      "seed": 111
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "864570b85fc2be841713f9761ab7a74c0bf6316e62183def90ec68afb1bba126",
+      "seed": 111
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "a7235d677004c9843272b7347f7558387c41660fd0dfdfb5593291850195f8da",
+      "seed": 111
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "6ee163251c76c2e2b48fa51701d6d32d536ef37594291e3be9468aa8818fc6ca",
+      "seed": 112
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "b1b9f71207d5b694e482ead57f6d1eed23be13c859193c3b3000d88bf4656903",
+      "seed": 112
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "1a6b0ac2e21affb4d9181344b06cf7fe38aa6a870d40824949efeb9264c45cb3",
+      "seed": 112
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "21debf59acedc79212f25b117fd749c42722a6421d1af19b2a7f22415415b27d",
+      "seed": 112
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "71e7f110bc1318f9d851a707b6c652c6f1853a6808cf0093d90a29e15780256d",
+      "seed": 113
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "462a0bc366fbcfa9152036711f4360c0923ce6211ec2e7a444ac41fe71e4ee96",
+      "seed": 113
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "45ce55671d57be801c199a362650be554bddfc8b9ed0d5afec5ff5200845f5f1",
+      "seed": 113
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "526132c1fcdbb2cce3ff8ac23b9032dff944edd4c70c257d1f5a4cb8341628a6",
+      "seed": 113
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "1c9246509c80b78abf800d00bdabc42fabe2453acdffd564ed11bbcd181c2175",
+      "seed": 114
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "91156f3315d7253d33f9dc33881960d1a3ca70a4fc768eb0c1d72b48d8690e63",
+      "seed": 114
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "21421de3f9b1a40a7b87f81918d0c69dfa7a6f5946a210b46d7ce213fa13dc5e",
+      "seed": 114
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "69895a2e165c921b59916238586a03f2bee9cd978ef259426f8e01807f07a4c9",
+      "seed": 114
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "9e0e09c34d3a7874bc876b1086f229bf866d3a4b06e2dc11fc851991e8266204",
+      "seed": 115
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "f903ac99dd016a575d6fa1a808f6652d1945876b75031e8f4004e2e19d100add",
+      "seed": 115
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "15321e258a3840b016dd2a6ffb52b03a6e7405da19304a4aa8c5facc81503977",
+      "seed": 115
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "205c2f40167d46ae9b66622dddc68e444b8128b534b7de7162e87ee0d72cb824",
+      "seed": 115
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "3a4005344606b174670c99491cbd60740a6a07418f6bf32e8541515bb3ef963a",
+      "seed": 116
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "fff54fb3d3a436436f1d00444b933358c91782bb3fb02a144cd2d948a74c921d",
+      "seed": 116
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "04d440b2dbd2b17bbb8afdd8e4665fca89688c526af14409dfbed9d2b79c438b",
+      "seed": 116
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "d25acaf5a19b52f5b1ee70c74f1c33cb1c01529cab36e13d0563dcdac4ead236",
+      "seed": 116
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "fc4188867dea97d84832b79011f269b47d20ce13e350e0ea72cad980f4477c11",
+      "seed": 117
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "eb36192a14032247efef6a40b1293d1c8b94e0bb3e89acef8387dc8a023cf718",
+      "seed": 117
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "6ca5365419726a9f98b753077ad5369a5eefc63dea12ef8ded80e9cd5059358b",
+      "seed": 117
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ca8d4706b2cd01c563a52fe3bf22eab6e6df5f7c3b26b344a86accda036df528",
+      "seed": 117
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ff1d79244aa4e106e581761e1850ad410dd4ad95aa658900507e0fa58c9de81d",
+      "seed": 118
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "4c832928c6a159546b92cdbb51c1be1a42828089488a8f83d76e22b9748943a7",
+      "seed": 118
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "24d3959628958a14535ebb60a49838224c58a307168eb4222db6c16f23969bba",
+      "seed": 118
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "ede592394243fe416d428110e3775ebc6b0d2130222295c266f11b5af8aa4a1a",
+      "seed": 118
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "b0bae1771849433b81e14badb7b3ce650b9df9b3fa0dc6d5daa545d5153b9a5d",
+      "seed": 119
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "cdf01618348b03a6f5a0a15617b9735e77d5dadfa878ce5bdd7870619751978f",
+      "seed": 119
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "799b80146af2c37f098b178a8131cdc39891285b007f88a2196c2c1e85899313",
+      "seed": 119
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "c9bb7cad61c77111082f8524e0f98205c4f6c1c7876a4e4999bc1fda0551d81a",
+      "seed": 119
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "68af27fd47efd2e2959da001d06bbcc261ca5bd85bb6f229c900cce6ec27c853",
+      "seed": 120
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "933e60a3ef44bf77c2f7382c4682f75011c9f93bac305bb90f4dabe08185cdae",
+      "seed": 120
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "38e7c54a983e5bfe822260b1df08affc2fdae9ebe251e5e37bd7524f32a2884d",
+      "seed": 120
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "e96298ac61fc9ca64181a710e3fc99ee5fd42f6c025e2f137b94015d0a5a33a4",
+      "seed": 120
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "ff1019e0471829b25ac1e7d4b7ed4d05aa1627ffff5749fc3e3d3cd039d0f8d7",
+      "seed": 121
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "516b68b66353eed70ff07f35d719c035d4134d85eb8a8ba913ab18407d5cc76d",
+      "seed": 121
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "293e21e735a2ce5ebe8f4449beac75e20c14ebf79bcf21fc32399cc30f2da1a6",
+      "seed": 121
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "0442c5f63d8154b5ce06925d5e1faccd131608e5ddf3ca7ccfa3133e6cf8ae2a",
+      "seed": 121
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "b0b843b68836d79f629cd4a4680143e246773bb47a65d779aef40dfa8bd19f2f",
+      "seed": 122
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "e5c3e3e9055e3db57ad198114adb235f63ea4d35a6c19866c273ca38a9836bd7",
+      "seed": 122
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "f87a5d77388f46b4c5b215579488396743cbda4486fd8294bbea3e028df4dd19",
+      "seed": 122
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "bba596efdc524e4a0a82d691dfc4bfee1de3a17846497b074d28a9f1297c42a1",
+      "seed": 122
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "00f4d6f23249582c738dcc53d7c72f4ade385b4e69988a2068b43ad62e48d6e9",
+      "seed": 123
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "5c6d30c45cd7c696c57e2c7608facbe6bc5adc945c8ce1e9e23e0b5dfd396260",
+      "seed": 123
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "bb68454df2f37d232571f732b727b7e0ca5fc1830d797f56435955623dd02d86",
+      "seed": 123
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "f1e9459242add544efbc734cb389637b628cfc904d8365ab168e7ab24ebdc5de",
+      "seed": 123
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "d27792524d3d0a2bcc6dc2e2be8e972bf359ba707449b35ce436ed7b1c3caeec",
+      "seed": 124
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "634d072ee33c1e69f30fbb5a149eed95275bbca268ce20bfc22a9ad47efd587d",
+      "seed": 124
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "7cef756c678b3ee3533ad8927d6f90b7a61261fba0f352c3ece95bad4841ddd2",
+      "seed": 124
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "d17376d1688103f15fa5d5f0fb676c13ac7b04fe5875e981c368f14829eeae03",
+      "seed": 124
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "0b9f121cfb7c0a5643c080d49cc2312c65e617dde2f6ddff86cac26bd2a01a9c",
+      "seed": 125
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "55d14d247d9bf83788e104490624c7e6244757a5867607a062f3539ac9c3c5d7",
+      "seed": 125
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "5ab5e1cbab5b6f1ea06aa99e24d84207e2d2c202e44896971564810d87b8f435",
+      "seed": 125
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "71d6541b3b8d09e2fcf11af1d3fe3176c3159037f79c950fbd072809342c2c73",
+      "seed": 125
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "0fe202ad13228f7ffd03d704aa91341edf30297b3fedb970a11481c9acae3eef",
+      "seed": 126
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "928ecc99d503980ad17735123c5551fe3d804e0af6b0fe07a1bf17c8f716ebad",
+      "seed": 126
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "357af2906eea0626480ec7327745f4e9306876941954b204069811bea653ba2e",
+      "seed": 126
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "0a0d02dfc4b4c1d5c0840c641b1dd8d451079264677bbe9b9428891d3f462b59",
+      "seed": 126
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "23d7502f2d81e13444e406c90e3c58eda30096c9a4edf011e19e963c2dbadbeb",
+      "seed": 127
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "7102fd9aed8a34f99baf3721b35a384442ce3e9ed9b0c8dca7498231aa390298",
+      "seed": 127
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "dceed12f09d81d3a13fcc88d672fb14a62cde5427f15d625be5f0bb987682829",
+      "seed": 127
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "de57abc17f3a8758696d8993d659b34e831c4a2c48a2f497470b8a7fcca7c8c8",
+      "seed": 127
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "19c4c1aab98a4a6b81077d5aa7e991e18aafe6e988edf7492fe495d6f4acf72b",
+      "seed": 128
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "750c5841c19f769c049f905aa9a0e53e1a78bb473d961d0ff4a78b6fb1be4ae1",
+      "seed": 128
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "cf6066b12fa11feef40757fc04d48bb024cd2a041c982007ae1c05d8f6d2a70b",
+      "seed": 128
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "215e72e866a8ab9244c5d3b10fe1ee9a5f4dc383de886fce7917858e347e74eb",
+      "seed": 128
+    },
+    {
+      "condition": "coach_frozen_clipped",
+      "days": 84,
+      "projection_sha256": "613669abdedda5ada39eee1b5f08b04f78f7a1eb8c4e3980a2a0745db9f511b9",
+      "seed": 129
+    },
+    {
+      "condition": "coach_learning_clipped",
+      "days": 84,
+      "projection_sha256": "c2585de46ef8691f34768a0e99407aa71e1e917c7886f6f7e066094992387cff",
+      "seed": 129
+    },
+    {
+      "condition": "coach_frozen_signed",
+      "days": 84,
+      "projection_sha256": "3dc6b368de446bae90f16c0f7696f4c461f7090527c300ae4369fc0c8020093b",
+      "seed": 129
+    },
+    {
+      "condition": "coach_learning_signed",
+      "days": 84,
+      "projection_sha256": "0458742e31291a9421359be16d24604d2fc87e56d249d0cb597fb45b836ded34",
+      "seed": 129
+    }
+  ],
+  "versions": {
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t005-training-v5",
+    "save": 5,
+    "source_sha256": "ef6415602e782734b8baa47bd13a0fbf05931452368868d902b37afbf6c92ce1"
+  }
+}

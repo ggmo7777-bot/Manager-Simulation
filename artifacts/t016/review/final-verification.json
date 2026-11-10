@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-09",
+  "current_identity_matches_experiment_and_freeze": true,
+  "source_and_documents_match_frozen_bundle": 136,
+  "local_document_links_valid": true,
+  "historical_files_unchanged": 1702,
+  "all_tests": 190,
+  "fast_tests": 48,
+  "full_state_equal_worlds": 180,
+  "resume_conditions": 4,
+  "sampled_branch_equal": true,
+  "status_bytes": 4985
+}

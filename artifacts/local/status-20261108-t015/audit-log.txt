@@ -1,0 +1,56 @@
+fixed equivalence: closed_no_solidarity
+fixed equivalence: closed_solidarity
+fixed equivalence: open_no_solidarity
+fixed equivalence: open_solidarity
+fixed equivalence: fixed_budget_no_inflow
+fixed equivalence: hoarder_buyer_policy
+fixed equivalence: exploit_churn_guard
+replayed metrics and audit: fixed closed_no_solidarity
+replayed metrics and audit: fixed open_no_solidarity
+replayed metrics and audit: fixed open_solidarity
+replayed metrics and audit: sampled closed_no_solidarity
+replayed metrics and audit: sampled open_no_solidarity
+replayed metrics and audit: sampled open_solidarity
+{
+  "reproduced_metric_runs": 180,
+  "transactions_independently_audited": 107376,
+  "retained_metric_membership_checks": {
+    "fixed|closed_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "fixed|open_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "fixed|open_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "sampled|closed_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 0,
+      "transferred_player_run_occurrences": 0,
+      "runs": 30
+    },
+    "sampled|open_no_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 27,
+      "transferred_player_run_occurrences": 43,
+      "runs": 30
+    },
+    "sampled|open_solidarity": {
+      "runs_with_transferred_player_in_retained_metric": 27,
+      "transferred_player_run_occurrences": 43,
+      "runs": 30
+    }
+  },
+  "changed_runtime_functions": [
+    "_build_initial_world",
+    "_replay_snapshot_payload",
+    "config_for_condition",
+    "league_identity"
+  ],
+  "elapsed_seconds": 130.8239851249382
+}

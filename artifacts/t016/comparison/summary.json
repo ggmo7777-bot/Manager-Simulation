@@ -1,0 +1,1851 @@
+{
+  "admission_totals": {
+    "claim_accepted": 624,
+    "claim_trigger_limit": 170,
+    "payments": 624,
+    "requests": 3344
+  },
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t016.py": "6deb7fb40add3639fe2964c318971fc3ef3f211327deaa5711949b1215a8b9df"
+  },
+  "branch_equality": {
+    "excluded": [
+      "identity",
+      "parent_checkpoint_sha256"
+    ],
+    "full_state_and_events_equal": true,
+    "normalized_sha256": "c41650cbac88d1769b5f439c0cd06ad3f3b5a636751cb537e060ec6dcf2312a4"
+  },
+  "branch_resume": {
+    "events.jsonl": true,
+    "snapshot.json": true,
+    "summary.json": true
+  },
+  "changed_runtime_functions": [
+    "league_identity",
+    "summarize_league_world",
+    "save_league_artifacts"
+  ],
+  "days": 84,
+  "elapsed_seconds": 272.32000404107384,
+  "evaluation_version": "t016-initial-cohort-v1",
+  "full_state_equal_runs": 180,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 16,
+    "source_sha256": "b64227f57002046605fe1ac33dd59c63d81ad6a851f3bc7f53f202ba7002e7b4",
+    "world_kind": "league_economy_loop"
+  },
+  "independently_audited_transactions": 107376,
+  "limitations": [
+    "exploratory reanalysis of the same 30 world seeds",
+    "uncalibrated initial ranges",
+    "never-transferred groups are descriptive, not a paired causal estimand"
+  ],
+  "max_rss_raw": 143949824,
+  "never_transferred_descriptions": {
+    "fixed|closed_no_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.281612,
+      "pooled_player_mean": 0.281612,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 180,
+      "worlds": 30
+    },
+    "fixed|open_no_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.291482,
+      "pooled_player_mean": 0.291482,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 120,
+      "worlds": 30
+    },
+    "fixed|open_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.314433,
+      "pooled_player_mean": 0.314433,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 120,
+      "worlds": 30
+    },
+    "sampled|closed_no_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.281091,
+      "pooled_player_mean": 0.281091,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 180,
+      "worlds": 30
+    },
+    "sampled|open_no_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.279248,
+      "pooled_player_mean": 0.279363,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 125,
+      "worlds": 30
+    },
+    "sampled|open_solidarity": {
+      "defined_worlds": 30,
+      "empty_world_seeds": [],
+      "mean_of_nonempty_world_means": 0.290081,
+      "pooled_player_mean": 0.289959,
+      "role": "within-condition descriptive only; selection depends on outcomes",
+      "total_player_world_observations": 125,
+      "worlds": 30
+    }
+  },
+  "new_runtime_functions": [
+    "summarize_academy_cohorts"
+  ],
+  "old_identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 16,
+    "source_sha256": "483c47178c7683f125ba53a704f42909972b4201b889a069f2c988402c57a9f3",
+    "world_kind": "league_economy_loop"
+  },
+  "old_metrics_reproduced_runs": 180,
+  "paired_effects": [
+    {
+      "ci95_exploratory": [
+        0.012572,
+        0.018029
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.015301,
+      "metric": "academy_initial_cohort_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.017175,
+          "seed": 100
+        },
+        {
+          "difference": 0.015943,
+          "seed": 101
+        },
+        {
+          "difference": 0.01791,
+          "seed": 102
+        },
+        {
+          "difference": 0.037706,
+          "seed": 103
+        },
+        {
+          "difference": 0.015451,
+          "seed": 104
+        },
+        {
+          "difference": 0.015453,
+          "seed": 105
+        },
+        {
+          "difference": 0.016228,
+          "seed": 106
+        },
+        {
+          "difference": 0.009569,
+          "seed": 107
+        },
+        {
+          "difference": 0.012321,
+          "seed": 108
+        },
+        {
+          "difference": 0.00813,
+          "seed": 109
+        },
+        {
+          "difference": 0.001369,
+          "seed": 110
+        },
+        {
+          "difference": 0.018894,
+          "seed": 111
+        },
+        {
+          "difference": 0.00642,
+          "seed": 112
+        },
+        {
+          "difference": 0.008567,
+          "seed": 113
+        },
+        {
+          "difference": 0.012848,
+          "seed": 114
+        },
+        {
+          "difference": 0.011885,
+          "seed": 115
+        },
+        {
+          "difference": 0.018433,
+          "seed": 116
+        },
+        {
+          "difference": 0.016365,
+          "seed": 117
+        },
+        {
+          "difference": 0.018089,
+          "seed": 118
+        },
+        {
+          "difference": 0.010224,
+          "seed": 119
+        },
+        {
+          "difference": 0.012198,
+          "seed": 120
+        },
+        {
+          "difference": 0.027739,
+          "seed": 121
+        },
+        {
+          "difference": 0.016202,
+          "seed": 122
+        },
+        {
+          "difference": 0.006019,
+          "seed": 123
+        },
+        {
+          "difference": 0.004721,
+          "seed": 124
+        },
+        {
+          "difference": 0.024596,
+          "seed": 125
+        },
+        {
+          "difference": 0.02248,
+          "seed": 126
+        },
+        {
+          "difference": 0.016645,
+          "seed": 127
+        },
+        {
+          "difference": 0.021589,
+          "seed": 128
+        },
+        {
+          "difference": 0.017847,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.007309,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.006286,
+        0.009015
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.00765,
+      "metric": "mean_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.008587,
+          "seed": 100
+        },
+        {
+          "difference": 0.007972,
+          "seed": 101
+        },
+        {
+          "difference": 0.008955,
+          "seed": 102
+        },
+        {
+          "difference": 0.018853,
+          "seed": 103
+        },
+        {
+          "difference": 0.007725,
+          "seed": 104
+        },
+        {
+          "difference": 0.007726,
+          "seed": 105
+        },
+        {
+          "difference": 0.008114,
+          "seed": 106
+        },
+        {
+          "difference": 0.004784,
+          "seed": 107
+        },
+        {
+          "difference": 0.006161,
+          "seed": 108
+        },
+        {
+          "difference": 0.004066,
+          "seed": 109
+        },
+        {
+          "difference": 0.000685,
+          "seed": 110
+        },
+        {
+          "difference": 0.009447,
+          "seed": 111
+        },
+        {
+          "difference": 0.003211,
+          "seed": 112
+        },
+        {
+          "difference": 0.004284,
+          "seed": 113
+        },
+        {
+          "difference": 0.006424,
+          "seed": 114
+        },
+        {
+          "difference": 0.005942,
+          "seed": 115
+        },
+        {
+          "difference": 0.009216,
+          "seed": 116
+        },
+        {
+          "difference": 0.008182,
+          "seed": 117
+        },
+        {
+          "difference": 0.009045,
+          "seed": 118
+        },
+        {
+          "difference": 0.005112,
+          "seed": 119
+        },
+        {
+          "difference": 0.006099,
+          "seed": 120
+        },
+        {
+          "difference": 0.013869,
+          "seed": 121
+        },
+        {
+          "difference": 0.008101,
+          "seed": 122
+        },
+        {
+          "difference": 0.00301,
+          "seed": 123
+        },
+        {
+          "difference": 0.002361,
+          "seed": 124
+        },
+        {
+          "difference": 0.012299,
+          "seed": 125
+        },
+        {
+          "difference": 0.01124,
+          "seed": 126
+        },
+        {
+          "difference": 0.008322,
+          "seed": 127
+        },
+        {
+          "difference": 0.010795,
+          "seed": 128
+        },
+        {
+          "difference": 0.008923,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.003654,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.018858,
+        0.027044
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.022951,
+      "metric": "legacy_four_slot_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.025763,
+          "seed": 100
+        },
+        {
+          "difference": 0.023916,
+          "seed": 101
+        },
+        {
+          "difference": 0.026864,
+          "seed": 102
+        },
+        {
+          "difference": 0.056558,
+          "seed": 103
+        },
+        {
+          "difference": 0.023177,
+          "seed": 104
+        },
+        {
+          "difference": 0.023179,
+          "seed": 105
+        },
+        {
+          "difference": 0.024342,
+          "seed": 106
+        },
+        {
+          "difference": 0.014352,
+          "seed": 107
+        },
+        {
+          "difference": 0.018482,
+          "seed": 108
+        },
+        {
+          "difference": 0.012196,
+          "seed": 109
+        },
+        {
+          "difference": 0.002054,
+          "seed": 110
+        },
+        {
+          "difference": 0.028341,
+          "seed": 111
+        },
+        {
+          "difference": 0.009635,
+          "seed": 112
+        },
+        {
+          "difference": 0.012851,
+          "seed": 113
+        },
+        {
+          "difference": 0.019272,
+          "seed": 114
+        },
+        {
+          "difference": 0.017828,
+          "seed": 115
+        },
+        {
+          "difference": 0.027649,
+          "seed": 116
+        },
+        {
+          "difference": 0.024547,
+          "seed": 117
+        },
+        {
+          "difference": 0.027134,
+          "seed": 118
+        },
+        {
+          "difference": 0.015339,
+          "seed": 119
+        },
+        {
+          "difference": 0.018297,
+          "seed": 120
+        },
+        {
+          "difference": 0.041608,
+          "seed": 121
+        },
+        {
+          "difference": 0.024305,
+          "seed": 122
+        },
+        {
+          "difference": 0.009029,
+          "seed": 123
+        },
+        {
+          "difference": 0.007082,
+          "seed": 124
+        },
+        {
+          "difference": 0.036895,
+          "seed": 125
+        },
+        {
+          "difference": 0.03372,
+          "seed": 126
+        },
+        {
+          "difference": 0.024967,
+          "seed": 127
+        },
+        {
+          "difference": 0.032386,
+          "seed": 128
+        },
+        {
+          "difference": 0.02677,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "legacy diagnostic",
+      "sd": 0.010963,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.01544,
+        0.018567
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.017004,
+      "metric": "academy_initial_cohort_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.018697,
+          "seed": 100
+        },
+        {
+          "difference": 0.015433,
+          "seed": 101
+        },
+        {
+          "difference": 0.018618,
+          "seed": 102
+        },
+        {
+          "difference": 0.020828,
+          "seed": 103
+        },
+        {
+          "difference": 0.01965,
+          "seed": 104
+        },
+        {
+          "difference": 0.021767,
+          "seed": 105
+        },
+        {
+          "difference": 0.016098,
+          "seed": 106
+        },
+        {
+          "difference": 0.019665,
+          "seed": 107
+        },
+        {
+          "difference": 0.008966,
+          "seed": 108
+        },
+        {
+          "difference": 0.016395,
+          "seed": 109
+        },
+        {
+          "difference": 0.012255,
+          "seed": 110
+        },
+        {
+          "difference": 0.021372,
+          "seed": 111
+        },
+        {
+          "difference": 0.013393,
+          "seed": 112
+        },
+        {
+          "difference": 0.012445,
+          "seed": 113
+        },
+        {
+          "difference": 0.018913,
+          "seed": 114
+        },
+        {
+          "difference": 0.017874,
+          "seed": 115
+        },
+        {
+          "difference": 0.017724,
+          "seed": 116
+        },
+        {
+          "difference": 0.015916,
+          "seed": 117
+        },
+        {
+          "difference": 0.016093,
+          "seed": 118
+        },
+        {
+          "difference": 0.014632,
+          "seed": 119
+        },
+        {
+          "difference": 0.014279,
+          "seed": 120
+        },
+        {
+          "difference": 0.016802,
+          "seed": 121
+        },
+        {
+          "difference": 0.008525,
+          "seed": 122
+        },
+        {
+          "difference": 0.023261,
+          "seed": 123
+        },
+        {
+          "difference": 0.016538,
+          "seed": 124
+        },
+        {
+          "difference": 0.026301,
+          "seed": 125
+        },
+        {
+          "difference": 0.012369,
+          "seed": 126
+        },
+        {
+          "difference": 0.014116,
+          "seed": 127
+        },
+        {
+          "difference": 0.016429,
+          "seed": 128
+        },
+        {
+          "difference": 0.024757,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.004188,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.003743,
+        0.005333
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.004538,
+      "metric": "mean_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.005216,
+          "seed": 100
+        },
+        {
+          "difference": 0.003359,
+          "seed": 101
+        },
+        {
+          "difference": 0.005874,
+          "seed": 102
+        },
+        {
+          "difference": 0.00628,
+          "seed": 103
+        },
+        {
+          "difference": 0.006388,
+          "seed": 104
+        },
+        {
+          "difference": 0.006603,
+          "seed": 105
+        },
+        {
+          "difference": 0.006619,
+          "seed": 106
+        },
+        {
+          "difference": 0.005291,
+          "seed": 107
+        },
+        {
+          "difference": 0.000315,
+          "seed": 108
+        },
+        {
+          "difference": 0.004895,
+          "seed": 109
+        },
+        {
+          "difference": 0.001692,
+          "seed": 110
+        },
+        {
+          "difference": 0.006224,
+          "seed": 111
+        },
+        {
+          "difference": 0.001803,
+          "seed": 112
+        },
+        {
+          "difference": 0.002056,
+          "seed": 113
+        },
+        {
+          "difference": 0.005497,
+          "seed": 114
+        },
+        {
+          "difference": 0.004572,
+          "seed": 115
+        },
+        {
+          "difference": 0.004784,
+          "seed": 116
+        },
+        {
+          "difference": 0.003546,
+          "seed": 117
+        },
+        {
+          "difference": 0.003714,
+          "seed": 118
+        },
+        {
+          "difference": 0.003473,
+          "seed": 119
+        },
+        {
+          "difference": 0.003509,
+          "seed": 120
+        },
+        {
+          "difference": 0.004691,
+          "seed": 121
+        },
+        {
+          "difference": 0.001126,
+          "seed": 122
+        },
+        {
+          "difference": 0.007847,
+          "seed": 123
+        },
+        {
+          "difference": 0.003843,
+          "seed": 124
+        },
+        {
+          "difference": 0.008935,
+          "seed": 125
+        },
+        {
+          "difference": 0.002106,
+          "seed": 126
+        },
+        {
+          "difference": 0.003107,
+          "seed": 127
+        },
+        {
+          "difference": 0.004434,
+          "seed": 128
+        },
+        {
+          "difference": 0.008345,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.00213,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.01541,
+        0.019296
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.017353,
+      "metric": "legacy_four_slot_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.018442,
+          "seed": 100
+        },
+        {
+          "difference": 0.01583,
+          "seed": 101
+        },
+        {
+          "difference": 0.013841,
+          "seed": 102
+        },
+        {
+          "difference": 0.022003,
+          "seed": 103
+        },
+        {
+          "difference": 0.02246,
+          "seed": 104
+        },
+        {
+          "difference": 0.027483,
+          "seed": 105
+        },
+        {
+          "difference": 0.010023,
+          "seed": 106
+        },
+        {
+          "difference": 0.016357,
+          "seed": 107
+        },
+        {
+          "difference": 0.012152,
+          "seed": 108
+        },
+        {
+          "difference": 0.011597,
+          "seed": 109
+        },
+        {
+          "difference": 0.011935,
+          "seed": 110
+        },
+        {
+          "difference": 0.026505,
+          "seed": 111
+        },
+        {
+          "difference": 0.009021,
+          "seed": 112
+        },
+        {
+          "difference": 0.008278,
+          "seed": 113
+        },
+        {
+          "difference": 0.018864,
+          "seed": 114
+        },
+        {
+          "difference": 0.019297,
+          "seed": 115
+        },
+        {
+          "difference": 0.022197,
+          "seed": 116
+        },
+        {
+          "difference": 0.022631,
+          "seed": 117
+        },
+        {
+          "difference": 0.018631,
+          "seed": 118
+        },
+        {
+          "difference": 0.015048,
+          "seed": 119
+        },
+        {
+          "difference": 0.013727,
+          "seed": 120
+        },
+        {
+          "difference": 0.021035,
+          "seed": 121
+        },
+        {
+          "difference": 0.011273,
+          "seed": 122
+        },
+        {
+          "difference": 0.022443,
+          "seed": 123
+        },
+        {
+          "difference": 0.014009,
+          "seed": 124
+        },
+        {
+          "difference": 0.021545,
+          "seed": 125
+        },
+        {
+          "difference": 0.015722,
+          "seed": 126
+        },
+        {
+          "difference": 0.015076,
+          "seed": 127
+        },
+        {
+          "difference": 0.019014,
+          "seed": 128
+        },
+        {
+          "difference": 0.024152,
+          "seed": 129
+        }
+      ],
+      "population": "fixed",
+      "positive": 30,
+      "role": "legacy diagnostic",
+      "sd": 0.005204,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.00572,
+        0.009039
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.007379,
+      "metric": "academy_initial_cohort_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.005913,
+          "seed": 100
+        },
+        {
+          "difference": 0.00564,
+          "seed": 101
+        },
+        {
+          "difference": 0.009402,
+          "seed": 102
+        },
+        {
+          "difference": 0.007739,
+          "seed": 103
+        },
+        {
+          "difference": 0.005435,
+          "seed": 104
+        },
+        {
+          "difference": 0.009365,
+          "seed": 105
+        },
+        {
+          "difference": 0.010247,
+          "seed": 106
+        },
+        {
+          "difference": 0.009329,
+          "seed": 107
+        },
+        {
+          "difference": 0.010402,
+          "seed": 108
+        },
+        {
+          "difference": 0.00683,
+          "seed": 109
+        },
+        {
+          "difference": 0.003251,
+          "seed": 110
+        },
+        {
+          "difference": 0.015873,
+          "seed": 111
+        },
+        {
+          "difference": 0.011171,
+          "seed": 112
+        },
+        {
+          "difference": 0.010999,
+          "seed": 113
+        },
+        {
+          "difference": 0.0,
+          "seed": 114
+        },
+        {
+          "difference": 0.001085,
+          "seed": 115
+        },
+        {
+          "difference": 0.007147,
+          "seed": 116
+        },
+        {
+          "difference": 0.003425,
+          "seed": 117
+        },
+        {
+          "difference": 0.003312,
+          "seed": 118
+        },
+        {
+          "difference": 0.004171,
+          "seed": 119
+        },
+        {
+          "difference": 0.006741,
+          "seed": 120
+        },
+        {
+          "difference": 0.011833,
+          "seed": 121
+        },
+        {
+          "difference": 0.000679,
+          "seed": 122
+        },
+        {
+          "difference": 0.00485,
+          "seed": 123
+        },
+        {
+          "difference": 0.004519,
+          "seed": 124
+        },
+        {
+          "difference": 0.011034,
+          "seed": 125
+        },
+        {
+          "difference": 0.002594,
+          "seed": 126
+        },
+        {
+          "difference": 0.008114,
+          "seed": 127
+        },
+        {
+          "difference": 0.01983,
+          "seed": 128
+        },
+        {
+          "difference": 0.010455,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 29,
+      "role": "fixed initial population comparison",
+      "sd": 0.004444,
+      "zero": 1
+    },
+    {
+      "ci95_exploratory": [
+        0.002661,
+        0.004395
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.003528,
+      "metric": "mean_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.002956,
+          "seed": 100
+        },
+        {
+          "difference": 0.002009,
+          "seed": 101
+        },
+        {
+          "difference": 0.004338,
+          "seed": 102
+        },
+        {
+          "difference": 0.003869,
+          "seed": 103
+        },
+        {
+          "difference": 0.002068,
+          "seed": 104
+        },
+        {
+          "difference": 0.004403,
+          "seed": 105
+        },
+        {
+          "difference": 0.007183,
+          "seed": 106
+        },
+        {
+          "difference": 0.004333,
+          "seed": 107
+        },
+        {
+          "difference": 0.0052,
+          "seed": 108
+        },
+        {
+          "difference": 0.003415,
+          "seed": 109
+        },
+        {
+          "difference": 0.000618,
+          "seed": 110
+        },
+        {
+          "difference": 0.007751,
+          "seed": 111
+        },
+        {
+          "difference": 0.005406,
+          "seed": 112
+        },
+        {
+          "difference": 0.005499,
+          "seed": 113
+        },
+        {
+          "difference": 0.0,
+          "seed": 114
+        },
+        {
+          "difference": 0.000543,
+          "seed": 115
+        },
+        {
+          "difference": 0.003244,
+          "seed": 116
+        },
+        {
+          "difference": 0.001321,
+          "seed": 117
+        },
+        {
+          "difference": 0.001656,
+          "seed": 118
+        },
+        {
+          "difference": 0.002085,
+          "seed": 119
+        },
+        {
+          "difference": 0.003371,
+          "seed": 120
+        },
+        {
+          "difference": 0.005328,
+          "seed": 121
+        },
+        {
+          "difference": 0.00034,
+          "seed": 122
+        },
+        {
+          "difference": 0.001559,
+          "seed": 123
+        },
+        {
+          "difference": 0.002038,
+          "seed": 124
+        },
+        {
+          "difference": 0.00515,
+          "seed": 125
+        },
+        {
+          "difference": 0.001298,
+          "seed": 126
+        },
+        {
+          "difference": 0.004057,
+          "seed": 127
+        },
+        {
+          "difference": 0.009669,
+          "seed": 128
+        },
+        {
+          "difference": 0.005136,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 29,
+      "role": "fixed initial population comparison",
+      "sd": 0.002323,
+      "zero": 1
+    },
+    {
+      "ci95_exploratory": [
+        0.004496,
+        0.009277
+      ],
+      "contrast": "open_solidarity-open_no_solidarity",
+      "mean": 0.006886,
+      "metric": "legacy_four_slot_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.001836,
+          "seed": 100
+        },
+        {
+          "difference": 0.008537,
+          "seed": 101
+        },
+        {
+          "difference": 0.014104,
+          "seed": 102
+        },
+        {
+          "difference": 0.009991,
+          "seed": 103
+        },
+        {
+          "difference": 0.008157,
+          "seed": 104
+        },
+        {
+          "difference": 0.00938,
+          "seed": 105
+        },
+        {
+          "difference": 0.003646,
+          "seed": 106
+        },
+        {
+          "difference": 0.001922,
+          "seed": 107
+        },
+        {
+          "difference": 0.011058,
+          "seed": 108
+        },
+        {
+          "difference": 0.0,
+          "seed": 109
+        },
+        {
+          "difference": 0.001859,
+          "seed": 110
+        },
+        {
+          "difference": 0.023809,
+          "seed": 111
+        },
+        {
+          "difference": 0.013899,
+          "seed": 112
+        },
+        {
+          "difference": 0.003498,
+          "seed": 113
+        },
+        {
+          "difference": 0.0,
+          "seed": 114
+        },
+        {
+          "difference": 0.001628,
+          "seed": 115
+        },
+        {
+          "difference": 0.002796,
+          "seed": 116
+        },
+        {
+          "difference": 0.005138,
+          "seed": 117
+        },
+        {
+          "difference": 0.004968,
+          "seed": 118
+        },
+        {
+          "difference": 0.006256,
+          "seed": 119
+        },
+        {
+          "difference": 0.0,
+          "seed": 120
+        },
+        {
+          "difference": 0.017749,
+          "seed": 121
+        },
+        {
+          "difference": 0.001019,
+          "seed": 122
+        },
+        {
+          "difference": 0.007274,
+          "seed": 123
+        },
+        {
+          "difference": 0.001901,
+          "seed": 124
+        },
+        {
+          "difference": 0.004995,
+          "seed": 125
+        },
+        {
+          "difference": 4e-06,
+          "seed": 126
+        },
+        {
+          "difference": 0.006315,
+          "seed": 127
+        },
+        {
+          "difference": 0.020728,
+          "seed": 128
+        },
+        {
+          "difference": 0.014127,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 27,
+      "role": "legacy diagnostic",
+      "sd": 0.006404,
+      "zero": 3
+    },
+    {
+      "ci95_exploratory": [
+        0.013832,
+        0.018517
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.016175,
+      "metric": "academy_initial_cohort_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.006844,
+          "seed": 100
+        },
+        {
+          "difference": 0.016514,
+          "seed": 101
+        },
+        {
+          "difference": 0.014935,
+          "seed": 102
+        },
+        {
+          "difference": 0.021281,
+          "seed": 103
+        },
+        {
+          "difference": 0.010679,
+          "seed": 104
+        },
+        {
+          "difference": 0.010642,
+          "seed": 105
+        },
+        {
+          "difference": 0.031012,
+          "seed": 106
+        },
+        {
+          "difference": 0.016592,
+          "seed": 107
+        },
+        {
+          "difference": 0.01308,
+          "seed": 108
+        },
+        {
+          "difference": 0.014812,
+          "seed": 109
+        },
+        {
+          "difference": 0.025647,
+          "seed": 110
+        },
+        {
+          "difference": 0.021285,
+          "seed": 111
+        },
+        {
+          "difference": 0.026625,
+          "seed": 112
+        },
+        {
+          "difference": 0.014792,
+          "seed": 113
+        },
+        {
+          "difference": 0.004333,
+          "seed": 114
+        },
+        {
+          "difference": 0.017922,
+          "seed": 115
+        },
+        {
+          "difference": 0.016708,
+          "seed": 116
+        },
+        {
+          "difference": 0.017043,
+          "seed": 117
+        },
+        {
+          "difference": 0.01031,
+          "seed": 118
+        },
+        {
+          "difference": 0.014625,
+          "seed": 119
+        },
+        {
+          "difference": 0.023094,
+          "seed": 120
+        },
+        {
+          "difference": 0.01183,
+          "seed": 121
+        },
+        {
+          "difference": 0.006596,
+          "seed": 122
+        },
+        {
+          "difference": 0.01464,
+          "seed": 123
+        },
+        {
+          "difference": 0.008601,
+          "seed": 124
+        },
+        {
+          "difference": 0.020861,
+          "seed": 125
+        },
+        {
+          "difference": 0.014022,
+          "seed": 126
+        },
+        {
+          "difference": 0.023951,
+          "seed": 127
+        },
+        {
+          "difference": 0.020665,
+          "seed": 128
+        },
+        {
+          "difference": 0.015306,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.006274,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.004613,
+        0.006967
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.00579,
+      "metric": "mean_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.000246,
+          "seed": 100
+        },
+        {
+          "difference": 0.005906,
+          "seed": 101
+        },
+        {
+          "difference": 0.003441,
+          "seed": 102
+        },
+        {
+          "difference": 0.00856,
+          "seed": 103
+        },
+        {
+          "difference": 0.003843,
+          "seed": 104
+        },
+        {
+          "difference": 0.004666,
+          "seed": 105
+        },
+        {
+          "difference": 0.012583,
+          "seed": 106
+        },
+        {
+          "difference": 0.006399,
+          "seed": 107
+        },
+        {
+          "difference": 0.000844,
+          "seed": 108
+        },
+        {
+          "difference": 0.004957,
+          "seed": 109
+        },
+        {
+          "difference": 0.011925,
+          "seed": 110
+        },
+        {
+          "difference": 0.007279,
+          "seed": 111
+        },
+        {
+          "difference": 0.010254,
+          "seed": 112
+        },
+        {
+          "difference": 0.005155,
+          "seed": 113
+        },
+        {
+          "difference": 0.00099,
+          "seed": 114
+        },
+        {
+          "difference": 0.00772,
+          "seed": 115
+        },
+        {
+          "difference": 0.006325,
+          "seed": 116
+        },
+        {
+          "difference": 0.007646,
+          "seed": 117
+        },
+        {
+          "difference": 0.003292,
+          "seed": 118
+        },
+        {
+          "difference": 0.003192,
+          "seed": 119
+        },
+        {
+          "difference": 0.008015,
+          "seed": 120
+        },
+        {
+          "difference": 0.00355,
+          "seed": 121
+        },
+        {
+          "difference": 0.002552,
+          "seed": 122
+        },
+        {
+          "difference": 0.00585,
+          "seed": 123
+        },
+        {
+          "difference": 0.003101,
+          "seed": 124
+        },
+        {
+          "difference": 0.00803,
+          "seed": 125
+        },
+        {
+          "difference": 0.00477,
+          "seed": 126
+        },
+        {
+          "difference": 0.0109,
+          "seed": 127
+        },
+        {
+          "difference": 0.007299,
+          "seed": 128
+        },
+        {
+          "difference": 0.004412,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 30,
+      "role": "fixed initial population comparison",
+      "sd": 0.003153,
+      "zero": 0
+    },
+    {
+      "ci95_exploratory": [
+        0.014906,
+        0.021535
+      ],
+      "contrast": "open_no_solidarity-closed_no_solidarity",
+      "mean": 0.018221,
+      "metric": "legacy_four_slot_skill_gain",
+      "n_worlds": 30,
+      "negative": 0,
+      "paired_differences": [
+        {
+          "difference": 0.007084,
+          "seed": 100
+        },
+        {
+          "difference": 0.006311,
+          "seed": 101
+        },
+        {
+          "difference": 0.019458,
+          "seed": 102
+        },
+        {
+          "difference": 0.030955,
+          "seed": 103
+        },
+        {
+          "difference": 0.012351,
+          "seed": 104
+        },
+        {
+          "difference": 0.009645,
+          "seed": 105
+        },
+        {
+          "difference": 0.039216,
+          "seed": 106
+        },
+        {
+          "difference": 0.012584,
+          "seed": 107
+        },
+        {
+          "difference": 0.017553,
+          "seed": 108
+        },
+        {
+          "difference": 0.01919,
+          "seed": 109
+        },
+        {
+          "difference": 0.031393,
+          "seed": 110
+        },
+        {
+          "difference": 0.016628,
+          "seed": 111
+        },
+        {
+          "difference": 0.033532,
+          "seed": 112
+        },
+        {
+          "difference": 0.011917,
+          "seed": 113
+        },
+        {
+          "difference": 0.006499,
+          "seed": 114
+        },
+        {
+          "difference": 0.025813,
+          "seed": 115
+        },
+        {
+          "difference": 0.01265,
+          "seed": 116
+        },
+        {
+          "difference": 0.014837,
+          "seed": 117
+        },
+        {
+          "difference": 0.012274,
+          "seed": 118
+        },
+        {
+          "difference": 0.01084,
+          "seed": 119
+        },
+        {
+          "difference": 0.021332,
+          "seed": 120
+        },
+        {
+          "difference": 0.015981,
+          "seed": 121
+        },
+        {
+          "difference": 0.009894,
+          "seed": 122
+        },
+        {
+          "difference": 0.01559,
+          "seed": 123
+        },
+        {
+          "difference": 0.010071,
+          "seed": 124
+        },
+        {
+          "difference": 0.024731,
+          "seed": 125
+        },
+        {
+          "difference": 0.01835,
+          "seed": 126
+        },
+        {
+          "difference": 0.031431,
+          "seed": 127
+        },
+        {
+          "difference": 0.029193,
+          "seed": 128
+        },
+        {
+          "difference": 0.019315,
+          "seed": 129
+        }
+      ],
+      "population": "sampled",
+      "positive": 30,
+      "role": "legacy diagnostic",
+      "sd": 0.008876,
+      "zero": 0
+    }
+  ],
+  "recorded_result_sha256": "d4c71beda8bbb959cf7e3743e0b3de94fc3a255d9f45c28c6a75d535dbb1fc60",
+  "resumes": {
+    "open_no_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true,
+      "summary.json": true
+    },
+    "open_no_solidarity_sampled_population": {
+      "events.jsonl": true,
+      "snapshot.json": true,
+      "summary.json": true
+    },
+    "open_solidarity": {
+      "events.jsonl": true,
+      "snapshot.json": true,
+      "summary.json": true
+    },
+    "open_solidarity_sampled_population": {
+      "events.jsonl": true,
+      "snapshot.json": true,
+      "summary.json": true
+    }
+  },
+  "runs": 180,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129
+  ],
+  "task": "T016"
+}

@@ -1,0 +1,1452 @@
+{
+  "versions": {
+    "save": 2,
+    "rules": "t002-training-v2",
+    "policy": "t001-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "source_sha256": "bd6ce4245252baefe7de97bc7fa6b91ce94245be8200c3664b70c9f8d63c1368"
+  },
+  "projection": "Existing numerical state excluding memory IDs; ordered chosen scores/actions/responses",
+  "runs": [
+    {
+      "condition": "baseline",
+      "seed": 0,
+      "days": 28,
+      "semantic_sha256": "7189c6638cdcb2b22e931d91456c8a4a761d68ce44cbcfdb54d96bb6fb38b128"
+    },
+    {
+      "condition": "baseline",
+      "seed": 0,
+      "days": 84,
+      "semantic_sha256": "63bca0b3613ebefa1161c3810e5d4cf0f1ce78ddabc410a4df77683635859869"
+    },
+    {
+      "condition": "baseline",
+      "seed": 1,
+      "days": 28,
+      "semantic_sha256": "0795ce646b80aada290a3d0cc2b5aab8669c15b3e3b2f89dfba9a985bd3f982b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 1,
+      "days": 84,
+      "semantic_sha256": "5887f631a7c4559869c8d3792e5315dd67efd15bfa4a1cb645fba6a932c53c54"
+    },
+    {
+      "condition": "baseline",
+      "seed": 2,
+      "days": 28,
+      "semantic_sha256": "f0d548cc2372bbdf408d685c49cf10508c26c7c70566ee4119452b10f78b8951"
+    },
+    {
+      "condition": "baseline",
+      "seed": 2,
+      "days": 84,
+      "semantic_sha256": "222552a5a6cd6fe434d3c9a25d9dd1552c45bc5387a475bc1fd9964d31fe15f9"
+    },
+    {
+      "condition": "baseline",
+      "seed": 3,
+      "days": 28,
+      "semantic_sha256": "69912ac8c8274a6f2d849e8249a297462f3c0b308258c9423bc2ea850e634d1f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 3,
+      "days": 84,
+      "semantic_sha256": "329823c73bd2ee7178353bcb5936e9ba57621e0c72f00ce3b6889e9791159b32"
+    },
+    {
+      "condition": "baseline",
+      "seed": 4,
+      "days": 28,
+      "semantic_sha256": "6e9ea734f426a2059d08b2b2e10698401632f4abfd504f721bee2fa0005baabb"
+    },
+    {
+      "condition": "baseline",
+      "seed": 4,
+      "days": 84,
+      "semantic_sha256": "4f486d12324a46845909df945937f3c3ffaf5e7991ede91abbcfa2c856834425"
+    },
+    {
+      "condition": "baseline",
+      "seed": 5,
+      "days": 28,
+      "semantic_sha256": "a428acc4c05e1145bc697d5678fa4aebc1b00aab5c57763b664b4d3fa1cd6008"
+    },
+    {
+      "condition": "baseline",
+      "seed": 5,
+      "days": 84,
+      "semantic_sha256": "6d4d534f11993fa6e82faddc8371402352902617eb503829eaf988d864bba669"
+    },
+    {
+      "condition": "baseline",
+      "seed": 6,
+      "days": 28,
+      "semantic_sha256": "b843e51b42bff05666594a7ee3b2b6a37d4cfc0bb914144376558a3ea38e606d"
+    },
+    {
+      "condition": "baseline",
+      "seed": 6,
+      "days": 84,
+      "semantic_sha256": "67791efa54e5417def57f2ae3991d9b34f175d75cdade38e7a4160f54d83c553"
+    },
+    {
+      "condition": "baseline",
+      "seed": 7,
+      "days": 28,
+      "semantic_sha256": "8692b7d3acb042b5f2e07654e5643af81decc28616173220923ef04f66581709"
+    },
+    {
+      "condition": "baseline",
+      "seed": 7,
+      "days": 84,
+      "semantic_sha256": "827b10acea658ee25ede739fb149cc76a22ec8379d03aa02e00da5c0b42b343b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 8,
+      "days": 28,
+      "semantic_sha256": "32604ee750cf440bd09d4418e075095a25ded5128882e334357d252439a1759c"
+    },
+    {
+      "condition": "baseline",
+      "seed": 8,
+      "days": 84,
+      "semantic_sha256": "798733d8b29bdc3ef61eeb965498df04c774abbc8f990c35959b049320a80bd0"
+    },
+    {
+      "condition": "baseline",
+      "seed": 9,
+      "days": 28,
+      "semantic_sha256": "b2781554839dde1de9e798ae391aa000101eb4a7119d1f9c5dabb21bb8589168"
+    },
+    {
+      "condition": "baseline",
+      "seed": 9,
+      "days": 84,
+      "semantic_sha256": "ac0b2a3a3edbdbfd2b5d66a2a64c94e20d0617e890c587f8d4353f19b0239d41"
+    },
+    {
+      "condition": "baseline",
+      "seed": 10,
+      "days": 28,
+      "semantic_sha256": "cc218781181cecdc6fe6c8cc4b10cfa0267b936cfc9878105e5241f7df7af03b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 10,
+      "days": 84,
+      "semantic_sha256": "a40e7e9527c62854c6b9ec227f648928dea6308c67721b0607927d7542bd261c"
+    },
+    {
+      "condition": "baseline",
+      "seed": 11,
+      "days": 28,
+      "semantic_sha256": "7e8b89b93c13740cb942decadce4dc181418832ce6b91e456c104dd7bfff6ac3"
+    },
+    {
+      "condition": "baseline",
+      "seed": 11,
+      "days": 84,
+      "semantic_sha256": "82b6f187e6ed521c050a80f343978b111c659f120b4efb769dd58d5523dd85f9"
+    },
+    {
+      "condition": "baseline",
+      "seed": 12,
+      "days": 28,
+      "semantic_sha256": "956ff33c770aba9667b9f5a1d3eae96a53b419861229de423068c047f3d266cf"
+    },
+    {
+      "condition": "baseline",
+      "seed": 12,
+      "days": 84,
+      "semantic_sha256": "cd60cf0c2dd499dfc026f7eb8d27c1e923f3f89d5d7ea7e93da63431c67336ec"
+    },
+    {
+      "condition": "baseline",
+      "seed": 13,
+      "days": 28,
+      "semantic_sha256": "ee14f87007df9e1046a70710ee010477d0eafb2c1d9f1af496859f518c8bbbaf"
+    },
+    {
+      "condition": "baseline",
+      "seed": 13,
+      "days": 84,
+      "semantic_sha256": "b7a6caac70cab9360030a812baa0023ae63e60b0227b7f7ffda59023d79c5d09"
+    },
+    {
+      "condition": "baseline",
+      "seed": 14,
+      "days": 28,
+      "semantic_sha256": "7bdbb3a9e6cd2e8321010000ac318b4d58da116bcb836254e6f70b70395d4d16"
+    },
+    {
+      "condition": "baseline",
+      "seed": 14,
+      "days": 84,
+      "semantic_sha256": "87171f20149d73df8bf0673fc93336d393621be220098ceae2a3fee10b2d52aa"
+    },
+    {
+      "condition": "baseline",
+      "seed": 15,
+      "days": 28,
+      "semantic_sha256": "9bb01974d2f9b024bfa3df70abd2b45391a3177a9da2aa85191d94206af14ae8"
+    },
+    {
+      "condition": "baseline",
+      "seed": 15,
+      "days": 84,
+      "semantic_sha256": "3031feb7a426b6a8182669cb76cd0eee33c9aa1de4f092189625df5bacec25ad"
+    },
+    {
+      "condition": "baseline",
+      "seed": 16,
+      "days": 28,
+      "semantic_sha256": "196262f701a20e3e9a9cb2cc2d17699122bb414a9217da8fc8f0a3d33fcb6d2c"
+    },
+    {
+      "condition": "baseline",
+      "seed": 16,
+      "days": 84,
+      "semantic_sha256": "f45e5cee2860cb1b19e56deea15005f47bec09024bc44570a0099ef1636b4d71"
+    },
+    {
+      "condition": "baseline",
+      "seed": 17,
+      "days": 28,
+      "semantic_sha256": "4d6706c73eb348f6be44d0a54401803c9e816407a39bbe005e1a188401c68704"
+    },
+    {
+      "condition": "baseline",
+      "seed": 17,
+      "days": 84,
+      "semantic_sha256": "9e46ac4329cbe97ccfe9030d65515cd5437f24e4d50464ba65c2ccaaa61440d0"
+    },
+    {
+      "condition": "baseline",
+      "seed": 18,
+      "days": 28,
+      "semantic_sha256": "456adc9a8e42d5fd9c19dc8e617ea8526b218bc42e8087320f917b26c4b1023b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 18,
+      "days": 84,
+      "semantic_sha256": "1640f42665231fd5ecd629ac1c5d1960597488cd3d59f4ca24e77d5b56e1c994"
+    },
+    {
+      "condition": "baseline",
+      "seed": 19,
+      "days": 28,
+      "semantic_sha256": "8981edbcde392c41074c15504ad9bbdfeeaefeb8d6b7aa72e18c13e3155bb6ce"
+    },
+    {
+      "condition": "baseline",
+      "seed": 19,
+      "days": 84,
+      "semantic_sha256": "3366ec08f202d5ab64c87da70abf158f02a32fc00486ae03c70d7d704bca28de"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20,
+      "days": 28,
+      "semantic_sha256": "7f431c395a24859cd8a23e4c1166d450044ee6915d0d9ce4ecf4cd9245a0e9ca"
+    },
+    {
+      "condition": "baseline",
+      "seed": 20,
+      "days": 84,
+      "semantic_sha256": "28b7f222b40f08b9aae1e2f41f0ac989a41fa1518890bc01873b2451c1985d39"
+    },
+    {
+      "condition": "baseline",
+      "seed": 21,
+      "days": 28,
+      "semantic_sha256": "625b14e8ec6ba3c4b2b6f4605b8bdc0deb36a2e449b85e12cac64652b61a6f47"
+    },
+    {
+      "condition": "baseline",
+      "seed": 21,
+      "days": 84,
+      "semantic_sha256": "fdaf1b7463cd304ba1e3da2bbfa0a4ddda76abe46271d2e58460a216789151db"
+    },
+    {
+      "condition": "baseline",
+      "seed": 22,
+      "days": 28,
+      "semantic_sha256": "074f11fce01effe5b7dd44a895b4298ec536e7a78341504130328fdb97d728f0"
+    },
+    {
+      "condition": "baseline",
+      "seed": 22,
+      "days": 84,
+      "semantic_sha256": "0856e4575be00a2a895986a8583d3ffbea2d8f1be690fc33d23004bfb7b5170b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 23,
+      "days": 28,
+      "semantic_sha256": "2269127519dd979b3a18726e1289f2bb47994eedfc5057cd485ee3ed7c3d95dc"
+    },
+    {
+      "condition": "baseline",
+      "seed": 23,
+      "days": 84,
+      "semantic_sha256": "f0b5710f8eef24beef2a9206614e28d4722dd6b310f063f554e527fc9e5187c8"
+    },
+    {
+      "condition": "baseline",
+      "seed": 24,
+      "days": 28,
+      "semantic_sha256": "732d08d8fce9ff1c02c53ce45ea329dc1d2f4a73cbc300d619442dff1903efcb"
+    },
+    {
+      "condition": "baseline",
+      "seed": 24,
+      "days": 84,
+      "semantic_sha256": "e46f5d7eeb55d7aa437e40775b3705a03adb51f867c592a3d45da8b834496378"
+    },
+    {
+      "condition": "baseline",
+      "seed": 25,
+      "days": 28,
+      "semantic_sha256": "1028718c6013064dfca5ebd521a38dc73b7c861fb2fe55c184c80d54e5e2bd58"
+    },
+    {
+      "condition": "baseline",
+      "seed": 25,
+      "days": 84,
+      "semantic_sha256": "ed0f1e4a4ce806b0cefdfe5f55850bfe5c258d4e456768f8fa3ff23dd72bb7b8"
+    },
+    {
+      "condition": "baseline",
+      "seed": 26,
+      "days": 28,
+      "semantic_sha256": "d19ab89112c79bad969bc0395afe04b3ae1841f53374ac90905aeec62003009b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 26,
+      "days": 84,
+      "semantic_sha256": "b299224411b5efebb5384b1deb8f4f4ceaa57609695958abf0ba8b7ba6159bce"
+    },
+    {
+      "condition": "baseline",
+      "seed": 27,
+      "days": 28,
+      "semantic_sha256": "d240c18b0f0f3046b5322a467626aa260d9eed2116638f3bb6c3a06efbb047e4"
+    },
+    {
+      "condition": "baseline",
+      "seed": 27,
+      "days": 84,
+      "semantic_sha256": "55a8c27a25e4ebf3aea528d79db8a7c6215170894ee3f054474a47337c9e8cbd"
+    },
+    {
+      "condition": "baseline",
+      "seed": 28,
+      "days": 28,
+      "semantic_sha256": "3f296e1eca47f1e24e25ee6aa826e761b78085a172149f959b68005452cfe7f7"
+    },
+    {
+      "condition": "baseline",
+      "seed": 28,
+      "days": 84,
+      "semantic_sha256": "c239424634460dcbf677396ef94bf34ebd5991876f917a69d0dbd05d5ad8fe7d"
+    },
+    {
+      "condition": "baseline",
+      "seed": 29,
+      "days": 28,
+      "semantic_sha256": "254b3fc8f0c164980515d1c5258195a3b784d30447829349a1ec1d48da874f44"
+    },
+    {
+      "condition": "baseline",
+      "seed": 29,
+      "days": 84,
+      "semantic_sha256": "5aaf8d8de0e2deded6107d7ef611d589d6ac6fd6bfeb370a25851a891e15d376"
+    },
+    {
+      "condition": "baseline",
+      "seed": 100,
+      "days": 28,
+      "semantic_sha256": "f8b77cbd222de66564b25397a0b367e1be125cdea37829ab4906debdd8fee60b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 100,
+      "days": 84,
+      "semantic_sha256": "9932d5160dd4b9e4520fc0a6d3e4ac389217a40d5a254754c21712117c320e55"
+    },
+    {
+      "condition": "baseline",
+      "seed": 101,
+      "days": 28,
+      "semantic_sha256": "e645461d65692733434d220fc253c3101782a84f8fffd392beb023555fce8a71"
+    },
+    {
+      "condition": "baseline",
+      "seed": 101,
+      "days": 84,
+      "semantic_sha256": "4e41fab80c21468bf9c407ed6ba0fb2b92b83bd43f30cdc725dba7e023485133"
+    },
+    {
+      "condition": "baseline",
+      "seed": 102,
+      "days": 28,
+      "semantic_sha256": "7dd1657439dcd37a6bcf0e71e590d43c8b98326d664aa3d8681e7ff58921c9a1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 102,
+      "days": 84,
+      "semantic_sha256": "4e1bf24ea03d4fbeb6226685e35f232b90300c3429fcf701466cbb26b5261362"
+    },
+    {
+      "condition": "baseline",
+      "seed": 103,
+      "days": 28,
+      "semantic_sha256": "de715286694298fc90b718d27d2cdc6ee6c421926ee4f1fd8f2746afbb7678ce"
+    },
+    {
+      "condition": "baseline",
+      "seed": 103,
+      "days": 84,
+      "semantic_sha256": "ca830cc2e32091287f0e0479e47b6a04f98e922fa22066780107e296eed81cf3"
+    },
+    {
+      "condition": "baseline",
+      "seed": 104,
+      "days": 28,
+      "semantic_sha256": "adee7c5cdfb4d89de6608ff9a5afd9179a6fde9096af5bdcf8edd95c41fe0a06"
+    },
+    {
+      "condition": "baseline",
+      "seed": 104,
+      "days": 84,
+      "semantic_sha256": "95ed1d4a58bcf76b6aefc28d52530e4ae646bb2642391f2faeb85654d9cc06dd"
+    },
+    {
+      "condition": "baseline",
+      "seed": 105,
+      "days": 28,
+      "semantic_sha256": "28fea9b49e96764440ad8460e39c9a29fa40217e49c0c5e87797a0507abb9ede"
+    },
+    {
+      "condition": "baseline",
+      "seed": 105,
+      "days": 84,
+      "semantic_sha256": "e6a050880001c6bb5045b083dcf61fc979dd4049e12b497507c98fef58b967dc"
+    },
+    {
+      "condition": "baseline",
+      "seed": 106,
+      "days": 28,
+      "semantic_sha256": "82d93c38524579741b74b4f3526aaaeb5d0c41c9804810d03e5bfb8121b634b5"
+    },
+    {
+      "condition": "baseline",
+      "seed": 106,
+      "days": 84,
+      "semantic_sha256": "b437cfae1d1ba88ef5b8f116b71a884a04f51d2d3f8e161d33fb6cb07f7e3369"
+    },
+    {
+      "condition": "baseline",
+      "seed": 107,
+      "days": 28,
+      "semantic_sha256": "51206679f8e3beb11f5504ec0722d7671a7cc10b16a2fb3028a30dcbe84829e6"
+    },
+    {
+      "condition": "baseline",
+      "seed": 107,
+      "days": 84,
+      "semantic_sha256": "e293990554f0ae33c6d493a74c1c1dee96aaf5415bd2dca275646cb4573a51b2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 108,
+      "days": 28,
+      "semantic_sha256": "d94a99716fc3d3f04435b5f53faa44a845df061477738e9de2c98fdfc06cf903"
+    },
+    {
+      "condition": "baseline",
+      "seed": 108,
+      "days": 84,
+      "semantic_sha256": "91bf30da7de23a1dde54a8df623a1cef04e5fdfef85c6eba9f460e88f6b76ac8"
+    },
+    {
+      "condition": "baseline",
+      "seed": 109,
+      "days": 28,
+      "semantic_sha256": "5a242ad8dcd9a8784eb3cfbdbfff4af67437155bce032202be0b80d4f3a24d3b"
+    },
+    {
+      "condition": "baseline",
+      "seed": 109,
+      "days": 84,
+      "semantic_sha256": "688d052b80e0168e26423c99fc4e5b211d7927f22309e3dac60ca43257b7b90f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 110,
+      "days": 28,
+      "semantic_sha256": "d11586607411d1ee040839c02bbfd8f0bf017ac1941eb234f27d185b0451b98a"
+    },
+    {
+      "condition": "baseline",
+      "seed": 110,
+      "days": 84,
+      "semantic_sha256": "0d5a01b1006bb7df1bcc2e7c1b53e80555b73e3696bf088d8109e29cac255664"
+    },
+    {
+      "condition": "baseline",
+      "seed": 111,
+      "days": 28,
+      "semantic_sha256": "62e1c8adb2d84dabe70add54db4818f099dc477b23d0d795c754c309f016a867"
+    },
+    {
+      "condition": "baseline",
+      "seed": 111,
+      "days": 84,
+      "semantic_sha256": "60af10469f3c7f352f37f62b94ee6a30135662e94be7ef84d911c2813da9cb79"
+    },
+    {
+      "condition": "baseline",
+      "seed": 112,
+      "days": 28,
+      "semantic_sha256": "32b2b69859347a75b5be7b3d992e04f05b3c7a3a4235294df78603a54609c838"
+    },
+    {
+      "condition": "baseline",
+      "seed": 112,
+      "days": 84,
+      "semantic_sha256": "b6d264ba7aee4b5095fdc373ea39c3782d6f5ca2c53510d6d8f84ab8081687f9"
+    },
+    {
+      "condition": "baseline",
+      "seed": 113,
+      "days": 28,
+      "semantic_sha256": "559393c674a53ffe73e6fbab64763601f6b27e75bd93cb810355b5a0451b1e72"
+    },
+    {
+      "condition": "baseline",
+      "seed": 113,
+      "days": 84,
+      "semantic_sha256": "6dc4d52fa07b44457dc8e2ef3e391e47bcfde63f732c21c31c96c21d2ed3d32f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 114,
+      "days": 28,
+      "semantic_sha256": "02aa73abe705138405abe407b602782c6e712bead5cc2c65ea5f91a4c0006345"
+    },
+    {
+      "condition": "baseline",
+      "seed": 114,
+      "days": 84,
+      "semantic_sha256": "777f700daf9921d56ad1501695bf452e10e30ee0cf9ebe19b6ebd538c6789fff"
+    },
+    {
+      "condition": "baseline",
+      "seed": 115,
+      "days": 28,
+      "semantic_sha256": "7df6082325149a28cdd2173b9c196d51049a9a9b6ebb1a63cb8d60d801ba5130"
+    },
+    {
+      "condition": "baseline",
+      "seed": 115,
+      "days": 84,
+      "semantic_sha256": "51a32291447a2176ced341dba6fa35746551531ae703303f693a19af59947375"
+    },
+    {
+      "condition": "baseline",
+      "seed": 116,
+      "days": 28,
+      "semantic_sha256": "88baf2d9927bc01ab35a1b2377b66d036ceb14831d66503bd973deacf1eb233a"
+    },
+    {
+      "condition": "baseline",
+      "seed": 116,
+      "days": 84,
+      "semantic_sha256": "21e13e88a8e630a1640bd4711ae1e4ffeaff1ed0a7492369e5f50edf1f8107ca"
+    },
+    {
+      "condition": "baseline",
+      "seed": 117,
+      "days": 28,
+      "semantic_sha256": "b7f95b43da05de1c553dfdcb6696845b45a5ca10ebb70ae22c4f40886057b1a2"
+    },
+    {
+      "condition": "baseline",
+      "seed": 117,
+      "days": 84,
+      "semantic_sha256": "b49b11dea0dae0409dfd8a341fab0ce8ef76c5f59d5e509567f75a1116411872"
+    },
+    {
+      "condition": "baseline",
+      "seed": 118,
+      "days": 28,
+      "semantic_sha256": "c3d33327ee1cc3d38c2eb32c6b3e4f0d48d3f01c461ddb11a7369eff1a86a319"
+    },
+    {
+      "condition": "baseline",
+      "seed": 118,
+      "days": 84,
+      "semantic_sha256": "9ee23b11bdebce7d2cd3b0065aae6f2eef7f716a5ea0ae7f6faddf7cf663a488"
+    },
+    {
+      "condition": "baseline",
+      "seed": 119,
+      "days": 28,
+      "semantic_sha256": "f7558f0b0a2d089f740bb3c3f44b8baa866b4c0b4aff07847d7db349492d41f6"
+    },
+    {
+      "condition": "baseline",
+      "seed": 119,
+      "days": 84,
+      "semantic_sha256": "86f7288b11310a5170695c913e7bfe5504e86fe19fb4e5035231d5eaf9bfa3d0"
+    },
+    {
+      "condition": "baseline",
+      "seed": 120,
+      "days": 28,
+      "semantic_sha256": "e377f88acdccfcc96f0e142173e593281912b01e46b4e6847699612902b4c1b7"
+    },
+    {
+      "condition": "baseline",
+      "seed": 120,
+      "days": 84,
+      "semantic_sha256": "4627fee3468a400962f7dfd2aeed207fb19b0ed0dcb0d2d80d087aa3d88f9a2d"
+    },
+    {
+      "condition": "baseline",
+      "seed": 121,
+      "days": 28,
+      "semantic_sha256": "befefa3506b4be0d8e4d92e4c68fc24b987019fbf18e2949441233aa785faa52"
+    },
+    {
+      "condition": "baseline",
+      "seed": 121,
+      "days": 84,
+      "semantic_sha256": "ad865085b31edbce6cdd900e83c74b27891793b07cceb5026e2df8259c5ab5df"
+    },
+    {
+      "condition": "baseline",
+      "seed": 122,
+      "days": 28,
+      "semantic_sha256": "e4c14d5f48700bfa60326cee6dd9f936804442fbd7d286c94f33c7275b00bd4c"
+    },
+    {
+      "condition": "baseline",
+      "seed": 122,
+      "days": 84,
+      "semantic_sha256": "e1b34cca1fddf48146e0422cefa26a31b5a56a08d49839a2b93595eafb3a94f1"
+    },
+    {
+      "condition": "baseline",
+      "seed": 123,
+      "days": 28,
+      "semantic_sha256": "0ee28d2c3e4d4e2db32cda34b675852b98749d40d98a0a5311f3c0f8cbf47df3"
+    },
+    {
+      "condition": "baseline",
+      "seed": 123,
+      "days": 84,
+      "semantic_sha256": "e4cc1c57b8df18dcddcc072ee773a920f249f710a6e9c868aa3b149d1aa67383"
+    },
+    {
+      "condition": "baseline",
+      "seed": 124,
+      "days": 28,
+      "semantic_sha256": "7985a22a38b37588a0a9f7ce0a314211dec8a3a97f399cd77563c6d935a8304e"
+    },
+    {
+      "condition": "baseline",
+      "seed": 124,
+      "days": 84,
+      "semantic_sha256": "54c600b446018ac9d4aaf561becb595bf7781ac7fc68a38694f4ae8ffe38729f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 125,
+      "days": 28,
+      "semantic_sha256": "195c6d9a80d8bc39d6a7b140734882b645c4c6b54abf6577331ee1cd7a6c16bc"
+    },
+    {
+      "condition": "baseline",
+      "seed": 125,
+      "days": 84,
+      "semantic_sha256": "6f48067f9c73b470d6f5c32ad1a85d1224df06b22d930a13f037993f6dec4b38"
+    },
+    {
+      "condition": "baseline",
+      "seed": 126,
+      "days": 28,
+      "semantic_sha256": "3ab83a746a27fbb44f59e2851e0cb0b730c11343aaa0fa1bf7976cccc2d98160"
+    },
+    {
+      "condition": "baseline",
+      "seed": 126,
+      "days": 84,
+      "semantic_sha256": "e6adee9b4d3925ed90e4e100dd5e0a9828b64d223d0cc9cdbcec91de3cd43ddf"
+    },
+    {
+      "condition": "baseline",
+      "seed": 127,
+      "days": 28,
+      "semantic_sha256": "e72da4d237fef1f7c3be121f9116885eb6534bdba2245e1a2e2d6271f09c117f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 127,
+      "days": 84,
+      "semantic_sha256": "bf0f0dfddcfbead03972756b9a1b5f2cb71a42837bd58664adb024228dd67bab"
+    },
+    {
+      "condition": "baseline",
+      "seed": 128,
+      "days": 28,
+      "semantic_sha256": "40d2e27511f617291f08b71b1bee495baea417b246e122e4aff3aa6f06ddf2f0"
+    },
+    {
+      "condition": "baseline",
+      "seed": 128,
+      "days": 84,
+      "semantic_sha256": "7b7440e1953e6ecdfcb1ba0e960390cacf45d5d4969689ae2e45aa083658a89f"
+    },
+    {
+      "condition": "baseline",
+      "seed": 129,
+      "days": 28,
+      "semantic_sha256": "6afd0fbf7f5093e30303f58811ca5602d541769574414a352c8d8dab29e7630a"
+    },
+    {
+      "condition": "baseline",
+      "seed": 129,
+      "days": 84,
+      "semantic_sha256": "d20abfb53f9377818bc60a4f52ec023222d64604755ad91e57de0351a7e88bb7"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 0,
+      "days": 28,
+      "semantic_sha256": "6fafb9d2f99faef6a7c98634806a11d9dd8ee6393c46e14b648d19e043020272"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 0,
+      "days": 84,
+      "semantic_sha256": "bab59929787c80d398ac10241bf37e990f655c2978ffe7e8a61c2c5b6a9352ed"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 1,
+      "days": 28,
+      "semantic_sha256": "373c64953a7ed3ebe14f218a374b5926b2701f18f0c2ee1d3be0174bde2e8bb7"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 1,
+      "days": 84,
+      "semantic_sha256": "80bcf1aac072ed56e2605809fc9780cf2254795337463a8e4e09a64bb0295a16"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 2,
+      "days": 28,
+      "semantic_sha256": "49a1508eede34a2c40a3f8f98391bdf2eed4c9d0769c416f70c36c790842ecae"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 2,
+      "days": 84,
+      "semantic_sha256": "17eb01764a1cefda8e9251dc354ce54fcc127e681ee7ef02c63b39b3df922fc5"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 3,
+      "days": 28,
+      "semantic_sha256": "a5393f6f19f42e6b169c4fee9c79cd2ac942e8267befbdf205ac23883faea570"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 3,
+      "days": 84,
+      "semantic_sha256": "00dc91c005a17a4e495d3b0ae0429a4a2d7f3b3f9c5ed418c4f09c3e8439d028"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 4,
+      "days": 28,
+      "semantic_sha256": "037931e8761d409198efffe05bb13a9b0e4ca38bfa5f6a51297f23d997e36146"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 4,
+      "days": 84,
+      "semantic_sha256": "50cd845e35d4154ed887884fac2995aff23b86478db25fc1161b82d639904167"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 5,
+      "days": 28,
+      "semantic_sha256": "df7189088c29c6da7c3f8a2605b378c72eb7f76474a5667fab9f10777162fcc0"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 5,
+      "days": 84,
+      "semantic_sha256": "ba9b6180800a95e8effcf93622abba841c9ec4448f225597211e80995a4620a9"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 6,
+      "days": 28,
+      "semantic_sha256": "17bd30e926bd28a8b5354e399e0804db4abbe0517800e81d44145eeaddeb3ecf"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 6,
+      "days": 84,
+      "semantic_sha256": "f25128d8b79299ae61774a2e8701f762c7f3387888b6930ae75edb5a6831e547"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 7,
+      "days": 28,
+      "semantic_sha256": "3dc472f2c4f71d3ec40672b0f58447c4c377150a5e14f441cf5e906e959b9edd"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 7,
+      "days": 84,
+      "semantic_sha256": "f74fe0482575e48c7ec066109c41fd79aff4bdb6ab242a43c60fb077bc92565d"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 8,
+      "days": 28,
+      "semantic_sha256": "05af29d0b30ace6400bca9fa1635e2af3910a5c99c0f0af76a3cc83c67eed2c9"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 8,
+      "days": 84,
+      "semantic_sha256": "75f0dba3a89026ee8135a8c81da6257d3a6e958cc1c5297c907c53309535a9a2"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 9,
+      "days": 28,
+      "semantic_sha256": "13e27ee94c51cb216dc6da191dcda677e8164621ff91e431b6c1ed83dc667ab1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 9,
+      "days": 84,
+      "semantic_sha256": "50dfa945df7ab967f35393256f5cf59dfb65cb17daae21a315fb66542d72c218"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 10,
+      "days": 28,
+      "semantic_sha256": "6a7ea47738f2a683a4b98efa3d1ef3ff3192ce11aa4ab9e3d2a7e3b6249b9e58"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 10,
+      "days": 84,
+      "semantic_sha256": "1cc1c107dccc17543a79d177aaaef3dd943ccc997c1f6fedd206f2cf108bcee1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 11,
+      "days": 28,
+      "semantic_sha256": "d14d0d31dcf039cb3f7ff0679284d43df95fe388c643b5ed271427db89151fe4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 11,
+      "days": 84,
+      "semantic_sha256": "080df7baa61ed77cf2717656fc9b7b87049a0657a7f0e8b969b81197e09580d1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 12,
+      "days": 28,
+      "semantic_sha256": "007ef69920b4121e87ec54282fb99d7742f6c0fed6ab72d98a5db0ef4e6138df"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 12,
+      "days": 84,
+      "semantic_sha256": "a752ca2679f9e5fdcab87a7151c855ba20a708be2b1049e9d6cd5669c8dd79d0"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 13,
+      "days": 28,
+      "semantic_sha256": "ba090e6a2e974f649d00bdc8289953b6a9c5a1a512d52560d0063dccfb6b8290"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 13,
+      "days": 84,
+      "semantic_sha256": "5bcdd703dd7eb171a0a846b364d6ee347a7c34a17c9e317d24acf24ac8a05ce0"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 14,
+      "days": 28,
+      "semantic_sha256": "7ff1c6d003a44ae016b593196b4bae12c5328ec0670a7ddf3641c72906d28f96"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 14,
+      "days": 84,
+      "semantic_sha256": "ddefc6812306b0b369435b907eafd2b83aa440bb4fca1b54b8606b3dc98fc4b1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 15,
+      "days": 28,
+      "semantic_sha256": "55b25bcb64e4cc4563f4e4c1fbd44781df30c44906ca0643936d31609c8a0008"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 15,
+      "days": 84,
+      "semantic_sha256": "a35dc7170cd370ab2d837428068debf3417c0a0448acebd36c15aec945db9dbd"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 16,
+      "days": 28,
+      "semantic_sha256": "4d7942ac042d612bb18d7445dc62ca8738a2e15b41e220baf5a0ffd4e418f1a1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 16,
+      "days": 84,
+      "semantic_sha256": "6d0f2421a546c376d45fea4819ec2b97553f57fc1165217adb486dd661c2cfe9"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 17,
+      "days": 28,
+      "semantic_sha256": "099c973b7a3673bd22e4fc06023c84c2b096ee744b11a79f3c0ebab4f56a940f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 17,
+      "days": 84,
+      "semantic_sha256": "72801120639a18a59aaa4e1cc9553ed7c66af7adf0a980b1afd95f18a0128c99"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 18,
+      "days": 28,
+      "semantic_sha256": "ea75b2b504557ecfad14bfd8c6fb9bf6575e63f0e0feab86b28632985c2c5c20"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 18,
+      "days": 84,
+      "semantic_sha256": "1aff2d202f163f5f2490f592a881e1c3df8f30e3f005711234b1a5931e256302"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 19,
+      "days": 28,
+      "semantic_sha256": "0d257b745806dacee28d33078478562282e1740de6f729c315725349e1efb772"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 19,
+      "days": 84,
+      "semantic_sha256": "160061136a46d92cf0a49ec9495c2cf93f55177dc7ad090c049ba214c3401659"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 20,
+      "days": 28,
+      "semantic_sha256": "d2f41e32dce9bb0c64c0fd88d079d98ce65bba58c19a5db3f616e4c7529c8948"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 20,
+      "days": 84,
+      "semantic_sha256": "48555500eae41976e81d3165e9b25499149332c21f4bfb24f40053059255797d"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 21,
+      "days": 28,
+      "semantic_sha256": "a7fc88f99023b1b893bde288ce1ba5474e1a8d7b9fc8ca861e6c5388391d5d09"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 21,
+      "days": 84,
+      "semantic_sha256": "1bcce92765d23aada19658af18e918878b9fb88009bebc2c3a454d71c6df9b48"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 22,
+      "days": 28,
+      "semantic_sha256": "f887325ec2fe7f987e4a402844f212220ad3895bd1720475ff6020dc8efa629b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 22,
+      "days": 84,
+      "semantic_sha256": "95ff03638ab2e522783f5350adf5d895a80c7c2c5893b4bbb5c5a31b49574c8b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 23,
+      "days": 28,
+      "semantic_sha256": "e076f3f8b52e2f7b05d8d9a19afb9a338aaf29920ef219ae690b1f9e48a3dcf1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 23,
+      "days": 84,
+      "semantic_sha256": "32dfe92a94e7bf96f919e461aa44cafeb1b8aa4d77f2c9d5d6b6b87654e5c57d"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 24,
+      "days": 28,
+      "semantic_sha256": "4d293d484cb5e4f607e73da3d0e8c94cc142693fba326a58ca50cb8690595705"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 24,
+      "days": 84,
+      "semantic_sha256": "2f6ccbd62d6b7a236674ace9f866e8ed24bfcb589bd0ddafa0196f6e043a3e93"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 25,
+      "days": 28,
+      "semantic_sha256": "59217421723dc6cfa4e0442d27e0011d8a4f384aae00fa4085fa139e1d2c3f2f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 25,
+      "days": 84,
+      "semantic_sha256": "dce23b55eaf8d7abbd66bdf76356fd5ab07e57b8b3e4e5e5c30fae623ff87e6f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 26,
+      "days": 28,
+      "semantic_sha256": "2296e49f3a309410caf65662966c4d06e2b113b8c8ab511ac7f86a4563312176"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 26,
+      "days": 84,
+      "semantic_sha256": "68d3f35256ea915c26cfc42972bc2bfaa358fc97da9058a57577a968df467f01"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 27,
+      "days": 28,
+      "semantic_sha256": "057d8277def27ad85fd41f27fe86d84a5b4479e0d8f5210297375ad10d993b2b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 27,
+      "days": 84,
+      "semantic_sha256": "0b853de46792582833db32afd5d0d61428735c8695a157f8cad5af730a538a35"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 28,
+      "days": 28,
+      "semantic_sha256": "e0dd3bebd847472351b4986a9d804b484d76fc7fafccc10b1036dba6663aef5f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 28,
+      "days": 84,
+      "semantic_sha256": "f32ddab70ed4534c119b536ba05ad6447e0a7694c25266553c9d37add8352da1"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 29,
+      "days": 28,
+      "semantic_sha256": "9523c8d80fbdb5592ad4935c0779714165b87f7ab375d9c38ae6b1d840f2ecd2"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 29,
+      "days": 84,
+      "semantic_sha256": "0cae4cc6655f4315f3d88bf53b6a27c81ac3fcc968ac1eaade475fbfddfe3750"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 100,
+      "days": 28,
+      "semantic_sha256": "5431a712f7ac3ef19c6fc6d2d9a016681cb102fae189f6b6787b329f67a7a2aa"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 100,
+      "days": 84,
+      "semantic_sha256": "a6de11885f9bcabaa8494db2d8ce99b51e3642481079f3ab73e5236fcf35bb57"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 101,
+      "days": 28,
+      "semantic_sha256": "c6dddbe90d27c163c4fe8bfbe0010c971a4e600b67a33097e71941fafc2573c9"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 101,
+      "days": 84,
+      "semantic_sha256": "1ba1cf5f0d5ef5b444c10ff69973ff6fbd00450b789998a9de4d4386a7540f26"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 102,
+      "days": 28,
+      "semantic_sha256": "44d5ae295ed82b1d818f4f4daf1a9389ec9464f2674fc10e70bbb49ba42b7545"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 102,
+      "days": 84,
+      "semantic_sha256": "44bab684adb4d89b4752df099c72ea75326bd7ba8673631a3218bb42d0acca69"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 103,
+      "days": 28,
+      "semantic_sha256": "a5404a35c0f769543bd512d23ff9377d09512bbdf86534e8fb07bee67851d6c5"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 103,
+      "days": 84,
+      "semantic_sha256": "ec3c05fa99bd7138117e5f15fda4564f786beb8b1d1a76ead727485f48470c00"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 104,
+      "days": 28,
+      "semantic_sha256": "f2e6a7624b79ce709e3cbc245b09e2982db475e38e15e91b20bd41a5f37fcba4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 104,
+      "days": 84,
+      "semantic_sha256": "24ddb66ecb468bb732594652528b5950d7a35e5cee88bd6c6a141e62049ddc96"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 105,
+      "days": 28,
+      "semantic_sha256": "c07177f2453e9502a25456e1288c7203a2879b82ece1f2ebdf6882fd60fbb5be"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 105,
+      "days": 84,
+      "semantic_sha256": "6b1a7e15720cbf8b6f688bce7cd41bdd630627cf207d34785a5ebd3017a263cf"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 106,
+      "days": 28,
+      "semantic_sha256": "104e6a0180f056fc45037f1a7cc386e180c2220f0c9b7a3f68297aaca7fd3361"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 106,
+      "days": 84,
+      "semantic_sha256": "034a62f855403a0aaf9509b2005c43a9e4c0f2efdd8a5a7138ff65cf931a84f3"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 107,
+      "days": 28,
+      "semantic_sha256": "7630a6d95f8e9c5c57ae8dfdb3cec53a4767976e2312f937699094cb15363180"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 107,
+      "days": 84,
+      "semantic_sha256": "80b17b140d93e2d2721ed37e05e3f4f0e182eeb6f0d92b9805ad776baf68fe2f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 108,
+      "days": 28,
+      "semantic_sha256": "92a93fa4d9d6e5cda170ef6e755eaed5f6e60109c1ff5ea5689a57a3d7a175b7"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 108,
+      "days": 84,
+      "semantic_sha256": "8538b49df446d0f6b1c17aa857618d15df38780927d9314875942b62b2795e79"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 109,
+      "days": 28,
+      "semantic_sha256": "306fd814999c65888affab54e87a7d0d147b3030ace40dd3e547ba6d7ddf0fd5"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 109,
+      "days": 84,
+      "semantic_sha256": "5bb75870566a37b14459b5a396f7d789f85147db3368e5a75aa6f91e35a06964"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 110,
+      "days": 28,
+      "semantic_sha256": "b0917ac82600ad6fd6c8d50922fa7047ddc47712bb2c88b67ca51c86c4b572c5"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 110,
+      "days": 84,
+      "semantic_sha256": "130331097f4e42aa22956539aaad8de6ba390a19bbf5342156e68c779ffde3c3"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 111,
+      "days": 28,
+      "semantic_sha256": "28512c091367a140212d22ef47bd9367d7b46353c7c0d3ab5726fe2240461873"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 111,
+      "days": 84,
+      "semantic_sha256": "f48432ddea19753a26a9b223e9fbaff6e692fa03b06ca65341bd2ecacfac49c0"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 112,
+      "days": 28,
+      "semantic_sha256": "19cb90959d2c71cfb893745dfa86caf24fc222cec4b6d51725e439efc1e655e9"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 112,
+      "days": 84,
+      "semantic_sha256": "9798f935647cff6a9833d4e84346260a64099dfa514c87162c3a17426cef0fe4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 113,
+      "days": 28,
+      "semantic_sha256": "4dfbda0587a9a5b09a68b5667953bce12210c2422d3efc1c6bc03b8347a0d542"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 113,
+      "days": 84,
+      "semantic_sha256": "7657f55c61eb91c5d3874c13302131a01e3e13de7a1a725fd4778b7a1c56874e"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 114,
+      "days": 28,
+      "semantic_sha256": "a5d96868c7d3bb8e1ae3b8c59aa76f9e615360b5d759925a15e059ffc4ea5980"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 114,
+      "days": 84,
+      "semantic_sha256": "ec8c89648fc01a25b4dfcdbaab0fd422cdd0179eb427e636119ae9c09e3dd1b8"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 115,
+      "days": 28,
+      "semantic_sha256": "a81831e3eeb80d28d3d34b652648d17ea8673828d789220c104136d91aba4d08"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 115,
+      "days": 84,
+      "semantic_sha256": "14c0e466252979a68d4e91aed00aa0ab948b1ec51949c82b4d8c0f05c64ba73b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 116,
+      "days": 28,
+      "semantic_sha256": "b18600145b2fb1b3ae5da9ecb21e4eec4e58dbf0c3a2f95ce03c68e3e6a30d34"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 116,
+      "days": 84,
+      "semantic_sha256": "b78782060d970693d181acdebe609484f89b8690ad6ee6a98aa8a158397e35cf"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 117,
+      "days": 28,
+      "semantic_sha256": "6cff06f897f0e8f91efe4bae0c2e89a6886fc1a6d83cbef48928ea3e87464772"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 117,
+      "days": 84,
+      "semantic_sha256": "9f641561190f3980bb6897ecdb9a942ae090f28a7f1d4ed5645040ac5a42d01b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 118,
+      "days": 28,
+      "semantic_sha256": "46c2b117bd518a49bd49b7a428652ad47f3addc630fe1f79f2239cc8b576e76e"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 118,
+      "days": 84,
+      "semantic_sha256": "6bee21e2e52a9d35f22771972d288c2be1b49568aea0141e80b6c093e47b5604"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 119,
+      "days": 28,
+      "semantic_sha256": "70e71ebd1708b862333788306b2dfa10a06b42cb722268011b3c629c0f59d2d8"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 119,
+      "days": 84,
+      "semantic_sha256": "ecc69eae8232c697b378e3971550f9e0a184841e50bc3e1dc44ec4cdc6c574fe"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 120,
+      "days": 28,
+      "semantic_sha256": "6120cda72772d251093ac321bd4cf7cadcebf476ccf6f644de1f38adfea27c59"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 120,
+      "days": 84,
+      "semantic_sha256": "9ea842967a87ba50a0e1a8ceb4a9badd07b3f462a01ab903f03d0e37ce837e9b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 121,
+      "days": 28,
+      "semantic_sha256": "55fa3c0b2ae41166b494eb276f50ceed762f3c3cf61a86d01cae510753f39b51"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 121,
+      "days": 84,
+      "semantic_sha256": "0df2178a15a1570474b92a27e7e02cf55084bb476cd4c704972f1ee3bb137b82"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 122,
+      "days": 28,
+      "semantic_sha256": "b51032474f0ae3e6a1fac02f43b76fcdeb7c2eb71bc002c37d679e3f75830111"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 122,
+      "days": 84,
+      "semantic_sha256": "9503684bb30ab9af891319230255e6808d86519bb538ed5d58ca9d19928c25fa"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 123,
+      "days": 28,
+      "semantic_sha256": "e19ec97354987dd52596eabe8a2295a4b4c387054b03ae84ff4e2e869eb5501b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 123,
+      "days": 84,
+      "semantic_sha256": "aec17da0a90fce033581b254d7aa7eb20bec14ee5937053b83d0280afcfd2c63"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 124,
+      "days": 28,
+      "semantic_sha256": "7d259129e6571119d10c6d356dca6769ceafb958509d0c19c35b5dfa26dc982f"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 124,
+      "days": 84,
+      "semantic_sha256": "bc8c402fab4f0148a420da3346967d28708d57966391a3ecbf4e3357a652ed4b"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 125,
+      "days": 28,
+      "semantic_sha256": "c6ef48d1577785841013f30c77c37f389ecde575b1b20bd9abfb204347d03323"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 125,
+      "days": 84,
+      "semantic_sha256": "0b69c6775549a49090beb012eb08589722f7bc48eebf921f4d4a1060d238cbb4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 126,
+      "days": 28,
+      "semantic_sha256": "fa21eac6089bea52a512713073cf5dd21687034d1a6753692117ffc9de73f0fa"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 126,
+      "days": 84,
+      "semantic_sha256": "23cb09c67996d26e3ab139ee5a8ee04e4a89251f419f7f225aec728040a6efa4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 127,
+      "days": 28,
+      "semantic_sha256": "d694bb17c6fa4b3f5639541e95002663fa6344fd3edda5eae47e2784c5f89601"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 127,
+      "days": 84,
+      "semantic_sha256": "422b4755412d4d40e7a9dfebfdee16a5647574a5f3ca837d22ddd3a3e3769948"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 128,
+      "days": 28,
+      "semantic_sha256": "8ae9a77b05151ae505a67d7a643d3bd5e9088a8345cfa2150504154d764fa1d3"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 128,
+      "days": 84,
+      "semantic_sha256": "efc81b24a9a6bcfbe5e0e08198192043a9ff24a701562df79636ed317a4617a4"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 129,
+      "days": 28,
+      "semantic_sha256": "51dc05c6099ab173f39611cc07b911d8f1de47c7b2ef3671dd6c73b6ab55aeca"
+    },
+    {
+      "condition": "player_gain_frozen",
+      "seed": 129,
+      "days": 84,
+      "semantic_sha256": "5af92dea39d456351656e15ad0295f4ae14011a4a01c58049600eebe7a175d1b"
+    }
+  ]
+}

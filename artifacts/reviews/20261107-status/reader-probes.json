@@ -1,0 +1,22 @@
+{
+  "negative_fatigue": {
+    "accepted": true,
+    "day": 84,
+    "ledger_discrepancy": 0.0
+  },
+  "unknown_memory_owner_ref": {
+    "accepted": true,
+    "day": 84,
+    "ledger_discrepancy": 0.0
+  },
+  "missing_all_history": {
+    "accepted": true,
+    "day": 84,
+    "ledger_discrepancy": 0.0
+  },
+  "balanced_cash_edit_without_transactions": {
+    "accepted": true,
+    "day": 84,
+    "ledger_discrepancy": 0.0
+  }
+}

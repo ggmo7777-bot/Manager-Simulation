@@ -1,0 +1,222 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "club_a_goals": 150,
+  "club_a_pass_completions": 236,
+  "club_a_possession_ticks": 2459,
+  "club_a_shots": 260,
+  "club_b_goals": 48,
+  "club_b_minus_club_a_gd": -102,
+  "club_b_pass_completions": 34,
+  "club_b_possession_ticks": 2061,
+  "club_b_shots": 386,
+  "club_rosters": {
+    "club_a": [
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "club_b": [
+      "p4",
+      "p5",
+      "p6"
+    ]
+  },
+  "condition": "coupled_transfer",
+  "days": 1000,
+  "elapsed_seconds": 0.0,
+  "matches_played": 142,
+  "mean_skill_gain": 0.386968,
+  "p3_appearances": 64,
+  "p3_club_a_appearances": 64,
+  "p3_club_b_appearances": 0,
+  "p3_playing_time_satisfaction": 1.0,
+  "p3_proposals_from_c1": 826,
+  "p3_proposals_from_c2": 0,
+  "p3_skill_gain": 0.473391,
+  "p3_transfer_requests": 2,
+  "p3_transferred": 0,
+  "players": {
+    "p1": {
+      "appearances": 142,
+      "appearances_by_club": {
+        "club_a": 142,
+        "club_b": 0
+      },
+      "bench_streak": 0,
+      "fatigue": 0.0,
+      "final_club": "club_a",
+      "final_mean_skill": 0.862217,
+      "initial_club": "club_a",
+      "initial_mean_skill": 0.49,
+      "playing_time_satisfaction": 1.0,
+      "proposals_from_c1": 22,
+      "proposals_from_c2": 0,
+      "skill_gain": 0.372217,
+      "traits": {
+        "pace": 0.826652,
+        "passing": 0.88,
+        "shooting": 0.88
+      },
+      "transfer_count": 0,
+      "transfer_requests": 0,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.700397,
+        "c2": 0.62
+      }
+    },
+    "p2": {
+      "appearances": 78,
+      "appearances_by_club": {
+        "club_a": 78,
+        "club_b": 0
+      },
+      "bench_streak": 11,
+      "fatigue": 0.17,
+      "final_club": "club_a",
+      "final_mean_skill": 0.87911,
+      "initial_club": "club_a",
+      "initial_mean_skill": 0.476667,
+      "playing_time_satisfaction": 0.0,
+      "proposals_from_c1": 832,
+      "proposals_from_c2": 0,
+      "skill_gain": 0.402443,
+      "traits": {
+        "pace": 0.877329,
+        "passing": 0.88,
+        "shooting": 0.88
+      },
+      "transfer_count": 0,
+      "transfer_requests": 0,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.502753,
+        "c2": 0.62
+      }
+    },
+    "p3": {
+      "appearances": 64,
+      "appearances_by_club": {
+        "club_a": 64,
+        "club_b": 0
+      },
+      "bench_streak": 0,
+      "fatigue": 0.085,
+      "final_club": "club_a",
+      "final_mean_skill": 0.936724,
+      "initial_club": "club_a",
+      "initial_mean_skill": 0.463333,
+      "playing_time_satisfaction": 1.0,
+      "proposals_from_c1": 826,
+      "proposals_from_c2": 0,
+      "skill_gain": 0.473391,
+      "traits": {
+        "pace": 0.930173,
+        "passing": 0.94,
+        "shooting": 0.94
+      },
+      "transfer_count": 0,
+      "transfer_requests": 2,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.424464,
+        "c2": 0.68
+      }
+    },
+    "p4": {
+      "appearances": 142,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 142
+      },
+      "bench_streak": 0,
+      "fatigue": 0.0,
+      "final_club": "club_b",
+      "final_mean_skill": 0.876814,
+      "initial_club": "club_b",
+      "initial_mean_skill": 0.493333,
+      "playing_time_satisfaction": 1.0,
+      "proposals_from_c1": 0,
+      "proposals_from_c2": 0,
+      "skill_gain": 0.383481,
+      "traits": {
+        "pace": 0.850442,
+        "passing": 0.89,
+        "shooting": 0.89
+      },
+      "transfer_count": 0,
+      "transfer_requests": 0,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.6,
+        "c2": 0.7
+      }
+    },
+    "p5": {
+      "appearances": 123,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 123
+      },
+      "bench_streak": 0,
+      "fatigue": 0.0,
+      "final_club": "club_b",
+      "final_mean_skill": 0.767031,
+      "initial_club": "club_b",
+      "initial_mean_skill": 0.41,
+      "playing_time_satisfaction": 1.0,
+      "proposals_from_c1": 0,
+      "proposals_from_c2": 777,
+      "skill_gain": 0.357031,
+      "traits": {
+        "pace": 0.741093,
+        "passing": 0.78,
+        "shooting": 0.78
+      },
+      "transfer_count": 0,
+      "transfer_requests": 0,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.6,
+        "c2": 0.449877
+      }
+    },
+    "p6": {
+      "appearances": 19,
+      "appearances_by_club": {
+        "club_a": 0,
+        "club_b": 19
+      },
+      "bench_streak": 28,
+      "fatigue": 0.0,
+      "final_club": "club_b",
+      "final_mean_skill": 0.723246,
+      "initial_club": "club_b",
+      "initial_mean_skill": 0.39,
+      "playing_time_satisfaction": 0.0,
+      "proposals_from_c1": 0,
+      "proposals_from_c2": 836,
+      "skill_gain": 0.333246,
+      "traits": {
+        "pace": 0.649738,
+        "passing": 0.76,
+        "shooting": 0.76
+      },
+      "transfer_count": 0,
+      "transfer_requests": 0,
+      "transferred": 0,
+      "trust_by_coach": {
+        "c1": 0.6,
+        "c2": 0.409294
+      }
+    }
+  },
+  "second_half_club_a_goals": 75,
+  "second_half_club_b_goals": 21,
+  "second_half_club_b_minus_club_a_gd": -54,
+  "second_half_club_b_shots": 182,
+  "seed": 17,
+  "simulation_sha256": "44ac2270c6b20b0d47b554d3bf7b60e70642320c8bdfcc282ac9766e32cefe55",
+  "total_transfers": 0,
+  "world_kind": "transfer_loop"
+}

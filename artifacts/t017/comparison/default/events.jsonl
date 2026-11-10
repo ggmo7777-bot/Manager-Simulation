@@ -1,0 +1,9 @@
+{"actor":"p1","causes":[],"data":{"state":{"cap":0.87,"fatigue":0.08,"mind":{"autonomy":0.24,"expected_gains":[0.046,0.046],"gain_memory_ids":[1,1],"preferences":[0.009,0.018],"skill_estimate":0.34,"skill_memory_id":1,"trust":0.75,"trust_memory_id":1},"rates":[0.145,0.035],"skill":0.38}},"day":0,"event_id":1,"kind":"initial_player","phase":"setup","target":"p1"}
+{"actor":"coach","causes":[],"data":{"skill_estimate":0.32,"source":"prior"},"day":0,"event_id":2,"kind":"initial_assessment","phase":"setup","target":"p1"}
+{"actor":"p2","causes":[],"data":{"state":{"cap":0.91,"fatigue":0.08,"mind":{"autonomy":0.58,"expected_gains":[0.046,0.046],"gain_memory_ids":[3,3],"preferences":[0.022,0.014],"skill_estimate":0.43,"skill_memory_id":3,"trust":0.28,"trust_memory_id":3},"rates":[0.045,0.13],"skill":0.38}},"day":0,"event_id":3,"kind":"initial_player","phase":"setup","target":"p2"}
+{"actor":"coach","causes":[],"data":{"skill_estimate":0.46,"source":"prior"},"day":0,"event_id":4,"kind":"initial_assessment","phase":"setup","target":"p2"}
+{"actor":"coach","causes":[],"data":{"method_rates":[0.1,0.1],"source":"subjective_prior"},"day":0,"event_id":5,"kind":"coach_forecast_prior","phase":"setup","target":"coach"}
+{"actor":"coach","causes":[5],"data":{"residuals":[0.0,0.0]},"day":0,"event_id":6,"kind":"initial_coach_adjustment","phase":"setup","target":"p1"}
+{"actor":"coach","causes":[5],"data":{"residuals":[0.0,0.0]},"day":0,"event_id":7,"kind":"initial_coach_adjustment","phase":"setup","target":"p2"}
+{"actor":null,"causes":[],"data":{"coach_forecast_learning":false,"coach_session_observation":false,"coach_skill":true,"gain_target_mode":"clipped","player_gain":true,"recency":true,"self_skill":true},"day":0,"event_id":8,"kind":"belief_controls","phase":"setup","target":null}
+{"actor":null,"causes":[],"data":{"enabled":false,"scale":0.05,"step":0.05},"day":0,"event_id":9,"kind":"trust_controls","phase":"setup","target":null}

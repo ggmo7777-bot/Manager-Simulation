@@ -1,0 +1,37 @@
+{
+  "branch1000": {
+    "admission": {
+      "all_resolved_once": true,
+      "counts": {
+        "claim_accepted": 12,
+        "claim_trigger_limit": 260,
+        "payments": 12
+      },
+      "no_duplicate_payment": true,
+      "requests": 297
+    },
+    "ledger": {
+      "account_reconciliation": true,
+      "conservation_at_each_transaction": true,
+      "transactions": 6094
+    }
+  },
+  "chained1014": {
+    "admission": {
+      "all_resolved_once": true,
+      "counts": {
+        "claim_accepted": 12,
+        "claim_trigger_limit": 264,
+        "payments": 12
+      },
+      "no_duplicate_payment": true,
+      "requests": 301
+    },
+    "ledger": {
+      "account_reconciliation": true,
+      "conservation_at_each_transaction": true,
+      "transactions": 6174
+    }
+  },
+  "duplicate_payment_injected_is_rejected": true
+}

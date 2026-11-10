@@ -1,0 +1,23 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "days": 84,
+  "elapsed_seconds": 75.290477,
+  "run_count": 240,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.13",
+    "system": "Darwin"
+  },
+  "suite": "t009",
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t009-selection-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t009-selection-loop-v1",
+    "save": 9,
+    "source_sha256": "01b01a0075b0541349d87fd86d2794f3be9b32ce1abf101b5805d969ba9a7c1f",
+    "world_kind": "selection_loop"
+  },
+  "world_kind": "selection_loop"
+}

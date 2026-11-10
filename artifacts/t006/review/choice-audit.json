@@ -1,0 +1,17 @@
+{
+  "all_scores_and_prior_references_match": true,
+  "coach_decisions_checked": 168,
+  "days": 84,
+  "proposal_candidates_checked": 608,
+  "proposals_differing_from_same_state_legacy": 60,
+  "trace_day": 4,
+  "trace_player": "p1",
+  "uses_production_policy_function": false,
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

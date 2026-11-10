@@ -1,0 +1,64 @@
+{
+  "commands": [
+    "python3 -B -m unittest discover -s tests -v",
+    "python3 -B tools/check.py --suite fast",
+    "python3 -B experiments/t013.py --out artifacts/t013/final/economy",
+    "python3 -B experiments/t012.py --out artifacts/t013/final/branches",
+    "python3 -B experiments/verify_t013.py --task-root artifacts/t013 --out artifacts/t013/review/final-verification.json"
+  ],
+  "date": "2026-11-08",
+  "experiment_code_sha256": {
+    "experiments/audit_t013.py": "09f051a595b685859861f008dce0985253e3d13766a8d241aa9ef020154221c3",
+    "experiments/t012.py": "be55a63d4864b62afebec39f917521ef50b19f2ca847884de4c4c9453801fbf8",
+    "experiments/t013.py": "70d5534b0d80304f12bb63619282f0e6a3cd04160d5bee1bced3e7a31ab739ad",
+    "experiments/verify_t013.py": "04593a7b77c6f7a9223f9d3e78437bd4bfe1817c2157a7b793d9dad6dd558d98"
+  },
+  "frozen_file_count": 65,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
+    "revision_author": "Codex (T013)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t013-observation-claims-v1",
+    "save": 14,
+    "source_sha256": "f05e4b33449f1d2757ad31ac9478e6137fa369efc05e7d4778b933e1b21592ad",
+    "world_kind": "league_economy_loop"
+  },
+  "intermediate_version": {
+    "branches": "branches/summary.json",
+    "economy": "economy/summary.json",
+    "limitation": "5 evidence paths interrupted by match self-observation; numerical results match final version",
+    "source_bundle": "iteration1/source_bundle/manifest.json",
+    "source_sha256": "9ac31aae8110bbf9987c193b708f0cd32814847051a83f1775a12ce78cc84621"
+  },
+  "limits": [
+    "float money",
+    "whole-package source hash",
+    "replay reader",
+    "fixed initial cohort",
+    "no generations or C learning"
+  ],
+  "protocols": [
+    "docs/experiments/T013-PROTOCOL.md",
+    "docs/experiments/T012-PROTOCOL.md"
+  ],
+  "results": {
+    "branches": "final/branches/summary.json",
+    "economy": "final/economy/summary.json",
+    "verification": "review/final-verification.json"
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "t012_precorrection": "../t012/precorrection/source_bundle/manifest.json",
+  "task": "T013-final-including-T012",
+  "tests": {
+    "all": 153,
+    "fast": 18
+  }
+}

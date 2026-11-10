@@ -1,0 +1,1212 @@
+{
+  "actions": {
+    "c1": [
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ]
+    ],
+    "c2": [
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "B"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p1",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ],
+      [
+        "propose",
+        "p2",
+        "A"
+      ],
+      [
+        "observe",
+        "p1",
+        null
+      ],
+      [
+        "observe",
+        "p2",
+        null
+      ]
+    ],
+    "p1": [
+      "B",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "B",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "rest",
+      "rest",
+      "B",
+      "rest",
+      "B",
+      "rest",
+      "rest",
+      "rest",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "B"
+    ],
+    "p2": [
+      "A",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "A",
+      "B",
+      "rest",
+      "A",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "B",
+      "rest",
+      "B",
+      "B",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "rest",
+      "B",
+      "rest",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "A",
+      "rest",
+      "A",
+      "rest"
+    ]
+  },
+  "coaches": {
+    "c1": {
+      "by_player_method": {
+        "p1": {
+          "A": {
+            "observed_training": 3,
+            "proposals": 7,
+            "residual": -0.019635569068416844,
+            "updates": 3
+          },
+          "B": {
+            "observed_training": 2,
+            "proposals": 16,
+            "residual": 0.04595756772153177,
+            "updates": 2
+          }
+        },
+        "p2": {
+          "A": {
+            "observed_training": 16,
+            "proposals": 5,
+            "residual": -0.017632608729206,
+            "updates": 16
+          },
+          "B": {
+            "observed_training": 4,
+            "proposals": 2,
+            "residual": -0.030930158441996227,
+            "updates": 4
+          }
+        }
+      },
+      "observe": 54,
+      "observed_base_mse": 0.0028399805978003437,
+      "observed_forecast_mse": 0.003919778077536972,
+      "observed_training_samples": 25,
+      "propose": 30,
+      "rest": 0,
+      "slots": 84
+    },
+    "c2": {
+      "by_player_method": {
+        "p1": {
+          "A": {
+            "observed_training": 3,
+            "proposals": 14,
+            "residual": -0.024830208287070245,
+            "updates": 3
+          },
+          "B": {
+            "observed_training": 2,
+            "proposals": 8,
+            "residual": -0.08267224958234422,
+            "updates": 2
+          }
+        },
+        "p2": {
+          "A": {
+            "observed_training": 16,
+            "proposals": 5,
+            "residual": 0.019465952981093836,
+            "updates": 16
+          },
+          "B": {
+            "observed_training": 4,
+            "proposals": 3,
+            "residual": -0.01418659186090402,
+            "updates": 4
+          }
+        }
+      },
+      "observe": 54,
+      "observed_base_mse": 0.0036059112048708146,
+      "observed_forecast_mse": 0.003773459990473627,
+      "observed_training_samples": 25,
+      "propose": 30,
+      "rest": 0,
+      "slots": 84
+    }
+  },
+  "days": 84,
+  "duplicate_observation_days": 54,
+  "elapsed_seconds": 0.03448516712523997,
+  "event_count": 2228,
+  "mean_skill_gain": 0.4979412907296594,
+  "players": {
+    "p1": {
+      "actions": {
+        "A": 21,
+        "B": 32,
+        "rest": 31
+      },
+      "by_coach": {
+        "c1": {
+          "feedback_count": 15,
+          "method_match": 15,
+          "method_mismatch": 8,
+          "non_dominating_feedback": 0,
+          "received": 23,
+          "received_forecast_mse": 0.0020675262346491552,
+          "rest_with_proposal": 3,
+          "score_source": {
+            "A": 7,
+            "B": 16
+          },
+          "self_mse_on_received_sample": 0.0007326318136616816,
+          "trust_change": -0.32851245887209046,
+          "trust_final": 0.42148754112790954
+        },
+        "c2": {
+          "feedback_count": 10,
+          "method_match": 10,
+          "method_mismatch": 12,
+          "non_dominating_feedback": 0,
+          "received": 22,
+          "received_forecast_mse": 0.002230379731078292,
+          "rest_with_proposal": 1,
+          "score_source": {
+            "A": 14,
+            "B": 8
+          },
+          "self_mse_on_received_sample": 0.0011165651432390334,
+          "trust_change": -0.12857058341993044,
+          "trust_final": 0.6214294165800696
+        }
+      },
+      "conflicting_two": 15,
+      "final_skill": 0.8609491200387629,
+      "received": {
+        "0": 54,
+        "1": 15,
+        "2": 15
+      },
+      "same_method_two": 0,
+      "skill_gain": 0.4809491200387629,
+      "trust_gap_c1_minus_c2": -0.19994187545216002
+    },
+    "p2": {
+      "actions": {
+        "A": 38,
+        "B": 15,
+        "rest": 31
+      },
+      "by_coach": {
+        "c1": {
+          "feedback_count": 0,
+          "method_match": 0,
+          "method_mismatch": 7,
+          "non_dominating_feedback": 0,
+          "received": 7,
+          "received_forecast_mse": null,
+          "rest_with_proposal": 4,
+          "score_source": {
+            "A": 5,
+            "B": 2
+          },
+          "self_mse_on_received_sample": null,
+          "trust_change": 0.0,
+          "trust_final": 0.28
+        },
+        "c2": {
+          "feedback_count": 1,
+          "method_match": 1,
+          "method_mismatch": 7,
+          "non_dominating_feedback": 0,
+          "received": 8,
+          "received_forecast_mse": 0.0011862289269291197,
+          "rest_with_proposal": 6,
+          "score_source": {
+            "A": 5,
+            "B": 3
+          },
+          "self_mse_on_received_sample": 0.000640636376878364,
+          "trust_change": -0.010911851001015105,
+          "trust_final": 0.2690881489989849
+        }
+      },
+      "conflicting_two": 0,
+      "final_skill": 0.894933461420556,
+      "received": {
+        "0": 69,
+        "1": 15,
+        "2": 0
+      },
+      "same_method_two": 0,
+      "skill_gain": 0.514933461420556,
+      "trust_gap_c1_minus_c2": 0.010911851001015105
+    }
+  },
+  "seed": 17,
+  "simulation_sha256": "f4866db97e5f5064e962b9fc38fd1ae8f410bf651f16d68c165bceab48636529",
+  "two_observers_days": 54
+}

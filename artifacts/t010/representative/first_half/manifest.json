@@ -1,0 +1,24 @@
+{
+  "author": "Antigravity (Gemini 4 Argon)",
+  "condition": "coupled_transfer",
+  "days": 42,
+  "event_count": 1660,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.13",
+    "system": "Darwin"
+  },
+  "seed": 17,
+  "simulation_sha256": "e81658c968a5c65456054cddd119da099ac5374677585c036c16830e6d2d0bc0",
+  "versions": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t010-transfer-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t010-transfer-loop-v1",
+    "save": 10,
+    "source_sha256": "f3a8b07d06f17ec4adf3ac5fd13e905a800aa9edf3e3a47b40b2c420e0fc6a48",
+    "world_kind": "transfer_loop"
+  },
+  "world_kind": "transfer_loop"
+}

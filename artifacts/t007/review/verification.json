@@ -1,0 +1,26 @@
+{
+  "comparison_excludes_only": [
+    "versions"
+  ],
+  "date_jst": "2026-11-06",
+  "legacy_full_history_comparisons": 240,
+  "main_comparison_runs": 240,
+  "old_files_unchanged": {
+    "t001": 34,
+    "t002": 32,
+    "t003": 38,
+    "t004": 44,
+    "t005": 48,
+    "t006": 55
+  },
+  "representative_hash": "f4866db97e5f5064e962b9fc38fd1ae8f410bf651f16d68c165bceab48636529",
+  "representative_resume_byte_equal": true,
+  "versions": {
+    "policy": "t007-private-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t007-private-training-v1",
+    "save": 7,
+    "source_sha256": "7bbfcefbb6e4f5b03f1315c3e44e1b17d1e1df1cdc4bb4c87d6cd0fcfb1ab2f7",
+    "world_kind": "multi_coach"
+  }
+}

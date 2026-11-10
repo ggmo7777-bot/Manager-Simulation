@@ -1,0 +1,36 @@
+{
+  "branch_series": 200,
+  "economy_runs": 240,
+  "fast_tests": 18,
+  "frozen_files_match_live": 65,
+  "frozen_reader_branch14_plus28_equal": true,
+  "full_tests": 153,
+  "historical_files_unchanged": 808,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Codex (T011-R1); Sol 6.1 High (T012)",
+    "revision_author": "Codex (T013)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t013-observation-claims-v1",
+    "save": 14,
+    "source_sha256": "f05e4b33449f1d2757ad31ac9478e6137fa369efc05e7d4778b933e1b21592ad",
+    "world_kind": "league_economy_loop"
+  },
+  "remaining": [
+    "float money",
+    "whole-package hash",
+    "replay reader",
+    "fixed initial cohort",
+    "duplicated legacy loops and constants"
+  ],
+  "removed_metadata": [
+    "soccer_sim/.DS_Store",
+    "tests/.DS_Store",
+    "docs/.DS_Store",
+    "artifacts/.DS_Store"
+  ],
+  "source_unchanged_since_final_runs": true,
+  "status_bytes": 4499
+}

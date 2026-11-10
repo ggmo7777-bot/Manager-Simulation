@@ -1,0 +1,106 @@
+{
+  "conditions": {
+    "closed_no_solidarity": {
+      "byte_equal_84_vs_42_plus_42": {
+        "events.jsonl": true,
+        "snapshot.json": true
+      },
+      "days": 84,
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 519
+      },
+      "load42_seconds_replay": 0.2989115840755403,
+      "load84_seconds_replay": 0.586273584049195,
+      "save84_seconds": 0.7669962078798562,
+      "seed": 100,
+      "simulation_seconds": 0.42001387500204146
+    },
+    "closed_solidarity": {
+      "byte_equal_84_vs_42_plus_42": {
+        "events.jsonl": true,
+        "snapshot.json": true
+      },
+      "days": 84,
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 519
+      },
+      "load42_seconds_replay": 0.28320108400657773,
+      "load84_seconds_replay": 0.5647939580958337,
+      "save84_seconds": 0.7827073750086129,
+      "seed": 100,
+      "simulation_seconds": 0.42055374989286065
+    },
+    "open_no_solidarity": {
+      "byte_equal_84_vs_42_plus_42": {
+        "events.jsonl": true,
+        "snapshot.json": true
+      },
+      "days": 84,
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 531
+      },
+      "load42_seconds_replay": 0.28654633299447596,
+      "load84_seconds_replay": 0.5956679170485586,
+      "save84_seconds": 0.7707641250453889,
+      "seed": 100,
+      "simulation_seconds": 0.447106207953766
+    },
+    "open_solidarity": {
+      "byte_equal_84_vs_42_plus_42": {
+        "events.jsonl": true,
+        "snapshot.json": true
+      },
+      "days": 84,
+      "ledger": {
+        "account_reconciliation": true,
+        "conservation_at_each_transaction": true,
+        "transactions": 622
+      },
+      "load42_seconds_replay": 0.2887099168729037,
+      "load84_seconds_replay": 0.56981399981305,
+      "save84_seconds": 0.7778332501184195,
+      "seed": 100,
+      "simulation_seconds": 0.42355591617524624
+    }
+  },
+  "factorial_both_fixed_matches_new_30_runs_all_metrics": true,
+  "frozen_old_reader_and_seed100_replay_match": true,
+  "historical_changes": [],
+  "historical_files_unchanged": 624,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "policy": "t011-league-economy-score-v2",
+    "revision_author": "Codex (T011-R1)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t011-league-economy-v2",
+    "save": 12,
+    "source_sha256": "065520159972c459515c27adf338986994b99693c901cb39c4ae30709c6df441",
+    "world_kind": "league_economy_loop"
+  },
+  "long_horizon_independent_ledger": {
+    "account_reconciliation": true,
+    "conservation_at_each_transaction": true,
+    "transactions": 6098
+  },
+  "mechanism_probes": {
+    "day": 1,
+    "facility_funding": {
+      "funded_facility_cost": 0.28,
+      "funded_p1_gain": 0.016589,
+      "unfunded_facility_cost": 0.0,
+      "unfunded_p1_gain": 0.0069
+    },
+    "in_memory_interventions_not_saved_worlds": true,
+    "receipt_history_only": {
+      "events_equal": true,
+      "players_equal": true
+    },
+    "seed": 100
+  }
+}

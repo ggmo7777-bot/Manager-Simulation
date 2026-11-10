@@ -1,0 +1,135 @@
+{
+  "external_test_fixtures": [
+    "artifacts/t001",
+    "artifacts/t002",
+    "artifacts/t003",
+    "artifacts/t004",
+    "artifacts/t005",
+    "artifacts/t006/preflight"
+  ],
+  "files": [
+    {
+      "bytes": 8097,
+      "path": "docs/experiments/T006-PROTOCOL.md",
+      "sha256": "304589eb3eb2e6383defdc0a9605944b6ff836b0999619bc113ede534d1ba987"
+    },
+    {
+      "bytes": 4717,
+      "path": "docs/tasks/T006.md",
+      "sha256": "c194deaa7bde381307833cd12e756d0a4b49cf619f614a7b3d437315f7f445ac"
+    },
+    {
+      "bytes": 93,
+      "path": "pyproject.toml",
+      "sha256": "6f88a08b2051e7b9dcc684724b687fa1d9839b0d7267c6e4f7f884429beb7d66"
+    },
+    {
+      "bytes": 64,
+      "path": "soccer_sim/__init__.py",
+      "sha256": "05d1fb591f9a9dcc6d336a4247b11817be2fbc4430de557435e9cec9af40e116"
+    },
+    {
+      "bytes": 2937,
+      "path": "soccer_sim/__main__.py",
+      "sha256": "4b3661d584b5f8e4de2058f23a89786d0b467943267cefc62ed4acbc53a9c345"
+    },
+    {
+      "bytes": 2380,
+      "path": "soccer_sim/advice.py",
+      "sha256": "e199ba4c353493eba6dea46395338050fcc94ea3953b696ecc422e438e2ed3d6"
+    },
+    {
+      "bytes": 14457,
+      "path": "soccer_sim/experiment_t002.py",
+      "sha256": "0eecae3a2f4456a65cdd43fe89041dd8f0dadf829c8f76b9bc43e68734f283c6"
+    },
+    {
+      "bytes": 8927,
+      "path": "soccer_sim/experiment_t003.py",
+      "sha256": "0de6838e380f4e8486e5ef468889843ce6af0b14a531245c028410c11bf379fd"
+    },
+    {
+      "bytes": 12647,
+      "path": "soccer_sim/experiment_t004.py",
+      "sha256": "b4d683172a4eb2936b1a6d0f4b854e4e50085fcd8b0314209db45443c402c7db"
+    },
+    {
+      "bytes": 12114,
+      "path": "soccer_sim/experiment_t005.py",
+      "sha256": "ded8c066d02fd00c5d782bd50bb169d457f5b64be53876d0f7d81117338be9d5"
+    },
+    {
+      "bytes": 9948,
+      "path": "soccer_sim/experiment_t006.py",
+      "sha256": "872358c291967c739b75e2d499e3d7e36a844080ba7e4abfdcae71e699ef86fd"
+    },
+    {
+      "bytes": 7833,
+      "path": "soccer_sim/experiments.py",
+      "sha256": "451ee6f7a0eb032eada13db65ee5c40ee6af0733662a05582f3b54654a234dd4"
+    },
+    {
+      "bytes": 2298,
+      "path": "soccer_sim/observation.py",
+      "sha256": "393b7e9efb7b6a6f6eb09a4066e4248444f21f3a0fe5baefaae10f1393370703"
+    },
+    {
+      "bytes": 5604,
+      "path": "soccer_sim/policy.py",
+      "sha256": "209381ece43689f1fb37e4e1149c27d1139b3a9520e410be94d489396dcae015"
+    },
+    {
+      "bytes": 17340,
+      "path": "soccer_sim/simulation.py",
+      "sha256": "42644476ee757ad1c47f741f1b8cda0991bb8aafcad0a5fc9b9030beb54438e5"
+    },
+    {
+      "bytes": 12071,
+      "path": "soccer_sim/state.py",
+      "sha256": "01bb927daa06d4a7f91ef8f38e3fdddc1e7b4baa5ea033faf3fd3e3e07839424"
+    },
+    {
+      "bytes": 17495,
+      "path": "soccer_sim/storage.py",
+      "sha256": "64aea665707825a55086650ae16b25212ff8b8f60d490fa27d1a4ceb4708a99a"
+    },
+    {
+      "bytes": 10005,
+      "path": "tests/test_t001.py",
+      "sha256": "cf1c672f8a257c8f5890f9fc26137e7bc44800c43eeddac7e2b0284c3106e552"
+    },
+    {
+      "bytes": 10849,
+      "path": "tests/test_t002.py",
+      "sha256": "1bc0164c727aab5a4d36ece1b03ad9dbee03c10c9854609826e74816e877e3a9"
+    },
+    {
+      "bytes": 15043,
+      "path": "tests/test_t003.py",
+      "sha256": "1c272a8ee3a2f5e4470f88015a5c4d1b22746adf0f55d3685a1b221377b1db46"
+    },
+    {
+      "bytes": 13707,
+      "path": "tests/test_t004.py",
+      "sha256": "b11ad8757f326488f8b62eba5beea6d414fd5112e4f95b703c769453937bb98b"
+    },
+    {
+      "bytes": 19835,
+      "path": "tests/test_t005.py",
+      "sha256": "26aee43a83cc233a55b699b0136adc9b11b051e2954d512b86345562969c06fd"
+    },
+    {
+      "bytes": 12197,
+      "path": "tests/test_t006.py",
+      "sha256": "140afd1e0a3cb52be50200ae20a430a7607ed7e4c59975361d4ebd045c5b1c90"
+    }
+  ],
+  "note": "Frozen runtime can run/resume alone; integration tests require the listed fixtures at their project-relative paths. Do not edit this bundle.",
+  "versions": {
+    "policy": "t006-score-v2",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t006-training-v6",
+    "save": 6,
+    "source_sha256": "2bf4ed35cc89e505e136a34c1c1ea37cb951c48f5ebe3ec83df9b0bb8ea9b8c2"
+  }
+}

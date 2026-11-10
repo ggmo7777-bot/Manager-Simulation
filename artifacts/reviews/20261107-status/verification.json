@@ -1,0 +1,23 @@
+{
+  "versions": {
+    "world_kind": "league_economy_loop",
+    "save": 11,
+    "rules": "t011-league-economy-v1",
+    "policy": "t011-league-economy-score-v1",
+    "rng": "sha256-keyed-uniform53-v1",
+    "author": "Antigravity (Gemini 4 Argon)",
+    "source_sha256": "0b4d7cf9333939f4a8a754dc1ea19dd2ef1d21584a861d343975384b9e955bcc"
+  },
+  "snapshot_resume_bytes_equal": true,
+  "jsonl_resume_bytes_equal": true,
+  "source_unchanged": true,
+  "missing_completion_artifacts": [
+    "docs/experiments/T011-RESULTS.md",
+    "docs/experiments/T011-REVIEW.md",
+    "artifacts/t011/source_bundle/manifest.json",
+    "artifacts/t011/review/tests.json",
+    "artifacts/t011/review/tests.txt"
+  ],
+  "representative_seed": 100,
+  "representative_current_matches_saved": true
+}
