@@ -511,4 +511,5 @@
 - 副作用/限界: 係数・閾値は未校正。複数監督の個別態度なし。監督はまだ結果を使わない。
 - 比較: [T028契約](tasks/T028.md)、[事前条件](experiments/T028-PROTOCOL.md)。on対off、on対mid(特性だけ0.5に固定した対照)。
 - 戻し方: configキー、関数、イベント2種、`advice_mode`の削除のみ。新成果物は`artifacts/t028/`のみ。
-- 最終判断: 未実施。
+- 最終判断(T028、2026-11-10): 採用(`advice_response="personality_v1"`、`decide_advice_response`、`_player_advice_response`、イベント`player_advice_response`/`coach_advice_outcome`、`decide_player_training`の任意`advice_mode`)。既定14条件はT018・T023基準と一致、onの全28,402応答を独立実装と実状態から再計算して一致、拒否は助言なし判断と同一・従うは提案方法。特性は決定に入った(41%の入力で特性の差し替えが応答を変える)。監督の記録はキー固定でfloatなし、静的・動的の漏れ検査合格。予測P1(規律性→従う)・P2(不安定→不満時に拒否)・P3(縮退しない)は支持、拒否が62.6%と多数で主因は`trust_below_autonomy`(性格より信頼の状態)。機構の効果(mid−off)は技能−0.0030・信頼−0.0059で有意、特性の効果(on−mid)は技能+0.0024で有意だが理由は未分解。特性と成長の相関(P5)は見えない。信頼readerは応答改ざんをmanifest偽造後に受理(T022の限界)。260テスト合格。[T028結果](experiments/T028-RESULTS.md)。
+- 次(未着手): T029で監督が`coach_advice_outcome`を使う(拒否された助言の評価・提案の変更。特性は見せない)か、引退・新人(特性の継承)。

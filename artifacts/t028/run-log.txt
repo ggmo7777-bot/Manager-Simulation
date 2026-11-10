@@ -1,0 +1,21 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'without_personality': True} pure {'grid_points': 972} static {'readers': ['__post_init__', '_build_initial_world', '_personality_traits', '_player_advice_response', '_snapshot_payload_unchecked', '_validate_league_invariants', 'has_save_fields', 'load_league_snapshot_trusted', 'to_dict'], 'decide_functions_checked': 8, 'coach_functions_checked': 1, 'other_modules_clean': True}
+cells closed_no_solidarity
+cells closed_no_solidarity_sampled_population
+cells closed_solidarity
+cells closed_solidarity_sampled_population
+cells open_no_solidarity
+cells open_no_solidarity_sampled_population
+cells open_solidarity
+cells open_solidarity_sampled_population
+cells fixed_budget_no_inflow
+cells fixed_budget_no_inflow_sampled_population
+cells hoarder_buyer_policy
+cells hoarder_buyer_policy_sampled_population
+cells exploit_churn_guard
+cells exploit_churn_guard_sampled_population
+analysis {"responses_pooled": {"complied": 0.06654460953453982, "partial": 0.30758397295965073, "refused": 0.6258714175058094, "n": 28402}, "by_discipline_tercile": {"low": {"complied": 0.05586696562032885, "partial": 0.34407698056801195, "refused": 0.6000560538116592, "n": 10704}, "mid": {"complied": 0.06648847310390912, "partial": 0.2352155028399599, "refused": 0.698296024056131, "n": 11972}, "high": {"complied": 0.08662242403073699, "partial": 0.39067411805798113, "refused": 0.5227034579112819, "n": 5726}}, "dissatisfied_by_stability_tercile": {"low": {"complied": 0.0009540467482906663, "partial": 0.07457465415805374, "refused": 0.9244712990936556, "n": 6289}, "mid": {"complied": 0.003138373751783167, "partial": 0.13338088445078458, "refused": 0.8634807417974323, "n": 7010}, "high": {"complied": 0.002041337075784639, "partial": 0.277877009441184, "refused": 0.7200816534830314, "n": 3919}}, "P1_monotone": true, "P2_low_stability_refuses_at_least_high": true, "P3_not_degenerate": true} {'decisions': 28402, 'would_change_under_low_vs_high_traits': 11652, 'same_state_pairs_with_different_responses': 478}
+dynamic leak ok 14
+persistence {'interventions': 1, 'responses': 495, 'stepped_equals_oneshot': True} {'response_changed/load_league_snapshot': 'rejected', 'response_changed/load_league_snapshot_trusted': 'accepted', 'outcome_removed/load_league_snapshot': 'rejected', 'outcome_removed/load_league_snapshot_trusted': 'rejected'} 2
+{"cells": 42, "elapsed_seconds": 218.2765529999997}
+exit 0

@@ -1,0 +1,2810 @@
+{
+  "analysis": {
+    "P1_monotone": true,
+    "P2_low_stability_refuses_at_least_high": true,
+    "P3_not_degenerate": true,
+    "P4_descriptive_day84": {
+      "mid_minus_off/satisfaction/day84": {
+        "mean": -0.0006547619047619278,
+        "negative": 18,
+        "p_two_sided": 0.010622024536132812,
+        "positive": 5,
+        "zero": 19
+      },
+      "mid_minus_off/skill/day84": {
+        "mean": -0.004137966269841272,
+        "negative": 36,
+        "p_two_sided": 2.8288777684792876e-06,
+        "positive": 6,
+        "zero": 0
+      },
+      "mid_minus_off/trust/day84": {
+        "mean": -0.008256174107142864,
+        "negative": 39,
+        "p_two_sided": 5.631591193377972e-09,
+        "positive": 3,
+        "zero": 0
+      },
+      "on_minus_mid/satisfaction/day84": {
+        "mean": 0.0011309523809523779,
+        "negative": 3,
+        "p_two_sided": 0.34375,
+        "positive": 7,
+        "zero": 32
+      },
+      "on_minus_mid/skill/day84": {
+        "mean": 0.0028916309523809567,
+        "negative": 6,
+        "p_two_sided": 2.8288777684792876e-06,
+        "positive": 36,
+        "zero": 0
+      },
+      "on_minus_mid/trust/day84": {
+        "mean": -0.0005267311507936433,
+        "negative": 21,
+        "p_two_sided": 1.0,
+        "positive": 21,
+        "zero": 0
+      }
+    },
+    "P4_primary_contrasts_alpha_0.0083": {
+      "mid_minus_off/satisfaction/day168": {
+        "mean": 9.92063492063515e-05,
+        "negative": 0,
+        "p_two_sided": 1.0,
+        "positive": 1,
+        "significant": false,
+        "zero": 41
+      },
+      "mid_minus_off/skill/day168": {
+        "mean": -0.0030178253968253825,
+        "negative": 33,
+        "p_two_sided": 0.00027153923429068527,
+        "positive": 9,
+        "significant": true,
+        "zero": 0
+      },
+      "mid_minus_off/trust/day168": {
+        "mean": -0.0058948501984127,
+        "negative": 36,
+        "p_two_sided": 2.8288777684792876e-06,
+        "positive": 6,
+        "significant": true,
+        "zero": 0
+      },
+      "on_minus_mid/satisfaction/day168": {
+        "mean": -9.92063492063515e-05,
+        "negative": 1,
+        "p_two_sided": 1.0,
+        "positive": 0,
+        "significant": false,
+        "zero": 41
+      },
+      "on_minus_mid/skill/day168": {
+        "mean": 0.0024053789682539272,
+        "negative": 4,
+        "p_two_sided": 5.65314621780999e-08,
+        "positive": 38,
+        "significant": true,
+        "zero": 0
+      },
+      "on_minus_mid/trust/day168": {
+        "mean": -0.0016522132936507932,
+        "negative": 24,
+        "p_two_sided": 0.44079906734259566,
+        "positive": 18,
+        "significant": false,
+        "zero": 0
+      }
+    },
+    "P5_spearman_within_cell": {
+      "discipline_vs_skill_gain": {
+        "cells": 42,
+        "median": -0.09090909090909091,
+        "positive_cells": 17
+      },
+      "stability_vs_satisfaction": {
+        "cells": 42,
+        "median": 0.12802288912479728,
+        "positive_cells": 24
+      }
+    },
+    "by_discipline_tercile": {
+      "high": {
+        "complied": 0.08662242403073699,
+        "n": 5726,
+        "partial": 0.39067411805798113,
+        "refused": 0.5227034579112819
+      },
+      "low": {
+        "complied": 0.05586696562032885,
+        "n": 10704,
+        "partial": 0.34407698056801195,
+        "refused": 0.6000560538116592
+      },
+      "mid": {
+        "complied": 0.06648847310390912,
+        "n": 11972,
+        "partial": 0.2352155028399599,
+        "refused": 0.698296024056131
+      }
+    },
+    "by_mode_means_day168": {
+      "mid": {
+        "events": 9321.047619047618,
+        "satisfaction": 0.6700992063492063,
+        "skill": 0.7220662281746032,
+        "transfers": 1.7142857142857142,
+        "trust": 0.471244382936508
+      },
+      "off": {
+        "events": 7955.4047619047615,
+        "satisfaction": 0.6699999999999999,
+        "skill": 0.7250840535714286,
+        "transfers": 1.6428571428571428,
+        "trust": 0.47713923313492074
+      },
+      "on": {
+        "events": 9328.404761904761,
+        "satisfaction": 0.6699999999999999,
+        "skill": 0.7244716071428572,
+        "transfers": 1.7857142857142858,
+        "trust": 0.46959216964285716
+      }
+    },
+    "cells_high_minus_low_complied_positive": {
+      "cells": 35,
+      "mean": 0.09159872502343182,
+      "positive": 26
+    },
+    "dissatisfied_by_stability_tercile": {
+      "high": {
+        "complied": 0.002041337075784639,
+        "n": 3919,
+        "partial": 0.277877009441184,
+        "refused": 0.7200816534830314
+      },
+      "low": {
+        "complied": 0.0009540467482906663,
+        "n": 6289,
+        "partial": 0.07457465415805374,
+        "refused": 0.9244712990936556
+      },
+      "mid": {
+        "complied": 0.003138373751783167,
+        "n": 7010,
+        "partial": 0.13338088445078458,
+        "refused": 0.8634807417974323
+      }
+    },
+    "dissatisfied_decisions": 17218,
+    "primary_reason": {
+      "irritated_by_low_playing_time": 1585,
+      "no_dominant_term": 220,
+      "self_disciplined": 184,
+      "self_lax": 3305,
+      "trust_above_autonomy": 1816,
+      "trust_below_autonomy": 21292
+    },
+    "responses_pooled": {
+      "complied": 0.06654460953453982,
+      "n": 28402,
+      "partial": 0.30758397295965073,
+      "refused": 0.6258714175058094
+    }
+  },
+  "branch": {
+    "interventions": 1,
+    "responses": 495,
+    "stepped_equals_oneshot": true
+  },
+  "cells": [
+    {
+      "mid": {
+        "day168": {
+          "events": 9235,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7219271666666667,
+          "transfers": 0,
+          "trust": 0.47680166666666673
+        },
+        "day84": {
+          "events": 4656,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6598178333333333,
+          "transfers": 0,
+          "trust": 0.4803998541666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7709,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7223524166666667,
+          "transfers": 0,
+          "trust": 0.48318495833333336
+        },
+        "day84": {
+          "events": 3730,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6634294166666667,
+          "transfers": 0,
+          "trust": 0.4890934166666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9242,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 4658,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        }
+      },
+      "responses": {
+        "complied": 0.05032258064516129,
+        "n": 775,
+        "partial": 0.2838709677419355,
+        "refused": 0.6658064516129032
+      },
+      "seed": 100,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9237,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7218475833333334,
+          "transfers": 0,
+          "trust": 0.4771100833333333
+        },
+        "day84": {
+          "events": 4657,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6610909166666666,
+          "transfers": 0,
+          "trust": 0.4771100833333333
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7711,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7237629999999999,
+          "transfers": 0,
+          "trust": 0.4803529375
+        },
+        "day84": {
+          "events": 3743,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6646216666666667,
+          "transfers": 0,
+          "trust": 0.482080125
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9238,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 4659,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        }
+      },
+      "responses": {
+        "complied": 0.06141522029372497,
+        "n": 749,
+        "partial": 0.2576769025367156,
+        "refused": 0.6809078771695594
+      },
+      "seed": 101,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9178,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7220066666666667,
+          "transfers": 0,
+          "trust": 0.4717882500000001
+        },
+        "day84": {
+          "events": 4628,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6600119999999999,
+          "transfers": 0,
+          "trust": 0.4717882500000001
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7778,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72153225,
+          "transfers": 0,
+          "trust": 0.4796448958333334
+        },
+        "day84": {
+          "events": 3803,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6618171666666667,
+          "transfers": 0,
+          "trust": 0.4824197291666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9252,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 4668,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        }
+      },
+      "responses": {
+        "complied": 0.057455540355677154,
+        "n": 731,
+        "partial": 0.2448700410396717,
+        "refused": 0.6976744186046512
+      },
+      "seed": 102,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9146,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71923525,
+          "transfers": 0,
+          "trust": 0.47771068750000006
+        },
+        "day84": {
+          "events": 4624,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6571889166666667,
+          "transfers": 0,
+          "trust": 0.4801237708333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7790,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7223896666666666,
+          "transfers": 0,
+          "trust": 0.4904684166666667
+        },
+        "day84": {
+          "events": 3829,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6621426666666667,
+          "transfers": 0,
+          "trust": 0.497276625
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9165,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 4626,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        }
+      },
+      "responses": {
+        "complied": 0.0637037037037037,
+        "n": 675,
+        "partial": 0.29333333333333333,
+        "refused": 0.642962962962963
+      },
+      "seed": 100,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7405871666666667,
+          "transfers": 0,
+          "trust": 0.47898904166666667
+        },
+        "day84": {
+          "events": 4683,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6802280833333333,
+          "transfers": 0,
+          "trust": 0.4844885833333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8037,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.740755,
+          "transfers": 0,
+          "trust": 0.48688822916666674
+        },
+        "day84": {
+          "events": 3975,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6835491666666668,
+          "transfers": 0,
+          "trust": 0.4892391458333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9299,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        }
+      },
+      "responses": {
+        "complied": 0.07704654895666131,
+        "n": 623,
+        "partial": 0.1926163723916533,
+        "refused": 0.7303370786516854
+      },
+      "seed": 101,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9300,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7372845,
+          "transfers": 0,
+          "trust": 0.46774862500000003
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6681544166666668,
+          "transfers": 0,
+          "trust": 0.4719990208333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7999,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7385479166666666,
+          "transfers": 0,
+          "trust": 0.4876279791666667
+        },
+        "day84": {
+          "events": 3944,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6720291666666666,
+          "transfers": 0,
+          "trust": 0.4876279791666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 4681,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        }
+      },
+      "responses": {
+        "complied": 0.06491499227202473,
+        "n": 647,
+        "partial": 0.14219474497681608,
+        "refused": 0.7928902627511591
+      },
+      "seed": 102,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9235,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7219271666666667,
+          "transfers": 0,
+          "trust": 0.47680166666666673
+        },
+        "day84": {
+          "events": 4656,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6598178333333333,
+          "transfers": 0,
+          "trust": 0.4803998541666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7709,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7223524166666667,
+          "transfers": 0,
+          "trust": 0.48318495833333336
+        },
+        "day84": {
+          "events": 3730,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6634294166666667,
+          "transfers": 0,
+          "trust": 0.4890934166666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9242,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 4658,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        }
+      },
+      "responses": {
+        "complied": 0.05032258064516129,
+        "n": 775,
+        "partial": 0.2838709677419355,
+        "refused": 0.6658064516129032
+      },
+      "seed": 100,
+      "world": "closed_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9237,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7218475833333334,
+          "transfers": 0,
+          "trust": 0.4771100833333333
+        },
+        "day84": {
+          "events": 4657,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6610909166666666,
+          "transfers": 0,
+          "trust": 0.4771100833333333
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7711,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7237629999999999,
+          "transfers": 0,
+          "trust": 0.4803529375
+        },
+        "day84": {
+          "events": 3743,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6646216666666667,
+          "transfers": 0,
+          "trust": 0.482080125
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9238,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 4659,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        }
+      },
+      "responses": {
+        "complied": 0.06141522029372497,
+        "n": 749,
+        "partial": 0.2576769025367156,
+        "refused": 0.6809078771695594
+      },
+      "seed": 101,
+      "world": "closed_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9178,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7220066666666667,
+          "transfers": 0,
+          "trust": 0.4717882500000001
+        },
+        "day84": {
+          "events": 4628,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6600119999999999,
+          "transfers": 0,
+          "trust": 0.4717882500000001
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7778,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72153225,
+          "transfers": 0,
+          "trust": 0.4796448958333334
+        },
+        "day84": {
+          "events": 3803,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6618171666666667,
+          "transfers": 0,
+          "trust": 0.4824197291666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9252,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 4668,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        }
+      },
+      "responses": {
+        "complied": 0.057455540355677154,
+        "n": 731,
+        "partial": 0.2448700410396717,
+        "refused": 0.6976744186046512
+      },
+      "seed": 102,
+      "world": "closed_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9146,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71923525,
+          "transfers": 0,
+          "trust": 0.47771068750000006
+        },
+        "day84": {
+          "events": 4624,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6571889166666667,
+          "transfers": 0,
+          "trust": 0.4801237708333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7790,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7223896666666666,
+          "transfers": 0,
+          "trust": 0.4904684166666667
+        },
+        "day84": {
+          "events": 3829,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6621426666666667,
+          "transfers": 0,
+          "trust": 0.497276625
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9165,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 4626,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        }
+      },
+      "responses": {
+        "complied": 0.0637037037037037,
+        "n": 675,
+        "partial": 0.29333333333333333,
+        "refused": 0.642962962962963
+      },
+      "seed": 100,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7405871666666667,
+          "transfers": 0,
+          "trust": 0.47898904166666667
+        },
+        "day84": {
+          "events": 4683,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6802280833333333,
+          "transfers": 0,
+          "trust": 0.4844885833333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8037,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.740755,
+          "transfers": 0,
+          "trust": 0.48688822916666674
+        },
+        "day84": {
+          "events": 3975,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6835491666666668,
+          "transfers": 0,
+          "trust": 0.4892391458333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9299,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        }
+      },
+      "responses": {
+        "complied": 0.07704654895666131,
+        "n": 623,
+        "partial": 0.1926163723916533,
+        "refused": 0.7303370786516854
+      },
+      "seed": 101,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9300,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7372845,
+          "transfers": 0,
+          "trust": 0.46774862500000003
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6681544166666668,
+          "transfers": 0,
+          "trust": 0.4719990208333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7999,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7385479166666666,
+          "transfers": 0,
+          "trust": 0.4876279791666667
+        },
+        "day84": {
+          "events": 3944,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6720291666666666,
+          "transfers": 0,
+          "trust": 0.4876279791666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 4681,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        }
+      },
+      "responses": {
+        "complied": 0.06491499227202473,
+        "n": 647,
+        "partial": 0.14219474497681608,
+        "refused": 0.7928902627511591
+      },
+      "seed": 102,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9332,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7198012500000001,
+          "transfers": 2,
+          "trust": 0.4769071458333334
+        },
+        "day84": {
+          "events": 4778,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6634381666666667,
+          "transfers": 2,
+          "trust": 0.4769071458333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7874,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7234189166666667,
+          "transfers": 2,
+          "trust": 0.4755323125
+        },
+        "day84": {
+          "events": 3869,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6686445,
+          "transfers": 2,
+          "trust": 0.4778717708333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9343,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222826666666666,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        },
+        "day84": {
+          "events": 4787,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6667678333333332,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        }
+      },
+      "responses": {
+        "complied": 0.05193075898801598,
+        "n": 751,
+        "partial": 0.26897470039946736,
+        "refused": 0.6790945406125166
+      },
+      "seed": 100,
+      "world": "open_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9338,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7206993333333332,
+          "transfers": 2,
+          "trust": 0.4799910833333334
+        },
+        "day84": {
+          "events": 4774,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6657625,
+          "transfers": 2,
+          "trust": 0.48266456250000006
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7913,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7228279166666667,
+          "transfers": 2,
+          "trust": 0.47878368750000005
+        },
+        "day84": {
+          "events": 3889,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6679814166666667,
+          "transfers": 2,
+          "trust": 0.4834861041666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9343,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7213195,
+          "transfers": 2,
+          "trust": 0.47601993750000005
+        },
+        "day84": {
+          "events": 4779,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6667163333333334,
+          "transfers": 2,
+          "trust": 0.4786934166666667
+        }
+      },
+      "responses": {
+        "complied": 0.06695156695156695,
+        "n": 702,
+        "partial": 0.405982905982906,
+        "refused": 0.5270655270655271
+      },
+      "seed": 101,
+      "world": "open_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9337,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7243220833333334,
+          "transfers": 2,
+          "trust": 0.4718163541666667
+        },
+        "day84": {
+          "events": 4768,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6700956666666666,
+          "transfers": 2,
+          "trust": 0.4718163541666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7923,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222885,
+          "transfers": 2,
+          "trust": 0.4772011458333334
+        },
+        "day84": {
+          "events": 3917,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.667691,
+          "transfers": 2,
+          "trust": 0.4795653958333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9351,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7228575833333334,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4792,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6677645833333333,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        }
+      },
+      "responses": {
+        "complied": 0.059490084985835696,
+        "n": 706,
+        "partial": 0.26203966005665724,
+        "refused": 0.6784702549575071
+      },
+      "seed": 102,
+      "world": "open_no_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9292,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7155128333333334,
+          "transfers": 2,
+          "trust": 0.47962902083333336
+        },
+        "day84": {
+          "events": 4774,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6567563333333334,
+          "transfers": 2,
+          "trust": 0.4820421041666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7979,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72176725,
+          "transfers": 2,
+          "trust": 0.4799390833333334
+        },
+        "day84": {
+          "events": 3977,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6623885833333333,
+          "transfers": 2,
+          "trust": 0.4957140833333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9292,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7205406666666666,
+          "transfers": 3,
+          "trust": 0.4709844375000001
+        },
+        "day84": {
+          "events": 4778,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6624984166666666,
+          "transfers": 3,
+          "trust": 0.4806559791666667
+        }
+      },
+      "responses": {
+        "complied": 0.0821917808219178,
+        "n": 584,
+        "partial": 0.4383561643835616,
+        "refused": 0.4794520547945205
+      },
+      "seed": 100,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9273,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7411685,
+          "transfers": 2,
+          "trust": 0.47534254166666673
+        },
+        "day84": {
+          "events": 4775,
+          "satisfaction": 0.695,
+          "skill": 0.6859709166666667,
+          "transfers": 2,
+          "trust": 0.4799990833333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8280,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7421433333333334,
+          "transfers": 2,
+          "trust": 0.48135020833333336
+        },
+        "day84": {
+          "events": 4107,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6894543333333334,
+          "transfers": 2,
+          "trust": 0.4876549791666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9276,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7443823333333334,
+          "transfers": 2,
+          "trust": 0.46710002083333335
+        },
+        "day84": {
+          "events": 4778,
+          "satisfaction": 0.695,
+          "skill": 0.691214,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        }
+      },
+      "responses": {
+        "complied": 0.09448818897637795,
+        "n": 508,
+        "partial": 0.32677165354330706,
+        "refused": 0.5787401574803149
+      },
+      "seed": 101,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9381,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.73519975,
+          "transfers": 2,
+          "trust": 0.4624903333333334
+        },
+        "day84": {
+          "events": 4797,
+          "satisfaction": 0.695,
+          "skill": 0.6738904166666666,
+          "transfers": 2,
+          "trust": 0.46873858333333335
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8246,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7361274166666667,
+          "transfers": 2,
+          "trust": 0.47035020833333335
+        },
+        "day84": {
+          "events": 4061,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6754703333333333,
+          "transfers": 2,
+          "trust": 0.478109125
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9366,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7371327499999999,
+          "transfers": 2,
+          "trust": 0.4645650208333334
+        },
+        "day84": {
+          "events": 4789,
+          "satisfaction": 0.695,
+          "skill": 0.6773094999999999,
+          "transfers": 2,
+          "trust": 0.4701794791666667
+        }
+      },
+      "responses": {
+        "complied": 0.07719298245614035,
+        "n": 570,
+        "partial": 0.2929824561403509,
+        "refused": 0.6298245614035087
+      },
+      "seed": 102,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9446,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7153554999999999,
+          "transfers": 2,
+          "trust": 0.47537072916666673
+        },
+        "day84": {
+          "events": 4896,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.67157075,
+          "transfers": 2,
+          "trust": 0.4779141875000001
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8021,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7190423333333333,
+          "transfers": 2,
+          "trust": 0.47540237500000004
+        },
+        "day84": {
+          "events": 3999,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6772320833333333,
+          "transfers": 2,
+          "trust": 0.47774183333333337
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9455,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 4904,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        }
+      },
+      "responses": {
+        "complied": 0.05313351498637602,
+        "n": 734,
+        "partial": 0.273841961852861,
+        "refused": 0.6730245231607629
+      },
+      "seed": 100,
+      "world": "open_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9449,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7158535,
+          "transfers": 2,
+          "trust": 0.4828719166666667
+        },
+        "day84": {
+          "events": 4893,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.67354575,
+          "transfers": 2,
+          "trust": 0.4828719166666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8051,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7177535833333333,
+          "transfers": 2,
+          "trust": 0.47695077083333337
+        },
+        "day84": {
+          "events": 4018,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6759532500000001,
+          "transfers": 2,
+          "trust": 0.48432185416666673
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9449,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 4893,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        }
+      },
+      "responses": {
+        "complied": 0.06801736613603473,
+        "n": 691,
+        "partial": 0.36034732272069464,
+        "refused": 0.5716353111432706
+      },
+      "seed": 101,
+      "world": "open_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9445,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7200190833333333,
+          "transfers": 2,
+          "trust": 0.47003625
+        },
+        "day84": {
+          "events": 4885,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6788964166666666,
+          "transfers": 2,
+          "trust": 0.4718163541666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8071,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7186015833333333,
+          "transfers": 2,
+          "trust": 0.4772011458333334
+        },
+        "day84": {
+          "events": 4044,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6766456666666666,
+          "transfers": 2,
+          "trust": 0.4795653958333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9451,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4906,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        }
+      },
+      "responses": {
+        "complied": 0.06222222222222222,
+        "n": 675,
+        "partial": 0.27111111111111114,
+        "refused": 0.6666666666666666
+      },
+      "seed": 102,
+      "world": "open_solidarity"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9405,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7064810833333334,
+          "transfers": 2,
+          "trust": 0.47962902083333336
+        },
+        "day84": {
+          "events": 4831,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6567563333333334,
+          "transfers": 2,
+          "trust": 0.4820421041666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8095,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7196190833333334,
+          "transfers": 2,
+          "trust": 0.4818116458333334
+        },
+        "day84": {
+          "events": 4049,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.665345,
+          "transfers": 2,
+          "trust": 0.4957140833333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9408,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 4865,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        }
+      },
+      "responses": {
+        "complied": 0.08581436077057793,
+        "n": 571,
+        "partial": 0.44658493870402804,
+        "refused": 0.46760070052539404
+      },
+      "seed": 100,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9391,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7334559166666667,
+          "transfers": 2,
+          "trust": 0.47749552083333335
+        },
+        "day84": {
+          "events": 4852,
+          "satisfaction": 0.695,
+          "skill": 0.6895025,
+          "transfers": 2,
+          "trust": 0.4799990833333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8381,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7349159166666667,
+          "transfers": 2,
+          "trust": 0.47948666666666667
+        },
+        "day84": {
+          "events": 4187,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6914634166666667,
+          "transfers": 2,
+          "trust": 0.48579143750000003
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9388,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 4856,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        }
+      },
+      "responses": {
+        "complied": 0.09126984126984126,
+        "n": 504,
+        "partial": 0.3273809523809524,
+        "refused": 0.5813492063492064
+      },
+      "seed": 101,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9487,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7272213333333334,
+          "transfers": 2,
+          "trust": 0.4668676875
+        },
+        "day84": {
+          "events": 4881,
+          "satisfaction": 0.695,
+          "skill": 0.6782905833333333,
+          "transfers": 2,
+          "trust": 0.46873858333333335
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8388,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7284969166666667,
+          "transfers": 2,
+          "trust": 0.4745449166666667
+        },
+        "day84": {
+          "events": 4159,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.679809,
+          "transfers": 2,
+          "trust": 0.478109125
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9484,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 4874,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        }
+      },
+      "responses": {
+        "complied": 0.07880910683012259,
+        "n": 571,
+        "partial": 0.29071803852889666,
+        "refused": 0.6304728546409807
+      },
+      "seed": 102,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9138,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7019344166666667,
+          "transfers": 2,
+          "trust": 0.47883443750000004
+        },
+        "day84": {
+          "events": 4756,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6548948333333333,
+          "transfers": 2,
+          "trust": 0.48279600000000006
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7280,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7062776666666667,
+          "transfers": 2,
+          "trust": 0.4727839166666667
+        },
+        "day84": {
+          "events": 3853,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6614389166666667,
+          "transfers": 2,
+          "trust": 0.47564020833333337
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9147,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7043145833333333,
+          "transfers": 2,
+          "trust": 0.4824988333333334
+        },
+        "day84": {
+          "events": 4767,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6584178333333334,
+          "transfers": 2,
+          "trust": 0.48391693750000003
+        }
+      },
+      "responses": {
+        "complied": 0.04157782515991471,
+        "n": 938,
+        "partial": 0.39658848614072495,
+        "refused": 0.5618336886993603
+      },
+      "seed": 100,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9149,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7130969166666666,
+          "transfers": 2,
+          "trust": 0.4672774166666667
+        },
+        "day84": {
+          "events": 4771,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6719672499999999,
+          "transfers": 2,
+          "trust": 0.4740525208333333
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7307,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7124050833333334,
+          "transfers": 2,
+          "trust": 0.46794539583333333
+        },
+        "day84": {
+          "events": 3872,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6697930833333333,
+          "transfers": 2,
+          "trust": 0.4806557708333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9145,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7097945833333333,
+          "transfers": 2,
+          "trust": 0.4692983958333334
+        },
+        "day84": {
+          "events": 4767,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6663969166666667,
+          "transfers": 2,
+          "trust": 0.47495477083333343
+        }
+      },
+      "responses": {
+        "complied": 0.05204872646733112,
+        "n": 903,
+        "partial": 0.3875968992248062,
+        "refused": 0.5603543743078627
+      },
+      "seed": 101,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9139,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7090804166666667,
+          "transfers": 2,
+          "trust": 0.4633476666666667
+        },
+        "day84": {
+          "events": 4759,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6655239166666667,
+          "transfers": 2,
+          "trust": 0.46510275
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7326,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7090801666666667,
+          "transfers": 2,
+          "trust": 0.4790052916666667
+        },
+        "day84": {
+          "events": 3894,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6652180833333333,
+          "transfers": 2,
+          "trust": 0.48136954166666673
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9153,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7127996666666667,
+          "transfers": 2,
+          "trust": 0.46752837500000005
+        },
+        "day84": {
+          "events": 4775,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6711541666666667,
+          "transfers": 2,
+          "trust": 0.4714616458333334
+        }
+      },
+      "responses": {
+        "complied": 0.046460176991150445,
+        "n": 904,
+        "partial": 0.25110619469026546,
+        "refused": 0.702433628318584
+      },
+      "seed": 102,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9040,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6961711666666667,
+          "transfers": 2,
+          "trust": 0.4767579166666667
+        },
+        "day84": {
+          "events": 4711,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.643424,
+          "transfers": 2,
+          "trust": 0.481034
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7450,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7065930833333334,
+          "transfers": 3,
+          "trust": 0.4671864583333334
+        },
+        "day84": {
+          "events": 3927,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6575778333333333,
+          "transfers": 3,
+          "trust": 0.48398925000000004
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9049,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.70357025,
+          "transfers": 3,
+          "trust": 0.45782729166666675
+        },
+        "day84": {
+          "events": 4723,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6541054166666667,
+          "transfers": 3,
+          "trust": 0.46840568750000006
+        }
+      },
+      "responses": {
+        "complied": 0.061068702290076333,
+        "n": 786,
+        "partial": 0.3982188295165394,
+        "refused": 0.5407124681933843
+      },
+      "seed": 100,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9063,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7241249166666667,
+          "transfers": 2,
+          "trust": 0.4651083333333334
+        },
+        "day84": {
+          "events": 4724,
+          "satisfaction": 0.695,
+          "skill": 0.6756161666666666,
+          "transfers": 2,
+          "trust": 0.4772139583333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7458,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.731853,
+          "transfers": 2,
+          "trust": 0.47849779166666667
+        },
+        "day84": {
+          "events": 4028,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.68294025,
+          "transfers": 2,
+          "trust": 0.48914252083333337
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9069,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7276676666666666,
+          "transfers": 2,
+          "trust": 0.4632308541666667
+        },
+        "day84": {
+          "events": 4730,
+          "satisfaction": 0.695,
+          "skill": 0.68088925,
+          "transfers": 2,
+          "trust": 0.4739688333333334
+        }
+      },
+      "responses": {
+        "complied": 0.06241872561768531,
+        "n": 769,
+        "partial": 0.31859557867360205,
+        "refused": 0.6189856957087126
+      },
+      "seed": 101,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9198,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71414575,
+          "transfers": 2,
+          "trust": 0.46559206250000007
+        },
+        "day84": {
+          "events": 4744,
+          "satisfaction": 0.695,
+          "skill": 0.6590550833333334,
+          "transfers": 2,
+          "trust": 0.4719565416666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 7610,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7179653333333333,
+          "transfers": 2,
+          "trust": 0.47221435416666674
+        },
+        "day84": {
+          "events": 4026,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6663364166666667,
+          "transfers": 2,
+          "trust": 0.4757446041666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9192,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7170727499999999,
+          "transfers": 2,
+          "trust": 0.46440400000000004
+        },
+        "day84": {
+          "events": 4739,
+          "satisfaction": 0.695,
+          "skill": 0.6637883333333333,
+          "transfers": 2,
+          "trust": 0.46784670833333336
+        }
+      },
+      "responses": {
+        "complied": 0.05674653215636822,
+        "n": 793,
+        "partial": 0.2471626733921816,
+        "refused": 0.6960907944514502
+      },
+      "seed": 102,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9394,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7160943333333334,
+          "transfers": 5,
+          "trust": 0.45805272916666673
+        },
+        "day84": {
+          "events": 4903,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.672141,
+          "transfers": 5,
+          "trust": 0.46059618750000003
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8175,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7257745833333332,
+          "transfers": 4,
+          "trust": 0.46832381250000005
+        },
+        "day84": {
+          "events": 4083,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6762590833333334,
+          "transfers": 4,
+          "trust": 0.47093885416666675
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9437,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7256005,
+          "transfers": 4,
+          "trust": 0.4679463541666667
+        },
+        "day84": {
+          "events": 4905,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6747811666666667,
+          "transfers": 4,
+          "trust": 0.47151297916666673
+        }
+      },
+      "responses": {
+        "complied": 0.06554878048780488,
+        "n": 656,
+        "partial": 0.4420731707317073,
+        "refused": 0.4923780487804878
+      },
+      "seed": 100,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9504,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7169819166666667,
+          "transfers": 3,
+          "trust": 0.47074527083333334
+        },
+        "day84": {
+          "events": 4912,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6611635,
+          "transfers": 3,
+          "trust": 0.4782667291666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8171,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7258561666666666,
+          "transfers": 4,
+          "trust": 0.4737254375
+        },
+        "day84": {
+          "events": 4091,
+          "satisfaction": 0.6791666666666667,
+          "skill": 0.6769955833333333,
+          "transfers": 4,
+          "trust": 0.48143093750000004
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9505,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173949166666667,
+          "transfers": 3,
+          "trust": 0.46937906250000005
+        },
+        "day84": {
+          "events": 4914,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6621528333333333,
+          "transfers": 3,
+          "trust": 0.47175081250000006
+        }
+      },
+      "responses": {
+        "complied": 0.07173601147776183,
+        "n": 697,
+        "partial": 0.38450502152080346,
+        "refused": 0.5437589670014347
+      },
+      "seed": 101,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9499,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7214950833333335,
+          "transfers": 4,
+          "trust": 0.4554111250000001
+        },
+        "day84": {
+          "events": 4941,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6757046666666667,
+          "transfers": 4,
+          "trust": 0.46019027083333336
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8107,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7174015833333334,
+          "transfers": 3,
+          "trust": 0.4623840625
+        },
+        "day84": {
+          "events": 4087,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6622269166666667,
+          "transfers": 3,
+          "trust": 0.4623840625
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9390,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7206693333333334,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        },
+        "day84": {
+          "events": 4896,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6725774166666666,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        }
+      },
+      "responses": {
+        "complied": 0.07096774193548387,
+        "n": 620,
+        "partial": 0.25806451612903225,
+        "refused": 0.6709677419354839
+      },
+      "seed": 102,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9397,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7143622500000001,
+          "transfers": 4,
+          "trust": 0.4524155625000001
+        },
+        "day84": {
+          "events": 4853,
+          "satisfaction": 0.695,
+          "skill": 0.6619568333333333,
+          "transfers": 4,
+          "trust": 0.4613348125
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8160,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7257678333333333,
+          "transfers": 3,
+          "trust": 0.4624012916666667
+        },
+        "day84": {
+          "events": 4116,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6845417500000001,
+          "transfers": 3,
+          "trust": 0.4822308333333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9491,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71549125,
+          "transfers": 5,
+          "trust": 0.44699604166666673
+        },
+        "day84": {
+          "events": 4899,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6664193333333334,
+          "transfers": 5,
+          "trust": 0.4617834166666667
+        }
+      },
+      "responses": {
+        "complied": 0.08629441624365482,
+        "n": 591,
+        "partial": 0.36717428087986465,
+        "refused": 0.5465313028764806
+      },
+      "seed": 100,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9349,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7484943333333334,
+          "transfers": 5,
+          "trust": 0.4431368125000001
+        },
+        "day84": {
+          "events": 4887,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.69713775,
+          "transfers": 5,
+          "trust": 0.44579210416666665
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8387,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.74754825,
+          "transfers": 3,
+          "trust": 0.46495310416666674
+        },
+        "day84": {
+          "events": 4254,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.7026493333333333,
+          "transfers": 3,
+          "trust": 0.46973356250000003
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9404,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.74839725,
+          "transfers": 3,
+          "trust": 0.4454824791666667
+        },
+        "day84": {
+          "events": 4913,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.703491,
+          "transfers": 3,
+          "trust": 0.4548208125
+        }
+      },
+      "responses": {
+        "complied": 0.11176470588235295,
+        "n": 510,
+        "partial": 0.3196078431372549,
+        "refused": 0.5686274509803921
+      },
+      "seed": 101,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9477,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.7315468333333333,
+          "transfers": 3,
+          "trust": 0.44456931250000004
+        },
+        "day84": {
+          "events": 4892,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6810856666666667,
+          "transfers": 3,
+          "trust": 0.45504385416666676
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8257,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7428948333333333,
+          "transfers": 3,
+          "trust": 0.4601403541666667
+        },
+        "day84": {
+          "events": 4173,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6938055,
+          "transfers": 3,
+          "trust": 0.4672673541666667
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9430,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7369220833333333,
+          "transfers": 4,
+          "trust": 0.43697345833333334
+        },
+        "day84": {
+          "events": 4881,
+          "satisfaction": 0.7083333333333334,
+          "skill": 0.6782511666666666,
+          "transfers": 4,
+          "trust": 0.4472161458333334
+        }
+      },
+      "responses": {
+        "complied": 0.09961685823754789,
+        "n": 522,
+        "partial": 0.4444444444444444,
+        "refused": 0.4559386973180077
+      },
+      "seed": 102,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9474,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7153554999999999,
+          "transfers": 2,
+          "trust": 0.47537072916666673
+        },
+        "day84": {
+          "events": 4924,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.67157075,
+          "transfers": 2,
+          "trust": 0.4779141875000001
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8049,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7190423333333333,
+          "transfers": 2,
+          "trust": 0.47540237500000004
+        },
+        "day84": {
+          "events": 4027,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6772320833333333,
+          "transfers": 2,
+          "trust": 0.47774183333333337
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9483,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 4932,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        }
+      },
+      "responses": {
+        "complied": 0.05313351498637602,
+        "n": 734,
+        "partial": 0.273841961852861,
+        "refused": 0.6730245231607629
+      },
+      "seed": 100,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9477,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7158535,
+          "transfers": 2,
+          "trust": 0.4828719166666667
+        },
+        "day84": {
+          "events": 4921,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.67354575,
+          "transfers": 2,
+          "trust": 0.4828719166666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8079,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7177535833333333,
+          "transfers": 2,
+          "trust": 0.47695077083333337
+        },
+        "day84": {
+          "events": 4046,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6759532500000001,
+          "transfers": 2,
+          "trust": 0.48432185416666673
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9477,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 4921,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        }
+      },
+      "responses": {
+        "complied": 0.06801736613603473,
+        "n": 691,
+        "partial": 0.36034732272069464,
+        "refused": 0.5716353111432706
+      },
+      "seed": 101,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9473,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7200190833333333,
+          "transfers": 2,
+          "trust": 0.47003625
+        },
+        "day84": {
+          "events": 4913,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6788964166666666,
+          "transfers": 2,
+          "trust": 0.4718163541666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8099,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7186015833333333,
+          "transfers": 2,
+          "trust": 0.4772011458333334
+        },
+        "day84": {
+          "events": 4072,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6766456666666666,
+          "transfers": 2,
+          "trust": 0.4795653958333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9479,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4934,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        }
+      },
+      "responses": {
+        "complied": 0.06222222222222222,
+        "n": 675,
+        "partial": 0.27111111111111114,
+        "refused": 0.6666666666666666
+      },
+      "seed": 102,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9429,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7064810833333334,
+          "transfers": 2,
+          "trust": 0.47962902083333336
+        },
+        "day84": {
+          "events": 4847,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6567563333333334,
+          "transfers": 2,
+          "trust": 0.4820421041666667
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8121,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7196190833333334,
+          "transfers": 2,
+          "trust": 0.4818116458333334
+        },
+        "day84": {
+          "events": 4071,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.665345,
+          "transfers": 2,
+          "trust": 0.4957140833333334
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9434,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 4887,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        }
+      },
+      "responses": {
+        "complied": 0.08581436077057793,
+        "n": 571,
+        "partial": 0.44658493870402804,
+        "refused": 0.46760070052539404
+      },
+      "seed": 100,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9417,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7334559166666667,
+          "transfers": 2,
+          "trust": 0.47749552083333335
+        },
+        "day84": {
+          "events": 4874,
+          "satisfaction": 0.695,
+          "skill": 0.6895025,
+          "transfers": 2,
+          "trust": 0.4799990833333334
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8407,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7349159166666667,
+          "transfers": 2,
+          "trust": 0.47948666666666667
+        },
+        "day84": {
+          "events": 4209,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6914634166666667,
+          "transfers": 2,
+          "trust": 0.48579143750000003
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9414,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 4878,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        }
+      },
+      "responses": {
+        "complied": 0.09126984126984126,
+        "n": 504,
+        "partial": 0.3273809523809524,
+        "refused": 0.5813492063492064
+      },
+      "seed": 101,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "mid": {
+        "day168": {
+          "events": 9513,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7272213333333334,
+          "transfers": 2,
+          "trust": 0.4668676875
+        },
+        "day84": {
+          "events": 4903,
+          "satisfaction": 0.695,
+          "skill": 0.6782905833333333,
+          "transfers": 2,
+          "trust": 0.46873858333333335
+        }
+      },
+      "off": {
+        "day168": {
+          "events": 8414,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7284969166666667,
+          "transfers": 2,
+          "trust": 0.4745449166666667
+        },
+        "day84": {
+          "events": 4181,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.679809,
+          "transfers": 2,
+          "trust": 0.478109125
+        }
+      },
+      "on": {
+        "day168": {
+          "events": 9510,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 4896,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        }
+      },
+      "responses": {
+        "complied": 0.07880910683012259,
+        "n": 571,
+        "partial": 0.29071803852889666,
+        "refused": 0.6304728546409807
+      },
+      "seed": 102,
+      "world": "exploit_churn_guard_sampled_population"
+    }
+  ],
+  "combined_season_aging_worlds": 2,
+  "days": 168,
+  "default_unchanged": {
+    "advice_mode_default_identical": true,
+    "equal_to_pre_implementation_digest": true,
+    "explicit_none_equals_default": 14,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 218.2765529999997,
+  "event_checked_cells": 42,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "40548835df52324552721fabc20e384c9fd38c33eb90e1d42b42b3b363fe8846",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "unknown": true,
+    "without_personality": true
+  },
+  "leak_dynamic": {
+    "closed_no_solidarity": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 775
+    },
+    "closed_no_solidarity_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 675
+    },
+    "closed_solidarity": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 775
+    },
+    "closed_solidarity_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 675
+    },
+    "exploit_churn_guard": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 734
+    },
+    "exploit_churn_guard_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 571
+    },
+    "fixed_budget_no_inflow": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 938
+    },
+    "fixed_budget_no_inflow_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 786
+    },
+    "hoarder_buyer_policy": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 656
+    },
+    "hoarder_buyer_policy_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 591
+    },
+    "open_no_solidarity": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 751
+    },
+    "open_no_solidarity_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 584
+    },
+    "open_solidarity": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 734
+    },
+    "open_solidarity_sampled_population": {
+      "high_differs": true,
+      "low_differs": true,
+      "responses": 571
+    }
+  },
+  "leak_static": {
+    "coach_functions_checked": 1,
+    "decide_functions_checked": 8,
+    "other_modules_clean": true,
+    "readers": [
+      "__post_init__",
+      "_build_initial_world",
+      "_personality_traits",
+      "_player_advice_response",
+      "_snapshot_payload_unchecked",
+      "_validate_league_invariants",
+      "has_save_fields",
+      "load_league_snapshot_trusted",
+      "to_dict"
+    ]
+  },
+  "persistence_responses": {
+    "closed_no_solidarity": 775,
+    "closed_no_solidarity_sampled_population": 675,
+    "closed_solidarity": 775,
+    "closed_solidarity_sampled_population": 675,
+    "exploit_churn_guard": 734,
+    "exploit_churn_guard_sampled_population": 571,
+    "fixed_budget_no_inflow": 938,
+    "fixed_budget_no_inflow_sampled_population": 786,
+    "hoarder_buyer_policy": 656,
+    "hoarder_buyer_policy_sampled_population": 591,
+    "open_no_solidarity": 751,
+    "open_no_solidarity_sampled_population": 584,
+    "open_solidarity": 734,
+    "open_solidarity_sampled_population": 571
+  },
+  "personality_only_cells_without_new_events": 42,
+  "pure_function": {
+    "grid_points": 972
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "season_length_days": 84,
+  "seeds": [
+    100,
+    101,
+    102
+  ],
+  "tamper": {
+    "outcome_removed/load_league_snapshot": "rejected",
+    "outcome_removed/load_league_snapshot_trusted": "rejected",
+    "response_changed/load_league_snapshot": "rejected",
+    "response_changed/load_league_snapshot_trusted": "accepted"
+  },
+  "task": "T028",
+  "traits_enter_decision": {
+    "decisions": 28402,
+    "same_state_pairs_with_different_responses": 478,
+    "would_change_under_low_vs_high_traits": 11652
+  }
+}
