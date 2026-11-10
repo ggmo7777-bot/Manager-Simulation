@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}, "recorder_read_only": {"runs": 24, "all_equal": true}}
+12 252 95
+24 252 128
+36 252 194
+48 252 231
+60 252 299
+72 252 338
+84 252 408
+96 252 448
+108 252 520
+120 252 560
+132 252 638
+144 252 683
+156 252 757
+168 252 799
+180 252 872
+192 252 914
+204 252 988
+216 252 1031
+228 252 1101
+240 252 1146
+252 252 1203
+{"equal": {"t030": 84, "t031": 84, "t032": 84}, "cause_class": {"fwd|LO": {"class": "single(stale)", "main": ["stale"], "eligible": ["def", "stale"], "flags": ["opposed(noise)"]}, "fwd|HI": {"class": "single(stale)", "main": ["stale"], "eligible": ["def", "stale"], "flags": []}, "fwd|KN": {"class": "multiple(def, stale)", "main": ["def", "stale"], "eligible": ["noise", "def", "stale"], "flags": []}, "rev|LO": {"class": "single(stale)", "main": ["stale"], "eligible": ["noise", "def", "stale"], "flags": []}, "rev|HI": {"class": "single(stale)", "main": ["stale"], "eligible": ["noise", "def", "stale"], "flags": []}, "rev|KN": {"class": "no_err_change", "main": [], "eligible": [], "flags": []}}, "stale_split": {"fwd|LO": {"shares": {"prior": -0.1118092657199196, "lag": 1.1751370587481704}, "main": ["lag"]}, "fwd|HI": {"shares": {"prior": -0.1555403736707993, "lag": 1.4075819625863173}, "main": ["lag"]}, "fwd|KN": {"shares": {"prior": 0.09105289158572957, "lag": 0.620126016659405}, "main": ["lag"]}, "rev|LO": {"shares": {"prior": -0.06411070480483734, "lag": 1.0647522826908682}, "main": ["lag"]}, "rev|HI": {"shares": {"prior": -0.11358326015851268, "lag": 1.5217628598681805}, "main": ["lag"]}, "rev|KN": {"shares": {"prior": 0.6265873847668832, "lag": -0.7015659547433584}, "main": ["lag"]}}, "too_little_rest": {"fwd|top2": "helps", "fwd|final_skill": "flat", "rev|top2": "helps", "rev|final_skill": "flat"}, "elapsed_seconds": 1221.7777179159966}
