@@ -1,0 +1,88 @@
+{
+ "runtime": {
+  "python": "3.13.3",
+  "implementation": "cpython",
+  "system": "Darwin",
+  "machine": "arm64"
+ },
+ "rows": [
+  {
+   "condition": "league_open_solidarity",
+   "days": 35,
+   "run_s": 1.179,
+   "save_s": 3.226,
+   "load_s": [
+    1.196,
+    1.384,
+    1.215
+   ],
+   "bytes": 2848094,
+   "events": 1621
+  },
+  {
+   "condition": "league_open_solidarity",
+   "days": 84,
+   "run_s": 2.533,
+   "save_s": 5.765,
+   "load_s": [
+    2.54,
+    2.979,
+    2.287
+   ],
+   "bytes": 6809813,
+   "events": 3999
+  },
+  {
+   "condition": "league_open_solidarity",
+   "days": 1000,
+   "run_s": 11.183,
+   "save_s": 9.1,
+   "load_s": [
+    14.584,
+    14.34,
+    16.913
+   ],
+   "bytes": 72065499,
+   "events": 46857
+  },
+  {
+   "condition": "league_open_solidarity_sampled_population",
+   "days": 35,
+   "run_s": 0.6,
+   "save_s": 0.802,
+   "load_s": [
+    0.468,
+    0.541,
+    0.482
+   ],
+   "bytes": 2866786,
+   "events": 1648
+  },
+  {
+   "condition": "league_open_solidarity_sampled_population",
+   "days": 84,
+   "run_s": 0.904,
+   "save_s": 1.674,
+   "load_s": [
+    1.173,
+    1.16,
+    1.143
+   ],
+   "bytes": 6832965,
+   "events": 4049
+  },
+  {
+   "condition": "league_open_solidarity_sampled_population",
+   "days": 1000,
+   "run_s": 12.009,
+   "save_s": 17.725,
+   "load_s": [
+    6.061,
+    7.26,
+    10.973
+   ],
+   "bytes": 74779619,
+   "events": 46298
+  }
+ ]
+}
