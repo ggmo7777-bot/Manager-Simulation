@@ -460,17 +460,20 @@ def run(out, root):
     iso = check_isolation_state()
     leak = check_leak_dynamic()
     print('isolation', iso, 'leak', leak, flush=True)
-    main, start_rows, prefix, equal_s18 = {}, [], {}, 0
+    main, start_rows, prefix, equal_s18, intake_s18 = {}, [], {}, 0, 0
     for name in t023.conditions():
         for seed in SEEDS:
             for st in STARTS:
                 off_world, off = run_cell(name, seed, st, 'off', DAYS)
                 on_world, on = run_cell(name, seed, st, 'on', DAYS)
                 prefix[(name, seed, st)] = check_prefix(on_world, off_world)
-                if st == 18:  # nobody reaches 33 in eight seasons: identical to the control after normalising
-                    assert not any(e['kind'] in ('season_retired', 'season_youth_joined') for e in on_world.events)
-                    assert normalize(on_world) == normalize(off_world) and le.summarize_league_world(on_world) == le.summarize_league_world(off_world)
-                    equal_s18 += 1
+                if st == 18:  # nobody reaches 33 in eight seasons, so no retirement; an intake can still follow a transfer (補正A1)
+                    assert not any(e['kind'] == 'season_retired' for e in on_world.events)
+                    if not any(e['kind'] == 'season_youth_joined' for e in on_world.events):
+                        assert normalize(on_world) == normalize(off_world) and le.summarize_league_world(on_world) == le.summarize_league_world(off_world)
+                        equal_s18 += 1
+                    else:
+                        intake_s18 += 1
                 start_rows += starts_and_matchdays(on_world, on['newcomers'])
                 main[(name, seed, st)] = {'off': off, 'on': on}
         print('main', name, flush=True)
@@ -493,7 +496,7 @@ def run(out, root):
     result = {'task': 'T030', 'identity': le.league_identity(), 'runtime': runtime(), 'seeds': list(SEEDS), 'season_length_days': L, 'days': DAYS, 'long_days': LONG_DAYS,
               'default_unchanged': default, 'default_vs_t018': regression, 'invalid_rejected': invalid, 'pure_function': pure, 'static': static, 'isolation_state': iso,
               'leak_dynamic': leak, 'main_cells': len(main), 'long_cells': len(long_cells), 'cells_with_prefix_equal_to_control': len(prefix),
-              'first_turnover_event_index_min_max': [min(prefix.values()), max(prefix.values())], 'start18_identical_to_control_cells': equal_s18,
+              'first_turnover_event_index_min_max': [min(prefix.values()), max(prefix.values())], 'start18_identical_to_control_cells': equal_s18, 'start18_cells_with_transfer_caused_intake': intake_s18,
               'persistence_retirements': persisted, 'branch': branch, 'tamper': tamper, 'analysis': analysis, 'cells': table, 'long': long_table,
               'newcomers_total': sum(len(c['on']['newcomers']) for c in main.values()) + sum(len(c['newcomers']) for c in long_cells.values()),
               'elapsed_seconds': perf_counter() - start}
