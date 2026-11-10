@@ -51,7 +51,7 @@ label.pick input{width:18px;height:18px}
   <span class="brand">Manager Simulation</span><span class="hd">club_a の監督(あなた)</span><span class="sep"></span>
   <span class="num" id="clock"></span><span class="mut" id="phaseLabel"></span><span class="grow"></span>
   <label class="hd" for="seed">シード</label><input id="seed" type="number" value="7" style="width:80px;height:36px;border:1px solid var(--line2);border-radius:2px;padding:0 8px">
-  <button class="bt" id="newGame">新しい季節</button>
+  <button class="bt" id="newGame">最初から</button>
   <input id="saveName" value="save1" style="width:90px;height:36px;border:1px solid var(--line2);border-radius:2px;padding:0 8px" aria-label="セーブ名">
   <button class="bt" id="saveGame">セーブ</button>
   <select id="saveList" style="height:36px" aria-label="続きから"><option value="">続きから…</option></select>
@@ -63,6 +63,7 @@ label.pick input{width:18px;height:18px}
     <button data-tab="match">試合日</button>
     <button data-tab="table">順位</button>
     <button data-tab="reveal" id="revealTab" disabled>季節の答え合わせ</button>
+    <button data-tab="history">クラブ史</button>
   </nav>
   <main>
     <div class="err" id="error" role="alert"></div>
@@ -75,6 +76,7 @@ label.pick input{width:18px;height:18px}
     </div>
     <div id="table" class="hide"><section class="card"><h2>順位</h2><div id="standings"></div></section></div>
     <div id="reveal" class="hide"><section class="card"><h2>推定と真実</h2><div id="revealBody"></div></section></div>
+    <div id="history" class="hide"><section class="card"><h2>クラブ史 <span class="hd">終わった季ごとの結果・入れ替わり・あなたの推定の的確さ</span></h2><div id="historyBody"></div></section></div>
   </main>
 </div>
 <script>
@@ -82,6 +84,7 @@ const LABEL_CLASS = {"事実":"lb-f","観測":"lb-o","本人の理由":"lb-r","�
 const RESPONSE = {complied:"従った", partial:"部分的に従った", refused:"断った"};
 const STATED = {trusts_coach:"あなたを信頼している", distrusts_coach:"あなたを信用していない", personal:"個人的な事情"};
 const TRUE_REASON = {trust_above_autonomy:"信頼が自立心を上回る", trust_below_autonomy:"信頼が自立心を下回る", self_disciplined:"自分に厳しい性格", self_lax:"自分に甘い性格", irritated_by_low_playing_time:"出場機会の少なさへの苛立ち", no_dominant_term:"決め手なし"};
+const RETIRE_REASON = {age_limit:"年齢の限界", veteran_low_playing_time:"出場機会の少なさ(ベテラン)"};
 const $ = id => document.getElementById(id);
 let state = null, lastResult = null;
 
@@ -108,6 +111,8 @@ function describe(e) {
       const goals = own.map(p => `${p} ${e.player_stats[p].goals}得点/シュート${e.player_stats[p].shots}`).join("、");
       return `${e.home_club} ${e.home_goals} - ${e.away_goals} ${e.away_club}(シュート ${e.home_shots}-${e.away_shots})。あなたの先発: ${goals}`;
     }
+    case "season_retired": return `${e.player_id}(${e.age}歳)が引退。本人の理由: ${RETIRE_REASON[e.reason] || e.reason}`;
+    case "season_youth_joined": return `新人 ${e.player_id}(${e.age}歳)が入団。あなたはまだ何も知らない`;
     case "lineup_decision": return `あなたの先発 ${e.starters.join("・")} / 控え ${e.bench.join("・") || "なし"}`;
     case "advice_given": return `助言 ${e.player_id} に練習法${e.method}(あなたの予測する伸び ${f3(e.forecast)})`;
     case "transfer_completed": return `${e.player_id} が ${e.from_club} から ${e.to_club} へ移籍`;
@@ -127,7 +132,7 @@ function bar(estimate, error) {
 function renderSquad() {
   const rows = state.squad.map(p => {
     const rec = p.receptiveness ? `${f2(p.receptiveness.mean)} ±${f2(p.receptiveness.sd)}(${p.receptiveness.outcomes}回)` : "未知";
-    return `<tr><td class="num">${esc(p.player_id)}</td>
+    return `<tr><td class="num">${esc(p.player_id)}<div class="hd">${p.age}歳${p.observation_count === 0 ? " 新人・未観察" : ""}</div></td>
       <td>${bar(p.skill_estimate, p.measurement_error)}<span class="num">${f2(p.skill_estimate)}</span> <span class="hd">±${f3(p.measurement_error)}/回</span></td>
       <td><span class="num">${f2(p.rating_estimate)}</span></td>
       <td><span class="num">${f2(p.fatigue_estimate)}</span></td>
@@ -168,47 +173,67 @@ function renderAction() {
       refresh();
     };
   } else {
-    $("actionCard").innerHTML = `<h2>季節終了</h2><div>「季節の答え合わせ」で、あなたの推定と真実を比べられる。</div>`;
+    $("actionCard").innerHTML = `<h2>第${state.season}季 終了</h2><div class="row"><span>「季節の答え合わせ」で、あなたの推定と真実を比べられる。</span>
+      <button class="bt go" id="doNextSeason">次の季へ</button></div>
+      <div class="hd" style="margin-top:6px">選手は1つ年を取り、引退者は新人に入れ替わる。推定はそのまま持ち越す(古くなる)。新人は未観察から始まる。</div>`;
+    $("doNextSeason").onclick = async () => {
+      const next = await act("/api/next_season", {});
+      if (!next) return;
+      lastResult = null; $("result").textContent = `第${next.state.season}季が始まった。`; $("result").className = "mut";
+      refresh(next.state); show("match");
+    };
   }
 }
 
 function renderResult() {
   if (!lastResult) return;
-  const events = lastResult.events.map(e => `<div class="ev">${chip(e.label)}<span class="mut">日${e.day}</span> ${esc(describe(e))}</div>`).join("");
+  const events = lastResult.events.map(e => `<div class="ev">${chip(e.label)}<span class="mut">通算日${e.day}</span> ${esc(describe(e))}</div>`).join("");
   const changes = lastResult.estimate_changes.map(c => `<div class="ev">${chip(c.label)}${esc(c.player_id)} 技能の推定 ${f3(c.skill_before)} → ${f3(c.skill_after)} / 疲労の推定 ${f3(c.fatigue_before)} → ${f3(c.fatigue_after)}</div>`).join("");
   $("result").className = "";
   $("result").innerHTML = (events || '<span class="mut">見えた出来事なし</span>') + `<div class="hd" style="margin-top:8px">この1手で推定がどう動いたか</div>` + changes;
 }
 
-async function renderReveal() {
-  const data = await act("/api/reveal");
+async function renderReveal(season) {
+  const data = await act(season ? `/api/reveal/${season}` : "/api/reveal");
   if (!data) return;
   const diff = (a, b) => (a - b >= 0 ? "+" : "") + f3(a - b);
-  const players = data.players.map(p => `<tr><td class="num">${esc(p.player_id)}</td>
+  const players = data.players.map(p => `<tr><td class="num">${esc(p.player_id)}<div class="hd">${p.age}歳</div></td>
     <td class="num">${f3(p.skill_estimate)}</td><td class="num">${f3(p.skill_true)}</td><td class="num">${diff(p.skill_estimate, p.skill_true)}</td>
     <td class="num">${f3(p.fatigue_estimate)}</td><td class="num">${f3(p.fatigue_true)}</td><td class="num">${f3(p.cap_true)}</td>
     <td class="num">${p.trust_in_you_true === null ? "-" : f2(p.trust_in_you_true)}</td><td class="num">${p.discipline_true === null ? "-" : f2(p.discipline_true)}</td><td class="num">${p.emotional_stability_true === null ? "-" : f2(p.emotional_stability_true)}</td></tr>`).join("");
   const reasons = data.advice_reasons.map(r => `<tr><td class="num">日${r.day}</td><td>${esc(r.player_id)}</td><td>${RESPONSE[r.response]}</td>
     <td>${chip("本人の理由")}${STATED[r.stated_reason]}</td><td>${TRUE_REASON[r.true_reason] || esc(r.true_reason)}</td></tr>`).join("");
-  $("revealBody").innerHTML = `<table><tr><th>選手</th><th>技能 推定</th><th>真の技能</th><th>誤差</th><th>疲労 推定</th><th>真の疲労</th><th>成長の上限</th><th>あなたへの信頼</th><th>規律性</th><th>感情安定性</th></tr>${players}</table>
+  $("revealBody").innerHTML = `<h2>第${data.season}季の答え合わせ</h2><table><tr><th>選手</th><th>技能 推定</th><th>真の技能</th><th>誤差</th><th>疲労 推定</th><th>真の疲労</th><th>成長の上限</th><th>あなたへの信頼</th><th>規律性</th><th>感情安定性</th></tr>${players}</table>
     <h2 style="margin-top:16px">助言への反応: 本人が言った理由と、実際の主因</h2>
     <table><tr><th>日</th><th>選手</th><th>反応</th><th>本人が述べた理由</th><th>実際の主因</th></tr>${reasons || '<tr><td colspan="5" class="mut">助言への反応の記録なし</td></tr>'}</table>`;
 }
 
-function show(tab) {
-  for (const id of ["squad", "match", "table", "reveal"]) $(id).classList.toggle("hide", id !== tab);
+function renderHistory() {
+  const rows = state.history.map(h => {
+    const retired = h.retired.map(r => `${esc(r.player_id)}(${r.age}歳・${RETIRE_REASON[r.reason] || esc(r.reason)})`).join("、") || "なし";
+    const joined = h.joined.map(j => esc(j.player_id)).join("、") || "なし";
+    return `<tr><td class="num">第${h.season}季</td><td class="num">${h.rank}位 ${h.points}点</td><td>${h.wins}勝${h.draws}分${h.losses}敗 ${h.goals_for}-${h.goals_against}</td>
+      <td>${esc(h.champion)}</td><td>${retired}</td><td>${joined}</td><td class="num">${f3(h.skill_mae)}</td><td><button class="bt" data-reveal="${h.season}">答え合わせ</button></td></tr>`;
+  }).join("");
+  $("historyBody").innerHTML = state.history.length ? `<table><tr><th>季</th><th>順位</th><th>成績</th><th>優勝</th><th>引退</th><th>入団</th><th>技能の推定誤差(平均)</th><th></th></tr>${rows}</table>
+    <div class="hd" style="margin-top:8px">推定誤差は、その季の終わりの技能の推定と真の技能の差の平均。小さいほど読めていた。</div>` : '<span class="mut">まだ終わった季がない。</span>';
+  document.querySelectorAll("[data-reveal]").forEach(b => b.onclick = () => show("reveal", Number(b.dataset.reveal)));
+}
+
+function show(tab, season) {
+  for (const id of ["squad", "match", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
-  if (tab === "reveal") renderReveal();
+  if (tab === "reveal") renderReveal(season);
 }
 
 function refresh(newState) {
   if (lastResult) state = lastResult.state;
   if (newState) state = newState;
   const done = state.phase === "season_end";
-  $("clock").textContent = `第${Math.min(state.week, 6)}週 日${state.day}/${state.season_days}`;
+  $("clock").textContent = `第${state.season}季 第${Math.min(state.week, 6)}週 日${state.day}/${state.season_days}`;
   $("phaseLabel").textContent = {training: "練習の週", lineup: "先発を決める", season_end: "季節終了"}[state.phase];
   $("revealTab").disabled = !done;
-  renderSquad(); renderStandings(); renderAction(); renderResult();
+  renderSquad(); renderStandings(); renderAction(); renderResult(); renderHistory();
   if (done) show("reveal"); else if (!$("squad").classList.contains("hide") && lastResult) show("match");
 }
 
@@ -223,7 +248,7 @@ async function refreshSaves() {
   const data = await act("/api/saves");
   if (!data) return;
   $("saveList").innerHTML = `<option value="">続きから…</option>` + data.saves.map(s =>
-    `<option value="${esc(s.name)}">${esc(s.name)}${s.steps === null ? "(壊れている)" : `(シード${s.seed}・${s.steps}手)`}</option>`).join("");
+    `<option value="${esc(s.name)}">${esc(s.name)}${s.steps === null ? "(壊れている)" : `(シード${s.seed}・第${s.season}季・${s.steps}手)`}</option>`).join("");
 }
 $("saveGame").onclick = async () => {
   const done = await act("/api/save", {name: $("saveName").value});

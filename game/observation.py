@@ -48,6 +48,7 @@ def squad_view(world):
         evaluation = coach.evaluations[pid]
         row = {
             "player_id": pid,
+            "age": world.player_ages[pid],
             "skill_estimate": evaluation.skill_estimate,
             "rating_estimate": evaluation.match_rating_estimate,
             "fatigue_estimate": evaluation.fatigue_estimate,
@@ -65,10 +66,21 @@ def squad_view(world):
     return rows
 
 
-def standings_view(world):
-    rows = [{"club_id": cid, "points": a.points, "wins": a.wins, "draws": a.draws, "losses": a.losses,
-             "goals_for": a.goals_for, "goals_against": a.goals_against, "played": a.matches_played}
-            for cid, a in world.club_accounts.items()]
+_ACCOUNT_FIELDS = ("points", "wins", "draws", "losses", "goals_for", "goals_against", "matches_played")
+
+
+def account_totals(world):
+    """Cumulative club records; a season's table is the difference from the totals at its start."""
+    return {cid: {name: getattr(account, name) for name in _ACCOUNT_FIELDS} for cid, account in world.club_accounts.items()}
+
+
+def standings_view(world, baseline):
+    rows = []
+    for cid, totals in account_totals(world).items():
+        season = {name: totals[name] - baseline[cid][name] for name in _ACCOUNT_FIELDS}
+        rows.append({"club_id": cid, "points": season["points"], "wins": season["wins"], "draws": season["draws"],
+                     "losses": season["losses"], "goals_for": season["goals_for"], "goals_against": season["goals_against"],
+                     "played": season["matches_played"]})
     return sorted(rows, key=lambda r: (-r["points"], -(r["goals_for"] - r["goals_against"]), r["club_id"]))
 
 
@@ -91,6 +103,11 @@ def _event_item(event):
     if kind == "transfer_completed" and OWN_CLUB in (data["from_club"], data["to_club"]):
         return {"label": FACT, "kind": kind, "day": day, "player_id": data["player_id"],
                 "from_club": data["from_club"], "to_club": data["to_club"]}
+    if kind == "season_retired" and data["club_id"] == OWN_CLUB:
+        return {"label": REASON, "kind": kind, "day": day, "player_id": data["player_id"], "age": data["age"],
+                "reason": data["reason"]}
+    if kind == "season_youth_joined" and data["club_id"] == OWN_CLUB:
+        return {"label": FACT, "kind": kind, "day": day, "player_id": data["player_id"], "age": data["age"]}
     if kind == "coach_training_decision" and event["actor"] == OWN_COACH and data["chosen"]["kind"] == "propose":
         chosen = data["chosen"]
         return {"label": FACT, "kind": "advice_given", "day": day, "player_id": chosen["target"], "method": chosen["method"],
@@ -128,3 +145,9 @@ def estimate_changes(before, after):
                         "skill_before": previous["skill_estimate"], "skill_after": row["skill_estimate"],
                         "fatigue_before": previous["fatigue_estimate"], "fatigue_after": row["fatigue_estimate"]})
     return changes
+
+
+def season_turnover(world, since_index):
+    """Own-club retirements and newcomers recorded since an event index (public records, no hidden state)."""
+    items = observed_events(world, since_index)
+    return ([i for i in items if i["kind"] == "season_retired"], [i for i in items if i["kind"] == "season_youth_joined"])

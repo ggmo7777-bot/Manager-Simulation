@@ -78,7 +78,7 @@ class TestServerSave(unittest.TestCase):
             game.handle("POST", "/api/save", {"name": "slot-1"})
             day = game.session.world.day
             game.handle("POST", "/api/new", {"seed": 11})
-            self.assertEqual(game.handle("GET", "/api/saves", {}), {"saves": [{"name": "slot-1", "seed": 7, "steps": 1}]})
+            self.assertEqual(game.handle("GET", "/api/saves", {}), {"saves": [{"name": "slot-1", "seed": 7, "steps": 1, "season": 1}]})
             state = game.handle("POST", "/api/load", {"name": "slot-1"})
             self.assertEqual((state["seed"], state["day"]), (7, day))
             for bad in ("../x", "", None, "a" * 41):
