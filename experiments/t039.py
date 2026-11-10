@@ -223,7 +223,8 @@ def check_shadow_vs_shifted_run(cells_by_setting, tolerance=2e-6):
                 for k, players in enumerate(snapshots):
                     for pid, ests in players.items():
                         counts[k]['rows'] += 1
-                        counts[k]['agree'] += max(abs(x - y) for x, y in zip(ests['all'], shifted_cell['early'][club][k][pid]['actual'])) <= tolerance
+                        other = shifted_cell['early'][club][k].get(pid)  # a player can be on this roster only in one of the runs once the histories diverge (transfers)
+                        counts[k]['agree'] += other is not None and max(abs(x - y) for x, y in zip(ests['all'], other['actual'])) <= tolerance
         out[t] = counts
     return out
 
