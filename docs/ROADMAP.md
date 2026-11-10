@@ -1,5 +1,6 @@
 # Vertical Slice・開発順序・実験ゲート
 
+2026-11-10追記: T027で性格の潜在特性(`personality`、`discipline`・`emotional_stability`、選手の真の状態のみ・どの判断も未使用・Policy非公開)を追加([T027結果](experiments/T027-RESULTS.md))。次はT028で特性の最初の利用(助言への従順/不従順を理由つきの記録として)、その後T029で引退・新人(特性の継承)。
 2026-11-10追記: T026で年齢の効果を年度末の記録イベント`season_skill_aged`(未校正の仮説曲線、年齢はPolicy非公開)として追加([T026結果](experiments/T026-RESULTS.md))。次は引退と新人供給(年齢分布の設計が先)か曲線の実データ校正。
 2026-11-10追記: T025で加齢を年度末の記録付きイベント(`season_aged`、年齢カウンタのみ)として追加([T025結果](experiments/T025-RESULTS.md))。次は年齢の効果(成熟曲線)か引退。
 2026-11-10追記: T024で年度ごとの順位表を`league_standings`(イベントだけから導く純関数、保存しない)として追加([T024結果](experiments/T024-RESULTS.md))。次は年度末の記録付きイベント(加齢等)か表示。

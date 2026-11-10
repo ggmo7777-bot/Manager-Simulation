@@ -1,0 +1,242 @@
+{
+  "branch": {
+    "has_save_fields": true,
+    "interventions": 1,
+    "stepped_equals_oneshot": true
+  },
+  "days": 126,
+  "default_unchanged": {
+    "equal_to_pre_implementation_digest": true,
+    "explicit_none_equals_default": 14,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 220.62700491600117,
+  "generator": {
+    "build_comparisons": 700,
+    "club_gap": {
+      "discipline": -0.0010889429999999534,
+      "emotional_stability": -0.002659464833333347
+    },
+    "correlations": {
+      "between_traits": -0.007368790485373153,
+      "discipline_vs_ambition": 0.006368091464116261,
+      "discipline_vs_autonomy": -0.006204096416459564,
+      "discipline_vs_loyalty": -0.001612853741440127,
+      "emotional_stability_vs_ambition": 0.0023480910221291298,
+      "emotional_stability_vs_autonomy": -0.0026680953041811222,
+      "emotional_stability_vs_loyalty": -0.013089681411658859
+    },
+    "fixed_seed100": {
+      "p1": {
+        "discipline": 0.314685,
+        "emotional_stability": 0.431152
+      },
+      "p10": {
+        "discipline": 0.724278,
+        "emotional_stability": 0.645551
+      },
+      "p11": {
+        "discipline": 0.218921,
+        "emotional_stability": 0.37299
+      },
+      "p12": {
+        "discipline": 0.438837,
+        "emotional_stability": 0.425738
+      },
+      "p2": {
+        "discipline": 0.413632,
+        "emotional_stability": 0.267517
+      },
+      "p3": {
+        "discipline": 0.228533,
+        "emotional_stability": 0.749845
+      },
+      "p4": {
+        "discipline": 0.683496,
+        "emotional_stability": 0.652632
+      },
+      "p5": {
+        "discipline": 0.303764,
+        "emotional_stability": 0.2127
+      },
+      "p6": {
+        "discipline": 0.443289,
+        "emotional_stability": 0.493066
+      },
+      "p7": {
+        "discipline": 0.390299,
+        "emotional_stability": 0.256497
+      },
+      "p8": {
+        "discipline": 0.441714,
+        "emotional_stability": 0.228947
+      },
+      "p9": {
+        "discipline": 0.291737,
+        "emotional_stability": 0.632968
+      }
+    },
+    "ks_critical": 0.014879796145557012,
+    "pid_mean_range": [
+      0.490738269,
+      0.5137284539999999
+    ],
+    "stats": {
+      "discipline": {
+        "ks": 0.006469523809523814,
+        "max": 0.85,
+        "mean": 0.49916454149999995,
+        "min": 0.150159,
+        "sd": 0.20190151262560485
+      },
+      "emotional_stability": {
+        "ks": 0.00998476190476194,
+        "max": 0.849916,
+        "mean": 0.50249283625,
+        "min": 0.150136,
+        "sd": 0.20186980973643576
+      }
+    },
+    "values": 12000
+  },
+  "history_events": {
+    "closed_no_solidarity@100": 5706,
+    "closed_no_solidarity@101": 5714,
+    "closed_no_solidarity@102": 5784,
+    "closed_no_solidarity_sampled_population@100": 5813,
+    "closed_no_solidarity_sampled_population@101": 6013,
+    "closed_no_solidarity_sampled_population@102": 5972,
+    "closed_solidarity@100": 5706,
+    "closed_solidarity@101": 5714,
+    "closed_solidarity@102": 5784,
+    "closed_solidarity_sampled_population@100": 5813,
+    "closed_solidarity_sampled_population@101": 6013,
+    "closed_solidarity_sampled_population@102": 5972,
+    "exploit_churn_guard@100": 6055,
+    "exploit_churn_guard@101": 6074,
+    "exploit_churn_guard@102": 6090,
+    "exploit_churn_guard_sampled_population@100": 6117,
+    "exploit_churn_guard_sampled_population@101": 6327,
+    "exploit_churn_guard_sampled_population@102": 6306,
+    "fixed_budget_no_inflow@100": 5689,
+    "fixed_budget_no_inflow@101": 5712,
+    "fixed_budget_no_inflow@102": 5734,
+    "fixed_budget_no_inflow_sampled_population@100": 5746,
+    "fixed_budget_no_inflow_sampled_population@101": 5871,
+    "fixed_budget_no_inflow_sampled_population@102": 5910,
+    "hoarder_buyer_policy@100": 6155,
+    "hoarder_buyer_policy@101": 6158,
+    "hoarder_buyer_policy@102": 6109,
+    "hoarder_buyer_policy_sampled_population@100": 6191,
+    "hoarder_buyer_policy_sampled_population@101": 6339,
+    "hoarder_buyer_policy_sampled_population@102": 6232,
+    "open_no_solidarity@100": 5862,
+    "open_no_solidarity@101": 5886,
+    "open_no_solidarity@102": 5905,
+    "open_no_solidarity_sampled_population@100": 5983,
+    "open_no_solidarity_sampled_population@101": 6213,
+    "open_no_solidarity_sampled_population@102": 6142,
+    "open_solidarity@100": 6027,
+    "open_solidarity@101": 6046,
+    "open_solidarity@102": 6062,
+    "open_solidarity_sampled_population@100": 6091,
+    "open_solidarity_sampled_population@101": 6301,
+    "open_solidarity_sampled_population@102": 6280
+  },
+  "history_identical_cells": 42,
+  "history_identical_with_season_and_aging": {
+    "closed_no_solidarity": 5685,
+    "closed_no_solidarity_sampled_population": 5808,
+    "closed_solidarity": 5685,
+    "closed_solidarity_sampled_population": 5808,
+    "exploit_churn_guard": 6048,
+    "exploit_churn_guard_sampled_population": 6103,
+    "fixed_budget_no_inflow": 5687,
+    "fixed_budget_no_inflow_sampled_population": 5741,
+    "hoarder_buyer_policy": 6139,
+    "hoarder_buyer_policy_sampled_population": 6180,
+    "open_no_solidarity": 5838,
+    "open_no_solidarity_sampled_population": 5972,
+    "open_solidarity": 6020,
+    "open_solidarity_sampled_population": 6077
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "9f665bde72c6c67bc310cf1c4e92e9cd6c7b4cb2505caf8e0624eeffdb12dca9",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "unknown": true
+  },
+  "leak_dynamic_worlds": 14,
+  "leak_static": {
+    "other_modules_checked": 28,
+    "readers": [
+      "__post_init__",
+      "_build_initial_world",
+      "_personality_traits",
+      "_snapshot_payload_unchecked",
+      "_validate_league_invariants",
+      "has_save_fields",
+      "load_league_snapshot_trusted",
+      "to_dict"
+    ]
+  },
+  "mode": "latent_v1",
+  "persistence_worlds": 14,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seeds": [
+    100,
+    101,
+    102
+  ],
+  "tamper_rejected": {
+    "added_while_none/load_league_snapshot": true,
+    "added_while_none/load_league_snapshot_trusted": true,
+    "added_while_none/load_league_snapshot_trusted/manifest_forged": true,
+    "out_of_range/load_league_snapshot": true,
+    "out_of_range/load_league_snapshot_trusted": true,
+    "out_of_range/load_league_snapshot_trusted/manifest_forged": true,
+    "player_removed/load_league_snapshot": true,
+    "player_removed/load_league_snapshot_trusted": true,
+    "player_removed/load_league_snapshot_trusted/manifest_forged": true,
+    "removed_while_enabled/load_league_snapshot": true,
+    "removed_while_enabled/load_league_snapshot_trusted": true,
+    "removed_while_enabled/load_league_snapshot_trusted/manifest_forged": true,
+    "trait_added/load_league_snapshot": true,
+    "trait_added/load_league_snapshot_trusted": true,
+    "trait_added/load_league_snapshot_trusted/manifest_forged": true,
+    "trait_removed/load_league_snapshot": true,
+    "trait_removed/load_league_snapshot_trusted": true,
+    "trait_removed/load_league_snapshot_trusted/manifest_forged": true,
+    "value_changed/load_league_snapshot": true,
+    "value_changed/load_league_snapshot_trusted": true,
+    "value_changed/load_league_snapshot_trusted/manifest_forged": true
+  },
+  "task": "T027"
+}

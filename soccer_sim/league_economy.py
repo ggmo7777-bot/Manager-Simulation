@@ -140,6 +140,17 @@ RANGE_BOUNDED = ("trait", "cap", "loyalty", "ambition", "autonomy")
 AGING_CURVES = ("none", "hypothesis_v1")
 
 
+PERSONALITY_MODES = ("none", "latent_v1")
+PERSONALITY_TRAITS = ("discipline", "emotional_stability")  # T027: true latent state, used by no decision yet
+PERSONALITY_RANGE = (0.15, 0.85)
+
+
+def _personality_traits(seed: int, player_ids: Any) -> dict[str, dict[str, float]]:
+    """T027 latent_v1: one keyed uniform draw per (trait, player) on its own channel, so no existing draw is touched."""
+    return {pid: {name: round6(uniform_from_key(seed, 0, f"personality:{name}", pid, low=PERSONALITY_RANGE[0], high=PERSONALITY_RANGE[1]))
+                  for name in PERSONALITY_TRAITS} for pid in sorted(player_ids)}
+
+
 def _aging_delta(age: int) -> float:
     """T026 hypothesis_v1: per-season additive trait change on reaching `age`. Uncalibrated (no real-world data source chosen)."""
     return 0.02 if age <= 24 else 0.0 if age <= 29 else round6(-0.01 * (age - 29))
@@ -266,6 +277,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    personality: str = "none"  # T027: "none" or "latent_v1" (two latent traits as true player state; no decision reads them yet)
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -364,6 +376,8 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid aging_curve: {self.aging_curve}")
         if self.aging_curve != "none" and not self.aging_start_age:
             raise ValueError("aging_curve requires aging_start_age")
+        if self.personality not in PERSONALITY_MODES:
+            raise ValueError(f"invalid personality: {self.personality}")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -378,6 +392,8 @@ class LeagueEconomyConfig:
             data["aging_start_age"] = self.aging_start_age
         if self.aging_curve != "none":
             data["aging_curve"] = self.aging_curve
+        if self.personality != "none":
+            data["personality"] = self.personality
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -450,7 +466,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -911,6 +927,7 @@ class LeagueWorldState:
     events: list[dict[str, Any]] = field(default_factory=list)
     interventions: tuple[ResearchIntervention, ...] = ()
     player_ages: dict[str, int] = field(default_factory=dict)  # T025: empty unless config.aging_start_age
+    player_personality: dict[str, dict[str, float]] = field(default_factory=dict)  # T027: empty unless config.personality
 
 
 def _population_draw(seed: int, channel: str, token: str, low: float, high: float) -> float:
@@ -1240,6 +1257,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         public_last_starters=public_last_starters,
         events=[],
         player_ages={pid: config.aging_start_age for pid in sorted(players)} if config.aging_start_age else {},
+        player_personality=_personality_traits(seed, players) if config.personality != "none" else {},
     )
     _append_event(
         world,
@@ -2874,6 +2892,13 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
                 raise ValueError(f"season_aged event {n} does not match the aging rule")
         if any(type(a) is not int or a != start + len(aged) for a in ages.values()):
             raise ValueError("player_ages do not equal start age plus season_aged count")
+    # T027: latent traits exist only when enabled, never change, and equal the seeded generator (so even a re-hashed manifest cannot hide an edit).
+    if world.config.personality == "none":
+        if world.player_personality:
+            raise ValueError("player_personality present but personality is none")
+    elif world.player_personality != _personality_traits(world.seed, world.players) or any(
+            type(v) is not float for row in world.player_personality.values() for v in row.values()):
+        raise ValueError("player_personality does not match the seeded generator")
     # T026: with a curve, every season_aged is followed at once by exactly one season_skill_aged that obeys the curve.
     skill = [(i, ev) for i, ev in enumerate(world.events) if ev.get("kind") == "season_skill_aged"]
     if world.config.aging_curve == "none":
@@ -3052,6 +3077,7 @@ def _snapshot_payload_unchecked(world: LeagueWorldState) -> dict[str, Any]:
         "research_branch": bool(world.interventions),
         "interventions": [asdict(record) for record in world.interventions],
         **({"player_ages": dict(world.player_ages)} if world.config.aging_start_age else {}),
+        **({"player_personality": {k: dict(v) for k, v in world.player_personality.items()}} if world.config.personality != "none" else {}),
     }
 
 
@@ -3317,6 +3343,7 @@ def load_league_snapshot_trusted(path: str | Path) -> LeagueWorldState:
             events=raw["events"],
             interventions=tuple(_record_from_payload(r) for r in raw["interventions"]),
             player_ages=dict(raw.get("player_ages", {})),
+            player_personality=dict(raw.get("player_personality", {})),
         )
         _validate_league_invariants(world)
     except (KeyError, TypeError, AttributeError) as error:
