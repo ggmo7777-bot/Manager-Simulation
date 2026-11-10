@@ -30,3 +30,9 @@ seed100、Python 3.13.3(uv)。7条件(`T011_ALL_CONDITIONS`)×fixed/sampled=14�
 ## 限界
 
 年齢は記録上のカウンタで、技能・移籍・給与・Policyには何も作用しない。全員同齢スタートで年齢分布を持たない。引退・新人・成熟曲線は未実装。年度長の値は任意で、18歳開始も任意。
+
+## 補正A1(実装中の発見、結果の全42セルを見る前に固定)
+
+最初の検査実行(`artifacts/t025/run-log-attempt1-failed.txt`)は検査側の誤り(存在しない介入kind名)で、2回目(`run-log-attempt2-failed.txt`)は条件2の写像が`KeyError`で停止した。原因は規則の見落としで、`_record_ledger_tx`が原因参照に`world.events[-1]`を使うため、`season_aged`の直後に起きる最初の台帳イベントの`cause_refs`が`season_aged`のIDを指す(例: 28日・L=14のopen_solidarityでe623がe622を指す)。履歴の内容(日・金額・状態)は変わらず、原因参照の指し先だけが加齢イベントになる。
+
+補正(結果の判定前に固定): 条件2の写像で、`season_aged`のIDは直前の非加齢イベントのIDへ写す(加齢なしworldが持つ原因参照と同じ)。他の比較は変えない。セルごとに「`season_aged`を指すcause_refs」の件数を記録して結果に書く。`events[-1]`依存の解消(実装の変更)は進行のコードに触れるため対象外で、限界として記録する。

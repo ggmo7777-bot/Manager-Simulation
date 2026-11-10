@@ -1,0 +1,28 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+hand [(42, 1, {19}), (84, 2, {20}), (126, 3, {21})] branch {'interventions': 1} tamper 10 forged_manifest_trusted_reader rejected invalid {'negative': True, 'bool': True, 'float': True, 'str': True, 'without_season': True}
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 185, in <module>
+    run(parser.parse_args().out.resolve(), CODE_ROOT)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 171, in run
+    cells[f'{name}@{length}'] = check_cell(name, length, Path(tmp) / 'p')
+                                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 60, in check_cell
+    assert strip_aging(raw) == le._snapshot_payload_unchecked(control), (name, length)  # condition 2
+           ~~~~~~~~~~~^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 43, in strip_aging
+    out['events'] = remap(kept)
+                    ~~~~~^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 38, in remap
+    return [remap(x) for x in v]
+            ~~~~~^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 40, in remap
+    return {k: remap(x) for k, x in v.items()}
+               ~~~~~^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 38, in remap
+    return [remap(x) for x in v]
+            ~~~~~^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 36, in remap
+    return mapping[v] if ID.match(v) else v
+           ~~~~~~~^^^
+KeyError: 'e923'
