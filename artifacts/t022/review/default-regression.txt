@@ -1,0 +1,1 @@
+{'default_regression': {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}, 'null_equals_baseline_pairs': 6}

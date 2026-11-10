@@ -1,0 +1,24 @@
+equivalence closed_no_solidarity
+equivalence closed_no_solidarity_sampled_population
+equivalence closed_solidarity
+equivalence closed_solidarity_sampled_population
+equivalence open_no_solidarity
+equivalence open_no_solidarity_sampled_population
+equivalence open_solidarity
+equivalence open_solidarity_sampled_population
+equivalence fixed_budget_no_inflow
+equivalence fixed_budget_no_inflow_sampled_population
+equivalence hoarder_buyer_policy
+equivalence hoarder_buyer_policy_sampled_population
+equivalence exploit_churn_guard
+equivalence exploit_churn_guard_sampled_population
+continuation {'resume_to_35_equal': True, 'interventions_preserved': 2, 'multi_step_branch_equal': True, 'interventions_after_third': 3}
+rejections {'value_change': True, 'type_change_float_to_int': True, 'extra_key': True, 'cash_change': True, 'drop_last_event': True, 'day_change': True, 'manifest_missing': True, 'manifest_hash_mismatch': True, 'manifest_identity_mismatch': True, 'old_save16_identity': True, 'duplicate_json_key': True}
+{'condition': 'open_solidarity', 'days': 35, 'replay_s': [0.196, 0.196, 0.195], 'trusted_s': [0.046, 0.045, 0.045], 'replay_median': 0.196, 'trusted_median': 0.045, 'speedup': 4.32}
+{'condition': 'open_solidarity', 'days': 84, 'replay_s': [0.464, 0.461, 0.482], 'trusted_s': [0.115, 0.106, 0.103], 'replay_median': 0.464, 'trusted_median': 0.106, 'speedup': 4.38}
+{'condition': 'open_solidarity', 'days': 1000, 'replay_s': [7.826, 6.579, 7.528], 'trusted_s': [1.246, 1.297, 2.039], 'replay_median': 7.528, 'trusted_median': 1.297, 'speedup': 5.8}
+{'condition': 'open_solidarity_sampled_population', 'days': 35, 'replay_s': [0.212, 0.206, 0.213], 'trusted_s': [0.05, 0.061, 0.049], 'replay_median': 0.212, 'trusted_median': 0.05, 'speedup': 4.26}
+{'condition': 'open_solidarity_sampled_population', 'days': 84, 'replay_s': [0.488, 0.493, 0.491], 'trusted_s': [0.116, 0.136, 0.136], 'replay_median': 0.491, 'trusted_median': 0.136, 'speedup': 3.62}
+{'condition': 'open_solidarity_sampled_population', 'days': 1000, 'replay_s': [6.423, 7.036, 6.383], 'trusted_s': [2.056, 1.541, 1.553], 'replay_median': 6.423, 'trusted_median': 1.553, 'speedup': 4.14}
+{"equivalence_worlds": 14, "speed_target_met": true, "elapsed_seconds": 113.78617175}
+finished
