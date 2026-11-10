@@ -1,0 +1,20 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True, 'explicit_none_equals_default_advice_on': 14, 'receptiveness_default_identical': True, 'explicit_none_equals_default_aging_config': 14, 't026_default_check': True, 'explicit_none_equals_default_with_exploration': 14} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'save_fields': True} static {'practice_rating_readers': ['__post_init__', '_step_training_day', 'has_save_fields', 'to_dict']}
+leak {'off': {'days_compared_before_first_observation': 10}, 'on': {'days_compared_before_first_observation': 10}}
+main closed_no_solidarity
+main closed_no_solidarity_sampled_population
+main closed_solidarity
+main closed_solidarity_sampled_population
+main open_no_solidarity
+main open_no_solidarity_sampled_population
+main open_solidarity
+main open_solidarity_sampled_population
+main fixed_budget_no_inflow
+main fixed_budget_no_inflow_sampled_population
+main hoarder_buyer_policy
+main hoarder_buyer_policy_sampled_population
+main exploit_churn_guard
+main exploit_churn_guard_sampled_population
+analysis {"P1_match_error": {"on": 0.08580937996031747, "off": 0.0894494384920635, "cells_with_newcomers": 84, "cells_on_lower": 75, "supported": true}, "P2_started": {"on": 0.6190476190476191, "off": 0.6398809523809523, "diff": -0.02083333333333326, "supported": false}, "P3_top2_started": {"on": 0.7068345323741008, "off": 0.74, "diff": -0.033165467625899225, "missed_talent_on": 163, "missed_talent_off": 143, "supported": false}, "P4_costs": {"skill": {"mean_on_minus_off": 0.00026683829365079355, "sign_test": {"positive": 25, "negative": 59, "ties": 0, "p_two_sided": 0.00026645108697203517}}, "satisfaction": {"mean_on_minus_off": 0.031021825396825436, "sign_test": {"positive": 75, "negative": 3, "ties": 6, "p_two_sided": 5.238237034277805e-19}}, "trust": {"mean_on_minus_off": -0.0007316631944444376, "sign_test": {"positive": 36, "negative": 48, "ties": 0, "p_two_sided": 0.2298644069691204}}, "transfers": {"mean_on_minus_off": -0.11904761904761904, "sign_test": {"positive": 1, "negative": 11, "ties": 72, "p_two_sided": 0.00634765625}}, "starter_skill": {"mean_on_minus_off": 0.0019838229786706524, "sign_test": {"positive": 67, "negative": 17, "ties": 0, "p_two_sided": 3.495893514797303e-08}, "off": 0.6720669989459326, "on": 0.6740508219246032}, "lineup_swap_rate": {"mean_on_minus_off": 0.06560559006211181, "sign_test": {"positive": 68, "negative": 10, "ties": 6, "p_two_sided": 9.70811491825464e-12}, "off": 0.21933229813664598, "on": 0.28493788819875776}, "slot_share_propose": {"off": 0.5238301917989419, "on": 0.5232618220899471}, "slot_share_observe": {"off": 0.05386078042328042, "on": 0.055266203703703706}, "slot_share_scout": {"off": 0.4223090277777778, "on": 0.42147197420634924}, "slot_share_rest": {"off": 0.0, "on": 0.0}, "events_on_minus_off": -11.095238095238095}, "P4_material": {"skill_below_-0.005": false, "trust_below_-0.010": false, "satisfaction_below_-0.010": false, "skill_not_negative": true, "starter_skill_positive": true}}
+persistence {'worlds': 14, 'coach_session_observations': 885} {'interventions': 1, 'stepped_equals_oneshot': True} {'load_league_snapshot': 'rejected', 'load_league_snapshot_trusted': 'accepted'}
+{"cells": 84, "elapsed_seconds": 378.1266738329996}
