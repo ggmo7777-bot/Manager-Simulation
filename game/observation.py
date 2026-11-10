@@ -68,6 +68,61 @@ def squad_view(world):
     return rows
 
 
+def other_club_players(world):
+    return [pid for pid in le._active_pids(world) if world.players[pid].club_id != OWN_CLUB]
+
+
+def targets_view(world):
+    """Players of other clubs as the coach knows them: his own estimate (scouting and match observations) and public records."""
+    coach = world.coaches[OWN_COACH]
+    counts, records = _observation_counts(world), _public_match_records(world)
+    scoutable = set(scoutable_targets(world))
+    rows = []
+    for pid in other_club_players(world):
+        evaluation = coach.evaluations[pid]
+        rows.append({
+            "player_id": pid, "club_id": world.players[pid].club_id, "age": world.player_ages[pid],
+            "skill_estimate": evaluation.skill_estimate, "fatigue_estimate": evaluation.fatigue_estimate,
+            "days_unseen": world.day - evaluation.last_seen_day, "observation_count": counts.get(pid, 0),
+            "measurement_error": world.config.scout_noise,
+            "appearances": records.get(pid, {}).get("appearances", 0), "goals": records.get(pid, {}).get("goals", 0),
+            "scoutable": pid in scoutable})
+    return rows
+
+
+def scoutable_targets(world):
+    """Who the coach could scout next training day: the research rule itself (the club must afford the cost plus its reserve)."""
+    decision = le.decide_coach_training(
+        coach=world.coaches[OWN_COACH], own_roster=list(world.club_rosters[OWN_CLUB]), other_players=other_club_players(world),
+        club_cash_units=world.club_accounts[OWN_CLUB].cash_units, day=world.day + 1, slot=2, already_targeted=set(), config=world.config)
+    return [c["target"] for c in decision["candidates"] if c["kind"] == "scout"]
+
+
+def required_offer_fee(config):
+    """Fee the research market asks of a buyer up front (same expression as decide_transfer_bidding; a test pins them together)."""
+    if config.solidarity_mode == "enabled":
+        return config.base_transfer_fee_solidarity_units + config.solidarity_transfer_grant_units
+    return config.base_transfer_fee_no_solidarity_units
+
+
+def market_view(world, season_days):
+    """Own budget and the public market rules; window is the next transfer window (fixed days of the research rules)."""
+    config, roster = world.config, world.club_rosters[OWN_CLUB]
+    upcoming = next((day for day in le.TRANSFER_WINDOW_DAYS if day > world.day), None)
+    window = None if upcoming is None else {
+        "season": (upcoming - 1) // season_days + 1, "day": (upcoming - 1) % season_days + 1, "open_now": upcoming == world.day + 1}
+    return {"cash": world.club_accounts[OWN_CLUB].cash_units, "scout_cost": config.scout_action_cost_units,
+            "reserve": config.buyer_min_cash_reserve_units, "offer_fee": required_offer_fee(config),
+            "roster_size": len(roster), "roster_min": le.MIN_CLUB_ROSTER, "roster_max": le.MAX_CLUB_ROSTER, "window": window}
+
+
+def recommended_offers(world):
+    """The assistant coach's picks: the research acquisition rule applied to the coach's own estimates."""
+    roster = list(world.club_rosters[OWN_CLUB])
+    return [pid for pid in other_club_players(world)
+            if le.decide_transfer_acquisition(coach=world.coaches[OWN_COACH], roster=roster, player_id=pid, config=world.config)["wants_offer"]]
+
+
 _ACCOUNT_FIELDS = ("points", "wins", "draws", "losses", "goals_for", "goals_against", "matches_played")
 
 
@@ -93,6 +148,21 @@ def recommended_starters(world):
     return decision["starters"]
 
 
+def transfer_response(decision):
+    """(response, stated reason) of the player who received club_a's offer, from a transfer_window_decision record; None if no offer.
+    Only the recorded gates are read. The stated reason is the coarse wording of the gate that stopped him; the scores stay in the reveal."""
+    own = next((o for o in decision["club_offers"] if o["to_club"] == OWN_CLUB and o["offer_made"]), None)
+    if own is None:
+        return None
+    if decision["chosen_to_club"] == OWN_CLUB:
+        return "accepted", "accepts"
+    if not decision["wants_transfer"]:
+        return "declined", "not_looking"
+    if not decision["release_consented"]:
+        return "blocked", None  # the selling club did not let him go: a fact of the market, not his reason
+    return "declined", "terms_unattractive" if not own["offer_accepted"] else "chose_other_club"
+
+
 def _event_item(event):
     """Return a labelled item for an event the own coach may see, or None."""
     kind, data, day = event["kind"], event["data"], event["day"]
@@ -105,6 +175,13 @@ def _event_item(event):
     if kind == "transfer_completed" and OWN_CLUB in (data["from_club"], data["to_club"]):
         return {"label": FACT, "kind": kind, "day": day, "player_id": data["player_id"],
                 "from_club": data["from_club"], "to_club": data["to_club"]}
+    if kind == "transfer_offer_resolved" and data["to_club"] == OWN_CLUB:
+        return {"label": FACT, "kind": "offer_resolved", "day": day, "player_id": data["player_id"],
+                "accepted": data["accepted"], "reason": data["reason"]}
+    if kind == "transfer_window_decision" and transfer_response(data):
+        response, stated = transfer_response(data)
+        return {"label": FACT if stated is None else REASON, "kind": "transfer_response", "day": day,
+                "player_id": data["player_id"], "response": response, "stated_reason": stated}
     if kind == "season_retired" and data["club_id"] == OWN_CLUB:
         return {"label": REASON, "kind": kind, "day": day, "player_id": data["player_id"], "age": data["age"],
                 "reason": data["reason"]}
@@ -165,6 +242,8 @@ obs_fatigue obs_gain obs_skill observation_count outcomes passes_completed phase
 rating_estimate rating_obs receptiveness recommended_starters response retired sd season season_days seed shots skill_after
 reason skill_before skill_estimate skill_mae squad squad_size standings starters state stated_reason tackles_won to_club week wins
 share_code
+accepted market cash scout_cost reserve offer_fee roster_size roster_min roster_max window open_now targets scoutable
+recommended_offers
 """.split())
 _ID_KEY = re.compile(r"(p|c)\d+|club_[a-z]+")
 

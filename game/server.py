@@ -42,9 +42,9 @@ class Game:
                 self.session = GameSession(seed)
                 return self.session.state()
             if (method, path) == ("POST", "/api/train"):
-                return self.session.train(body.get("advice"))
+                return self.session.train(body.get("advice"), body.get("scout"))
             if (method, path) == ("POST", "/api/lineup"):
-                return self.session.play_match(body.get("starters"))
+                return self.session.play_match(body.get("starters"), body.get("offers"))
             if (method, path) == ("GET", "/api/saves"):
                 return self._list_saves()
             if (method, path) == ("POST", "/api/save"):

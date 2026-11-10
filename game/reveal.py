@@ -1,5 +1,5 @@
 """End-of-season reveal: the only place true values leave the world. Called only once the season is over."""
-from .observation import OWN_CLUB, OWN_COACH, squad_view
+from .observation import OWN_CLUB, OWN_COACH, squad_view, transfer_response
 
 
 def season_reveal(world, season_start_day):
@@ -23,4 +23,21 @@ def season_reveal(world, season_start_day):
                 "true_terms": e["data"]["terms"]}
                for e in world.events if e["kind"] == "player_advice_response" and e["data"]["coach_id"] == OWN_COACH
                and e["day"] > season_start_day]
-    return {"players": players, "advice_reasons": reasons}
+    return {"players": players, "advice_reasons": reasons, "transfer_reasons": _transfer_reasons(world, season_start_day)}
+
+
+def _transfer_reasons(world, season_start_day):
+    """For each of club_a's offers this season: what the player said, beside the recorded gates and scores that decided it."""
+    rows = []
+    for event in world.events:
+        decision = event["data"]
+        if event["kind"] != "transfer_window_decision" or event["day"] <= season_start_day or not transfer_response(decision):
+            continue
+        own = next(o for o in decision["club_offers"] if o["to_club"] == OWN_CLUB)
+        response, stated = transfer_response(decision)
+        rows.append({"day": event["day"], "player_id": decision["player_id"], "response": response, "stated_reason": stated,
+                     "true_cause": {"wants_transfer": decision["wants_transfer"], "request_score": decision["request_score"],
+                                    "release_consented": decision["release_consented"], "release_surplus_score": decision["release_surplus_score"],
+                                    "player_rank_in_from": decision["player_rank_in_from"], "acceptance_score": own["acceptance_score"],
+                                    "chosen_to_club": decision["chosen_to_club"]}})
+    return rows
