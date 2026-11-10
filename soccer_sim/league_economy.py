@@ -143,6 +143,46 @@ AGING_CURVES = ("none", "hypothesis_v1")
 PERSONALITY_MODES = ("none", "latent_v1")
 PERSONALITY_TRAITS = ("discipline", "emotional_stability")  # T027: true latent state, used by no decision yet
 PERSONALITY_RANGE = (0.15, 0.85)
+ADVICE_RESPONSE_MODES = ("none", "personality_v1")
+# T028 (pre-registered, uncalibrated): score weights/thresholds of the advice response and the weakest term still named as a reason.
+ADVICE_DISCIPLINE_WEIGHT, ADVICE_IRRITATION_WEIGHT = 0.25, 0.40
+ADVICE_COMPLY_AT, ADVICE_REFUSE_BELOW, ADVICE_REASON_MIN = 0.0, -0.20, 0.02
+_ADVICE_REASON_SIGNS = {"trust_minus_autonomy": ("trust_above_autonomy", "trust_below_autonomy"),
+                        "discipline_term": ("self_disciplined", "self_lax"),
+                        "irritation_term": (None, "irritated_by_low_playing_time")}
+_ADVICE_MODE_FOR = {"complied": "follow", "partial": "blend", "refused": "ignore"}
+
+
+def decide_advice_response(*, trust: float, autonomy: float, discipline: float, emotional_stability: float,
+                           playing_time_satisfaction: float) -> dict[str, Any]:
+    """T028: deterministic comply / partial / refuse from the player's own state; returns the contributing terms and reason codes."""
+    dissatisfaction = max(0.0, 0.48 - playing_time_satisfaction)
+    terms = {"trust_minus_autonomy": round6(trust - autonomy),
+             "discipline_term": round6(ADVICE_DISCIPLINE_WEIGHT * (discipline - 0.5)),
+             "irritation_term": round6(-ADVICE_IRRITATION_WEIGHT * (1.0 - emotional_stability) * dissatisfaction) + 0.0}
+    score = round6(sum(terms.values()))
+    response = "complied" if score >= ADVICE_COMPLY_AT else "partial" if score >= ADVICE_REFUSE_BELOW else "refused"
+    named = sorted(((name, v) for name, v in terms.items() if abs(v) >= ADVICE_REASON_MIN), key=lambda t: (-abs(t[1]), t[0]))
+    codes = [_ADVICE_REASON_SIGNS[name][0 if v > 0 else 1] for name, v in named]
+    return {"response": response, "score": score, "terms": terms, "reason_codes": codes,
+            "primary_reason": codes[0] if codes else "no_dominant_term"}
+
+
+def _stated_reason(primary_reason: str) -> str:
+    """The only reason the coach hears: trait-driven reasons are folded into 'personal'."""
+    return {"trust_above_autonomy": "trusts_coach", "trust_below_autonomy": "distrusts_coach"}.get(primary_reason, "personal")
+
+
+def _player_advice_response(world: "LeagueWorldState", pid: str, props: list[dict[str, Any]]) -> dict[str, Any]:
+    """T028: the only function that reads the latent traits for a decision (the player's own state)."""
+    mind = world.player_minds[pid]
+    best = max(props, key=lambda p: (mind.trust_by_coach.get(str(p["coach_id"]), 0.5), str(p["coach_id"])))
+    traits = world.player_personality[pid]
+    decision = decide_advice_response(
+        trust=mind.trust_by_coach.get(str(best["coach_id"]), 0.5), autonomy=mind.autonomy,
+        discipline=traits["discipline"], emotional_stability=traits["emotional_stability"],
+        playing_time_satisfaction=mind.playing_time_satisfaction)
+    return {**decision, "coach_id": str(best["coach_id"]), "method": str(best["method"])}
 
 
 def _personality_traits(seed: int, player_ids: Any) -> dict[str, dict[str, float]]:
@@ -277,6 +317,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
     personality: str = "none"  # T027: "none" or "latent_v1" (two latent traits as true player state; no decision reads them yet)
     match_interval_days: int = 7
     match_ticks: int = 40
@@ -378,6 +419,10 @@ class LeagueEconomyConfig:
             raise ValueError("aging_curve requires aging_start_age")
         if self.personality not in PERSONALITY_MODES:
             raise ValueError(f"invalid personality: {self.personality}")
+        if self.advice_response not in ADVICE_RESPONSE_MODES:
+            raise ValueError(f"invalid advice_response: {self.advice_response}")
+        if self.advice_response != "none" and self.personality == "none":
+            raise ValueError("advice_response requires personality")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -394,6 +439,8 @@ class LeagueEconomyConfig:
             data["aging_curve"] = self.aging_curve
         if self.personality != "none":
             data["personality"] = self.personality
+        if self.advice_response != "none":
+            data["advice_response"] = self.advice_response
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -466,7 +513,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -1609,6 +1656,7 @@ def decide_player_training(
     club_id: str,
     proposals: list[dict[str, Any]],
     config: LeagueEconomyConfig,
+    advice_mode: str = "blend",  # T028: "blend" = advice as a bonus (default), "ignore" = refused, "follow" = comply with the most trusted proposal
 ) -> dict[str, Any]:
     candidates: list[dict[str, Any]] = []
     unsatisfied_drive = round6(
@@ -1619,7 +1667,7 @@ def decide_player_training(
         pref_bonus = 0.012 if m == mind.preferred_method else 0.0
         fatigue_pen = round6(config.training_fatigue_weight * mind.perceived_fatigue)
 
-        matching_props = [p for p in proposals if p["method"] == m]
+        matching_props = [p for p in proposals if p["method"] == m] if advice_mode != "ignore" else []
         advice_term = 0.0
         score_source: str | None = None
         if matching_props:
@@ -1670,6 +1718,9 @@ def decide_player_training(
     )
 
     best = max(candidates, key=lambda c: (c["score"], c["action"] != "rest", c["action"]))
+    if advice_mode == "follow":
+        top = max(proposals, key=lambda p: (mind.trust_by_coach.get(str(p["coach_id"]), 0.5), str(p["coach_id"])))
+        best = next(c for c in candidates if c["action"] == top["method"])
     return {
         "player_id": mind.player_id,
         "club_id": club_id,
@@ -1677,6 +1728,7 @@ def decide_player_training(
         "candidates": candidates,
         "received_proposals": list(proposals),
         "obs_refs": [mind.last_obs_ref],
+        **({"advice_mode": advice_mode} if advice_mode != "blend" else {}),
     }
 
 
@@ -2039,22 +2091,36 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         mind = world.player_minds[pid]
         cid = p.club_id
         props = proposals_by_player[pid]
+        reply = _player_advice_response(world, pid, props) if cfg.advice_response != "none" and props else None
         p_dec = decide_player_training(
             mind=mind,
             club_id=cid,
             proposals=props,
             config=cfg,
+            **({"advice_mode": _ADVICE_MODE_FOR[reply["response"]]} if reply else {}),
         )
+        reply_ev = _append_event(
+            world, day=day, kind="player_advice_response", actor=pid,
+            data={"player_id": pid, "record_class": "player_reason", **reply},
+            cause_refs=p_dec["obs_refs"] + [pr["decision_ref"] for pr in props],
+        ) if reply else None
         p_dec_ev = _append_event(
             world,
             day=day,
             kind="player_training_decision",
             actor=pid,
             data=p_dec,
-            cause_refs=p_dec["obs_refs"] + [pr["decision_ref"] for pr in props],
+            cause_refs=p_dec["obs_refs"] + [pr["decision_ref"] for pr in props] + ([reply_ev] if reply_ev else []),
         )
-
         action = str(p_dec["chosen"]["action"])
+        if reply:  # the coach hears only the stance, a coarse reason and what the player actually did
+            _append_event(
+                world, day=day, kind="coach_advice_outcome", actor=reply["coach_id"],
+                data={"record_class": "coach_observation", "coach_id": reply["coach_id"], "player_id": pid, "method": reply["method"],
+                      "response": reply["response"], "stated_reason": _stated_reason(reply["primary_reason"]),
+                      "action_followed": action == reply["method"]},
+                cause_refs=[p_dec_ev],
+            )
         pre_skill = p.composite_skill()
 
         if action in TRAINING_METHODS:
