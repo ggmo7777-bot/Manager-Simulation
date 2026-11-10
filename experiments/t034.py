@@ -244,8 +244,9 @@ def flip_rates(rows):
 
 
 def freq(newcomers):
+    withinc = [n for n in newcomers if n['incumbents']]  # a club can have only newcomers on the roster; no incumbent to compare with
     f = {'newcomers': len(newcomers), 'mean_n': {k: mean(n['n'][k] for n in newcomers) for k in KINDS}, 'mean_total': mean(n['n_total'] for n in newcomers),
-         'incumbent_mean_n': {k: mean(n['inc_n'][k] for n in newcomers) for k in KINDS}, 'incumbent_mean_total': mean(n['inc_n_total'] for n in newcomers),
+         'newcomers_with_incumbents': len(withinc), 'paired_mean_n': {k: mean(n['n'][k] for n in withinc) for k in KINDS}, 'paired_mean_total': mean(n['n_total'] for n in withinc), 'incumbent_mean_n': {k: mean(n['inc_n'][k] for n in withinc) for k in KINDS}, 'incumbent_mean_total': mean(n['inc_n_total'] for n in withinc),
          'by_third': [{k: mean(n['n_by_third'][i][k] for n in newcomers) for k in ('total', 'session', 'match')} for i in range(3)],
          'mean_added_F+': mean(n['n_added_F+'] for n in newcomers), 'mean_added_Fmax': mean(n['n_added_Fmax'] for n in newcomers), 'mean_scale_U+': mean(n['scale_U+'] for n in newcomers)}
     for label, grp in (('started', [n for n in newcomers if n['started_in_window']]), ('never_started', [n for n in newcomers if not n['started_in_window']])):
@@ -265,8 +266,8 @@ def predictions(sm):
     f, thirds = sm['frequency'], sm['by_third']
     comp = lambda t: {k: thirds[t]['s'][k] for k in ('prior', 'growth', 'bias')}
     late, early = comp(2), comp(0)
-    return {'P1a_newcomers_observed_less': f['mean_total'] < f['incumbent_mean_total'],
-            'P1b_session_ratio_in_0.8_1.25': 0.8 <= f['mean_n']['session'] / f['incumbent_mean_n']['session'] <= 1.25, 'session_ratio': f['mean_n']['session'] / f['incumbent_mean_n']['session'],
+    return {'P1a_newcomers_observed_less': f['paired_mean_total'] < f['incumbent_mean_total'],
+            'P1b_session_ratio_in_0.8_1.25': 0.8 <= f['paired_mean_n']['session'] / f['incumbent_mean_n']['session'] <= 1.25, 'session_ratio': f['paired_mean_n']['session'] / f['incumbent_mean_n']['session'],
             'P2_never_started_30pct_fewer': f['never_started']['mean_total'] <= 0.7 * f['started']['mean_total'],
             'P3_late_growth_is_largest': max(late, key=lambda k: abs(late[k])) == 'growth', 'P3_early_prior_over_growth': abs(early['prior']) > abs(early['growth']),
             'P4_Fplus_beats_Uplus_late': thirds[2]['s']['closure']['F+'] > thirds[2]['s']['closure']['U+'],
