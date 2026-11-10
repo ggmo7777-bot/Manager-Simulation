@@ -252,6 +252,7 @@ class LeagueEconomyConfig:
     satisfaction_mode: str = "follow"
     range_perturbation: str = "none"
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
+    aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -313,7 +314,7 @@ class LeagueEconomyConfig:
                 if type(value) is not str or not value:
                     raise ValueError(f"{spec.name} must be a nonempty string")
             elif type(spec.default) is int:
-                minimum = 0 if spec.name.endswith("_units") or spec.name in ("max_dividend_triggers", "season_length_days") else 1
+                minimum = 0 if spec.name.endswith("_units") or spec.name in ("max_dividend_triggers", "season_length_days", "aging_start_age") else 1
                 if type(value) is not int or value < minimum:
                     raise ValueError(f"{spec.name} must be an integer >= {minimum}")
             else:
@@ -344,6 +345,8 @@ class LeagueEconomyConfig:
         sampled_ranges(self.range_perturbation)
         if self.match_interval_days <= 0 or self.match_ticks <= 0 or self.coach_daily_slots <= 0:
             raise ValueError("intervals, ticks, and slots must be positive")
+        if self.aging_start_age and not self.season_length_days:
+            raise ValueError("aging_start_age requires season_length_days")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -354,6 +357,8 @@ class LeagueEconomyConfig:
             data["range_perturbation"] = self.range_perturbation
         if self.season_length_days:
             data["season_length_days"] = self.season_length_days
+        if self.aging_start_age:
+            data["aging_start_age"] = self.aging_start_age
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -426,7 +431,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -886,6 +891,7 @@ class LeagueWorldState:
     public_last_starters: dict[str, list[str]]
     events: list[dict[str, Any]] = field(default_factory=list)
     interventions: tuple[ResearchIntervention, ...] = ()
+    player_ages: dict[str, int] = field(default_factory=dict)  # T025: empty unless config.aging_start_age
 
 
 def _population_draw(seed: int, channel: str, token: str, low: float, high: float) -> float:
@@ -1214,6 +1220,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         ledger=ledger,
         public_last_starters=public_last_starters,
         events=[],
+        player_ages={pid: config.aging_start_age for pid in sorted(players)} if config.aging_start_age else {},
     )
     _append_event(
         world,
@@ -2721,6 +2728,17 @@ def advance_league_days(world: LeagueWorldState, days: int) -> None:
             _step_matchday(world, world.day)
         else:
             _step_training_day(world, world.day)
+        length = world.config.aging_start_age and world.config.season_length_days
+        if length and world.day % length == 0:
+            _age_players(world, world.day // length)
+
+
+def _age_players(world: LeagueWorldState, season: int) -> None:
+    """T025: season-end aging as a recorded event. Only the age counter changes (no skill, RNG, transfer or wage effect)."""
+    for pid in world.player_ages:
+        world.player_ages[pid] += 1
+    _append_event(world, day=world.day, kind="season_aged", actor="league",
+                  data={"season": season, "ages": dict(sorted(world.player_ages.items()))}, cause_refs=[])
 
 
 def season_progress(world: LeagueWorldState) -> dict[str, int]:
@@ -2808,6 +2826,23 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
         raise ValueError("duplicate dividend claim detected in ledger")
     if type(world.ledger.claimed_dividend_keys) is not set:
         raise ValueError("claimed_dividend_keys must be a set")
+
+    # T025: ages exist only when enabled and always equal start age + recorded season_aged events.
+    aged = [ev for ev in world.events if ev.get("kind") == "season_aged"]
+    start, length = world.config.aging_start_age, world.config.season_length_days
+    ages = world.player_ages
+    if not start:
+        if ages or aged:
+            raise ValueError("player_ages/season_aged present but aging is disabled")
+    else:
+        if type(ages) is not dict or set(ages) != set(world.players) or len(aged) != world.day // length:
+            raise ValueError("player_ages do not match players or season_aged count")
+        for n, ev in enumerate(aged, start=1):
+            expected = {pid: start + n for pid in sorted(ages)}
+            if ev["day"] != n * length or ev["data"] != {"season": n, "ages": expected} or ev["actor"] != "league" or ev["cause_refs"]:
+                raise ValueError(f"season_aged event {n} does not match the aging rule")
+        if any(type(a) is not int or a != start + len(aged) for a in ages.values()):
+            raise ValueError("player_ages do not equal start age plus season_aged count")
 
     # 1-pass event causal chain & transfer invariant check
     seen_event_ids: set[str] = {"init:0"}
@@ -2967,6 +3002,7 @@ def _snapshot_payload_unchecked(world: LeagueWorldState) -> dict[str, Any]:
         "events": world.events,
         "research_branch": bool(world.interventions),
         "interventions": [asdict(record) for record in world.interventions],
+        **({"player_ages": dict(world.player_ages)} if world.config.aging_start_age else {}),
     }
 
 
@@ -3231,6 +3267,7 @@ def load_league_snapshot_trusted(path: str | Path) -> LeagueWorldState:
             public_last_starters={k: list(v) for k, v in raw["public_last_starters"].items()},
             events=raw["events"],
             interventions=tuple(_record_from_payload(r) for r in raw["interventions"]),
+            player_ages=dict(raw.get("player_ages", {})),
         )
         _validate_league_invariants(world)
     except (KeyError, TypeError, AttributeError) as error:

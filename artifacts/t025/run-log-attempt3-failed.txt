@@ -1,0 +1,39 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+hand [(42, 1, {19}), (84, 2, {20}), (126, 3, {21})] branch {'interventions': 1} tamper 10 forged_manifest_trusted_reader rejected invalid {'negative': True, 'bool': True, 'float': True, 'str': True, 'without_season': True}
+cells done closed_no_solidarity
+cells done closed_no_solidarity_sampled_population
+cells done closed_solidarity
+cells done closed_solidarity_sampled_population
+cells done open_no_solidarity
+cells done open_no_solidarity_sampled_population
+cells done open_solidarity
+cells done open_solidarity_sampled_population
+cells done fixed_budget_no_inflow
+cells done fixed_budget_no_inflow_sampled_population
+cells done hoarder_buyer_policy
+cells done hoarder_buyer_policy_sampled_population
+cells done exploit_churn_guard
+cells done exploit_churn_guard_sampled_population
+Traceback (most recent call last):
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 191, in <module>
+    run(parser.parse_args().out.resolve(), CODE_ROOT)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/experiments/t025.py", line 184, in run
+    write_json(out / 'summary.json', result)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/Library/Application Support/Claude/scratch-workspaces/41bcfe13-1c29-4509-9d80-eb2489736fa6/6e81c13e-c7f2-44ba-8a45-fcf6bdd711e5/scratch-2026-11-10-5484ab/Manager-Simulation/soccer_sim/storage.py", line 299, in write_json
+    atomic_write(path, [(json.dumps(value, allow_nan=False, ensure_ascii=True,
+                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   indent=2, sort_keys=True) + "\n").encode()])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sakayu/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/Users/sakayu/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/sakayu/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/sakayu/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type set is not JSON serializable
