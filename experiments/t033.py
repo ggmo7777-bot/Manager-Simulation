@@ -51,7 +51,8 @@ def analyse_row(ranking, n, w, truth):
            'h_true_only': {p: truth[p] for p in comp}}
     top2_true = n in starters_of(alt['h_true_only'])
     return {'started': n in starters_of(score), 'margin': margin, 'cutoff': c, 'd_skill': d['skill_term'], 'd_match': d['match_term'], 'd_fatigue': d['fatigue_penalty'],
-            **parts, 'top2_true': top2_true, 'n_match_minus_skill': est_m[n] - est_s[n], 'c_match_minus_skill': est_m[c] - est_s[c],
+            **parts, 'top2_true': top2_true, 'n_skill_err': est_s[n] - truth[n], 'c_skill_err': est_s[c] - truth[c], 'n_match_err': est_m[n] - truth[n], 'c_match_err': est_m[c] - truth[c],
+            'n_fatigue_est': -comp[n]['fatigue_penalty'] / wf, 'c_fatigue_est': -comp[c]['fatigue_penalty'] / wf, 'n_match_minus_skill': est_m[n] - est_s[n], 'c_match_minus_skill': est_m[c] - est_s[c],
             'cf': {k: n in starters_of(v) for k, v in alt.items()}}
 
 
@@ -123,7 +124,7 @@ def run_cell(config, seed, days=DAYS):
             assert row['started'] == (pid in l['starters'])
             assert abs(row['margin'] - (row['d_skill'] + row['d_match'] + row['d_fatigue'])) <= TOL
             assert abs(row['margin'] - (row['true_gap'] + row['skill_est_error'] + row['match_est_error'] + row['fatigue'])) <= TOL
-            rows.append({'player': pid, 'day': l['day'], 'prior_starts': prior, **row})
+            rows.append({'player': pid, 'day': l['day'], 'since_join': l['day'] - info['day'], 'prior_starts': prior, **row})
             prior += row['started']
     cohort = {pid: i['top2_true_end'] for pid, i in newcomers.items() if 'top2_true_end' in i}
     starts = {pid: any(r['started'] for r in rows if r['player'] == pid) for pid in cohort}
@@ -132,7 +133,8 @@ def run_cell(config, seed, days=DAYS):
 
 # ---- aggregation ----
 def agg(rows):
-    keys = ('margin', 'd_skill', 'd_match', 'd_fatigue', 'true_gap', 'skill_est_error', 'match_est_error', 'n_match_minus_skill', 'c_match_minus_skill')
+    keys = ('margin', 'd_skill', 'd_match', 'd_fatigue', 'true_gap', 'skill_est_error', 'match_est_error', 'n_match_minus_skill', 'c_match_minus_skill',
+            'n_skill_err', 'c_skill_err', 'n_match_err', 'c_match_err', 'n_fatigue_est', 'c_fatigue_est')
     return {'rows': len(rows), **{k: mean(r[k] for r in rows) for k in keys}}
 
 
@@ -149,7 +151,7 @@ def summarise(rows, cohort_cells):
     prior0, prior1 = [r for r in rows if r['prior_starts'] == 0], [r for r in rows if r['prior_starts'] >= 1]
     by_player = {}
     for r in rows:
-        by_player.setdefault(r['player'], []).append(r)
+        by_player.setdefault(r['uid'], []).append(r)
     never = [v for v in by_player.values() if not any(r['started'] for r in v)]
     some = [v for v in by_player.values() if any(r['started'] for r in v)]
     cohort = {}
@@ -160,6 +162,7 @@ def summarise(rows, cohort_cells):
             'started_rows': agg(started), 'not_started_rows': agg(skipped), 'missed_top2_rows': agg(missed), 'missed_top2_row_count': len(missed),
             'dominant_term_not_started': max(terms, key=lambda k: abs(terms[k])), 'mean_terms_not_started': terms,
             'cf_flip_rate_not_started': flips(skipped), 'cf_flip_rate_missed_top2': flips(missed), 'cf_stay_rate_started': flips(started),
+            'by_days_since_join': {f'{lo}-{hi}': {**agg(sub), 'start_share': mean(1.0 if r['started'] else 0.0 for r in sub)} for lo, hi in ((1, 7), (8, 14), (15, 21)) for sub in [[r for r in rows if lo <= r['since_join'] <= hi]] if sub},
             'prior_starts': {'rows_0': len(prior0), 'start_prob_0': mean(1.0 if r['started'] else 0.0 for r in prior0), 'rows_1plus': len(prior1),
                              'start_prob_1plus': mean(1.0 if r['started'] else 0.0 for r in prior1)},
             'newcomer_level': {'never_started_newcomers': len(never), 'never_started_mean_margin': mean(mean(r['margin'] for r in v) for v in never),
@@ -190,7 +193,9 @@ def run(out, root):
                     equal[t] += 1
                     cell['key'] = (name, seed, st)
                     for r in cell['rows']:
-                        all_rows.append({'setting': t, 'world': name, 'seed': seed, 'start_age': st, **{k: (round(v, 6) if isinstance(v, float) else v) for k, v in r.items()}})
+                        r['uid'] = f'{name}/{seed}/{st}/{r["player"]}'  # newcomer ids repeat across worlds
+                    for r in cell['rows']:
+                        all_rows.append({'setting': t, 'world': name, 'seed': seed, 'start_age': st, **{k: (round(v, 6) if isinstance(v, float) else v) for k, v in r.items() if k != 'uid'}})
                     cells.append(cell)
             print(t, name, flush=True)
         per_setting[t] = {'all': summarise([r for c in cells for r in c['rows']], cells),
