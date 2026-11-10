@@ -37,19 +37,19 @@ def top2(scores):
     return set(p for p, _ in sorted(scores, key=lambda kv: (-kv[1], kv[0]))[:2])
 
 
-def pair_class(age_better, age_worse):
+def pair_class(age_better, age_worse, min_age_gap=MIN_AGE_GAP):
     gap = age_worse - age_better
-    return 'better_newer' if gap >= MIN_AGE_GAP else 'better_older' if gap <= -MIN_AGE_GAP else 'close'
+    return 'better_newer' if gap >= min_age_gap else 'better_older' if gap <= -min_age_gap else 'close'
 
 
-def pair_accuracy(rows):
+def pair_accuracy(rows, min_age_gap=MIN_AGE_GAP):
     """rows: (id, age, truth) in the coach's ranking order. Yields (class, ordered_right) for every pair whose true skills differ by >= MIN_TRUE_GAP."""
     for i, a in enumerate(rows):
         for b in rows[i + 1:]:
             if abs(a[2] - b[2]) < MIN_TRUE_GAP:
                 continue
             better, worse = (a, b) if a[2] > b[2] else (b, a)
-            yield pair_class(better[1], worse[1]), better is a
+            yield pair_class(better[1], worse[1], min_age_gap), better is a
 
 
 def rerank(lineup, delta):
@@ -103,6 +103,8 @@ def run_cell(config, seed, days=DAYS):
                     add(acc, ('age', 'roster'), age)
                 for cls, right in pair_accuracy([(p, a, t) for p, a, t, *_ in rows]):
                     add(acc, ('pair', cls), 0.0, float(right))
+                for cls, right in pair_accuracy([(p, a, t) for p, a, t, *_ in rows], min_age_gap=1):  # post hoc: the registered 7-day gap rarely occurs (see RESULTS)
+                    add(acc, ('pair_ph', cls), 0.0, float(right))
                 if starters != true_set:
                     for p, a, t, *_ in rows:
                         if p in true_set - starters:
@@ -195,16 +197,22 @@ def bin_error(acc, cls, bins, kind):
 
 def scalars(acc):
     """The statistics that get a bootstrap interval (M1 gradient G, M2 difference D, M3 difference E, M4 gain C) plus the top-2 match rate and the ages."""
-    share = lambda c: acc[('pair', c)][4] / acc[('pair', c)][0]
+    def share(key, c):
+        r = acc.get((key, c))
+        return r[4] / r[0] if r and r[0] else None
+    diff = lambda a, b: None if a is None or b is None else a - b
+    gain = lambda x, y: diff(mean_of(acc, x), mean_of(acc, y))
     out = {'top2_match': mean_of(acc, ('start', 'true_top2_match')), 'age_starters': mean_of(acc, ('age', 'starters')), 'age_roster': mean_of(acc, ('age', 'roster')),
-           'pair_better_newer': share('better_newer'), 'pair_better_older': share('better_older'), 'pair_close': share('close'),
-           'D_pair': share('better_newer') - share('better_older'),
-           'E_age': mean_of(acc, ('mm', 'wrongly_in', 'age')) - mean_of(acc, ('mm', 'left_out', 'age')),
-           'C_gain': mean_of(acc, ('cf', 'corrected')) - mean_of(acc, ('cf', 'actual'))}
+           'pair_better_newer': share('pair', 'better_newer'), 'pair_better_older': share('pair', 'better_older'), 'pair_close': share('pair', 'close'),
+           'D_pair': diff(share('pair', 'better_newer'), share('pair', 'better_older')),
+           'ph_D_pair': diff(share('pair_ph', 'better_newer'), share('pair_ph', 'better_older')), 'ph_pair_better_newer': share('pair_ph', 'better_newer'), 'ph_pair_better_older': share('pair_ph', 'better_older'),
+           'E_age': gain(('mm', 'wrongly_in', 'age'), ('mm', 'left_out', 'age')), 'C_gain': gain(('cf', 'corrected'), ('cf', 'actual'))}
+    for kind in ('skill', 'match'):  # post hoc: benched at the last match (bin 8-13) minus played at the last match (a=7)
+        out[f'ph_G_inc_{kind}'] = diff(bin_error(acc, 'inc', (2,), kind), bin_error(acc, 'inc', (1,), kind))
     for cls in ('inc', 'new', 'all'):
         for kind in ('skill', 'match'):
             fresh, stale = bin_error(acc, cls, FRESH, kind), bin_error(acc, cls, STALE, kind)
-            out[f'G_{cls}_{kind}'] = None if fresh is None or stale is None else stale - fresh
+            out[f'G_{cls}_{kind}'] = diff(stale, fresh)
     return out
 
 
@@ -242,8 +250,8 @@ def summarise(cell_accs, boots):
     out = {'bins': {m: bin_table(pooled[m]) for m in MODES}, 'point': point,
            'ci95': {m: {k: interval([d[k] for d in draws[m]]) for k in point[m]} for m in MODES}, 'difference_vs_legacy': {}}
     for m in MODES[1:]:
-        out['difference_vs_legacy'][m] = {k: {'point': point[m][k] - point['legacy'][k], 'ci95': interval([None if a[k] is None or b[k] is None else a[k] - b[k] for a, b in zip(draws[m], draws['legacy'])])}
-                                          for k in point[m] if point[m][k] is not None and point['legacy'][k] is not None}
+        out['difference_vs_legacy'][m] = {k: {'point': None if point[m][k] is None or point['legacy'][k] is None else point[m][k] - point['legacy'][k], 'ci95': interval([None if a[k] is None or b[k] is None else a[k] - b[k] for a, b in zip(draws[m], draws['legacy'])])}
+                                          for k in point[m]}
     return out
 
 
@@ -254,9 +262,9 @@ def evaluate(s):
     new_shift = [None if a.get('mean') is None or b.get('mean') is None else a['mean'] - b['mean'] for a, b in zip(s['bins']['shifted_v1']['new']['skill'], s['bins']['legacy']['new']['skill'])]
     enough = [i for i, (a, b) in enumerate(zip(s['bins']['shifted_v1']['new']['skill'], s['bins']['legacy']['new']['skill'])) if min(a['n'], b['n']) >= 200]
     shift_inc = [None if a is None or b is None else a - b for a, b in zip(inc('shifted_v1', 'skill'), inc('legacy', 'skill'))]
-    return {'P2': {'G_inc_skill': {m: p[m]['G_inc_skill'] for m in MODES}, 'G_shifted_minus_legacy': d['shifted_v1']['G_inc_skill'], 'shift_by_bin_inc_skill': shift_inc},
-            'P3': {'D_pair': {m: p[m]['D_pair'] for m in MODES}, 'D_shifted_minus_legacy': d['shifted_v1']['D_pair'], 'abs_ratio_shifted_over_legacy': abs(p['shifted_v1']['D_pair']) / abs(p['legacy']['D_pair']) if p['legacy']['D_pair'] else None},
-            'P4': {'E_age': {m: p[m]['E_age'] for m in MODES}, 'abs_ratio_shifted_over_legacy': abs(p['shifted_v1']['E_age']) / abs(p['legacy']['E_age']) if p['legacy']['E_age'] else None},
+    return {'P2': {'G_inc_skill': {m: p[m]['G_inc_skill'] for m in MODES}, 'G_shifted_minus_legacy': d['shifted_v1'].get('G_inc_skill'), 'shift_by_bin_inc_skill': shift_inc},
+            'P3': {'D_pair': {m: p[m]['D_pair'] for m in MODES}, 'D_shifted_minus_legacy': d['shifted_v1'].get('D_pair'), 'ph': {'D_pair': {m: p[m]['ph_D_pair'] for m in MODES}, 'G_inc_skill': {m: p[m]['ph_G_inc_skill'] for m in MODES}, 'G_inc_match': {m: p[m]['ph_G_inc_match'] for m in MODES}}},
+            'P4': {'E_age': {m: p[m]['E_age'] for m in MODES}, },
             'P5': {'C_gain_legacy': p['legacy']['C_gain'], 'top2_legacy_to_shifted': d['shifted_v1']['top2_match']['point']},
             'P6': {'C_gain': {m: p[m]['C_gain'] for m in MODES[1:]}},
             'P7': {'age_starters': {m: p[m]['age_starters'] for m in MODES}, 'age_roster': {m: p[m]['age_roster'] for m in MODES}},
