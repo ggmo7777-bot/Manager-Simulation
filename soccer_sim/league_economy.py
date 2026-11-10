@@ -185,6 +185,51 @@ def _player_advice_response(world: "LeagueWorldState", pid: str, props: list[dic
     return {**decision, "coach_id": str(best["coach_id"]), "method": str(best["method"])}
 
 
+COACH_BELIEF_MODES = ("none", "observe_v1", "use_v1")
+# T029 (pre-registered, uncalibrated): the coach's belief about a player's receptiveness. Beta pseudo-counts, forgetting factor, neutral level for uptake.
+BELIEF_PRIOR, BELIEF_DECAY, BELIEF_NEUTRAL = 1.0, 0.97, 0.5
+BELIEF_SIGNAL = {"complied": 1.0, "partial": 0.5, "refused": 0.0}
+BELIEF_REASONS = ("trusts_coach", "distrusts_coach", "personal")
+
+
+def new_receptiveness_belief() -> dict[str, Any]:
+    return {"a": BELIEF_PRIOR, "b": BELIEF_PRIOR, "n": 0, "reasons": {r: 0 for r in BELIEF_REASONS}}
+
+
+def update_receptiveness_belief(belief: dict[str, Any], outcome: dict[str, Any]) -> dict[str, Any]:
+    """T029 (B layer): update from one coach_advice_outcome record only; reads `response` and `stated_reason`, nothing else."""
+    s = BELIEF_SIGNAL[outcome["response"]]
+    reasons = dict(belief["reasons"])
+    reasons[outcome["stated_reason"]] += 1
+    return {"a": round6(BELIEF_PRIOR + BELIEF_DECAY * (belief["a"] - BELIEF_PRIOR) + s),
+            "b": round6(BELIEF_PRIOR + BELIEF_DECAY * (belief["b"] - BELIEF_PRIOR) + (1.0 - s)),
+            "n": belief["n"] + 1, "reasons": reasons}
+
+
+def belief_mean_sd(belief: dict[str, Any]) -> tuple[float, float]:
+    a, b = belief["a"], belief["b"]
+    return round6(a / (a + b)), round6((a * b / ((a + b) ** 2 * (a + b + 1.0))) ** 0.5)
+
+
+def receptiveness_uptake(mean: float) -> float:
+    """T029 use_v1: a proposal is worth its benefit times the believed chance it is taken (1 at or above the neutral level)."""
+    return round6(min(1.0, mean / BELIEF_NEUTRAL))
+
+
+def _beliefs_from_events(events: list[dict[str, Any]]) -> dict[str, dict[str, dict[str, Any]]]:
+    """T029: the belief state is a pure fold of the coach_advice_outcome events (also the integrity check on load)."""
+    beliefs: dict[str, dict[str, dict[str, Any]]] = {}
+    for ev in events:
+        if ev["kind"] == "coach_advice_outcome":
+            row = beliefs.setdefault(ev["data"]["coach_id"], {})
+            row[ev["data"]["player_id"]] = update_receptiveness_belief(row.get(ev["data"]["player_id"]) or new_receptiveness_belief(), ev["data"])
+    return beliefs
+
+
+def _coach_receptiveness(world: "LeagueWorldState", coach_id: str) -> dict[str, float]:
+    return {pid: belief_mean_sd(b)[0] for pid, b in world.coach_beliefs.get(coach_id, {}).items()}
+
+
 def _personality_traits(seed: int, player_ids: Any) -> dict[str, dict[str, float]]:
     """T027 latent_v1: one keyed uniform draw per (trait, player) on its own channel, so no existing draw is touched."""
     return {pid: {name: round6(uniform_from_key(seed, 0, f"personality:{name}", pid, low=PERSONALITY_RANGE[0], high=PERSONALITY_RANGE[1]))
@@ -317,6 +362,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
     advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
     personality: str = "none"  # T027: "none" or "latent_v1" (two latent traits as true player state; no decision reads them yet)
     match_interval_days: int = 7
@@ -423,6 +469,10 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid advice_response: {self.advice_response}")
         if self.advice_response != "none" and self.personality == "none":
             raise ValueError("advice_response requires personality")
+        if self.coach_belief not in COACH_BELIEF_MODES:
+            raise ValueError(f"invalid coach_belief: {self.coach_belief}")
+        if self.coach_belief != "none" and self.advice_response == "none":
+            raise ValueError("coach_belief requires advice_response")
 
     def to_dict(self) -> dict[str, Any]:
         _validate_money_fields(self)
@@ -441,6 +491,8 @@ class LeagueEconomyConfig:
             data["personality"] = self.personality
         if self.advice_response != "none":
             data["advice_response"] = self.advice_response
+        if self.coach_belief != "none":
+            data["coach_belief"] = self.coach_belief
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -513,7 +565,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -975,6 +1027,7 @@ class LeagueWorldState:
     interventions: tuple[ResearchIntervention, ...] = ()
     player_ages: dict[str, int] = field(default_factory=dict)  # T025: empty unless config.aging_start_age
     player_personality: dict[str, dict[str, float]] = field(default_factory=dict)  # T027: empty unless config.personality
+    coach_beliefs: dict[str, dict[str, dict[str, Any]]] = field(default_factory=dict)  # T029: coach -> player -> belief; empty unless config.coach_belief
 
 
 def _population_draw(seed: int, channel: str, token: str, low: float, high: float) -> float:
@@ -1305,6 +1358,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         events=[],
         player_ages={pid: config.aging_start_age for pid in sorted(players)} if config.aging_start_age else {},
         player_personality=_personality_traits(seed, players) if config.personality != "none" else {},
+        coach_beliefs={cid: {} for cid in sorted(coaches)} if config.coach_belief != "none" else {},
     )
     _append_event(
         world,
@@ -1526,6 +1580,7 @@ def decide_coach_training(
     slot: int,
     already_targeted: set[str],
     config: LeagueEconomyConfig,
+    receptiveness: dict[str, float] | None = None,  # T029 use_v1: believed receptiveness per player (None = unchanged behaviour)
 ) -> dict[str, Any]:
     validate_money_units(club_cash_units, "club_cash_units")
     candidates: list[dict[str, Any]] = []
@@ -1566,10 +1621,11 @@ def decide_coach_training(
             forecast = round6(clamp(base_g + res, 0.005, 0.14))
             pref_bonus = 0.015 if m == coach.preferred_method else 0.0
             fatigue_pen = 0.18 * ev.fatigue_estimate
+            uptake = 1.0 if receptiveness is None else receptiveness_uptake(receptiveness.get(pid, BELIEF_NEUTRAL))
             prop_score = round6(
                 0.15
-                + config.coach_need_weight * need
-                + config.coach_method_fit * (forecast * 10.0)
+                + config.coach_need_weight * need * uptake
+                + config.coach_method_fit * (forecast * 10.0) * uptake
                 + pref_bonus
                 - fatigue_pen
                 - repeat_pen
@@ -1582,11 +1638,12 @@ def decide_coach_training(
                     "forecast": forecast,
                     "score": prop_score,
                     "components": {
-                        "need_term": round6(config.coach_need_weight * need),
-                        "forecast_term": round6(config.coach_method_fit * (forecast * 10.0)),
+                        "need_term": round6(config.coach_need_weight * need * uptake),
+                        "forecast_term": round6(config.coach_method_fit * (forecast * 10.0) * uptake),
                         "pref_bonus": round6(pref_bonus),
                         "fatigue_penalty": round6(-fatigue_pen),
                         "repeat_penalty": round6(-repeat_pen),
+                        **({} if receptiveness is None else {"uptake": uptake}),
                     },
                 }
             )
@@ -2048,6 +2105,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                 slot=slot,
                 already_targeted=already_targeted,
                 config=cfg,
+                **({"receptiveness": _coach_receptiveness(world, coach_id)} if cfg.coach_belief == "use_v1" else {}),
             )
             ev_id = _append_event(
                 world,
@@ -2114,13 +2172,23 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
         )
         action = str(p_dec["chosen"]["action"])
         if reply:  # the coach hears only the stance, a coarse reason and what the player actually did
-            _append_event(
+            outcome_ev = _append_event(
                 world, day=day, kind="coach_advice_outcome", actor=reply["coach_id"],
                 data={"record_class": "coach_observation", "coach_id": reply["coach_id"], "player_id": pid, "method": reply["method"],
                       "response": reply["response"], "stated_reason": _stated_reason(reply["primary_reason"]),
                       "action_followed": action == reply["method"]},
                 cause_refs=[p_dec_ev],
             )
+            if cfg.coach_belief != "none":  # T029 (B layer): update the coach's belief from the outcome record only
+                outcome = world.events[-1]["data"]
+                row = world.coach_beliefs[reply["coach_id"]]
+                row[pid] = update_receptiveness_belief(row.get(pid) or new_receptiveness_belief(), outcome)
+                mean, sd = belief_mean_sd(row[pid])
+                _append_event(
+                    world, day=day, kind="coach_belief_update", actor=reply["coach_id"],
+                    data={"record_class": "coach_belief", "coach_id": reply["coach_id"], "player_id": pid, "mean": mean, "sd": sd, "n": row[pid]["n"]},
+                    cause_refs=[outcome_ev],
+                )
         pre_skill = p.composite_skill()
 
         if action in TRAINING_METHODS:
@@ -2965,6 +3033,16 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
     elif world.player_personality != _personality_traits(world.seed, world.players) or any(
             type(v) is not float for row in world.player_personality.values() for v in row.values()):
         raise ValueError("player_personality does not match the seeded generator")
+    # T029: the belief state exists only when enabled and equals the fold of the outcome events; every outcome is followed by exactly one belief update.
+    if world.config.coach_belief == "none":
+        if world.coach_beliefs or any(ev["kind"] == "coach_belief_update" for ev in world.events):
+            raise ValueError("coach_beliefs present but coach_belief is none")
+    else:
+        folded = _beliefs_from_events(world.events)
+        if world.coach_beliefs != {**{cid: {} for cid in world.coaches}, **folded} or [
+                (ev["cause_refs"], ev["actor"]) for ev in world.events if ev["kind"] == "coach_belief_update"] != [
+                ([ev["id"]], ev["actor"]) for ev in world.events if ev["kind"] == "coach_advice_outcome"]:
+            raise ValueError("coach_beliefs do not match the coach_advice_outcome events")
     # T026: with a curve, every season_aged is followed at once by exactly one season_skill_aged that obeys the curve.
     skill = [(i, ev) for i, ev in enumerate(world.events) if ev.get("kind") == "season_skill_aged"]
     if world.config.aging_curve == "none":
@@ -3144,6 +3222,7 @@ def _snapshot_payload_unchecked(world: LeagueWorldState) -> dict[str, Any]:
         "interventions": [asdict(record) for record in world.interventions],
         **({"player_ages": dict(world.player_ages)} if world.config.aging_start_age else {}),
         **({"player_personality": {k: dict(v) for k, v in world.player_personality.items()}} if world.config.personality != "none" else {}),
+        **({"coach_beliefs": {c: {p: {**b, "reasons": dict(b["reasons"])} for p, b in row.items()} for c, row in world.coach_beliefs.items()}} if world.config.coach_belief != "none" else {}),
     }
 
 
@@ -3410,6 +3489,7 @@ def load_league_snapshot_trusted(path: str | Path) -> LeagueWorldState:
             interventions=tuple(_record_from_payload(r) for r in raw["interventions"]),
             player_ages=dict(raw.get("player_ages", {})),
             player_personality=dict(raw.get("player_personality", {})),
+            coach_beliefs=dict(raw.get("coach_beliefs", {})),
         )
         _validate_league_invariants(world)
     except (KeyError, TypeError, AttributeError) as error:

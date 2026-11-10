@@ -1,0 +1,4306 @@
+{
+  "analysis": {
+    "P1_belief_tracks_current_receptiveness": {
+      "cells_with_estimate": 40,
+      "median_spearman": 0.8333690454931328,
+      "positive_cells": 40,
+      "supported": true
+    },
+    "P2_belief_beats_constant_prior": {
+      "cells_belief_closer_than_prior": 42,
+      "mean_mae_belief": 0.10301396116780046,
+      "mean_mae_prior_half": 0.32598261526832956,
+      "supported": true
+    },
+    "P3_traits_only_via_outcomes": {
+      "median_spearman_discipline": 0.17857142857142855,
+      "median_spearman_stability": -0.16666666666666666,
+      "median_within_one_sd": 0.25,
+      "supported": true
+    },
+    "P4_mechanism_use_minus_observe": {
+      "complied_share": {
+        "mean": 0.04343679076689957,
+        "negative": 0,
+        "p_two_sided": 4.547473508864641e-13,
+        "positive": 42,
+        "zero": 0
+      },
+      "followed_share": {
+        "mean": -0.120667122261917,
+        "negative": 42,
+        "p_two_sided": 4.547473508864641e-13,
+        "positive": 0,
+        "zero": 0
+      },
+      "propose_share": {
+        "mean": -0.19816468253968253,
+        "negative": 42,
+        "p_two_sided": 4.547473508864641e-13,
+        "positive": 0,
+        "zero": 0
+      },
+      "refused_share": {
+        "mean": -0.4514154047949547,
+        "negative": 42,
+        "p_two_sided": 4.547473508864641e-13,
+        "positive": 0,
+        "zero": 0
+      },
+      "responses": {
+        "mean": -228.28571428571428,
+        "negative": 42,
+        "p_two_sided": 4.547473508864641e-13,
+        "positive": 0,
+        "zero": 0
+      },
+      "supported": {
+        "propose_share_lower": true,
+        "refused_share_lower": true,
+        "responses_lower": true
+      }
+    },
+    "P5_descriptive_day84": {
+      "use_minus_observe/satisfaction/day84": {
+        "mean": 0.0031349206349206332,
+        "negative": 2,
+        "p_two_sided": 0.109375,
+        "positive": 8,
+        "zero": 32
+      },
+      "use_minus_observe/skill/day84": {
+        "mean": -0.0007898432539682582,
+        "negative": 28,
+        "p_two_sided": 0.04355852192384191,
+        "positive": 14,
+        "zero": 0
+      },
+      "use_minus_observe/trust/day84": {
+        "mean": -0.006958529265873014,
+        "negative": 38,
+        "p_two_sided": 5.65314621780999e-08,
+        "positive": 4,
+        "zero": 0
+      }
+    },
+    "P5_primary_alpha_0.0167": {
+      "use_minus_observe/satisfaction/day168": {
+        "mean": 0.0,
+        "negative": 0,
+        "p_two_sided": 1.0,
+        "positive": 0,
+        "significant": false,
+        "zero": 42
+      },
+      "use_minus_observe/skill/day168": {
+        "mean": -0.001710216269841263,
+        "negative": 38,
+        "p_two_sided": 5.65314621780999e-08,
+        "positive": 4,
+        "significant": true,
+        "zero": 0
+      },
+      "use_minus_observe/trust/day168": {
+        "mean": -0.009014358630952376,
+        "negative": 38,
+        "p_two_sided": 5.65314621780999e-08,
+        "positive": 4,
+        "significant": true,
+        "zero": 0
+      }
+    },
+    "behaviour_means": {
+      "base": {
+        "complied_share": 0.0687320134050296,
+        "followed_share": 0.3012323182658497,
+        "propose_share": 0.5870122354497355,
+        "refused_share": 0.6222361091277129,
+        "responses": 676.2380952380952
+      },
+      "observe": {
+        "complied_share": 0.0687320134050296,
+        "followed_share": 0.3012323182658497,
+        "propose_share": 0.5870122354497355,
+        "refused_share": 0.6222361091277129,
+        "responses": 676.2380952380952
+      },
+      "use": {
+        "complied_share": 0.11216880417192916,
+        "followed_share": 0.18056519600393267,
+        "propose_share": 0.3888475529100529,
+        "refused_share": 0.17082070433275817,
+        "responses": 447.95238095238096
+      }
+    },
+    "by_mode_means_day168": {
+      "base": {
+        "events": 9328.404761904761,
+        "satisfaction": 0.6699999999999999,
+        "skill": 0.7244716071428572,
+        "transfers": 1.7857142857142858,
+        "trust": 0.46959216964285716
+      },
+      "observe": {
+        "events": 10004.642857142857,
+        "satisfaction": 0.6699999999999999,
+        "skill": 0.7244716071428572,
+        "transfers": 1.7857142857142858,
+        "trust": 0.46959216964285716
+      },
+      "use": {
+        "events": 9590.07142857143,
+        "satisfaction": 0.6699999999999999,
+        "skill": 0.7227613908730158,
+        "transfers": 1.7142857142857142,
+        "trust": 0.4605778110119048
+      }
+    },
+    "stagnation_observe": {
+      "low_belief_pairs": 192,
+      "low_pairs_advised_in_last_28_days": 172
+    },
+    "stagnation_use": {
+      "low_belief_pairs": 15,
+      "low_pairs_advised_in_last_28_days": 15
+    },
+    "uptake": {
+      "mean_uptake": 0.8923465375881834,
+      "propose_candidates": 290304,
+      "scaled_share": 0.3898947310405644
+    },
+    "use_belief_mean_distribution": {
+      "below_0.2": 0.034013605442176874,
+      "mean": 0.4288234240362812,
+      "n": 441
+    }
+  },
+  "base_cells_equal_frozen_t028_on": 42,
+  "branch": {
+    "beliefs": 10,
+    "interventions": 1,
+    "stepped_equals_oneshot": true
+  },
+  "cells": [
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05032258064516129,
+          "followed_share": 0.2735483870967742,
+          "propose_share": 0.6727430555555556,
+          "refused_share": 0.6658064516129032,
+          "responses": 775
+        },
+        "day168": {
+          "events": 9242,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 4658,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05032258064516129,
+          "followed_share": 0.2735483870967742,
+          "propose_share": 0.6727430555555556,
+          "refused_share": 0.6658064516129032,
+          "responses": 775
+        },
+        "day168": {
+          "events": 10017,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 5124,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        },
+        "truth": {
+          "mae_belief": 0.08567722222222222,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": -0.3333333333333333,
+          "spearman_s_now": 0.8215838362577491,
+          "spearman_stability": -0.6166666666666667,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07768924302788845,
+          "followed_share": 0.12350597609561753,
+          "propose_share": 0.4357638888888889,
+          "refused_share": 0.11155378486055777,
+          "responses": 502
+        },
+        "day168": {
+          "events": 9527,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72126125,
+          "transfers": 0,
+          "trust": 0.4829899583333334
+        },
+        "day84": {
+          "events": 4918,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6611839166666666,
+          "transfers": 0,
+          "trust": 0.4829899583333334
+        },
+        "truth": {
+          "mae_belief": 0.21566559999999999,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": 0.006060606060606061,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": -0.45454545454545453,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06141522029372497,
+          "followed_share": 0.2817089452603471,
+          "propose_share": 0.6501736111111112,
+          "refused_share": 0.6809078771695594,
+          "responses": 749
+        },
+        "day168": {
+          "events": 9238,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 4659,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06141522029372497,
+          "followed_share": 0.2817089452603471,
+          "propose_share": 0.6501736111111112,
+          "refused_share": 0.6809078771695594,
+          "responses": 749
+        },
+        "day168": {
+          "events": 9987,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 5091,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "truth": {
+          "mae_belief": 0.10973355555555556,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": 0.11666666666666667,
+          "spearman_s_now": 0.8215838362577491,
+          "spearman_stability": 0.1,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.09690721649484536,
+          "followed_share": 0.14432989690721648,
+          "propose_share": 0.4210069444444444,
+          "refused_share": 0.1134020618556701,
+          "responses": 485
+        },
+        "day168": {
+          "events": 9519,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7220638333333333,
+          "transfers": 0,
+          "trust": 0.4724764583333334
+        },
+        "day84": {
+          "events": 4905,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66119175,
+          "transfers": 0,
+          "trust": 0.4724764583333334
+        },
+        "truth": {
+          "mae_belief": 0.22502909999999998,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": -0.07878787878787878,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": 0.24848484848484848,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.057455540355677154,
+          "followed_share": 0.3064295485636115,
+          "propose_share": 0.6345486111111112,
+          "refused_share": 0.6976744186046512,
+          "responses": 731
+        },
+        "day168": {
+          "events": 9252,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 4668,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.057455540355677154,
+          "followed_share": 0.3064295485636115,
+          "propose_share": 0.6345486111111112,
+          "refused_share": 0.6976744186046512,
+          "responses": 731
+        },
+        "day168": {
+          "events": 9983,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 5095,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "truth": {
+          "mae_belief": 0.133992,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": 0.35,
+          "spearman_s_now": 0.5477225575051661,
+          "spearman_stability": -0.4166666666666667,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.08536585365853659,
+          "followed_share": 0.13617886178861788,
+          "propose_share": 0.4270833333333333,
+          "refused_share": 0.09146341463414634,
+          "responses": 492
+        },
+        "day168": {
+          "events": 9518,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7217413333333332,
+          "transfers": 0,
+          "trust": 0.4730119791666667
+        },
+        "day84": {
+          "events": 4911,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6611915833333334,
+          "transfers": 0,
+          "trust": 0.4730119791666667
+        },
+        "truth": {
+          "mae_belief": 0.23229229999999998,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": -0.06666666666666667,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": -0.16363636363636364,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.0637037037037037,
+          "followed_share": 0.20592592592592593,
+          "propose_share": 0.5859375,
+          "refused_share": 0.642962962962963,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9165,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 4626,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.0637037037037037,
+          "followed_share": 0.20592592592592593,
+          "propose_share": 0.5859375,
+          "refused_share": 0.642962962962963,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9840,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 5010,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        },
+        "truth": {
+          "mae_belief": 0.11385260000000001,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.6121212121212121,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.45454545454545453,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.09394572025052192,
+          "followed_share": 0.12943632567849686,
+          "propose_share": 0.4157986111111111,
+          "refused_share": 0.0918580375782881,
+          "responses": 479
+        },
+        "day168": {
+          "events": 9500,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72028375,
+          "transfers": 0,
+          "trust": 0.4758976041666667
+        },
+        "day84": {
+          "events": 4904,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6594984166666666,
+          "transfers": 0,
+          "trust": 0.47831068750000005
+        },
+        "truth": {
+          "mae_belief": 0.18275133333333335,
+          "mae_prior_half": 0.20833333333333334,
+          "pairs": 12,
+          "spearman_discipline": 0.6713286713286714,
+          "spearman_s_now": 0.8568930704969753,
+          "spearman_stability": -0.16783216783216784,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07704654895666131,
+          "followed_share": 0.45425361155698235,
+          "propose_share": 0.5407986111111112,
+          "refused_share": 0.7303370786516854,
+          "responses": 623
+        },
+        "day168": {
+          "events": 9299,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07704654895666131,
+          "followed_share": 0.45425361155698235,
+          "propose_share": 0.5407986111111112,
+          "refused_share": 0.7303370786516854,
+          "responses": 623
+        },
+        "day168": {
+          "events": 9922,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 5041,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        },
+        "truth": {
+          "mae_belief": 0.10426666666666667,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.08333333333333333,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": -0.1,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.13793103448275862,
+          "followed_share": 0.20689655172413793,
+          "propose_share": 0.3272569444444444,
+          "refused_share": 0.13262599469496023,
+          "responses": 377
+        },
+        "day168": {
+          "events": 9398,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7419080833333332,
+          "transfers": 0,
+          "trust": 0.4644634375000001
+        },
+        "day84": {
+          "events": 4862,
+          "satisfaction": 0.6749999999999999,
+          "skill": 0.68451725,
+          "transfers": 0,
+          "trust": 0.4644634375000001
+        },
+        "truth": {
+          "mae_belief": 0.19418958333333336,
+          "mae_prior_half": 0.20833333333333334,
+          "pairs": 12,
+          "spearman_discipline": 0.06655001449214289,
+          "spearman_s_now": 0.8093439281201549,
+          "spearman_stability": 0.31173427841056406,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06491499227202473,
+          "followed_share": 0.4250386398763524,
+          "propose_share": 0.5616319444444444,
+          "refused_share": 0.7928902627511591,
+          "responses": 647
+        },
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 4681,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06491499227202473,
+          "followed_share": 0.4250386398763524,
+          "propose_share": 0.5616319444444444,
+          "refused_share": 0.7928902627511591,
+          "responses": 647
+        },
+        "day168": {
+          "events": 9940,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 5048,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "truth": {
+          "mae_belief": 0.10995200000000001,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": 0.0790277206784084,
+          "spearman_s_now": 0.8553989227683015,
+          "spearman_stability": 0.23708316203522517,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1390532544378698,
+          "followed_share": 0.22485207100591717,
+          "propose_share": 0.2934027777777778,
+          "refused_share": 0.17455621301775148,
+          "responses": 338
+        },
+        "day168": {
+          "events": 9351,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7393294166666666,
+          "transfers": 0,
+          "trust": 0.45935691666666667
+        },
+        "day84": {
+          "events": 4842,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6728549166666666,
+          "transfers": 0,
+          "trust": 0.46586229166666676
+        },
+        "truth": {
+          "mae_belief": 0.2516853636363636,
+          "mae_prior_half": 0.3181818181818182,
+          "pairs": 11,
+          "spearman_discipline": 0.1,
+          "spearman_s_now": 0.8366600265340756,
+          "spearman_stability": -0.00909090909090909,
+          "within_one_sd": 0.2727272727272727
+        }
+      },
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05032258064516129,
+          "followed_share": 0.2735483870967742,
+          "propose_share": 0.6727430555555556,
+          "refused_share": 0.6658064516129032,
+          "responses": 775
+        },
+        "day168": {
+          "events": 9242,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 4658,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05032258064516129,
+          "followed_share": 0.2735483870967742,
+          "propose_share": 0.6727430555555556,
+          "refused_share": 0.6658064516129032,
+          "responses": 775
+        },
+        "day168": {
+          "events": 10017,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221253333333334,
+          "transfers": 0,
+          "trust": 0.4773774583333334
+        },
+        "day84": {
+          "events": 5124,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6617329166666667,
+          "transfers": 0,
+          "trust": 0.48283660416666674
+        },
+        "truth": {
+          "mae_belief": 0.08567722222222222,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": -0.3333333333333333,
+          "spearman_s_now": 0.8215838362577491,
+          "spearman_stability": -0.6166666666666667,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07768924302788845,
+          "followed_share": 0.12350597609561753,
+          "propose_share": 0.4357638888888889,
+          "refused_share": 0.11155378486055777,
+          "responses": 502
+        },
+        "day168": {
+          "events": 9527,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72126125,
+          "transfers": 0,
+          "trust": 0.4829899583333334
+        },
+        "day84": {
+          "events": 4918,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6611839166666666,
+          "transfers": 0,
+          "trust": 0.4829899583333334
+        },
+        "truth": {
+          "mae_belief": 0.21566559999999999,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": 0.006060606060606061,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": -0.45454545454545453,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06141522029372497,
+          "followed_share": 0.2817089452603471,
+          "propose_share": 0.6501736111111112,
+          "refused_share": 0.6809078771695594,
+          "responses": 749
+        },
+        "day168": {
+          "events": 9238,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 4659,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06141522029372497,
+          "followed_share": 0.2817089452603471,
+          "propose_share": 0.6501736111111112,
+          "refused_share": 0.6809078771695594,
+          "responses": 749
+        },
+        "day168": {
+          "events": 9987,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7221863333333333,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "day84": {
+          "events": 5091,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66137775,
+          "transfers": 0,
+          "trust": 0.4731389375000001
+        },
+        "truth": {
+          "mae_belief": 0.10973355555555556,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": 0.11666666666666667,
+          "spearman_s_now": 0.8215838362577491,
+          "spearman_stability": 0.1,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.09690721649484536,
+          "followed_share": 0.14432989690721648,
+          "propose_share": 0.4210069444444444,
+          "refused_share": 0.1134020618556701,
+          "responses": 485
+        },
+        "day168": {
+          "events": 9519,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7220638333333333,
+          "transfers": 0,
+          "trust": 0.4724764583333334
+        },
+        "day84": {
+          "events": 4905,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.66119175,
+          "transfers": 0,
+          "trust": 0.4724764583333334
+        },
+        "truth": {
+          "mae_belief": 0.22502909999999998,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": -0.07878787878787878,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": 0.24848484848484848,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.057455540355677154,
+          "followed_share": 0.3064295485636115,
+          "propose_share": 0.6345486111111112,
+          "refused_share": 0.6976744186046512,
+          "responses": 731
+        },
+        "day168": {
+          "events": 9252,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 4668,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.057455540355677154,
+          "followed_share": 0.3064295485636115,
+          "propose_share": 0.6345486111111112,
+          "refused_share": 0.6976744186046512,
+          "responses": 731
+        },
+        "day168": {
+          "events": 9983,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7224583333333333,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "day84": {
+          "events": 5095,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6615760833333334,
+          "transfers": 0,
+          "trust": 0.4735845000000001
+        },
+        "truth": {
+          "mae_belief": 0.133992,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 9,
+          "spearman_discipline": 0.35,
+          "spearman_s_now": 0.5477225575051661,
+          "spearman_stability": -0.4166666666666667,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.08536585365853659,
+          "followed_share": 0.13617886178861788,
+          "propose_share": 0.4270833333333333,
+          "refused_share": 0.09146341463414634,
+          "responses": 492
+        },
+        "day168": {
+          "events": 9518,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7217413333333332,
+          "transfers": 0,
+          "trust": 0.4730119791666667
+        },
+        "day84": {
+          "events": 4911,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6611915833333334,
+          "transfers": 0,
+          "trust": 0.4730119791666667
+        },
+        "truth": {
+          "mae_belief": 0.23229229999999998,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": -0.06666666666666667,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": -0.16363636363636364,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "closed_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.0637037037037037,
+          "followed_share": 0.20592592592592593,
+          "propose_share": 0.5859375,
+          "refused_share": 0.642962962962963,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9165,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 4626,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.0637037037037037,
+          "followed_share": 0.20592592592592593,
+          "propose_share": 0.5859375,
+          "refused_share": 0.642962962962963,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9840,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7208430833333334,
+          "transfers": 0,
+          "trust": 0.4808421041666667
+        },
+        "day84": {
+          "events": 5010,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6595535833333334,
+          "transfers": 0,
+          "trust": 0.4832551875
+        },
+        "truth": {
+          "mae_belief": 0.11385260000000001,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.6121212121212121,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.45454545454545453,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.09394572025052192,
+          "followed_share": 0.12943632567849686,
+          "propose_share": 0.4157986111111111,
+          "refused_share": 0.0918580375782881,
+          "responses": 479
+        },
+        "day168": {
+          "events": 9500,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.72028375,
+          "transfers": 0,
+          "trust": 0.4758976041666667
+        },
+        "day84": {
+          "events": 4904,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6594984166666666,
+          "transfers": 0,
+          "trust": 0.47831068750000005
+        },
+        "truth": {
+          "mae_belief": 0.18275133333333335,
+          "mae_prior_half": 0.20833333333333334,
+          "pairs": 12,
+          "spearman_discipline": 0.6713286713286714,
+          "spearman_s_now": 0.8568930704969753,
+          "spearman_stability": -0.16783216783216784,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07704654895666131,
+          "followed_share": 0.45425361155698235,
+          "propose_share": 0.5407986111111112,
+          "refused_share": 0.7303370786516854,
+          "responses": 623
+        },
+        "day168": {
+          "events": 9299,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 4688,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07704654895666131,
+          "followed_share": 0.45425361155698235,
+          "propose_share": 0.5407986111111112,
+          "refused_share": 0.7303370786516854,
+          "responses": 623
+        },
+        "day168": {
+          "events": 9922,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7427394166666667,
+          "transfers": 0,
+          "trust": 0.4731592291666667
+        },
+        "day84": {
+          "events": 5041,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.684364,
+          "transfers": 0,
+          "trust": 0.4787398958333334
+        },
+        "truth": {
+          "mae_belief": 0.10426666666666667,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.08333333333333333,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": -0.1,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.13793103448275862,
+          "followed_share": 0.20689655172413793,
+          "propose_share": 0.3272569444444444,
+          "refused_share": 0.13262599469496023,
+          "responses": 377
+        },
+        "day168": {
+          "events": 9398,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7419080833333332,
+          "transfers": 0,
+          "trust": 0.4644634375000001
+        },
+        "day84": {
+          "events": 4862,
+          "satisfaction": 0.6749999999999999,
+          "skill": 0.68451725,
+          "transfers": 0,
+          "trust": 0.4644634375000001
+        },
+        "truth": {
+          "mae_belief": 0.19418958333333336,
+          "mae_prior_half": 0.20833333333333334,
+          "pairs": 12,
+          "spearman_discipline": 0.06655001449214289,
+          "spearman_s_now": 0.8093439281201549,
+          "spearman_stability": 0.31173427841056406,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06491499227202473,
+          "followed_share": 0.4250386398763524,
+          "propose_share": 0.5616319444444444,
+          "refused_share": 0.7928902627511591,
+          "responses": 647
+        },
+        "day168": {
+          "events": 9293,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 4681,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06491499227202473,
+          "followed_share": 0.4250386398763524,
+          "propose_share": 0.5616319444444444,
+          "refused_share": 0.7928902627511591,
+          "responses": 647
+        },
+        "day168": {
+          "events": 9940,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7395869166666666,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "day84": {
+          "events": 5048,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6726752500000001,
+          "transfers": 0,
+          "trust": 0.47216668750000007
+        },
+        "truth": {
+          "mae_belief": 0.10995200000000001,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": 0.0790277206784084,
+          "spearman_s_now": 0.8553989227683015,
+          "spearman_stability": 0.23708316203522517,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1390532544378698,
+          "followed_share": 0.22485207100591717,
+          "propose_share": 0.2934027777777778,
+          "refused_share": 0.17455621301775148,
+          "responses": 338
+        },
+        "day168": {
+          "events": 9351,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7393294166666666,
+          "transfers": 0,
+          "trust": 0.45935691666666667
+        },
+        "day84": {
+          "events": 4842,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6728549166666666,
+          "transfers": 0,
+          "trust": 0.46586229166666676
+        },
+        "truth": {
+          "mae_belief": 0.2516853636363636,
+          "mae_prior_half": 0.3181818181818182,
+          "pairs": 11,
+          "spearman_discipline": 0.1,
+          "spearman_s_now": 0.8366600265340756,
+          "spearman_stability": -0.00909090909090909,
+          "within_one_sd": 0.2727272727272727
+        }
+      },
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05193075898801598,
+          "followed_share": 0.2609853528628495,
+          "propose_share": 0.6519097222222222,
+          "refused_share": 0.6790945406125166,
+          "responses": 751
+        },
+        "day168": {
+          "events": 9343,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222826666666666,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        },
+        "day84": {
+          "events": 4787,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6667678333333332,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05193075898801598,
+          "followed_share": 0.2609853528628495,
+          "propose_share": 0.6519097222222222,
+          "refused_share": 0.6790945406125166,
+          "responses": 751
+        },
+        "day168": {
+          "events": 10094,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222826666666666,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        },
+        "day84": {
+          "events": 5244,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6667678333333332,
+          "transfers": 2,
+          "trust": 0.48107295833333336
+        },
+        "truth": {
+          "mae_belief": 0.089460875,
+          "mae_prior_half": 0.4375,
+          "pairs": 8,
+          "spearman_discipline": -0.5952380952380952,
+          "spearman_s_now": 0.5773502691896257,
+          "spearman_stability": -0.5952380952380952,
+          "within_one_sd": 0.125
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.12121212121212122,
+          "followed_share": 0.23030303030303031,
+          "propose_share": 0.2864583333333333,
+          "refused_share": 0.25757575757575757,
+          "responses": 330
+        },
+        "day168": {
+          "events": 9449,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7195728333333333,
+          "transfers": 2,
+          "trust": 0.4722196250000001
+        },
+        "day84": {
+          "events": 5018,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6661901666666666,
+          "transfers": 2,
+          "trust": 0.4745663541666667
+        },
+        "truth": {
+          "mae_belief": 0.32904100000000003,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": 0.5714285714285714,
+          "spearman_stability": -0.09523809523809523,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "open_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06695156695156695,
+          "followed_share": 0.3005698005698006,
+          "propose_share": 0.609375,
+          "refused_share": 0.5270655270655271,
+          "responses": 702
+        },
+        "day168": {
+          "events": 9343,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7213195,
+          "transfers": 2,
+          "trust": 0.47601993750000005
+        },
+        "day84": {
+          "events": 4779,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6667163333333334,
+          "transfers": 2,
+          "trust": 0.4786934166666667
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06695156695156695,
+          "followed_share": 0.3005698005698006,
+          "propose_share": 0.609375,
+          "refused_share": 0.5270655270655271,
+          "responses": 702
+        },
+        "day168": {
+          "events": 10045,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7213195,
+          "transfers": 2,
+          "trust": 0.47601993750000005
+        },
+        "day84": {
+          "events": 5205,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6667163333333334,
+          "transfers": 2,
+          "trust": 0.4786934166666667
+        },
+        "truth": {
+          "mae_belief": 0.077358125,
+          "mae_prior_half": 0.3125,
+          "pairs": 8,
+          "spearman_discipline": 0.14285714285714285,
+          "spearman_s_now": 0.8451542547285166,
+          "spearman_stability": -0.2619047619047619,
+          "within_one_sd": 0.375
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.10955710955710955,
+          "followed_share": 0.16317016317016317,
+          "propose_share": 0.3723958333333333,
+          "refused_share": 0.1445221445221445,
+          "responses": 429
+        },
+        "day168": {
+          "events": 9563,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7188616666666667,
+          "transfers": 2,
+          "trust": 0.4739708125
+        },
+        "day84": {
+          "events": 5024,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6656095,
+          "transfers": 2,
+          "trust": 0.47884395833333343
+        },
+        "truth": {
+          "mae_belief": 0.260016125,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": -0.19047619047619047,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.07142857142857142,
+          "within_one_sd": 0.25
+        }
+      },
+      "world": "open_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.059490084985835696,
+          "followed_share": 0.29320113314447593,
+          "propose_share": 0.6128472222222222,
+          "refused_share": 0.6784702549575071,
+          "responses": 706
+        },
+        "day168": {
+          "events": 9351,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7228575833333334,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4792,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6677645833333333,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.059490084985835696,
+          "followed_share": 0.29320113314447593,
+          "propose_share": 0.6128472222222222,
+          "refused_share": 0.6784702549575071,
+          "responses": 706
+        },
+        "day168": {
+          "events": 10057,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7228575833333334,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 5222,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6677645833333333,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "mae_belief": 0.092879875,
+          "mae_prior_half": 0.4375,
+          "pairs": 8,
+          "spearman_discipline": -0.07142857142857142,
+          "spearman_s_now": 0.5773502691896257,
+          "spearman_stability": -0.38095238095238093,
+          "within_one_sd": 0.125
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.12844036697247707,
+          "followed_share": 0.22935779816513763,
+          "propose_share": 0.2838541666666667,
+          "refused_share": 0.2782874617737003,
+          "responses": 327
+        },
+        "day168": {
+          "events": 9453,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7197469999999999,
+          "transfers": 2,
+          "trust": 0.4678602916666667
+        },
+        "day84": {
+          "events": 5017,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6665618333333333,
+          "transfers": 2,
+          "trust": 0.4678602916666667
+        },
+        "truth": {
+          "mae_belief": 0.316272125,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": -0.07142857142857142,
+          "spearman_stability": -0.09523809523809523,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "open_no_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.0821917808219178,
+          "followed_share": 0.25,
+          "propose_share": 0.5069444444444444,
+          "refused_share": 0.4794520547945205,
+          "responses": 584
+        },
+        "day168": {
+          "events": 9292,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7205406666666666,
+          "transfers": 3,
+          "trust": 0.4709844375000001
+        },
+        "day84": {
+          "events": 4778,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6624984166666666,
+          "transfers": 3,
+          "trust": 0.4806559791666667
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.0821917808219178,
+          "followed_share": 0.25,
+          "propose_share": 0.5069444444444444,
+          "refused_share": 0.4794520547945205,
+          "responses": 584
+        },
+        "day168": {
+          "events": 9876,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7205406666666666,
+          "transfers": 3,
+          "trust": 0.4709844375000001
+        },
+        "day84": {
+          "events": 5146,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6624984166666666,
+          "transfers": 3,
+          "trust": 0.4806559791666667
+        },
+        "truth": {
+          "mae_belief": 0.13543977777777777,
+          "mae_prior_half": 0.2222222222222222,
+          "pairs": 9,
+          "spearman_discipline": 0.75,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": 0.016666666666666666,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.10845986984815618,
+          "followed_share": 0.16702819956616052,
+          "propose_share": 0.4001736111111111,
+          "refused_share": 0.09978308026030369,
+          "responses": 461
+        },
+        "day168": {
+          "events": 9636,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.715561,
+          "transfers": 3,
+          "trust": 0.45122422916666666
+        },
+        "day84": {
+          "events": 5067,
+          "satisfaction": 0.7358333333333333,
+          "skill": 0.6579569166666667,
+          "transfers": 3,
+          "trust": 0.46670418750000003
+        },
+        "truth": {
+          "mae_belief": 0.2656917272727273,
+          "mae_prior_half": 0.2727272727272727,
+          "pairs": 11,
+          "spearman_discipline": 0.509090909090909,
+          "spearman_s_now": 0.6928203230275509,
+          "spearman_stability": -0.2,
+          "within_one_sd": 0.36363636363636365
+        }
+      },
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.09448818897637795,
+          "followed_share": 0.3110236220472441,
+          "propose_share": 0.4409722222222222,
+          "refused_share": 0.5787401574803149,
+          "responses": 508
+        },
+        "day168": {
+          "events": 9276,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7443823333333334,
+          "transfers": 2,
+          "trust": 0.46710002083333335
+        },
+        "day84": {
+          "events": 4778,
+          "satisfaction": 0.695,
+          "skill": 0.691214,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.09448818897637795,
+          "followed_share": 0.3110236220472441,
+          "propose_share": 0.4409722222222222,
+          "refused_share": 0.5787401574803149,
+          "responses": 508
+        },
+        "day168": {
+          "events": 9784,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7443823333333334,
+          "transfers": 2,
+          "trust": 0.46710002083333335
+        },
+        "day84": {
+          "events": 5109,
+          "satisfaction": 0.695,
+          "skill": 0.691214,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "mae_belief": 0.16461399999999998,
+          "mae_prior_half": 0.35714285714285715,
+          "pairs": 7,
+          "spearman_discipline": 0.21428571428571427,
+          "spearman_s_now": 0.7905694150420949,
+          "spearman_stability": -0.03571428571428571,
+          "within_one_sd": 0.14285714285714285
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1308641975308642,
+          "followed_share": 0.19506172839506172,
+          "propose_share": 0.3515625,
+          "refused_share": 0.1308641975308642,
+          "responses": 405
+        },
+        "day168": {
+          "events": 9564,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7445473333333333,
+          "transfers": 2,
+          "trust": 0.457411
+        },
+        "day84": {
+          "events": 5000,
+          "satisfaction": 0.695,
+          "skill": 0.6919435833333334,
+          "transfers": 2,
+          "trust": 0.46234529166666666
+        },
+        "truth": {
+          "mae_belief": 0.24768819999999997,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.2727272727272727,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.2727272727272727,
+          "within_one_sd": 0.4
+        }
+      },
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07719298245614035,
+          "followed_share": 0.41754385964912283,
+          "propose_share": 0.4947916666666667,
+          "refused_share": 0.6298245614035087,
+          "responses": 570
+        },
+        "day168": {
+          "events": 9366,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7371327499999999,
+          "transfers": 2,
+          "trust": 0.4645650208333334
+        },
+        "day84": {
+          "events": 4789,
+          "satisfaction": 0.695,
+          "skill": 0.6773094999999999,
+          "transfers": 2,
+          "trust": 0.4701794791666667
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07719298245614035,
+          "followed_share": 0.41754385964912283,
+          "propose_share": 0.4947916666666667,
+          "refused_share": 0.6298245614035087,
+          "responses": 570
+        },
+        "day168": {
+          "events": 9936,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7371327499999999,
+          "transfers": 2,
+          "trust": 0.4645650208333334
+        },
+        "day84": {
+          "events": 5150,
+          "satisfaction": 0.695,
+          "skill": 0.6773094999999999,
+          "transfers": 2,
+          "trust": 0.4701794791666667
+        },
+        "truth": {
+          "mae_belief": 0.07497687500000001,
+          "mae_prior_half": 0.25,
+          "pairs": 8,
+          "spearman_discipline": 0.3333333333333333,
+          "spearman_s_now": 0.8728715609439696,
+          "spearman_stability": -0.16666666666666666,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1467065868263473,
+          "followed_share": 0.23053892215568864,
+          "propose_share": 0.2899305555555556,
+          "refused_share": 0.17964071856287425,
+          "responses": 334
+        },
+        "day168": {
+          "events": 9456,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.736332,
+          "transfers": 2,
+          "trust": 0.45314993750000004
+        },
+        "day84": {
+          "events": 4981,
+          "satisfaction": 0.695,
+          "skill": 0.6782118333333332,
+          "transfers": 2,
+          "trust": 0.4573763333333334
+        },
+        "truth": {
+          "mae_belief": 0.2089862222222222,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.03333333333333333,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": 0.08333333333333333,
+          "within_one_sd": 0.4444444444444444
+        }
+      },
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05313351498637602,
+          "followed_share": 0.2779291553133515,
+          "propose_share": 0.6371527777777778,
+          "refused_share": 0.6730245231607629,
+          "responses": 734
+        },
+        "day168": {
+          "events": 9455,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 4904,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05313351498637602,
+          "followed_share": 0.2779291553133515,
+          "propose_share": 0.6371527777777778,
+          "refused_share": 0.6730245231607629,
+          "responses": 734
+        },
+        "day168": {
+          "events": 10189,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 5361,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        },
+        "truth": {
+          "mae_belief": 0.11176900000000001,
+          "mae_prior_half": 0.4375,
+          "pairs": 8,
+          "spearman_discipline": -0.5,
+          "spearman_s_now": 0.5773502691896257,
+          "spearman_stability": -0.7142857142857143,
+          "within_one_sd": 0.125
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11976047904191617,
+          "followed_share": 0.23652694610778444,
+          "propose_share": 0.2899305555555556,
+          "refused_share": 0.2634730538922156,
+          "responses": 334
+        },
+        "day168": {
+          "events": 9584,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7158998333333333,
+          "transfers": 2,
+          "trust": 0.4745663541666667
+        },
+        "day84": {
+          "events": 5144,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6742328333333334,
+          "transfers": 2,
+          "trust": 0.4745663541666667
+        },
+        "truth": {
+          "mae_belief": 0.32458775,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": -0.35714285714285715,
+          "spearman_stability": -0.2857142857142857,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "open_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06801736613603473,
+          "followed_share": 0.3096960926193922,
+          "propose_share": 0.5998263888888888,
+          "refused_share": 0.5716353111432706,
+          "responses": 691
+        },
+        "day168": {
+          "events": 9449,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 4893,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06801736613603473,
+          "followed_share": 0.3096960926193922,
+          "propose_share": 0.5998263888888888,
+          "refused_share": 0.5716353111432706,
+          "responses": 691
+        },
+        "day168": {
+          "events": 10140,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 5314,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        },
+        "truth": {
+          "mae_belief": 0.10785325,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": 0.047619047619047616,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.21428571428571427,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11217183770883055,
+          "followed_share": 0.17422434367541767,
+          "propose_share": 0.3637152777777778,
+          "refused_share": 0.14558472553699284,
+          "responses": 419
+        },
+        "day168": {
+          "events": 9677,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7137136666666667,
+          "transfers": 2,
+          "trust": 0.47259089583333336
+        },
+        "day84": {
+          "events": 5141,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6712871666666667,
+          "transfers": 2,
+          "trust": 0.4788974791666667
+        },
+        "truth": {
+          "mae_belief": 0.264856375,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": -0.19047619047619047,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": 0.0,
+          "within_one_sd": 0.25
+        }
+      },
+      "world": "open_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06222222222222222,
+          "followed_share": 0.3214814814814815,
+          "propose_share": 0.5859375,
+          "refused_share": 0.6666666666666666,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9451,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4906,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06222222222222222,
+          "followed_share": 0.3214814814814815,
+          "propose_share": 0.5859375,
+          "refused_share": 0.6666666666666666,
+          "responses": 675
+        },
+        "day168": {
+          "events": 10126,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 5329,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "mae_belief": 0.09951928571428571,
+          "mae_prior_half": 0.5,
+          "pairs": 7,
+          "spearman_discipline": 0.4642857142857143,
+          "spearman_stability": -0.5,
+          "within_one_sd": 0.0
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1308411214953271,
+          "followed_share": 0.2585669781931464,
+          "propose_share": 0.2786458333333333,
+          "refused_share": 0.26479750778816197,
+          "responses": 321
+        },
+        "day168": {
+          "events": 9578,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222471666666667,
+          "transfers": 2,
+          "trust": 0.4624000000000001
+        },
+        "day84": {
+          "events": 5138,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6836910833333333,
+          "transfers": 2,
+          "trust": 0.46633327083333337
+        },
+        "truth": {
+          "mae_belief": 0.33396925,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": -0.6190476190476191,
+          "spearman_stability": 0.16666666666666666,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "open_solidarity"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.08581436077057793,
+          "followed_share": 0.2609457092819615,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.46760070052539404,
+          "responses": 571
+        },
+        "day168": {
+          "events": 9408,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 4865,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.08581436077057793,
+          "followed_share": 0.2609457092819615,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.46760070052539404,
+          "responses": 571
+        },
+        "day168": {
+          "events": 9979,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 5229,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        },
+        "truth": {
+          "mae_belief": 0.14496455555555554,
+          "mae_prior_half": 0.2222222222222222,
+          "pairs": 9,
+          "spearman_discipline": 0.6694619270045784,
+          "spearman_s_now": 0.8696565534786727,
+          "spearman_stability": -0.07531446678801507,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11261261261261261,
+          "followed_share": 0.17567567567567569,
+          "propose_share": 0.3854166666666667,
+          "refused_share": 0.12612612612612611,
+          "responses": 444
+        },
+        "day168": {
+          "events": 9780,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7084467499999999,
+          "transfers": 3,
+          "trust": 0.4496057500000001
+        },
+        "day84": {
+          "events": 5160,
+          "satisfaction": 0.7358333333333333,
+          "skill": 0.6617621666666667,
+          "transfers": 3,
+          "trust": 0.46452270833333337
+        },
+        "truth": {
+          "mae_belief": 0.29051445454545455,
+          "mae_prior_half": 0.3181818181818182,
+          "pairs": 11,
+          "spearman_discipline": 0.4909090909090909,
+          "spearman_s_now": 0.7171371656006362,
+          "spearman_stability": -0.14545454545454545,
+          "within_one_sd": 0.2727272727272727
+        }
+      },
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.09126984126984126,
+          "followed_share": 0.30357142857142855,
+          "propose_share": 0.4375,
+          "refused_share": 0.5813492063492064,
+          "responses": 504
+        },
+        "day168": {
+          "events": 9388,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 4856,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.09126984126984126,
+          "followed_share": 0.30357142857142855,
+          "propose_share": 0.4375,
+          "refused_share": 0.5813492063492064,
+          "responses": 504
+        },
+        "day168": {
+          "events": 9892,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 5187,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "mae_belief": 0.10285728571428573,
+          "mae_prior_half": 0.2857142857142857,
+          "pairs": 7,
+          "spearman_discipline": 0.21428571428571427,
+          "spearman_s_now": 0.8660254037844387,
+          "spearman_stability": -0.03571428571428571,
+          "within_one_sd": 0.2857142857142857
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.13466334164588528,
+          "followed_share": 0.20199501246882792,
+          "propose_share": 0.3480902777777778,
+          "refused_share": 0.13466334164588528,
+          "responses": 401
+        },
+        "day168": {
+          "events": 9679,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.73692175,
+          "transfers": 2,
+          "trust": 0.45539612500000004
+        },
+        "day84": {
+          "events": 5077,
+          "satisfaction": 0.695,
+          "skill": 0.6951873333333333,
+          "transfers": 2,
+          "trust": 0.46160614583333337
+        },
+        "truth": {
+          "mae_belief": 0.24499900000000002,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.28484848484848485,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.28484848484848485,
+          "within_one_sd": 0.3
+        }
+      },
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07880910683012259,
+          "followed_share": 0.4203152364273205,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.6304728546409807,
+          "responses": 571
+        },
+        "day168": {
+          "events": 9484,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 4874,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07880910683012259,
+          "followed_share": 0.4203152364273205,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.6304728546409807,
+          "responses": 571
+        },
+        "day168": {
+          "events": 10055,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 5235,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        },
+        "truth": {
+          "mae_belief": 0.0749785,
+          "mae_prior_half": 0.25,
+          "pairs": 8,
+          "spearman_discipline": 0.3333333333333333,
+          "spearman_s_now": 0.8728715609439696,
+          "spearman_stability": -0.16666666666666666,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.14714714714714713,
+          "followed_share": 0.23123123123123124,
+          "propose_share": 0.2890625,
+          "refused_share": 0.18018018018018017,
+          "responses": 333
+        },
+        "day168": {
+          "events": 9576,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7278043333333333,
+          "transfers": 2,
+          "trust": 0.4532090416666667
+        },
+        "day84": {
+          "events": 5064,
+          "satisfaction": 0.695,
+          "skill": 0.6771509166666667,
+          "transfers": 2,
+          "trust": 0.4573763333333334
+        },
+        "truth": {
+          "mae_belief": 0.20895166666666667,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.03333333333333333,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": 0.08333333333333333,
+          "within_one_sd": 0.4444444444444444
+        }
+      },
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.04157782515991471,
+          "followed_share": 0.2281449893390192,
+          "propose_share": 0.8142361111111112,
+          "refused_share": 0.5618336886993603,
+          "responses": 938
+        },
+        "day168": {
+          "events": 9147,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7043145833333333,
+          "transfers": 2,
+          "trust": 0.4824988333333334
+        },
+        "day84": {
+          "events": 4767,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6584178333333334,
+          "transfers": 2,
+          "trust": 0.48391693750000003
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.04157782515991471,
+          "followed_share": 0.2281449893390192,
+          "propose_share": 0.8142361111111112,
+          "refused_share": 0.5618336886993603,
+          "responses": 938
+        },
+        "day168": {
+          "events": 10085,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7043145833333333,
+          "transfers": 2,
+          "trust": 0.4824988333333334
+        },
+        "day84": {
+          "events": 5225,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6584178333333334,
+          "transfers": 2,
+          "trust": 0.48391693750000003
+        },
+        "truth": {
+          "mae_belief": 0.045936500000000005,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": -0.5952380952380952,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.23809523809523808,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.06340819022457067,
+          "followed_share": 0.10039630118890357,
+          "propose_share": 0.6571180555555556,
+          "refused_share": 0.22985468956406868,
+          "responses": 757
+        },
+        "day168": {
+          "events": 9661,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7039920833333334,
+          "transfers": 2,
+          "trust": 0.45584047916666676
+        },
+        "day84": {
+          "events": 5036,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6570368333333333,
+          "transfers": 2,
+          "trust": 0.4812115416666667
+        },
+        "truth": {
+          "mae_belief": 0.09706916666666666,
+          "mae_prior_half": 0.25,
+          "pairs": 12,
+          "spearman_discipline": -0.08391608391608392,
+          "spearman_s_now": 0.8690481892534816,
+          "spearman_stability": 0.8251748251748252,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05204872646733112,
+          "followed_share": 0.24141749723145073,
+          "propose_share": 0.7838541666666666,
+          "refused_share": 0.5603543743078627,
+          "responses": 903
+        },
+        "day168": {
+          "events": 9145,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7097945833333333,
+          "transfers": 2,
+          "trust": 0.4692983958333334
+        },
+        "day84": {
+          "events": 4767,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6663969166666667,
+          "transfers": 2,
+          "trust": 0.47495477083333343
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05204872646733112,
+          "followed_share": 0.24141749723145073,
+          "propose_share": 0.7838541666666666,
+          "refused_share": 0.5603543743078627,
+          "responses": 903
+        },
+        "day168": {
+          "events": 10048,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7097945833333333,
+          "transfers": 2,
+          "trust": 0.4692983958333334
+        },
+        "day84": {
+          "events": 5196,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6663969166666667,
+          "transfers": 2,
+          "trust": 0.47495477083333343
+        },
+        "truth": {
+          "mae_belief": 0.085285,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": -0.11904761904761904,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.2857142857142857,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07402234636871509,
+          "followed_share": 0.12290502793296089,
+          "propose_share": 0.6215277777777778,
+          "refused_share": 0.2835195530726257,
+          "responses": 716
+        },
+        "day168": {
+          "events": 9637,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7081909166666667,
+          "transfers": 2,
+          "trust": 0.44879493750000005
+        },
+        "day84": {
+          "events": 5003,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6634384166666667,
+          "transfers": 2,
+          "trust": 0.4695263541666667
+        },
+        "truth": {
+          "mae_belief": 0.132203,
+          "mae_prior_half": 0.3181818181818182,
+          "pairs": 11,
+          "spearman_discipline": 0.3,
+          "spearman_s_now": 0.8366600265340756,
+          "spearman_stability": -0.39090909090909093,
+          "within_one_sd": 0.36363636363636365
+        }
+      },
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.046460176991150445,
+          "followed_share": 0.25442477876106195,
+          "propose_share": 0.7847222222222222,
+          "refused_share": 0.702433628318584,
+          "responses": 904
+        },
+        "day168": {
+          "events": 9153,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7127996666666667,
+          "transfers": 2,
+          "trust": 0.46752837500000005
+        },
+        "day84": {
+          "events": 4775,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6711541666666667,
+          "transfers": 2,
+          "trust": 0.4714616458333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.046460176991150445,
+          "followed_share": 0.25442477876106195,
+          "propose_share": 0.7847222222222222,
+          "refused_share": 0.702433628318584,
+          "responses": 904
+        },
+        "day168": {
+          "events": 10057,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7127996666666667,
+          "transfers": 2,
+          "trust": 0.46752837500000005
+        },
+        "day84": {
+          "events": 5206,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6711541666666667,
+          "transfers": 2,
+          "trust": 0.4714616458333334
+        },
+        "truth": {
+          "mae_belief": 0.046727375,
+          "mae_prior_half": 0.4375,
+          "pairs": 8,
+          "spearman_discipline": 0.14285714285714285,
+          "spearman_s_now": 0.5773502691896257,
+          "spearman_stability": -0.23809523809523808,
+          "within_one_sd": 0.125
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07418397626112759,
+          "followed_share": 0.13798219584569732,
+          "propose_share": 0.5850694444444444,
+          "refused_share": 0.42136498516320475,
+          "responses": 674
+        },
+        "day168": {
+          "events": 9572,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7126637499999999,
+          "transfers": 2,
+          "trust": 0.4413911666666667
+        },
+        "day84": {
+          "events": 4993,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6699119166666666,
+          "transfers": 2,
+          "trust": 0.4682197708333334
+        },
+        "truth": {
+          "mae_belief": 0.10881599999999998,
+          "mae_prior_half": 0.3333333333333333,
+          "pairs": 12,
+          "spearman_discipline": 0.24868689626011292,
+          "spearman_s_now": 0.8207826816681233,
+          "spearman_stability": 0.14711055835105272,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.061068702290076333,
+          "followed_share": 0.18829516539440203,
+          "propose_share": 0.6822916666666666,
+          "refused_share": 0.5407124681933843,
+          "responses": 786
+        },
+        "day168": {
+          "events": 9049,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.70357025,
+          "transfers": 3,
+          "trust": 0.45782729166666675
+        },
+        "day84": {
+          "events": 4723,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6541054166666667,
+          "transfers": 3,
+          "trust": 0.46840568750000006
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.061068702290076333,
+          "followed_share": 0.18829516539440203,
+          "propose_share": 0.6822916666666666,
+          "refused_share": 0.5407124681933843,
+          "responses": 786
+        },
+        "day168": {
+          "events": 9835,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.70357025,
+          "transfers": 3,
+          "trust": 0.45782729166666675
+        },
+        "day84": {
+          "events": 5099,
+          "satisfaction": 0.7200000000000001,
+          "skill": 0.6541054166666667,
+          "transfers": 3,
+          "trust": 0.46840568750000006
+        },
+        "truth": {
+          "mae_belief": 0.0939763,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.696969696969697,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.23636363636363636,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07244318181818182,
+          "followed_share": 0.11079545454545454,
+          "propose_share": 0.6111111111111112,
+          "refused_share": 0.22301136363636365,
+          "responses": 704
+        },
+        "day168": {
+          "events": 9626,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.70338775,
+          "transfers": 2,
+          "trust": 0.4522901458333333
+        },
+        "day84": {
+          "events": 5009,
+          "satisfaction": 0.71,
+          "skill": 0.6533273333333334,
+          "transfers": 2,
+          "trust": 0.46345272916666674
+        },
+        "truth": {
+          "mae_belief": 0.16224691666666666,
+          "mae_prior_half": 0.2916666666666667,
+          "pairs": 12,
+          "spearman_discipline": 0.34965034965034963,
+          "spearman_s_now": 0.8568930704969753,
+          "spearman_stability": 0.1258741258741259,
+          "within_one_sd": 0.4166666666666667
+        }
+      },
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06241872561768531,
+          "followed_share": 0.2223667100130039,
+          "propose_share": 0.6675347222222222,
+          "refused_share": 0.6189856957087126,
+          "responses": 769
+        },
+        "day168": {
+          "events": 9069,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7276676666666666,
+          "transfers": 2,
+          "trust": 0.4632308541666667
+        },
+        "day84": {
+          "events": 4730,
+          "satisfaction": 0.695,
+          "skill": 0.68088925,
+          "transfers": 2,
+          "trust": 0.4739688333333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06241872561768531,
+          "followed_share": 0.2223667100130039,
+          "propose_share": 0.6675347222222222,
+          "refused_share": 0.6189856957087126,
+          "responses": 769
+        },
+        "day168": {
+          "events": 9838,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7276676666666666,
+          "transfers": 2,
+          "trust": 0.4632308541666667
+        },
+        "day84": {
+          "events": 5067,
+          "satisfaction": 0.695,
+          "skill": 0.68088925,
+          "transfers": 2,
+          "trust": 0.4739688333333334
+        },
+        "truth": {
+          "mae_belief": 0.042024125,
+          "mae_prior_half": 0.3125,
+          "pairs": 8,
+          "spearman_discipline": -0.21428571428571427,
+          "spearman_s_now": 0.8451542547285166,
+          "spearman_stability": 0.4523809523809524,
+          "within_one_sd": 0.375
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.08728943338437979,
+          "followed_share": 0.12557427258805512,
+          "propose_share": 0.5668402777777778,
+          "refused_share": 0.16232771822358347,
+          "responses": 653
+        },
+        "day168": {
+          "events": 9569,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7276302499999999,
+          "transfers": 2,
+          "trust": 0.4462825416666667
+        },
+        "day84": {
+          "events": 4954,
+          "satisfaction": 0.695,
+          "skill": 0.6811630833333333,
+          "transfers": 2,
+          "trust": 0.46062197916666675
+        },
+        "truth": {
+          "mae_belief": 0.12338558333333334,
+          "mae_prior_half": 0.20833333333333334,
+          "pairs": 12,
+          "spearman_discipline": 0.013986013986013986,
+          "spearman_s_now": 0.8568930704969753,
+          "spearman_stability": 0.07692307692307693,
+          "within_one_sd": 0.5833333333333334
+        }
+      },
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05674653215636822,
+          "followed_share": 0.37578814627994955,
+          "propose_share": 0.6883680555555556,
+          "refused_share": 0.6960907944514502,
+          "responses": 793
+        },
+        "day168": {
+          "events": 9192,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7170727499999999,
+          "transfers": 2,
+          "trust": 0.46440400000000004
+        },
+        "day84": {
+          "events": 4739,
+          "satisfaction": 0.695,
+          "skill": 0.6637883333333333,
+          "transfers": 2,
+          "trust": 0.46784670833333336
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05674653215636822,
+          "followed_share": 0.37578814627994955,
+          "propose_share": 0.6883680555555556,
+          "refused_share": 0.6960907944514502,
+          "responses": 793
+        },
+        "day168": {
+          "events": 9985,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7170727499999999,
+          "transfers": 2,
+          "trust": 0.46440400000000004
+        },
+        "day84": {
+          "events": 5102,
+          "satisfaction": 0.695,
+          "skill": 0.6637883333333333,
+          "transfers": 2,
+          "trust": 0.46784670833333336
+        },
+        "truth": {
+          "mae_belief": 0.04754966666666667,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.35,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": -0.31666666666666665,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.07882534775888717,
+          "followed_share": 0.125193199381762,
+          "propose_share": 0.5616319444444444,
+          "refused_share": 0.21483771251931993,
+          "responses": 647
+        },
+        "day168": {
+          "events": 9529,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7180708333333333,
+          "transfers": 2,
+          "trust": 0.44332981250000003
+        },
+        "day84": {
+          "events": 4946,
+          "satisfaction": 0.695,
+          "skill": 0.66384025,
+          "transfers": 2,
+          "trust": 0.45815231250000005
+        },
+        "truth": {
+          "mae_belief": 0.11353408333333333,
+          "mae_prior_half": 0.25,
+          "pairs": 12,
+          "spearman_discipline": -0.21678321678321677,
+          "spearman_s_now": 0.8690481892534816,
+          "spearman_stability": 0.02097902097902098,
+          "within_one_sd": 0.5
+        }
+      },
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06554878048780488,
+          "followed_share": 0.2073170731707317,
+          "propose_share": 0.5694444444444444,
+          "refused_share": 0.4923780487804878,
+          "responses": 656
+        },
+        "day168": {
+          "events": 9437,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7256005,
+          "transfers": 4,
+          "trust": 0.4679463541666667
+        },
+        "day84": {
+          "events": 4905,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6747811666666667,
+          "transfers": 4,
+          "trust": 0.47151297916666673
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06554878048780488,
+          "followed_share": 0.2073170731707317,
+          "propose_share": 0.5694444444444444,
+          "refused_share": 0.4923780487804878,
+          "responses": 656
+        },
+        "day168": {
+          "events": 10093,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7256005,
+          "transfers": 4,
+          "trust": 0.4679463541666667
+        },
+        "day84": {
+          "events": 5323,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6747811666666667,
+          "transfers": 4,
+          "trust": 0.47151297916666673
+        },
+        "truth": {
+          "mae_belief": 0.10688137499999999,
+          "mae_prior_half": 0.3125,
+          "pairs": 8,
+          "spearman_discipline": -0.16666666666666666,
+          "spearman_s_now": 0.7324670207647144,
+          "spearman_stability": -0.19047619047619047,
+          "within_one_sd": 0.375
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.09953703703703703,
+          "followed_share": 0.17824074074074073,
+          "propose_share": 0.375,
+          "refused_share": 0.14351851851851852,
+          "responses": 432
+        },
+        "day168": {
+          "events": 9779,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7250808333333333,
+          "transfers": 4,
+          "trust": 0.45957456250000006
+        },
+        "day84": {
+          "events": 5224,
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.6749621666666666,
+          "transfers": 4,
+          "trust": 0.4619212916666667
+        },
+        "truth": {
+          "mae_belief": 0.28434377777777775,
+          "mae_prior_half": 0.3888888888888889,
+          "pairs": 9,
+          "spearman_discipline": -0.08333333333333333,
+          "spearman_s_now": 0.724568837309472,
+          "spearman_stability": 0.48333333333333334,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07173601147776183,
+          "followed_share": 0.2855093256814921,
+          "propose_share": 0.6050347222222222,
+          "refused_share": 0.5437589670014347,
+          "responses": 697
+        },
+        "day168": {
+          "events": 9505,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173949166666667,
+          "transfers": 3,
+          "trust": 0.46937906250000005
+        },
+        "day84": {
+          "events": 4914,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6621528333333333,
+          "transfers": 3,
+          "trust": 0.47175081250000006
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07173601147776183,
+          "followed_share": 0.2855093256814921,
+          "propose_share": 0.6050347222222222,
+          "refused_share": 0.5437589670014347,
+          "responses": 697
+        },
+        "day168": {
+          "events": 10202,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173949166666667,
+          "transfers": 3,
+          "trust": 0.46937906250000005
+        },
+        "day84": {
+          "events": 5328,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6621528333333333,
+          "transfers": 3,
+          "trust": 0.47175081250000006
+        },
+        "truth": {
+          "mae_belief": 0.10720214285714284,
+          "mae_prior_half": 0.35714285714285715,
+          "pairs": 7,
+          "spearman_discipline": 0.39285714285714285,
+          "spearman_s_now": 0.7905694150420949,
+          "spearman_stability": 0.9285714285714286,
+          "within_one_sd": 0.2857142857142857
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1162280701754386,
+          "followed_share": 0.16228070175438597,
+          "propose_share": 0.3958333333333333,
+          "refused_share": 0.12719298245614036,
+          "responses": 456
+        },
+        "day168": {
+          "events": 9792,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7149580000000001,
+          "transfers": 3,
+          "trust": 0.4628041666666667
+        },
+        "day84": {
+          "events": 5180,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6589315833333333,
+          "transfers": 3,
+          "trust": 0.4651759166666667
+        },
+        "truth": {
+          "mae_belief": 0.20626566666666665,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.2,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": -0.05,
+          "within_one_sd": 0.4444444444444444
+        }
+      },
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07096774193548387,
+          "followed_share": 0.21451612903225806,
+          "propose_share": 0.5381944444444444,
+          "refused_share": 0.6709677419354839,
+          "responses": 620
+        },
+        "day168": {
+          "events": 9390,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7206693333333334,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        },
+        "day84": {
+          "events": 4896,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6725774166666666,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07096774193548387,
+          "followed_share": 0.21451612903225806,
+          "propose_share": 0.5381944444444444,
+          "refused_share": 0.6709677419354839,
+          "responses": 620
+        },
+        "day168": {
+          "events": 10010,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7206693333333334,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        },
+        "day84": {
+          "events": 5284,
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.6725774166666666,
+          "transfers": 4,
+          "trust": 0.46550308333333335
+        },
+        "truth": {
+          "mae_belief": 0.085698625,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": 0.21428571428571427,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.5238095238095238,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.12144702842377261,
+          "followed_share": 0.20930232558139536,
+          "propose_share": 0.3359375,
+          "refused_share": 0.18863049095607234,
+          "responses": 387
+        },
+        "day168": {
+          "events": 9707,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7168285,
+          "transfers": 3,
+          "trust": 0.4535930000000001
+        },
+        "day84": {
+          "events": 5173,
+          "satisfaction": 0.7333333333333334,
+          "skill": 0.6679065833333334,
+          "transfers": 3,
+          "trust": 0.4535930000000001
+        },
+        "truth": {
+          "mae_belief": 0.2777084444444444,
+          "mae_prior_half": 0.3888888888888889,
+          "pairs": 9,
+          "spearman_discipline": 0.016666666666666666,
+          "spearman_s_now": 0.724568837309472,
+          "spearman_stability": -0.26666666666666666,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.08629441624365482,
+          "followed_share": 0.25549915397631134,
+          "propose_share": 0.5130208333333334,
+          "refused_share": 0.5465313028764806,
+          "responses": 591
+        },
+        "day168": {
+          "events": 9491,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71549125,
+          "transfers": 5,
+          "trust": 0.44699604166666673
+        },
+        "day84": {
+          "events": 4899,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6664193333333334,
+          "transfers": 5,
+          "trust": 0.4617834166666667
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.08629441624365482,
+          "followed_share": 0.25549915397631134,
+          "propose_share": 0.5130208333333334,
+          "refused_share": 0.5465313028764806,
+          "responses": 591
+        },
+        "day168": {
+          "events": 10082,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.71549125,
+          "transfers": 5,
+          "trust": 0.44699604166666673
+        },
+        "day84": {
+          "events": 5268,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6664193333333334,
+          "transfers": 5,
+          "trust": 0.4617834166666667
+        },
+        "truth": {
+          "mae_belief": 0.16948533333333335,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.45,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": -0.21666666666666667,
+          "within_one_sd": 0.1111111111111111
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.12217194570135746,
+          "followed_share": 0.19004524886877827,
+          "propose_share": 0.3836805555555556,
+          "refused_share": 0.12669683257918551,
+          "responses": 442
+        },
+        "day168": {
+          "events": 9815,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7088490833333334,
+          "transfers": 5,
+          "trust": 0.4384503333333334
+        },
+        "day84": {
+          "events": 5200,
+          "satisfaction": 0.7358333333333333,
+          "skill": 0.66215325,
+          "transfers": 5,
+          "trust": 0.4460742916666667
+        },
+        "truth": {
+          "mae_belief": 0.2632069,
+          "mae_prior_half": 0.3,
+          "pairs": 10,
+          "spearman_discipline": 0.3696969696969697,
+          "spearman_s_now": 0.8528028654224418,
+          "spearman_stability": -0.4909090909090909,
+          "within_one_sd": 0.3
+        }
+      },
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.11176470588235295,
+          "followed_share": 0.3607843137254902,
+          "propose_share": 0.4427083333333333,
+          "refused_share": 0.5686274509803921,
+          "responses": 510
+        },
+        "day168": {
+          "events": 9404,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.74839725,
+          "transfers": 3,
+          "trust": 0.4454824791666667
+        },
+        "day84": {
+          "events": 4913,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.703491,
+          "transfers": 3,
+          "trust": 0.4548208125
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.11176470588235295,
+          "followed_share": 0.3607843137254902,
+          "propose_share": 0.4427083333333333,
+          "refused_share": 0.5686274509803921,
+          "responses": 510
+        },
+        "day168": {
+          "events": 9914,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.74839725,
+          "transfers": 3,
+          "trust": 0.4454824791666667
+        },
+        "day84": {
+          "events": 5238,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.703491,
+          "transfers": 3,
+          "trust": 0.4548208125
+        },
+        "truth": {
+          "mae_belief": 0.11165455555555558,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": -0.11666666666666667,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": 0.21666666666666667,
+          "within_one_sd": 0.3333333333333333
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.15601023017902813,
+          "followed_share": 0.23017902813299232,
+          "propose_share": 0.3394097222222222,
+          "refused_share": 0.13043478260869565,
+          "responses": 391
+        },
+        "day168": {
+          "events": 9707,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7441369999999999,
+          "transfers": 3,
+          "trust": 0.4341924375000001
+        },
+        "day84": {
+          "events": 5159,
+          "satisfaction": 0.6774999999999999,
+          "skill": 0.7027515000000001,
+          "transfers": 3,
+          "trust": 0.44747152083333336
+        },
+        "truth": {
+          "mae_belief": 0.23878325,
+          "mae_prior_half": 0.25,
+          "pairs": 12,
+          "spearman_discipline": 0.4195804195804196,
+          "spearman_s_now": 0.8690481892534816,
+          "spearman_stability": 0.2867132867132867,
+          "within_one_sd": 0.4166666666666667
+        }
+      },
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.09961685823754789,
+          "followed_share": 0.30268199233716475,
+          "propose_share": 0.453125,
+          "refused_share": 0.4559386973180077,
+          "responses": 522
+        },
+        "day168": {
+          "events": 9430,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7369220833333333,
+          "transfers": 4,
+          "trust": 0.43697345833333334
+        },
+        "day84": {
+          "events": 4881,
+          "satisfaction": 0.7083333333333334,
+          "skill": 0.6782511666666666,
+          "transfers": 4,
+          "trust": 0.4472161458333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.09961685823754789,
+          "followed_share": 0.30268199233716475,
+          "propose_share": 0.453125,
+          "refused_share": 0.4559386973180077,
+          "responses": 522
+        },
+        "day168": {
+          "events": 9952,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7369220833333333,
+          "transfers": 4,
+          "trust": 0.43697345833333334
+        },
+        "day84": {
+          "events": 5222,
+          "satisfaction": 0.7083333333333334,
+          "skill": 0.6782511666666666,
+          "transfers": 4,
+          "trust": 0.4472161458333334
+        },
+        "truth": {
+          "mae_belief": 0.15060400000000002,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.23636363636363636,
+          "spearman_s_now": 0.80075721739621,
+          "spearman_stability": -0.05454545454545454,
+          "within_one_sd": 0.3
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.12410501193317422,
+          "followed_share": 0.18854415274463007,
+          "propose_share": 0.3637152777777778,
+          "refused_share": 0.1718377088305489,
+          "responses": 419
+        },
+        "day168": {
+          "events": 9720,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.73432525,
+          "transfers": 3,
+          "trust": 0.4399595416666667
+        },
+        "day84": {
+          "events": 5138,
+          "satisfaction": 0.6733333333333333,
+          "skill": 0.6845733333333333,
+          "transfers": 3,
+          "trust": 0.455798875
+        },
+        "truth": {
+          "mae_belief": 0.21630763636363637,
+          "mae_prior_half": 0.2727272727272727,
+          "pairs": 11,
+          "spearman_discipline": -0.06363636363636363,
+          "spearman_s_now": 0.6928203230275509,
+          "spearman_stability": 0.12727272727272726,
+          "within_one_sd": 0.45454545454545453
+        }
+      },
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.05313351498637602,
+          "followed_share": 0.2779291553133515,
+          "propose_share": 0.6371527777777778,
+          "refused_share": 0.6730245231607629,
+          "responses": 734
+        },
+        "day168": {
+          "events": 9483,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 4932,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.05313351498637602,
+          "followed_share": 0.2779291553133515,
+          "propose_share": 0.6371527777777778,
+          "refused_share": 0.6730245231607629,
+          "responses": 734
+        },
+        "day168": {
+          "events": 10217,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7173457499999999,
+          "transfers": 2,
+          "trust": 0.4791407291666667
+        },
+        "day84": {
+          "events": 5389,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6744363333333333,
+          "transfers": 2,
+          "trust": 0.4817345208333334
+        },
+        "truth": {
+          "mae_belief": 0.11176900000000001,
+          "mae_prior_half": 0.4375,
+          "pairs": 8,
+          "spearman_discipline": -0.5,
+          "spearman_s_now": 0.5773502691896257,
+          "spearman_stability": -0.7142857142857143,
+          "within_one_sd": 0.125
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11976047904191617,
+          "followed_share": 0.23652694610778444,
+          "propose_share": 0.2899305555555556,
+          "refused_share": 0.2634730538922156,
+          "responses": 334
+        },
+        "day168": {
+          "events": 9612,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7158998333333333,
+          "transfers": 2,
+          "trust": 0.4745663541666667
+        },
+        "day84": {
+          "events": 5172,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6742328333333334,
+          "transfers": 2,
+          "trust": 0.4745663541666667
+        },
+        "truth": {
+          "mae_belief": 0.32458775,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": -0.35714285714285715,
+          "spearman_stability": -0.2857142857142857,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "exploit_churn_guard"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06801736613603473,
+          "followed_share": 0.3096960926193922,
+          "propose_share": 0.5998263888888888,
+          "refused_share": 0.5716353111432706,
+          "responses": 691
+        },
+        "day168": {
+          "events": 9477,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 4921,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06801736613603473,
+          "followed_share": 0.3096960926193922,
+          "propose_share": 0.5998263888888888,
+          "refused_share": 0.5716353111432706,
+          "responses": 691
+        },
+        "day168": {
+          "events": 10168,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7165104166666666,
+          "transfers": 2,
+          "trust": 0.476265875
+        },
+        "day84": {
+          "events": 5342,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6742386666666667,
+          "transfers": 2,
+          "trust": 0.4789007708333333
+        },
+        "truth": {
+          "mae_belief": 0.10785325,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": 0.047619047619047616,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": -0.21428571428571427,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11217183770883055,
+          "followed_share": 0.17422434367541767,
+          "propose_share": 0.3637152777777778,
+          "refused_share": 0.14558472553699284,
+          "responses": 419
+        },
+        "day168": {
+          "events": 9705,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7137136666666667,
+          "transfers": 2,
+          "trust": 0.47259089583333336
+        },
+        "day84": {
+          "events": 5169,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.6712871666666667,
+          "transfers": 2,
+          "trust": 0.4788974791666667
+        },
+        "truth": {
+          "mae_belief": 0.264856375,
+          "mae_prior_half": 0.375,
+          "pairs": 8,
+          "spearman_discipline": -0.19047619047619047,
+          "spearman_s_now": 0.7559289460184544,
+          "spearman_stability": 0.0,
+          "within_one_sd": 0.25
+        }
+      },
+      "world": "exploit_churn_guard"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.06222222222222222,
+          "followed_share": 0.3214814814814815,
+          "propose_share": 0.5859375,
+          "refused_share": 0.6666666666666666,
+          "responses": 675
+        },
+        "day168": {
+          "events": 9479,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 4934,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.06222222222222222,
+          "followed_share": 0.3214814814814815,
+          "propose_share": 0.5859375,
+          "refused_share": 0.6666666666666666,
+          "responses": 675
+        },
+        "day168": {
+          "events": 10154,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7225836666666666,
+          "transfers": 2,
+          "trust": 0.46781839583333334
+        },
+        "day84": {
+          "events": 5357,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6825915,
+          "transfers": 2,
+          "trust": 0.47175166666666674
+        },
+        "truth": {
+          "mae_belief": 0.09951928571428571,
+          "mae_prior_half": 0.5,
+          "pairs": 7,
+          "spearman_discipline": 0.4642857142857143,
+          "spearman_stability": -0.5,
+          "within_one_sd": 0.0
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.1308411214953271,
+          "followed_share": 0.2585669781931464,
+          "propose_share": 0.2786458333333333,
+          "refused_share": 0.26479750778816197,
+          "responses": 321
+        },
+        "day168": {
+          "events": 9606,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7222471666666667,
+          "transfers": 2,
+          "trust": 0.4624000000000001
+        },
+        "day84": {
+          "events": 5166,
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.6836910833333333,
+          "transfers": 2,
+          "trust": 0.46633327083333337
+        },
+        "truth": {
+          "mae_belief": 0.33396925,
+          "mae_prior_half": 0.5,
+          "pairs": 8,
+          "spearman_discipline": -0.6190476190476191,
+          "spearman_stability": 0.16666666666666666,
+          "within_one_sd": 0.0
+        }
+      },
+      "world": "exploit_churn_guard"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.08581436077057793,
+          "followed_share": 0.2609457092819615,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.46760070052539404,
+          "responses": 571
+        },
+        "day168": {
+          "events": 9434,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 4887,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.08581436077057793,
+          "followed_share": 0.2609457092819615,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.46760070052539404,
+          "responses": 571
+        },
+        "day168": {
+          "events": 10005,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7182269166666666,
+          "transfers": 3,
+          "trust": 0.46896912500000004
+        },
+        "day84": {
+          "events": 5251,
+          "satisfaction": 0.7108333333333333,
+          "skill": 0.6667709166666667,
+          "transfers": 3,
+          "trust": 0.48053425000000005
+        },
+        "truth": {
+          "mae_belief": 0.14496455555555554,
+          "mae_prior_half": 0.2222222222222222,
+          "pairs": 9,
+          "spearman_discipline": 0.6694619270045784,
+          "spearman_s_now": 0.8696565534786727,
+          "spearman_stability": -0.07531446678801507,
+          "within_one_sd": 0.2222222222222222
+        }
+      },
+      "seed": 100,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.11261261261261261,
+          "followed_share": 0.17567567567567569,
+          "propose_share": 0.3854166666666667,
+          "refused_share": 0.12612612612612611,
+          "responses": 444
+        },
+        "day168": {
+          "events": 9818,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7084467499999999,
+          "transfers": 3,
+          "trust": 0.4496057500000001
+        },
+        "day84": {
+          "events": 5190,
+          "satisfaction": 0.7358333333333333,
+          "skill": 0.6617621666666667,
+          "transfers": 3,
+          "trust": 0.46452270833333337
+        },
+        "truth": {
+          "mae_belief": 0.29051445454545455,
+          "mae_prior_half": 0.3181818181818182,
+          "pairs": 11,
+          "spearman_discipline": 0.4909090909090909,
+          "spearman_s_now": 0.7171371656006362,
+          "spearman_stability": -0.14545454545454545,
+          "within_one_sd": 0.2727272727272727
+        }
+      },
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.09126984126984126,
+          "followed_share": 0.30357142857142855,
+          "propose_share": 0.4375,
+          "refused_share": 0.5813492063492064,
+          "responses": 504
+        },
+        "day168": {
+          "events": 9414,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 4878,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.09126984126984126,
+          "followed_share": 0.30357142857142855,
+          "propose_share": 0.4375,
+          "refused_share": 0.5813492063492064,
+          "responses": 504
+        },
+        "day168": {
+          "events": 9918,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7365555833333333,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "day84": {
+          "events": 5209,
+          "satisfaction": 0.695,
+          "skill": 0.6947182500000001,
+          "transfers": 2,
+          "trust": 0.47425039583333334
+        },
+        "truth": {
+          "mae_belief": 0.10285728571428573,
+          "mae_prior_half": 0.2857142857142857,
+          "pairs": 7,
+          "spearman_discipline": 0.21428571428571427,
+          "spearman_s_now": 0.8660254037844387,
+          "spearman_stability": -0.03571428571428571,
+          "within_one_sd": 0.2857142857142857
+        }
+      },
+      "seed": 101,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.13466334164588528,
+          "followed_share": 0.20199501246882792,
+          "propose_share": 0.3480902777777778,
+          "refused_share": 0.13466334164588528,
+          "responses": 401
+        },
+        "day168": {
+          "events": 9705,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.73692175,
+          "transfers": 2,
+          "trust": 0.45539612500000004
+        },
+        "day84": {
+          "events": 5099,
+          "satisfaction": 0.695,
+          "skill": 0.6951873333333333,
+          "transfers": 2,
+          "trust": 0.46160614583333337
+        },
+        "truth": {
+          "mae_belief": 0.24499900000000002,
+          "mae_prior_half": 0.25,
+          "pairs": 10,
+          "spearman_discipline": 0.28484848484848485,
+          "spearman_s_now": 0.8703882797784891,
+          "spearman_stability": 0.28484848484848485,
+          "within_one_sd": 0.3
+        }
+      },
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "base": {
+        "behaviour": {
+          "complied_share": 0.07880910683012259,
+          "followed_share": 0.4203152364273205,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.6304728546409807,
+          "responses": 571
+        },
+        "day168": {
+          "events": 9510,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 4896,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        },
+        "truth": {
+          "pairs": 0
+        }
+      },
+      "observe": {
+        "behaviour": {
+          "complied_share": 0.07880910683012259,
+          "followed_share": 0.4203152364273205,
+          "propose_share": 0.4956597222222222,
+          "refused_share": 0.6304728546409807,
+          "responses": 571
+        },
+        "day168": {
+          "events": 10081,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7286368333333333,
+          "transfers": 2,
+          "trust": 0.46240762500000004
+        },
+        "day84": {
+          "events": 5257,
+          "satisfaction": 0.695,
+          "skill": 0.6771880833333332,
+          "transfers": 2,
+          "trust": 0.47023793750000004
+        },
+        "truth": {
+          "mae_belief": 0.0749785,
+          "mae_prior_half": 0.25,
+          "pairs": 8,
+          "spearman_discipline": 0.3333333333333333,
+          "spearman_s_now": 0.8728715609439696,
+          "spearman_stability": -0.16666666666666666,
+          "within_one_sd": 0.25
+        }
+      },
+      "seed": 102,
+      "use": {
+        "behaviour": {
+          "complied_share": 0.14714714714714713,
+          "followed_share": 0.23123123123123124,
+          "propose_share": 0.2890625,
+          "refused_share": 0.18018018018018017,
+          "responses": 333
+        },
+        "day168": {
+          "events": 9602,
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.7278043333333333,
+          "transfers": 2,
+          "trust": 0.4532090416666667
+        },
+        "day84": {
+          "events": 5086,
+          "satisfaction": 0.695,
+          "skill": 0.6771509166666667,
+          "transfers": 2,
+          "trust": 0.4573763333333334
+        },
+        "truth": {
+          "mae_belief": 0.20895166666666667,
+          "mae_prior_half": 0.2777777777777778,
+          "pairs": 9,
+          "spearman_discipline": 0.03333333333333333,
+          "spearman_s_now": 0.8660254037844386,
+          "spearman_stability": 0.08333333333333333,
+          "within_one_sd": 0.4444444444444444
+        }
+      },
+      "world": "exploit_churn_guard_sampled_population"
+    }
+  ],
+  "combined_season_aging_worlds": 2,
+  "days": 168,
+  "default_unchanged": {
+    "advice_mode_default_identical": true,
+    "equal_to_pre_implementation_digest": true,
+    "explicit_none_equals_default": 14,
+    "explicit_none_equals_default_advice_on": 14,
+    "receptiveness_default_identical": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 309.6316010840019,
+  "event_checked_cells": 84,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "7f1d545bb3efccac81ebf9265c6f7fc874046540a9d2fc9fbdab079622d9a76a",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "unknown": true,
+    "without_advice_response": true
+  },
+  "leak_dynamic": {
+    "closed_no_solidarity": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 502
+    },
+    "closed_no_solidarity_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 479
+    },
+    "closed_solidarity": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 502
+    },
+    "closed_solidarity_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 479
+    },
+    "exploit_churn_guard": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 334
+    },
+    "exploit_churn_guard_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 444
+    },
+    "fixed_budget_no_inflow": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 757
+    },
+    "fixed_budget_no_inflow_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 704
+    },
+    "hoarder_buyer_policy": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 432
+    },
+    "hoarder_buyer_policy_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 442
+    },
+    "open_no_solidarity": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 330
+    },
+    "open_no_solidarity_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 461
+    },
+    "open_solidarity": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 334
+    },
+    "open_solidarity_sampled_population": {
+      "high_beliefs_differ": true,
+      "low_beliefs_differ": true,
+      "responses": 444
+    }
+  },
+  "leak_dynamic_sensitive_worlds": 14,
+  "observe_cells_equal_base_after_strip": 42,
+  "persistence_belief_updates": {
+    "observe/closed_no_solidarity": 775,
+    "observe/closed_no_solidarity_sampled_population": 675,
+    "observe/closed_solidarity": 775,
+    "observe/closed_solidarity_sampled_population": 675,
+    "observe/exploit_churn_guard": 734,
+    "observe/exploit_churn_guard_sampled_population": 571,
+    "observe/fixed_budget_no_inflow": 938,
+    "observe/fixed_budget_no_inflow_sampled_population": 786,
+    "observe/hoarder_buyer_policy": 656,
+    "observe/hoarder_buyer_policy_sampled_population": 591,
+    "observe/open_no_solidarity": 751,
+    "observe/open_no_solidarity_sampled_population": 584,
+    "observe/open_solidarity": 734,
+    "observe/open_solidarity_sampled_population": 571,
+    "use/closed_no_solidarity": 502,
+    "use/closed_no_solidarity_sampled_population": 479,
+    "use/closed_solidarity": 502,
+    "use/closed_solidarity_sampled_population": 479,
+    "use/exploit_churn_guard": 334,
+    "use/exploit_churn_guard_sampled_population": 444,
+    "use/fixed_budget_no_inflow": 757,
+    "use/fixed_budget_no_inflow_sampled_population": 704,
+    "use/hoarder_buyer_policy": 432,
+    "use/hoarder_buyer_policy_sampled_population": 442,
+    "use/open_no_solidarity": 330,
+    "use/open_no_solidarity_sampled_population": 461,
+    "use/open_solidarity": 334,
+    "use/open_solidarity_sampled_population": 444
+  },
+  "pure_function": {
+    "sequences": 4095,
+    "uptake_points": 101
+  },
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "season_length_days": 84,
+  "seeds": [
+    100,
+    101,
+    102
+  ],
+  "static": {
+    "checked_functions": [
+      "_beliefs_from_events",
+      "_coach_receptiveness",
+      "belief_mean_sd",
+      "decide_coach_training",
+      "new_receptiveness_belief",
+      "receptiveness_uptake",
+      "update_receptiveness_belief"
+    ]
+  },
+  "tamper": {
+    "belief_update_removed/load_league_snapshot": "rejected",
+    "belief_update_removed/load_league_snapshot_trusted": "rejected",
+    "belief_value_changed/load_league_snapshot": "rejected",
+    "belief_value_changed/load_league_snapshot_trusted": "rejected",
+    "outcome_response_changed/load_league_snapshot": "rejected",
+    "outcome_response_changed/load_league_snapshot_trusted": "rejected"
+  },
+  "task": "T029"
+}
