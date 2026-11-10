@@ -4,6 +4,7 @@ from pathlib import Path
 import sys
 import threading
 import unittest
+from http.client import HTTPConnection
 from http.server import ThreadingHTTPServer
 from urllib import request
 from urllib.error import HTTPError
@@ -11,7 +12,7 @@ from urllib.error import HTTPError
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from game.server import Game, make_handler
-from game.session import GameSession, InvalidInput
+from game.session import GameSession, InvalidInput, config_version
 from soccer_sim import league_economy as le
 
 
@@ -57,7 +58,7 @@ class TestHumanInput(unittest.TestCase):
         with self.assertRaises(InvalidInput):
             session.play_match(["p1", "p2"])  # wrong phase
         session.train(None)
-        for bad in (["p1"], ["p1", "p1"], ["p1", "p4"], "p1p2", None):
+        for bad in (["p1"], ["p1", "p1"], ["p1", "p4"], [["p1"], ["p2"]], [{}, {}], "p1p2", None):
             with self.assertRaises(InvalidInput):
                 session.play_match(bad)
         self.assertEqual(session.world.day, 6)
@@ -78,7 +79,7 @@ class TestServerRoundTrip(unittest.TestCase):
 
         def call(path, body=None):
             data = None if body is None else json.dumps(body).encode()
-            with request.urlopen(request.Request(base + path, data=data), timeout=60) as response:
+            with request.urlopen(request.Request(base + path, data=data, headers={"Content-Type": "application/json"}), timeout=60) as response:
                 return json.loads(response.read())
 
         try:
@@ -96,6 +97,29 @@ class TestServerRoundTrip(unittest.TestCase):
             reveal = call("/api/reveal")
             self.assertTrue(reveal["players"])
             self.assertEqual(state["standings"][0]["played"], 6)
+        finally:
+            server.shutdown()
+
+    def test_bad_requests_get_400_not_a_dropped_connection(self):
+        server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(Game(7)))
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        base = f"http://127.0.0.1:{server.server_port}"
+        json_type = {"Content-Type": "application/json"}
+        cases = [("/api/new", b"\xff", json_type), ("/api/new", b"{", json_type), ("/api/new", b"[]", json_type),
+                 ("/api/new", b'{"seed": 3}', {"Content-Type": "text/plain"}),  # cross-site forms can only send this kind
+                 ("/api/new", b'{"seed": 3}', {}),
+                 ("/api/new", b'{"code": "%s-%s"}' % (config_version().encode(), b"9" * 5000), json_type)]
+        try:
+            for length in ("-1", "abc"):
+                connection = HTTPConnection("127.0.0.1", server.server_port, timeout=10)
+                connection.request("POST", "/api/new", body=b"{}", headers={**json_type, "Content-Length": length})
+                self.assertEqual(connection.getresponse().status, 400, length)
+                connection.close()
+            for path, data, headers in cases:
+                with self.subTest(path=path, data=data[:20], headers=headers):
+                    with self.assertRaises(HTTPError) as caught:
+                        request.urlopen(request.Request(base + path, data=data, headers=headers), timeout=10)
+                    self.assertEqual(caught.exception.code, 400)
         finally:
             server.shutdown()
 

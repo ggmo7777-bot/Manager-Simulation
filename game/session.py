@@ -35,6 +35,7 @@ GAME_CONFIG = replace(
 
 SAVE_VERSION = 3
 CONFIG_VERSION_LENGTH = 6
+MAX_SEED_DIGITS = 18  # int() refuses very long digit strings with a ValueError
 
 
 class InvalidInput(ValueError):
@@ -57,7 +58,7 @@ def share_code(seed):
 def seed_from_code(code):
     """Seed of a shared code, or InvalidInput (wrong shape, or made under a different config version)."""
     version, separator, seed = code.partition("-") if type(code) is str else ("", "", "")
-    if not separator or not re.fullmatch(r"-?\d+", seed):
+    if not separator or not re.fullmatch(r"-?\d{1,%d}" % MAX_SEED_DIGITS, seed):
         raise InvalidInput("シードコードの形式が正しくありません (例: abc123-7)")
     if version != config_version():
         raise InvalidInput(f"このコードは別のゲーム設定バージョン({version})のもので、このゲーム({config_version()})では同じ世界になりません")
@@ -151,7 +152,8 @@ class GameSession:
         offers = [] if offers is None else offers
         self._check_offers(offers)
         roster = self.world.club_rosters[obs.OWN_CLUB]
-        if type(starters) is not list or len(starters) != 2 or len(set(starters)) != 2 or not set(starters) <= set(roster):
+        if type(starters) is not list or not all(type(pid) is str for pid in starters) or len(starters) != 2 \
+                or len(set(starters)) != 2 or not set(starters) <= set(roster):
             raise InvalidInput(f"starters must be 2 distinct players of {roster}")
         original = le.decide_club_lineup
 
