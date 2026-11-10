@@ -4,6 +4,8 @@ Every field is picked by name from the coach's own mind, public records, or even
 witnessed. Nothing is copied wholesale from PlayerTruth / PlayerMind / personality.
 Labels follow the charter: 事実 / 観測 / 本人の理由 / 推定.
 """
+import re
+
 from soccer_sim import league_economy as le
 
 OWN_CLUB = "club_a"
@@ -151,3 +153,30 @@ def season_turnover(world, since_index):
     """Own-club retirements and newcomers recorded since an event index (public records, no hidden state)."""
     items = observed_events(world, since_index)
     return ([i for i in items if i["kind"] == "season_retired"], [i for i in items if i["kind"] == "season_youth_joined"])
+
+
+# Structural leak guard: every key a player-visible payload may contain. A new field must be added here on purpose.
+# Dynamic keys (player ids in player_stats, club ids) are matched by _ID_KEY.
+VISIBLE_KEYS = frozenset("""
+action action_followed age appearances away_club away_goals away_shots away_starters bench champion club_id day days_unseen
+draws estimate_changes events fatigue_after fatigue_before fatigue_estimate forecast from_club goals goals_against goals_for
+history home_club home_goals home_shots home_starters joined kind label losses match_id mean measurement_error method methods
+obs_fatigue obs_gain obs_skill observation_count outcomes passes_completed phase played player_id player_stats points rank
+rating_estimate rating_obs receptiveness recommended_starters response retired sd season season_days seed shots skill_after
+reason skill_before skill_estimate skill_mae squad squad_size standings starters state stated_reason tackles_won to_club week wins
+share_code
+""".split())
+_ID_KEY = re.compile(r"(p|c)\d+|club_[a-z]+")
+
+
+def check_visible(node, path="view"):
+    """Raise if a player-visible payload carries a key outside the allowlist (a new or hidden field)."""
+    if isinstance(node, dict):
+        for key, child in node.items():
+            if key not in VISIBLE_KEYS and not _ID_KEY.fullmatch(key):
+                raise ValueError(f"{path}.{key}: field is not on the player-visible allowlist")
+            check_visible(child, f"{path}.{key}")
+    elif isinstance(node, list):
+        for index, child in enumerate(node):
+            check_visible(child, f"{path}[{index}]")
+    return node

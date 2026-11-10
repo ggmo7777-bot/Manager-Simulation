@@ -7,7 +7,7 @@ import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from .session import GameSession, InvalidInput
+from .session import GameSession, InvalidInput, seed_from_code
 
 INDEX = Path(__file__).parent / "static" / "index.html"
 DEFAULT_PORT, DEFAULT_SEED = 8765, 7
@@ -38,7 +38,8 @@ class Game:
             if (method, path) == ("POST", "/api/next_season"):
                 return self.session.next_season()
             if (method, path) == ("POST", "/api/new"):
-                self.session = GameSession(body.get("seed", DEFAULT_SEED))
+                seed = seed_from_code(body["code"]) if "code" in body else body.get("seed", DEFAULT_SEED)
+                self.session = GameSession(seed)
                 return self.session.state()
             if (method, path) == ("POST", "/api/train"):
                 return self.session.train(body.get("advice"))

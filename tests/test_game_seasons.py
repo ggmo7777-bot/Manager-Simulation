@@ -12,7 +12,7 @@ from game.session import GameSession, InvalidInput
 from soccer_sim import league_economy as le
 from test_game_leak import leaks, true_values
 
-SEED = 7  # retirements fall in all four seasons (age_spread staggers them); the numeric leak detector can collide by chance on other seeds
+SEED = 7  # retirements fall in all four seasons (age_spread staggers them)
 SEASONS = 4
 
 
@@ -48,7 +48,7 @@ class TestGenerations(unittest.TestCase):
             cls.leaks.extend(leaks(json.loads(json.dumps(payload)), true_values(cls.session.world)))
         collect(cls.session.state())
         play_seasons(cls.session, SEASONS, collect)
-        collect({"history": cls.session.history, "save": cls.session.save_payload()})
+        collect({"history": cls.session.history, **cls.session.save_payload()})
 
     def test_the_same_world_continues_with_aging_and_turnover(self):
         session = self.session

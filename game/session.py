@@ -7,6 +7,7 @@ Everything else, including the assistant coach's remaining slots, stays with the
 """
 import hashlib
 import json
+import re
 from contextlib import contextmanager
 from dataclasses import replace
 from pathlib import Path
@@ -32,6 +33,7 @@ GAME_CONFIG = replace(
 
 
 SAVE_VERSION = 2
+CONFIG_VERSION_LENGTH = 6
 
 
 class InvalidInput(ValueError):
@@ -40,6 +42,25 @@ class InvalidInput(ValueError):
 
 def _sha256(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+
+
+def config_version():
+    """Short id of the season rules and research features: two players share a world only on the same one."""
+    return _sha256(GAME_CONFIG.to_dict())[:CONFIG_VERSION_LENGTH]
+
+
+def share_code(seed):
+    return f"{config_version()}-{seed}"
+
+
+def seed_from_code(code):
+    """Seed of a shared code, or InvalidInput (wrong shape, or made under a different config version)."""
+    version, separator, seed = code.partition("-") if type(code) is str else ("", "", "")
+    if not separator or not re.fullmatch(r"-?\d+", seed):
+        raise InvalidInput("シードコードの形式が正しくありません (例: abc123-7)")
+    if version != config_version():
+        raise InvalidInput(f"このコードは別のゲーム設定バージョン({version})のもので、このゲーム({config_version()})では同じ世界になりません")
+    return int(seed)
 
 
 def code_fingerprint():
@@ -85,9 +106,12 @@ class GameSession:
         return "lineup" if day % GAME_CONFIG.match_interval_days == TRAINING_DAYS_PER_WEEK else "training"
 
     def state(self):
+        return obs.check_visible(self._state())
+
+    def _state(self):
         world = self.world
         return {
-            "seed": self.seed, "season": self.season, "day": self.day_in_season, "season_days": SEASON_DAYS,
+            "seed": self.seed, "share_code": share_code(self.seed), "season": self.season, "day": self.day_in_season, "season_days": SEASON_DAYS,
             "phase": self.phase, "week": self.day_in_season // GAME_CONFIG.match_interval_days + 1,
             "club_id": obs.OWN_CLUB, "squad": obs.squad_view(world),
             "standings": obs.standings_view(world, self.season_start_totals),
@@ -102,8 +126,8 @@ class GameSession:
             le._validate_league_invariants(self.world)
             self._close_season(before_events)
         after_squad = obs.squad_view(self.world)
-        return {"events": obs.observed_events(self.world, before_events),
-                "estimate_changes": obs.estimate_changes(before_squad, after_squad), "state": self.state()}
+        return obs.check_visible({"events": obs.observed_events(self.world, before_events),
+                                  "estimate_changes": obs.estimate_changes(before_squad, after_squad), "state": self.state()})
 
     def train(self, advice):
         """Run one week of training. advice: None or {"player_id", "method"} given on the week's first day."""

@@ -6,6 +6,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from game import observation as obs
 from game.session import GameSession
 from soccer_sim import league_economy as le
 
@@ -15,11 +16,12 @@ FORBIDDEN_KEYS = {"traits", "cap", "rates", "trust", "trust_by_coach", "autonomy
 CLAMPED_FATIGUE = (0.0, 0.95)
 PUBLIC_START_FATIGUE = le.YOUTH_PRIOR[2]  # the coach's constant first impression equals the common starting fatigue: no individual information
 PRECISION = 6
+SAVE_KEYS = {"version", "code", "seed", "inputs", "view_digest", "kind", "advice", "player_id", "method", "starters"}
 
 
 def true_values(world):
-    """Every hidden number of every player, rounded as the world rounds it."""
-    values = set()
+    """Every hidden number of each player, rounded as the world rounds it: {player_id: set of numbers}."""
+    values = {}
     for pid, truth in world.players.items():
         mind = world.player_minds[pid]
         numbers = [truth.composite_skill(), truth.cap, truth.traits.pace, truth.traits.passing, truth.traits.shooting,
@@ -27,23 +29,28 @@ def true_values(world):
                    *mind.trust_by_coach.values(), *mind.expected_gains.values(), *world.player_personality.get(pid, {}).values()]
         if truth.fatigue not in CLAMPED_FATIGUE and truth.fatigue != PUBLIC_START_FATIGUE:
             numbers.append(truth.fatigue)
-        values.update(round(number, PRECISION) for number in numbers)
+        values[pid] = {round(number, PRECISION) for number in numbers}
     return values
 
 
-def leaks(node, hidden, path="view"):
-    """List every forbidden key and every float equal to a hidden number."""
+def leaks(node, hidden, path="view", player=None):
+    """Structural check first (allowlist + forbidden names); then a float equal to a hidden number of the
+    player the surrounding record is about. Numbers outside any player's record are never compared, so another
+    player's value cannot collide by chance."""
     found = []
     if isinstance(node, dict):
+        player = node["player_id"] if node.get("player_id") in hidden else player
         for key, child in node.items():
             if key in FORBIDDEN_KEYS:
                 found.append(f"{path}.{key}: forbidden key")
-            found += leaks(child, hidden, f"{path}.{key}")
+            elif key not in obs.VISIBLE_KEYS | SAVE_KEYS and not obs._ID_KEY.fullmatch(key):
+                found.append(f"{path}.{key}: not on the allowlist")
+            found += leaks(child, hidden, f"{path}.{key}", key if key in hidden else player)
     elif isinstance(node, list):
         for index, child in enumerate(node):
-            found += leaks(child, hidden, f"{path}[{index}]")
-    elif type(node) is float and round(node, PRECISION) in hidden:
-        found.append(f"{path}: {node} equals a hidden true value")
+            found += leaks(child, hidden, f"{path}[{index}]", player)
+    elif type(node) is float and player is not None and round(node, PRECISION) in hidden[player]:
+        found.append(f"{path}: {node} equals a hidden true value of {player}")
     return found
 
 
@@ -57,26 +64,53 @@ def play_season(session, collect):
         collect(result)
 
 
+SEEDS = range(1, 21)
+SEASONS = 3
+
+
 class TestPlayerViewHasNoTruth(unittest.TestCase):
-    def test_no_true_value_reaches_the_view_in_any_step(self):
-        for seed in (7, 11):
+    def test_no_true_value_reaches_the_view_or_save_in_any_step_of_many_seeds(self):
+        for seed in SEEDS:
             session = GameSession(seed)
             problems = []
-            play_season(session, lambda payload: problems.extend(
-                leaks(json.loads(json.dumps(payload)), true_values(session.world))))
+            for season in range(SEASONS):
+                play_season(session, lambda payload: problems.extend(
+                    leaks(json.loads(json.dumps(payload)), true_values(session.world))))
+                if season < SEASONS - 1:
+                    session.next_season()
+            save = json.loads(json.dumps(session.save_payload()))
+            self.assertLessEqual(set(save) | {k for i in save["inputs"] for k in i}, SAVE_KEYS, f"seed {seed}")
             self.assertEqual(problems, [], f"seed {seed}")
 
-    def test_detector_catches_a_forbidden_key_and_a_renamed_value(self):
+    def test_detector_catches_injected_leaks(self):
+        """Self-test: each kind of deliberate leak must be reported, so a silent detector cannot pass the test above."""
         session = GameSession(7)
         hidden = true_values(session.world)
         view = json.loads(json.dumps(session.state()))
         self.assertEqual(leaks(view, hidden), [])
-        pid = view["squad"][0]["player_id"]
-        view["squad"][0]["skill"] = 0.5
-        self.assertTrue(leaks(view, hidden))
-        del view["squad"][0]["skill"]
-        view["squad"][0]["harmless_name"] = session.world.players[pid].composite_skill()
-        self.assertTrue(leaks(view, hidden))
+        row = view["squad"][0]
+        truth = hidden[row["player_id"]]
+        true_skill = session.world.players[row["player_id"]].composite_skill()
+
+        def caught(mutate):
+            copy = json.loads(json.dumps(view))
+            mutate(copy["squad"][0])
+            return bool(leaks(copy, hidden))
+        self.assertTrue(caught(lambda r: r.update(skill=0.5)), "forbidden key")
+        self.assertTrue(caught(lambda r: r.update(harmless_name=0.5)), "unknown key is outside the allowlist")
+        self.assertTrue(caught(lambda r: r.update(skill_estimate=true_skill)), "true value under an allowed key")
+        self.assertTrue(caught(lambda r: r.update(receptiveness={"mean": max(truth), "sd": 0.1, "outcomes": 1})), "nested true value")
+        with self.assertRaises(ValueError):
+            obs.check_visible({"squad": [{"player_id": "p1", "cap": 0.9}]})
+
+    def test_another_players_value_is_not_a_leak(self):
+        session = GameSession(7)
+        hidden = true_values(session.world)
+        view = json.loads(json.dumps(session.state()))
+        first, second = (r["player_id"] for r in view["squad"][:2])
+        coincidence = next(iter(hidden[second] - hidden[first]))
+        view["squad"][0]["skill_estimate"] = coincidence
+        self.assertEqual(leaks(view, hidden), [])
 
     def test_reveal_is_locked_until_the_season_ends(self):
         session = GameSession(7)

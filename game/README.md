@@ -37,11 +37,12 @@ club_a の監督になる。1シーズンは42日(6週)。1週は「練習6日 �
 | `server.py` | `http.server` の小さなAPIと単一ページUI配信 |
 | `static/index.html` | UI(CDNなし) |
 
-API: `GET /api/state`, `POST /api/new {seed}`, `POST /api/train {advice: null | {player_id, method}}`, `POST /api/lineup {starters: [id, id]}`, `POST /api/next_season`(季節終了後のみ), `GET /api/reveal`(季節終了まで400), `GET /api/reveal/<季>`(終わった季)。保存は `POST /api/save|load {name}`、形式は seed + 入力列(`next_season` が季の区切り)。
+API: `GET /api/state`, `POST /api/new {seed}` または `{code}`, `POST /api/train {advice: null | {player_id, method}}`, `POST /api/lineup {starters: [id, id]}`, `POST /api/next_season`(季節終了後のみ), `GET /api/reveal`(季節終了まで400), `GET /api/reveal/<季>`(終わった季)。保存は `POST /api/save|load {name}`、形式は seed + 入力列(`next_season` が季の区切り)。
 
 ## 守っていること
 
-- 監督に真の技能・信頼・性格を渡さない。`tests/test_game_leak.py` が、全ステップの出力に禁止キーと真の値(数値一致)がないことを確認する。検出器自体の自己検査つき。
+- 監督に真の技能・信頼・性格を渡さない。主検査は構造: `observation.VISIBLE_KEYS`(許可リスト)にないキーは `state()` と各ステップの出力の出口で例外になる。副検査は数値: 選手の記録の中で、その選手自身の真の値と一致する小数だけを漏れとする(他の選手との偶然の一致では誤検出しない)。`tests/test_game_leak.py` は20シード×3季で確認し、わざと漏らした場合に検出する自己検査つき。
+- シード共有: 画面上部の「コード」(`<設定バージョン6桁>-<シード>`)を相手が「シード / コード」欄に入れて「最初から」を押すと同じ世界になる。設定バージョンは `GAME_CONFIG` のハッシュで、違うコードは理由つきで拒否する。
 - 設定は研究の既存機能の組合せ(個性・助言反応・信念記録・中心化雑音・練習日の評価反映・未観察の探索)。研究の既定値は変えていない。
 - 助言しない週の残り枠、他クラブの運営、移籍はすべて研究側の自動判断のまま。
 
@@ -54,4 +55,4 @@ API: `GET /api/state`, `POST /api/new {seed}`, `POST /api/train {advice: null | 
 
 ## 次の段階の候補
 
-シード共有 / 移籍・スカウトの人間操作 / 試合中の指示 / 推定の確率的な不確かさ表示。
+移籍・スカウトの人間操作 / 試合中の指示 / 推定の確率的な不確かさ表示。
