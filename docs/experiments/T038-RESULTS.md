@@ -18,7 +18,7 @@
 | 2 記録は読み取り専用 | legacy群が3設定×84セルで保存済みsummaryの最終値・イベント数と252/252一致。`_validate_league_invariants`が756実行すべてで通る。ラッパーは試合日の`decide_club_lineup`呼び出しだけを読む(移籍判断の呼び出しは除外)。テストで元の関数に戻ることを確認 |
 | 3 T037の再現 | 3群×3設定×(新人以外/新人×技能/試合評価)のn・平均・MAEと先発一致率のn・平均、計45項目がT037保存値と一致(1e-9) |
 | 4 不変条件 | 補正なしの再順位付けが全`lineup_decision`で実際の先発と一致(run_cell内のassert)。全員同じ定数を引いても先発が変わらないことを単体テストで確認 |
-| 5 凍結成果物 | 旧成果物inventory 6,943ファイルのhash不変、source_bundle保存、全unittest合格(`artifacts/t038/tests-all.txt`) |
+| 5 凍結成果物 | 旧成果物inventory 6,943ファイルのhash不変、source_bundle保存、全337テスト合格(`artifacts/t038/tests-all.txt`) |
 
 ## 結果(3設定合計。n=24,192件の`lineup_decision`/群。区間はセルの再標本1000回の95%区間)
 

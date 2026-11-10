@@ -20,7 +20,7 @@
 
 制度比較は初期育成6名を移籍後も追跡する。移籍しなかった選手は対象ID・人数を添えた記述統計に分ける。旧固定4名の集計は`legacy_four_slot_*`へ改名した。初期プロフィールは`fixed`（既定）または`sampled`で、生成範囲は引き続き未校正の仮説。
 
-全329テスト合格（T038時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
+全337テスト合格（T038時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
 
 [現在の状態](docs/STATUS.md) · [T038結果](docs/experiments/T038-RESULTS.md) · [T037結果](docs/experiments/T037-RESULTS.md) · [T036結果](docs/experiments/T036-RESULTS.md) · [T035結果](docs/experiments/T035-RESULTS.md) · [T034結果](docs/experiments/T034-RESULTS.md) · [T033結果](docs/experiments/T033-RESULTS.md) · [T032結果](docs/experiments/T032-RESULTS.md) · [T031結果](docs/experiments/T031-RESULTS.md) · [T030結果](docs/experiments/T030-RESULTS.md) · [T029結果](docs/experiments/T029-RESULTS.md) · [T028結果](docs/experiments/T028-RESULTS.md) · [T027結果](docs/experiments/T027-RESULTS.md) · [T026結果](docs/experiments/T026-RESULTS.md) · [T025結果](docs/experiments/T025-RESULTS.md) · [T024結果](docs/experiments/T024-RESULTS.md) · [T023結果](docs/experiments/T023-RESULTS.md) · [T022結果](docs/experiments/T022-RESULTS.md) · [T021結果](docs/experiments/T021-RESULTS.md) · [T020結果](docs/experiments/T020-RESULTS.md) · [T019結果](docs/experiments/T019-RESULTS.md) · [T018結果](docs/experiments/T018-RESULTS.md) · [T017結果](docs/experiments/T017-RESULTS.md) · [T016結果](docs/experiments/T016-RESULTS.md) · [T015の旧評価問題](docs/reviews/2026-11-08-T015-STATUS-REVIEW.md) · [外部14点の対応](docs/reviews/2026-11-08-EXTERNAL-REVIEW.md)
 

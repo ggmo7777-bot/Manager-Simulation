@@ -12,7 +12,7 @@
 
 ## 最新の結果
 
-- T038: `experiments/t038.py`が、`decide_club_lineup`の呼び出しで`last_seen_day`を読み取り専用で記録し、経過日数別の誤差・対の正答率・先発の取り違え・別設定の補正による反実仮想を測った(756実行、T037の保存値と45項目一致)。[T038結果](experiments/T038-RESULTS.md)。
+- T038: `experiments/t038.py`が、`decide_club_lineup`の呼び出しで`last_seen_day`を読み取り専用で記録し、経過日数別の誤差・対の正答率・先発の取り違え・別設定の補正による反実仮想を測った(756実行、T037の保存値と45項目一致、全337テスト合格)。[T038結果](experiments/T038-RESULTS.md)。
 - T037: `observation_noise_mode`に`"shifted_v1"`(`u×2×幅`)を追加(`observation_noise`と`fatigue_mode`/`observe_fatigue(..., shifted=)`)。`experiments/t037.py`が3群×84セル×3設定を実行し、centered−legacyをB(平均)とV(ばらつき)に分解([T037結果](experiments/T037-RESULTS.md))。
 - T036: `LeagueEconomyConfig.observation_noise_mode`(`"legacy"`既定、`"centered_v1"`)を追加。技能観察4箇所は`observation_noise(u, 幅, mode)`、疲労観察は`observe_fatigue(..., centered=)`を通す(`legacy`は旧式のビット同一、`centered_v1`は`u×幅`)。84セル×3設定×2群で、legacy=凍結252/252、観察誤差の平均が−0.024〜−0.030→約0、新人以外の技能MAE 0.0638→0.0575、先発の的確さ+8.7pt、最終技能+0.0057。詳細は[T036結果](experiments/T036-RESULTS.md)、判断は[D051](DECISIONS.md)。
 - T035: 規則を足さない分析。`experiments/t035.py`が、`uniform_from_key`の全呼び出しをASTで監査し、記録された観察イベント(練習日11,135・偵察117,316・試合96,768)から実現した雑音をsimと同じキーで再計算(練習日・偵察のキー検証128,451件で不一致0)、中心化版(`u×幅`)との差を全選手の推定へ線形伝播して`lineup_decision`時点の誤差の説明量を測った。`soccer_sim/`はT032/T033とバイト一致、3設定×84セルは保存済みと一致、新人行9,070件で再生と伝播が整合(最大差1.6e-6)。雑音/幅の平均は−1.020/−1.005/−1.013で意図でなく不具合(旧モジュールは対称範囲を明示、導入は最初のコミットのみ、設計文書に記述なし)。ずれの説明率は新人7.5%(15〜21日8.0%)、新人−新人以外の差−14%、新人以外の誤差はほぼ0(+0.0002、中心化で過大+0.013)。Top2変更2.06%、新人の先発−1.1pt。P1(T030の練習日のみ外れ)・P2・P3・P6・P7・P9支持、P4・P5反証、P8半分反証。次の候補: T036 観察雑音の中心化の版つき修正、T037 初見の観察。[T035結果](experiments/T035-RESULTS.md)。
