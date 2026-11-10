@@ -1,0 +1,26 @@
+{
+ "runtime": {
+  "python": "3.13.3",
+  "implementation": "cpython",
+  "system": "Darwin",
+  "machine": "arm64"
+ },
+ "seed": 100,
+ "days": 126,
+ "digests_excluding_identity": {
+  "closed_no_solidarity": "31fb96c22c65c5e2215a225b3dfd29b3e4bfee213cfe8b8e8916616028581aff",
+  "closed_no_solidarity_sampled_population": "271e7434aeb15df031e59bd97473895341d37f633be57d678eca3229205fa104",
+  "closed_solidarity": "5f8f14f0ac63e7b9df661033455d0568d3a770fc44be5fd8166c4b823c53439b",
+  "closed_solidarity_sampled_population": "119d4384a0c5c085252925c7560b47985a3588c9b72946951e13812dc756b90b",
+  "open_no_solidarity": "8d18ef31183ddd1d986b2f3080c1319bcadc18d1b2f031f90577a522f166ecae",
+  "open_no_solidarity_sampled_population": "dce239c03fc43b57adceac787fa036661af855a94994a71c6d3657eac1cca173",
+  "open_solidarity": "4bcc59759d5446ef13886a686589cabc20f026a5d63ceb8e7c2dfc40b6616408",
+  "open_solidarity_sampled_population": "6d42b9f24c7c303acb6447abc1aa27abe381cde7c913b85f1d29fce90ae6119b",
+  "fixed_budget_no_inflow": "d2cb809cbb66707542a11ded4e7952f89556504e6635bce5ca174393ebda56fe",
+  "fixed_budget_no_inflow_sampled_population": "36b8d5fad7b1220503e60b29272930e6a8f0c0faa8ca5351d2585bfb063a2c1d",
+  "hoarder_buyer_policy": "0547ab6c62d04a71dc7bec32620b0645b09f19a60cbd25d368d68e35f3b9b0d6",
+  "hoarder_buyer_policy_sampled_population": "4f263421731f63870c5ed85d2b1e524666a62b46be5a449bfe5844a296029128",
+  "exploit_churn_guard": "ff15929e983b281cc18bd7a1ab9cfc5e0e6fbd16a8e84442a00d5ac139f0e116",
+  "exploit_churn_guard_sampled_population": "e65bcbe01f8fa71d3d0d0b1fd54bfa0e71f7f7aad3fc1bde558afe8219bb5122"
+ }
+}
