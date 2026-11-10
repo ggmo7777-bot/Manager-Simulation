@@ -86,4 +86,4 @@ F2の効果は、fixedに入っているp3(c1)・p9(c3)の過小評価の台本�
 - 範囲値は未校正で、現実の選手分布の再現ではない。F1にはクラブ類型(育成/補強)の入力差が含まれる。F2はF1に条件付き。区間は探索的で多重比較を調整せず、確証ではない。確認seedは今回が初使用だが、解析仕様の確定後の追加seedではない。
 - 各セルは世界30が独立単位。部分要因の組合せは主効果の足し算と一致するとは限らず、2^3の対比で単純な加法を仮定していない。
 
-成果物: `artifacts/t019/run/{summary,runs}.json`、`artifacts/t019/review/`、`artifacts/t019/run-log.txt`。実行: `python3 -B experiments/t019.py --out artifacts/t019/run`(新規ディレクトリのみ)。
+成果物: `artifacts/t019/run/{summary,runs}.json`、`artifacts/t019/review/`、`artifacts/t019/run-log.txt`、凍結ソース `artifacts/t019/source_bundle/`(manifestにsave17・runtime hash `e997147f…`・各ファイルのSHA-256)。T018以前のsaveはT018以前の凍結ソースで読む。実行: `python3 -B experiments/t019.py --out artifacts/t019/run`(新規ディレクトリのみ)。

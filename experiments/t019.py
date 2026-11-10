@@ -15,11 +15,12 @@ import statistics
 import subprocess
 import sys
 from time import perf_counter
+from typing import Any
 
 CODE_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(CODE_ROOT))
 from soccer_sim import league_economy as le
-from soccer_sim.storage import canonical, digest, runtime, write_json
+from soccer_sim.storage import canonical, runtime, write_json
 from experiments.audit_t014 import admission_audit, ledger_audit
 from experiments.audit_t016 import cohort_audit
 
@@ -189,11 +190,11 @@ def stats(values):
 
 def analyse(rows, seeds):
     table = {(r['cell'], r['institution'], r['seed']): r for r in rows}
-    out = {}
+    out: dict[str, Any] = {}
     for label, metric, left, right in CONTRASTS:
         # Per-seed paired difference rounded as in T016, then cell effects per seed.
         y = {c: [round(table[c, left, s]['metrics'][metric] - table[c, right, s]['metrics'][metric], 6) for s in seeds] for c in CELLS}
-        part = {'cells': {c: stats(y[c]) for c in CELLS}}
+        part: dict[str, Any] = {'cells': {c: stats(y[c]) for c in CELLS}}
         sign = lambda c, ks: (-1) ** sum(1 - int(c[k]) for k in ks)
         contrasts = {}
         for name, ks in (('F1', (0,)), ('F2', (1,)), ('F3', (2,)), ('F1xF2', (0, 1)), ('F1xF3', (0, 2)),
