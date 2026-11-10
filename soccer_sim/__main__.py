@@ -30,6 +30,12 @@ def main():
             f"{name}{league_economy.FACTORS_SUFFIX}{bits}")
         for name in league_economy.T011_ALL_CONDITIONS
         for bits in ("001", "010", "011", "100", "101", "110")
+    } | {
+        # T020: one named range perturbation of the sampled population.
+        f"league_{name}{league_economy.POPULATION_SUFFIX}{league_economy.RANGE_SUFFIX}{perturbation}":
+            league_economy.config_for_condition(f"{name}{league_economy.POPULATION_SUFFIX}{league_economy.RANGE_SUFFIX}{perturbation}")
+        for name in league_economy.T011_ALL_CONDITIONS
+        for perturbation in league_economy.RANGE_RUNNABLE
     }
     parser = argparse.ArgumentParser(prog="python3 -m soccer_sim")
     commands = parser.add_subparsers(dest="command", required=True)

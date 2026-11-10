@@ -110,6 +110,64 @@ FACTOR_FIELDS = ("profile_mode", "impression_mode", "satisfaction_mode")
 FACTOR_MODES = ("follow", "fixed", "sampled")
 FACTORS_SUFFIX = "_factors_"
 
+# T020: a named single perturbation of the sampled initial ranges (fixed table, no runtime numbers).
+RANGE_SUFFIX = "_range_"
+RANGE_BASE = {
+    ("academy", "trait"): (0.42, 0.52), ("buyer", "trait"): (0.34, 0.64),
+    ("academy", "rate"): (0.104, 0.126), ("buyer", "rate"): (0.020, 0.046),
+    ("academy", "cap"): (0.90, 0.95), ("buyer", "cap"): (0.64, 0.88),
+    ("all", "loyalty"): (0.05, 0.30), ("all", "ambition"): (0.35, 0.75), ("all", "autonomy"): (0.32, 0.38),
+    ("all", "self_bias"): (-0.03, 0.03), ("all", "noise"): (-0.06, 0.06),
+}
+RANGE_GROUPS = {"trait": ("trait",), "rate": ("rate",), "cap": ("cap",), "psych": ("loyalty", "ambition", "autonomy"),
+                "self_bias": ("self_bias",), "noise": ("noise",)}
+# name -> (group, op, amount): width scales the half-width about the centre, add/mul move the whole range.
+RANGE_PERTURBATIONS = {
+    **{f"{g}_w{tag}": (g, "width", k) for g in RANGE_GROUPS for tag, k in (("05", 0.5), ("15", 1.5))},
+    "trait_cm": ("trait", "add", -0.05), "trait_cp": ("trait", "add", 0.05),
+    "rate_cm": ("rate", "mul", 0.8), "rate_cp": ("rate", "mul", 1.2),
+    "cap_cm": ("cap", "add", -0.03), "cap_cp": ("cap", "add", 0.03),
+}
+RANGE_NAMES = ("none", "null") + tuple(RANGE_PERTURBATIONS)
+# Value-type ranges must stay inside [0.05, 0.95]; violations are refused, never clipped.
+RANGE_BOUNDED = ("trait", "cap", "loyalty", "ambition", "autonomy")
+
+
+def sampled_ranges(name: str) -> dict[tuple[str, str], tuple[float, float]]:
+    """Ranges used to draw the sampled population; "none"/"null" return the defaults unchanged."""
+    if name not in RANGE_NAMES:
+        raise ValueError(f"invalid range_perturbation: {name}")
+    ranges = dict(RANGE_BASE)
+    if name in RANGE_PERTURBATIONS:
+        group, op, amount = RANGE_PERTURBATIONS[name]
+        for (kind, param), (low, high) in RANGE_BASE.items():
+            if param not in RANGE_GROUPS[group]:
+                continue
+            centre, half = (low + high) / 2, (high - low) / 2
+            if op == "width":
+                low, high = centre - half * amount, centre + half * amount
+            elif op == "add":
+                low, high = low + amount, high + amount
+            else:
+                low, high = low * amount, high * amount
+            ranges[kind, param] = (round(low, 6), round(high, 6))
+    for (kind, param), (low, high) in ranges.items():
+        if not low < high or (param in RANGE_BOUNDED and not (0.05 <= low and high <= 0.95)) or (param == "rate" and low <= 0):
+            raise ValueError(f"range_perturbation {name} makes {kind} {param} range invalid: ({low}, {high})")
+    return ranges
+
+
+def _range_valid(name: str) -> bool:
+    try:
+        sampled_ranges(name)
+    except ValueError:
+        return False
+    return True
+
+
+# Perturbations whose ranges pass the validity rule; the others are refused (T020 records which).
+RANGE_RUNNABLE = tuple(name for name in RANGE_NAMES[1:] if _range_valid(name))
+
 MIN_CLUB_ROSTER = 2
 MAX_CLUB_ROSTER = 4
 
@@ -182,6 +240,7 @@ class LeagueEconomyConfig:
     profile_mode: str = "follow"
     impression_mode: str = "follow"
     satisfaction_mode: str = "follow"
+    range_perturbation: str = "none"
     match_interval_days: int = 7
     match_ticks: int = 40
     coach_daily_slots: int = 2
@@ -271,6 +330,7 @@ class LeagueEconomyConfig:
         for name in FACTOR_FIELDS:
             if getattr(self, name) not in FACTOR_MODES:
                 raise ValueError(f"invalid {name}: {getattr(self, name)}")
+        sampled_ranges(self.range_perturbation)
         if self.match_interval_days <= 0 or self.match_ticks <= 0 or self.coach_daily_slots <= 0:
             raise ValueError("intervals, ticks, and slots must be positive")
 
@@ -279,6 +339,8 @@ class LeagueEconomyConfig:
         data = self._base_dict()
         # Factor keys appear only when set, so default saves stay byte-identical to save17 before T019.
         data.update({name: getattr(self, name) for name in FACTOR_FIELDS if getattr(self, name) != "follow"})
+        if self.range_perturbation != "none":
+            data["range_perturbation"] = self.range_perturbation
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -351,12 +413,19 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        base = {spec.name for spec in fields(cls)} - set(FACTOR_FIELDS)
-        return type(data) is dict and base <= set(data) <= base | set(FACTOR_FIELDS)
+        optional = set(FACTOR_FIELDS) | {"range_perturbation"}
+        base = {spec.name for spec in fields(cls)} - optional
+        return type(data) is dict and base <= set(data) <= base | optional
 
 
 def config_for_condition(condition: str) -> LeagueEconomyConfig:
     c = condition.removeprefix("league_")
+    if RANGE_SUFFIX in c:
+        # T020: a perturbation applies to a sampled population only.
+        stem, _, name = c.rpartition(RANGE_SUFFIX)
+        if name not in RANGE_NAMES[1:] or not stem.endswith(POPULATION_SUFFIX):
+            raise ValueError(f"Unknown T011 condition: {condition}")
+        return replace(config_for_condition(stem), condition=c, range_perturbation=name)
     if FACTORS_SUFFIX in c:
         # Same institution as the base condition; each factor of the initial population is set explicitly.
         stem, _, bits = c.rpartition(FACTORS_SUFFIX)
@@ -811,7 +880,7 @@ def _population_draw(seed: int, channel: str, token: str, low: float, high: floa
     return uniform_from_key(seed, 0, f"population:{channel}", token, low=low, high=high)
 
 
-def _sample_population(seed: int) -> tuple[dict[str, dict[str, Any]], dict[tuple[str, str], tuple[float, float]]]:
+def _sample_population(seed: int, perturbation: str = "none") -> tuple[dict[str, dict[str, Any]], dict[tuple[str, str], tuple[float, float]]]:
     """Draw player profiles and each coach's first impression from archetype ranges.
 
     Academy clubs receive young, fast-growing, similar prospects. Buyer clubs receive a
@@ -820,19 +889,16 @@ def _sample_population(seed: int) -> tuple[dict[str, dict[str, Any]], dict[tuple
     player's visible level; they are not copied from truth and not scripted by player id.
     These ranges are hypotheses, not calibrated to real football.
     """
-    specs = _sample_profiles(seed)
-    return specs, _sample_impressions(seed, specs)
+    specs = _sample_profiles(seed, perturbation)
+    return specs, _sample_impressions(seed, specs, perturbation)
 
 
-def _sample_profiles(seed: int) -> dict[str, dict[str, Any]]:
-    ranges = {
-        "academy": {"trait": (0.42, 0.52), "rate": (0.104, 0.126), "cap": (0.90, 0.95)},
-        "buyer": {"trait": (0.34, 0.64), "rate": (0.020, 0.046), "cap": (0.64, 0.88)},
-    }
+def _sample_profiles(seed: int, perturbation: str = "none") -> dict[str, dict[str, Any]]:
+    ranges = sampled_ranges(perturbation)
     specs: dict[str, dict[str, Any]] = {}
     for cid, pids in INITIAL_CLUB_ROSTERS.items():
         kind = "academy" if cid in ACADEMY_CLUB_IDS else "buyer"
-        r = ranges[kind]
+        r = {p: ranges[kind, p] for p in ("trait", "rate", "cap")}
         for pid in pids:
             def draw(name: str, low: float, high: float) -> float:
                 return round6(_population_draw(seed, name, pid, low, high))
@@ -845,23 +911,24 @@ def _sample_profiles(seed: int) -> dict[str, dict[str, Any]]:
                 "rates": {"A": draw("rateA", *r["rate"]), "B": draw("rateB", *r["rate"])},
                 "cap": round6(cap),
                 "pref": "A" if draw("pref", 0.0, 1.0) < 0.5 else "B",
-                "loyalty": draw("loyalty", 0.05, 0.30),
-                "ambition": draw("ambition", 0.35, 0.75),
-                "autonomy": draw("autonomy", 0.32, 0.38),
-                "self_est": round6(min(0.95, max(0.05, level + draw("self_bias", -0.03, 0.03)))),
+                "loyalty": draw("loyalty", *ranges["all", "loyalty"]),
+                "ambition": draw("ambition", *ranges["all", "ambition"]),
+                "autonomy": draw("autonomy", *ranges["all", "autonomy"]),
+                "self_est": round6(min(0.95, max(0.05, level + draw("self_bias", *ranges["all", "self_bias"])))),
             }
     return specs
 
 
-def _sample_impressions(seed: int, specs: dict[str, dict[str, Any]]) -> dict[tuple[str, str], tuple[float, float]]:
+def _sample_impressions(seed: int, specs: dict[str, dict[str, Any]], perturbation: str = "none") -> dict[tuple[str, str], tuple[float, float]]:
     """Each coach's noisy first reading of the level of the given profiles (T019: any profile set)."""
     impressions: dict[tuple[str, str], tuple[float, float]] = {}
+    low, high = sampled_ranges(perturbation)["all", "noise"]
     for coach_id in COACH_IDS:
         for pid, spec in specs.items():
             level = sum(spec["traits"]) / 3.0
             token = f"{coach_id}:{pid}"
-            skill = level + _population_draw(seed, "coach_skill", token, -0.06, 0.06)
-            match = level + _population_draw(seed, "coach_match", token, -0.06, 0.06)
+            skill = level + _population_draw(seed, "coach_skill", token, low, high)
+            match = level + _population_draw(seed, "coach_match", token, low, high)
             impressions[coach_id, pid] = (round6(min(0.95, max(0.05, skill))),
                                           round6(min(0.95, max(0.05, match))))
     return impressions
@@ -1025,8 +1092,8 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
     # T019: each factor follows population_mode unless its own field says otherwise.
     f1, f2, f3 = (config.population_mode if getattr(config, name) == "follow" else getattr(config, name) for name in FACTOR_FIELDS)
     if f1 == "sampled":
-        player_specs = _sample_profiles(seed)
-    sampled_impressions = _sample_impressions(seed, player_specs) if f2 == "sampled" else None
+        player_specs = _sample_profiles(seed, config.range_perturbation)
+    sampled_impressions = _sample_impressions(seed, player_specs, config.range_perturbation) if f2 == "sampled" else None
 
     players: dict[str, PlayerTruth] = {}
     initial_players: dict[str, PlayerTruth] = {}

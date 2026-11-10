@@ -1,0 +1,1909 @@
+{
+  "analysis": {
+    "baseline_detectable_difference_halfwidth": 0.002308,
+    "cells": {
+      "baseline": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011695,
+            0.016114
+          ],
+          "mean": 0.013904,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.005918,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004421,
+            0.009036
+          ],
+          "mean": 0.006729,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 24,
+          "sd": 0.006181,
+          "zero": 5
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002177,
+            0.004384
+          ],
+          "mean": 0.003281,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 25,
+          "sd": 0.002956,
+          "zero": 5
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.933333,
+        "transfers_minus_baseline": -0.0
+      },
+      "cap_cm": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.009737,
+            0.014137
+          ],
+          "mean": 0.011937,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.005891,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003944,
+            9e-06
+          ],
+          "mean": -0.001967,
+          "n_worlds": 30,
+          "negative": 22,
+          "positive": 8,
+          "sd": 0.005293,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.002909,
+            0.006883
+          ],
+          "mean": 0.004896,
+          "n_worlds": 30,
+          "negative": 2,
+          "positive": 25,
+          "sd": 0.005321,
+          "zero": 3
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.00133,
+            0.003297
+          ],
+          "mean": 0.002313,
+          "n_worlds": 30,
+          "negative": 2,
+          "positive": 25,
+          "sd": 0.002635,
+          "zero": 3
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001833,
+            -0.000102
+          ],
+          "mean": -0.000967,
+          "n_worlds": 30,
+          "negative": 20,
+          "positive": 7,
+          "sd": 0.002318,
+          "zero": 3
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003616,
+            -4.9e-05
+          ],
+          "mean": -0.001832,
+          "n_worlds": 30,
+          "negative": 19,
+          "positive": 8,
+          "sd": 0.004777,
+          "zero": 3
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.966667,
+        "transfers_minus_baseline": 0.033334
+      },
+      "cap_w05": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.01057,
+            0.016203
+          ],
+          "mean": 0.013386,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 29,
+          "sd": 0.007543,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.002415,
+            0.001379
+          ],
+          "mean": -0.000518,
+          "n_worlds": 30,
+          "negative": 17,
+          "positive": 13,
+          "sd": 0.005081,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004722,
+            0.00923
+          ],
+          "mean": 0.006976,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 28,
+          "sd": 0.006036,
+          "zero": 2
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002247,
+            0.004462
+          ],
+          "mean": 0.003354,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 28,
+          "sd": 0.002966,
+          "zero": 2
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000332,
+            0.000479
+          ],
+          "mean": 7.3e-05,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 14,
+          "sd": 0.001086,
+          "zero": 2
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000588,
+            0.001083
+          ],
+          "mean": 0.000247,
+          "n_worlds": 30,
+          "negative": 13,
+          "positive": 15,
+          "sd": 0.002238,
+          "zero": 2
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.933333,
+        "transfers_minus_baseline": -0.0
+      },
+      "noise_w05": {
+        "impression_mae_initial": 0.014756,
+        "impression_mae_initial_minus_baseline": -0.014757,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011108,
+            0.016944
+          ],
+          "mean": 0.014026,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.007815,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.002528,
+            0.002771
+          ],
+          "mean": 0.000121,
+          "n_worlds": 30,
+          "negative": 16,
+          "positive": 14,
+          "sd": 0.007096,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.003412,
+            0.006482
+          ],
+          "mean": 0.004947,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 23,
+          "sd": 0.004111,
+          "zero": 7
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.0016,
+            0.003151
+          ],
+          "mean": 0.002376,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 23,
+          "sd": 0.002077,
+          "zero": 6
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001754,
+            -5.7e-05
+          ],
+          "mean": -0.000905,
+          "n_worlds": 30,
+          "negative": 19,
+          "positive": 7,
+          "sd": 0.002273,
+          "zero": 4
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003571,
+            7e-06
+          ],
+          "mean": -0.001782,
+          "n_worlds": 30,
+          "negative": 18,
+          "positive": 8,
+          "sd": 0.004791,
+          "zero": 4
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.966667,
+        "transfers_minus_baseline": 0.033334
+      },
+      "noise_w15": {
+        "impression_mae_initial": 0.044269,
+        "impression_mae_initial_minus_baseline": 0.014756,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.01297,
+            0.018298
+          ],
+          "mean": 0.015634,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.007134,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001197,
+            0.004657
+          ],
+          "mean": 0.00173,
+          "n_worlds": 30,
+          "negative": 13,
+          "positive": 17,
+          "sd": 0.007839,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.00582,
+            0.009764
+          ],
+          "mean": 0.007792,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 27,
+          "sd": 0.005281,
+          "zero": 3
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002775,
+            0.004731
+          ],
+          "mean": 0.003753,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 27,
+          "sd": 0.002619,
+          "zero": 3
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.00036,
+            0.001303
+          ],
+          "mean": 0.000472,
+          "n_worlds": 30,
+          "negative": 10,
+          "positive": 17,
+          "sd": 0.002226,
+          "zero": 3
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000723,
+            0.00285
+          ],
+          "mean": 0.001064,
+          "n_worlds": 30,
+          "negative": 9,
+          "positive": 18,
+          "sd": 0.004785,
+          "zero": 3
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 2.033333,
+        "transfers_minus_baseline": 0.1
+      },
+      "psych_w05": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011144,
+            0.016207
+          ],
+          "mean": 0.013676,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.006781,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001682,
+            0.001224
+          ],
+          "mean": -0.000229,
+          "n_worlds": 30,
+          "negative": 13,
+          "positive": 14,
+          "sd": 0.003891,
+          "zero": 3
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004797,
+            0.00927
+          ],
+          "mean": 0.007033,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 26,
+          "sd": 0.00599,
+          "zero": 4
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002278,
+            0.004462
+          ],
+          "mean": 0.00337,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 26,
+          "sd": 0.002924,
+          "zero": 4
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000281,
+            0.000458
+          ],
+          "mean": 8.9e-05,
+          "n_worlds": 30,
+          "negative": 10,
+          "positive": 11,
+          "sd": 0.000989,
+          "zero": 9
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000486,
+            0.001095
+          ],
+          "mean": 0.000305,
+          "n_worlds": 30,
+          "negative": 10,
+          "positive": 10,
+          "sd": 0.002116,
+          "zero": 10
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.933333,
+        "transfers_minus_baseline": -0.0
+      },
+      "rate_cm": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.010309,
+            0.01549
+          ],
+          "mean": 0.0129,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.006938,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003742,
+            0.001733
+          ],
+          "mean": -0.001005,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 16,
+          "sd": 0.007333,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.001857,
+            0.005977
+          ],
+          "mean": 0.003917,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 20,
+          "sd": 0.005518,
+          "zero": 10
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.000872,
+            0.002917
+          ],
+          "mean": 0.001895,
+          "n_worlds": 30,
+          "negative": 2,
+          "positive": 18,
+          "sd": 0.002738,
+          "zero": 10
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.002469,
+            -0.000304
+          ],
+          "mean": -0.001386,
+          "n_worlds": 30,
+          "negative": 22,
+          "positive": 4,
+          "sd": 0.002899,
+          "zero": 4
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.005015,
+            -0.000607
+          ],
+          "mean": -0.002811,
+          "n_worlds": 30,
+          "negative": 21,
+          "positive": 5,
+          "sd": 0.005903,
+          "zero": 4
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.733333,
+        "transfers_minus_baseline": -0.2
+      },
+      "rate_cp": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.01108,
+            0.015904
+          ],
+          "mean": 0.013492,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.00646,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.00281,
+            0.001986
+          ],
+          "mean": -0.000412,
+          "n_worlds": 30,
+          "negative": 18,
+          "positive": 12,
+          "sd": 0.006423,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.007693,
+            0.014217
+          ],
+          "mean": 0.010955,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 27,
+          "sd": 0.008736,
+          "zero": 3
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.003558,
+            0.006748
+          ],
+          "mean": 0.005153,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 27,
+          "sd": 0.004272,
+          "zero": 3
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            0.000277,
+            0.003467
+          ],
+          "mean": 0.001872,
+          "n_worlds": 30,
+          "negative": 9,
+          "positive": 18,
+          "sd": 0.004272,
+          "zero": 3
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            0.000941,
+            0.007512
+          ],
+          "mean": 0.004226,
+          "n_worlds": 30,
+          "negative": 9,
+          "positive": 18,
+          "sd": 0.008799,
+          "zero": 3
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 2.066667,
+        "transfers_minus_baseline": 0.133334
+      },
+      "rate_w05": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.012399,
+            0.018462
+          ],
+          "mean": 0.015431,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.00812,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000834,
+            0.003887
+          ],
+          "mean": 0.001526,
+          "n_worlds": 30,
+          "negative": 13,
+          "positive": 17,
+          "sd": 0.006323,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.005157,
+            0.009979
+          ],
+          "mean": 0.007568,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 26,
+          "sd": 0.006458,
+          "zero": 4
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.00245,
+            0.004786
+          ],
+          "mean": 0.003618,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 26,
+          "sd": 0.003128,
+          "zero": 3
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000383,
+            0.001057
+          ],
+          "mean": 0.000337,
+          "n_worlds": 30,
+          "negative": 10,
+          "positive": 17,
+          "sd": 0.001929,
+          "zero": 3
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000588,
+            0.002267
+          ],
+          "mean": 0.00084,
+          "n_worlds": 30,
+          "negative": 8,
+          "positive": 19,
+          "sd": 0.003824,
+          "zero": 3
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 2.033333,
+        "transfers_minus_baseline": 0.1
+      },
+      "rate_w15": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011358,
+            0.016496
+          ],
+          "mean": 0.013927,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.006881,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001396,
+            0.001441
+          ],
+          "mean": 2.2e-05,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 16,
+          "sd": 0.003799,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004253,
+            0.008459
+          ],
+          "mean": 0.006356,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 25,
+          "sd": 0.005634,
+          "zero": 4
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.00198,
+            0.004038
+          ],
+          "mean": 0.003009,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 25,
+          "sd": 0.002757,
+          "zero": 4
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000795,
+            0.000252
+          ],
+          "mean": -0.000272,
+          "n_worlds": 30,
+          "negative": 16,
+          "positive": 9,
+          "sd": 0.001402,
+          "zero": 5
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001494,
+            0.000748
+          ],
+          "mean": -0.000373,
+          "n_worlds": 30,
+          "negative": 16,
+          "positive": 10,
+          "sd": 0.003003,
+          "zero": 4
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.966667,
+        "transfers_minus_baseline": 0.033334
+      },
+      "self_bias_w05": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011695,
+            0.016114
+          ],
+          "mean": 0.013904,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.005918,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004421,
+            0.009036
+          ],
+          "mean": 0.006729,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 24,
+          "sd": 0.006181,
+          "zero": 5
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002177,
+            0.004384
+          ],
+          "mean": 0.003281,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 25,
+          "sd": 0.002956,
+          "zero": 5
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.007332,
+        "self_mae_initial_minus_baseline": -0.007332,
+        "transfers": 1.933333,
+        "transfers_minus_baseline": -0.0
+      },
+      "self_bias_w15": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.011695,
+            0.016114
+          ],
+          "mean": 0.013904,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.005918,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.004421,
+            0.009036
+          ],
+          "mean": 0.006729,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 24,
+          "sd": 0.006181,
+          "zero": 5
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002177,
+            0.004384
+          ],
+          "mean": 0.003281,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 25,
+          "sd": 0.002956,
+          "zero": 5
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 0,
+          "sd": 0.0,
+          "zero": 30
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.021996,
+        "self_mae_initial_minus_baseline": 0.007332,
+        "transfers": 1.933333,
+        "transfers_minus_baseline": -0.0
+      },
+      "trait_cm": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.010777,
+            0.015247
+          ],
+          "mean": 0.013012,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.005986,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.00333,
+            0.001545
+          ],
+          "mean": -0.000892,
+          "n_worlds": 30,
+          "negative": 15,
+          "positive": 15,
+          "sd": 0.006529,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.003872,
+            0.009252
+          ],
+          "mean": 0.006562,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 21,
+          "sd": 0.007205,
+          "zero": 9
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.001883,
+            0.00444
+          ],
+          "mean": 0.003161,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 21,
+          "sd": 0.003424,
+          "zero": 9
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.00164,
+            0.001401
+          ],
+          "mean": -0.00012,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 14,
+          "sd": 0.004072,
+          "zero": 2
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003297,
+            0.002963
+          ],
+          "mean": -0.000167,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 14,
+          "sd": 0.008383,
+          "zero": 2
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.766667,
+        "transfers_minus_baseline": -0.166666
+      },
+      "trait_cp": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.038514,
+        "level_sd_academy": 0.014976,
+        "level_sd_academy_minus_baseline": -0.0,
+        "level_sd_buyer": 0.049979,
+        "level_sd_buyer_minus_baseline": -0.0,
+        "level_sd_minus_baseline": -0.0,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.010064,
+            0.014668
+          ],
+          "mean": 0.012366,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.006165,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003413,
+            0.000336
+          ],
+          "mean": -0.001538,
+          "n_worlds": 30,
+          "negative": 20,
+          "positive": 10,
+          "sd": 0.00502,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.003215,
+            0.007184
+          ],
+          "mean": 0.005199,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 25,
+          "sd": 0.005314,
+          "zero": 4
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.001418,
+            0.003462
+          ],
+          "mean": 0.00244,
+          "n_worlds": 30,
+          "negative": 3,
+          "positive": 24,
+          "sd": 0.002738,
+          "zero": 3
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001984,
+            0.000302
+          ],
+          "mean": -0.000841,
+          "n_worlds": 30,
+          "negative": 18,
+          "positive": 10,
+          "sd": 0.003061,
+          "zero": 2
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003904,
+            0.000846
+          ],
+          "mean": -0.001529,
+          "n_worlds": 30,
+          "negative": 15,
+          "positive": 12,
+          "sd": 0.006361,
+          "zero": 3
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.866667,
+        "transfers_minus_baseline": -0.066666
+      },
+      "trait_w05": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.021334,
+        "level_sd_academy": 0.007488,
+        "level_sd_academy_minus_baseline": -0.007488,
+        "level_sd_buyer": 0.02499,
+        "level_sd_buyer_minus_baseline": -0.024989,
+        "level_sd_minus_baseline": -0.01718,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.013404,
+            0.018742
+          ],
+          "mean": 0.016073,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 30,
+          "sd": 0.007148,
+          "zero": 0
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000991,
+            0.005328
+          ],
+          "mean": 0.002169,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 16,
+          "sd": 0.008463,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.005785,
+            0.010877
+          ],
+          "mean": 0.008331,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 28,
+          "sd": 0.006819,
+          "zero": 2
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.002625,
+            0.005374
+          ],
+          "mean": 0.004,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 28,
+          "sd": 0.003682,
+          "zero": 2
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000472,
+            0.001909
+          ],
+          "mean": 0.000719,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 15,
+          "sd": 0.003188,
+          "zero": 1
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.000561,
+            0.003766
+          ],
+          "mean": 0.001602,
+          "n_worlds": 30,
+          "negative": 13,
+          "positive": 16,
+          "sd": 0.005795,
+          "zero": 1
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 2.133333,
+        "transfers_minus_baseline": 0.2
+      },
+      "trait_w15": {
+        "impression_mae_initial": 0.029513,
+        "impression_mae_initial_minus_baseline": 0.0,
+        "level_sd": 0.056497,
+        "level_sd_academy": 0.022465,
+        "level_sd_academy_minus_baseline": 0.007489,
+        "level_sd_buyer": 0.074969,
+        "level_sd_buyer_minus_baseline": 0.02499,
+        "level_sd_minus_baseline": 0.017983,
+        "non_empty_worlds": {
+          "closed_no_solidarity": 30,
+          "open_no_solidarity": 30,
+          "open_solidarity": 30
+        },
+        "open_vs_closed": {
+          "ci95_exploratory": [
+            0.010224,
+            0.01556
+          ],
+          "mean": 0.012892,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 29,
+          "sd": 0.007146,
+          "zero": 1
+        },
+        "open_vs_closed_minus_baseline": {
+          "ci95_exploratory": [
+            -0.004095,
+            0.00207
+          ],
+          "mean": -0.001012,
+          "n_worlds": 30,
+          "negative": 15,
+          "positive": 15,
+          "sd": 0.008256,
+          "zero": 0
+        },
+        "reinvest": {
+          "ci95_exploratory": [
+            0.003629,
+            0.007541
+          ],
+          "mean": 0.005585,
+          "n_worlds": 30,
+          "negative": 0,
+          "positive": 21,
+          "sd": 0.005239,
+          "zero": 9
+        },
+        "reinvest_all12": {
+          "ci95_exploratory": [
+            0.001712,
+            0.003672
+          ],
+          "mean": 0.002692,
+          "n_worlds": 30,
+          "negative": 1,
+          "positive": 21,
+          "sd": 0.002625,
+          "zero": 8
+        },
+        "reinvest_all12_minus_baseline": {
+          "ci95_exploratory": [
+            -0.001915,
+            0.000736
+          ],
+          "mean": -0.000589,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 12,
+          "sd": 0.00355,
+          "zero": 4
+        },
+        "reinvest_minus_baseline": {
+          "ci95_exploratory": [
+            -0.003767,
+            0.00148
+          ],
+          "mean": -0.001144,
+          "n_worlds": 30,
+          "negative": 14,
+          "positive": 12,
+          "sd": 0.007026,
+          "zero": 4
+        },
+        "saturated": 0.0,
+        "saturated_academy": 0.0,
+        "saturated_academy_minus_baseline": 0.0,
+        "saturated_buyer": 0.0,
+        "saturated_buyer_minus_baseline": 0.0,
+        "saturated_minus_baseline": 0.0,
+        "self_mae_initial": 0.014664,
+        "self_mae_initial_minus_baseline": 0.0,
+        "transfers": 1.733333,
+        "transfers_minus_baseline": -0.2
+      }
+    },
+    "hypotheses": {
+      "H1": {
+        "mean_positive_interval_includes_zero": [],
+        "not_positive": [],
+        "result": "supported",
+        "scope": "15 executed perturbations + baseline; refused ones are not judged: ['cap_w15', 'psych_w15', 'cap_cp']"
+      },
+      "H2": {
+        "beyond_baseline_detectable_difference": true,
+        "group_max_abs_delta": {
+          "cap": {
+            "delta": -0.001832,
+            "paired_halfwidth": 0.001783,
+            "perturbation": "cap_cm"
+          },
+          "noise": {
+            "delta": -0.001782,
+            "paired_halfwidth": 0.001789,
+            "perturbation": "noise_w05"
+          },
+          "psych": {
+            "delta": 0.000305,
+            "paired_halfwidth": 0.00079,
+            "perturbation": "psych_w05"
+          },
+          "rate": {
+            "delta": 0.004226,
+            "paired_halfwidth": 0.003285,
+            "perturbation": "rate_cp"
+          },
+          "trait": {
+            "delta": 0.001602,
+            "paired_halfwidth": 0.002164,
+            "perturbation": "trait_w05"
+          }
+        },
+        "largest_group": "rate",
+        "result": "supported"
+      },
+      "H3": {
+        "abs_delta": 0.001782,
+        "paired_halfwidth": 0.001789,
+        "perturbation": "noise_w05",
+        "result": "indeterminate",
+        "threshold": 0.003551
+      }
+    }
+  },
+  "analysis_sha256": {
+    "experiments/audit_t014.py": "760c249ae6491fc264a93ef55336989623b8ea44eb3e5d154cd9a99223cd461b",
+    "experiments/audit_t016.py": "2f3a57374e5458281efaf8d36928f31042fba188c0bee0b1e4544c8284ae4cbf",
+    "experiments/t019.py": "1319a442449e10eda4174f7ff709a968767d6e365a0e71a09ac985f968df5bea",
+    "experiments/t020.py": "b6cc97c32ee40fd575f9d7c48298d7ebd09509a05494a06e177155f1f1c4f1ed"
+  },
+  "cells": [
+    "baseline",
+    "trait_w05",
+    "trait_w15",
+    "rate_w05",
+    "rate_w15",
+    "cap_w05",
+    "psych_w05",
+    "self_bias_w05",
+    "self_bias_w15",
+    "noise_w05",
+    "noise_w15",
+    "trait_cm",
+    "trait_cp",
+    "rate_cm",
+    "rate_cp",
+    "cap_cm"
+  ],
+  "cli": {
+    "cli_equals_api": true,
+    "condition": "league_open_solidarity_sampled_population_range_rate_w15",
+    "save_day14_resume_to35_equals_direct": true
+  },
+  "days": 84,
+  "default_and_null": {
+    "default_regression": {
+      "conditions_equal": 14,
+      "excluded": [
+        "identity",
+        "snapshot_sha256"
+      ],
+      "reference": "artifacts/t018/rerun-py313"
+    },
+    "null_equals_baseline_pairs": 6
+  },
+  "elapsed_seconds": 192.41677404099937,
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "cfa421f9c623868e0bac84b0e6fa6b49cf16f41816b6fa93f247b9d9723d1fbf",
+    "world_kind": "league_economy_loop"
+  },
+  "independently_audited_transactions": 905800,
+  "initial_recomputation": {
+    "cells_checked": 34,
+    "seeds": 2
+  },
+  "limitations": [
+    "ranges are uncalibrated hypotheses",
+    "perturbation sizes are arbitrary",
+    "one-at-a-time, no interactions",
+    "intervals are exploratory, no multiplicity adjustment",
+    "refused by the validity rule, not run: ['cap_w15', 'psych_w15', 'cap_cp']"
+  ],
+  "max_rss_raw": 78020608,
+  "refusals": {
+    "accepted": [
+      "trait_w05",
+      "trait_w15",
+      "rate_w05",
+      "rate_w15",
+      "cap_w05",
+      "psych_w05",
+      "self_bias_w05",
+      "self_bias_w15",
+      "noise_w05",
+      "noise_w15",
+      "trait_cm",
+      "trait_cp",
+      "rate_cm",
+      "rate_cp",
+      "cap_cm"
+    ],
+    "perturbations": {
+      "cap_cm": {
+        "changed": {
+          "academy:cap": [
+            0.87,
+            0.92
+          ],
+          "buyer:cap": [
+            0.61,
+            0.85
+          ]
+        },
+        "status": "accepted"
+      },
+      "cap_cp": {
+        "reason": "range_perturbation cap_cp makes academy cap range invalid: (0.93, 0.98)",
+        "status": "refused"
+      },
+      "cap_w05": {
+        "changed": {
+          "academy:cap": [
+            0.9125,
+            0.9375
+          ],
+          "buyer:cap": [
+            0.7,
+            0.82
+          ]
+        },
+        "status": "accepted"
+      },
+      "cap_w15": {
+        "reason": "range_perturbation cap_w15 makes academy cap range invalid: (0.8875, 0.9625)",
+        "status": "refused"
+      },
+      "noise_w05": {
+        "changed": {
+          "all:noise": [
+            -0.03,
+            0.03
+          ]
+        },
+        "status": "accepted"
+      },
+      "noise_w15": {
+        "changed": {
+          "all:noise": [
+            -0.09,
+            0.09
+          ]
+        },
+        "status": "accepted"
+      },
+      "psych_w05": {
+        "changed": {
+          "all:ambition": [
+            0.45,
+            0.65
+          ],
+          "all:autonomy": [
+            0.335,
+            0.365
+          ],
+          "all:loyalty": [
+            0.1125,
+            0.2375
+          ]
+        },
+        "status": "accepted"
+      },
+      "psych_w15": {
+        "reason": "range_perturbation psych_w15 makes all loyalty range invalid: (-0.0125, 0.3625)",
+        "status": "refused"
+      },
+      "rate_cm": {
+        "changed": {
+          "academy:rate": [
+            0.0832,
+            0.1008
+          ],
+          "buyer:rate": [
+            0.016,
+            0.0368
+          ]
+        },
+        "status": "accepted"
+      },
+      "rate_cp": {
+        "changed": {
+          "academy:rate": [
+            0.1248,
+            0.1512
+          ],
+          "buyer:rate": [
+            0.024,
+            0.0552
+          ]
+        },
+        "status": "accepted"
+      },
+      "rate_w05": {
+        "changed": {
+          "academy:rate": [
+            0.1095,
+            0.1205
+          ],
+          "buyer:rate": [
+            0.0265,
+            0.0395
+          ]
+        },
+        "status": "accepted"
+      },
+      "rate_w15": {
+        "changed": {
+          "academy:rate": [
+            0.0985,
+            0.1315
+          ],
+          "buyer:rate": [
+            0.0135,
+            0.0525
+          ]
+        },
+        "status": "accepted"
+      },
+      "self_bias_w05": {
+        "changed": {
+          "all:self_bias": [
+            -0.015,
+            0.015
+          ]
+        },
+        "status": "accepted"
+      },
+      "self_bias_w15": {
+        "changed": {
+          "all:self_bias": [
+            -0.045,
+            0.045
+          ]
+        },
+        "status": "accepted"
+      },
+      "trait_cm": {
+        "changed": {
+          "academy:trait": [
+            0.37,
+            0.47
+          ],
+          "buyer:trait": [
+            0.29,
+            0.59
+          ]
+        },
+        "status": "accepted"
+      },
+      "trait_cp": {
+        "changed": {
+          "academy:trait": [
+            0.47,
+            0.57
+          ],
+          "buyer:trait": [
+            0.39,
+            0.69
+          ]
+        },
+        "status": "accepted"
+      },
+      "trait_w05": {
+        "changed": {
+          "academy:trait": [
+            0.445,
+            0.495
+          ],
+          "buyer:trait": [
+            0.415,
+            0.565
+          ]
+        },
+        "status": "accepted"
+      },
+      "trait_w15": {
+        "changed": {
+          "academy:trait": [
+            0.395,
+            0.545
+          ],
+          "buyer:trait": [
+            0.265,
+            0.715
+          ]
+        },
+        "status": "accepted"
+      }
+    },
+    "refused": [
+      "cap_w15",
+      "psych_w15",
+      "cap_cp"
+    ]
+  },
+  "runs": 1440,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "seeds": [
+    300,
+    329
+  ],
+  "task": "T020"
+}
