@@ -248,6 +248,7 @@ def freq(newcomers):
     f = {'newcomers': len(newcomers), 'mean_n': {k: mean(n['n'][k] for n in newcomers) for k in KINDS}, 'mean_total': mean(n['n_total'] for n in newcomers),
          'newcomers_with_incumbents': len(withinc), 'paired_mean_n': {k: mean(n['n'][k] for n in withinc) for k in KINDS}, 'paired_mean_total': mean(n['n_total'] for n in withinc), 'incumbent_mean_n': {k: mean(n['inc_n'][k] for n in withinc) for k in KINDS}, 'incumbent_mean_total': mean(n['inc_n_total'] for n in withinc),
          'by_third': [{k: mean(n['n_by_third'][i][k] for n in newcomers) for k in ('total', 'session', 'match')} for i in range(3)],
+         'share_zero_obs': mean(1.0 if n['n_total'] == 0 else 0.0 for n in newcomers), 'share_3plus_obs': mean(1.0 if n['n_total'] >= 3 else 0.0 for n in newcomers),  # post-hoc description, added after the first full run
          'mean_added_F+': mean(n['n_added_F+'] for n in newcomers), 'mean_added_Fmax': mean(n['n_added_Fmax'] for n in newcomers), 'mean_scale_U+': mean(n['scale_U+'] for n in newcomers)}
     for label, grp in (('started', [n for n in newcomers if n['started_in_window']]), ('never_started', [n for n in newcomers if not n['started_in_window']])):
         f[label] = {'newcomers': len(grp), 'mean_total': mean(n['n_total'] for n in grp), 'mean_n': {k: mean(n['n'][k] for n in grp) for k in KINDS}} if grp else None
@@ -282,6 +283,7 @@ def run(out, root):
     print('sim', sim, flush=True)
     refs = {t: {(c['world'], c['seed'], c['start_age']): c for c in json.loads((root / f'artifacts/{t}/run/summary.json').read_text())['cells']} for t in SETTINGS}
     t33 = json.loads((root / 'artifacts/t033/run/summary.json').read_text())
+    all_newcomers = []
     per_setting, all_rows, equal, checks = {}, [], {t: 0 for t in SETTINGS}, {'lineup_estimates': 0, 'recorded_session_scout_estimates': 0}
     for t, make in SETTINGS.items():
         rows, newcomers = [], []
@@ -302,6 +304,7 @@ def run(out, root):
                     rows.extend(cell['rows'])
                     newcomers.extend(cell['newcomers'])
             print(t, name, flush=True)
+        all_newcomers.extend(newcomers)
         per_setting[t] = {'all': summarise(rows, newcomers), **{f'start_age_{st}': summarise([r for r in rows if r['start_age'] == st], [n for n in newcomers if n['start_age'] == st]) for st in STARTS}}
         per_setting[t]['predictions'] = predictions(per_setting[t]['all'])
         ref33 = t33['settings'][t]['all']  # gate 2: the same rows and the same start share as T033
@@ -313,6 +316,7 @@ def run(out, root):
               'control_cells_equal': equal, 'replay_checks': checks, 'rows_total': len(all_rows), 'settings': per_setting, 'elapsed_seconds': perf_counter() - start}
     write_json(out / 'summary.json', result)
     write_json(out / 'rows.json', all_rows)
+    write_json(out / 'newcomers.json', all_newcomers)
     print(json.dumps({'rows': len(all_rows), 'checks': checks, 'elapsed_seconds': result['elapsed_seconds']}), flush=True)
 
 

@@ -2,6 +2,8 @@
 
 独立した選手・監督の経験と選択から、再現可能で理由を追跡できる世界の歴史を生むプロジェクト。最強の競技AIを主目的にしない。
 
+**T034で、新人の推定の遅れが観察の頻度か更新量かを規則を足さずに切り分けた(分析のみ、`soccer_sim/`はT032/T033とバイト一致)。新人の監督の観察イベントを数え、観察値から推定を再生して`lineup_decision`と9,070件完全一致を確認し、誤差を3項に分け、同じ名目の追加量で「観察を足す」と「更新量を上げる」をオフラインで比べた。15〜21日の技能推定の遅れ(約−0.10)の66〜87%は事前値0.5の残り(推定が動いていない)で、更新量でなく観察の頻度の問題。新人は3週間に1.3〜2.0回しか見られず(新人以外は2.9〜3.2回)、窓内に一度も先発しない新人はT030で観察ゼロ(先発しない→見られない→上がらない、の輪)。ただし少数の追加は効かない(毎週1回追加は遅れの5%、更新量3倍は19〜20%、毎日観察でも54〜56%)。見つかった事実: simの観察雑音は平均が−noiseにずれている(効果は未測定)。次の候補(分析のみ後に規則): 「初見の観察」規則。**
+
 **T033で、新人が先発しない理由を規則を足さずに分解した(分析のみ、`soccer_sim/`はT032とバイト一致)。記録済みの`lineup_decision`の順位表(技能項・試合評価項・疲労項)を、T030/T031/T032の3設定×84セル・9,070行で項と真の技能に分解し、反実仮想の再順位付けをオフラインで行った。先発しなかった新人の順位差(−0.080)の約6割は真の技能差。真に上位2人の見逃しは、技能推定と試合評価推定がともに同程度に遅れ(各−0.035)、疲労項(−0.018)も加わる。推定の遅れは入団後の日数で広がる(−0.023→−0.100)のに先発率は0.39前後のまま。選考に継続(居座り)の項は無い。次の候補(分析のみ): 新人の推定が成長に追いつかない原因(観察の頻度か1回あたりの更新量か)の切り分け。**
 
 **T032で、T031が残した「観察100%でも先発しない」仮説(練習日の観察が試合評価推定を更新しないため)を検証し、仮説は反証された。`coach_practice_rating`(既定"none"、"blend_v1"。有効時は練習日の観察が監督の試合評価推定を偵察と同じ0.70/0.30で更新。B層のみ、真値・乱数なし、既定は不変)を追加。新人の試合評価推定誤差は減る(0.0894→0.0858、P1支持)が、先発した新人の割合は64.0%→61.9%に減り(P2反証、+3pt以上の予測)、真に上位2人の新人の先発も74.0%→70.7%(P3反証)、見逃しは143→163人に増えた。費用は事前登録の線を超えず(技能+0.0003、信頼−0.0007、先発の真の技能+0.0020)、満足度+0.031・先発の入れ替わり0.219→0.285が有意に増加(原因未分解)。** 
@@ -12,9 +14,9 @@
 
 制度比較は初期育成6名を移籍後も追跡する。移籍しなかった選手は対象ID・人数を添えた記述統計に分ける。旧固定4名の集計は`legacy_four_slot_*`へ改名した。初期プロフィールは`fixed`（既定）または`sampled`で、生成範囲は引き続き未校正の仮説。
 
-全291テスト合格（T033時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
+全299テスト合格（T034時点）。リーグのsource hashは12実行ファイルに限定し、CLI・分析の変更では保存の再開・分岐が拒否されない。14世界の35日実行は凍結T017と一致。cache後の再実行はPython 3.14.0で行った（基準3.13.3からの逸脱）。T017のsampled CLI接続（fixed/sampled各7条件）も維持。T016で検証した初期育成集団の制度比較と、未校正の生成範囲の制約は維持する。
 
-[現在の状態](docs/STATUS.md) · [T033結果](docs/experiments/T033-RESULTS.md) · [T032結果](docs/experiments/T032-RESULTS.md) · [T031結果](docs/experiments/T031-RESULTS.md) · [T030結果](docs/experiments/T030-RESULTS.md) · [T029結果](docs/experiments/T029-RESULTS.md) · [T028結果](docs/experiments/T028-RESULTS.md) · [T027結果](docs/experiments/T027-RESULTS.md) · [T026結果](docs/experiments/T026-RESULTS.md) · [T025結果](docs/experiments/T025-RESULTS.md) · [T024結果](docs/experiments/T024-RESULTS.md) · [T023結果](docs/experiments/T023-RESULTS.md) · [T022結果](docs/experiments/T022-RESULTS.md) · [T021結果](docs/experiments/T021-RESULTS.md) · [T020結果](docs/experiments/T020-RESULTS.md) · [T019結果](docs/experiments/T019-RESULTS.md) · [T018結果](docs/experiments/T018-RESULTS.md) · [T017結果](docs/experiments/T017-RESULTS.md) · [T016結果](docs/experiments/T016-RESULTS.md) · [T015の旧評価問題](docs/reviews/2026-11-08-T015-STATUS-REVIEW.md) · [外部14点の対応](docs/reviews/2026-11-08-EXTERNAL-REVIEW.md)
+[現在の状態](docs/STATUS.md) · [T034結果](docs/experiments/T034-RESULTS.md) · [T033結果](docs/experiments/T033-RESULTS.md) · [T032結果](docs/experiments/T032-RESULTS.md) · [T031結果](docs/experiments/T031-RESULTS.md) · [T030結果](docs/experiments/T030-RESULTS.md) · [T029結果](docs/experiments/T029-RESULTS.md) · [T028結果](docs/experiments/T028-RESULTS.md) · [T027結果](docs/experiments/T027-RESULTS.md) · [T026結果](docs/experiments/T026-RESULTS.md) · [T025結果](docs/experiments/T025-RESULTS.md) · [T024結果](docs/experiments/T024-RESULTS.md) · [T023結果](docs/experiments/T023-RESULTS.md) · [T022結果](docs/experiments/T022-RESULTS.md) · [T021結果](docs/experiments/T021-RESULTS.md) · [T020結果](docs/experiments/T020-RESULTS.md) · [T019結果](docs/experiments/T019-RESULTS.md) · [T018結果](docs/experiments/T018-RESULTS.md) · [T017結果](docs/experiments/T017-RESULTS.md) · [T016結果](docs/experiments/T016-RESULTS.md) · [T015の旧評価問題](docs/reviews/2026-11-08-T015-STATUS-REVIEW.md) · [外部14点の対応](docs/reviews/2026-11-08-EXTERNAL-REVIEW.md)
 
 ## 依頼された10項目
 
