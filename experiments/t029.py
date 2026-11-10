@@ -356,7 +356,7 @@ def cell_truth(rows):
                 'spearman_discipline': t028.spearman(means, [r['discipline'] for r in use]),
                 'spearman_stability': t028.spearman(means, [r['stability'] for r in use]),
                 'within_one_sd': statistics.fmean(abs(r['mean'] - r['s_now']) <= r['sd'] for r in use)}
-    return out
+    return {k: v for k, v in out.items() if v is not None}  # a constant series has no rank correlation
 
 
 def stagnation(world, rows):

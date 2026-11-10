@@ -1,0 +1,20 @@
+default {'worlds': 14, 'equal_to_pre_implementation_digest': True, 'explicit_none_equals_default': 14, 'advice_mode_default_identical': True, 'explicit_none_equals_default_advice_on': 14, 'receptiveness_default_identical': True} {'conditions_equal': 14, 'excluded': ['identity', 'snapshot_sha256'], 'reference': 'artifacts/t018/rerun-py313'}
+invalid {'unknown': True, 'int': True, 'empty': True, 'without_advice_response': True} pure {'sequences': 4095, 'uptake_points': 101} static {'checked_functions': ['_beliefs_from_events', '_coach_receptiveness', 'belief_mean_sd', 'decide_coach_training', 'new_receptiveness_belief', 'receptiveness_uptake', 'update_receptiveness_belief']}
+cells closed_no_solidarity
+cells closed_no_solidarity_sampled_population
+cells closed_solidarity
+cells closed_solidarity_sampled_population
+cells open_no_solidarity
+cells open_no_solidarity_sampled_population
+cells open_solidarity
+cells open_solidarity_sampled_population
+cells fixed_budget_no_inflow
+cells fixed_budget_no_inflow_sampled_population
+cells hoarder_buyer_policy
+cells hoarder_buyer_policy_sampled_population
+cells exploit_churn_guard
+cells exploit_churn_guard_sampled_population
+analysis {"P1_belief_tracks_current_receptiveness": {"median_spearman": 0.8333690454931328, "positive_cells": 40, "cells_with_estimate": 40, "supported": true}, "P2_belief_beats_constant_prior": {"cells_belief_closer_than_prior": 42, "mean_mae_belief": 0.10301396116780046, "mean_mae_prior_half": 0.32598261526832956, "supported": true}, "P3_traits_only_via_outcomes": {"median_spearman_discipline": 0.17857142857142855, "median_spearman_stability": -0.16666666666666666, "supported": true, "median_within_one_sd": 0.25}}
+dynamic leak ok 14
+persistence {'interventions': 1, 'beliefs': 10, 'stepped_equals_oneshot': True} {'belief_value_changed/load_league_snapshot': 'rejected', 'belief_value_changed/load_league_snapshot_trusted': 'rejected', 'belief_update_removed/load_league_snapshot': 'rejected', 'belief_update_removed/load_league_snapshot_trusted': 'rejected', 'outcome_response_changed/load_league_snapshot': 'rejected', 'outcome_response_changed/load_league_snapshot_trusted': 'rejected'} 2
+{"cells": 42, "elapsed_seconds": 309.6316010840019}
