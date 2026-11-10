@@ -231,6 +231,8 @@ def _coach_receptiveness(world: "LeagueWorldState", coach_id: str) -> dict[str, 
 
 
 GENERATION_MODES = ("none", "retire_replace_v1")
+COACH_EXPLORATION_MODES = ("none", "unseen_bonus_v1")
+EXPLORE_STALENESS_CAP = 40  # T031: days unseen after which a player stops getting more observation value (the default cap is 10)
 # T030 (pre-registered, uncalibrated): retirement thresholds, the club size intake restores, the newcomer age, and the coach's constant first impression (skill, match rating, fatigue).
 RETIRE_SOFT_AGE, RETIRE_HARD_AGE, RETIRE_SATISFACTION_BELOW = 33, 36, 0.5
 CLUB_TARGET_ROSTER, YOUTH_INTAKE_AGE, YOUTH_PRIOR = 3, 18, (0.5, 0.5, 0.10)
@@ -386,6 +388,7 @@ class LeagueEconomyConfig:
     season_length_days: int = 0  # T023: 0 = no season boundary; a time unit only, it changes no rule or history
     aging_start_age: int = 0  # T025: 0 = no ages; >0 = every player starts at this age and ages +1 at each season end (counter only)
     aging_curve: str = "none"  # T026: "none" or "hypothesis_v1" (uncalibrated); non-"none" needs aging_start_age>0
+    coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
     advice_response: str = "none"  # T028: "none" or "personality_v1" (comply/partial/refuse from own state + traits); needs personality
@@ -498,6 +501,8 @@ class LeagueEconomyConfig:
             raise ValueError(f"invalid coach_belief: {self.coach_belief}")
         if self.coach_belief != "none" and self.advice_response == "none":
             raise ValueError("coach_belief requires advice_response")
+        if self.coach_exploration not in COACH_EXPLORATION_MODES:
+            raise ValueError(f"invalid coach_exploration: {self.coach_exploration}")
         if self.generations not in GENERATION_MODES:
             raise ValueError(f"invalid generations: {self.generations}")
         if self.generations != "none" and not self.aging_start_age:
@@ -524,6 +529,8 @@ class LeagueEconomyConfig:
             data["coach_belief"] = self.coach_belief
         if self.generations != "none":
             data["generations"] = self.generations
+        if self.coach_exploration != "none":
+            data["coach_exploration"] = self.coach_exploration
         return data
 
     def _base_dict(self) -> dict[str, Any]:
@@ -596,7 +603,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "coach_exploration"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -1621,6 +1628,7 @@ def decide_coach_training(
     slot: int,
     already_targeted: set[str],
     config: LeagueEconomyConfig,
+    staleness_cap: int = 10,  # T031: days unseen counted in the observe value (10 = unchanged behaviour)
     receptiveness: dict[str, float] | None = None,  # T029 use_v1: believed receptiveness per player (None = unchanged behaviour)
 ) -> dict[str, Any]:
     validate_money_units(club_cash_units, "club_cash_units")
@@ -1637,7 +1645,7 @@ def decide_coach_training(
         # Observe candidate
         obs_score = round6(
             0.12
-            + config.coach_staleness_weight * min(10, staleness)
+            + config.coach_staleness_weight * min(staleness_cap, staleness)
             + 0.22 * need
             - repeat_pen
         )
@@ -1648,7 +1656,7 @@ def decide_coach_training(
                 "method": None,
                 "score": obs_score,
                 "components": {
-                    "staleness": round6(config.coach_staleness_weight * min(10, staleness)),
+                    "staleness": round6(config.coach_staleness_weight * min(staleness_cap, staleness)),
                     "need": round6(0.22 * need),
                     "repeat_penalty": round6(-repeat_pen),
                 },
@@ -2148,6 +2156,7 @@ def _step_training_day(world: LeagueWorldState, day: int) -> None:
                 slot=slot,
                 already_targeted=already_targeted,
                 config=cfg,
+                **({"staleness_cap": EXPLORE_STALENESS_CAP} if cfg.coach_exploration != "none" else {}),
                 **({"receptiveness": _coach_receptiveness(world, coach_id)} if cfg.coach_belief == "use_v1" else {}),
             )
             ev_id = _append_event(
