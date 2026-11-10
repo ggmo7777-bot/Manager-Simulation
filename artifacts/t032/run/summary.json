@@ -1,0 +1,4705 @@
+{
+  "analysis": {
+    "P1_match_error": {
+      "cells_on_lower": 75,
+      "cells_with_newcomers": 84,
+      "off": 0.0894494384920635,
+      "on": 0.08580937996031747,
+      "supported": true
+    },
+    "P2_started": {
+      "diff": -0.02083333333333326,
+      "off": 0.6398809523809523,
+      "on": 0.6190476190476191,
+      "supported": false
+    },
+    "P3_top2_started": {
+      "diff": -0.033165467625899225,
+      "missed_talent_off": 143,
+      "missed_talent_on": 163,
+      "off": 0.74,
+      "on": 0.7068345323741008,
+      "supported": false
+    },
+    "P4_costs": {
+      "events_on_minus_off": -11.095238095238095,
+      "lineup_swap_rate": {
+        "mean_on_minus_off": 0.06560559006211181,
+        "off": 0.21933229813664598,
+        "on": 0.28493788819875776,
+        "sign_test": {
+          "negative": 10,
+          "p_two_sided": 9.70811491825464e-12,
+          "positive": 68,
+          "ties": 6
+        }
+      },
+      "satisfaction": {
+        "mean_on_minus_off": 0.031021825396825436,
+        "sign_test": {
+          "negative": 3,
+          "p_two_sided": 5.238237034277805e-19,
+          "positive": 75,
+          "ties": 6
+        }
+      },
+      "skill": {
+        "mean_on_minus_off": 0.00026683829365079355,
+        "sign_test": {
+          "negative": 59,
+          "p_two_sided": 0.00026645108697203517,
+          "positive": 25,
+          "ties": 0
+        }
+      },
+      "slot_share_observe": {
+        "off": 0.05386078042328042,
+        "on": 0.055266203703703706
+      },
+      "slot_share_propose": {
+        "off": 0.5238301917989419,
+        "on": 0.5232618220899471
+      },
+      "slot_share_rest": {
+        "off": 0.0,
+        "on": 0.0
+      },
+      "slot_share_scout": {
+        "off": 0.4223090277777778,
+        "on": 0.42147197420634924
+      },
+      "starter_skill": {
+        "mean_on_minus_off": 0.0019838229786706524,
+        "off": 0.6720669989459326,
+        "on": 0.6740508219246032,
+        "sign_test": {
+          "negative": 17,
+          "p_two_sided": 3.495893514797303e-08,
+          "positive": 67,
+          "ties": 0
+        }
+      },
+      "transfers": {
+        "mean_on_minus_off": -0.11904761904761904,
+        "sign_test": {
+          "negative": 11,
+          "p_two_sided": 0.00634765625,
+          "positive": 1,
+          "ties": 72
+        }
+      },
+      "trust": {
+        "mean_on_minus_off": -0.0007316631944444376,
+        "sign_test": {
+          "negative": 48,
+          "p_two_sided": 0.2298644069691204,
+          "positive": 36,
+          "ties": 0
+        }
+      }
+    },
+    "P4_material": {
+      "satisfaction_below_-0.010": false,
+      "skill_below_-0.005": false,
+      "skill_not_negative": true,
+      "starter_skill_positive": true,
+      "trust_below_-0.010": false
+    },
+    "by_start": {
+      "29": {
+        "off": {
+          "match_error": 0.08678839484126985,
+          "newcomers": 504,
+          "started_share": 0.6111111111111112
+        },
+        "on": {
+          "match_error": 0.08351447222222222,
+          "newcomers": 504,
+          "started_share": 0.5674603174603174
+        }
+      },
+      "33": {
+        "off": {
+          "match_error": 0.09211048214285715,
+          "newcomers": 504,
+          "started_share": 0.6686507936507936
+        },
+        "on": {
+          "match_error": 0.0881042876984127,
+          "newcomers": 504,
+          "started_share": 0.6706349206349206
+        }
+      }
+    },
+    "newcomers": {
+      "off": {
+        "match_error": 0.0894494384920635,
+        "missed_talent": 143,
+        "newcomers_with_a_full_season": 1008,
+        "observed_share": 1.0,
+        "skill_error": 0.09346610615079365,
+        "start_rate_per_matchday": 0.39087301587301587,
+        "started_share": 0.6398809523809523,
+        "top2_true_newcomers": 550,
+        "top2_true_started_share": 0.74
+      },
+      "on": {
+        "match_error": 0.08580937996031747,
+        "missed_talent": 163,
+        "newcomers_with_a_full_season": 1008,
+        "observed_share": 1.0,
+        "skill_error": 0.0942302628968254,
+        "start_rate_per_matchday": 0.38260582010582006,
+        "started_share": 0.6190476190476191,
+        "top2_true_newcomers": 556,
+        "top2_true_started_share": 0.7068345323741008
+      }
+    }
+  },
+  "branch": {
+    "interventions": 1,
+    "stepped_equals_oneshot": true
+  },
+  "cells": [
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9169,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6807075833333333,
+          "transfers": 0,
+          "trust": 0.4850918333333334
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.6328125,
+          "rest": 0.0,
+          "scout": 0.3168402777777778
+        },
+        "starter_skill": 0.618116015625
+      },
+      "on": {
+        "events": 9177,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6902162500000001,
+          "transfers": 0,
+          "trust": 0.47605775000000006
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 57,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.6293402777777778,
+          "rest": 0.0,
+          "scout": 0.3211805555555556
+        },
+        "starter_skill": 0.6237184166666666
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9129,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8504272500000001,
+          "transfers": 0,
+          "trust": 0.4810703958333334
+        },
+        "lineup_swap_rate": 0.3695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4565972222222222,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7093383020833333
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7075880833333333,
+          "transfers": 0,
+          "trust": 0.4722089166666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.04861111111111111,
+          "propose": 0.6024305555555556,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.628195078125
+      },
+      "on": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7007528333333334,
+          "transfers": 0,
+          "trust": 0.47815735416666666
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5954861111111112,
+          "rest": 0.0,
+          "scout": 0.3524305555555556
+        },
+        "starter_skill": 0.6355910208333333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9154,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "on": {
+        "events": 9158,
+        "final": {
+          "satisfaction": 0.7041666666666666,
+          "skill": 0.8474538333333334,
+          "transfers": 0,
+          "trust": 0.4690351041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.7177457552083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7025098333333334,
+          "transfers": 0,
+          "trust": 0.4888027916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.5989583333333334,
+          "rest": 0.0,
+          "scout": 0.3515625
+        },
+        "starter_skill": 0.6288192604166667
+      },
+      "on": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.702309,
+          "transfers": 0,
+          "trust": 0.488732
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 59,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.5911458333333334,
+          "rest": 0.0,
+          "scout": 0.3576388888888889
+        },
+        "starter_skill": 0.6343304635416667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9160,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "on": {
+        "events": 9157,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8455519166666666,
+          "transfers": 0,
+          "trust": 0.456093
+        },
+        "lineup_swap_rate": 0.34782608695652173,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4913194444444444
+        },
+        "starter_skill": 0.7049375416666667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6839654999999999,
+          "transfers": 0,
+          "trust": 0.47692550000000006
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6004139322916667
+      },
+      "on": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.68406375,
+          "transfers": 0,
+          "trust": 0.47667229166666675
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 63,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.5581597222222222,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6006408333333334
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8486224166666667,
+          "transfers": 0,
+          "trust": 0.4849113541666667
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4470486111111111,
+          "rest": 0.0,
+          "scout": 0.5
+        },
+        "starter_skill": 0.7008551666666666
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6974999999999999,
+          "skill": 0.84557175,
+          "transfers": 0,
+          "trust": 0.4798579166666667
+        },
+        "lineup_swap_rate": 0.33695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 64,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4435763888888889,
+          "rest": 0.0,
+          "scout": 0.5008680555555556
+        },
+        "starter_skill": 0.7023222083333334
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9182,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6862936666666667,
+          "transfers": 0,
+          "trust": 0.4793026875
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.5217013888888888,
+          "rest": 0.0,
+          "scout": 0.4227430555555556
+        },
+        "starter_skill": 0.616746234375
+      },
+      "on": {
+        "events": 9198,
+        "final": {
+          "satisfaction": 0.6166666666666667,
+          "skill": 0.6855898333333333,
+          "transfers": 0,
+          "trust": 0.47770439583333335
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5251736111111112,
+          "rest": 0.0,
+          "scout": 0.4210069444444444
+        },
+        "starter_skill": 0.6198348802083333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9159,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8582569166666666,
+          "transfers": 0,
+          "trust": 0.47268414583333335
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4505208333333333,
+          "rest": 0.0,
+          "scout": 0.4982638888888889
+        },
+        "starter_skill": 0.7013131927083333
+      },
+      "on": {
+        "events": 9146,
+        "final": {
+          "satisfaction": 0.6891666666666666,
+          "skill": 0.8496843333333333,
+          "transfers": 0,
+          "trust": 0.4731391875
+        },
+        "lineup_swap_rate": 0.45652173913043476,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 69,
+        "slots": {
+          "observe": 0.059895833333333336,
+          "propose": 0.4305555555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7015197187500001
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9178,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6808757500000001,
+          "transfers": 0,
+          "trust": 0.47111035416666674
+        },
+        "lineup_swap_rate": 0.16304347826086957,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.5416666666666666,
+          "rest": 0.0,
+          "scout": 0.4079861111111111
+        },
+        "starter_skill": 0.6091078958333334
+      },
+      "on": {
+        "events": 9170,
+        "final": {
+          "satisfaction": 0.6283333333333333,
+          "skill": 0.6807154999999999,
+          "transfers": 0,
+          "trust": 0.4711382708333334
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5442708333333334,
+          "rest": 0.0,
+          "scout": 0.4036458333333333
+        },
+        "starter_skill": 0.6110716979166667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9136,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8446142499999999,
+          "transfers": 0,
+          "trust": 0.4792704791666667
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4609375,
+          "rest": 0.0,
+          "scout": 0.4852430555555556
+        },
+        "starter_skill": 0.6935709479166666
+      },
+      "on": {
+        "events": 9131,
+        "final": {
+          "satisfaction": 0.6866666666666666,
+          "skill": 0.8419955,
+          "transfers": 0,
+          "trust": 0.4786101875
+        },
+        "lineup_swap_rate": 0.3804347826086957,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4600694444444444,
+          "rest": 0.0,
+          "scout": 0.4835069444444444
+        },
+        "starter_skill": 0.6949237760416667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9169,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6807075833333333,
+          "transfers": 0,
+          "trust": 0.4850918333333334
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.6328125,
+          "rest": 0.0,
+          "scout": 0.3168402777777778
+        },
+        "starter_skill": 0.618116015625
+      },
+      "on": {
+        "events": 9177,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6902162500000001,
+          "transfers": 0,
+          "trust": 0.47605775000000006
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 57,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.6293402777777778,
+          "rest": 0.0,
+          "scout": 0.3211805555555556
+        },
+        "starter_skill": 0.6237184166666666
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9129,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8504272500000001,
+          "transfers": 0,
+          "trust": 0.4810703958333334
+        },
+        "lineup_swap_rate": 0.3695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4565972222222222,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7093383020833333
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7075880833333333,
+          "transfers": 0,
+          "trust": 0.4722089166666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.04861111111111111,
+          "propose": 0.6024305555555556,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.628195078125
+      },
+      "on": {
+        "events": 9194,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7007528333333334,
+          "transfers": 0,
+          "trust": 0.47815735416666666
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5954861111111112,
+          "rest": 0.0,
+          "scout": 0.3524305555555556
+        },
+        "starter_skill": 0.6355910208333333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9154,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "on": {
+        "events": 9158,
+        "final": {
+          "satisfaction": 0.7041666666666666,
+          "skill": 0.8474538333333334,
+          "transfers": 0,
+          "trust": 0.4690351041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.7177457552083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.7025098333333334,
+          "transfers": 0,
+          "trust": 0.4888027916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.5989583333333334,
+          "rest": 0.0,
+          "scout": 0.3515625
+        },
+        "starter_skill": 0.6288192604166667
+      },
+      "on": {
+        "events": 9151,
+        "final": {
+          "satisfaction": 0.5499999999999999,
+          "skill": 0.702309,
+          "transfers": 0,
+          "trust": 0.488732
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 59,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.5911458333333334,
+          "rest": 0.0,
+          "scout": 0.3576388888888889
+        },
+        "starter_skill": 0.6343304635416667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9160,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "on": {
+        "events": 9157,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8455519166666666,
+          "transfers": 0,
+          "trust": 0.456093
+        },
+        "lineup_swap_rate": 0.34782608695652173,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4913194444444444
+        },
+        "starter_skill": 0.7049375416666667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6839654999999999,
+          "transfers": 0,
+          "trust": 0.47692550000000006
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6004139322916667
+      },
+      "on": {
+        "events": 9145,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.68406375,
+          "transfers": 0,
+          "trust": 0.47667229166666675
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 63,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.5581597222222222,
+          "rest": 0.0,
+          "scout": 0.3871527777777778
+        },
+        "starter_skill": 0.6006408333333334
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8486224166666667,
+          "transfers": 0,
+          "trust": 0.4849113541666667
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4470486111111111,
+          "rest": 0.0,
+          "scout": 0.5
+        },
+        "starter_skill": 0.7008551666666666
+      },
+      "on": {
+        "events": 9127,
+        "final": {
+          "satisfaction": 0.6974999999999999,
+          "skill": 0.84557175,
+          "transfers": 0,
+          "trust": 0.4798579166666667
+        },
+        "lineup_swap_rate": 0.33695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 64,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4435763888888889,
+          "rest": 0.0,
+          "scout": 0.5008680555555556
+        },
+        "starter_skill": 0.7023222083333334
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9182,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6862936666666667,
+          "transfers": 0,
+          "trust": 0.4793026875
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.5217013888888888,
+          "rest": 0.0,
+          "scout": 0.4227430555555556
+        },
+        "starter_skill": 0.616746234375
+      },
+      "on": {
+        "events": 9198,
+        "final": {
+          "satisfaction": 0.6166666666666667,
+          "skill": 0.6855898333333333,
+          "transfers": 0,
+          "trust": 0.47770439583333335
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5251736111111112,
+          "rest": 0.0,
+          "scout": 0.4210069444444444
+        },
+        "starter_skill": 0.6198348802083333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9159,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8582569166666666,
+          "transfers": 0,
+          "trust": 0.47268414583333335
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4505208333333333,
+          "rest": 0.0,
+          "scout": 0.4982638888888889
+        },
+        "starter_skill": 0.7013131927083333
+      },
+      "on": {
+        "events": 9146,
+        "final": {
+          "satisfaction": 0.6891666666666666,
+          "skill": 0.8496843333333333,
+          "transfers": 0,
+          "trust": 0.4731391875
+        },
+        "lineup_swap_rate": 0.45652173913043476,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 69,
+        "slots": {
+          "observe": 0.059895833333333336,
+          "propose": 0.4305555555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7015197187500001
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9178,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6808757500000001,
+          "transfers": 0,
+          "trust": 0.47111035416666674
+        },
+        "lineup_swap_rate": 0.16304347826086957,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.5416666666666666,
+          "rest": 0.0,
+          "scout": 0.4079861111111111
+        },
+        "starter_skill": 0.6091078958333334
+      },
+      "on": {
+        "events": 9170,
+        "final": {
+          "satisfaction": 0.6283333333333333,
+          "skill": 0.6807154999999999,
+          "transfers": 0,
+          "trust": 0.4711382708333334
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.5442708333333334,
+          "rest": 0.0,
+          "scout": 0.4036458333333333
+        },
+        "starter_skill": 0.6110716979166667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9136,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8446142499999999,
+          "transfers": 0,
+          "trust": 0.4792704791666667
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4609375,
+          "rest": 0.0,
+          "scout": 0.4852430555555556
+        },
+        "starter_skill": 0.6935709479166666
+      },
+      "on": {
+        "events": 9131,
+        "final": {
+          "satisfaction": 0.6866666666666666,
+          "skill": 0.8419955,
+          "transfers": 0,
+          "trust": 0.4786101875
+        },
+        "lineup_swap_rate": 0.3804347826086957,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4600694444444444,
+          "rest": 0.0,
+          "scout": 0.4835069444444444
+        },
+        "starter_skill": 0.6949237760416667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "closed_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9439,
+        "final": {
+          "satisfaction": 0.5316666666666666,
+          "skill": 0.6911453333333334,
+          "transfers": 2,
+          "trust": 0.47309633333333334
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5651041666666666,
+          "rest": 0.0,
+          "scout": 0.3767361111111111
+        },
+        "starter_skill": 0.6518730364583333
+      },
+      "on": {
+        "events": 9385,
+        "final": {
+          "satisfaction": 0.64,
+          "skill": 0.69688275,
+          "transfers": 1,
+          "trust": 0.4718787708333334
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 61,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.6024305555555556,
+          "rest": 0.0,
+          "scout": 0.3446180555555556
+        },
+        "starter_skill": 0.6502141354166667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9244,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "on": {
+        "events": 9242,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8504272500000001,
+          "transfers": 0,
+          "trust": 0.4810703958333334
+        },
+        "lineup_swap_rate": 0.3695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4565972222222222,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7093383020833333
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9455,
+        "final": {
+          "satisfaction": 0.5316666666666666,
+          "skill": 0.6938534166666667,
+          "transfers": 2,
+          "trust": 0.4763887916666667
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5520833333333334,
+          "rest": 0.0,
+          "scout": 0.390625
+        },
+        "starter_skill": 0.6555786510416667
+      },
+      "on": {
+        "events": 9391,
+        "final": {
+          "satisfaction": 0.5933333333333334,
+          "skill": 0.70111475,
+          "transfers": 1,
+          "trust": 0.4668492916666667
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.5746527777777778,
+          "rest": 0.0,
+          "scout": 0.3689236111111111
+        },
+        "starter_skill": 0.654262984375
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "on": {
+        "events": 9273,
+        "final": {
+          "satisfaction": 0.7041666666666666,
+          "skill": 0.8474538333333334,
+          "transfers": 0,
+          "trust": 0.4690351041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.7177457552083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9416,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6821988333333334,
+          "transfers": 2,
+          "trust": 0.46336845833333334
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.5538194444444444,
+          "rest": 0.0,
+          "scout": 0.3897569444444444
+        },
+        "starter_skill": 0.6518326666666666
+      },
+      "on": {
+        "events": 9413,
+        "final": {
+          "satisfaction": 0.5666666666666667,
+          "skill": 0.68430925,
+          "transfers": 2,
+          "trust": 0.4568451250000001
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5703125,
+          "rest": 0.0,
+          "scout": 0.3758680555555556
+        },
+        "starter_skill": 0.6425497291666667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9284,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "on": {
+        "events": 9278,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8455519166666666,
+          "transfers": 0,
+          "trust": 0.456093
+        },
+        "lineup_swap_rate": 0.34782608695652173,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4913194444444444
+        },
+        "starter_skill": 0.7049375416666667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_no_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9383,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.6781835833333334,
+          "transfers": 3,
+          "trust": 0.4839031875
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5381944444444444,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.618518953125
+      },
+      "on": {
+        "events": 9393,
+        "final": {
+          "satisfaction": 0.61,
+          "skill": 0.6894399999999999,
+          "transfers": 3,
+          "trust": 0.4768217083333334
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5295138888888888,
+          "rest": 0.0,
+          "scout": 0.4131944444444444
+        },
+        "starter_skill": 0.632385578125
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9280,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8460546666666667,
+          "transfers": 1,
+          "trust": 0.4771955208333334
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4965277777777778
+        },
+        "starter_skill": 0.6986889166666667
+      },
+      "on": {
+        "events": 9279,
+        "final": {
+          "satisfaction": 0.7075,
+          "skill": 0.8415096666666667,
+          "transfers": 1,
+          "trust": 0.4728738333333334
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4956597222222222
+        },
+        "starter_skill": 0.701210984375
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9417,
+        "final": {
+          "satisfaction": 0.5591666666666667,
+          "skill": 0.6880995,
+          "transfers": 2,
+          "trust": 0.45808600000000005
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.4782986111111111,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.6506191666666666
+      },
+      "on": {
+        "events": 9406,
+        "final": {
+          "satisfaction": 0.5966666666666667,
+          "skill": 0.6890491666666666,
+          "transfers": 2,
+          "trust": 0.4601418750000001
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.4904513888888889,
+          "rest": 0.0,
+          "scout": 0.4513888888888889
+        },
+        "starter_skill": 0.655618796875
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9295,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8410608333333333,
+          "transfers": 2,
+          "trust": 0.45005100000000003
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4392361111111111,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.6950129583333333
+      },
+      "on": {
+        "events": 9302,
+        "final": {
+          "satisfaction": 0.7000000000000001,
+          "skill": 0.83849725,
+          "transfers": 2,
+          "trust": 0.4459196458333334
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4435763888888889,
+          "rest": 0.0,
+          "scout": 0.5043402777777778
+        },
+        "starter_skill": 0.69812275
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9440,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.6837356666666666,
+          "transfers": 2,
+          "trust": 0.46382058333333337
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4982638888888889,
+          "rest": 0.0,
+          "scout": 0.4461805555555556
+        },
+        "starter_skill": 0.6471290677083333
+      },
+      "on": {
+        "events": 9402,
+        "final": {
+          "satisfaction": 0.6208333333333333,
+          "skill": 0.6760207500000001,
+          "transfers": 2,
+          "trust": 0.4607275208333334
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 64,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.5069444444444444,
+          "rest": 0.0,
+          "scout": 0.4375
+        },
+        "starter_skill": 0.6360706979166667
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9275,
+        "final": {
+          "satisfaction": 0.6833333333333332,
+          "skill": 0.8393181666666667,
+          "transfers": 1,
+          "trust": 0.4601243541666667
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4670138888888889,
+          "rest": 0.0,
+          "scout": 0.4809027777777778
+        },
+        "starter_skill": 0.6942109531249999
+      },
+      "on": {
+        "events": 9274,
+        "final": {
+          "satisfaction": 0.7125,
+          "skill": 0.8387955833333334,
+          "transfers": 1,
+          "trust": 0.4586922916666667
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 61,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4618055555555556,
+          "rest": 0.0,
+          "scout": 0.4852430555555556
+        },
+        "starter_skill": 0.6955991927083334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_no_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9531,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6702530833333333,
+          "transfers": 2,
+          "trust": 0.4790423750000001
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5494791666666666,
+          "rest": 0.0,
+          "scout": 0.3923611111111111
+        },
+        "starter_skill": 0.6671346927083334
+      },
+      "on": {
+        "events": 9427,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6858928333333334,
+          "transfers": 1,
+          "trust": 0.4744451666666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.6545567291666666
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9239,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "on": {
+        "events": 9237,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8504272500000001,
+          "transfers": 0,
+          "trust": 0.4810703958333334
+        },
+        "lineup_swap_rate": 0.3695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4565972222222222,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7093383020833333
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9532,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.66786775,
+          "transfers": 2,
+          "trust": 0.4698449166666667
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5399305555555556,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.6687659583333333
+      },
+      "on": {
+        "events": 9435,
+        "final": {
+          "satisfaction": 0.6008333333333333,
+          "skill": 0.6880535,
+          "transfers": 1,
+          "trust": 0.470621
+        },
+        "lineup_swap_rate": 0.30434782608695654,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5763888888888888,
+          "rest": 0.0,
+          "scout": 0.3663194444444444
+        },
+        "starter_skill": 0.6627964479166667
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9265,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "on": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.7041666666666666,
+          "skill": 0.8474538333333334,
+          "transfers": 0,
+          "trust": 0.4690351041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.7177457552083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9501,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6617699166666667,
+          "transfers": 2,
+          "trust": 0.4598505416666667
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.546875,
+          "rest": 0.0,
+          "scout": 0.3958333333333333
+        },
+        "starter_skill": 0.6589657135416667
+      },
+      "on": {
+        "events": 9467,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6543934166666666,
+          "transfers": 2,
+          "trust": 0.46448222916666676
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5685763888888888,
+          "rest": 0.0,
+          "scout": 0.3776041666666667
+        },
+        "starter_skill": 0.6512093854166666
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9278,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "on": {
+        "events": 9273,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8455519166666666,
+          "transfers": 0,
+          "trust": 0.456093
+        },
+        "lineup_swap_rate": 0.34782608695652173,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4913194444444444
+        },
+        "starter_skill": 0.7049375416666667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_solidarity"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9488,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6556611666666666,
+          "transfers": 3,
+          "trust": 0.4887122916666667
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5243055555555556,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6171625364583333
+      },
+      "on": {
+        "events": 9480,
+        "final": {
+          "satisfaction": 0.6383333333333333,
+          "skill": 0.6735084166666666,
+          "transfers": 3,
+          "trust": 0.479990375
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5208333333333334,
+          "rest": 0.0,
+          "scout": 0.4210069444444444
+        },
+        "starter_skill": 0.6397807083333333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9323,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8657359166666666,
+          "transfers": 1,
+          "trust": 0.4733309583333334
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4236111111111111,
+          "rest": 0.0,
+          "scout": 0.5251736111111112
+        },
+        "starter_skill": 0.7140874947916666
+      },
+      "on": {
+        "events": 9322,
+        "final": {
+          "satisfaction": 0.6725,
+          "skill": 0.8635838333333333,
+          "transfers": 1,
+          "trust": 0.4763408541666667
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4192708333333333,
+          "rest": 0.0,
+          "scout": 0.5286458333333334
+        },
+        "starter_skill": 0.7150427916666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9480,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6562571666666667,
+          "transfers": 2,
+          "trust": 0.4717411875
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4895833333333333,
+          "rest": 0.0,
+          "scout": 0.4539930555555556
+        },
+        "starter_skill": 0.6435330260416666
+      },
+      "on": {
+        "events": 9475,
+        "final": {
+          "satisfaction": 0.6283333333333333,
+          "skill": 0.6546420833333334,
+          "transfers": 2,
+          "trust": 0.4724252708333334
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.4774305555555556,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.6518882239583333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9390,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8846465,
+          "transfers": 2,
+          "trust": 0.4517380833333334
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.3880208333333333,
+          "rest": 0.0,
+          "scout": 0.5590277777777778
+        },
+        "starter_skill": 0.7242314479166666
+      },
+      "on": {
+        "events": 9390,
+        "final": {
+          "satisfaction": 0.695,
+          "skill": 0.8789013333333333,
+          "transfers": 2,
+          "trust": 0.44627877083333334
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.3888888888888889,
+          "rest": 0.0,
+          "scout": 0.5572916666666666
+        },
+        "starter_skill": 0.7243122239583334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9521,
+        "final": {
+          "satisfaction": 0.5783333333333334,
+          "skill": 0.6642954166666667,
+          "transfers": 2,
+          "trust": 0.45741450000000006
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4887152777777778,
+          "rest": 0.0,
+          "scout": 0.4557291666666667
+        },
+        "starter_skill": 0.646165984375
+      },
+      "on": {
+        "events": 9493,
+        "final": {
+          "satisfaction": 0.6525,
+          "skill": 0.6588471666666667,
+          "transfers": 2,
+          "trust": 0.46556352083333336
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5034722222222222,
+          "rest": 0.0,
+          "scout": 0.4392361111111111
+        },
+        "starter_skill": 0.64102009375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9313,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8579129999999999,
+          "transfers": 1,
+          "trust": 0.46489864583333335
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7037454010416666
+      },
+      "on": {
+        "events": 9305,
+        "final": {
+          "satisfaction": 0.7308333333333333,
+          "skill": 0.8563643333333334,
+          "transfers": 1,
+          "trust": 0.46260077083333334
+        },
+        "lineup_swap_rate": 0.391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4288194444444444,
+          "rest": 0.0,
+          "scout": 0.5147569444444444
+        },
+        "starter_skill": 0.7079166927083334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "open_solidarity_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 754,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9270,
+        "final": {
+          "satisfaction": 0.5666666666666667,
+          "skill": 0.6612723333333334,
+          "transfers": 2,
+          "trust": 0.46722575000000005
+        },
+        "lineup_swap_rate": 0.16304347826086957,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.7864583333333334,
+          "rest": 0.0,
+          "scout": 0.1545138888888889
+        },
+        "starter_skill": 0.6512435
+      },
+      "on": {
+        "events": 9276,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6664544166666667,
+          "transfers": 2,
+          "trust": 0.46298572916666675
+        },
+        "lineup_swap_rate": 0.16304347826086957,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.7881944444444444,
+          "rest": 0.0,
+          "scout": 0.15364583333333334
+        },
+        "starter_skill": 0.6643937083333333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 754,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 8960,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8434415,
+          "transfers": 0,
+          "trust": 0.46626558333333334
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.7118055555555556,
+          "rest": 0.0,
+          "scout": 0.23350694444444445
+        },
+        "starter_skill": 0.7005339843749999
+      },
+      "on": {
+        "events": 8957,
+        "final": {
+          "satisfaction": 0.685,
+          "skill": 0.8426356666666667,
+          "transfers": 0,
+          "trust": 0.4676336041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.7092013888888888,
+          "rest": 0.0,
+          "scout": 0.23350694444444445
+        },
+        "starter_skill": 0.7008462604166666
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9247,
+        "final": {
+          "satisfaction": 0.52,
+          "skill": 0.6605788333333333,
+          "transfers": 2,
+          "trust": 0.47566183333333334
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.7699652777777778,
+          "rest": 0.0,
+          "scout": 0.17100694444444445
+        },
+        "starter_skill": 0.65562475
+      },
+      "on": {
+        "events": 9251,
+        "final": {
+          "satisfaction": 0.6166666666666667,
+          "skill": 0.6612714166666667,
+          "transfers": 2,
+          "trust": 0.4727061666666667
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 70,
+        "slots": {
+          "observe": 0.06076388888888889,
+          "propose": 0.7630208333333334,
+          "rest": 0.0,
+          "scout": 0.1762152777777778
+        },
+        "starter_skill": 0.6701248125
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 8989,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.851252,
+          "transfers": 0,
+          "trust": 0.4660792708333334
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.6996527777777778,
+          "rest": 0.0,
+          "scout": 0.24479166666666666
+        },
+        "starter_skill": 0.7116518072916667
+      },
+      "on": {
+        "events": 8996,
+        "final": {
+          "satisfaction": 0.6991666666666667,
+          "skill": 0.8451603333333333,
+          "transfers": 0,
+          "trust": 0.46186654166666674
+        },
+        "lineup_swap_rate": 0.31521739130434784,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.6970486111111112,
+          "rest": 0.0,
+          "scout": 0.2465277777777778
+        },
+        "starter_skill": 0.7138811458333333
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 757,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9198,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6507670833333333,
+          "transfers": 2,
+          "trust": 0.45891256250000007
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.7517361111111112,
+          "rest": 0.0,
+          "scout": 0.19010416666666666
+        },
+        "starter_skill": 0.6346783072916667
+      },
+      "on": {
+        "events": 9174,
+        "final": {
+          "satisfaction": 0.5666666666666667,
+          "skill": 0.6419177500000001,
+          "transfers": 2,
+          "trust": 0.454369
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 64,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.7222222222222222,
+          "rest": 0.0,
+          "scout": 0.2222222222222222
+        },
+        "starter_skill": 0.624909625
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 757,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 8993,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.835242,
+          "transfers": 0,
+          "trust": 0.4500157916666667
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.7022569444444444,
+          "rest": 0.0,
+          "scout": 0.24131944444444445
+        },
+        "starter_skill": 0.6946559843750001
+      },
+      "on": {
+        "events": 8991,
+        "final": {
+          "satisfaction": 0.6783333333333333,
+          "skill": 0.8309442499999999,
+          "transfers": 0,
+          "trust": 0.4466324166666667
+        },
+        "lineup_swap_rate": 0.358695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.7013888888888888,
+          "rest": 0.0,
+          "scout": 0.2404513888888889
+        },
+        "starter_skill": 0.6956422187500001
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 755,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9126,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6481204166666666,
+          "transfers": 2,
+          "trust": 0.4762280208333334
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.7265625,
+          "rest": 0.0,
+          "scout": 0.2170138888888889
+        },
+        "starter_skill": 0.6042427916666667
+      },
+      "on": {
+        "events": 9093,
+        "final": {
+          "satisfaction": 0.64,
+          "skill": 0.6447218333333333,
+          "transfers": 2,
+          "trust": 0.4771526041666667
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 61,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.6996527777777778,
+          "rest": 0.0,
+          "scout": 0.24739583333333334
+        },
+        "starter_skill": 0.6087046197916667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 755,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9055,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84124825,
+          "transfers": 1,
+          "trust": 0.4706672291666667
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.7048611111111112,
+          "rest": 0.0,
+          "scout": 0.23958333333333334
+        },
+        "starter_skill": 0.6934753541666666
+      },
+      "on": {
+        "events": 9049,
+        "final": {
+          "satisfaction": 0.7125,
+          "skill": 0.8367684999999999,
+          "transfers": 1,
+          "trust": 0.4656513541666667
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.703125,
+          "rest": 0.0,
+          "scout": 0.2404513888888889
+        },
+        "starter_skill": 0.695648640625
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 756,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9202,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6506048333333333,
+          "transfers": 2,
+          "trust": 0.4680417083333334
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.6779513888888888,
+          "rest": 0.0,
+          "scout": 0.2664930555555556
+        },
+        "starter_skill": 0.632205328125
+      },
+      "on": {
+        "events": 9244,
+        "final": {
+          "satisfaction": 0.5908333333333333,
+          "skill": 0.6718444166666666,
+          "transfers": 2,
+          "trust": 0.4716258541666667
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.6979166666666666,
+          "rest": 0.0,
+          "scout": 0.2456597222222222
+        },
+        "starter_skill": 0.634748828125
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 756,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9068,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8340480833333334,
+          "transfers": 2,
+          "trust": 0.4418818541666667
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.6935763888888888,
+          "rest": 0.0,
+          "scout": 0.2543402777777778
+        },
+        "starter_skill": 0.6933008645833333
+      },
+      "on": {
+        "events": 9059,
+        "final": {
+          "satisfaction": 0.68,
+          "skill": 0.8386629999999999,
+          "transfers": 1,
+          "trust": 0.45164670833333337
+        },
+        "lineup_swap_rate": 0.33695652173913043,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.6918402777777778,
+          "rest": 0.0,
+          "scout": 0.2517361111111111
+        },
+        "starter_skill": 0.696082328125
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9104,
+        "final": {
+          "satisfaction": 0.6208333333333333,
+          "skill": 0.6502785,
+          "transfers": 1,
+          "trust": 0.45930093750000006
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.7239583333333334,
+          "rest": 0.0,
+          "scout": 0.2230902777777778
+        },
+        "starter_skill": 0.6143987291666667
+      },
+      "on": {
+        "events": 9183,
+        "final": {
+          "satisfaction": 0.6,
+          "skill": 0.6387959166666667,
+          "transfers": 2,
+          "trust": 0.4695164583333334
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.6953125,
+          "rest": 0.0,
+          "scout": 0.24739583333333334
+        },
+        "starter_skill": 0.6130785885416666
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9014,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8397705000000001,
+          "transfers": 1,
+          "trust": 0.4452927708333334
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.7178819444444444,
+          "rest": 0.0,
+          "scout": 0.22916666666666666
+        },
+        "starter_skill": 0.6885756927083334
+      },
+      "on": {
+        "events": 9003,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8285206666666666,
+          "transfers": 1,
+          "trust": 0.4531980416666667
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 63,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.7161458333333334,
+          "rest": 0.0,
+          "scout": 0.22916666666666666
+        },
+        "starter_skill": 0.6889123072916666
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "fixed_budget_no_inflow_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9551,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6612334166666667,
+          "transfers": 5,
+          "trust": 0.47261097916666667
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5685763888888888,
+          "rest": 0.0,
+          "scout": 0.3732638888888889
+        },
+        "starter_skill": 0.6510112916666667
+      },
+      "on": {
+        "events": 9503,
+        "final": {
+          "satisfaction": 0.62,
+          "skill": 0.6992145833333333,
+          "transfers": 4,
+          "trust": 0.47161558333333337
+        },
+        "lineup_swap_rate": 0.15217391304347827,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.59375,
+          "rest": 0.0,
+          "scout": 0.3524305555555556
+        },
+        "starter_skill": 0.6624746510416667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9410,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8779303333333334,
+          "transfers": 2,
+          "trust": 0.46918379166666674
+        },
+        "lineup_swap_rate": 0.15217391304347827,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4201388888888889,
+          "rest": 0.0,
+          "scout": 0.5303819444444444
+        },
+        "starter_skill": 0.7259750572916667
+      },
+      "on": {
+        "events": 9408,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8760822500000001,
+          "transfers": 2,
+          "trust": 0.4698165625000001
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 58,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.4210069444444444,
+          "rest": 0.0,
+          "scout": 0.5286458333333334
+        },
+        "starter_skill": 0.72714190625
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9529,
+        "final": {
+          "satisfaction": 0.57,
+          "skill": 0.6772235833333333,
+          "transfers": 3,
+          "trust": 0.46921937500000005
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.5607638888888888,
+          "rest": 0.0,
+          "scout": 0.3862847222222222
+        },
+        "starter_skill": 0.6520294375
+      },
+      "on": {
+        "events": 9490,
+        "final": {
+          "satisfaction": 0.6124999999999999,
+          "skill": 0.6749444166666666,
+          "transfers": 2,
+          "trust": 0.4707447916666667
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5651041666666666,
+          "rest": 0.0,
+          "scout": 0.3776041666666667
+        },
+        "starter_skill": 0.6635026041666666
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9419,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8874449166666666,
+          "transfers": 2,
+          "trust": 0.4629994375
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3776041666666667,
+          "rest": 0.0,
+          "scout": 0.5720486111111112
+        },
+        "starter_skill": 0.7275912031249999
+      },
+      "on": {
+        "events": 9401,
+        "final": {
+          "satisfaction": 0.725,
+          "skill": 0.8872628333333333,
+          "transfers": 2,
+          "trust": 0.4690145208333334
+        },
+        "lineup_swap_rate": 0.40217391304347827,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.3723958333333333,
+          "rest": 0.0,
+          "scout": 0.5703125
+        },
+        "starter_skill": 0.7291156927083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9504,
+        "final": {
+          "satisfaction": 0.5583333333333333,
+          "skill": 0.6723143333333333,
+          "transfers": 3,
+          "trust": 0.46076989583333333
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5251736111111112,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6548765364583333
+      },
+      "on": {
+        "events": 9480,
+        "final": {
+          "satisfaction": 0.62,
+          "skill": 0.6731328333333333,
+          "transfers": 2,
+          "trust": 0.47300125000000004
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.5269097222222222,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6501290364583333
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9428,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.87969175,
+          "transfers": 2,
+          "trust": 0.451500375
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3949652777777778,
+          "rest": 0.0,
+          "scout": 0.5546875
+        },
+        "starter_skill": 0.7219199322916667
+      },
+      "on": {
+        "events": 9415,
+        "final": {
+          "satisfaction": 0.7358333333333333,
+          "skill": 0.8765672499999999,
+          "transfers": 2,
+          "trust": 0.4551415416666667
+        },
+        "lineup_swap_rate": 0.30434782608695654,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.3888888888888889,
+          "rest": 0.0,
+          "scout": 0.5572916666666666
+        },
+        "starter_skill": 0.7235654218750001
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9543,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6557499166666667,
+          "transfers": 5,
+          "trust": 0.4847456041666667
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5138888888888888,
+          "rest": 0.0,
+          "scout": 0.4279513888888889
+        },
+        "starter_skill": 0.6173734375000001
+      },
+      "on": {
+        "events": 9543,
+        "final": {
+          "satisfaction": 0.64,
+          "skill": 0.658853,
+          "transfers": 5,
+          "trust": 0.48603954166666674
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5173611111111112,
+          "rest": 0.0,
+          "scout": 0.4244791666666667
+        },
+        "starter_skill": 0.6306713385416667
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9359,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8750540833333332,
+          "transfers": 2,
+          "trust": 0.4691856875
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.3819444444444444,
+          "rest": 0.0,
+          "scout": 0.5677083333333334
+        },
+        "starter_skill": 0.7181216302083334
+      },
+      "on": {
+        "events": 9394,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8775715000000001,
+          "transfers": 2,
+          "trust": 0.4635885
+        },
+        "lineup_swap_rate": 0.30434782608695654,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 63,
+        "slots": {
+          "observe": 0.0546875,
+          "propose": 0.3776041666666667,
+          "rest": 0.0,
+          "scout": 0.5677083333333334
+        },
+        "starter_skill": 0.7230686666666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9599,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6561220833333333,
+          "transfers": 3,
+          "trust": 0.4697880625
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.453125,
+          "rest": 0.0,
+          "scout": 0.4878472222222222
+        },
+        "starter_skill": 0.6499118020833333
+      },
+      "on": {
+        "events": 9592,
+        "final": {
+          "satisfaction": 0.62,
+          "skill": 0.6650016666666666,
+          "transfers": 3,
+          "trust": 0.4680583333333334
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 68,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.4418402777777778,
+          "rest": 0.0,
+          "scout": 0.4991319444444444
+        },
+        "starter_skill": 0.6624098229166667
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9388,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8842455,
+          "transfers": 3,
+          "trust": 0.4553403125
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.3854166666666667,
+          "rest": 0.0,
+          "scout": 0.5625
+        },
+        "starter_skill": 0.714667546875
+      },
+      "on": {
+        "events": 9384,
+        "final": {
+          "satisfaction": 0.7000000000000001,
+          "skill": 0.8836688333333332,
+          "transfers": 3,
+          "trust": 0.4446787083333334
+        },
+        "lineup_swap_rate": 0.40217391304347827,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.3663194444444444,
+          "rest": 0.0,
+          "scout": 0.5772569444444444
+        },
+        "starter_skill": 0.7193423177083332
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9527,
+        "final": {
+          "satisfaction": 0.5858333333333333,
+          "skill": 0.66558825,
+          "transfers": 3,
+          "trust": 0.46062552083333336
+        },
+        "lineup_swap_rate": 0.1956521739130435,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4991319444444444,
+          "rest": 0.0,
+          "scout": 0.4444444444444444
+        },
+        "starter_skill": 0.634250859375
+      },
+      "on": {
+        "events": 9451,
+        "final": {
+          "satisfaction": 0.64,
+          "skill": 0.6669329999999999,
+          "transfers": 2,
+          "trust": 0.46221225000000005
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5199652777777778,
+          "rest": 0.0,
+          "scout": 0.4262152777777778
+        },
+        "starter_skill": 0.633690375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9410,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8757268333333333,
+          "transfers": 2,
+          "trust": 0.4503877708333334
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.050347222222222224,
+          "propose": 0.4019097222222222,
+          "rest": 0.0,
+          "scout": 0.5477430555555556
+        },
+        "starter_skill": 0.7191603333333333
+      },
+      "on": {
+        "events": 9399,
+        "final": {
+          "satisfaction": 0.6891666666666666,
+          "skill": 0.8693378333333334,
+          "transfers": 2,
+          "trust": 0.4613619166666667
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.3923611111111111,
+          "rest": 0.0,
+          "scout": 0.5538194444444444
+        },
+        "starter_skill": 0.7170886562500001
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "hoarder_buyer_policy_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9559,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6702530833333333,
+          "transfers": 2,
+          "trust": 0.4790423750000001
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5494791666666666,
+          "rest": 0.0,
+          "scout": 0.3923611111111111
+        },
+        "starter_skill": 0.6671346927083334
+      },
+      "on": {
+        "events": 9441,
+        "final": {
+          "satisfaction": 0.5775,
+          "skill": 0.6858928333333334,
+          "transfers": 1,
+          "trust": 0.4744451666666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5972222222222222,
+          "rest": 0.0,
+          "scout": 0.3489583333333333
+        },
+        "starter_skill": 0.6545567291666666
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 759,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9239,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.850923,
+          "transfers": 0,
+          "trust": 0.48145356250000004
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.4722222222222222,
+          "rest": 0.0,
+          "scout": 0.4748263888888889
+        },
+        "starter_skill": 0.7092649166666667
+      },
+      "on": {
+        "events": 9237,
+        "final": {
+          "satisfaction": 0.6741666666666667,
+          "skill": 0.8504272500000001,
+          "transfers": 0,
+          "trust": 0.4810703958333334
+        },
+        "lineup_swap_rate": 0.3695652173913043,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4565972222222222,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7093383020833333
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9560,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.66786775,
+          "transfers": 2,
+          "trust": 0.4698449166666667
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5399305555555556,
+          "rest": 0.0,
+          "scout": 0.4027777777777778
+        },
+        "starter_skill": 0.6687659583333333
+      },
+      "on": {
+        "events": 9449,
+        "final": {
+          "satisfaction": 0.6008333333333333,
+          "skill": 0.6880535,
+          "transfers": 1,
+          "trust": 0.470621
+        },
+        "lineup_swap_rate": 0.30434782608695654,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5763888888888888,
+          "rest": 0.0,
+          "scout": 0.3663194444444444
+        },
+        "starter_skill": 0.6627964479166667
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 766,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9265,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8548386666666666,
+          "transfers": 0,
+          "trust": 0.4763597916666667
+        },
+        "lineup_swap_rate": 0.17391304347826086,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.049479166666666664,
+          "propose": 0.4479166666666667,
+          "rest": 0.0,
+          "scout": 0.5026041666666666
+        },
+        "starter_skill": 0.715878421875
+      },
+      "on": {
+        "events": 9269,
+        "final": {
+          "satisfaction": 0.7041666666666666,
+          "skill": 0.8474538333333334,
+          "transfers": 0,
+          "trust": 0.4690351041666667
+        },
+        "lineup_swap_rate": 0.32608695652173914,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5078125
+        },
+        "starter_skill": 0.7177457552083334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9527,
+        "final": {
+          "satisfaction": 0.5433333333333333,
+          "skill": 0.6617699166666667,
+          "transfers": 2,
+          "trust": 0.4598505416666667
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.546875,
+          "rest": 0.0,
+          "scout": 0.3958333333333333
+        },
+        "starter_skill": 0.6589657135416667
+      },
+      "on": {
+        "events": 9491,
+        "final": {
+          "satisfaction": 0.605,
+          "skill": 0.6543934166666666,
+          "transfers": 2,
+          "trust": 0.46448222916666676
+        },
+        "lineup_swap_rate": 0.2391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.5685763888888888,
+          "rest": 0.0,
+          "scout": 0.3776041666666667
+        },
+        "starter_skill": 0.6512093854166666
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 763,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 4,
+        "pairs_with_changed_match_estimate": 4
+      },
+      "off": {
+        "events": 9278,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.84674675,
+          "transfers": 0,
+          "trust": 0.453660125
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.4592013888888889,
+          "rest": 0.0,
+          "scout": 0.4869791666666667
+        },
+        "starter_skill": 0.7042221458333334
+      },
+      "on": {
+        "events": 9273,
+        "final": {
+          "satisfaction": 0.7133333333333334,
+          "skill": 0.8455519166666666,
+          "transfers": 0,
+          "trust": 0.456093
+        },
+        "lineup_swap_rate": 0.34782608695652173,
+        "min_roster_any_day": 3,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4522569444444444,
+          "rest": 0.0,
+          "scout": 0.4913194444444444
+        },
+        "starter_skill": 0.7049375416666667
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "exploit_churn_guard"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9526,
+        "final": {
+          "satisfaction": 0.5625,
+          "skill": 0.6556611666666666,
+          "transfers": 3,
+          "trust": 0.4887122916666667
+        },
+        "lineup_swap_rate": 0.2608695652173913,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.059027777777777776,
+          "propose": 0.5243055555555556,
+          "rest": 0.0,
+          "scout": 0.4166666666666667
+        },
+        "starter_skill": 0.6171625364583333
+      },
+      "on": {
+        "events": 9516,
+        "final": {
+          "satisfaction": 0.6383333333333333,
+          "skill": 0.6735084166666666,
+          "transfers": 3,
+          "trust": 0.479990375
+        },
+        "lineup_swap_rate": 0.2717391304347826,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.5208333333333334,
+          "rest": 0.0,
+          "scout": 0.4210069444444444
+        },
+        "starter_skill": 0.6397807083333333
+      },
+      "seed": 100,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 760,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 12,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9335,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8657359166666666,
+          "transfers": 1,
+          "trust": 0.4733309583333334
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.051215277777777776,
+          "propose": 0.4236111111111111,
+          "rest": 0.0,
+          "scout": 0.5251736111111112
+        },
+        "starter_skill": 0.7140874947916666
+      },
+      "on": {
+        "events": 9334,
+        "final": {
+          "satisfaction": 0.6725,
+          "skill": 0.8635838333333333,
+          "transfers": 1,
+          "trust": 0.4763408541666667
+        },
+        "lineup_swap_rate": 0.22826086956521738,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 60,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4192708333333333,
+          "rest": 0.0,
+          "scout": 0.5286458333333334
+        },
+        "starter_skill": 0.7150427916666667
+      },
+      "seed": 100,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9506,
+        "final": {
+          "satisfaction": 0.5741666666666666,
+          "skill": 0.6562571666666667,
+          "transfers": 2,
+          "trust": 0.4717411875
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4895833333333333,
+          "rest": 0.0,
+          "scout": 0.4539930555555556
+        },
+        "starter_skill": 0.6435330260416666
+      },
+      "on": {
+        "events": 9501,
+        "final": {
+          "satisfaction": 0.6283333333333333,
+          "skill": 0.6546420833333334,
+          "transfers": 2,
+          "trust": 0.4724252708333334
+        },
+        "lineup_swap_rate": 0.2826086956521739,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 67,
+        "slots": {
+          "observe": 0.058159722222222224,
+          "propose": 0.4774305555555556,
+          "rest": 0.0,
+          "scout": 0.4644097222222222
+        },
+        "starter_skill": 0.6518882239583333
+      },
+      "seed": 101,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 762,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 2,
+        "pairs_with_changed_match_estimate": 2
+      },
+      "off": {
+        "events": 9414,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8846465,
+          "transfers": 2,
+          "trust": 0.4517380833333334
+        },
+        "lineup_swap_rate": 0.25,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05295138888888889,
+          "propose": 0.3880208333333333,
+          "rest": 0.0,
+          "scout": 0.5590277777777778
+        },
+        "starter_skill": 0.7242314479166666
+      },
+      "on": {
+        "events": 9414,
+        "final": {
+          "satisfaction": 0.695,
+          "skill": 0.8789013333333333,
+          "transfers": 2,
+          "trust": 0.44627877083333334
+        },
+        "lineup_swap_rate": 0.29347826086956524,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 62,
+        "slots": {
+          "observe": 0.05381944444444445,
+          "propose": 0.3888888888888889,
+          "rest": 0.0,
+          "scout": 0.5572916666666666
+        },
+        "starter_skill": 0.7243122239583334
+      },
+      "seed": 101,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9549,
+        "final": {
+          "satisfaction": 0.5783333333333334,
+          "skill": 0.6642954166666667,
+          "transfers": 2,
+          "trust": 0.45741450000000006
+        },
+        "lineup_swap_rate": 0.18478260869565216,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.05555555555555555,
+          "propose": 0.4887152777777778,
+          "rest": 0.0,
+          "scout": 0.4557291666666667
+        },
+        "starter_skill": 0.646165984375
+      },
+      "on": {
+        "events": 9519,
+        "final": {
+          "satisfaction": 0.6525,
+          "skill": 0.6588471666666667,
+          "transfers": 2,
+          "trust": 0.46556352083333336
+        },
+        "lineup_swap_rate": 0.21739130434782608,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 66,
+        "slots": {
+          "observe": 0.057291666666666664,
+          "propose": 0.5034722222222222,
+          "rest": 0.0,
+          "scout": 0.4392361111111111
+        },
+        "starter_skill": 0.64102009375
+      },
+      "seed": 102,
+      "start_age": 29,
+      "world": "exploit_churn_guard_sampled_population"
+    },
+    {
+      "first_divergence": {
+        "day": 14,
+        "index": 764,
+        "kind": "lineup_decision"
+      },
+      "isolation_day1": {
+        "first_practice_observation_day": 11,
+        "observed_pairs_that_day": 3,
+        "pairs_with_changed_match_estimate": 3
+      },
+      "off": {
+        "events": 9325,
+        "final": {
+          "satisfaction": 0.6699999999999999,
+          "skill": 0.8579129999999999,
+          "transfers": 1,
+          "trust": 0.46489864583333335
+        },
+        "lineup_swap_rate": 0.20652173913043478,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 0,
+        "slots": {
+          "observe": 0.052083333333333336,
+          "propose": 0.4383680555555556,
+          "rest": 0.0,
+          "scout": 0.5095486111111112
+        },
+        "starter_skill": 0.7037454010416666
+      },
+      "on": {
+        "events": 9317,
+        "final": {
+          "satisfaction": 0.7308333333333333,
+          "skill": 0.8563643333333334,
+          "transfers": 1,
+          "trust": 0.46260077083333334
+        },
+        "lineup_swap_rate": 0.391304347826087,
+        "min_roster_any_day": 2,
+        "practice_updates_checked": 65,
+        "slots": {
+          "observe": 0.05642361111111111,
+          "propose": 0.4288194444444444,
+          "rest": 0.0,
+          "scout": 0.5147569444444444
+        },
+        "starter_skill": 0.7079166927083334
+      },
+      "seed": 102,
+      "start_age": 33,
+      "world": "exploit_churn_guard_sampled_population"
+    }
+  ],
+  "control_cells_equal_to_t031": 84,
+  "days": 168,
+  "default_unchanged": {
+    "advice_mode_default_identical": true,
+    "equal_to_pre_implementation_digest": true,
+    "explicit_none_equals_default": 14,
+    "explicit_none_equals_default_advice_on": 14,
+    "explicit_none_equals_default_aging_config": 14,
+    "explicit_none_equals_default_with_exploration": 14,
+    "receptiveness_default_identical": true,
+    "t026_default_check": true,
+    "worlds": 14
+  },
+  "default_vs_t018": {
+    "conditions_equal": 14,
+    "excluded": [
+      "identity",
+      "snapshot_sha256"
+    ],
+    "reference": "artifacts/t018/rerun-py313"
+  },
+  "elapsed_seconds": 378.1266738329996,
+  "first_divergence_day_min_max": [
+    14,
+    14
+  ],
+  "first_divergence_kinds": {
+    "lineup_decision": 84
+  },
+  "identity": {
+    "author": "Antigravity (Gemini 4 Argon)",
+    "intervention": "t012-recorded-belief-intervention-v1",
+    "money": "integer-micro-v1",
+    "money_scale": 1000000,
+    "policy": "t013-independent-transfer-score-v1",
+    "previous_revision_author": "Sol 6.1 High (T014); Codex (T011-R1/T013); Sol 6.1 High (T012)",
+    "revision_author": "Sol 6.1 High (T018 fingerprints/T016 evaluation); Claude Sonnet 5.5 (T015; not the author of T001-T014)",
+    "rng": "sha256-keyed-uniform53-v1",
+    "rules": "t015-sampled-population-v1",
+    "save": 17,
+    "source_scope": "league-runtime-files-v1",
+    "source_sha256": "af1ae694c7f035d9075d6577dbe45cd4f7f128ddf080387ef27850ec4c5d4fd6",
+    "world_kind": "league_economy_loop"
+  },
+  "invalid_rejected": {
+    "empty": true,
+    "int": true,
+    "save_fields": true,
+    "unknown": true
+  },
+  "leak_dynamic": {
+    "off": {
+      "days_compared_before_first_observation": 10
+    },
+    "on": {
+      "days_compared_before_first_observation": 10
+    }
+  },
+  "persistence": {
+    "coach_session_observations": 885,
+    "worlds": 14
+  },
+  "practice_updates_checked": 5348,
+  "runtime": {
+    "implementation": "cpython",
+    "machine": "arm64",
+    "python": "3.13.3",
+    "system": "Darwin"
+  },
+  "season_length_days": 21,
+  "seeds": [
+    100,
+    101,
+    102
+  ],
+  "static": {
+    "practice_rating_readers": [
+      "__post_init__",
+      "_step_training_day",
+      "has_save_fields",
+      "to_dict"
+    ]
+  },
+  "tamper": {
+    "load_league_snapshot": "rejected",
+    "load_league_snapshot_trusted": "accepted"
+  },
+  "task": "T032"
+}
