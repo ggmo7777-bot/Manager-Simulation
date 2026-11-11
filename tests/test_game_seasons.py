@@ -12,8 +12,8 @@ from game.session import GameSession, InvalidInput
 from soccer_sim import league_economy as le
 from test_game_leak import leaks, true_values
 
-SEED = 7
-SEASONS = 3
+SEED = 7  # retirements fall in all four seasons (age_spread staggers them)
+SEASONS = 4
 
 
 def play_season(session, collect=lambda payload: None):
@@ -48,20 +48,27 @@ class TestGenerations(unittest.TestCase):
             cls.leaks.extend(leaks(json.loads(json.dumps(payload)), true_values(cls.session.world)))
         collect(cls.session.state())
         play_seasons(cls.session, SEASONS, collect)
-        collect({"history": cls.session.history, "save": cls.session.save_payload()})
+        collect({"history": cls.session.history, **cls.session.save_payload()})
 
     def test_the_same_world_continues_with_aging_and_turnover(self):
         session = self.session
         self.assertEqual((session.season, session.world.day), (SEASONS, SEASONS * 42))
-        self.assertEqual([h["season"] for h in session.history], [1, 2, 3])
+        self.assertEqual([h["season"] for h in session.history], [1, 2, 3, 4])
         retired = [r for h in session.history for r in h["retired"]]
         joined = [j for h in session.history for j in h["joined"]]
         self.assertTrue(retired and joined)
         squad = {row["player_id"]: row for row in session.state()["squad"]}
         self.assertFalse({r["player_id"] for r in retired} & set(squad))
         for newcomer in (j["player_id"] for j in session.history[-1]["joined"]):
-            self.assertEqual((squad[newcomer]["age"], squad[newcomer]["observation_count"]), (18, 0))
+            self.assertEqual(squad[newcomer]["observation_count"], 0)
             self.assertEqual(squad[newcomer]["skill_estimate"], le.YOUTH_PRIOR[0])  # unknown: the coach's constant first impression
+
+    def test_retirements_are_staggered_over_seasons(self):
+        world = self.session.world
+        seasons = {e["data"]["season"] for e in world.events if e["kind"] == "season_retired"}
+        self.assertGreaterEqual(len(seasons), 3)  # not one cohort retiring together
+        first_ages = next(e for e in world.events if e["kind"] == "season_aged")["data"]["ages"]
+        self.assertGreater(len(set(first_ages.values())), 2)  # the founders do not share one age
 
     def test_estimates_carry_over_the_season_break_unchanged(self):
         session = GameSession(SEED)
@@ -89,14 +96,14 @@ class TestGenerations(unittest.TestCase):
 
     def test_retired_players_true_values_appear_only_in_that_seasons_reveal(self):
         session = self.session
-        retired = {r["player_id"] for r in session.history[-1]["retired"]}
-        self.assertTrue(retired)
-        revealed = {p["player_id"]: p for p in session.reveal()["players"]}
+        season = next(h for h in reversed(session.history) if h["retired"])  # own-club retirements are staggered across seasons
+        retired = {r["player_id"] for r in season["retired"]}
+        revealed = {p["player_id"]: p for p in session.reveal(season["season"])["players"]}
         self.assertTrue(retired <= set(revealed))
         hidden = true_values(session.world)
         # the reveal (true values just before the season-end aging) is the one place they show up; every other view, the history and the save are clean
         self.assertEqual(leaks(json.loads(json.dumps([session.state(), session.history, session.save_payload()])), hidden), [])
-        self.assertNotEqual(leaks(json.loads(json.dumps(session.reveal())), hidden), [])
+        self.assertNotEqual(leaks(json.loads(json.dumps(session.reveal(season["season"]))), hidden), [])
 
     def test_reveal_of_a_finished_season_stays_available_in_later_seasons(self):
         session = GameSession(SEED)

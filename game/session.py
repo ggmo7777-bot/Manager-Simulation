@@ -1,12 +1,14 @@
 """Human-coached seasons, one after another in the same world. Rules are the research simulation's own step functions
 (aging and retire_replace_v1 generations included).
 
-The human replaces exactly two decisions of coach c1 (club_a), by wrapping the research decision
-functions for the duration of one step: the lineup, and the first coaching slot of a week (advice).
-Everything else, including the assistant coach's remaining slots, stays with the research Policy.
+The human replaces exactly four decisions of coach c1 (club_a), by wrapping the research decision
+functions for the duration of one step: the lineup, the first coaching slot of a week (advice), the second slot of the
+week's first day (scouting one player of another club), and which players to bid for in a transfer window.
+Everything else (the assistant coach's remaining slots, the players' answers, the market rules, other clubs) stays research.
 """
 import hashlib
 import json
+import re
 from contextlib import contextmanager
 from dataclasses import replace
 from pathlib import Path
@@ -27,11 +29,13 @@ GAME_CONFIG = replace(
     season_length_days=SEASON_DAYS, personality="latent_v1", advice_response="personality_v1",
     coach_belief="observe_v1", observation_noise_mode="centered_v1", coach_practice_rating="blend_v1",
     coach_exploration="unseen_bonus_v1",
-    # shortcut: every player starts at one age (research constraint), so 33 (the value T030 tested) makes veterans retire within 3 seasons; no calibrated spread.
-    aging_start_age=33, aging_curve="hypothesis_v1", generations="retire_replace_v1")
+    # Uncalibrated game defaults: initial ages 29..34 and newcomers 18..23 (age_spread=5, game-v3) so retirements are staggered; no real-world data behind these.
+    aging_start_age=34, age_spread=5, transfer_window_cycle="per_season_v1", aging_curve="hypothesis_v1", generations="retire_replace_v1")
 
 
-SAVE_VERSION = 2
+SAVE_VERSION = 3
+CONFIG_VERSION_LENGTH = 6
+MAX_SEED_DIGITS = 18  # int() refuses very long digit strings with a ValueError
 
 
 class InvalidInput(ValueError):
@@ -40,6 +44,25 @@ class InvalidInput(ValueError):
 
 def _sha256(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+
+
+def config_version():
+    """Short id of the season rules and research features: two players share a world only on the same one."""
+    return _sha256(GAME_CONFIG.to_dict())[:CONFIG_VERSION_LENGTH]
+
+
+def share_code(seed):
+    return f"{config_version()}-{seed}"
+
+
+def seed_from_code(code):
+    """Seed of a shared code, or InvalidInput (wrong shape, or made under a different config version)."""
+    version, separator, seed = code.partition("-") if type(code) is str else ("", "", "")
+    if not separator or not re.fullmatch(r"-?\d{1,%d}" % MAX_SEED_DIGITS, seed):
+        raise InvalidInput("シードコードの形式が正しくありません (例: abc123-7)")
+    if version != config_version():
+        raise InvalidInput(f"このコードは別のゲーム設定バージョン({version})のもので、このゲーム({config_version()})では同じ世界になりません")
+    return int(seed)
 
 
 def code_fingerprint():
@@ -85,39 +108,71 @@ class GameSession:
         return "lineup" if day % GAME_CONFIG.match_interval_days == TRAINING_DAYS_PER_WEEK else "training"
 
     def state(self):
+        return obs.check_visible(self._state())
+
+    def _state(self):
         world = self.world
         return {
-            "seed": self.seed, "season": self.season, "day": self.day_in_season, "season_days": SEASON_DAYS,
+            "seed": self.seed, "share_code": share_code(self.seed), "season": self.season, "day": self.day_in_season, "season_days": SEASON_DAYS,
             "phase": self.phase, "week": self.day_in_season // GAME_CONFIG.match_interval_days + 1,
             "club_id": obs.OWN_CLUB, "squad": obs.squad_view(world),
             "standings": obs.standings_view(world, self.season_start_totals),
             "recommended_starters": obs.recommended_starters(world), "methods": list(METHODS), "history": self.history,
+            "names": obs.display_names(self.seed, world), "notices": obs.notices_view(world, (self.season - 1) * SEASON_DAYS),
+            "targets": obs.targets_view(world), "market": obs.market_view(world, SEASON_DAYS), "recommended_offers": obs.recommended_offers(world),
         }
 
-    def _run(self, days, **hooks):
-        before_events, before_squad = len(self.world.events), obs.squad_view(self.world)
+    def _run(self, days, move, first_day, **hooks):
+        before_events, before_known = len(self.world.events), self._known_players()
         with _replaced(**hooks):
             le.advance_league_days(self.world, days)
         if self.phase == "season_end":
             le._validate_league_invariants(self.world)
             self._close_season(before_events)
-        after_squad = obs.squad_view(self.world)
-        return {"events": obs.observed_events(self.world, before_events),
-                "estimate_changes": obs.estimate_changes(before_squad, after_squad), "state": self.state()}
+        events = obs.observed_events(self.world, before_events)
+        yours = [e for e in events if obs.is_your_event(e, move, first_day)]
+        return obs.check_visible({"events": events, "your_move": move, "your_events": yours,
+                                  "auto_events": [e for e in events if e not in yours],
+                                  "estimate_changes": obs.estimate_changes(before_known, self._known_players()), "state": self.state()})
 
-    def train(self, advice):
-        """Run one week of training. advice: None or {"player_id", "method"} given on the week's first day."""
+    def _step(self, record, move, days, **hooks):
+        """Run one step and record the input only once it completed. If it fails midway the world has advanced
+        without a record, so rebuild it from the recorded inputs: state and input log never disagree."""
+        try:
+            result = self._run(days, move, self.world.day + 1, **hooks)
+        except Exception:
+            self._rebuild()
+            raise
+        self.inputs.append(record)
+        return result
+
+    def _rebuild(self):
+        rebuilt = GameSession(self.seed)
+        rebuilt._replay(self.inputs)
+        self.__dict__.update(rebuilt.__dict__)
+
+    def _known_players(self):
+        return obs.squad_view(self.world) + obs.targets_view(self.world)
+
+    def train(self, advice, scout=None):
+        """Run one week of training. advice: None or {"player_id", "method"} given on the week's first day;
+        scout: None or a player of another club the coach scouts on that day (the research rule decides who can be afforded)."""
         self._require_phase("training")
         if advice is not None:
             self._check_advice(advice)
-        result = self._run(TRAINING_DAYS_PER_WEEK, decide_coach_training=self._advice_hook(advice))
-        self.inputs.append({"kind": "train", "advice": advice})
-        return result
+        if scout is not None and scout not in obs.scoutable_targets(self.world):
+            raise InvalidInput(f"scout must be one of {obs.scoutable_targets(self.world)} (funds or player)")
+        move = {"kind": "train", "advice": advice, "scout": scout}
+        return self._step(move, move, TRAINING_DAYS_PER_WEEK, decide_coach_training=self._training_hook(advice, scout))
 
-    def play_match(self, starters):
+    def play_match(self, starters, offers=None):
+        """Play the match day. offers: players of other clubs to bid for if a transfer window follows this match (else none)."""
         self._require_phase("lineup")
+        offers = [] if offers is None else offers
+        self._check_offers(offers)
         roster = self.world.club_rosters[obs.OWN_CLUB]
-        if type(starters) is not list or len(starters) != 2 or len(set(starters)) != 2 or not set(starters) <= set(roster):
+        if type(starters) is not list or not all(type(pid) is str for pid in starters) or len(starters) != 2 \
+                or len(set(starters)) != 2 or not set(starters) <= set(roster):
             raise InvalidInput(f"starters must be 2 distinct players of {roster}")
         original = le.decide_club_lineup
 
@@ -126,9 +181,17 @@ class GameSession:
             if coach.coach_id != obs.OWN_COACH:
                 return decision
             return {**decision, "starters": list(starters), "bench": [pid for pid in roster if pid not in starters]}
-        result = self._run(1, decide_club_lineup=human_lineup, _age_players=self._capture_before_aging(le._age_players))
-        self.inputs.append({"kind": "lineup", "starters": list(starters)})
-        return result
+        original_acquisition = le.decide_transfer_acquisition
+
+        def human_acquisition(*, coach, roster, player_id, config):
+            decision = original_acquisition(coach=coach, roster=roster, player_id=player_id, config=config)
+            return decision if coach.coach_id != obs.OWN_COACH else {**decision, "wants_offer": player_id in offers}
+        move = {"kind": "lineup", "starters": list(starters), "recommended_starters": obs.recommended_starters(self.world),
+                "offers": list(offers),
+                "recommended_offers": obs.recommended_offers(self.world) if le.is_transfer_window_day(self.world.config, self.world.day + 1) else []}
+        return self._step({"kind": "lineup", "starters": list(starters), "offers": list(offers)}, move, 1,
+                          decide_club_lineup=human_lineup, decide_transfer_acquisition=human_acquisition,
+                          _age_players=self._capture_before_aging(le._age_players))
 
     def next_season(self):
         """Continue the same world: the next season starts from the state the last one ended in."""
@@ -136,7 +199,7 @@ class GameSession:
         self.season += 1
         self.season_start_totals = obs.account_totals(self.world)
         self.inputs.append({"kind": "next_season"})
-        return {"events": [], "estimate_changes": [], "state": self.state()}
+        return {"events": [], "your_move": {"kind": "next_season"}, "your_events": [], "auto_events": [], "estimate_changes": [], "state": self.state()}
 
     def _capture_before_aging(self, original):
         def capture(world, season):
@@ -175,19 +238,22 @@ class GameSession:
         inputs = payload.get("inputs")
         if type(inputs) is not list:
             raise InvalidInput("save inputs must be a list")
-        for item in inputs:
-            kind = item.get("kind") if type(item) is dict else None
-            if kind == "train":
-                session.train(item.get("advice"))
-            elif kind == "lineup":
-                session.play_match(item.get("starters"))
-            elif kind == "next_season":
-                session.next_season()
-            else:
-                raise InvalidInput("save contains an unknown input")
+        session._replay(inputs)
         if _sha256(session.state()) != payload.get("view_digest"):
             raise InvalidInput("save was altered: the replay does not reach the saved state")
         return session
+
+    def _replay(self, inputs):
+        for item in inputs:
+            kind = item.get("kind") if type(item) is dict else None
+            if kind == "train":
+                self.train(item.get("advice"), item.get("scout"))
+            elif kind == "lineup":
+                self.play_match(item.get("starters"), item.get("offers"))
+            elif kind == "next_season":
+                self.next_season()
+            else:
+                raise InvalidInput("save contains an unknown input")
 
     def reveal(self, season=None):
         """True values of a completed season's squad (the current one only once it has ended)."""
@@ -207,14 +273,24 @@ class GameSession:
         if type(advice) is not dict or advice.get("player_id") not in roster or advice.get("method") not in METHODS:
             raise InvalidInput(f"advice needs player_id in {roster} and method in {METHODS}")
 
-    def _advice_hook(self, advice):
+    def _check_offers(self, offers):
+        others = obs.other_club_players(self.world)
+        if type(offers) is not list or len(set(map(str, offers))) != len(offers) or not all(o in others for o in offers):
+            raise InvalidInput(f"offers must be distinct players of other clubs: {others}")
+        if offers and not le.is_transfer_window_day(self.world.config, self.world.day + 1):
+            raise InvalidInput("no transfer window follows this match day, so no offers can be made")
+
+    def _training_hook(self, advice, scout):
+        """Slot 1 of the week's first day carries the advice, slot 2 the scouting; both only if the human gave them."""
         original, first_day = le.decide_coach_training, self.world.day + 1
+        wanted = {1: lambda c: advice and c["kind"] == "propose" and c["target"] == advice["player_id"] and c["method"] == advice["method"],
+                  2: lambda c: scout and c["kind"] == "scout" and c["target"] == scout}
 
         def hook(**kwargs):
             decision = original(**kwargs)
-            if advice is None or kwargs["coach"].coach_id != obs.OWN_COACH or kwargs["day"] != first_day or kwargs["slot"] != 1:
+            matches = wanted.get(kwargs["slot"])
+            if kwargs["coach"].coach_id != obs.OWN_COACH or kwargs["day"] != first_day or not matches:
                 return decision
-            chosen = next(c for c in decision["candidates"] if c["kind"] == "propose"
-                          and c["target"] == advice["player_id"] and c["method"] == advice["method"])
-            return {**decision, "chosen": chosen}
+            chosen = next((c for c in decision["candidates"] if matches(c)), None)
+            return decision if chosen is None else {**decision, "chosen": chosen}
         return hook

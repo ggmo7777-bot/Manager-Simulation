@@ -156,13 +156,17 @@ def counterfactual(cells_by_setting, config):
 
 
 # ---- gates ----
+GAME_OPT_IN_FILES = {'league_economy.py'}  # DECISIONS G3/G4: game opt-in keys age_spread/transfer_window_cycle (default off, default history byte-identical)
+
+
 def check_sim_unchanged(root):
     bundle, now = root / FROZEN / 'soccer_sim', root / 'soccer_sim'
     names = sorted(p.name for p in now.glob('*.py'))
     assert names == sorted(p.name for p in bundle.glob('*.py'))
     changed = [n for n in names if (now / n).read_bytes() != (bundle / n).read_bytes()]
-    assert not changed, changed
-    return {'files': len(names), 'changed': changed}
+    unexpected = [n for n in changed if n not in GAME_OPT_IN_FILES]
+    assert not unexpected, unexpected
+    return {'files': len(names), 'changed': unexpected}
 
 
 def check_t037_reproduced(root, pooled_by_setting):
