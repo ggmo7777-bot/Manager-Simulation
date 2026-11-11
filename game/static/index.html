@@ -83,6 +83,7 @@ details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;f
     <div id="squad" class="hide">
       <section class="card"><h2>選手 <span class="hd">推定と不確かさ。真の値は季節の終わりまで見えない</span></h2><div id="squadTable" class="scroll"></div></section>
     </div>
+    <div id="player" class="hide"><div id="playerBody"></div></div>
     <div id="match" class="hide">
       <section class="card" id="actionCard"></section>
       <section class="card"><h2>結果とその理由 <span class="hd">直前の1手分</span></h2><div id="result" class="mut">まだ何も起きていない。</div></section>
@@ -181,7 +182,7 @@ function leastKnownResponder() {
 function renderSquad() {
   const rows = state.squad.map(p => {
     const rec = trustText(p);
-    return `<tr><td class="num">${esc(nm(p.player_id))}<div class="hd">${esc(p.player_id)} · ${p.age}歳${p.observation_count === 0 ? " 新人・未観察" : ""}</div></td>
+    return `<tr><td class="num"><button class="bt" data-player="${esc(p.player_id)}" style="padding:0 10px">${esc(nm(p.player_id))}</button><div class="hd">${esc(p.player_id)} · ${p.age}歳${p.observation_count === 0 ? " 新人・未観察" : ""}</div></td>
       <td>${bar(p.skill_estimate, p.measurement_error)}<span class="num">${f2(p.skill_estimate)}</span> <span class="hd">±${f3(p.measurement_error)}/回</span></td>
       <td><span class="num">${f2(p.rating_estimate)}</span></td>
       <td><span class="num">${f2(p.fatigue_estimate)}</span></td>
@@ -189,7 +190,8 @@ function renderSquad() {
       <td>${esc(rec)}</td><td>${p.appearances}試合 ${p.goals}得点</td></tr>`;
   }).join("");
   $("squadTable").innerHTML = `<table><tr><th>選手</th><th>技能の推定</th><th>試合評価</th><th>疲労の推定</th><th>観測の量</th><th>助言を聞く度合い(推定)</th><th>出場(事実)</th></tr>${rows}</table>
-    <div class="hd" style="margin-top:8px">±は1回の観測の誤差幅。観測が少ない・古い選手ほど、実際の推定誤差は大きい。</div>`;
+    <div class="hd" style="margin-top:8px">±は1回の観測の誤差幅。観測が少ない・古い選手ほど、実際の推定誤差は大きい。名前を押すと選手詳細。</div>`;
+  document.querySelectorAll("[data-player]").forEach(b => b.onclick = () => show("player", b.dataset.player));
 }
 
 // Why a bid cannot be made right now (null when it can). Cash rule: the research market asks fee + reserve per bid.
@@ -421,6 +423,58 @@ async function renderReveal(season) {
     <table><tr><th>日</th><th>選手</th><th>移籍先</th><th>本人が述べた理由</th><th>実際の判断(記録)</th></tr>${sales || '<tr><td colspan="5" class="mut">この季に売却なし</td></tr>'}</table>`;
 }
 
+
+// Player detail: the coach's own estimate over time, each move beside the events that happened in that step, and the true values only for seasons already revealed.
+const CHART = {w: 660, h: 200, left: 40, right: 20, top: 20, bottom: 24};
+const OBSERVATION_KINDS = ["coach_session_observation", "coach_match_observation", "coach_scout_observation"];
+const estimateReasons = (events, from, to) => events.filter(e => e.day > from && e.day <= to && e.kind !== "league_match_completed");
+function skillChart(history, events, reveals, seasonDays) {
+  const {w, h, left, right, top, bottom} = CHART, lastDay = Math.max(history[history.length - 1].day, 1);
+  const x = day => left + day / lastDay * (w - left - right);
+  const lows = history.map(p => p.skill_estimate - p.measurement_error), highs = history.map(p => p.skill_estimate + p.measurement_error);
+  const revealed = reveals.map(r => r.skill_true);
+  const lo = Math.max(0, Math.floor(Math.min(...lows, ...revealed) * 20) / 20), hi = Math.min(1, Math.ceil(Math.max(...highs, ...revealed) * 20) / 20);
+  const y = v => top + (hi - v) / (hi - lo || 1) * (h - top - bottom);
+  const band = history.map(p => `${x(p.day)},${y(p.skill_estimate + p.measurement_error)}`).concat(history.slice().reverse().map(p => `${x(p.day)},${y(p.skill_estimate - p.measurement_error)}`)).join(" ");
+  const line = history.map(p => `${x(p.day)},${y(p.skill_estimate)}`).join(" ");
+  const seasons = [...Array(Math.floor(lastDay / seasonDays) + 1).keys()].slice(1).map(n => `<path d="M${x(n * seasonDays)} ${top}V${h - bottom}" stroke="#BFBBB0" stroke-dasharray="3 4"/><text x="${x(n * seasonDays) - 3}" y="${h - 8}" text-anchor="end" font-size="12" fill="#5B6068">第${n}季終</text>`).join("");
+  const refusals = events.filter(e => e.kind === "coach_advice_outcome" && e.response === "refused").map(e => `<path d="M${x(e.day)} ${top}V${h - bottom}" stroke="#B45309" stroke-dasharray="2 3"/>`).join("");
+  const seen = events.filter(e => OBSERVATION_KINDS.includes(e.kind)).map(e => `<circle cx="${x(e.day)}" cy="${h - bottom}" r="2.5" fill="#0B6E99"/>`).join("");
+  const truths = reveals.map(r => `<path d="M${x(r.season * seasonDays)} ${y(r.skill_true) - 7}l7 7l-7 7l-7 -7z" fill="#fff" stroke="#15171A" stroke-width="1.5"><title>第${r.season}季の答え合わせ: 真の技能 ${f3(r.skill_true)}</title></path>`).join("");
+  const grid = [lo, (lo + hi) / 2, hi].map(v => `<path d="M${left} ${y(v)}H${w - right}" stroke="#E6E3DB"/><text x="${left - 6}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="#5B6068">${f2(v)}</text>`).join("");
+  return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="技能の推定の履歴。帯は1回の観測の誤差幅、線は点推定、白抜きの印は答え合わせ済みの季の真の技能" style="display:block;width:100%;height:auto">
+    ${grid}${seasons}${refusals}<polygon points="${band}" fill="#0B6E99" fill-opacity=".2"/><polyline points="${line}" fill="none" stroke="#0B6E99" stroke-width="2.5"/>${seen}${truths}</svg>`;
+}
+
+function playerEventLine(e, pid) {
+  if (e.kind !== "league_match_completed") return describe(e);
+  const mine = e.player_stats[pid];
+  return `試合 ${e.home_club} ${e.home_goals} - ${e.away_goals} ${e.away_club}: 先発して${mine.goals}得点/シュート${mine.shots}`;
+}
+
+async function renderPlayer(pid) {
+  const [data, ...reveals] = await Promise.all([act(`/api/player/${pid}`), ...state.history.map(h => act(`/api/reveal/${h.season}`))]);
+  if (!data) return;
+  const row = state.squad.find(p => p.player_id === pid), history = data.history;
+  const truths = reveals.filter(Boolean).map(r => ({season: r.season, ...r.players.find(p => p.player_id === pid)})).filter(r => r.skill_true !== undefined);
+  const noted = data.events.filter(e => !OBSERVATION_KINDS.includes(e.kind));
+  const moves = history.slice(1).map((p, i) => ({from: history[i], to: p, reasons: estimateReasons(data.events, history[i].day, p.day)}))
+    .filter(m => m.to.skill_estimate !== m.from.skill_estimate).reverse();
+  const moveRow = m => `<div class="ev"><span class="mut">通算日${m.from.day}→${m.to.day}</span> ${chip("推定")}技能の推定 ${f3(m.from.skill_estimate)} → ${f3(m.to.skill_estimate)} (${m.to.skill_estimate >= m.from.skill_estimate ? "+" : ""}${f3(m.to.skill_estimate - m.from.skill_estimate)})
+    ${m.reasons.map(e => `<div class="hd">${chip(e.label)}${esc(describe(e))}</div>`).join("") || '<div class="hd">この間の観測なし(加齢などで動いた)</div>'}</div>`;
+  const truthRow = r => `<tr><td class="num">第${r.season}季末</td><td class="num">${f3(r.skill_estimate)}</td><td class="num">${f3(r.skill_true)}</td><td class="num">${f3(r.cap_true)}</td><td class="num">${r.discipline_true === null ? "-" : f2(r.discipline_true)}</td><td class="num">${r.emotional_stability_true === null ? "-" : f2(r.emotional_stability_true)}</td></tr>`;
+  $("playerBody").innerHTML = `<section class="card"><div class="row"><button class="bt" id="backSquad">選手一覧へ</button><h2 style="margin:0;font-size:28px">${esc(nm(pid))}</h2><span class="hd">${esc(pid)} · ${row.age}歳 · 今季 ${row.appearances}試合 ${row.goals}得点</span></div>
+      <div class="ev" style="border:0">${chip("推定")}技能 <b class="num">${f2(row.skill_estimate)}</b> <span class="hd">±${f3(row.measurement_error)}/回・観測${row.observation_count}回</span> / 疲労 <b class="num">${f2(row.fatigue_estimate)}</b> / 助言を聞く度合い ${esc(trustText(row))}</div></section>
+    <section class="card"><h2>技能の推定の履歴 <span class="hd">帯は1回の観測の誤差幅(確率ではない)、線は点推定、下の点は観測した日、橙の点線は助言を断られた日${truths.length ? "、白抜きは答え合わせ済みの真の技能" : ""}</span></h2>
+      ${skillChart(history, data.events, truths, state.season_days)}
+      <div class="hd">真の技能と性格は、季が終わって答え合わせが開くまで見えない。</div></section>
+    <section class="card"><h2>なぜ推定が動いたか <span class="hd">1手ごとの変化と、その間に起きたこと</span></h2>${moves.map(moveRow).join("") || '<div class="mut">まだ推定が動いていない。</div>'}</section>
+    <section class="card"><h2>この選手の出来事 <span class="hd">事実・観測・本人の理由・推定を分けて表示(観測の個別の行は除く)</span></h2>
+      ${noted.slice().reverse().map(e => `<div class="ev">${chip(e.label)}<span class="mut">通算日${e.day}</span> ${esc(playerEventLine(e, pid))}</div>`).join("") || '<div class="mut">まだ出来事なし。</div>'}</section>
+    ${truths.length ? `<section class="card"><h2>答え合わせ済みの季の真の値</h2><table><tr><th>時点</th><th>技能 推定</th><th>真の技能</th><th>成長の上限</th><th>規律性</th><th>感情安定性</th></tr>${truths.map(truthRow).join("")}</table></section>` : ""}`;
+  $("backSquad").onclick = () => show("squad");
+}
+
 function renderHistory() {
   const rows = state.history.map(h => {
     const retired = h.retired.map(r => `${esc(nm(r.player_id))}(${r.age}歳・${RETIRE_REASON[r.reason] || esc(r.reason)})`).join("、") || "なし";
@@ -433,9 +487,11 @@ function renderHistory() {
   document.querySelectorAll("[data-reveal]").forEach(b => b.onclick = () => show("reveal", Number(b.dataset.reveal)));
 }
 
-function show(tab, season) {
-  for (const id of ["home", "squad", "match", "transfer", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
-  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+function show(tab, detail) {
+  const season = tab === "reveal" ? detail : undefined;
+  for (const id of ["home", "squad", "player", "match", "transfer", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === (tab === "player" ? "squad" : tab)));
+  if (tab === "player") renderPlayer(detail);
   if (tab === "home") renderHome();
   if (tab === "reveal") renderReveal(season);
 }
