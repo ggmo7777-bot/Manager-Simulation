@@ -35,6 +35,7 @@ GAME_CONFIG = replace(
     initial_academy_cash_units=25_000_000)
 
 
+ESTIMATE_FIELDS = ("skill_estimate", "fatigue_estimate", "observation_count", "measurement_error", "receptiveness")
 SAVE_VERSION = 3
 CONFIG_VERSION_LENGTH = 6
 MAX_SEED_DIGITS = 18  # int() refuses very long digit strings with a ValueError
@@ -97,6 +98,8 @@ class GameSession:
         self.season_start_totals = obs.account_totals(self.world)
         self.reveals = {}  # season -> true values of that season's squad, taken just before the season-end aging
         self.history = []  # one public summary per completed season
+        self.estimate_log = {}  # player -> the coach's own estimate after each step (rebuilt by replay, never saved)
+        self._record_estimates()
 
     @property
     def day_in_season(self):
@@ -133,9 +136,22 @@ class GameSession:
             self._close_season(before_events)
         events = obs.observed_events(self.world, before_events)
         yours = [e for e in events if obs.is_your_event(e, move, first_day)]
+        self._record_estimates()
         return obs.check_visible({"events": events, "your_move": move, "your_events": yours,
                                   "auto_events": [e for e in events if e not in yours],
                                   "estimate_changes": obs.estimate_changes(before_known, self._known_players()), "state": self.state()})
+
+    def _record_estimates(self):
+        for row in obs.squad_view(self.world):
+            self.estimate_log.setdefault(row["player_id"], []).append({
+                "day": self.world.day, "season": self.season, **{k: row[k] for k in ESTIMATE_FIELDS}})
+
+    def player_view(self, player_id):
+        """One player of the squad as the coach knows him: his estimate over time and every event about him, with labels."""
+        if player_id not in self.world.club_rosters[obs.OWN_CLUB]:
+            raise InvalidInput(f"player must be one of {self.world.club_rosters[obs.OWN_CLUB]}")
+        return obs.check_visible({"player_id": player_id, "history": self.estimate_log[player_id],
+                                  "events": obs.player_events(self.world, player_id)})
 
     def _step(self, record, move, days, **hooks):
         """Run one step and record the input only once it completed. If it fails midway the world has advanced

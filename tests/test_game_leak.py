@@ -72,6 +72,10 @@ def play_season(session, collect):
         collect(human_week(session))
 
 
+def player_views(session):
+    return [session.player_view(row["player_id"]) for row in session.state()["squad"]]
+
+
 SEEDS = range(1, 21)
 TRANSFER_KINDS = ("offer_resolved", "transfer_response", "coach_scout_observation")
 SEASONS = 4  # transfer windows recur every season (game-v6), so bids are made in seasons 3 and 4 too
@@ -84,7 +88,7 @@ class TestPlayerViewHasNoTruth(unittest.TestCase):
             problems = []
             for season in range(SEASONS):
                 play_season(session, lambda payload: problems.extend(
-                    leaks(json.loads(json.dumps(payload)), true_values(session.world))))
+                    leaks(json.loads(json.dumps([payload, player_views(session)])), true_values(session.world))))
                 if season < SEASONS - 1:
                     session.next_season()
             save = json.loads(json.dumps(session.save_payload()))

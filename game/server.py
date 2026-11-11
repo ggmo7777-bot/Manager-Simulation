@@ -36,6 +36,9 @@ class Game:
             past_reveal = re.fullmatch(r"/api/reveal/(\d+)", path) if method == "GET" else None
             if past_reveal:
                 return self.session.reveal(int(past_reveal.group(1)))
+            player = re.fullmatch(r"/api/player/(p\d+)", path) if method == "GET" else None
+            if player:
+                return self.session.player_view(player.group(1))
             if (method, path) == ("POST", "/api/next_season"):
                 return self.session.next_season()
             if (method, path) == ("POST", "/api/new"):

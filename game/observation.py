@@ -172,6 +172,13 @@ def scoutable_targets(world):
     return [c["target"] for c in decision["candidates"] if c["kind"] == "scout"]
 
 
+def player_events(world, player_id):
+    """What the coach may see about one of his players over all seasons, oldest first (the same labelled items as the step results)."""
+    own_match = lambda item: item["kind"] == "league_match_completed" and player_id in item["home_starters"] + item["away_starters"]
+    return [item for item in observed_events(world, 0)
+            if item.get("player_id") == player_id or own_match(item)]
+
+
 def required_offer_fee(config):
     """Fee the research market asks of a buyer up front (same expression as decide_transfer_bidding; a test pins them together)."""
     if config.solidarity_mode == "enabled":
