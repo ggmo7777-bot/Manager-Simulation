@@ -73,7 +73,7 @@ def play_season(session, collect):
 
 
 def player_views(session):
-    return [session.player_view(row["player_id"]) for row in session.state()["squad"]]
+    return [session.chronicle_view()] + [session.player_view(row["player_id"]) for row in session.state()["squad"]]
 
 
 SEEDS = range(1, 21)

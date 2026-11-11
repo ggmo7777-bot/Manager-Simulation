@@ -35,6 +35,9 @@ GAME_CONFIG = replace(
     initial_academy_cash_units=25_000_000)
 
 
+JUDGE_TOLERANCE = 0.05  # uncalibrated: an estimate within this of the true skill counts as a correct read (the squad's typical error is 0.04-0.09)
+STARTERS_PER_MATCH = 2
+WASTED_MAX_APPEARANCES = 2  # of the 6 matches in a season: a top-2 player by true skill who started this rarely is a wasted talent
 ESTIMATE_FIELDS = ("skill_estimate", "fatigue_estimate", "observation_count", "measurement_error", "receptiveness")
 SAVE_VERSION = 3
 CONFIG_VERSION_LENGTH = 6
@@ -153,6 +156,9 @@ class GameSession:
         return obs.check_visible({"player_id": player_id, "history": self.estimate_log[player_id],
                                   "events": obs.player_events(self.world, player_id)})
 
+    def chronicle_view(self):
+        return obs.check_visible({"events": obs.chronicle(self.world)})
+
     def _step(self, record, move, days, **hooks):
         """Run one step and record the input only once it completed. If it fails midway the world has advanced
         without a record, so rebuild it from the recorded inputs: state and input log never disagree."""
@@ -232,13 +238,35 @@ class GameSession:
         rank, own = next((i + 1, row) for i, row in enumerate(table) if row["club_id"] == obs.OWN_CLUB)
         retired, joined = obs.season_turnover(self.world, before_events)
         errors = [abs(p["skill_estimate"] - p["skill_true"]) for p in reveal["players"]]
+        sold = obs.notices_view(self.world, (self.season - 1) * SEASON_DAYS)
         self.history.append({
             "season": self.season, "rank": rank, "champion": table[0]["club_id"], "points": own["points"],
             "wins": own["wins"], "draws": own["draws"], "losses": own["losses"],
             "goals_for": own["goals_for"], "goals_against": own["goals_against"],
             "retired": [{"player_id": r["player_id"], "age": r["age"], "reason": r["reason"]} for r in retired],
             "joined": [{"player_id": j["player_id"], "age": j["age"]} for j in joined],
-            "skill_mae": fmean(errors), "squad_size": len(errors)})
+            "skill_mae": fmean(errors), "squad_size": len(errors),
+            "judging": {"hits": sum(error <= JUDGE_TOLERANCE for error in errors), "total": len(errors), "mean_error": fmean(errors)},
+            "lives": self._lives(reveal),
+            "left": [{"player_id": r["player_id"], "reason": "retired"} for r in retired] + [{"player_id": n["player_id"], "reason": "sold"} for n in sold],
+            "trust_mean": self._mean_trust(reveal)})
+
+    def _lives(self, reveal):
+        """Axis 2: each squad player's season in public records; a top-skill player (by the reveal) who rarely started is flagged."""
+        records = obs.public_match_records(self.world, (self.season - 1) * SEASON_DAYS)
+        by_skill = sorted(reveal["players"], key=lambda p: -p["skill_true"])
+        best = {p["player_id"] for p in by_skill[:STARTERS_PER_MATCH]}
+        rows = []
+        for p in reveal["players"]:
+            record = records.get(p["player_id"], {"appearances": 0, "goals": 0})
+            rows.append({"player_id": p["player_id"], **record,
+                         "wasted": p["player_id"] in best and record["appearances"] <= WASTED_MAX_APPEARANCES})
+        return rows
+
+    @staticmethod
+    def _mean_trust(reveal):
+        trusts = [p["trust_in_you_true"] for p in reveal["players"] if p["trust_in_you_true"] is not None]
+        return fmean(trusts) if trusts else None
 
     def save_payload(self):
         """Seed + player inputs only (no world state, so no true value). view_digest is over the player's view."""
