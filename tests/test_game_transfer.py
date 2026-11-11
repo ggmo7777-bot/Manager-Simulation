@@ -153,7 +153,7 @@ class TestReplayWithTransferInputs(unittest.TestCase):
     def test_changed_scout_or_offers_are_not_replayable(self):
         played = play_with_inputs(GameSession(7), 1)
         good = json.loads(json.dumps(played.save_payload()))
-        for field, value in (("scout", "p4"), ("offers", ["p6"])):
+        for field, value in (("scout", "p4"), ("offers", ["p5"])):  # p5: a bid whose outcome differs from the recorded one in the squad_size=4 world
             index = max(i for i, item in enumerate(good["inputs"]) if item.get(field))  # the last one: the earliest bids can fail for lack of cash whatever they name
             bad = json.loads(json.dumps(good))
             bad["inputs"][index][field] = value

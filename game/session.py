@@ -30,7 +30,7 @@ GAME_CONFIG = replace(
     coach_belief="observe_v1", observation_noise_mode="centered_v1", coach_practice_rating="blend_v1",
     coach_exploration="unseen_bonus_v1",
     # Uncalibrated game defaults: initial ages 29..34 and newcomers 18..23 (age_spread=5, game-v3) so retirements are staggered; no real-world data behind these.
-    aging_start_age=34, age_spread=5, transfer_window_cycle="per_season_v1", aging_curve="hypothesis_v1", generations="retire_replace_v1")
+    aging_start_age=34, age_spread=5, transfer_window_cycle="per_season_v1", squad_size=4, aging_curve="hypothesis_v1", generations="retire_replace_v1")
 
 
 SAVE_VERSION = 3

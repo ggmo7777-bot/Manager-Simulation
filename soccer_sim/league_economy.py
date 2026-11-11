@@ -247,7 +247,7 @@ def fatigue_mode(mode: str) -> dict[str, bool]:
 EXPLORE_STALENESS_CAP = 40  # T031: days unseen after which a player stops getting more observation value (the default cap is 10)
 # T030 (pre-registered, uncalibrated): retirement thresholds, the club size intake restores, the newcomer age, and the coach's constant first impression (skill, match rating, fatigue).
 RETIRE_SOFT_AGE, RETIRE_HARD_AGE, RETIRE_SATISFACTION_BELOW = 33, 36, 0.5
-CLUB_TARGET_ROSTER, YOUTH_INTAKE_AGE, YOUTH_PRIOR = 3, 18, (0.5, 0.5, 0.10)
+CLUB_TARGET_ROSTER, YOUTH_INTAKE_AGE, YOUTH_PRIOR = 3, 18, (0.5, 0.5, 0.10)  # CLUB_TARGET_ROSTER is the default of config.squad_size (game-v8)
 
 
 def decide_retirement(*, age: int, playing_time_satisfaction: float) -> dict[str, Any]:
@@ -339,6 +339,12 @@ RANGE_RUNNABLE = tuple(name for name in RANGE_ALL_NAMES[1:] if _range_valid(name
 
 MIN_CLUB_ROSTER = 2
 MAX_CLUB_ROSTER = 4
+MAX_SQUAD_SIZE = 8  # game-v8: upper bound of config.squad_size (uncalibrated)
+
+
+def club_roster_max(config: "LeagueEconomyConfig") -> int:
+    """game-v8: one place above the target squad size for incoming transfers (the old 4 when the squad is the default 3)."""
+    return max(MAX_CLUB_ROSTER, config.squad_size + 1)
 
 TRAINING_METHODS = ("A", "B")
 PLAYER_TRAINING_ACTIONS = ("A", "B", "rest")
@@ -417,6 +423,7 @@ class LeagueEconomyConfig:
     coach_practice_rating: str = "none"  # T032: "none" or "blend_v1" (a practice-day observation also updates the coach's match-rating estimate, 0.70 old + 0.30 observed; B-layer only)
     coach_exploration: str = "none"  # T031: "none" or "unseen_bonus_v1" (a coach's observe value keeps growing with days unseen up to 40 instead of 10; B-layer input only)
     age_spread: int = 0  # game-v3 (uncalibrated): 0 = everyone starts at aging_start_age and newcomers join at 18; k>0 = initial age = start - n and newcomer age = 18 + n with n a keyed whole-year draw in 0..k (own channels); needs generations
+    squad_size: int = CLUB_TARGET_ROSTER  # game-v8 (uncalibrated): players per club. 3 = the 12-player league; n>3 = every club is topped up to n with youth newcomers on day 0 (recorded season_youth_joined events, season 0) and at each season end; needs generations
     transfer_window_cycle: str = "fixed"  # game-v6: "fixed" (windows only on days 28 and 56) or "per_season_v1" (the same in-season days of those two, i.e. offsets 28 and 14 for a 42-day season, recur every season); needs season_length_days; no RNG
     generations: str = "none"  # T030: "none" or "retire_replace_v1" (season-end retirement from own state + same-day youth intake); needs aging_start_age>0
     coach_belief: str = "none"  # T029: "none", "observe_v1" (record only) or "use_v1" (proposal value scaled by believed receptiveness); needs advice_response
@@ -544,6 +551,10 @@ class LeagueEconomyConfig:
             raise ValueError("transfer_window_cycle requires season_length_days")
         if self.generations != "none" and not self.aging_start_age:
             raise ValueError("generations requires aging_start_age")
+        if type(self.squad_size) is not int or not CLUB_TARGET_ROSTER <= self.squad_size <= MAX_SQUAD_SIZE:
+            raise ValueError(f"squad_size must be an integer from {CLUB_TARGET_ROSTER} to {MAX_SQUAD_SIZE}")
+        if self.squad_size != CLUB_TARGET_ROSTER and self.generations == "none":
+            raise ValueError("squad_size above the default requires generations")
         if self.age_spread and (self.generations == "none" or self.age_spread >= self.aging_start_age - YOUTH_INTAKE_AGE):
             raise ValueError("age_spread requires generations and must be smaller than aging_start_age - 18")
 
@@ -570,6 +581,8 @@ class LeagueEconomyConfig:
             data["generations"] = self.generations
         if self.age_spread:
             data["age_spread"] = self.age_spread
+        if self.squad_size != CLUB_TARGET_ROSTER:
+            data["squad_size"] = self.squad_size
         if self.transfer_window_cycle != "fixed":
             data["transfer_window_cycle"] = self.transfer_window_cycle
         if self.coach_exploration != "none":
@@ -650,7 +663,7 @@ class LeagueEconomyConfig:
 
     @classmethod
     def has_save_fields(cls, data: Any) -> bool:
-        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "age_spread", "transfer_window_cycle", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
+        optional = set(FACTOR_FIELDS) | {"range_perturbation", "season_length_days", "aging_start_age", "aging_curve", "personality", "advice_response", "coach_belief", "generations", "age_spread", "squad_size", "transfer_window_cycle", "coach_exploration", "coach_practice_rating", "observation_noise_mode"}
         base = {spec.name for spec in fields(cls)} - optional
         return type(data) is dict and base <= set(data) <= base | optional
 
@@ -1468,6 +1481,7 @@ def _build_initial_world(seed: int, config: LeagueEconomyConfig) -> LeagueWorldS
         },
         cause_refs=[],
     )
+    _fill_rosters(world, 0, 0, {cid: [] for cid in CLUB_IDS}, None)  # game-v8: no-op at the default squad_size
     return world
 
 
@@ -2023,14 +2037,15 @@ def decide_transfer_acquisition(*, coach: CoachMind, roster: list[str], player_i
 
 
 def resolve_transfer_offer_request(*, from_club: str, to_club: str, previous_clubs: list[str],
-                                   roster_size: int, cash_units: int, required_cash_units: int) -> dict[str, Any]:
+                                   roster_size: int, cash_units: int, required_cash_units: int,
+                                   roster_max: int = MAX_CLUB_ROSTER) -> dict[str, Any]:
     """World market rule, used for ordinary offers AND attempted churn offers."""
     validate_money_units(cash_units, "cash_units")
     validate_money_units(required_cash_units, "required_cash_units")
     if from_club not in CLUB_IDS or to_club not in CLUB_IDS:
         raise ValueError("unknown club in transfer request")
     circular = to_club in previous_clubs
-    room = roster_size < MAX_CLUB_ROSTER
+    room = roster_size < roster_max
     budget = cash_units >= required_cash_units
     if to_club == from_club:
         reason = "same_club"
@@ -2091,7 +2106,8 @@ def decide_transfer_bidding(
             resolution = resolve_transfer_offer_request(
                 from_club=from_club, to_club=to_club, previous_clubs=previous_clubs,
                 roster_size=len(club_rosters[to_club]), cash_units=club_cashes_units[to_club],
-                required_cash_units=(required_upfront_units + config.buyer_min_cash_reserve_units))
+                required_cash_units=(required_upfront_units + config.buyer_min_cash_reserve_units),
+                roster_max=club_roster_max(config))
             if resolution["reason"] == "circular_transfer":
                 circular_attempts_blocked += 1
         obs_refs.extend(private["obs_refs"])
@@ -2099,7 +2115,7 @@ def decide_transfer_bidding(
             "to_club": to_club, "to_coach": to_coach.coach_id,
             "offer_score": private["offer_score"], "target_valuation": private["target_valuation"],
             "second_starter_score": private["second_starter_score"],
-            "has_roster_room": len(club_rosters[to_club]) < MAX_CLUB_ROSTER,
+            "has_roster_room": len(club_rosters[to_club]) < club_roster_max(config),
             "has_budget": club_cashes_units[to_club] >= (required_upfront_units + config.buyer_min_cash_reserve_units),
             "is_circular": is_circular, "request_submitted": submitted,
             "request_source": "adversarial_probe" if forced else "coach_policy",
@@ -3055,14 +3071,19 @@ def _generational_turnover(world: LeagueWorldState, season: int) -> None:
                 cause_refs=[aging_ref]))
             world.club_rosters[p.club_id].remove(pid)
             del world.player_ages[pid]
+    _fill_rosters(world, season, day, retired, aging_ref)
+
+
+def _fill_rosters(world: LeagueWorldState, season: int, day: int, retired: dict[str, list[str]], default_cause: str | None) -> None:
+    """Youth intake up to config.squad_size; the same recorded events at season ends and (game-v8, season 0) on day 0."""
     for cid in CLUB_IDS:
-        while len(world.club_rosters[cid]) < CLUB_TARGET_ROSTER:
+        while len(world.club_rosters[cid]) < world.config.squad_size:
             pid = f"p{len(world.players) + 1}"
             ref = _append_event(
                 world, day=day, kind="season_youth_joined", actor=cid,
                 data={"season": season, "player_id": pid, "club_id": cid, "age": _intake_age(world.seed, world.config, pid), "reason": "roster_below_target",
                       "roster_size_before": len(world.club_rosters[cid])},
-                cause_refs=retired[cid] or [aging_ref])
+                cause_refs=retired[cid] or ([default_cause] if default_cause else []))
             truth, spec = _youth_truth(world.seed, world.config.range_perturbation, pid, cid)
             world.players[pid], world.initial_players[pid] = truth, PlayerTruth.from_dict(truth.to_dict())
             world.player_minds[pid] = _new_player_mind(pid, spec, 0.50, ref)
@@ -3128,7 +3149,7 @@ def _generation_fold(world: LeagueWorldState) -> tuple[dict[str, int], list[str]
     length = cfg.season_length_days
     ages, everyone = {pid: _initial_age(world.seed, cfg, pid) for pid in PLAYER_IDS}, list(PLAYER_IDS)
     club = {pid: cid for cid, pids in INITIAL_CLUB_ROSTERS.items() for pid in pids}
-    size, season, last_aging, retired, joined = {cid: len(pids) for cid, pids in INITIAL_CLUB_ROSTERS.items()}, 0, None, {}, {}
+    size, season, last_aging, retired, joined = {cid: len(pids) for cid, pids in INITIAL_CLUB_ROSTERS.items()}, 0, None, {cid: [] for cid in CLUB_IDS}, {}
     for ev in world.events:
         kind, data = ev["kind"], ev["data"]
         if kind == "season_aged":
@@ -3155,9 +3176,9 @@ def _generation_fold(world: LeagueWorldState) -> tuple[dict[str, int], list[str]
             del ages[pid]
         elif kind == "season_youth_joined":
             pid, cid = data.get("player_id"), data.get("club_id")
-            if set(data) != ev_keys["join"] or pid != f"p{len(everyone) + 1}" or season < 1 or ev["day"] != season * length or cid not in CLUB_IDS \
+            if set(data) != ev_keys["join"] or pid != f"p{len(everyone) + 1}" or season < 0 or ev["day"] != season * length or cid not in CLUB_IDS \
                     or ev["actor"] != cid or data["season"] != season or data["age"] != _intake_age(world.seed, cfg, pid) or data["reason"] != "roster_below_target" \
-                    or data["roster_size_before"] != size[cid] or size[cid] >= CLUB_TARGET_ROSTER or ev["cause_refs"] != (retired[cid] or [last_aging]):
+                    or data["roster_size_before"] != size[cid] or size[cid] >= cfg.squad_size or ev["cause_refs"] != (retired[cid] or ([last_aging] if last_aging else [])):
                 raise ValueError("season_youth_joined event does not match the intake record")
             ages[pid], club[pid], joined[pid] = data["age"], cid, cid
             everyone.append(pid)
@@ -3181,8 +3202,8 @@ def _validate_league_invariants(world: LeagueWorldState) -> None:
         roster = world.club_rosters.get(cid)
         if roster is None:
             raise ValueError(f"missing club roster: {cid}")
-        if not (MIN_CLUB_ROSTER <= len(roster) <= MAX_CLUB_ROSTER):
-            raise ValueError(f"club {cid} roster size {len(roster)} violates [{MIN_CLUB_ROSTER}, {MAX_CLUB_ROSTER}]")
+        if not (MIN_CLUB_ROSTER <= len(roster) <= club_roster_max(world.config)):
+            raise ValueError(f"club {cid} roster size {len(roster)} violates [{MIN_CLUB_ROSTER}, {club_roster_max(world.config)}]")
         for pid in roster:
             if pid not in world.players:
                 raise ValueError(f"unknown player {pid} in {cid}")

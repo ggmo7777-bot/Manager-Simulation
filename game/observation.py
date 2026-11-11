@@ -147,7 +147,7 @@ def market_view(world, season_days):
         "season": (upcoming - 1) // season_days + 1, "day": (upcoming - 1) % season_days + 1, "open_now": upcoming == world.day + 1}
     return {"cash": world.club_accounts[OWN_CLUB].cash_units, "scout_cost": config.scout_action_cost_units,
             "reserve": config.buyer_min_cash_reserve_units, "offer_fee": required_offer_fee(config),
-            "roster_size": len(roster), "roster_min": le.MIN_CLUB_ROSTER, "roster_max": le.MAX_CLUB_ROSTER, "window": window}
+            "roster_size": len(roster), "roster_min": le.MIN_CLUB_ROSTER, "roster_max": le.club_roster_max(config), "window": window}
 
 
 def recommended_offers(world):
