@@ -99,7 +99,8 @@ def lineup_swap(world, tracker, variant):
             return original(coach=coach, roster=roster, config=config)
         real = original(coach=coach, roster=roster, config=config)  # no side effects: the ranking the real estimates give
         targets = set(lag_targets([row['player_id'] for row in real['ranking']], who)) if lam else set()
-        assert len(targets) == ({'all': len(roster), 'starters': STARTERS, 'bench': len(roster) - STARTERS, 'boundary': 2}[who] if lam else 0)
+        sizes = {'all': len(roster), 'starters': STARTERS, 'bench': len(roster) - STARTERS, 'boundary': min(len(roster), STARTERS + 1) - (STARTERS - 1)}  # a roster of 2 has no bench: the boundary is the last starter alone
+        assert len(targets) == (sizes[who] if lam else 0)
         evaluations, executed, truths, true_fatigue, executed_fatigue = {}, {}, {}, {}, {}
         errors = ([], [], [])
         for pid in roster:

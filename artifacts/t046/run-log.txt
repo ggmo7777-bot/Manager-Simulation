@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}, "swap_is_a_read_only_copy": {"runs": 132, "all_equal": true, "changed_worlds_by_variant": {"d25": 12, "d50": 12, "d75": 12, "nolag": 12, "st": 12, "be": 12, "bd": 12, "nolagfat": 12}, "worlds": 12}}
+12 252 407
+24 252 561
+36 252 857
+48 252 1035
+60 252 1322
+72 252 1490
+84 252 1793
+96 252 1972
+108 252 2233
+120 252 2397
+132 252 2651
+144 252 2828
+156 252 3087
+168 252 3262
+180 252 3517
+192 252 3694
+204 252 3944
+216 252 4124
+228 252 4362
+240 252 4555
+252 252 4771
+{"equal": {"t030": 84, "t031": 84, "t032": 84}, "verdicts": {"dose": {"verdict": "differs", "by_direction": {"fwd": "back_loaded", "rev": "linear"}, "monotone": {"fwd": true, "rev": true}}, "carrier": {"verdict": "be", "by_direction": {"fwd": "be", "rev": "be"}}, "residual": {"verdict": "explains"}}, "elapsed_seconds": 4818.574997208001}
