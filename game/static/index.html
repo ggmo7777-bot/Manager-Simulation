@@ -44,6 +44,7 @@ label.pick input{width:18px;height:18px}
 .ev{padding:8px 0;border-top:1px solid #E6E3DB}.ev:first-of-type{border-top:0}
 .err{color:var(--warn);font-weight:700}
 .hide{display:none}
+.track{position:relative;flex:1;min-width:120px;height:6px;background:#E6E3DB}.track i{position:absolute;left:0;top:0;bottom:0;background:#1E7A4C}.track b{position:absolute;top:-4px;width:2px;height:14px;background:var(--acc)}
 details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;color:var(--mut)}
 .notice{background:var(--warnbg);border:1px solid var(--warn);border-radius:2px;padding:10px 16px}
 .hdctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -67,7 +68,8 @@ details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;f
 </header>
 <div class="layout">
   <nav aria-label="画面">
-    <button data-tab="squad" class="on">選手</button>
+    <button data-tab="home" class="on">ホーム</button>
+    <button data-tab="squad">選手</button>
     <button data-tab="match">試合日</button>
     <button data-tab="transfer">移籍</button>
     <button data-tab="table">順位</button>
@@ -77,7 +79,8 @@ details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;f
   <main>
     <div class="err" id="error" role="alert"></div>
     <div id="notices"></div>
-    <div id="squad">
+    <div id="home" class="hide"><section class="card" id="homeBody"></section></div>
+    <div id="squad" class="hide">
       <section class="card"><h2>選手 <span class="hd">推定と不確かさ。真の値は季節の終わりまで見えない</span></h2><div id="squadTable" class="scroll"></div></section>
     </div>
     <div id="match" class="hide">
@@ -266,6 +269,24 @@ function renderStandings() {
   $("standings").innerHTML = `<table><tr><th>#</th><th>クラブ</th><th>勝点</th><th>成績</th><th>得失点</th><th>試合</th></tr>${rows}</table>`;
 }
 
+const NEXT_STEP = {training: week => `第${week}週 練習の週`, lineup: week => `第${week}節 先発を決める日`, season_end: () => "季節終了"};
+function renderHome() {
+  const {day, season_days, phase, market, standings} = state, window_ = market.window;
+  const rank = standings.findIndex(r => r.club_id === OWN) + 1, own = standings[rank - 1];
+  const windowThisSeason = window_ && window_.season === state.season;
+  const inbox = [...state.notices.map(n => ({head: `通算日${n.day}`, lines: [`${chip(n.label)}${esc(describe(n))}`]})), ...seasonLog.slice().reverse().map(r => ({head: r.label, lines: r.lines}))].slice(0, 6);
+  $("homeBody").innerHTML = `<div class="row"><span class="num mut">日${day} / ${season_days}</span>
+      <div class="track"><i style="width:${day / season_days * 100}%"></i>${windowThisSeason ? `<b style="left:${window_.day / season_days * 100}%"></b>` : ""}</div>
+      <span class="hd">${windowThisSeason ? `次の移籍窓 日${window_.day}` : "今季の移籍窓はもうない"}</span></div>
+    <h2 style="font-size:28px;margin:18px 0 6px">${NEXT_STEP[phase](state.week)}</h2>
+    <div class="ev">${chip("事実")}いま${rank}位 勝点${own.points}(${own.wins}勝${own.draws}分${own.losses}敗)。資金 ${mil(market.cash)}</div>
+    <div class="ev">予定: 偵察 <b>${esc(plan.scout ? nm(plan.scout) : "なし")}</b> / 申し出 <b>${plan.offers.size ? esc([...plan.offers].map(nm).join("・")) : "なし"}</b></div>
+    <div class="row" style="margin-top:12px"><button class="bt go" id="homeGo">${phase === "season_end" ? "答え合わせへ" : "次の一手へ"}</button></div>
+    <h2 style="margin-top:20px">受信箱 <span class="hd">最近のお知らせと、あなたの一手の結果(理由つき)</span></h2>
+    ${inbox.map(i => `<div class="ev"><span class="mut">${esc(i.head)}</span>${i.lines.map(l => `<div>${l}</div>`).join("")}</div>`).join("") || '<div class="mut">まだ何も届いていない。</div>'}`;
+  $("homeGo").onclick = () => show(phase === "season_end" ? "reveal" : "match");
+}
+
 function renderAction() {
   const roster = state.squad.map(p => p.player_id);
   if (state.phase === "training") {
@@ -314,7 +335,7 @@ function renderAction() {
       const next = await act("/api/next_season", {});
       if (!next) return;
       resetSeasonLog(); lastResult = null; $("result").textContent = `第${next.state.season}季が始まった。`; $("result").className = "mut";
-      refresh(next.state); show("match");
+      refresh(next.state); show("home");
     };
   }
 }
@@ -413,8 +434,9 @@ function renderHistory() {
 }
 
 function show(tab, season) {
-  for (const id of ["squad", "match", "transfer", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
+  for (const id of ["home", "squad", "match", "transfer", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+  if (tab === "home") renderHome();
   if (tab === "reveal") renderReveal(season);
 }
 
@@ -427,7 +449,7 @@ function refresh(newState) {
   $("phaseLabel").textContent = {training: "練習の週", lineup: "先発を決める", season_end: "季節終了"}[state.phase];
   $("shareCode").textContent = state.share_code;
   $("revealTab").disabled = !done;
-  renderNotices(); renderSquad(); renderTransfer(); renderStandings(); renderAction(); renderResult(); renderHistory();
+  renderNotices(); renderHome(); renderSquad(); renderTransfer(); renderStandings(); renderAction(); renderResult(); renderHistory();
   if (done) show("reveal"); else if (!$("squad").classList.contains("hide") && lastResult) show("match");
 }
 
@@ -438,7 +460,7 @@ $("newGame").onclick = async () => {
   if (!next) return;
   plan.scout = null; plan.offers.clear(); plan.requeue.clear(); resetSeasonLog();
   lastResult = null; $("result").textContent = "まだ何も起きていない。"; $("result").className = "mut";
-  refresh(next); show("match");
+  refresh(next); show("home");
 };
 async function refreshSaves() {
   const data = await act("/api/saves");
@@ -458,10 +480,10 @@ $("loadGame").onclick = async () => {
   plan.scout = null; plan.offers.clear(); plan.requeue.clear(); resetSeasonLog();
   lastResult = null; $("result").textContent = `「${name}」から再開した。`; $("result").className = "mut";
   $("seed").value = next.seed; $("saveName").value = name;
-  refresh(next); show("match");
+  refresh(next); show("home");
 };
 refreshSaves();
-(async () => { const first = await act("/api/state"); if (first) { refresh(first); show("match"); } })();
+(async () => { const first = await act("/api/state"); if (first) { refresh(first); show("home"); } })();
 </script>
 </body>
 </html>
