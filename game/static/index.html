@@ -108,7 +108,7 @@ let state = null, lastResult = null, names = {};
 const OWN = "club_a";
 const nm = pid => names[pid] || pid;
 const who = pid => `${esc(nm(pid))}<span class="hd"> ${esc(pid)}</span>`;
-const plan = {scout: null, offers: new Set()};  // chosen on the transfer tab, sent with the next training week / match day
+const plan = {scout: null, offers: new Set(), requeue: new Set()};  // chosen on the transfer tab, sent with the next training week / match day
 const mil = units => (units / 1e6).toFixed(2);
 
 function esc(value) { const d = document.createElement("div"); d.textContent = String(value); return d.innerHTML; }
@@ -191,9 +191,27 @@ function offerBlock(playerId, canOffer, offering) {
 }
 const offerNeed = count => count * state.market.offer_fee + state.market.reserve;
 
+// A declined player queued for the next window joins this match day's offers when the window is open and cash allows; the player can still untoggle.
+function moveQueuedIntoOffers(canOffer) {
+  if (!canOffer) return;
+  for (const id of [...plan.requeue]) {
+    if (offerBlock(id, canOffer, false)) continue;
+    plan.offers.add(id); plan.requeue.delete(id);
+  }
+}
+
+const wasDeclined = t => t.bid_record.last_response === "declined";
+function queueButton(t, canOffer, offering) {
+  if (!wasDeclined(t) || offering) return "";
+  const queued = plan.requeue.has(t.player_id);
+  const waiting = queued && canOffer ? '<div class="hd err">資金が戻れば自動で入る</div>' : "";
+  return `<button class="bt ${queued ? "go" : ""}" data-requeue="${esc(t.player_id)}" aria-pressed="${queued}" style="margin-top:4px;padding:0 10px">${queued ? "予約済み(次の窓)" : "次の窓で出し直す"}</button>${waiting}`;
+}
+
 function renderTransfer() {
   const {market, targets, phase} = state, window_ = market.window;
   const canOffer = phase === "lineup" && window_ && window_.open_now, canScout = phase === "training";
+  moveQueuedIntoOffers(canOffer);
   const banner = window_ ? `次の移籍窓: 第${window_.season}季 日${window_.day}${canOffer ? "。次の試合日のあとに処理される。申し出は今ここで決める" : ""}${window_.open_now ? `。いまの資金 ${mil(market.cash)} / 申し出1件に必要 ${mil(offerNeed(1))}` : ""}` : "移籍窓はもうない(研究側の窓は2回だけ)";
   const rows = targets.map(t => {
     const scouting = plan.scout === t.player_id, offering = plan.offers.has(t.player_id);
@@ -203,7 +221,7 @@ function renderTransfer() {
       <td>${t.observation_count}回<div class="hd">${t.observation_count ? `最後に見て${t.days_unseen}日` : "一度も見ていない"}</div></td>
       <td>${t.appearances}試合 ${t.goals}得点<div class="hd">${chip("観測")} ${esc(benchNote(t.bench_streak))}</div><div class="hd">${t.bid_record.asked ? chip("本人の理由") : ""} ${esc(lastBid(t.bid_record))}</div></td>
       <td><button class="bt ${scouting ? "go" : ""}" data-scout="${esc(t.player_id)}" aria-pressed="${scouting}" ${canScout && t.scoutable ? "" : "disabled"}>${scouting ? "偵察中" : "偵察"}</button></td>
-      <td><button class="bt ${offering ? "go" : ""}" data-offer="${esc(t.player_id)}" aria-pressed="${offering}" ${noOffer ? "disabled" : ""}>${offering ? "申し出る" : "見送り"}</button>${noOffer ? `<div class="hd err">${esc(noOffer)}</div>` : ""}${state.recommended_offers.includes(t.player_id) ? '<div class="hd">副コーチ推奨</div>' : ""}</td></tr>`;
+      <td><button class="bt ${offering ? "go" : ""}" data-offer="${esc(t.player_id)}" aria-pressed="${offering}" ${noOffer ? "disabled" : ""}>${offering ? "申し出る" : "見送り"}</button>${noOffer ? `<div class="hd err">${esc(noOffer)}</div>` : ""}${queueButton(t, canOffer, offering)}${state.recommended_offers.includes(t.player_id) ? '<div class="hd">副コーチ推奨</div>' : ""}</td></tr>`;
   }).join("");
   const offers = [...plan.offers];
   const cashGap = offerNeed(Math.max(offers.length, 1)) - market.cash;  // positive: short of cash
@@ -221,6 +239,7 @@ function renderTransfer() {
     <tr><td>選手数(${market.roster_min}〜${market.roster_max}人)</td><td class="num">${market.roster_size}</td></tr></table>
     <div class="hd" style="margin:6px 0">窓の処理中は先に自クラブの選手が売れて資金が増えることがある。成立の判定は窓の処理の中で、ルールが行う。</div>
     <div>偵察: <b>${esc(plan.scout ? nm(plan.scout) : "なし")}</b>(「試合日」の「1週間練習する」と一緒に実行)</div>
+    <div>次の窓の予約: <b>${plan.requeue.size ? esc([...plan.requeue].map(nm).join("・")) : "なし"}</b>(断られた選手。窓が開く試合日に申し出へ自動で入る。外せる)</div>
     <div>申し出: <b>${offers.length ? esc(offers.map(nm).join("・")) : "出さない"}</b>(「試合をする」と一緒に出る。選手が自分で受けるか断るかを決める)</div>
     <div class="row" style="margin-top:8px"><button class="bt go" id="toMatch">試合日へ</button></div></section>
   ${results.length ? `<section class="card"><h2>窓の結果</h2>${results.map(e => `<div class="ev">${chip(e.label)}<span class="mut">通算日${e.day}</span> ${esc(describe(e))}</div>`).join("")}
@@ -228,6 +247,8 @@ function renderTransfer() {
   document.querySelectorAll("[data-scout]").forEach(b => b.onclick = () => { plan.scout = plan.scout === b.dataset.scout ? null : b.dataset.scout; renderTransfer(); });
   document.querySelectorAll("[data-offer]").forEach(b => b.onclick = () => {
     plan.offers.has(b.dataset.offer) ? plan.offers.delete(b.dataset.offer) : plan.offers.add(b.dataset.offer); renderTransfer(); });
+  document.querySelectorAll("[data-requeue]").forEach(b => b.onclick = () => {
+    plan.requeue.has(b.dataset.requeue) ? plan.requeue.delete(b.dataset.requeue) : plan.requeue.add(b.dataset.requeue); renderTransfer(); });
   $("toMatch").onclick = () => show("match");
 }
 
@@ -386,7 +407,7 @@ $("newGame").onclick = async () => {
   const typed = $("seed").value.trim();
   const next = await act("/api/new", /^-?\d+$/.test(typed) ? {seed: Number(typed)} : {code: typed});
   if (!next) return;
-  plan.scout = null; plan.offers.clear();
+  plan.scout = null; plan.offers.clear(); plan.requeue.clear();
   lastResult = null; $("result").textContent = "まだ何も起きていない。"; $("result").className = "mut";
   refresh(next); show("match");
 };
@@ -405,7 +426,7 @@ $("loadGame").onclick = async () => {
   if (!name) return;
   const next = await act("/api/load", {name});
   if (!next) return;
-  plan.scout = null; plan.offers.clear();
+  plan.scout = null; plan.offers.clear(); plan.requeue.clear();
   lastResult = null; $("result").textContent = `「${name}」から再開した。`; $("result").className = "mut";
   $("seed").value = next.seed; $("saveName").value = name;
   refresh(next); show("match");
