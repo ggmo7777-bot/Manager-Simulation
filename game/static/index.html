@@ -92,7 +92,9 @@ details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;f
     <div id="transfer" class="hide"><div id="transferBody"></div></div>
     <div id="table" class="hide"><section class="card"><h2>順位</h2><div id="standings" class="scroll"></div></section></div>
     <div id="reveal" class="hide"><section class="card"><h2>推定と真実</h2><div id="revealBody" class="scroll"></div></section></div>
-    <div id="history" class="hide"><section class="card"><h2>クラブ史 <span class="hd">終わった季ごとの結果・入れ替わり・あなたの推定の的確さ</span></h2><div id="historyBody" class="scroll"></div></section></div>
+    <div id="history" class="hide"><section class="card"><h2>クラブ史 <span class="hd">終わった季ごとの結果・入れ替わり・あなたの推定の的確さ</span></h2><div id="historyBody" class="scroll"></div></section>
+      <section class="card"><h2>もう一つの採点 <span class="hd">4つの軸を並べる。1つの点数にはまとめない</span></h2><div id="scoreBody" class="scroll"></div></section>
+      <section class="card"><h2>世界史 <span class="hd">出来事の記録。理由はラベルと本人の弁で分ける</span></h2><div id="chronicleBody"></div></section></div>
   </main>
 </div>
 <script>
@@ -111,6 +113,7 @@ const RETIRE_REASON = {age_limit:"年齢の限界", veteran_low_playing_time:"�
 const $ = id => document.getElementById(id);
 let state = null, lastResult = null, names = {};
 const OWN = "club_a";
+const JUDGE_TOLERANCE = 0.05;  // the same figure as game/session.py JUDGE_TOLERANCE; a test pins them together
 const nm = pid => names[pid] || pid;
 const who = pid => `${esc(nm(pid))}<span class="hd"> ${esc(pid)}</span>`;
 const plan = {scout: null, offers: new Set(), requeue: new Set()};  // chosen on the transfer tab, sent with the next training week / match day
@@ -475,6 +478,39 @@ async function renderPlayer(pid) {
   $("backSquad").onclick = () => show("squad");
 }
 
+// Second scoring: four axes side by side, never summed. Everything here comes from the season-end reveal and public records.
+const REASON_LEFT = {retired: "引退", sold: "売却"};
+function renderScores() {
+  const alumni = {};
+  let leftSoFar = 0;
+  for (const h of state.history) { leftSoFar += h.left.length; alumni[h.season] = leftSoFar; }
+  const rows = state.history.map(h => {
+    const lives = h.lives.map(l => `<div>${esc(nm(l.player_id))} ${l.appearances}試合${l.goals}得点${l.wasted ? ' <span class="err">(真の技能が上位2人なのに出場が少なかった)</span>' : ""}</div>`).join("");
+    const left = h.left.map(l => `${esc(nm(l.player_id))}(${REASON_LEFT[l.reason]})`).join("、") || "なし";
+    return `<tr><td class="num">第${h.season}季</td>
+      <td><b class="num">${h.judging.hits} / ${h.judging.total}</b> が当たり<div class="hd">誤差${f2(JUDGE_TOLERANCE)}以内を当たりとする。平均誤差 ${f3(h.judging.mean_error)}</div></td>
+      <td>${lives}</td>
+      <td>この季に去った選手: ${left}<div class="hd">去った選手の累計 ${alumni[h.season]}人 / 信頼の平均(答え合わせ後の真の値) ${h.trust_mean === null ? "-" : f2(h.trust_mean)}</div></td>
+      <td class="mut">${h.rank}位 ${h.points}点 <span class="hd">参考</span></td></tr>`;
+  }).join("");
+  $("scoreBody").innerHTML = state.history.length ? `<table><tr><th>季</th><th>軸1 見極め精度</th><th>軸2 選手の人生</th><th>軸3 クラブの遺産</th><th>軸4 成績(参考)</th></tr>${rows}</table>
+    <div class="hd" style="margin-top:8px">見極め精度: 季末の技能の推定が真の技能に近かった選手の数。選手の人生: 出場は公開記録、「上位2人」は答え合わせで分かる真の技能の順位。遺産: 育てた選手が去った数と、助言を聞く度合いの積み上げ。成績は他の軸より重くしない。</div>` : '<span class="mut">まだ終わった季がない。</span>';
+}
+
+const seasonOf = day => Math.floor((day - 1) / state.season_days) + 1;
+const chronicleLine = e => e.kind === "league_match_completed" ? `試合 ${e.home_club} ${e.home_goals} - ${e.away_goals} ${e.away_club}` : describe(e);
+async function renderChronicle(filter) {
+  const data = await act("/api/chronicle");
+  if (!data) return;
+  const players = [...new Set(data.events.map(e => e.player_id).filter(Boolean))];
+  const shown = data.events.filter(e => !filter || e.player_id === filter);
+  const bySeason = {};
+  for (const e of shown) (bySeason[seasonOf(Math.max(e.day, 1))] ||= []).push(e);
+  $("chronicleBody").innerHTML = `<div class="row"><label>選手の物語 <select id="chronicleFilter"><option value="">クラブ全体</option>${players.map(p => `<option value="${esc(p)}" ${p === filter ? "selected" : ""}>${esc(nm(p))}</option>`).join("")}</select></label></div>
+    ${Object.keys(bySeason).map(n => `<details ${Number(n) === state.season ? "open" : ""}><summary>第${n}季(${bySeason[n].length}件)</summary>${bySeason[n].map(e => `<div class="ev">${chip(e.label)}<span class="mut">通算日${e.day}</span> ${esc(chronicleLine(e))}</div>`).join("")}</details>`).join("") || '<div class="mut">まだ記録なし。</div>'}`;
+  $("chronicleFilter").onchange = () => renderChronicle($("chronicleFilter").value);
+}
+
 function renderHistory() {
   const rows = state.history.map(h => {
     const retired = h.retired.map(r => `${esc(nm(r.player_id))}(${r.age}歳・${RETIRE_REASON[r.reason] || esc(r.reason)})`).join("、") || "なし";
@@ -492,6 +528,7 @@ function show(tab, detail) {
   for (const id of ["home", "squad", "player", "match", "transfer", "table", "reveal", "history"]) $(id).classList.toggle("hide", id !== tab);
   document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === (tab === "player" ? "squad" : tab)));
   if (tab === "player") renderPlayer(detail);
+  if (tab === "history") renderChronicle();
   if (tab === "home") renderHome();
   if (tab === "reveal") renderReveal(season);
 }
@@ -505,7 +542,7 @@ function refresh(newState) {
   $("phaseLabel").textContent = {training: "練習の週", lineup: "先発を決める", season_end: "季節終了"}[state.phase];
   $("shareCode").textContent = state.share_code;
   $("revealTab").disabled = !done;
-  renderNotices(); renderHome(); renderSquad(); renderTransfer(); renderStandings(); renderAction(); renderResult(); renderHistory();
+  renderNotices(); renderHome(); renderSquad(); renderTransfer(); renderStandings(); renderAction(); renderResult(); renderHistory(); renderScores();
   if (done) show("reveal"); else if (!$("squad").classList.contains("hide") && lastResult) show("match");
 }
 

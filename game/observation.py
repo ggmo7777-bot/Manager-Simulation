@@ -60,11 +60,11 @@ def notices_view(world, since_day):
     return [item for item in observed_events(world, 0) if item["kind"] == "player_sold" and item["day"] > since_day]
 
 
-def _public_match_records(world):
+def public_match_records(world, since_day=0):
     """Appearances and goals come from public match reports, not from PlayerTruth counters."""
     records = {}
     for event in world.events:
-        if event["kind"] != "league_match_completed":
+        if event["kind"] != "league_match_completed" or event["day"] <= since_day:
             continue
         for pid, stats in event["data"]["player_stats"].items():
             row = records.setdefault(pid, {"appearances": 0, "goals": 0})
@@ -76,7 +76,7 @@ def _public_match_records(world):
 def squad_view(world):
     coach = world.coaches[OWN_COACH]
     counts = _observation_counts(world)
-    records = _public_match_records(world)
+    records = public_match_records(world)
     beliefs = world.coach_beliefs.get(OWN_COACH, {})
     rows = []
     for pid in world.club_rosters[OWN_CLUB]:
@@ -147,7 +147,7 @@ def bid_records(world):
 def targets_view(world):
     """Players of other clubs as the coach knows them: his own estimate (scouting and match observations) and public records."""
     coach = world.coaches[OWN_COACH]
-    counts, records = _observation_counts(world), _public_match_records(world)
+    counts, records = _observation_counts(world), public_match_records(world)
     scoutable = set(scoutable_targets(world))
     streaks, bids = bench_streaks(world), bid_records(world)
     rows = []
@@ -170,6 +170,21 @@ def scoutable_targets(world):
         coach=world.coaches[OWN_COACH], own_roster=list(world.club_rosters[OWN_CLUB]), other_players=other_club_players(world),
         club_cash_units=world.club_accounts[OWN_CLUB].cash_units, day=world.day + 1, slot=2, already_targeted=set(), config=world.config)
     return [c["target"] for c in decision["candidates"] if c["kind"] == "scout"]
+
+
+_CHRONICLE_KINDS = ("league_match_completed", "coach_advice_outcome", "transfer_response", "player_sold", "transfer_completed",
+                    "season_retired", "season_youth_joined")
+_MATCH_SUMMARY_KEYS = ("label", "kind", "day", "home_club", "away_club", "home_goals", "away_goals")
+
+
+def chronicle(world):
+    """The club's whole history as the coach may know it, oldest first: public results, the players' stated reasons, arrivals and departures."""
+    rows = []
+    for item in observed_events(world, 0):
+        if item["kind"] not in _CHRONICLE_KINDS or (item["kind"] == "transfer_completed" and item["to_club"] != OWN_CLUB):
+            continue
+        rows.append({key: item[key] for key in _MATCH_SUMMARY_KEYS} if item["kind"] == "league_match_completed" else item)
+    return rows
 
 
 def player_events(world, player_id):
@@ -343,6 +358,7 @@ obs_fatigue obs_gain obs_skill observation_count outcomes passes_completed phase
 rating_estimate rating_obs receptiveness recommended_starters response retired sd season season_days seed shots skill_after
 reason skill_before skill_estimate skill_mae squad squad_size standings starters state stated_reason tackles_won to_club week wins
 share_code
+judging hits total mean_error lives wasted left trust_mean
 accepted market cash scout_cost reserve offer_fee roster_size roster_min roster_max window open_now targets scoutable
 recommended_offers bench_streak bid_record declined last_response
 your_move your_events auto_events advice scout offers names notices advice_record asked refused last_stated_reason
