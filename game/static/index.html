@@ -52,6 +52,10 @@ label.pick input{width:18px;height:18px}
   <span class="num" id="clock"></span><span class="mut" id="phaseLabel"></span><span class="grow"></span>
   <label class="hd" for="seed">シード</label><input id="seed" type="number" value="7" style="width:80px;height:36px;border:1px solid var(--line2);border-radius:2px;padding:0 8px">
   <button class="bt" id="newGame">新しい季節</button>
+  <input id="saveName" value="save1" style="width:90px;height:36px;border:1px solid var(--line2);border-radius:2px;padding:0 8px" aria-label="セーブ名">
+  <button class="bt" id="saveGame">セーブ</button>
+  <select id="saveList" style="height:36px" aria-label="続きから"><option value="">続きから…</option></select>
+  <button class="bt" id="loadGame">続きから</button>
 </header>
 <div class="layout">
   <nav aria-label="画面">
@@ -215,6 +219,26 @@ $("newGame").onclick = async () => {
   lastResult = null; $("result").textContent = "まだ何も起きていない。"; $("result").className = "mut";
   refresh(next); show("match");
 };
+async function refreshSaves() {
+  const data = await act("/api/saves");
+  if (!data) return;
+  $("saveList").innerHTML = `<option value="">続きから…</option>` + data.saves.map(s =>
+    `<option value="${esc(s.name)}">${esc(s.name)}${s.steps === null ? "(壊れている)" : `(シード${s.seed}・${s.steps}手)`}</option>`).join("");
+}
+$("saveGame").onclick = async () => {
+  const done = await act("/api/save", {name: $("saveName").value});
+  if (done) { $("error").textContent = ""; $("result").textContent = `「${done.saved}」にセーブした(日${done.day})。`; $("result").className = "mut"; refreshSaves(); }
+};
+$("loadGame").onclick = async () => {
+  const name = $("saveList").value;
+  if (!name) return;
+  const next = await act("/api/load", {name});
+  if (!next) return;
+  lastResult = null; $("result").textContent = `「${name}」から再開した。`; $("result").className = "mut";
+  $("seed").value = next.seed; $("saveName").value = name;
+  refresh(next); show("match");
+};
+refreshSaves();
 (async () => { const first = await act("/api/state"); if (first) { refresh(first); show("match"); } })();
 </script>
 </body>

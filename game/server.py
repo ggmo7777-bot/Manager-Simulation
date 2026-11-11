@@ -1,6 +1,8 @@
 """Local server for the playable slice: python -m game.server [--port 8765] [--seed 7]. Stdlib only."""
 import argparse
 import json
+import os
+import re
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -9,6 +11,8 @@ from .session import GameSession, InvalidInput
 
 INDEX = Path(__file__).parent / "static" / "index.html"
 DEFAULT_PORT, DEFAULT_SEED = 8765, 7
+SAVE_DIR = Path(__file__).resolve().parents[1] / "game-save"
+SAVE_NAME = re.compile(r"[A-Za-z0-9_-]{1,40}")
 
 
 class NotFound(Exception):
@@ -17,8 +21,9 @@ class NotFound(Exception):
 
 class Game:
     """The single in-memory game. Requests are serialised: the session wraps research functions temporarily."""
-    def __init__(self, seed):
+    def __init__(self, seed, save_dir=SAVE_DIR):
         self.lock = threading.Lock()
+        self.save_dir = Path(save_dir)
         self.session = GameSession(seed)
 
     def handle(self, method, path, body):
@@ -34,7 +39,47 @@ class Game:
                 return self.session.train(body.get("advice"))
             if (method, path) == ("POST", "/api/lineup"):
                 return self.session.play_match(body.get("starters"))
+            if (method, path) == ("GET", "/api/saves"):
+                return self._list_saves()
+            if (method, path) == ("POST", "/api/save"):
+                return self._save(self._save_path(body.get("name")))
+            if (method, path) == ("POST", "/api/load"):
+                return self._load(self._save_path(body.get("name")))
         raise NotFound(path)
+
+    def _save_path(self, name):
+        if type(name) is not str or not SAVE_NAME.fullmatch(name):
+            raise InvalidInput("save name must be 1-40 letters, digits, - or _")
+        return self.save_dir / f"{name}.json"
+
+    def _save(self, path):
+        self.save_dir.mkdir(exist_ok=True)
+        temporary = path.with_suffix(".tmp")
+        temporary.write_text(json.dumps(self.session.save_payload(), indent=1))
+        os.replace(temporary, path)  # a crash never leaves a half-written save
+        return {"saved": path.stem, "day": self.session.world.day}
+
+    def _load(self, path):
+        if not path.is_file():
+            raise InvalidInput(f"no save named {path.stem}")
+        try:
+            payload = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            raise InvalidInput("save file is not valid JSON") from None
+        self.session = GameSession.resume(payload)
+        return self.session.state()
+
+    def _list_saves(self):
+        saves = []
+        for path in sorted(self.save_dir.glob("*.json")) if self.save_dir.is_dir() else []:
+            if not SAVE_NAME.fullmatch(path.stem):
+                continue
+            try:
+                payload = json.loads(path.read_text())
+                saves.append({"name": path.stem, "seed": payload["seed"], "steps": len(payload["inputs"])})
+            except (json.JSONDecodeError, KeyError, TypeError):
+                saves.append({"name": path.stem, "seed": None, "steps": None})
+        return {"saves": saves}
 
 
 def make_handler(game):
