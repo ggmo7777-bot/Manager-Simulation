@@ -97,6 +97,9 @@ const STATED = {trusts_coach:"あなたを信頼している", distrusts_coach:"
 const TRUE_REASON = {trust_above_autonomy:"信頼が自立心を上回る", trust_below_autonomy:"信頼が自立心を下回る", self_disciplined:"自分に厳しい性格", self_lax:"自分に甘い性格", irritated_by_low_playing_time:"出場機会の少なさへの苛立ち", no_dominant_term:"決め手なし"};
 const OFFER_BLOCK = {roster_full:"選手数が上限(4人)のため成立しない", insufficient_cash:"資金が足りない(手数料+予備)", circular_transfer:"過去に在籍した選手は取れない", same_club:"同じクラブ", accepted:"条件はルール上通った"};
 const TRANSFER_STATED = {accepts:"申し出を受ける", not_looking:"いまは移籍を考えていない", terms_unattractive:"条件に魅力を感じない", chose_other_club:"他クラブの話を選んだ"};
+const TRANSFER_HINT = {not_looking:"出場機会に不満が出るまで待つ手もある(推定)", terms_unattractive:"次の窓で出し直せる。条件は本人の採点で決まる", chose_other_club:"他クラブと競った。次の窓で出し直せる"};
+const benchNote = n => n ? `ベンチ${n}連続${n >= 4 ? "以上" : ""}` : "ベンチ連続なし";
+const lastBid = r => r.asked ? `${r.day ? `通算日${r.day}` : ""}に${TRANSFER_RESPONSE[r.last_response]}${r.last_stated_reason && r.last_response === "declined" ? `「${TRANSFER_STATED[r.last_stated_reason]}」` : ""}` : "申し出の履歴なし";
 const TRANSFER_RESPONSE = {accepted:"受けた", declined:"断った", blocked:"不成立"};
 const SOLD_STATED = {wants_move:"ほかのクラブでプレーしたい"};
 const RETIRE_REASON = {age_limit:"年齢の限界", veteran_low_playing_time:"出場機会の少なさ(ベテラン)"};
@@ -143,7 +146,7 @@ function describe(e) {
     case "offer_resolved": return `${nm(e.player_id)} への申し出: ${e.accepted ? "ルール上は通り、本人の返答待ち" : OFFER_BLOCK[e.reason] || e.reason}`;
     case "transfer_response":
       return e.response === "blocked" ? `${nm(e.player_id)}: 現所属クラブが放出に同意せず、不成立`
-        : `${nm(e.player_id)} は申し出を${TRANSFER_RESPONSE[e.response]}。本人の弁: 「${TRANSFER_STATED[e.stated_reason]}」`;
+        : `${nm(e.player_id)} は申し出を${TRANSFER_RESPONSE[e.response]}。本人の弁: 「${TRANSFER_STATED[e.stated_reason]}」${TRANSFER_HINT[e.stated_reason] ? `。${TRANSFER_HINT[e.stated_reason]}` : ""}`;
     case "coach_scout_observation": return `他クラブの ${nm(e.player_id)} を偵察: 技能の読み ${f3(e.obs_skill)}`;
     default: return e.kind;
   }
@@ -198,16 +201,16 @@ function renderTransfer() {
     return `<tr><td class="num">${esc(nm(t.player_id))}<div class="hd">${esc(t.player_id)} · ${esc(t.club_id)}</div></td><td class="num">${t.age}</td>
       <td>${t.observation_count ? bar(t.skill_estimate, t.measurement_error) + `<span class="num">${f2(t.skill_estimate)}</span> <span class="hd">±${f3(t.measurement_error)}/回</span>` : '<span class="mut">未観察(推定は定数0.50)</span>'}</td>
       <td>${t.observation_count}回<div class="hd">${t.observation_count ? `最後に見て${t.days_unseen}日` : "一度も見ていない"}</div></td>
-      <td>${t.appearances}試合 ${t.goals}得点</td>
+      <td>${t.appearances}試合 ${t.goals}得点<div class="hd">${chip("観測")} ${esc(benchNote(t.bench_streak))}</div><div class="hd">${t.bid_record.asked ? chip("本人の理由") : ""} ${esc(lastBid(t.bid_record))}</div></td>
       <td><button class="bt ${scouting ? "go" : ""}" data-scout="${esc(t.player_id)}" aria-pressed="${scouting}" ${canScout && t.scoutable ? "" : "disabled"}>${scouting ? "偵察中" : "偵察"}</button></td>
       <td><button class="bt ${offering ? "go" : ""}" data-offer="${esc(t.player_id)}" aria-pressed="${offering}" ${noOffer ? "disabled" : ""}>${offering ? "申し出る" : "見送り"}</button>${noOffer ? `<div class="hd err">${esc(noOffer)}</div>` : ""}${state.recommended_offers.includes(t.player_id) ? '<div class="hd">副コーチ推奨</div>' : ""}</td></tr>`;
   }).join("");
   const offers = [...plan.offers];
   const cashGap = offerNeed(Math.max(offers.length, 1)) - market.cash;  // positive: short of cash
   const results = lastResult ? lastResult.events.filter(e => ["offer_resolved", "transfer_response", "player_sold"].includes(e.kind) || (e.kind === "transfer_completed" && e.from_club !== OWN)) : [];
-  $("transferBody").innerHTML = `<section class="card"><h2>他クラブの選手 <span class="hd">見えるのは自分の観測から作った推定と公開記録だけ</span></h2>
+  $("transferBody").innerHTML = `<section class="card"><h2>他クラブの選手 <span class="hd">見えるのは自分の観測から作った推定と公開記録だけ。移籍の気配は公開の出場記録と過去の返答だけで、本人の意思そのものは見えない</span></h2>
     <div class="ev" style="border:0;padding-top:0"><b>${esc(banner)}</b></div>
-    <div class="scroll"><table><tr><th>選手</th><th>年齢</th><th>技能の推定</th><th>観測</th><th>公開記録</th><th>偵察</th><th>申し出</th></tr>${rows}</table></div>
+    <div class="scroll"><table><tr><th>選手</th><th>年齢</th><th>技能の推定</th><th>観測</th><th>公開記録と移籍の気配</th><th>偵察</th><th>申し出</th></tr>${rows}</table></div>
     <div class="hd" style="margin-top:8px">±は1回の観測の誤差幅(確率ではない)。観測が少ない・古い選手ほど当てにならない。偵察は練習の週の最初の日に1人まで。</div></section>
   <section class="card"><h2>予算と今回の指示</h2>
     <table><tr><td>いまの資金</td><td class="num">${mil(market.cash)}</td></tr>

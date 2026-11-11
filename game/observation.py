@@ -106,11 +106,50 @@ def other_club_players(world):
     return [pid for pid in le._active_pids(world) if world.players[pid].club_id != OWN_CLUB]
 
 
+BENCH_STREAK_CAP = 4  # the research request rule counts at most 4 benched matches
+
+
+def bench_streaks(world):
+    """Public lineups only: consecutive latest matches of his current club that he did not start, since he joined it (capped)."""
+    moved_on = {}
+    for event in world.events:
+        if event["kind"] in ("transfer_completed", "season_youth_joined"):
+            moved_on[event["data"]["player_id"]] = event["day"]
+    streaks, done = {}, set()
+    for event in reversed(world.events):
+        if event["kind"] != "league_match_completed":
+            continue
+        data = event["data"]
+        for club, starters in ((data["home_club"], data["home_starters"]), (data["away_club"], data["away_starters"])):
+            for pid in world.club_rosters[club]:
+                if pid in done or event["day"] <= moved_on.get(pid, 0):
+                    continue
+                if pid in starters or streaks.get(pid, 0) >= BENCH_STREAK_CAP:
+                    done.add(pid)
+                else:
+                    streaks[pid] = streaks.get(pid, 0) + 1
+    return streaks
+
+
+def bid_records(world):
+    """The coach's own record of bids per target: how often asked and declined, and the last answer with the wording the player gave."""
+    records = {}
+    for item in observed_events(world, 0):
+        if item["kind"] != "transfer_response":
+            continue
+        row = records.setdefault(item["player_id"], {"asked": 0, "declined": 0, "last_response": None, "last_stated_reason": None, "day": None})
+        row["asked"] += 1
+        row["declined"] += item["response"] == "declined"
+        row["last_response"], row["last_stated_reason"], row["day"] = item["response"], item["stated_reason"], item["day"]
+    return records
+
+
 def targets_view(world):
     """Players of other clubs as the coach knows them: his own estimate (scouting and match observations) and public records."""
     coach = world.coaches[OWN_COACH]
     counts, records = _observation_counts(world), _public_match_records(world)
     scoutable = set(scoutable_targets(world))
+    streaks, bids = bench_streaks(world), bid_records(world)
     rows = []
     for pid in other_club_players(world):
         evaluation = coach.evaluations[pid]
@@ -120,7 +159,8 @@ def targets_view(world):
             "days_unseen": world.day - evaluation.last_seen_day, "observation_count": counts.get(pid, 0),
             "measurement_error": world.config.scout_noise,
             "appearances": records.get(pid, {}).get("appearances", 0), "goals": records.get(pid, {}).get("goals", 0),
-            "scoutable": pid in scoutable})
+            "scoutable": pid in scoutable, "bench_streak": streaks.get(pid, 0),
+            "bid_record": bids.get(pid, {"asked": 0, "declined": 0, "last_response": None, "last_stated_reason": None, "day": None})})
     return rows
 
 
@@ -297,7 +337,7 @@ rating_estimate rating_obs receptiveness recommended_starters response retired s
 reason skill_before skill_estimate skill_mae squad squad_size standings starters state stated_reason tackles_won to_club week wins
 share_code
 accepted market cash scout_cost reserve offer_fee roster_size roster_min roster_max window open_now targets scoutable
-recommended_offers
+recommended_offers bench_streak bid_record declined last_response
 your_move your_events auto_events advice scout offers names notices advice_record asked refused last_stated_reason
 """.split())
 _ID_KEY = re.compile(r"(p|c)\d+|club_[a-z]+")
