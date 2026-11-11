@@ -156,7 +156,7 @@ def counterfactual(cells_by_setting, config):
 
 
 # ---- gates ----
-GAME_OPT_IN_FILES = {'league_economy.py'}  # DECISIONS G3/G4: game opt-in keys age_spread/transfer_window_cycle (default off, default history byte-identical)
+GAME_OPT_IN_FILES = {'league_economy.py'}  # DECISIONS G3/G4/G5: game opt-in keys age_spread/transfer_window_cycle/squad_size (default off, default history byte-identical)
 
 
 def check_sim_unchanged(root):

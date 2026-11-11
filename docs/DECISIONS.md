@@ -650,6 +650,17 @@
 - 戻し方: configキー、`TRANSFER_WINDOW_CYCLES`、`is_transfer_window_day`、検証の2行、ゲームの設定1語を削除。
 - 凍結gateの許可リスト(G3/G4共通): 研究側の『soccerシムはT037凍結bundleとバイト同一』gate(`experiments/t038.py`の`check_sim_unchanged`、t039〜t044が共用)は、`soccer_sim/league_economy.py`だけを`GAME_OPT_IN_FILES`で許可する。game側のopt-inキー(`age_spread`、`transfer_window_cycle`)がこのファイルを変えるため。他のsoccer_simファイルは従来どおりバイト同一を要求し、既定configの履歴がバイト同一であることはtests/test_game_age_spread.py・test_game_window_cycle.pyが保証する。凍結bundle(artifacts/)は変更しない。戻し方: 許可リストを空にし、game側の変更を外す。
 
+## G5 — 選手層: configキー`squad_size`(game-v8、未校正、既定は不変)
+
+- 日付/状態: 2026-11-11、実装済み(ブランチgame-v8)。番号なしのD系列と衝突させないためG番号。
+- 問題: 1クラブ2〜4人(実質3人)で先発2人なので、先発の選択が3通りしかなく遊びとして薄い。
+- 候補: ①現状維持、②ゲーム側だけで選手を足す(研究の再演検証が通らない)、③研究側にopt-inのキーを足す(採用)。
+- 変更: config`squad_size`(整数、既定3、3〜8、3超は`generations`が必要)。各クラブを`squad_size`人まで新人で満たす処理を関数`_fill_rosters`に1か所化し、季末の補充と、初日(季0、`season_youth_joined`として記録、原因参照なし)の補充の両方で使う。新人の顔ぶれ・年齢・乱数は既存のユース生成(`population:youth_*`・`age_youth`チャネル)で、創設12人は不変。人数の上限は関数`club_roster_max`=max(4, squad_size+1)。再演検証`_generation_fold`は季0の入団と目標人数`squad_size`を確かめる。
+- 保存/互換: 3(既定)ではキーを保存せず、補充は何もせず、既定の履歴はバイト単位で同一(tests/test_game_squad_size.py)。乱数のキーは新人のIDに従う既存のものだけ。凍結成果物は変更なし。source hashは変わる(既存規則)。
+- 副作用/限界: 値4はゲームの仮の選択で校正根拠なし。5にすると給与が増え、季3以降の入札がどのシードでも資金不足で成立しなくなった(検証)ため採用せず。初日の新人は創設選手より弱い傾向のユース範囲から出る。人数が増えると第2先発の基準点が上がり他クラブの申し出の点が下がる。研究側の既存テストの一部が前提とする3人は設定で保たれる。
+- 戻し方: configキー、`MAX_SQUAD_SIZE`、`club_roster_max`、`_fill_rosters`の初日呼び出しと検証の分岐、ゲームの設定1語を削除。
+- 凍結gate: `experiments/t038.py`の`GAME_OPT_IN_FILES`は`league_economy.py`のみのまま(G3/G4と同じ)。
+
 ## D052 — 平均とばらつきの切り分け: 対照`shifted_v1`の追加(T037)
 
 - 日付/状態: 2026-11-11、試用(対照として追加、既定は`legacy`のまま)。
