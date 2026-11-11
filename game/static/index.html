@@ -244,7 +244,7 @@ function renderTransfer() {
     <div class="row" style="margin-top:8px"><button class="bt go" id="toMatch">試合日へ</button></div></section>
   ${results.length ? `<section class="card"><h2>窓の結果</h2>${results.map(e => `<div class="ev">${chip(e.label)}<span class="mut">通算日${e.day}</span> ${esc(describe(e))}</div>`).join("")}
     <div class="hd" style="margin-top:6px">本人の述べた理由は本心の一部。本当の原因は季節の答え合わせで見られる。</div></section>` : ""}`;
-  document.querySelectorAll("[data-scout]").forEach(b => b.onclick = () => { plan.scout = plan.scout === b.dataset.scout ? null : b.dataset.scout; renderTransfer(); });
+  document.querySelectorAll("[data-scout]").forEach(b => b.onclick = () => { plan.scout = plan.scout === b.dataset.scout ? null : b.dataset.scout; if ($("scoutTarget")) $("scoutTarget").value = plan.scout || ""; renderTransfer(); });
   document.querySelectorAll("[data-offer]").forEach(b => b.onclick = () => {
     plan.offers.has(b.dataset.offer) ? plan.offers.delete(b.dataset.offer) : plan.offers.add(b.dataset.offer); renderTransfer(); });
   document.querySelectorAll("[data-requeue]").forEach(b => b.onclick = () => {
@@ -262,12 +262,16 @@ function renderAction() {
   const roster = state.squad.map(p => p.player_id);
   if (state.phase === "training") {
     const players = roster.map(p => `<option value="${esc(p)}">${esc(nm(p))}</option>`).join("");
+    const scoutOptions = state.targets.filter(t => t.scoutable).map(t =>
+      `<option value="${esc(t.player_id)}" ${plan.scout === t.player_id ? "selected" : ""}>${esc(nm(t.player_id))}(${esc(t.club_id)}・${t.observation_count ? `観察${t.observation_count}回` : "未観察"})</option>`).join("");
     $("actionCard").innerHTML = `<h2>第${state.week}週 練習 <span class="hd">助言は入力であって命令ではない。従うかは本人が決める</span></h2>
       <div class="row"><label>助言する選手 <select id="advPlayer"><option value="">助言しない</option>${players}</select></label>
       <label>練習法 <select id="advMethod">${state.methods.map(m => `<option>${m}</option>`).join("")}</select></label>
+      <label>偵察する他クラブの選手 <select id="scoutTarget"><option value="">偵察しない</option>${scoutOptions}</select></label>
       <button class="bt go" id="doTrain">1週間練習する</button></div>
       <div id="advHint" class="hd" style="margin-top:6px"></div>
-      <div class="hd" style="margin-top:6px">助言は週の最初の日に1人へ。偵察は「移籍」タブで選ぶ(いま: ${esc(plan.scout ? nm(plan.scout) : "なし")})。残りの枠は副コーチ(自動)が決める。</div>`;
+      <div class="hd" style="margin-top:6px">助言は週の最初の日に1人へ。偵察は週の最初の日に他クラブの選手1人まで(資金が足りないと選べない。「移籍」タブでも同じ選択ができる)。残りの枠は副コーチ(自動)が決める。</div>`;
+    $("scoutTarget").onchange = () => { plan.scout = $("scoutTarget").value || null; renderTransfer(); };
     const showAdvHint = () => {
       const row = state.squad.find(p => p.player_id === $("advPlayer").value);
       $("advHint").innerHTML = row ? `${esc(nm(row.player_id))}が助言を聞く度合い(推定): <b>${esc(trustText(row))}</b>` : "";
