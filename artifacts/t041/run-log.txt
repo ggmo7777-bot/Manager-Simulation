@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}, "identity_view": {"runs": 12, "all_equal": true}}
+12 252 103
+24 252 138
+36 252 197
+48 252 225
+60 252 276
+72 252 305
+84 252 359
+96 252 388
+108 252 443
+120 252 476
+132 252 532
+144 252 562
+156 252 617
+168 252 649
+180 252 704
+192 252 736
+204 252 794
+216 252 826
+228 252 891
+240 252 927
+252 252 976
+{"equal": {"t030": 84, "t031": 84, "t032": 84}, "attribution": {"class": "single_route(practice)", "carriers": ["practice"], "main_routes": ["practice"], "flags": ["interaction", "harm(response)"]}, "recommendation": "conditional", "elapsed_seconds": 1015.138203167}

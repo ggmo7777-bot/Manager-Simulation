@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}, "level_constants_from_t042": {"fwd": 0.005557207419209873, "rev": -0.005407013834974597}, "identity_view": {"runs": 24, "all_equal": true}}
+12 252 105
+24 252 147
+36 252 235
+48 252 282
+60 252 372
+72 252 422
+84 252 514
+96 252 566
+108 252 656
+120 252 708
+132 252 800
+144 252 859
+156 252 960
+168 252 1014
+180 252 1110
+192 252 1164
+204 252 1261
+216 252 1317
+228 252 1411
+240 252 1468
+252 252 1549
+{"equal": {"t030": 84, "t031": 84, "t032": 84}, "level_or_spread": {"class": "level", "carriers": ["L"], "main_routes": ["L"], "flags": []}, "err_source": {"all": "multiple(skill, match)", "sweep": "multiple(skill, match)", "swap": "multiple(skill, match)", "fwd": "multiple(skill, match)", "rev": "multiple(skill, match)"}, "mediation": {"all": "mediated(gap, err):complete", "sweep": "mediated(gap, err):complete", "swap": "mediated(gap, err):partial", "fwd": "mediated(gap, err):partial", "rev": "mediated(gap, err):complete"}, "coverage": {"fwd": {"min_rest": 0.3625543483194002, "max_rest": 0.9053278483828932, "monotone_in_delta": true, "covers": true}, "rev": {"min_rest": 0.36027362438833965, "max_rest": 0.8916151652819274, "monotone_in_delta": true, "covers": true}}, "optimum": {"fwd|top2": {"argmax": "fwd_o+0.0300", "delta": 0.03, "rest": 0.3625543483194002, "shape": "boundary_low", "plateau": ["fwd_o+0.0200", "fwd_o+0.0300"], "base_in_plateau": false}, "fwd|final_skill": {"argmax": "fwd_o+0.0200", "delta": 0.02, "rest": 0.3802655365691912, "shape": "interior", "plateau": ["fwd_o+0.0200"], "base_in_plateau": false}, "rev|top2": {"argmax": "rev_o+0.0300", "delta": 0.03, "rest": 0.36027362438833965, "shape": "boundary_low", "plateau": ["rev_o+0.0050", "rev_o+0.0075", "rev_o+0.0200", "rev_o+0.0300"], "base_in_plateau": false}, "rev|final_skill": {"argmax": "rev_o+0.0200", "delta": 0.02, "rest": 0.37010692320969485, "shape": "interior", "plateau": ["rev_o+0.0100", "rev_o+0.0200", "rev_o+0.0300"], "base_in_plateau": false}}, "elapsed_seconds": 1581.7006138330034}

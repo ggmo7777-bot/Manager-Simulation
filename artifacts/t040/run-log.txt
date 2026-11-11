@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}, "identity_view": {"runs": 12, "all_equal": true}}
+12 252 73
+24 252 100
+36 252 161
+48 252 190
+60 252 243
+72 252 274
+84 252 334
+96 252 366
+108 252 420
+120 252 449
+132 252 498
+144 252 527
+156 252 576
+168 252 605
+180 252 654
+192 252 683
+204 252 731
+216 252 761
+228 252 808
+240 252 840
+252 252 886
+{"equal": {"t030": 84, "t031": 84, "t032": 84}, "attribution": {"class": "outside_coach_estimates", "carriers": [], "main_routes": [], "flags": ["harm(lineup)", "harm(advice)"]}, "recommendation": "conditional", "elapsed_seconds": 895.3518509589994}
