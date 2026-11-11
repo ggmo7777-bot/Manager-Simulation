@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manager Simulation</title>
+<style>
+:root{--bg:#F7F6F2;--card:#FFFFFF;--ink:#15171A;--mut:#5B6068;--line:#D9D6CE;--line2:#BFBBB0;--acc:#0B6E99;--accbg:#E7F1F6;--warn:#B45309;--warnbg:#FFF4E5;--hover:#F0EEE8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",system-ui,sans-serif;font-size:14px;line-height:1.6}
+button,select{font:inherit}
+.num{font-variant-numeric:tabular-nums;font-weight:600}
+.mut{color:var(--mut)}.hd{font-size:13px;color:var(--mut)}
+header{height:56px;display:flex;align-items:center;gap:18px;padding:0 20px;background:var(--card);border-bottom:1px solid var(--line)}
+header .brand{font-weight:900;font-size:16px}
+header .sep{width:1px;height:26px;background:var(--line)}
+header .grow{flex:1}
+.layout{display:flex;min-height:calc(100vh - 56px)}
+nav{flex:none;width:168px;background:var(--card);border-right:1px solid var(--line);padding:14px 10px;display:flex;flex-direction:column;gap:2px}
+nav button{display:flex;align-items:center;height:44px;padding:0 12px;border:0;border-radius:2px;background:none;color:#3A3F46;font-weight:500;cursor:pointer;text-align:left}
+nav button:hover{background:var(--hover);color:var(--ink)}
+nav button.on{background:var(--accbg);color:var(--acc);font-weight:700}
+nav button:disabled{color:#A5A39A;cursor:not-allowed;background:none}
+main{flex:1;min-width:0;padding:18px 24px 40px;display:flex;flex-direction:column;gap:14px;max-width:1200px}
+section.card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:14px 18px}
+h2{margin:0 0 8px;font-size:16px;font-weight:900}
+table{width:100%;border-collapse:collapse}
+th{font-size:12px;font-weight:500;color:var(--mut);text-align:left;padding:4px 8px;border-bottom:1px solid var(--line)}
+td{padding:8px;border-top:1px solid #E6E3DB;vertical-align:middle}
+.bt{display:inline-flex;align-items:center;justify-content:center;padding:0 18px;height:44px;border-radius:2px;font-weight:700;border:1px solid var(--line2);background:#fff;color:var(--ink);cursor:pointer}
+.bt:hover{background:var(--hover)}.bt.go{background:var(--acc);color:#fff;border-color:var(--acc)}.bt.go:hover{background:#0A5C80}
+.bt:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+select{height:44px;border:1px solid var(--line2);border-radius:2px;background:#fff;padding:0 10px}
+label.pick{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid var(--line2);border-radius:2px;background:#fff;cursor:pointer;font-weight:700}
+label.pick:has(input:checked){background:var(--acc);border-color:var(--acc);color:#fff}
+label.pick input{width:18px;height:18px}
+.bar{position:relative;width:140px;height:10px;background:#EEECE6;border:1px solid var(--line)}
+.bar i{position:absolute;top:-1px;bottom:-1px;width:2px;background:var(--ink)}
+.bar b{position:absolute;top:2px;height:4px;background:var(--acc);opacity:.35}
+.lb{display:inline-block;font-size:12px;font-weight:700;padding:0 6px;margin-right:6px;border:1px solid var(--ink);border-radius:2px;line-height:1.5;white-space:nowrap}
+.lb-f{background:var(--ink);color:#fff}.lb-o{background:var(--accbg);color:var(--acc);border-color:var(--acc)}.lb-r{background:var(--warnbg);color:var(--warn);border-color:var(--warn)}.lb-e{background:#fff;color:#3A3F46;border-style:dashed}
+.ev{padding:8px 0;border-top:1px solid #E6E3DB}.ev:first-of-type{border-top:0}
+.err{color:var(--warn);font-weight:700}
+.hide{display:none}
+@media(max-width:760px){.layout{flex-direction:column}nav{width:auto;flex-direction:row;overflow-x:auto}header{flex-wrap:wrap;height:auto;padding:8px 16px}main{padding:14px 16px 40px}.bar{width:90px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">Manager Simulation</span><span class="hd">club_a の監督(あなた)</span><span class="sep"></span>
+  <span class="num" id="clock"></span><span class="mut" id="phaseLabel"></span><span class="grow"></span>
+  <label class="hd" for="seed">シード</label><input id="seed" type="number" value="7" style="width:80px;height:36px;border:1px solid var(--line2);border-radius:2px;padding:0 8px">
+  <button class="bt" id="newGame">新しい季節</button>
+</header>
+<div class="layout">
+  <nav aria-label="画面">
+    <button data-tab="squad" class="on">選手</button>
+    <button data-tab="match">試合日</button>
+    <button data-tab="table">順位</button>
+    <button data-tab="reveal" id="revealTab" disabled>季節の答え合わせ</button>
+  </nav>
+  <main>
+    <div class="err" id="error" role="alert"></div>
+    <div id="squad">
+      <section class="card"><h2>選手 <span class="hd">推定と不確かさ。真の値は季節の終わりまで見えない</span></h2><div id="squadTable"></div></section>
+    </div>
+    <div id="match" class="hide">
+      <section class="card" id="actionCard"></section>
+      <section class="card"><h2>結果とその理由 <span class="hd">直前の1手分</span></h2><div id="result" class="mut">まだ何も起きていない。</div></section>
+    </div>
+    <div id="table" class="hide"><section class="card"><h2>順位</h2><div id="standings"></div></section></div>
+    <div id="reveal" class="hide"><section class="card"><h2>推定と真実</h2><div id="revealBody"></div></section></div>
+  </main>
+</div>
+<script>
+const LABEL_CLASS = {"事実":"lb-f","観測":"lb-o","本人の理由":"lb-r","推定":"lb-e"};
+const RESPONSE = {complied:"従った", partial:"部分的に従った", refused:"断った"};
+const STATED = {trusts_coach:"あなたを信頼している", distrusts_coach:"あなたを信用していない", personal:"個人的な事情"};
+const TRUE_REASON = {trust_above_autonomy:"信頼が自立心を上回る", trust_below_autonomy:"信頼が自立心を下回る", self_disciplined:"自分に厳しい性格", self_lax:"自分に甘い性格", irritated_by_low_playing_time:"出場機会の少なさへの苛立ち", no_dominant_term:"決め手なし"};
+const $ = id => document.getElementById(id);
+let state = null, lastResult = null;
+
+function esc(value) { const d = document.createElement("div"); d.textContent = String(value); return d.innerHTML; }
+const f2 = v => Number(v).toFixed(2), f3 = v => Number(v).toFixed(3);
+const chip = label => `<span class="lb ${LABEL_CLASS[label]}">${label}</span>`;
+
+async function api(path, body) {
+  const options = body === undefined ? {} : {method: "POST", body: JSON.stringify(body)};
+  const response = await fetch(path, options);
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error);
+  return data;
+}
+async function act(path, body) {
+  $("error").textContent = "";
+  try { return await api(path, body); } catch (e) { $("error").textContent = e.message; return null; }
+}
+
+function describe(e) {
+  switch (e.kind) {
+    case "league_match_completed": {
+      const own = e.home_club === "club_a" ? e.home_starters : e.away_starters;
+      const goals = own.map(p => `${p} ${e.player_stats[p].goals}得点/シュート${e.player_stats[p].shots}`).join("、");
+      return `${e.home_club} ${e.home_goals} - ${e.away_goals} ${e.away_club}(シュート ${e.home_shots}-${e.away_shots})。あなたの先発: ${goals}`;
+    }
+    case "lineup_decision": return `あなたの先発 ${e.starters.join("・")} / 控え ${e.bench.join("・") || "なし"}`;
+    case "advice_given": return `助言 ${e.player_id} に練習法${e.method}(あなたの予測する伸び ${f3(e.forecast)})`;
+    case "transfer_completed": return `${e.player_id} が ${e.from_club} から ${e.to_club} へ移籍`;
+    case "coach_advice_outcome": return `${e.player_id} は練習法${e.method}の助言に${RESPONSE[e.response]}。本人の弁: 「${STATED[e.stated_reason]}」`;
+    case "coach_session_observation": return `${e.player_id} の練習(${e.action})を見た: 技能の読み ${f3(e.obs_skill)} / 伸び ${f3(e.obs_gain)} / 疲労の読み ${f3(e.obs_fatigue)}`;
+    case "coach_match_observation": return `${e.player_id} の試合評価の読み ${f3(e.rating_obs)} / 疲労の読み ${f3(e.obs_fatigue)}`;
+    case "coach_scout_observation": return `他クラブの ${e.player_id} を偵察: 技能の読み ${f3(e.obs_skill)}`;
+    default: return e.kind;
+  }
+}
+
+function bar(estimate, error) {
+  const lo = Math.max(0, estimate - error) * 100, hi = Math.min(1, estimate + error) * 100;
+  return `<div class="bar" title="推定 ${f3(estimate)} ± ${f3(error)}"><b style="left:${lo}%;width:${hi - lo}%"></b><i style="left:${estimate * 100}%"></i></div>`;
+}
+
+function renderSquad() {
+  const rows = state.squad.map(p => {
+    const rec = p.receptiveness ? `${f2(p.receptiveness.mean)} ±${f2(p.receptiveness.sd)}(${p.receptiveness.outcomes}回)` : "未知";
+    return `<tr><td class="num">${esc(p.player_id)}</td>
+      <td>${bar(p.skill_estimate, p.measurement_error)}<span class="num">${f2(p.skill_estimate)}</span> <span class="hd">±${f3(p.measurement_error)}/回</span></td>
+      <td><span class="num">${f2(p.rating_estimate)}</span></td>
+      <td><span class="num">${f2(p.fatigue_estimate)}</span></td>
+      <td>${p.observation_count}回 / 最後に見て${p.days_unseen}日</td>
+      <td>${esc(rec)}</td><td>${p.appearances}試合 ${p.goals}得点</td></tr>`;
+  }).join("");
+  $("squadTable").innerHTML = `<table><tr><th>選手</th><th>技能の推定</th><th>試合評価</th><th>疲労の推定</th><th>観測の量</th><th>助言を聞く度合い</th><th>出場(事実)</th></tr>${rows}</table>
+    <div class="hd" style="margin-top:8px">±は1回の観測の誤差幅。観測が少ない・古い選手ほど、実際の推定誤差は大きい。</div>`;
+}
+
+function renderStandings() {
+  const rows = state.standings.map((r, i) => `<tr><td class="num">${i + 1}</td><td>${esc(r.club_id)}${r.club_id === state.club_id ? " (あなた)" : ""}</td>
+    <td class="num">${r.points}</td><td>${r.wins}勝${r.draws}分${r.losses}敗</td><td class="num">${r.goals_for}-${r.goals_against}</td><td>${r.played}</td></tr>`).join("");
+  $("standings").innerHTML = `<table><tr><th>#</th><th>クラブ</th><th>勝点</th><th>成績</th><th>得失点</th><th>試合</th></tr>${rows}</table>`;
+}
+
+function renderAction() {
+  const roster = state.squad.map(p => p.player_id);
+  if (state.phase === "training") {
+    const players = roster.map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join("");
+    $("actionCard").innerHTML = `<h2>第${state.week}週 練習 <span class="hd">助言は入力であって命令ではない。従うかは本人が決める</span></h2>
+      <div class="row"><label>助言する選手 <select id="advPlayer"><option value="">助言しない</option>${players}</select></label>
+      <label>練習法 <select id="advMethod">${state.methods.map(m => `<option>${m}</option>`).join("")}</select></label>
+      <button class="bt go" id="doTrain">1週間練習する</button></div>
+      <div class="hd" style="margin-top:6px">助言は週の最初の日に1人へ。残りの枠は副コーチ(自動)が決める。</div>`;
+    $("doTrain").onclick = async () => {
+      const player_id = $("advPlayer").value;
+      lastResult = await act("/api/train", {advice: player_id ? {player_id, method: $("advMethod").value} : null});
+      refresh();
+    };
+  } else if (state.phase === "lineup") {
+    const boxes = roster.map(p => `<label class="pick"><input type="checkbox" name="starter" value="${esc(p)}" ${state.recommended_starters.includes(p) ? "checked" : ""}>${esc(p)}</label>`).join("");
+    $("actionCard").innerHTML = `<h2>第${state.week}節 先発を選ぶ <span class="hd">2人。副コーチの推奨(あなたの推定による)は初期選択</span></h2>
+      <div class="row">${boxes}<button class="bt go" id="doMatch">試合をする</button></div>`;
+    $("doMatch").onclick = async () => {
+      const starters = [...document.querySelectorAll("input[name=starter]:checked")].map(i => i.value);
+      lastResult = await act("/api/lineup", {starters});
+      refresh();
+    };
+  } else {
+    $("actionCard").innerHTML = `<h2>季節終了</h2><div>「季節の答え合わせ」で、あなたの推定と真実を比べられる。</div>`;
+  }
+}
+
+function renderResult() {
+  if (!lastResult) return;
+  const events = lastResult.events.map(e => `<div class="ev">${chip(e.label)}<span class="mut">日${e.day}</span> ${esc(describe(e))}</div>`).join("");
+  const changes = lastResult.estimate_changes.map(c => `<div class="ev">${chip(c.label)}${esc(c.player_id)} 技能の推定 ${f3(c.skill_before)} → ${f3(c.skill_after)} / 疲労の推定 ${f3(c.fatigue_before)} → ${f3(c.fatigue_after)}</div>`).join("");
+  $("result").className = "";
+  $("result").innerHTML = (events || '<span class="mut">見えた出来事なし</span>') + `<div class="hd" style="margin-top:8px">この1手で推定がどう動いたか</div>` + changes;
+}
+
+async function renderReveal() {
+  const data = await act("/api/reveal");
+  if (!data) return;
+  const diff = (a, b) => (a - b >= 0 ? "+" : "") + f3(a - b);
+  const players = data.players.map(p => `<tr><td class="num">${esc(p.player_id)}</td>
+    <td class="num">${f3(p.skill_estimate)}</td><td class="num">${f3(p.skill_true)}</td><td class="num">${diff(p.skill_estimate, p.skill_true)}</td>
+    <td class="num">${f3(p.fatigue_estimate)}</td><td class="num">${f3(p.fatigue_true)}</td><td class="num">${f3(p.cap_true)}</td>
+    <td class="num">${p.trust_in_you_true === null ? "-" : f2(p.trust_in_you_true)}</td><td class="num">${p.discipline_true === null ? "-" : f2(p.discipline_true)}</td><td class="num">${p.emotional_stability_true === null ? "-" : f2(p.emotional_stability_true)}</td></tr>`).join("");
+  const reasons = data.advice_reasons.map(r => `<tr><td class="num">日${r.day}</td><td>${esc(r.player_id)}</td><td>${RESPONSE[r.response]}</td>
+    <td>${chip("本人の理由")}${STATED[r.stated_reason]}</td><td>${TRUE_REASON[r.true_reason] || esc(r.true_reason)}</td></tr>`).join("");
+  $("revealBody").innerHTML = `<table><tr><th>選手</th><th>技能 推定</th><th>真の技能</th><th>誤差</th><th>疲労 推定</th><th>真の疲労</th><th>成長の上限</th><th>あなたへの信頼</th><th>規律性</th><th>感情安定性</th></tr>${players}</table>
+    <h2 style="margin-top:16px">助言への反応: 本人が言った理由と、実際の主因</h2>
+    <table><tr><th>日</th><th>選手</th><th>反応</th><th>本人が述べた理由</th><th>実際の主因</th></tr>${reasons || '<tr><td colspan="5" class="mut">助言への反応の記録なし</td></tr>'}</table>`;
+}
+
+function show(tab) {
+  for (const id of ["squad", "match", "table", "reveal"]) $(id).classList.toggle("hide", id !== tab);
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+  if (tab === "reveal") renderReveal();
+}
+
+function refresh(newState) {
+  if (lastResult) state = lastResult.state;
+  if (newState) state = newState;
+  const done = state.phase === "season_end";
+  $("clock").textContent = `第${Math.min(state.week, 6)}週 日${state.day}/${state.season_days}`;
+  $("phaseLabel").textContent = {training: "練習の週", lineup: "先発を決める", season_end: "季節終了"}[state.phase];
+  $("revealTab").disabled = !done;
+  renderSquad(); renderStandings(); renderAction(); renderResult();
+  if (done) show("reveal"); else if (!$("squad").classList.contains("hide") && lastResult) show("match");
+}
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => show(b.dataset.tab));
+$("newGame").onclick = async () => {
+  const next = await act("/api/new", {seed: Number($("seed").value)});
+  if (!next) return;
+  lastResult = null; $("result").textContent = "まだ何も起きていない。"; $("result").className = "mut";
+  refresh(next); show("match");
+};
+(async () => { const first = await act("/api/state"); if (first) { refresh(first); show("match"); } })();
+</script>
+</body>
+</html>
