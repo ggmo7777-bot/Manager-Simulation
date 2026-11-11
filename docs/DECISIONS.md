@@ -648,6 +648,7 @@
 - 保存/互換: `fixed`ではキーを保存せず、窓の日も乱数も不変で、既定の履歴はバイト単位で同一(tests/test_game_window_cycle.py)。乱数の呼び出し箇所・回数は増えない(窓の中の処理は既存のまま、窓の数が増えるだけ)。凍結成果物は変更なし。source hashは変わる(既存規則)。
 - 副作用/限界: 季内14日の窓は季1では予備資金(8,000,000)と手数料(12,000,000)を払えず入札が全件`insufficient_cash`になる。初期資金に依存する窓の価値は未校正。3季目以降の入札は季ごとの資金と過去の所属(円環移籍の禁止)に左右される。窓の数が増えるぶん全クラブのAI移籍も増え、`per_season_v1`の履歴は`fixed`と分岐する(季1の日14から)。
 - 戻し方: configキー、`TRANSFER_WINDOW_CYCLES`、`is_transfer_window_day`、検証の2行、ゲームの設定1語を削除。
+- 凍結gateの許可リスト(G3/G4共通): 研究側の『soccerシムはT037凍結bundleとバイト同一』gate(`experiments/t038.py`の`check_sim_unchanged`、t039〜t044が共用)は、`soccer_sim/league_economy.py`だけを`GAME_OPT_IN_FILES`で許可する。game側のopt-inキー(`age_spread`、`transfer_window_cycle`)がこのファイルを変えるため。他のsoccer_simファイルは従来どおりバイト同一を要求し、既定configの履歴がバイト同一であることはtests/test_game_age_spread.py・test_game_window_cycle.pyが保証する。凍結bundle(artifacts/)は変更しない。戻し方: 許可リストを空にし、game側の変更を外す。
 
 ## D052 — 平均とばらつきの切り分け: 対照`shifted_v1`の追加(T037)
 
