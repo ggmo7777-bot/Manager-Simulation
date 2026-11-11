@@ -1,0 +1,23 @@
+gates {"sim_unchanged_vs_frozen_t037_bundle": {"files": 29, "changed": []}}
+12 252 167
+24 252 260
+36 252 449
+48 252 544
+60 252 721
+72 252 835
+84 252 1029
+96 252 1147
+108 252 1345
+120 252 1472
+132 252 1665
+144 252 1788
+156 252 1972
+168 252 2100
+180 252 2325
+192 252 2467
+204 252 2654
+216 252 2794
+228 252 2959
+240 252 3106
+252 252 3245
+{"late_cost": {"kn_late": {"fwd|top2": "helps", "fwd|final_skill": "helps", "rev|top2": "flat", "rev|final_skill": "helps"}, "late_cost": false, "growing": {"fwd|top2": false, "fwd|final_skill": false, "rev|top2": true, "rev|final_skill": false}, "growing_cost": true}, "elapsed_seconds": 3258.371622833998}
