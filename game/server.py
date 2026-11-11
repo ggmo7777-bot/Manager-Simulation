@@ -32,6 +32,11 @@ class Game:
                 return self.session.state()
             if (method, path) == ("GET", "/api/reveal"):
                 return self.session.reveal()
+            past_reveal = re.fullmatch(r"/api/reveal/(\d+)", path) if method == "GET" else None
+            if past_reveal:
+                return self.session.reveal(int(past_reveal.group(1)))
+            if (method, path) == ("POST", "/api/next_season"):
+                return self.session.next_season()
             if (method, path) == ("POST", "/api/new"):
                 self.session = GameSession(body.get("seed", DEFAULT_SEED))
                 return self.session.state()
@@ -76,9 +81,10 @@ class Game:
                 continue
             try:
                 payload = json.loads(path.read_text())
-                saves.append({"name": path.stem, "seed": payload["seed"], "steps": len(payload["inputs"])})
+                saves.append({"name": path.stem, "seed": payload["seed"], "steps": len(payload["inputs"]),
+                              "season": 1 + sum(item["kind"] == "next_season" for item in payload["inputs"])})
             except (json.JSONDecodeError, KeyError, TypeError):
-                saves.append({"name": path.stem, "seed": None, "steps": None})
+                saves.append({"name": path.stem, "seed": None, "steps": None, "season": None})
         return {"saves": saves}
 
 
