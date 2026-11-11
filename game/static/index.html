@@ -83,6 +83,7 @@ details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;f
     <div id="match" class="hide">
       <section class="card" id="actionCard"></section>
       <section class="card"><h2>結果とその理由 <span class="hd">直前の1手分</span></h2><div id="result" class="mut">まだ何も起きていない。</div></section>
+      <section class="card"><h2>今季の記録 <span class="hd">週ごとのあなたの一手と、起きたこと(この画面を開いている間の分)</span></h2><div id="seasonLog" class="mut">まだ記録なし。</div></section>
     </div>
     <div id="transfer" class="hide"><div id="transferBody"></div></div>
     <div id="table" class="hide"><section class="card"><h2>順位</h2><div id="standings" class="scroll"></div></section></div>
@@ -109,6 +110,7 @@ const OWN = "club_a";
 const nm = pid => names[pid] || pid;
 const who = pid => `${esc(nm(pid))}<span class="hd"> ${esc(pid)}</span>`;
 const plan = {scout: null, offers: new Set(), requeue: new Set()};  // chosen on the transfer tab, sent with the next training week / match day
+const seasonLog = [];  // one row per step the player took this season, built from the step results (not saved with the game)
 const mil = units => (units / 1e6).toFixed(2);
 
 function esc(value) { const d = document.createElement("div"); d.textContent = String(value); return d.innerHTML; }
@@ -165,6 +167,12 @@ function trustText(p) {
   const sure = r.sd >= WIDE_SD ? "。まだ幅が広い" : "";
   const refused = record.asked ? `。断られた ${record.refused}/${record.asked}回${record.last_stated_reason ? `・直近の本人の弁「${STATED[record.last_stated_reason]}」` : ""}` : "";
   return `${level}(推定 ${f2(r.mean)} ±${f2(r.sd)}・${r.outcomes}回の結果から${sure})${refused}`;
+}
+
+// The player whose reaction to advice the coach can read least: no outcome seen yet, else the widest estimate (a suggestion only; "助言しない" stays one click away).
+function leastKnownResponder() {
+  const spread = p => p.receptiveness ? p.receptiveness.sd : Infinity;
+  return state.squad.reduce((best, p) => spread(p) > spread(best) ? p : best).player_id;
 }
 
 function renderSquad() {
@@ -261,7 +269,8 @@ function renderStandings() {
 function renderAction() {
   const roster = state.squad.map(p => p.player_id);
   if (state.phase === "training") {
-    const players = roster.map(p => `<option value="${esc(p)}">${esc(nm(p))}</option>`).join("");
+    const suggested = leastKnownResponder();
+    const players = roster.map(p => `<option value="${esc(p)}" ${p === suggested ? "selected" : ""}>${esc(nm(p))}${p === suggested ? "(推奨)" : ""}</option>`).join("");
     const scoutOptions = state.targets.filter(t => t.scoutable).map(t =>
       `<option value="${esc(t.player_id)}" ${plan.scout === t.player_id ? "selected" : ""}>${esc(nm(t.player_id))}(${esc(t.club_id)}・${t.observation_count ? `観察${t.observation_count}回` : "未観察"})</option>`).join("");
     $("actionCard").innerHTML = `<h2>第${state.week}週 練習 <span class="hd">助言は入力であって命令ではない。従うかは本人が決める</span></h2>
@@ -277,10 +286,12 @@ function renderAction() {
       $("advHint").innerHTML = row ? `${esc(nm(row.player_id))}が助言を聞く度合い(推定): <b>${esc(trustText(row))}</b>` : "";
     };
     $("advPlayer").onchange = showAdvHint;
+    showAdvHint();
     $("doTrain").onclick = async () => {
       const player_id = $("advPlayer").value;
+      const label = `第${state.week}週 練習`;
       lastResult = await act("/api/train", {advice: player_id ? {player_id, method: $("advMethod").value} : null, scout: plan.scout});
-      if (lastResult) plan.scout = null;
+      if (lastResult) { plan.scout = null; logStep(label, lastResult); }
       refresh();
     };
   } else if (state.phase === "lineup") {
@@ -290,8 +301,9 @@ function renderAction() {
       <div class="hd" style="margin-top:6px">${state.market.window && state.market.window.open_now ? `この試合のあとに移籍窓。申し出は「移籍」タブで選ぶ(いま: ${esc([...plan.offers].map(nm).join("・") || "出さない")})。自クラブの選手が移籍を申し出ることもあり、その場合はあなたの同意なしに成立する(起きたらお知らせと本人の弁が出る)。` : "この試合のあとに移籍窓はない。"}</div>`;
     $("doMatch").onclick = async () => {
       const starters = [...document.querySelectorAll("input[name=starter]:checked")].map(i => i.value);
+      const label = `第${state.week}節 試合`;
       lastResult = await act("/api/lineup", {starters, offers: [...plan.offers]});
-      if (lastResult) plan.offers.clear();
+      if (lastResult) { plan.offers.clear(); logStep(label, lastResult); }
       refresh();
     };
   } else {
@@ -301,7 +313,7 @@ function renderAction() {
     $("doNextSeason").onclick = async () => {
       const next = await act("/api/next_season", {});
       if (!next) return;
-      lastResult = null; $("result").textContent = `第${next.state.season}季が始まった。`; $("result").className = "mut";
+      resetSeasonLog(); lastResult = null; $("result").textContent = `第${next.state.season}季が始まった。`; $("result").className = "mut";
       refresh(next.state); show("match");
     };
   }
@@ -329,6 +341,19 @@ function yourMoveLines(result) {
     lines.push(move.scout ? `偵察 ${nm(move.scout)}` : "偵察しなかった");
   }
   return lines;
+}
+
+const LOGGED_KINDS = ["coach_advice_outcome", "coach_scout_observation", "league_match_completed", "player_sold"];
+function logStep(label, result) {
+  const lines = result.your_events.filter(e => LOGGED_KINDS.includes(e.kind)).map(e => `${chip(e.label)}${esc(describe(e))}`);
+  if (result.your_move.kind === "train" && !result.your_move.advice) lines.unshift("助言しなかった");
+  seasonLog.push({label, lines});
+  renderSeasonLog();
+}
+function resetSeasonLog() { seasonLog.length = 0; renderSeasonLog(); }
+function renderSeasonLog() {
+  $("seasonLog").className = seasonLog.length ? "" : "mut";
+  $("seasonLog").innerHTML = seasonLog.length ? `<table>${seasonLog.map(r => `<tr><td class="num" style="white-space:nowrap">${esc(r.label)}</td><td>${r.lines.map(l => `<div>${l}</div>`).join("")}</td></tr>`).join("")}</table>` : "まだ記録なし。";
 }
 
 function renderResult() {
@@ -411,7 +436,7 @@ $("newGame").onclick = async () => {
   const typed = $("seed").value.trim();
   const next = await act("/api/new", /^-?\d+$/.test(typed) ? {seed: Number(typed)} : {code: typed});
   if (!next) return;
-  plan.scout = null; plan.offers.clear(); plan.requeue.clear();
+  plan.scout = null; plan.offers.clear(); plan.requeue.clear(); resetSeasonLog();
   lastResult = null; $("result").textContent = "まだ何も起きていない。"; $("result").className = "mut";
   refresh(next); show("match");
 };
@@ -430,7 +455,7 @@ $("loadGame").onclick = async () => {
   if (!name) return;
   const next = await act("/api/load", {name});
   if (!next) return;
-  plan.scout = null; plan.offers.clear(); plan.requeue.clear();
+  plan.scout = null; plan.offers.clear(); plan.requeue.clear(); resetSeasonLog();
   lastResult = null; $("result").textContent = `「${name}」から再開した。`; $("result").className = "mut";
   $("seed").value = next.seed; $("saveName").value = name;
   refresh(next); show("match");
